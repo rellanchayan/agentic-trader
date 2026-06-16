@@ -37,5 +37,13 @@ made of **rules to follow**, not stories.
 - Size from risk first: lose no more than the per-trade risk budget if stopped.
 - Never over $10k per trade, over 25% of equity in one name, over $50k deployed in a day, or over 8 names.
 
+## Infrastructure
+- If premarket healthcheck returns 401 Unauthorized, abort the full trading day immediately. Do not
+  attempt ticks against a broken API — the loss-stop baseline is never captured, quotes are stale,
+  and any order submission will fail silently or with bad data. Log the failure and wait for the
+  connection to recover before the next session.
+
 ## Changelog (the learning-coach appends here — newest on top)
-- _(none yet — the bot will record each learned change and each auto-tune step here)_
+- 2026-06-16: No tuning. Tuner frozen (only 1 day of history; need 5). Today was a no-trade day —
+  Alpaca paper API returned 401 Unauthorized all session. Zero trades, zero P&L, no evidence to
+  act on. Operational lesson added to Infrastructure section above.

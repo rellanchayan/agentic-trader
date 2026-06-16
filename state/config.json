@@ -1,0 +1,37 @@
+{
+  "_comment": "TUNABLE day-trading parameters. The post-market learning-coach may auto-adjust the NUMERIC keys below within the hard bounds in state/param_bounds.json, one small step per day, fully logged in state/tuning_ledger.jsonl and reversible. The truly inviolable limits ($10k/trade, $50k/day, 8 positions, -$3,000 loss-stop, 25% per name, 20 trades/day) are ALSO hard-coded in code/daytrade_guard.py and code/constitution.py, so even a corrupted config cannot breach them. See docs/STRATEGY.md and docs/RISK.md.",
+  "_version": 1,
+
+  "orb_minutes": 15,
+  "orb_breakout_buffer_bp": 5,
+  "vwap_reclaim_buffer_bp": 5,
+
+  "stop_atr_mult": 1.5,
+  "target_atr_mult": 2.5,
+
+  "risk_per_trade_usd": 250,
+  "per_trade_max_usd": 10000,
+  "daily_deploy_cap_usd": 50000,
+  "max_open_positions": 8,
+  "daily_loss_stop_usd": 3000,
+  "max_position_pct": 0.25,
+
+  "min_rel_volume": 1.2,
+  "max_spread_bp": 25,
+  "min_quote_freshness_sec": 30,
+
+  "limit_buy_above_ask_pct": 0.001,
+  "limit_sell_below_bid_pct": 0.001,
+
+  "no_new_entries_after_et": "15:30",
+  "flatten_start_et": "15:50",
+  "pdt_equity_floor_usd": 26000,
+  "max_trades_per_day": 20,
+
+  "setup_enabled": {
+    "orb": true,
+    "vwap_reclaim": true,
+    "momentum": true,
+    "mean_reversion": true
+  }
+}

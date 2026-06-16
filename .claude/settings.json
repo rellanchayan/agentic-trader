@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Edit(state/**)",
+      "Edit(docs/**)",
+      "WebSearch",
+      "WebFetch",
+      "Bash(bash code/run_phase.sh *)",
+      "Bash(bash code/cloud_sync.sh *)",
+      "Bash(python3 -m pip install -r requirements.txt)",
+      "Bash(python3 code/alpaca_client.py --healthcheck)",
+      "Bash(python3 code/alpaca_client.py --account)",
+      "Bash(python3 code/alpaca_client.py --clock)",
+      "Bash(python3 code/alpaca_client.py --is-open)",
+      "Bash(python3 code/alpaca_client.py --positions)",
+      "Bash(python3 code/alpaca_client.py --snapshot)",
+      "Bash(python3 code/alpaca_client.py --quote *)",
+      "Bash(python3 code/alpaca_client.py --bars *)",
+      "Bash(python3 code/alpaca_client.py --open-orders)",
+      "Bash(python3 code/alpaca_client.py --order-status *)",
+      "Bash(python3 code/alpaca_client.py --submit *)",
+      "Bash(python3 code/alpaca_client.py --cancel *)",
+      "Bash(python3 code/alpaca_client.py --cancel-all)",
+      "Bash(python3 code/alpaca_client.py --reconcile)",
+      "Bash(python3 code/constitution.py --check *)",
+      "Bash(python3 code/daytrade_guard.py --check *)",
+      "Bash(python3 code/preflight.py)",
+      "Bash(python3 code/context.py *)",
+      "Bash(python3 code/daypnl.py *)",
+      "Bash(python3 code/watchlist_build.py *)",
+      "Bash(python3 code/flatten.py *)",
+      "Bash(python3 code/metrics.py *)",
+      "Bash(python3 code/tuner.py --status)",
+      "Bash(python3 code/tuner.py --run)",
+      "Bash(python3 code/tuner.py --show)",
+      "Bash(python3 code/tuner.py --run --date *)",
+      "Bash(python3 code/tests/*)",
+      "Bash(grep *)",
+      "Bash(ls *)",
+      "Bash(cat state/*)",
+      "Bash(mkdir -p state/*)"
+    ],
+    "ask": [
+      "Bash(python3 code/tuner.py --reset)",
+      "Bash(python3 code/tuner.py --revert *)",
+      "Edit(CLAUDE.md)",
+      "Edit(.env)",
+      "Write(.HALT_TRADING)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)",
+      "Bash(git push --force*)",
+      "Edit(state/param_bounds.json)",
+      "Edit(state/config.defaults.json)",
+      "WebFetch(domain:live-api.alpaca.markets)",
+      "WebFetch(domain:api.alpaca.markets)"
+    ]
+  }
+}

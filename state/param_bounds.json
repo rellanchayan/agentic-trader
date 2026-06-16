@@ -1,0 +1,22 @@
+{
+  "_comment": "HARD bounds the auto-tuner may never cross. For each tunable parameter: min, max, and max_step_per_day (the biggest change allowed in a single evening). The tuner reads this file but NEVER writes it. Parameters NOT listed here (daily_loss_stop_usd, max_position_pct, pdt_equity_floor_usd, max_trades_per_day, daily_deploy_cap_usd's ceiling, per_trade_max_usd's ceiling) are off-limits to the tuner. Note: 'max' values here also respect the absolute code-level caps, so the tuner can only ever make the inviolable limits SAFER, never looser.",
+
+  "orb_minutes":            {"min": 5,     "max": 30,    "max_step_per_day": 5},
+  "orb_breakout_buffer_bp": {"min": 1,     "max": 25,    "max_step_per_day": 3},
+  "vwap_reclaim_buffer_bp": {"min": 1,     "max": 25,    "max_step_per_day": 3},
+
+  "stop_atr_mult":          {"min": 0.8,   "max": 3.0,   "max_step_per_day": 0.2},
+  "target_atr_mult":        {"min": 1.0,   "max": 5.0,   "max_step_per_day": 0.3},
+
+  "risk_per_trade_usd":     {"min": 100,   "max": 500,   "max_step_per_day": 50},
+  "per_trade_max_usd":      {"min": 1000,  "max": 10000, "max_step_per_day": 1000},
+  "daily_deploy_cap_usd":   {"min": 10000, "max": 50000, "max_step_per_day": 5000},
+  "max_open_positions":     {"min": 3,     "max": 8,     "max_step_per_day": 1},
+
+  "min_rel_volume":         {"min": 1.0,   "max": 3.0,   "max_step_per_day": 0.2},
+  "max_spread_bp":          {"min": 5,     "max": 50,    "max_step_per_day": 5},
+  "min_quote_freshness_sec":{"min": 10,    "max": 60,    "max_step_per_day": 10},
+
+  "limit_buy_above_ask_pct":{"min": 0.0,   "max": 0.005, "max_step_per_day": 0.001},
+  "limit_sell_below_bid_pct":{"min": 0.0,  "max": 0.005, "max_step_per_day": 0.001}
+}

@@ -216,3 +216,9 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# agentic-trader: ephemeral runtime snapshots (regenerated every run; no history value).
+# The persistent record (completed_trades, runs, day/, journals, tuning_ledger) IS committed.
+state/account.json
+state/portfolio.json
+state/intraday_history.jsonl

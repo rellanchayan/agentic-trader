@@ -1,0 +1,58 @@
+# Base universe for the day trader: only large, very liquid, well-known names and
+# major ETFs. The premarket screen (code/watchlist_build.py) narrows THIS list
+# down to the handful that are actually moving and tradable today.
+#
+# Rules baked into this list (from CLAUDE.md): no penny stocks, no OTC, no
+# leveraged/inverse/volatility ETFs. One ticker per line. Lines starting with #
+# are comments and ignored.
+
+# --- Mega-cap technology / communication ---
+AAPL
+MSFT
+NVDA
+AMD
+AVGO
+GOOGL
+META
+AMZN
+NFLX
+TSLA
+CRM
+ORCL
+ADBE
+INTC
+QCOM
+MU
+PLTR
+
+# --- Financials ---
+JPM
+BAC
+GS
+MS
+V
+MA
+
+# --- Healthcare ---
+LLY
+UNH
+JNJ
+PFE
+ABBV
+
+# --- Consumer / industrial / energy ---
+WMT
+COST
+HD
+NKE
+DIS
+BA
+CAT
+XOM
+CVX
+
+# --- Major broad ETFs (allowed) ---
+SPY
+QQQ
+IWM
+DIA

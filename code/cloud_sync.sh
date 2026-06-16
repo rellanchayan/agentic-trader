@@ -14,6 +14,10 @@
 set -uo pipefail
 cd "$(dirname "$0")/.."
 
+# Cloud routines write a .env that sets AGENTIC_SYNC=1; pick that up here. Your
+# local .env does not set it, so locally this stays a no-op (no git spam).
+if [ -f .env ]; then set -a; . ./.env >/dev/null 2>&1 || true; set +a; fi
+
 if [ "${AGENTIC_SYNC:-0}" != "1" ]; then
   echo "cloud_sync: disabled (AGENTIC_SYNC != 1) — no-op"
   exit 0

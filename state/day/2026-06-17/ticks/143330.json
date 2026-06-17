@@ -1,0 +1,57 @@
+{
+  "tick_time_et": "2026-06-17T14:33:30-04:00",
+  "minutes_since_open": 303,
+  "action": "none",
+  "decision_summary": "NO TRADE — post-FOMC observer-only window per day plan (2:00–3:00 PM ET).",
+  "reasoning": {
+    "positions_managed": "Flat book. No open positions or open orders to manage.",
+    "new_entries_considered": false,
+    "new_entries_blocked_reason": "Post-FOMC observer-only window (2:00–3:00 PM per plan). Plan: 'sit on hands entirely — observe the initial reaction and let the market settle for at least 15-20 minutes before considering anything.'",
+    "market_assessment": "Post-FOMC sell-off confirmed. SPY last 746.74 vs VWAP 749.13 and ORB-low 750.17 — market sold off ~$4 from the opening range. All four names below VWAP. No ORB breakouts. Two names have spreads > 25bp max.",
+    "per_ticker": {
+      "SPY": {
+        "last": 746.74,
+        "vs_vwap": "BELOW (VWAP 749.13, gap -2.39)",
+        "vs_orb_low": "BELOW (ORB-low 750.17)",
+        "rel_volume": "0.68x < 1.2x min — DISQUALIFIED",
+        "spread_bp": "1.1bp — OK",
+        "signal": "Post-FOMC breakdown. Observer only."
+      },
+      "INTC": {
+        "last": 122.225,
+        "vs_vwap": "ABOVE (VWAP 121.11, +1.115)",
+        "vs_orb_high": "BELOW ORB-high 122.32 (last 122.225, no breakout)",
+        "rel_volume": "0.68x < 1.2x min — DISQUALIFIED",
+        "spread_bp": "5.7bp — OK",
+        "signal": "Above VWAP but volume too low and in observer window. No trade."
+      },
+      "NVDA": {
+        "last": 205.975,
+        "vs_vwap": "BELOW (VWAP 207.14, gap -1.165)",
+        "vs_orb_low": "BELOW (ORB-low 207.57)",
+        "rel_volume": "0.75x < 1.2x min — DISQUALIFIED",
+        "spread_bp": "60.1bp > 25bp max — DISQUALIFIED",
+        "signal": "Breakdown below ORB-low. Wide spread. No trade."
+      },
+      "AMZN": {
+        "last": 239.17,
+        "vs_vwap": "BELOW (VWAP 240.79, gap -1.62)",
+        "vs_orb_low": "BELOW (ORB-low 242.15)",
+        "rel_volume": "0.91x < 1.2x min — DISQUALIFIED",
+        "spread_bp": "49.2bp > 25bp max — DISQUALIFIED",
+        "signal": "Breakdown below ORB-low. Very wide spread. No trade."
+      }
+    }
+  },
+  "positions_managed": [],
+  "orders_submitted": [],
+  "account": {
+    "equity": 999907.72,
+    "day_pnl": 65.81,
+    "trades_today": 2,
+    "trades_remaining": 18,
+    "positions_open": 0,
+    "loss_budget_remaining": 3065.81
+  },
+  "next_action": "Re-evaluate at 3:00 PM ET per plan. Condition: only if market has found clear post-Fed direction AND very clean setup on SPY or NVDA with tight risk. Low-probability scenario per plan. Flatten sequence begins at 3:50 PM."
+}

@@ -1,0 +1,18 @@
+{
+  "trade_id": "FLAT-2026-06-17-GOOGL-0929",
+  "created_at_utc": "2026-06-17T13:29:11.436995+00:00",
+  "ticker": "GOOGL",
+  "side": "SELL",
+  "qty": 26.0,
+  "limit_price": 367.67,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "End-of-day flatten (pass 2): closing intraday position to be flat overnight.",
+  "risk": "Marketable sell limit; if unfilled a later, more aggressive pass re-prices it.",
+  "strategy": "flatten",
+  "setup": "eod_flatten",
+  "status": "submitted",
+  "alpaca_order_id": "62aaf7e3-7082-48d4-b085-ac0a6543ebe8",
+  "client_order_id": "FLAT-2026-06-17-GOOGL-0929",
+  "submitted_at_utc": "2026-06-17T13:29:12.198491+00:00"
+}

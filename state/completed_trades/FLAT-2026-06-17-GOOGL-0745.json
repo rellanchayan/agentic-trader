@@ -11,8 +11,11 @@
   "risk": "Marketable sell limit; if unfilled a later, more aggressive pass re-prices it.",
   "strategy": "flatten",
   "setup": "eod_flatten",
-  "status": "submitted",
+  "status": "canceled",
   "alpaca_order_id": "6ff4343e-65c8-4765-83b5-e85713ff9423",
   "client_order_id": "FLAT-2026-06-17-GOOGL-0745",
-  "submitted_at_utc": "2026-06-17T11:45:25.415964+00:00"
+  "submitted_at_utc": "2026-06-17T11:45:25.415964+00:00",
+  "filled_qty": 0.0,
+  "filled_avg_price": null,
+  "reconciled_at_utc": "2026-06-17T13:29:13.036771+00:00"
 }

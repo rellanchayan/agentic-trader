@@ -1,0 +1,21 @@
+{
+  "phase": "flatten",
+  "aggression": 2,
+  "timestamp_et": "2026-06-17T09:29:10.004769-04:00",
+  "attempted": 1,
+  "submissions": [
+    {
+      "trade_id": "FLAT-2026-06-17-GOOGL-0929",
+      "rc": 0,
+      "stdout": "{\"trade_id\": \"FLAT-2026-06-17-GOOGL-0929\", \"alpaca_order_id\": \"62aaf7e3-7082-48d4-b085-ac0a6543ebe8\", \"status\": \"OrderStatus.PENDING_NEW\", \"submitted_at\": \"2026-06-17T13:29:12.198491+00:00\", \"saved_to\": \"state/completed_trades/FLAT-2026-06-17-GOOGL-0929.json\"}",
+      "stderr": ""
+    }
+  ],
+  "remaining_positions": [
+    {
+      "ticker": "GOOGL",
+      "qty": 26.0
+    }
+  ],
+  "is_flat": false
+}

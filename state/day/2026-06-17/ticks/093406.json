@@ -1,0 +1,21 @@
+{
+  "tick_time_et": "2026-06-17T09:34:06-04:00",
+  "minutes_since_open": 4,
+  "verdict": "HOLD",
+  "action": "none",
+  "reason": "Only 4 min since open; ORB window (15 min) not yet complete. Plan says observe-only 9:30-9:45 AM. INTC spread 331bp disqualified. NVDA spread 34.5bp > 25bp max. SPY rel-vol 0.56 < 1.2 min. AMZN spread/vol OK but no setup trigger and ORB not formed.",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "account_snapshot": {
+    "equity": 999907.72,
+    "day_pnl": 65.81,
+    "trades_today": 2,
+    "positions_open": 0
+  },
+  "market_snapshot": {
+    "AMZN": {"last": 244.72, "spread_bp": 4.5, "rel_volume": 1.81, "above_vwap": false, "orb_breakout": false},
+    "INTC": {"last": 119.34, "spread_bp": 331.4, "rel_volume": 0.93, "above_vwap": false, "orb_breakout": false},
+    "NVDA": {"last": 208.23, "spread_bp": 34.5, "rel_volume": 1.44, "above_vwap": true, "orb_breakout": false},
+    "SPY": {"last": 750.46, "spread_bp": 4.1, "rel_volume": 0.56, "above_vwap": false, "orb_breakout": false}
+  }
+}

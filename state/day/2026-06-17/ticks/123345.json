@@ -1,0 +1,31 @@
+{
+  "tick_time_et": "2026-06-17T12:33:45-04:00",
+  "minutes_since_open": 183,
+  "action": "none",
+  "verdict": "PROCEED",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "day_pnl": 65.81,
+  "trades_today": 2,
+  "positions_open": 0,
+  "reason": "Reduce-activity window (FED DAY, 11:00 AM-1:45 PM). Flat book, no positions to manage. All names below 1.2x rel-vol min: INTC 0.77x, NVDA 1.0x, AMZN 0.97x, SPY 0.61x. ORB entries cut off at 11:00 AM. VWAP reclaim window closed (past noon). NVDA last 207.40 below ORB-low 207.57 — breakdown structure, not a buy. INTC above VWAP 120.78 but rel-vol disq and noon window closed. 72 min to FOMC announcement — must be flat by 1:45 PM (already flat). No setup meets criteria. Holding cash.",
+  "market_snapshot": {
+    "AMZN": {"last": 240.54, "vwap": 241.48, "orb_high": 245.8, "orb_low": 242.15, "rel_volume": 0.97, "above_vwap": false, "spread_bp": 1.7},
+    "INTC": {"last": 122.22, "vwap": 120.78, "orb_high": 122.32, "orb_low": 118.985, "rel_volume": 0.77, "above_vwap": true, "spread_bp": 4.1},
+    "NVDA": {"last": 207.4, "vwap": 207.22, "orb_high": 208.85, "orb_low": 207.57, "rel_volume": 1.0, "above_vwap": true, "spread_bp": 1.0},
+    "SPY": {"last": 750.39, "vwap": 750.4, "orb_high": 751.525, "orb_low": 750.17, "rel_volume": 0.61, "above_vwap": false, "spread_bp": 0.4}
+  },
+  "setup_checks": {
+    "INTC": "rel_vol 0.77x < 1.2x min; VWAP reclaim window closed (past noon); disqualified",
+    "NVDA": "rel_vol 1.0x < 1.2x min; last 207.40 below ORB-low 207.57; disqualified",
+    "AMZN": "rel_vol 0.97x < 1.2x min; below VWAP and ORB-low; disqualified",
+    "SPY": "rel_vol 0.61x < 1.2x min; disqualified"
+  },
+  "plan_constraints_active": [
+    "FED DAY: reduce-activity window 11:00 AM - 1:45 PM",
+    "ORB entries cut off at 11:00 AM",
+    "VWAP reclaim setups morning only (before noon)",
+    "Must be flat by 1:45 PM ahead of 2:00 PM FOMC",
+    "No post-FOMC entries until 3:00 PM at earliest"
+  ]
+}

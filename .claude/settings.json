@@ -40,13 +40,14 @@
       "Bash(grep *)",
       "Bash(ls *)",
       "Bash(cat state/*)",
-      "Bash(mkdir -p state/*)"
+      "Bash(mkdir -p state/*)",
+      "Write(.env)",
+      "Edit(.env)"
     ],
     "ask": [
       "Bash(python3 code/tuner.py --reset)",
       "Bash(python3 code/tuner.py --revert *)",
       "Edit(CLAUDE.md)",
-      "Edit(.env)",
       "Write(.HALT_TRADING)"
     ],
     "deny": [

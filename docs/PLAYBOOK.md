@@ -32,6 +32,9 @@ made of **rules to follow**, not stories.
 - Set the stop at a level that means "the idea was wrong," not just a random number. Honor it instantly.
 - Take profit at the target; don't get greedy and give back a winner.
 - A typical good trade risks a few hundred dollars to make more than it risks (aim for wins ≥ 1.5R).
+- Flatten limits must be set near the current bid at the time of submission, never from a cached or
+  stale price. A stale flatten limit will miss the market entirely and leave a position open into the
+  close. If the first pass fails to fill, the next pass must re-quote fresh before submitting.
 
 ## Sizing
 - Size from risk first: lose no more than the per-trade risk budget if stopped.
@@ -44,6 +47,13 @@ made of **rules to follow**, not stories.
   connection to recover before the next session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-17: No tuning. Tuner frozen (only 2 days of history; need 5). No intraday entries today;
+  premarket was not run so no day plan was set. Day P&L: -$55.35 from an orphaned overnight GOOGL
+  position (inherited, not a new entry). First flatten pass failed: limit was stale at $350.21
+  while GOOGL was trading ~$370+ — this is a bug; flatten limits must be set near the current bid,
+  not a cached or stale value. Second flatten pass correctly used a marketable limit and filled at
+  avg $371.12 (above limit $367.67). Ended flat. Fill rate 50% (1 of 2 passes). Rule added below
+  in the flatten section about stale limits.
 - 2026-06-16: No tuning. Tuner frozen (only 1 day of history; need 5). Today was a no-trade day —
   Alpaca paper API returned 401 Unauthorized all session. Zero trades, zero P&L, no evidence to
   act on. Operational lesson added to Infrastructure section above.

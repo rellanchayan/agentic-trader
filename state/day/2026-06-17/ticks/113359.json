@@ -1,0 +1,21 @@
+{
+  "tick_time_et": "2026-06-17T11:33:59-04:00",
+  "minutes_since_open": 123,
+  "action": "none",
+  "reason": "Reduce-activity window (11:00 AM-1:45 PM, FED DAY). No clean setups: NVDA 206.40 below ORB-low 207.57 and VWAP 207.31 (breakdown, no buy). AMZN 240.37 below ORB-low 242.15 and VWAP 241.79 (breakdown). INTC rel-vol 0.87x < 1.2x min, no ORB breakout. SPY rel-vol 0.70x < 1.2x min. ORB entries cut off at 11:00 AM per plan. Holding cash ahead of 2:00 PM FOMC announcement.",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "day_pnl": 65.81,
+  "trades_today": 2,
+  "account_snapshot": {
+    "equity": 999907.72,
+    "cash": 999907.72,
+    "buying_power": 3999630.88
+  },
+  "market_snapshot": {
+    "AMZN": {"last": 240.37, "vwap": 241.79, "orb_high": 245.80, "orb_low": 242.15, "rel_volume": 1.16, "above_vwap": false, "orb_breakout": false},
+    "INTC": {"last": 121.40, "vwap": 120.55, "orb_high": 122.32, "orb_low": 118.985, "rel_volume": 0.87, "above_vwap": true, "orb_breakout": false},
+    "NVDA": {"last": 206.40, "vwap": 207.31, "orb_high": 208.85, "orb_low": 207.57, "rel_volume": 1.22, "above_vwap": false, "orb_breakout": false},
+    "SPY":  {"last": 750.42, "vwap": 750.33, "orb_high": 751.525, "orb_low": 750.17, "rel_volume": 0.70, "above_vwap": true, "orb_breakout": false}
+  }
+}

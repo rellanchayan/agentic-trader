@@ -1,0 +1,50 @@
+{
+  "tick_time_et": "2026-06-17T10:33:47-04:00",
+  "minutes_since_open": 63,
+  "verdict": "PROCEED",
+  "action": "none",
+  "reason": "No valid setups found. INTC rel_volume 0.74x below 1.2x minimum. NVDA last 207.385 is below ORB low 207.57 and below VWAP 207.85 \u2014 breakdown signal, no long setup per playbook. AMZN last 241.60 is below ORB low 242.15 and below VWAP 242.57 \u2014 plan flags as opportunistic only, no forcing. SPY rel_volume 0.72x below 1.2x minimum. FED DAY (FOMC 2:00 PM): extra caution applied throughout. When unsure, do nothing.",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "market_snapshot": {
+    "INTC": {
+      "last": 120.48,
+      "rel_volume": 0.74,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "disqualified": "rel_volume 0.74x < 1.2x"
+    },
+    "NVDA": {
+      "last": 207.385,
+      "orb_low": 207.57,
+      "vwap": 207.85,
+      "rel_volume": 1.26,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "below ORB low \u2014 breakdown"
+    },
+    "AMZN": {
+      "last": 241.6,
+      "orb_low": 242.15,
+      "vwap": 242.57,
+      "rel_volume": 1.28,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "below ORB low \u2014 no setup"
+    },
+    "SPY": {
+      "last": 750.74,
+      "rel_volume": 0.72,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "disqualified": "rel_volume 0.72x < 1.2x"
+    }
+  },
+  "account": {
+    "equity": 999907.72,
+    "day_pnl": 65.81,
+    "trades_today": 2,
+    "open_positions": 0,
+    "loss_budget_remaining": 3065.81
+  }
+}

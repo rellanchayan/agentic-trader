@@ -1,0 +1,17 @@
+{
+  "tick_time_et": "2026-06-17T15:33:40-04:00",
+  "minutes_since_open": 363,
+  "action": "none",
+  "reason": "Past no-new-entries cutoff (15:30). No positions or open orders to manage. All names below VWAP and ORB lows with sub-1.2x rel-vol. SPY last 740.90 vs VWAP 747.91 and ORB-low 750.17 — confirmed post-FOMC sell-off. AMZN spread 8bp but no setup (below ORB-low 242.15, below VWAP 240.34). NVDA spread 17.1bp but below ORB-low 207.57, below VWAP 206.98. INTC rel-vol 0.75x disq. Day PnL +$65.81 — flat and safe through close.",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "day_pnl": 65.81,
+  "trades_today": 2,
+  "context_summary": {
+    "equity": 999907.72,
+    "positions_open": 0,
+    "open_orders": 0,
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  }
+}

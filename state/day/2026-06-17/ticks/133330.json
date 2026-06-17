@@ -1,0 +1,50 @@
+{
+  "tick_time_et": "2026-06-17T13:33:30-04:00",
+  "minutes_since_open": 243,
+  "action": "none",
+  "decision": "NO TRADE — 12 minutes to 1:45 PM FOMC hard cutoff. No valid setups. Flat book.",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "day_pnl": 65.81,
+  "trades_today": 2,
+  "trades_remaining": 18,
+  "position_slots_used": 0,
+  "market_conditions": {
+    "INTC": {
+      "last": 122.08,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 0.7,
+      "spread_bp": 1.6,
+      "disqualified_reason": "rel_volume 0.7x < 1.2x minimum; no ORB breakout"
+    },
+    "NVDA": {
+      "last": 207.15,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_low": 207.57,
+      "rel_volume": 0.85,
+      "spread_bp": 1.4,
+      "disqualified_reason": "below ORB low 207.57 (breakdown structure); rel_volume 0.85x < 1.2x; below VWAP 207.21"
+    },
+    "AMZN": {
+      "last": 239.70,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_low": 242.15,
+      "rel_volume": 0.95,
+      "spread_bp": 1.7,
+      "disqualified_reason": "below ORB low 242.15 (breakdown); rel_volume 0.95x < 1.2x; below VWAP 241.05"
+    },
+    "SPY": {
+      "last": 749.16,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_low": 750.17,
+      "rel_volume": 0.55,
+      "spread_bp": 0.9,
+      "disqualified_reason": "rel_volume 0.55x < 1.2x; below VWAP 750.29; below ORB low 750.17"
+    }
+  },
+  "reason": "Reduce-activity window in effect (FED DAY 11:00 AM - 1:45 PM). Only 12 minutes to the 1:45 PM hard cutoff before 2:00 PM FOMC. No positions to manage (flat book). All four names disqualified: rel_volume universally below 1.2x minimum, all below their ORB lows and VWAP. ORB entries closed at 11:00 AM per plan. VWAP reclaim window closed. No new entries allowed near FOMC. Initiating any position now with FOMC in 27 minutes would violate the day plan's explicit mandate to be flat by 1:45 PM. Holding cash is correct."
+}

@@ -1,0 +1,30 @@
+{
+  "tick_time_et": "2026-06-18T10:34:33-04:00",
+  "minutes_since_open": 63,
+  "action": "BUY",
+  "ticker": "NVDA",
+  "trade_id": "T-20260618-103433-NVDA",
+  "alpaca_order_id": "12a2fe32-8841-4f41-8e5d-f9c9de980f45",
+  "setup": "orb",
+  "qty": 47,
+  "limit_price": 208.97,
+  "stop": 207.77,
+  "target": 209.86,
+  "day_pnl": 0.0,
+  "positions_before": 0,
+  "loss_budget_remaining": 3000.0,
+  "rationale": "NVDA is the only name with orb_breakout=true this tick. Last $208.80 above orb_high $207.97. Above VWAP ($208.11). Rel volume 1.63x (above 1.2 min). Spread 1.4bp (very tight). Quote age 0.5s (fresh). Cloud mode: ~60min gap between ticks, so using wider stop at $207.77 (just below ORB high $207.97). Risk per share $1.20, total risk ~$56. Size capped by per_trade_max ($10k): 47 shares * $208.97 = $9,822. Both guards passed. Order submitted PENDING_NEW.",
+  "skipped_names": {
+    "AMD": "below_vwap, spread 16.5bp",
+    "AMZN": "above_vwap but no ORB breakout, close to orb_high $240.79 vs last $239.59",
+    "AVGO": "below_vwap, rel_volume 0.92 below min 1.2",
+    "CRM": "spread 327.9bp (max 25bp)",
+    "GOOGL": "above_vwap but no ORB breakout",
+    "META": "spread 62.3bp (max 25bp)",
+    "MSFT": "spread 61.8bp (max 25bp)",
+    "NFLX": "no ORB breakout, rel_volume 1.23 (barely above min), not compelling",
+    "ORCL": "spread 732.9bp (max 25bp)",
+    "TSLA": "below_vwap, spread 42.4bp",
+    "AAPL": "above_vwap but no ORB breakout, last $299.015 vs orb_high $300.40"
+  }
+}

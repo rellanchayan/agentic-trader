@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260618-103433-NVDA",
+  "created_at_utc": "2026-06-18T14:34:33Z",
+  "ticker": "NVDA",
+  "side": "BUY",
+  "qty": 47,
+  "limit_price": 208.97,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "NVDA ORB breakout confirmed: last $208.80 above orb_high $207.97, above VWAP $208.11, rel_volume 1.63x. Tight spread 1.4bp. 63 min into session, breakout holding. Cloud-mode tick (~60 min gap) so using wider stop at ORB high minus buffer.",
+  "risk": "Stop at $207.77 (just below ORB high $207.97). If price falls back below the ORB high the breakout has failed. Risk per share ~$1.20, total risk ~$56.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 207.77,
+  "target": 209.86,
+  "quote_age_sec": 0.5,
+  "spread_bp": 1.4,
+  "status": "submitted",
+  "alpaca_order_id": "12a2fe32-8841-4f41-8e5d-f9c9de980f45",
+  "client_order_id": "T-20260618-103433-NVDA",
+  "submitted_at_utc": "2026-06-18T14:35:31.557892+00:00"
+}

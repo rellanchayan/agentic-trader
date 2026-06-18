@@ -15,8 +15,11 @@
   "target": 384.49,
   "quote_age_sec": 0.8,
   "spread_bp": 7.9,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "f87ab84b-8eb3-49d8-aaf8-a4feddc3ed96",
   "client_order_id": "T-20260618-133618-MSFT",
-  "submitted_at_utc": "2026-06-18T17:37:10.645471+00:00"
+  "submitted_at_utc": "2026-06-18T17:37:10.645471+00:00",
+  "filled_qty": 26.0,
+  "filled_avg_price": 379.66,
+  "reconciled_at_utc": "2026-06-18T19:56:18.673658+00:00"
 }

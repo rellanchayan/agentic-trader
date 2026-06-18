@@ -15,8 +15,11 @@
   "target": 209.86,
   "quote_age_sec": 0.5,
   "spread_bp": 1.4,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "12a2fe32-8841-4f41-8e5d-f9c9de980f45",
   "client_order_id": "T-20260618-103433-NVDA",
-  "submitted_at_utc": "2026-06-18T14:35:31.557892+00:00"
+  "submitted_at_utc": "2026-06-18T14:35:31.557892+00:00",
+  "filled_qty": 47.0,
+  "filled_avg_price": 208.91,
+  "reconciled_at_utc": "2026-06-18T19:56:18.591583+00:00"
 }

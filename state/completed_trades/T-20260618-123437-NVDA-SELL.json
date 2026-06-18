@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260618-123437-NVDA-SELL",
+  "ticker": "NVDA",
+  "side": "SELL",
+  "qty": 47,
+  "limit_price": 210.29,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "Price exceeded original target of $209.86 \u2014 now $210.505. Momentum fading: rel_vol dropped from 1.63x at entry to 1.07x (below 1.2 minimum). Taking profit per playbook: do not get greedy and give back a winner.",
+  "risk": "No stop needed \u2014 this is a closing sell of the full NVDA position.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": null,
+  "target": null,
+  "quote_age_sec": 0.4,
+  "spread_bp": 14.2,
+  "status": "submitted",
+  "alpaca_order_id": "de1a6688-c279-49b6-a451-8e7c08640b5b",
+  "client_order_id": "T-20260618-123437-NVDA-SELL",
+  "submitted_at_utc": "2026-06-18T16:35:06.018263+00:00"
+}

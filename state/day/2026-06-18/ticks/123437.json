@@ -1,0 +1,15 @@
+{
+  "tick_time_et": "2026-06-18T12:34:37-04:00",
+  "minutes_since_open": 184,
+  "action": "SELL",
+  "ticker": "NVDA",
+  "setup": "orb_exit_target",
+  "qty": 47,
+  "limit_price": 210.29,
+  "alpaca_order_id": "de1a6688-c279-49b6-a451-8e7c08640b5b",
+  "note": "Price exceeded original target $209.86 — last $210.505. Momentum fading: rel_vol 1.07x < 1.2 minimum. Taking profit per playbook: do not get greedy and give back a winner. Both guards PASS.",
+  "day_pnl": 76.47,
+  "positions_before": 1,
+  "positions_after": 0,
+  "no_new_entry_reason": "AMZN ORB breakout too extended (3+ hours old). No other clean setups. No day plan."
+}

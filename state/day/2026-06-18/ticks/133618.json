@@ -1,0 +1,44 @@
+{
+  "tick_time_et": "2026-06-18T13:36:18-04:00",
+  "minutes_since_open": 246,
+  "action": "BUY",
+  "ticker": "MSFT",
+  "setup": "orb",
+  "decision": "MSFT is the only name passing all filters. ORB breakout confirmed (last $380.32 > orb_high $379.29). Above VWAP $377.00. rel_vol 1.23x (above 1.2 min). Spread 7.9 bp (within 25 bp max). Quote 0.8s fresh. Entry only $1.03 above ORB high — not extended. No day plan (premarket not run), but data shows risk-on character: multiple large caps in ORB breakout territory, above VWAP. NVDA exit was clean this morning. All other names eliminated: TSLA spread 254 bp, CRM spread 123 bp, ORCL/AVGO/AAPL/AMD/NFLX/META/GOOGL rel_vol below 1.2, NVDA recently exited (no re-entry rule), AMZN extended $4.81 above ORB.",
+  "screening": {
+    "AAPL": "eliminated: below VWAP, no ORB breakout, rel_vol 0.83x",
+    "AMD": "eliminated: no ORB breakout, rel_vol 0.90x",
+    "AMZN": "eliminated: ORB breakout but $4.81 (2%) above ORB high — too extended",
+    "AVGO": "eliminated: below VWAP, no ORB breakout, rel_vol 0.57x",
+    "CRM": "eliminated: spread 123.3 bp (max 25 bp)",
+    "GOOGL": "eliminated: rel_vol 0.92x (min 1.2x)",
+    "META": "eliminated: rel_vol 0.81x",
+    "MSFT": "SELECTED: ORB breakout, above VWAP, rel_vol 1.23x, spread 7.9 bp, entry $1.03 above ORB",
+    "NFLX": "eliminated: no ORB breakout, rel_vol 0.83x",
+    "NVDA": "eliminated: just exited (anti-re-entry rule), rel_vol 0.92x",
+    "ORCL": "eliminated: rel_vol 0.54x",
+    "TSLA": "eliminated: spread 254.5 bp (max 25 bp)"
+  },
+  "trade": {
+    "trade_id": "T-20260618-133618-MSFT",
+    "ticker": "MSFT",
+    "side": "BUY",
+    "qty": 26,
+    "limit_price": 380.83,
+    "stop": 379.00,
+    "target": 384.49,
+    "risk_per_share": 1.83,
+    "total_risk_usd": 47.58,
+    "alpaca_order_id": "f87ab84b-8eb3-49d8-aaf8-a4feddc3ed96",
+    "alpaca_status": "PENDING_NEW",
+    "constitution_check": "PASS",
+    "daytrade_guard_check": "PASS"
+  },
+  "account_snapshot": {
+    "equity": 999980.55,
+    "day_pnl": 72.85,
+    "loss_budget_remaining": 3072.85,
+    "trades_used": 2,
+    "positions_open": 0
+  }
+}

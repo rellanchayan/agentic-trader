@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260618-133618-MSFT",
+  "created_at_utc": "2026-06-18T17:36:18Z",
+  "ticker": "MSFT",
+  "side": "BUY",
+  "qty": 26,
+  "limit_price": 380.83,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "ORB breakout: last $380.32 above orb_high $379.29, above VWAP $377.00. rel_vol 1.23x, spread 7.9 bp, quote 0.8 sec fresh. Entry only $1.03 above ORB \u2014 not extended. Cloud mode wider stop at $379.00 (below ORB high support).",
+  "risk": "Stop at $379.00 (below orb_high $379.29). Idea fails if price falls back below ORB level. Risk per share $1.83, total risk $47.58.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 379.0,
+  "target": 384.49,
+  "quote_age_sec": 0.8,
+  "spread_bp": 7.9,
+  "status": "submitted",
+  "alpaca_order_id": "f87ab84b-8eb3-49d8-aaf8-a4feddc3ed96",
+  "client_order_id": "T-20260618-133618-MSFT",
+  "submitted_at_utc": "2026-06-18T17:37:10.645471+00:00"
+}

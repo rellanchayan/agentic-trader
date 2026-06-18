@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260618-143500-MSFT",
+  "ticker": "MSFT",
+  "side": "SELL",
+  "qty": 26,
+  "limit_price": 377.27,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "Stop triggered. Current price $377.86 is below stop $379.00 and has broken below ORB high $379.29. ORB breakout setup invalidated. Exiting to protect capital.",
+  "risk": "N/A \u2014 this is a stop-exit.",
+  "strategy": "intraday",
+  "setup": "stop_exit",
+  "stop": null,
+  "target": null,
+  "quote_age_sec": 0.7,
+  "spread_bp": 6.6,
+  "status": "submitted",
+  "alpaca_order_id": "68b4949b-97f1-4205-a665-08bbeb64f11a",
+  "client_order_id": "T-20260618-143500-MSFT",
+  "submitted_at_utc": "2026-06-18T18:35:15.605602+00:00"
+}

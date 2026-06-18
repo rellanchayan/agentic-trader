@@ -1,0 +1,20 @@
+{
+  "tick_time_et": "2026-06-18T15:34:03-04:00",
+  "minutes_since_open": 364,
+  "action": "NO_TRADE",
+  "reason": "Past 3:30 PM no-new-entries cutoff (past_no_new_entries=true). Account is flat with 0 positions and 0 open orders. Nothing to manage or enter. Waiting for flatten window at 3:50 PM ET.",
+  "market_notes": {
+    "NVDA": "ORB breakout active, spread 2.4bp, above VWAP — but past no-new-entries cutoff",
+    "AMZN": "ORB breakout active, spread 1.6bp, above VWAP, rel_vol 1.06x — but past cutoff and rel_vol below 1.2x minimum",
+    "CRM": "ORB breakout, spread 4.6bp, rel_vol 1.25x — but past cutoff",
+    "META": "spread 39.3bp — exceeds 25bp max (skip regardless)",
+    "ORCL": "spread 380.5bp, quote_age 4.4s — untradeable (skip regardless)"
+  },
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 24.75,
+  "trades_today": 4,
+  "equity": 999932.45,
+  "loss_budget_remaining": 3024.75,
+  "trade": null
+}

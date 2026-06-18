@@ -1,0 +1,23 @@
+{
+  "tick_time_et": "2026-06-18T09:34:06-04:00",
+  "tick_time_utc": "2026-06-18T13:34:06Z",
+  "minutes_since_open": 4,
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "Only 4 min past open — 15-min ORB not yet formed. No day plan (premarket not run). Most spreads too wide at open. Waiting for ORB to form before any entry.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_submitted": null,
+  "account": {
+    "equity": 999907.7,
+    "cash": 999907.7,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "market_notes": {
+    "names_in_range": ["NVDA", "AMZN", "NFLX", "TSLA", "AMD", "GOOGL"],
+    "names_spread_too_wide": ["CRM", "META", "MSFT", "ORCL", "AVGO", "AAPL"],
+    "orb_breakouts_active": 0
+  }
+}

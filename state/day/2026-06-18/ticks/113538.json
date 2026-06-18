@@ -1,0 +1,32 @@
+{
+  "tick_time_et": "2026-06-18T11:35:38-04:00",
+  "minutes_since_open": 125,
+  "action": "NO_TRADE",
+  "reason": "Hold NVDA (above stop and VWAP, setup intact). No new clean entry: AMZN ORB breakout is 2+ hours old and $1.21 above ORB high — extended, no fresh signal. All other names either lack setup criteria (no ORB breakout + VWAP combo) or have spreads exceeding 25bp. No day plan on file.",
+  "positions_reviewed": [
+    {
+      "ticker": "NVDA",
+      "action": "HOLD",
+      "qty": 47,
+      "avg_entry": 208.91,
+      "current_bid": 208.78,
+      "stop": 207.77,
+      "target": 209.86,
+      "unrealized_pl": -3.76,
+      "above_vwap": true,
+      "orb_intact": true,
+      "note": "Stop $207.77 is $1.01 below current bid. Setup criteria still met. Hold."
+    }
+  ],
+  "new_entry_considered": {
+    "ticker": "AMZN",
+    "verdict": "PASS_NO_TRADE",
+    "reason": "ORB breakout confirmed (above $240.79 ORB high) and above VWAP ($239.63), rel_vol 1.61x, spread 2.5bp — all criteria met. But entry at $242.22 is $1.21 (50bp) above the ORB high breakout level, 125 minutes after the open. No day plan endorses this name. Extended mid-day continuation without a fresh trigger — risk of buying into an exhausted move."
+  },
+  "trade": null,
+  "day_pnl": -3.76,
+  "equity": 999903.94,
+  "loss_budget_remaining": 2996.24,
+  "trades_today": 1,
+  "open_positions": 1
+}

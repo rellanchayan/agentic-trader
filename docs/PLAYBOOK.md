@@ -47,6 +47,11 @@ made of **rules to follow**, not stories.
   connection to recover before the next session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-18: No tuning. Tuner frozen (only 3 days of history; need 5). 2 round-trips (NVDA win
+  +1.36R, MSFT loss -2.803R). Net P&L: +$24.75. ORB setup expectancy across all 3 days of history
+  is -0.721R — negative, but not yet enough data to act on. Observation: the MSFT loss was nearly
+  3R against a 1.36R winner; asymmetric loss-to-win ratio is the main drag. Until we have 5+ days
+  of history the tuner is locked. Watch whether ORB expectancy improves or stays negative.
 - 2026-06-17: No tuning. Tuner frozen (only 2 days of history; need 5). No intraday entries today;
   premarket was not run so no day plan was set. Day P&L: -$55.35 from an orphaned overnight GOOGL
   position (inherited, not a new entry). First flatten pass failed: limit was stale at $350.21

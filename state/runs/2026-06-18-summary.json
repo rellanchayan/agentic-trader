@@ -1,0 +1,52 @@
+{
+  "date": "2026-06-18",
+  "num_trades": 4,
+  "num_roundtrips": 2,
+  "realized_pnl": 24.75,
+  "win_rate": 0.5,
+  "avg_win_r": 1.36,
+  "avg_loss_r": -2.803,
+  "fill_rate": 1.0,
+  "fill_details": {
+    "final_orders": 4,
+    "filled": 4,
+    "partial": 0,
+    "unfilled": 0,
+    "pending": 0
+  },
+  "hit_loss_stop": false,
+  "ended_flat": true,
+  "leftover_positions": {},
+  "per_setup": {
+    "orb": {
+      "trades": 2,
+      "wins": 1,
+      "pnl": 24.75,
+      "expectancy_r": -0.721
+    }
+  },
+  "roundtrips": [
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "qty": 47.0,
+      "entry": 208.91,
+      "exit": 210.46,
+      "pnl": 72.85,
+      "r": 1.36,
+      "win": true,
+      "had_stop": true
+    },
+    {
+      "ticker": "MSFT",
+      "setup": "orb",
+      "qty": 26.0,
+      "entry": 379.66,
+      "exit": 377.81,
+      "pnl": -48.1,
+      "r": -2.803,
+      "win": false,
+      "had_stop": true
+    }
+  ]
+}

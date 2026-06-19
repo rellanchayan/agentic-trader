@@ -45,8 +45,21 @@ made of **rules to follow**, not stories.
   attempt ticks against a broken API — the loss-stop baseline is never captured, quotes are stale,
   and any order submission will fail silently or with bad data. Log the failure and wait for the
   connection to recover before the next session.
+- If docs/day_plan.md does not exist at 9:30 AM ET, treat it as a HALT condition and do not run
+  any tick cycles. A missing plan means the premarket phase did not complete, the watchlist is
+  unknown, the loss-stop baseline was not captured, and there is no record of market context or
+  candidate setups. A session without a plan is an invisible session that cannot be reviewed or
+  learned from. The premarket phase must write docs/day_plan.md every trading day — even if the
+  only entry is "no setups qualify today."
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-19: No tuning. Tuner frozen (only 4 days of history; need 5). Zero trades today for the
+  second time in five sessions. No day plan was written — fourth consecutive session without a
+  docs/day_plan.md. The premarket phase appears to have run partially (day_stop reset correctly)
+  but did not produce the plan document. A session with no plan and no trades is an invisible
+  session: it cannot be reviewed, and the tick loop's behavior during the day cannot be verified.
+  Rule added to Infrastructure: missing day plan at open = HALT condition, no ticks should run.
+  Tuner needs one more day of history before it is eligible to act.
 - 2026-06-18: No tuning. Tuner frozen (only 3 days of history; need 5). 2 round-trips (NVDA win
   +1.36R, MSFT loss -2.803R). Net P&L: +$24.75. ORB setup expectancy across all 3 days of history
   is -0.721R — negative, but not yet enough data to act on. Observation: the MSFT loss was nearly

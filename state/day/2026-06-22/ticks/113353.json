@@ -1,0 +1,24 @@
+{
+  "tick_time_et": "11:33:53",
+  "date": "2026-06-22",
+  "verdict": "PROCEED",
+  "action": "WAIT",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "market_summary": {
+    "AMZN": {"last": 233.43, "above_vwap": false, "orb_breakout": false, "spread_bp": 59.2, "disqualified": "spread 59.2bp > 25bp max"},
+    "INTC": {"last": 138.40, "above_vwap": false, "orb_breakout": false, "spread_bp": 11.6, "rel_volume": 1.39},
+    "NFLX": {"last": 73.68, "above_vwap": false, "orb_breakout": false, "spread_bp": 1.4, "rel_volume": 2.05},
+    "NVDA": {"last": 210.17, "above_vwap": false, "orb_breakout": false, "spread_bp": 1.4, "rel_volume": 1.81},
+    "SPY":  {"last": 744.495, "above_vwap": false, "orb_breakout": false, "spread_bp": 3.0, "rel_volume": 0.76, "disqualified": "rel_vol 0.76 < 1.2 min"}
+  },
+  "regime": "risk-off — SPY at $744.49 well below ORB low $747.57",
+  "reasoning": "All 5 names below VWAP 2h into session. SPY broken below opening range low — bearish intraday structure. No ORB breakouts. AMZN disqualified by spread (59.2bp). SPY disqualified by volume (0.76x). INTC (lead candidate) at $138.40 vs VWAP $138.92 with no reclaim attempt forming. Post-11:00 AM rule reduces to VWAP-reclaim-only setups, none in progress. Correct action is to hold cash and wait for a clear reclaim or stay flat for the session.",
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "slots_used": 0,
+  "slots_remaining": 8,
+  "equity": 999932.42
+}

@@ -1,0 +1,34 @@
+{
+  "tick_time_et": "12:33:30",
+  "date": "2026-06-22",
+  "action": "WAIT",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "INTC",
+      "reason_skipped": "Above VWAP ($139.69 vs $138.79) but spread 156.7bp exceeds 25bp max — disqualified"
+    },
+    {
+      "ticker": "NVDA",
+      "reason_skipped": "Below VWAP ($209.50 vs $210.74); no reclaim forming; past 11 AM, VWAP reclaim only"
+    },
+    {
+      "ticker": "AMZN",
+      "reason_skipped": "Below VWAP ($233.20 vs $236.04); far from reclaim (~2.8 ATR away)"
+    },
+    {
+      "ticker": "NFLX",
+      "reason_skipped": "Below VWAP ($72.49 vs $74.44); low-priority name per plan; no reclaim forming"
+    },
+    {
+      "ticker": "SPY",
+      "reason_skipped": "Below VWAP ($744.33 vs $746.33); below ORB range; rel_vol 0.67 below 1.2 min — disqualified; confirms risk-off regime"
+    }
+  ],
+  "regime": "RISK-OFF",
+  "regime_notes": "SPY below VWAP and below ORB low all session. Fourth consecutive tick with all names below VWAP. No VWAP reclaims in progress. Past 11:00 AM — armed for VWAP reclaim only per plan.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "account_equity": 999932.42
+}

@@ -53,6 +53,14 @@ made of **rules to follow**, not stories.
   only entry is "no setups qualify today."
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-22: No tuning. Tuner eligible (5 days of history, drawdown 0.01%, not in a losing streak)
+  but no rule fired — parameters unchanged. Zero trades today for the fifth time in six sessions.
+  No docs/day_plan.md was written (fifth consecutive session without a plan). The premarket phase
+  reset the day_stop correctly but did not produce a plan or any watchlist, so the tick loop had
+  nothing to act on. ORB expectancy is -0.721R across 2 trades — negative but too few trades to
+  justify a parameter change. The core problem is not the parameters: it is that premarket is not
+  completing its job. Until the day plan is being written reliably, tuning ORB or sizing settings
+  has no leverage — there is nothing to tune for. Fix the premarket pipeline first.
 - 2026-06-19: No tuning. Tuner frozen (only 4 days of history; need 5). Zero trades today for the
   second time in five sessions. No day plan was written — fourth consecutive session without a
   docs/day_plan.md. The premarket phase appears to have run partially (day_stop reset correctly)

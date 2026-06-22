@@ -1,0 +1,24 @@
+{
+  "timestamp_et": "2026-06-22T15:33:54-04:00",
+  "action": "WAIT",
+  "reason": "Past no-new-entries cutoff (15:30 ET). No open positions or orders to manage. Flatten window opens at 15:50.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_submitted": null,
+  "market_summary": {
+    "SPY": {"last": 743.88, "vwap": 745.48, "above_vwap": false, "orb_high": 749.89, "orb_low": 747.57, "rel_volume": 0.58},
+    "INTC": {"last": 140.86, "vwap": 139.41, "above_vwap": true, "orb_high": 141.4, "orb_low": 136.85, "rel_volume": 1.05},
+    "NVDA": {"last": 208.05, "vwap": 210.08, "above_vwap": false, "orb_high": 213.97, "orb_low": 210.81, "rel_volume": 1.24},
+    "AMZN": {"last": 233.59, "vwap": 235.15, "above_vwap": false, "orb_high": 241.98, "orb_low": 239.55, "rel_volume": 1.14},
+    "NFLX": {"last": 72.815, "vwap": 73.68, "above_vwap": false, "orb_high": 76.785, "orb_low": 75.63, "rel_volume": 1.6}
+  },
+  "account": {
+    "equity": 999932.42,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "gate_verdict": "PROCEED",
+  "tick_verdict": "WAIT",
+  "notes": "Risk-off regime all session: SPY has been below VWAP and below ORB low since before 10:30 AM. No valid setup triggered all day. No positions entered. Flatten window opens at 15:50 ET — no action needed from this tick."
+}

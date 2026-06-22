@@ -1,0 +1,86 @@
+{
+  "_meta": {
+    "date": "2026-06-22",
+    "generated_utc": "2026-06-22T13:29:53.871703+00:00",
+    "source": "watchlist_build",
+    "screened_utc": "2026-06-22T13:35:00.000000+00:00",
+    "candidates_considered": 7,
+    "dropped": ["BAC", "PFE"],
+    "drop_reasons": {
+      "BAC": "No catalyst; ATR only $1.20 in absolute terms — too little range to hit 1.5R after spread friction.",
+      "PFE": "No catalyst; ATR only $0.52 in absolute terms — reward potential too thin to trade."
+    },
+    "top": 5,
+    "note": "Pre-market screen edited by day-screener. ORB levels (orb_high/orb_low) fill in live after the open. Spread_bp values are pre-market readings and will narrow sharply at 9:30 ET open."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 133.8,
+    "atr_day": 10.3,
+    "avg_vol_10d": 5103190,
+    "premarket_price": 139.05,
+    "gap_pct": 0.0392,
+    "spread_bp": 1006.1,
+    "support": 135.0,
+    "resistance": 140.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "PRIORITY. Highest volume (5.1M sh/day) and strongest catalyst: gapped +3.9% to $139.05. Support at $135 (round number inside gap). Resistance at $140 (round, ~$1 above pre-mkt). Watch for ORB breakout above $140 or gap-fill reversal below $135."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 210.38,
+    "atr_day": 8.44,
+    "avg_vol_10d": 4845224,
+    "premarket_price": 211.06,
+    "gap_pct": 0.0032,
+    "spread_bp": 1003.1,
+    "support": 208.0,
+    "resistance": 215.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Excellent liquidity (4.8M sh/day), ATR $8.44. Tiny +0.3% gap — no standalone catalyst, but earns a spot on volume and range. Support at $208 (round, ~half ATR below prev_close). Resistance at $215 (round, ~0.5 ATR above pre-mkt). Trade with market; skip if SPY is weak."
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 77.33,
+    "atr_day": 2.13,
+    "avg_vol_10d": 3337627,
+    "premarket_price": 76.55,
+    "gap_pct": -0.0101,
+    "spread_bp": 1012.5,
+    "support": 75.0,
+    "resistance": 77.33,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Good volume (3.3M sh/day). Gapped -1.0% to $76.55. Resistance at prev_close $77.33 (first reclaim target). Support at $75.00 (round number, ~1 ATR below prev_close). Watch for VWAP reclaim if market is risk-on, or continuation of gap-down if risk-off."
+  },
+  "AMZN": {
+    "sector": "consumer",
+    "prev_close": 244.61,
+    "atr_day": 8.12,
+    "avg_vol_10d": 2082196,
+    "premarket_price": 242.5,
+    "gap_pct": -0.0086,
+    "spread_bp": 1007.8,
+    "support": 240.0,
+    "resistance": 244.61,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Quality large-cap, ATR $8.12. Gapped -0.9% to $242.50. Resistance at prev_close $244.61 (reclaim target). Support at $240.00 (key round number ~$4.61 below prev_close). Lightest volume of the kept names (2.1M); size accordingly. Skip if spread is wide at open."
+  },
+  "SPY": {
+    "sector": "index",
+    "prev_close": 746.75,
+    "atr_day": 11.0,
+    "avg_vol_10d": 2340415,
+    "premarket_price": 747.81,
+    "gap_pct": 0.0014,
+    "spread_bp": 600.6,
+    "support": 743.0,
+    "resistance": 750.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Market proxy and direct trade vehicle. Tightest pre-mkt spread (601 bp) of the group. Flat +0.1% gap — no directional lean yet; mood TBD at open. Support at $743 (round, ~$3.75 below prev_close). Resistance at $750 (key round number, ~$3.25 above prev_close). Also use as mood filter: risk-on above VWAP favors ORB setups in INTC/NVDA; risk-off below VWAP favors caution."
+  }
+}

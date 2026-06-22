@@ -1,0 +1,48 @@
+{
+  "tick_time_et": "14:34",
+  "tick_time_utc": "2026-06-22T18:34:09Z",
+  "action": "WAIT",
+  "verdict_gate": "PROCEED",
+  "positions_managed": [],
+  "new_entries_evaluated": {
+    "INTC": {
+      "above_vwap": true,
+      "rel_volume": 1.07,
+      "spread_bp": 6.4,
+      "disqualified": true,
+      "reason": "rel_volume 1.07 < 1.2 minimum; not a fresh reclaim (above VWAP since ~12:33); declining volume"
+    },
+    "AMZN": {
+      "above_vwap": false,
+      "disqualified": true,
+      "reason": "below VWAP; no reclaim forming"
+    },
+    "NVDA": {
+      "above_vwap": false,
+      "disqualified": true,
+      "reason": "below VWAP; no reclaim forming"
+    },
+    "NFLX": {
+      "above_vwap": false,
+      "disqualified": true,
+      "reason": "below VWAP; no reclaim forming"
+    },
+    "SPY": {
+      "above_vwap": false,
+      "rel_volume": 0.53,
+      "disqualified": true,
+      "reason": "below VWAP and ORB low ($747.57); rel_volume 0.53 < 1.2 minimum"
+    }
+  },
+  "regime": "risk-off",
+  "regime_notes": "SPY below VWAP and ORB low all session. No ORB breakouts. Past 11 AM: VWAP reclaim only; none qualify.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "loss_budget_remaining": 3000.0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "decision": "HOLD CASH — no setup qualifies. Discipline: when unsure, do nothing."
+}

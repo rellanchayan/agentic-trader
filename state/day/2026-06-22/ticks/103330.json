@@ -1,0 +1,57 @@
+{
+  "timestamp_et": "2026-06-22T10:33:30",
+  "action": "WAIT",
+  "positions_managed": [],
+  "new_order": null,
+  "reasoning": {
+    "market_mood": "WEAK / below-ORB on SPY",
+    "SPY": {
+      "last": 745.155,
+      "vwap": 748.57,
+      "orb_low": 747.57,
+      "orb_high": 749.89,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "INTC": {
+      "last": 137.715,
+      "vwap": 138.6,
+      "orb_low": 136.85,
+      "orb_high": 141.4,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "Faded from $139 premarket; below VWAP; no reclaim in progress"
+    },
+    "NVDA": {
+      "last": 209.93,
+      "vwap": 212.57,
+      "orb_low": 210.81,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "AMZN": {
+      "last": 235.06,
+      "vwap": 238.67,
+      "orb_low": 239.55,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "NFLX": {
+      "last": 74.865,
+      "vwap": 75.9,
+      "orb_low": 75.63,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "no_setups": "No name is above VWAP or near an ORB breakout. No VWAP reclaim setup triggering anywhere. All names below VWAP in a weak tape.",
+    "positions": "0 open — nothing to manage",
+    "decision": "WAIT — mixed regime with full watchlist below VWAP; cash is correct posture"
+  },
+  "account_snapshot": {
+    "equity": 999932.42,
+    "cash": 999932.42,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

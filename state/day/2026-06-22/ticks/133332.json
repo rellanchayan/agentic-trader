@@ -1,0 +1,27 @@
+{
+  "tick_time_et": "13:33:32",
+  "action": "WAIT",
+  "regime": "risk-off",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_submitted": null,
+  "rationale": {
+    "market": "SPY $744.45, below VWAP $746.12 and below ORB low $747.57 — risk-off regime active for 4+ consecutive hours.",
+    "setup_check": "Past 11:00 AM rule in effect: VWAP reclaim only, no new ORB entries.",
+    "names_evaluated": {
+      "INTC": "DISQUALIFIED — rel_volume 1.18 < 1.2 minimum; price $140.56 is $1.56 above VWAP $139.00 (too extended, entry would be momentum-chasing which is disarmed in mixed regime). Below ORB high $141.40 (no ORB breakout).",
+      "NVDA": "Below VWAP ($208.78 vs $210.53). No reclaim in progress.",
+      "AMZN": "Below VWAP ($233.43 vs $235.47). No reclaim in progress.",
+      "NFLX": "Below VWAP ($72.01 vs $73.93). Low priority, no reclaim in progress.",
+      "SPY": "Below VWAP and below ORB low. rel_volume 0.57 (disqualified, min 1.2). Confirms risk-off."
+    },
+    "decision": "No valid setup on any name. Holding cash is correct. When unsure, do nothing."
+  },
+  "account_snapshot": {
+    "equity": 999932.42,
+    "cash": 999932.42,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

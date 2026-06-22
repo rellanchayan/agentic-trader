@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "09:33:55",
+  "date": "2026-06-22",
+  "action": "WAIT",
+  "reason": "Within 5-minute no-trade window (3 min since open). ORB not yet formed (needs 9:45 AM). INTC spread 28.2 bp exceeds max_spread_bp 25. No positions to manage, no setups actionable.",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "equity": 999932.42,
+  "loss_budget_remaining": 3000.0,
+  "market_summary": {
+    "SPY": {"last": 748.91, "above_vwap": true, "spread_bp": 5.6, "rel_volume": 1.83},
+    "NVDA": {"last": 211.9, "above_vwap": true, "spread_bp": 3.3, "rel_volume": 1.5},
+    "AMZN": {"last": 241.415, "above_vwap": true, "spread_bp": 5.0, "rel_volume": 2.48},
+    "INTC": {"last": 137.96, "above_vwap": false, "spread_bp": 28.2, "rel_volume": 1.93, "disqualified": "spread > 25 bp"},
+    "NFLX": {"last": 76.245, "above_vwap": false, "spread_bp": 4.0, "rel_volume": 2.83}
+  },
+  "setup_checks": {
+    "orb_available": false,
+    "note": "ORB window open 9:30-9:45 AM; levels forming, no breakouts yet."
+  },
+  "next_action": "Re-evaluate at 9:45+ AM when ORB is set and spread normalizes. Watch INTC for ORB breakout above $140.60, NVDA for ORB/VWAP continuation.",
+  "orders_submitted": [],
+  "orders_cancelled": []
+}

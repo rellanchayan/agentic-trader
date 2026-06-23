@@ -53,6 +53,15 @@ made of **rules to follow**, not stories.
   only entry is "no setups qualify today."
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-23: No tuning. Tuner eligible (6 days of history, drawdown 0.01%, not in a losing streak)
+  but no rule fired — parameters unchanged. Zero trades today, sixth consecutive no-trade session.
+  No journal and no docs/day_plan.md were written (sixth consecutive session without a plan). The
+  reported Sharpe of -65.93 is an artifact of near-zero but slightly negative equity drift against
+  effectively zero variance — not a meaningful signal; ignore it. The tuner correctly declines to
+  act: without trades there is no new evidence about entry quality, stop placement, or sizing, and
+  there is nothing to tune. The only lever that matters right now is fixing the premarket pipeline
+  so it reliably writes a day plan. Until that happens, every evening's tuner run will reach the
+  same conclusion.
 - 2026-06-22: No tuning. Tuner eligible (5 days of history, drawdown 0.01%, not in a losing streak)
   but no rule fired — parameters unchanged. Zero trades today for the fifth time in six sessions.
   No docs/day_plan.md was written (fifth consecutive session without a plan). The premarket phase

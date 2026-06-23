@@ -1,0 +1,49 @@
+{
+  "tick_time_et": "13:33:39",
+  "action": "HALT",
+  "reason": "No day plan at docs/plan/2026-06-23.md — PLAYBOOK Infrastructure rule: missing day plan = HALT condition, no tick cycles should run.",
+  "positions_managed": [],
+  "new_orders": [],
+  "market_observations": {
+    "AMD": {
+      "signal": "orb_breakout=true, above_vwap=true",
+      "disqualified_by": "rel_volume 0.93 < min 1.2, and no day plan authorization"
+    },
+    "CRM": {
+      "signal": "orb_breakout=true, above_vwap=true",
+      "disqualified_by": "rel_volume 0.62 < min 1.2, and no day plan authorization"
+    },
+    "TSLA": {
+      "signal": "rel_volume 1.68",
+      "disqualified_by": "last 385.26 below orb_low 388.10, above_vwap=false — no valid setup"
+    },
+    "GOOGL": {
+      "signal": "rel_volume 1.22, above_vwap=true",
+      "disqualified_by": "spread_bp 99.1 > max 25"
+    },
+    "AVGO": {
+      "signal": "above_vwap=true",
+      "disqualified_by": "spread_bp 121.6 > max 25, rel_volume 0.88 < min 1.2"
+    },
+    "ORCL": {
+      "signal": "none",
+      "disqualified_by": "spread_bp 177.8 > max 25, above_vwap=false"
+    },
+    "NVDA": {
+      "signal": "above_vwap=true, spread_bp 1.5",
+      "disqualified_by": "rel_volume 0.99 < min 1.2, no orb_breakout, and no day plan"
+    },
+    "AAPL": {
+      "signal": "above_vwap=true",
+      "disqualified_by": "rel_volume 1.08 < min 1.2, no orb_breakout, spread 13.4bp ok but no plan"
+    }
+  },
+  "account_snapshot": {
+    "equity": 999932.42,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "note": "Tick 4 of the day. Eight consecutive sessions without a completed premarket/day-plan. Safety gate returned PROCEED but PLAYBOOK Infrastructure rule overrides: no day plan = HALT. No trades placed."
+}

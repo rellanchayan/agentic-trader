@@ -1,0 +1,23 @@
+{
+  "tick_time_et": "2026-06-23T12:34:05",
+  "action": "HALT",
+  "reason": "No day plan at docs/plan/2026-06-23.md — PLAYBOOK Infrastructure rule: missing day plan = HALT condition, no tick cycles should run.",
+  "gate_verdict": "PROCEED",
+  "gate_override": "PLAYBOOK HALT (missing day plan)",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "slots_used": 0,
+  "loss_budget_remaining": 3000.0,
+  "positions": [],
+  "open_orders": [],
+  "market_notes": {
+    "AMD": "orb_breakout=true, above_vwap=true, spread_bp=16.6, rel_volume=1.03 — no entry without day plan",
+    "CRM": "orb_breakout=true, above_vwap=true, spread_bp=8.4, rel_volume=0.67 (below min 1.2) — would fail volume filter anyway",
+    "AAPL": "below VWAP, no breakout",
+    "TSLA": "below VWAP, below ORB low, below orb range entirely — no setup",
+    "NVDA": "at VWAP, below ORB high — no confirmed breakout",
+    "GOOGL": "above VWAP, at ORB high edge, spread only 1.7bp — watchable but no plan"
+  },
+  "next_action": "Wait for next tick. Premarket must write docs/plan/2026-06-23.md before any trading can begin.",
+  "session_note": "Seventh consecutive session without a day plan. The premarket pipeline is not completing its job."
+}

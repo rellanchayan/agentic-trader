@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "14:33:32",
+  "action": "HALT",
+  "verdict_from_preflight": "PROCEED",
+  "halt_reason": "PLAYBOOK Infrastructure rule: no day plan at docs/plan/2026-06-23.md. Premarket phase has not completed.",
+  "positions_managed": [],
+  "new_orders": [],
+  "market_assessment": {
+    "TSLA": "rel_vol 1.59 (only name >=1.2) but last 381.52 below orb_low 388.10 and below VWAP 385.10 — no setup",
+    "CRM": "orb_breakout=true but spread 106.7bp exceeds max 25bp — disqualified",
+    "AMD": "rel_vol 0.86 below 1.2 minimum — disqualified",
+    "AMZN": "rel_vol 1.10 below 1.2 minimum — disqualified",
+    "ORCL": "spread 600.2bp — disqualified",
+    "META": "spread 31.1bp, rel_vol 0.66 — disqualified",
+    "others": "all fail rel_volume or other filters"
+  },
+  "account": {
+    "equity": 999932.42,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "slots_used": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "note": "Tick 5 of the day. PLAYBOOK override: no trades without a day plan regardless of PROCEED signal from preflight."
+}

@@ -1,0 +1,27 @@
+{
+  "tick_time_et": "09:33:45",
+  "tick_time_utc": "2026-06-23T13:34:20Z",
+  "action": "HALT",
+  "positions_managed": [],
+  "new_entries": [],
+  "orders_cancelled": [],
+  "halt_reason": "No day plan found at docs/plan/2026-06-23.md. PLAYBOOK Infrastructure rule: missing day plan at open = HALT condition. Premarket phase did not complete. Watchlist unknown, loss-stop baseline context unavailable, no record of market mood or candidate setups. Zero trades placed this tick.",
+  "market_summary": {
+    "AAPL": {"last": 297.63, "spread_bp": 32.9, "above_vwap": true, "orb_breakout": false, "rel_volume": 3.1},
+    "GOOGL": {"last": 342.88, "spread_bp": 31.7, "above_vwap": true, "orb_breakout": false, "rel_volume": 4.32},
+    "NVDA": {"last": 200.62, "spread_bp": 3.5, "above_vwap": false, "orb_breakout": false, "rel_volume": 4.16},
+    "MSFT": {"last": 372.47, "spread_bp": 51.6, "above_vwap": true, "orb_breakout": false, "rel_volume": 3.45},
+    "TSLA": {"last": 390.635, "spread_bp": 35.2, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.45}
+  },
+  "account": {
+    "equity": 999932.42,
+    "cash": 999932.42,
+    "positions_open": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "slots_remaining": 8
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "notes": "Positions confirmed flat by Alpaca --positions. Day stop not active. All spreads reviewed: AMD (112.5bp), AMZN (490.1bp), ORCL (1063.9bp), CRM (426.9bp) all far above max_spread_bp of 25. GOOGL (31.7bp) and AAPL (32.9bp) are close but above 25bp limit. NVDA (3.5bp) is within limit but below VWAP and no ORB breakout. Even if plan existed, no clean setups present at 3 minutes into session (ORB window not complete at 15 min). HALT is the correct call regardless."
+}

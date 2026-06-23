@@ -1,0 +1,14 @@
+{
+  "tick_time_et": "11:34",
+  "tick_time_utc": "2026-06-23T15:34:35Z",
+  "verdict": "HALT",
+  "reason": "No day plan at docs/plan/2026-06-23.md — PLAYBOOK HALT condition. Premarket did not complete. Without a day plan there is no watchlist, no identified setups, and no market context. Per PLAYBOOK rule: missing plan at open = HALT condition, no tick cycles run.",
+  "positions_checked": 0,
+  "orders_placed": 0,
+  "orders_cancelled": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "slots_used": 0,
+  "equity": 999932.42,
+  "loss_budget_remaining": 3000.0
+}

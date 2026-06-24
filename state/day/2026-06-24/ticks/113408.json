@@ -1,0 +1,79 @@
+{
+  "tick_id": "2026-06-24T11:34:08-04:00",
+  "hhmmss": "113408",
+  "timestamp_et": "2026-06-24T11:34:08-04:00",
+  "minutes_since_open": 124,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "slots_used": 0,
+  "trades_used": 0,
+  "scan": {
+    "AMZN": {
+      "considered": true,
+      "setup": "orb_breakout",
+      "qualified": false,
+      "rejection_reason": "Chase — price $241.29 is $2.84 above orb_high $238.45 at time of tick. Entry at $241.78 would be $3.33 above breakout, 0.41x daily ATR ($8.17). Breakout was real but the entry window has passed. Buying here risks entering an extended move with poor remaining upside vs. the stop below orb_low $232.97 ($8.81 risk/share). Sizing math: qty_by_risk=floor(250/8.81)=28, qty_by_cash=floor(10000/241.78)=41, qty=28, notional=$6,770. Numbers are valid but entry thesis is weak.",
+      "rel_volume": 1.94,
+      "spread_bp": 1.2,
+      "quote_age_sec": 0.3,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "last": 241.29,
+      "orb_high": 238.45,
+      "orb_low": 232.97,
+      "distance_above_orb_high_usd": 2.84,
+      "distance_above_orb_high_atr_fraction": 0.41,
+      "proposed_entry": 241.78,
+      "proposed_stop": 232.95,
+      "proposed_target": null,
+      "risk_per_share": 8.81,
+      "qty_by_risk": 28,
+      "qty_by_cash": 41,
+      "qty_final": 28
+    },
+    "SPY": {
+      "considered": true,
+      "setup": "orb_breakout",
+      "qualified": false,
+      "rejection_reason": "rel_volume 0.59x below minimum 1.2x"
+    },
+    "NVDA": {
+      "considered": true,
+      "setup": "orb_breakout",
+      "qualified": false,
+      "rejection_reason": "Price $200.64 is $0.93 below orb_high $201.57 — breakout not triggered"
+    },
+    "INTC": {
+      "considered": true,
+      "setup": "orb_breakout",
+      "qualified": false,
+      "rejection_reason": "rel_volume 0.45x below minimum 1.2x. Spread 6.7bp is within limit but volume disqualifies."
+    },
+    "BAC": {
+      "considered": true,
+      "setup": "orb_breakout",
+      "qualified": false,
+      "rejection_reason": "rel_volume 1.02x below minimum 1.2x. orb_breakout=false."
+    },
+    "NFLX": {
+      "considered": true,
+      "setup": "vwap_reclaim",
+      "qualified": false,
+      "rejection_reason": "above_vwap=false, rel_volume 0.95x below minimum 1.2x. No setup."
+    },
+    "PFE": {
+      "considered": false,
+      "rejection_reason": "Blocked by day plan — do not trade PFE today."
+    }
+  },
+  "reasoning": "AMZN is the only name that technically passes quote freshness, spread, and relative volume checks. Its ORB breakout is confirmed and above VWAP. However, the breakout happened well before this tick. At 124 minutes into the session, entering $3.33 (0.41 ATR) above the trigger is chasing, not trading a setup. The playbook is clear: when unsure, do nothing. A missed trade costs nothing; a forced trade costs money. All other names are disqualified by volume, direction, or plan restriction. Remaining flat is the correct decision this tick.",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "next_watch": "NVDA ORB breakout above $201.57 if rel_vol >= 1.2x. AMZN momentum if price holds and a clean pullback to VWAP near $238.56 occurs — that would reset a VWAP reclaim entry. Note: NVDA/INTC must be closed by 2:30 PM ET per Micron earnings risk."
+}

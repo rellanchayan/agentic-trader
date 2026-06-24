@@ -20,6 +20,9 @@ made of **rules to follow**, not stories.
 - If checks are only ~hourly (cloud mode), use wider stops and smaller size — you cannot babysit
   positions minute-to-minute, so a tight stop can be blown straight through between checks.
 - No new entries after 3:30pm ET. Start closing out at 3:50pm. Be flat by 3:56pm.
+- Do not enter a momentum or ORB continuation trade more than 90 minutes after the opening range
+  that seeded the thesis. A late entry inherits the risk of a mature trend reverting but misses
+  the early reward; if the setup was not actionable at the open, skip it for the day.
 - Be careful around scheduled events (Fed, CPI, jobs) — prices whip around. Trade smaller or wait.
 
 ## Setups by market mood
@@ -53,6 +56,15 @@ made of **rules to follow**, not stories.
   only entry is "no setups qualify today."
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-24: No tuning. Tuner frozen (last 3 days net-negative — not optimizing during a losing
+  streak). One trade today: AMZN momentum continuation, stopped at VWAP, -$64.44, -0.975R. This
+  is the seventh consecutive session without a premarket day plan; that structural failure remains
+  the dominant problem — without a plan, the tick loop is operating blind and will keep entering
+  late or marginal setups. Today's entry at 12:35 PM was 2+ hours after the ORB that seeded the
+  thesis; a morning plan with a time-of-day filter ("no new momentum entries after 11:00 AM ET on
+  a thesis more than 90 minutes old") would have blocked this trade entirely. The one positive:
+  stop discipline was exact at -0.975R, not worse. No parameter changes made; the tuner correctly
+  declines, and there is nothing to tune until the premarket pipeline reliably writes a day plan.
 - 2026-06-23: No tuning. Tuner eligible (6 days of history, drawdown 0.01%, not in a losing streak)
   but no rule fired — parameters unchanged. Zero trades today, sixth consecutive no-trade session.
   No journal and no docs/day_plan.md were written (sixth consecutive session without a plan). The

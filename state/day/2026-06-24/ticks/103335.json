@@ -1,0 +1,45 @@
+{
+  "tick_time_et": "2026-06-24T10:33:35",
+  "minutes_since_open": 63,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "AMZN",
+      "reason_rejected": "Spread 56.4bp exceeds max_spread_bp 25. Disqualified."
+    },
+    {
+      "ticker": "BAC",
+      "reason_rejected": "Below VWAP ($57.72), below ORB low ($57.62). No bullish setup. No entry."
+    },
+    {
+      "ticker": "INTC",
+      "reason_rejected": "rel_volume 0.51x below minimum 1.2x. Disqualified on volume."
+    },
+    {
+      "ticker": "NFLX",
+      "reason_rejected": "Below VWAP ($72.79), below ORB low ($72.68). No setup."
+    },
+    {
+      "ticker": "NVDA",
+      "reason_rejected": "Above VWAP, rel_volume 1.48x (qualifies), spread 1.5bp (qualifies). BUT price $200.375 is $1.19 below ORB high $201.57 — orb_breakout flag is FALSE. ORB setup not triggered. Wait for confirmed breakout above $201.57."
+    },
+    {
+      "ticker": "PFE",
+      "reason_rejected": "Below VWAP and ORB range. Plan says watch-only; no clear catalyst visible. No entry."
+    },
+    {
+      "ticker": "SPY",
+      "reason_rejected": "rel_volume 0.70x below minimum 1.2x. Price near ORB high $737.26 but volume insufficient. Disqualified."
+    }
+  ],
+  "best_candidate_next_tick": "NVDA — watch for close above ORB high $201.57 with sustained rel_volume >= 1.2x. Entry would be marketable buy limit ~$201.77, stop below ORB high ~$201.10 (1.5 ATR below entry), target $202.73 (2.5 ATR above entry). Must close by 2:30 PM ET per day plan (Micron earnings risk).",
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "open_orders_canceled": [],
+  "orders_submitted": [],
+  "regime": "MIXED / CAUTIOUS RISK-ON",
+  "notes": "First tick of the day. No positions to manage. No valid setup triggers this tick. Disciplined wait for confirmation."
+}

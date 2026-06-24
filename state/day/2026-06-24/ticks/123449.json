@@ -1,0 +1,135 @@
+{
+  "tick_time_et": "12:34",
+  "tick_hhmmss": "123449",
+  "minutes_since_open": 183,
+  "snapshot_timestamp_et": "2026-06-24T12:33:34",
+
+  "account": {
+    "equity": 999932.42,
+    "cash": 999932.42,
+    "buying_power": 3999729.68,
+    "daytrade_count": 0
+  },
+
+  "day_pnl": {
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "tripped": false
+  },
+
+  "budget": {
+    "trades_remaining": 20,
+    "position_slots_remaining": 8,
+    "daily_deploy_cap_usd": 50000
+  },
+
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+
+  "positions_at_tick": [],
+  "open_orders_at_tick": [],
+
+  "market_scan": {
+    "AMZN": {
+      "last": 240.62,
+      "bid": 240.64,
+      "ask": 240.71,
+      "spread_bp": 2.9,
+      "quote_age_sec": 0.2,
+      "vwap": 239.11,
+      "orb_high": 238.45,
+      "orb_low": 232.97,
+      "atr_1m": 0.152,
+      "atr_day": 8.17,
+      "rel_volume": 1.6,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "assessment": "TRADE — momentum continuation. ORB confirmed, above VWAP, 1.6x vol, pulled back from intraday high. Entry valid."
+    },
+    "SPY": {
+      "last": 737.6,
+      "rel_volume": 0.49,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "assessment": "SKIP — rel_volume 0.49x below 1.2x minimum."
+    },
+    "NVDA": {
+      "last": 200.345,
+      "rel_volume": 0.85,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "assessment": "SKIP — below VWAP, orb_breakout false, rel_volume 0.85x below minimum."
+    },
+    "BAC": {
+      "last": 57.59,
+      "rel_volume": 0.87,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "assessment": "SKIP — below VWAP, no breakout, rel_volume 0.87x below minimum."
+    },
+    "INTC": {
+      "last": 134.03,
+      "spread_bp": 42.4,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "assessment": "SKIP — spread 42.4bp exceeds 25bp maximum."
+    },
+    "NFLX": {
+      "last": 72.005,
+      "rel_volume": 0.82,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "assessment": "SKIP — below VWAP, rel_volume 0.82x below minimum."
+    },
+    "PFE": {
+      "last": 24.21,
+      "orb_low": 24.855,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "assessment": "SKIP — day plan: watch-only, no clear news driving gap. Also trading below ORB low and VWAP — bearish structure, not a buy."
+    }
+  },
+
+  "position_management": "No existing positions to manage.",
+
+  "decision": "BUY",
+  "action_taken": {
+    "ticker": "AMZN",
+    "side": "BUY",
+    "qty": 41,
+    "limit_price": 240.95,
+    "stop": 239.11,
+    "target": 243.71,
+    "setup": "momentum",
+    "trade_id": "T-20260624-123449-AMZN",
+    "alpaca_order_id": "56d99f27-e17c-4e0c-b1e5-f6b4ddf94f35",
+    "order_status": "PENDING_NEW",
+    "constitution_check": "PASS",
+    "daytrade_guard_check": "PASS"
+  },
+
+  "sizing_details": {
+    "entry": 240.95,
+    "stop": 239.11,
+    "risk_per_share": 1.84,
+    "risk_per_trade_usd": 250,
+    "qty_by_risk": 135,
+    "per_trade_max_usd": 10000,
+    "qty_by_cash": 41,
+    "qty_final": 41,
+    "notional": 9878.95,
+    "pct_of_equity": 0.010,
+    "reward_per_share": 2.76,
+    "target_r_multiple": 1.5
+  },
+
+  "rationale": "AMZN is the only name meeting all entry criteria this tick. It confirmed an ORB breakout earlier in the session (orb_high $238.45), has maintained position above VWAP ($239.11) all morning with 1.6x relative volume, and pulled back from the $241+ intraday high to $240.62. This is a classic momentum continuation setup: the trend is intact, the pullback is small, and the risk structure is clean. Stop at VWAP ($239.11) — a move back below VWAP invalidates the bullish thesis. Target $243.71 (1.5R minimum). AMZN has no chip-sector binary event risk and can be held past 2:30 PM. Quote fresh (0.2s), spread tight (2.9bp), both guards passed.",
+
+  "next_tick_watch": "Confirm AMZN order filled. If filled, monitor: sell if price drops to $239.11 (stop). Look to take profit at $243.71. If unfilled and price moved away significantly, cancel and reassess.",
+
+  "day_pnl_end": 0.0,
+  "slots_used_end": 1,
+  "trades_used_end": 1
+}

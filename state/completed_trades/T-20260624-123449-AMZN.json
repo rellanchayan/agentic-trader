@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260624-123449-AMZN",
+  "created_at_utc": "2026-06-24T16:34:49Z",
+  "ticker": "AMZN",
+  "side": "BUY",
+  "qty": 41,
+  "limit_price": 240.95,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "Momentum continuation: AMZN confirmed ORB breakout earlier (orb_high $238.45, 1.6x rel volume), has been trending above VWAP ($239.11) all morning, and has pulled back from the $241+ intraday high to $240.62. Structure intact \u2014 above VWAP, above ORB high, decent volume. Entering the pullback with trend still intact. No chip-sector risk (no Micron exposure). Spread 2.9bp, quote fresh 0.2s.",
+  "risk": "Stop at $239.11 (VWAP). If price falls back below VWAP, the bullish ORB thesis is broken. Risk per share $1.84, total risk ~$75 on 41 shares.",
+  "strategy": "intraday",
+  "setup": "momentum",
+  "stop": 239.11,
+  "target": 243.71,
+  "quote_age_sec": 0.2,
+  "spread_bp": 2.9,
+  "status": "submitted",
+  "alpaca_order_id": "56d99f27-e17c-4e0c-b1e5-f6b4ddf94f35",
+  "client_order_id": "T-20260624-123449-AMZN",
+  "submitted_at_utc": "2026-06-24T16:35:43.175127+00:00"
+}

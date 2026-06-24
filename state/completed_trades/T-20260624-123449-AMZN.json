@@ -15,8 +15,11 @@
   "target": 243.71,
   "quote_age_sec": 0.2,
   "spread_bp": 2.9,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "56d99f27-e17c-4e0c-b1e5-f6b4ddf94f35",
   "client_order_id": "T-20260624-123449-AMZN",
-  "submitted_at_utc": "2026-06-24T16:35:43.175127+00:00"
+  "submitted_at_utc": "2026-06-24T16:35:43.175127+00:00",
+  "filled_qty": 41.0,
+  "filled_avg_price": 240.721707,
+  "reconciled_at_utc": "2026-06-24T20:35:05.330385+00:00"
 }

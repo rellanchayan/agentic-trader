@@ -1,0 +1,21 @@
+{
+  "time_et": "14:34:02",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entry": null,
+  "reason": "No trade. ORB window closed (304 min into session, >90 min past ORB). Morning risk-on thesis failed: INTC collapsed to $130.99, far below ORB low $135.93; NVDA at $195.12 below VWAP $195.60; SPY flat at VWAP. Only AMZN above VWAP (1.7x rel_vol, spread 1.7bp) but no fresh catalyst, secondary name, no clean setup at 14:34. Playbook: when unsure, do nothing.",
+  "account": {
+    "equity": 999757.36,
+    "day_pnl": -110.6,
+    "positions_open": 0,
+    "trades_today": 1,
+    "loss_budget_remaining": 2889.4
+  },
+  "market_snapshot": {
+    "AMZN": {"last": 229.86, "above_vwap": true, "rel_volume": 1.7, "spread_bp": 1.7},
+    "BAC": {"last": 58.14, "above_vwap": false, "rel_volume": 1.09, "spread_bp": 1.7},
+    "INTC": {"last": 130.99, "above_vwap": true, "rel_volume": 0.85, "spread_bp": 9.9, "note": "below ORB low $135.93 — thesis failed"},
+    "NVDA": {"last": 195.12, "above_vwap": false, "rel_volume": 0.89, "spread_bp": 1.5},
+    "SPY": {"last": 734.17, "above_vwap": true, "rel_volume": 0.88, "spread_bp": 0.5}
+  }
+}

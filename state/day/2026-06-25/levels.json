@@ -1,0 +1,94 @@
+{
+  "_meta": {
+    "date": "2026-06-25",
+    "generated_utc": "2026-06-25T13:29:03.822878+00:00",
+    "source": "watchlist_build",
+    "candidates_considered": 7,
+    "top": 7,
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 131.86,
+    "atr_day": 10.62,
+    "avg_vol_10d": 4303002,
+    "premarket_price": 139.89,
+    "gap_pct": 0.0609,
+    "spread_bp": 1012.9,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (4,303,002 sh/day); +6.1% gap"
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 198.94,
+    "atr_day": 7.5,
+    "avg_vol_10d": 4383810,
+    "premarket_price": 201.49,
+    "gap_pct": 0.0128,
+    "spread_bp": 1002.1,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (4,383,810 sh/day); +1.3% gap"
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 71.84,
+    "atr_day": 2.26,
+    "avg_vol_10d": 3542137,
+    "premarket_price": 71.44,
+    "gap_pct": -0.0056,
+    "spread_bp": 1009.3,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (3,542,137 sh/day); -0.6% gap"
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 57.75,
+    "atr_day": 1.18,
+    "avg_vol_10d": 2636149,
+    "premarket_price": 58.06,
+    "gap_pct": 0.0054,
+    "spread_bp": 1031.6,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,636,149 sh/day); +0.5% gap"
+  },
+  "AMZN": {
+    "sector": "consumer",
+    "prev_close": 234.36,
+    "atr_day": 8.17,
+    "avg_vol_10d": 2320706,
+    "premarket_price": 233.13,
+    "gap_pct": -0.0052,
+    "spread_bp": 1014.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,320,706 sh/day); -0.5% gap"
+  },
+  "PFE": {
+    "sector": "healthcare",
+    "prev_close": 24.05,
+    "atr_day": 0.57,
+    "avg_vol_10d": 2675937,
+    "premarket_price": 24.09,
+    "gap_pct": 0.0017,
+    "spread_bp": 1012.9,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,675,937 sh/day); +0.2% gap"
+  },
+  "SPY": {
+    "sector": "index",
+    "prev_close": 733.32,
+    "atr_day": 11.92,
+    "avg_vol_10d": 2043933,
+    "premarket_price": 738.51,
+    "gap_pct": 0.0071,
+    "spread_bp": 600.9,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,043,933 sh/day); +0.7% gap"
+  }
+}

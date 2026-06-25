@@ -15,8 +15,11 @@
   "target": 59.5,
   "quote_age_sec": 0.5,
   "spread_bp": 1.7,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "d067cc56-5ad1-4631-8ddf-8d280cda455d",
   "client_order_id": "T-20260625-123424-BAC-SELL",
-  "submitted_at_utc": "2026-06-25T16:35:14.811443+00:00"
+  "submitted_at_utc": "2026-06-25T16:35:14.811443+00:00",
+  "filled_qty": 169.0,
+  "filled_avg_price": 58.309822,
+  "reconciled_at_utc": "2026-06-25T20:34:53.168564+00:00"
 }

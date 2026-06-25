@@ -3,9 +3,15 @@
     "date": "2026-06-25",
     "generated_utc": "2026-06-25T13:29:55.297656+00:00",
     "source": "watchlist_build",
+    "screened_utc": "2026-06-25T13:45:00.000000+00:00",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 5,
+    "dropped": ["NFLX", "PFE"],
+    "drop_reason": {
+      "NFLX": "No catalyst; -0.6% drift near 52-week lows; no sector alignment with AI/chip theme today.",
+      "PFE": "ATR $0.57 too small for a clean day-trade structure; no catalyst; no sector alignment."
+    },
+    "note": "Pre-market screen refined by day-screener. NFLX and PFE removed. ORB levels fill in live after 9:45 AM. The day-screener agent finalized this list."
   },
   "INTC": {
     "sector": "technology",
@@ -15,9 +21,15 @@
     "premarket_price": 139.89,
     "gap_pct": 0.0609,
     "spread_bp": 1012.9,
+    "key_support": 136.00,
+    "key_resistance": 140.00,
+    "setup": "gap_and_go",
+    "priority": "primary",
+    "min_rvol": 1.2,
+    "max_position_usd": 10000,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,303,002 sh/day); +6.1% gap"
+    "note": "Gapped +6.1% on Micron blowout earnings + BofA raised to Buy/$160 + Goldman initiated Neutral/$150. Highest-conviction name today. $136 is the half-gap-fill floor and first line of defence — if it breaks below $136 in the first 5 min, gap-and-go thesis weakens. $140 is the immediate round-number cap to clear and hold. ORB breakout above the opening range high on rvol >= 1.2x is the primary entry trigger after 9:45 AM. Also watch for a gap-fade to $136-138 followed by a reclaim of $139 on volume (gap-reclaim-long entry). Do not enter before 9:45 AM. Do not enter if spread is above 25bp."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,57 +39,15 @@
     "premarket_price": 201.49,
     "gap_pct": 0.0128,
     "spread_bp": 1002.1,
+    "key_support": 200.00,
+    "key_resistance": 205.00,
+    "setup": "orb_breakout",
+    "priority": "primary",
+    "min_rvol": 1.2,
+    "max_position_usd": 10000,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,383,810 sh/day); +1.3% gap"
-  },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 71.84,
-    "atr_day": 2.26,
-    "avg_vol_10d": 3542137,
-    "premarket_price": 71.44,
-    "gap_pct": -0.0056,
-    "spread_bp": 1009.3,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,542,137 sh/day); -0.6% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 57.75,
-    "atr_day": 1.18,
-    "avg_vol_10d": 2636149,
-    "premarket_price": 58.06,
-    "gap_pct": 0.0054,
-    "spread_bp": 1031.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,636,149 sh/day); +0.5% gap"
-  },
-  "AMZN": {
-    "sector": "consumer",
-    "prev_close": 234.36,
-    "atr_day": 8.17,
-    "avg_vol_10d": 2320706,
-    "premarket_price": 233.13,
-    "gap_pct": -0.0052,
-    "spread_bp": 1014.0,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,320,706 sh/day); -0.5% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.05,
-    "atr_day": 0.57,
-    "avg_vol_10d": 2675937,
-    "premarket_price": 24.09,
-    "gap_pct": 0.0017,
-    "spread_bp": 1012.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,675,937 sh/day); +0.2% gap"
+    "note": "Gapped +1.3% on direct Micron HBM4 catalyst (Micron confirmed HBM4 for Nvidia Vera Rubin is shipping ahead of schedule). $200 is a key psychological level that has flipped from resistance to support — a hold above $200 at the open confirms the setup. If NVDA breaks below $200 on volume in the first 10 min, wait or skip. ORB breakout above the opening range high is the primary signal; natural stop anchor is below $200 or below ORB low. Target $205 as first resistance zone."
   },
   "SPY": {
     "sector": "index",
@@ -87,8 +57,50 @@
     "premarket_price": 738.51,
     "gap_pct": 0.0071,
     "spread_bp": 600.9,
+    "key_support": 736.00,
+    "key_resistance": 745.00,
+    "setup": "orb_or_vwap_only",
+    "priority": "secondary",
+    "min_rvol": 1.2,
+    "max_position_usd": 10000,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,043,933 sh/day); +0.7% gap"
+    "note": "Broad risk-on gauge. +0.7% gap on Micron earnings and in-line PCE. $736 is the intraday decision line — if SPY holds above $736 at the open, risk-on regime is confirmed for the full session. A gap-fade below $733.32 (prior close) in the first 5 min is a warning signal to reduce activity on all other names. ORB breakout above ~$739-741 is a valid trade. $745 is the next meaningful resistance (round number, approximately half an ATR above premarket). SPY is also the continuous session mood judge."
+  },
+  "AMZN": {
+    "sector": "consumer",
+    "prev_close": 234.36,
+    "atr_day": 8.17,
+    "avg_vol_10d": 2320706,
+    "premarket_price": 233.13,
+    "gap_pct": -0.0052,
+    "spread_bp": 1014.0,
+    "key_support": 230.00,
+    "key_resistance": 234.36,
+    "setup": "gap_reclaim_long",
+    "priority": "secondary",
+    "min_rvol": 1.5,
+    "max_position_usd": 7500,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Drifting -0.5% premarket with no specific catalyst. Primary setup is a gap-fill reclaim: if AMZN opens near $233, dips, then reclaims $234.36 (prior close) on volume, that is a clean gap-fill-long entry. $230 is the round-number support floor (~1 ATR below). $234.36 is the key resistance to clear for the reclaim thesis. Only engage if INTC and NVDA have resolved or are not producing clean setups. Do not enter on momentum continuation more than 90 minutes past the ORB (yesterday's lesson). Requires rvol >= 1.5x before entry."
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 57.75,
+    "atr_day": 1.18,
+    "avg_vol_10d": 2636149,
+    "premarket_price": 58.06,
+    "gap_pct": 0.0054,
+    "spread_bp": 1031.6,
+    "key_support": 57.00,
+    "key_resistance": 59.00,
+    "setup": "orb_or_vwap_only",
+    "priority": "secondary",
+    "min_rvol": 1.5,
+    "max_position_usd": 7500,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Up +0.5% on general risk-on mood; no BAC-specific catalyst. Small ATR ($1.18) allows tight stops. $57.00 is round-number support below prior close $57.75 and within 1 ATR of premarket price. $59.00 is the round-number target (~1 ATR above premarket). Only engage if volume shows up by 10:30 AM (rvol >= 1.5x required). Valid setups are clean ORB breakout or VWAP reclaim only — no chasing. Low priority relative to INTC and NVDA."
   }
 }

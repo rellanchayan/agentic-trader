@@ -1,0 +1,56 @@
+{
+  "tick_time_et": "12:34:24",
+  "tick_time_utc": "2026-06-25T16:34:24Z",
+  "minutes_since_open": 183,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account_snapshot": {
+    "equity": 999765.0,
+    "cash": 989903.0,
+    "buying_power": 3987225.59,
+    "day_pnl": -102.96,
+    "loss_budget_remaining": 2897.04
+  },
+  "positions_at_tick": [
+    {
+      "ticker": "BAC",
+      "qty": 169,
+      "avg_entry": 58.96426,
+      "current_price": 58.355,
+      "unrealized_pl": -102.96,
+      "action": "SELL — stop hit and thesis broken"
+    }
+  ],
+  "market_summary": {
+    "INTC": {"last": 129.57, "vwap": 130.88, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.08, "spread_bp": 4.6, "note": "Gap faded badly. rel_volume below 1.2. No setup."},
+    "NVDA": {"last": 195.58, "vwap": 195.80, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.16, "spread_bp": 36.7, "note": "Spread 36.7bp exceeds 25bp max. No entry allowed."},
+    "SPY":  {"last": 733.37, "vwap": 734.54, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.07, "spread_bp": 3.1, "note": "Below VWAP, rel_volume below 1.2. No setup."},
+    "AMZN": {"last": 227.535, "vwap": 228.52, "above_vwap": false, "orb_breakout": false, "rel_volume": 2.03, "spread_bp": 4.0, "note": "Below VWAP. Yesterday's AMZN stop-out lesson. No setup."},
+    "BAC":  {"last": 58.355, "vwap": 58.71, "above_vwap": false, "orb_breakout": true, "rel_volume": 1.46, "spread_bp": 1.7, "note": "SELLING — stop hit below VWAP."}
+  },
+  "decisions": [
+    {
+      "type": "SELL",
+      "ticker": "BAC",
+      "qty": 169,
+      "limit_price": 58.29,
+      "reason": "Stop hit. Entry $58.964, current $58.355. Move of $0.609 vs 1.5-ATR stop of $0.039. Far below VWAP $58.71. Thesis broken.",
+      "trade_file": "state/completed_trades/T-20260625-123424-BAC-SELL.json",
+      "alpaca_order_id": "d067cc56-5ad1-4631-8ddf-8d280cda455d",
+      "constitution_result": "PASS",
+      "daytrade_guard_result": "PASS",
+      "submitted": true
+    }
+  ],
+  "new_entries_considered": false,
+  "new_entries_reason": "183 min into session (past 90-min ORB continuation window). All 5 names below VWAP and ORB highs. NVDA spread 36.7bp blocked. INTC rel_volume 1.08 blocked. SPY rel_volume 1.07 blocked. AMZN has no setup and yesterday's stop-out lesson applies. Risk-on thesis has not materialized midday.",
+  "open_orders_cancelled": [],
+  "budget_after_tick": {
+    "trades_remaining": 20,
+    "position_slots_remaining": 7,
+    "day_pnl": -102.96
+  },
+  "next_tick_watch": "Monitor BAC fill via --reconcile. Watch NVDA spread — if it tightens below 25bp and price reclaims VWAP, that could warrant evaluation. Otherwise hold cash into close."
+}

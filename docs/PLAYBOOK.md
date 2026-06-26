@@ -56,6 +56,17 @@ made of **rules to follow**, not stories.
   only entry is "no setups qualify today."
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-26: No tuning. Tuner frozen (last 3 days net-negative — not optimizing during a losing
+  streak). Zero trades today: 0 round-trips, $0 P&L, ended flat, loss stop not hit. Account equity
+  $999,757.32 (-0.02% total return). The no-trade call was correct. The tuner's own status report
+  confirms why: win rate 22% across 9 sessions, avg loss -1.46R vs avg win +0.60R, and both active
+  setups (ORB -0.721R, momentum -0.975R) are in negative expectancy territory. The last three
+  calendar days show a loss (-$64.44 on 2026-06-24), a day with one unfilled entry and $0 P&L
+  (2026-06-25), and today's zero. The tuner is right to stay frozen. Doing nothing on a day when
+  there is no qualifying setup is disciplined, not passive — a forced trade into a losing-expectancy
+  pattern would have made things worse. The freeze will lift when the last-3-days window turns
+  net-positive; that requires at minimum one clean winning round-trip. Until then: preserve capital,
+  enforce the premarket plan requirement, and do not loosen entry standards to "find" a trade.
 - 2026-06-24: No tuning. Tuner frozen (last 3 days net-negative — not optimizing during a losing
   streak). One trade today: AMZN momentum continuation, stopped at VWAP, -$64.44, -0.975R. This
   is the seventh consecutive session without a premarket day plan; that structural failure remains

@@ -3,9 +3,11 @@
     "date": "2026-06-29",
     "generated_utc": "2026-06-29T13:29:44.488259+00:00",
     "source": "watchlist_build",
+    "screened_by": "day-screener",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 4,
+    "cut": ["NFLX", "BAC", "PFE"],
+    "note": "Pre-market screen. ORB levels fill in live after the open. Static support/resistance added by day-screener. Pre-market spread readings are inflated due to thin pre-market liquidity; at-open spreads for these names are expected to be 1-3 bp."
   },
   "NVDA": {
     "sector": "technology",
@@ -15,33 +17,54 @@
     "premarket_price": 202.34,
     "gap_pct": 0.054,
     "spread_bp": 920.8,
+    "support": 200.00,
+    "support2": 197.50,
+    "resistance": 205.00,
+    "resistance2": 210.00,
+    "stop_zone": 198.50,
+    "target_zone_1": 205.00,
+    "target_zone_2": 208.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,137,912 sh/day); +5.4% gap"
+    "note": "STANDOUT. +5.4% gap (10.4 pts = 1.55x ATR) on 4.1M avg vol. 200.00 is key round-number support at the open. Watch for ORB breakout above 205.00 or a gap-fill fade toward 200. Stop below 198.50 on any long."
   },
   "AMZN": {
     "sector": "consumer",
-    "prev_close": 230.6,
+    "prev_close": 230.60,
     "atr_day": 8.11,
     "avg_vol_10d": 2923526,
     "premarket_price": 234.94,
     "gap_pct": 0.0188,
     "spread_bp": 1005.8,
+    "support": 232.50,
+    "support2": 230.00,
+    "resistance": 235.00,
+    "resistance2": 240.00,
+    "stop_zone": 231.50,
+    "target_zone_1": 238.00,
+    "target_zone_2": 240.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,923,526 sh/day); +1.9% gap"
+    "note": "+1.9% gap (4.3 pts, half ATR) with high ATR of 8.11 giving solid intraday range. 230.00 (prev close) is major floor; 235.00 is pre-market resistance. Break above 235 targets 238-240. Stop below 231.50 on longs."
   },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 73.63,
-    "atr_day": 2.43,
-    "avg_vol_10d": 3803505,
-    "premarket_price": 74.31,
-    "gap_pct": 0.0092,
-    "spread_bp": 1005.3,
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 281.31,
+    "atr_day": 9.20,
+    "avg_vol_10d": 2334989,
+    "premarket_price": 284.81,
+    "gap_pct": 0.0124,
+    "spread_bp": 1007.0,
+    "support": 282.50,
+    "support2": 280.00,
+    "resistance": 285.00,
+    "resistance2": 290.00,
+    "stop_zone": 281.00,
+    "target_zone_1": 288.00,
+    "target_zone_2": 290.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,803,505 sh/day); +0.9% gap"
+    "note": "+1.2% gap with second-highest ATR (9.20). 280.00 is strong prior-close support; 285.00 is pre-market price and first resistance. Hold above 282.50 at open targets 288-290. Stop below 281.00."
   },
   "INTC": {
     "sector": "technology",
@@ -51,44 +74,15 @@
     "premarket_price": 128.25,
     "gap_pct": 0.0045,
     "spread_bp": 1016.8,
+    "support": 127.00,
+    "support2": 125.00,
+    "resistance": 130.00,
+    "resistance2": 132.50,
+    "stop_zone": 126.00,
+    "target_zone_1": 130.00,
+    "target_zone_2": 132.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,641,529 sh/day); +0.4% gap"
-  },
-  "AAPL": {
-    "sector": "technology",
-    "prev_close": 281.31,
-    "atr_day": 9.2,
-    "avg_vol_10d": 2334989,
-    "premarket_price": 284.81,
-    "gap_pct": 0.0124,
-    "spread_bp": 1007.0,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,334,989 sh/day); +1.2% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 57.81,
-    "atr_day": 1.16,
-    "avg_vol_10d": 2546996,
-    "premarket_price": 58.0,
-    "gap_pct": 0.0033,
-    "spread_bp": 1018.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,546,996 sh/day); +0.3% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.28,
-    "atr_day": 0.59,
-    "avg_vol_10d": 2850648,
-    "premarket_price": 24.3,
-    "gap_pct": 0.0008,
-    "spread_bp": 1008.4,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,850,648 sh/day); +0.1% gap"
+    "note": "Flat gap (+0.4%) but highest ATR on list (10.87) makes this a range-trade, not a gap play. Watch for ORB direction; a clean break above 130 or below 127 sets the intraday trend. Do NOT enter without ORB confirmation. Stop below 126.00 on longs."
   }
 }

@@ -54,8 +54,30 @@ made of **rules to follow**, not stories.
   candidate setups. A session without a plan is an invisible session that cannot be reviewed or
   learned from. The premarket phase must write docs/day_plan.md every trading day — even if the
   only entry is "no setups qualify today."
+- The tick loop must write at least one entry to the intraday log on every cycle it runs, even if
+  that entry only records "tick HH:MM — no action — reason: [X]." A session that shows zero intraday
+  log entries must be treated as a suspected broken or non-running tick loop, not a confirmed
+  no-trade decision. The two outcomes look identical from the outside; only the log can distinguish
+  them. Two consecutive sessions with no intraday log (2026-06-26 and 2026-06-29) despite non-trivial
+  premarket setups is a strong signal the loop is not running. Verify the tick loop is actually
+  being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-29: No tuning. Tuner was technically eligible (10 days of history, drawdown 0.01%, freeze
+  status returned "ok to tune") but no rule fired — parameters left unchanged. This is correct: the
+  evidence for any specific parameter adjustment is absent, because the problem is not the parameters
+  — it is that trades are not being placed at all. Zero trades today despite a strong RISK-ON setup
+  (NVDA +5.4% premarket, ceasefire catalyst), account equity $999,661.14, ended flat. This is the
+  second consecutive session with no intraday log written. A missing intraday log is a critical
+  diagnostic gap: without it, there is no way to distinguish a disciplined no-trade call from a
+  broken tick loop that ran silently and found nothing. Both outcomes look identical from the outside.
+  The tick loop must write at least one line to the intraday log on every cycle it runs — even if
+  that line is only "tick at HH:MM, no action, reason: [X]." A session that shows zero log entries
+  must be treated as a suspected broken loop, not a confirmed no-trade decision. Rule added to
+  Infrastructure section below. The tuning ledger has no entries (no parameter has ever been
+  changed); all settings remain at their defaults. The freeze will stay lifted as long as the last-3-
+  days window is not net-negative, but there is nothing to tune until live trades generate real
+  evidence about entry quality and stop placement.
 - 2026-06-26: No tuning. Tuner frozen (last 3 days net-negative — not optimizing during a losing
   streak). Zero trades today: 0 round-trips, $0 P&L, ended flat, loss stop not hit. Account equity
   $999,757.32 (-0.02% total return). The no-trade call was correct. The tuner's own status report

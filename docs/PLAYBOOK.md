@@ -63,6 +63,19 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-06-30: No tuning. Tuner was eligible ("ok to tune", 11 days of history, drawdown 0.01%) but
+  no rule fired — parameters left unchanged. This is the correct call. Zero trades today for the
+  third consecutive session (2026-06-26, 2026-06-29, 2026-06-30), all ending flat with $0 realized
+  P&L. The statistics that back this decision: 9 total trades over 11 days (0.82 trades/day), win
+  rate 22%, avg win +0.60R, avg loss -1.46R. Both tracked setups are in negative expectancy: ORB
+  -0.721R (2 trades), momentum -0.975R (1 trade). With only 9 total trades across 11 sessions, there
+  is not enough evidence to distinguish bad parameters from bad luck or from a broken execution loop.
+  Adjusting any parameter on this sample would be chasing noise. The three consecutive no-trade
+  sessions are concerning for a different reason: no trades means no new evidence about entry quality
+  or stop placement, and no evidence means the tuner has nothing real to act on — every evening it
+  will reach the same conclusion until live round-trips resume. The tuner should stay hands-off until
+  the tick loop is confirmed running, day plans are being written, and at least one clean winning
+  round-trip appears in the history to demonstrate positive expectancy is achievable.
 - 2026-06-29: No tuning. Tuner was technically eligible (10 days of history, drawdown 0.01%, freeze
   status returned "ok to tune") but no rule fired — parameters left unchanged. This is correct: the
   evidence for any specific parameter adjustment is absent, because the problem is not the parameters

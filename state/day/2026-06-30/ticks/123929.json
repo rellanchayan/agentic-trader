@@ -1,0 +1,38 @@
+{
+  "tick_time_et": "12:39:29",
+  "tick_time_utc": "2026-06-30T16:39:29Z",
+  "action": "NO_TRADE",
+  "regime": "MIXED/RANGE-LEANING",
+  "positions_managed": [],
+  "positions_held": [],
+  "new_orders_placed": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "slots_used": 0,
+  "slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 197.80, "vwap": 197.69, "orb_high": 199.04, "orb_low": 195.11, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.31, "atr_1m": 0.165},
+    "INTC": {"last": 140.605, "vwap": 137.47, "orb_high": 135.12, "orb_low": 131.605, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.69, "atr_1m": 0.204},
+    "AAPL": {"last": 288.47, "vwap": 286.45, "orb_high": 284.83, "orb_low": 280.70, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.67, "atr_1m": 0.178},
+    "AMZN": {"last": 240.22, "vwap": 239.17, "orb_high": 240.44, "orb_low": 237.20, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.07, "atr_1m": 0.188},
+    "NFLX": {"last": 73.03, "vwap": 72.70, "orb_high": 73.66, "orb_low": 72.94, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.60, "atr_1m": 0.056}
+  },
+  "reasoning": {
+    "step1_positions": "No open positions. Nothing to manage.",
+    "step2_clock": "12:39 PM ET. Not past no-new-entries (3:30 PM). Not in flatten window (3:50 PM). Clock is fine.",
+    "step3_orb_window": "90-minute ORB rule blocks new ORB continuation trades. ORB formed ~9:30-9:45 AM ET; cutoff passed ~11:15 AM. Cannot enter ORB breakout setups at this hour per PLAYBOOK.",
+    "step4_vwap_reclaim": "No active VWAP reclaim pattern on any name. All names are already trading above VWAP, meaning we would need to wait for a dip to VWAP then a reclaim — that has not happened this tick.",
+    "step5_rel_volume": "Minimum rel_volume threshold is 1.2x per config. Only NVDA (1.31x) qualifies. AMZN is 1.07x (close but below). INTC 0.69x, AAPL 0.67x, NFLX 0.60x — all disqualified.",
+    "step6_nvda_detail": "NVDA is the best candidate: 1.31x rel_volume, $197.80 last vs VWAP $197.69 (barely above). ORB high is $199.04 — price needs +$1.24 to break out. No ORB breakout triggered. No VWAP reclaim active. No momentum continuation setup visible. Holding above VWAP but consolidating; not actionable.",
+    "step7_amzn_bar": "AMZN elevated-bar in effect from -$64.44 loss on 2026-06-24. Even if setup were marginal, AMZN requires an extremely clean signal. With rel_volume 1.07x and no ORB breakout, skip.",
+    "step8_day_plan": "Day plan: 'If no clean setup materializes by 11:30 AM, it is a no-trade day.' We are at 12:39 PM with no clean setup. This is a no-trade tick.",
+    "step9_conclusion": "NO TRADE. Capital protected. Wait for next tick. If NVDA can break $199.04 ORB high cleanly on improving volume before 3:30 PM, that would be worth reconsidering under a late VWAP reclaim or momentum continuation frame — but only with fresh eyes at the next tick."
+  }
+}

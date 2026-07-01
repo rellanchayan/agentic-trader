@@ -63,6 +63,21 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-01: No tuning. Tuner was eligible ("ok to tune", 12 days of history, drawdown 0.01%) but
+  no rule fired — parameters left unchanged. This is the correct call. Today is the fourth
+  consecutive session with no day plan and no intraday log written (2026-06-26, 2026-06-29,
+  2026-06-30, 2026-07-01). Account equity $999,661.12, $0 realized P&L, ended flat. Four
+  consecutive empty sessions is an infrastructure failure, not a trading signal. Tuning parameters
+  against a scheduler that is not running is tuning against silence: the inputs to every tunable
+  rule (fill rate, entry quality, stop placement) have had zero new observations for four days.
+  Any change made tonight would be calibrated to nothing. The sample remains 9 total trades over
+  12 days (0.75 trades/day). Both tracked setups stay in negative expectancy: ORB -0.721R (2
+  trades), momentum -0.975R (1 trade). Nine trades is not enough to separate bad parameters from
+  bad luck or from a broken execution loop — all three explanations are consistent with the data.
+  The tuner will stay hands-off until the tick loop is confirmed running on every session and at
+  least one clean winning round-trip appears in fresh history. The immediate priority is not
+  parameter tuning; it is verifying that premarket runs and writes docs/day_plan.md and that the
+  tick loop executes and writes at least one line to the intraday log every session.
 - 2026-06-30: No tuning. Tuner was eligible ("ok to tune", 11 days of history, drawdown 0.01%) but
   no rule fired — parameters left unchanged. This is the correct call. Zero trades today for the
   third consecutive session (2026-06-26, 2026-06-29, 2026-06-30), all ending flat with $0 realized

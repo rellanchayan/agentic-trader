@@ -4,8 +4,32 @@
     "generated_utc": "2026-07-01T13:29:40.883251+00:00",
     "source": "watchlist_build",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 5,
+    "screener_curated_utc": "2026-07-01T13:35:00.000000+00:00",
+    "dropped": ["PFE", "BAC"],
+    "drop_reasons": {
+      "PFE": "ATR only $0.58 on a $24 stock; full-ATR move on $10k position = ~$241 P&L, not worth the order count. Zero gap, no catalyst today.",
+      "BAC": "Flat gap (+0.0%), no catalyst today. ATR $1.16 is marginal intraday range. Analyst downgrade (Oppenheimer, 2026-06-30) still overhanging."
+    },
+    "context": "July 1, 2026. Day after Q2 quarter-end. Pre-holiday week (Fri July 4 closed). Fed Chair Warsh speaks at ECB Sintra 9:30 AM ET today — avoid new entries until speech reaction settles (~10:00 AM). NFP early release Thursday July 3 — no overnight holds under any circumstances. Spread_bp values in raw screener are pre-market artifacts (screener ran at 9:29 AM ET open); all spreads normalize after the open. ORB levels fill in live after the first 15 minutes; orb_high/orb_low remain null here.",
+    "note": "Day-screener curated list. ORB levels fill in live after the open. The day-screener agent edited this."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 199.93,
+    "atr_day": 6.30,
+    "avg_vol_10d": 4231736,
+    "premarket_price": 195.84,
+    "gap_pct": -0.0205,
+    "spread_bp": 1005.9,
+    "support": 194.27,
+    "resistance": 199.93,
+    "stop": 193.32,
+    "target": 199.62,
+    "orb_high": null,
+    "orb_low": null,
+    "priority": 1,
+    "note": "Highest liquidity (4.2M sh/day). Gap -2.1% — two consecutive down gaps after June 29 surge. Resistance = prev_close / gap-fill level at $199.93. Support = premarket - 0.25x ATR. Stop = 0.4x ATR below entry (~$193.32). Wait for ORB to form; enter on clean breakout above orb_high with volume. Warsh speech may drive tech sector tone at open — wait for reaction before entering. Max $10k."
   },
   "INTC": {
     "sector": "technology",
@@ -15,21 +39,14 @@
     "premarket_price": 135.06,
     "gap_pct": -0.0322,
     "spread_bp": 1008.4,
+    "support": 132.41,
+    "resistance": 139.55,
+    "stop": 130.83,
+    "target": 141.40,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,053,439 sh/day); -3.2% gap"
-  },
-  "NVDA": {
-    "sector": "technology",
-    "prev_close": 199.93,
-    "atr_day": 6.3,
-    "avg_vol_10d": 4231736,
-    "premarket_price": 195.84,
-    "gap_pct": -0.0205,
-    "spread_bp": 1005.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (4,231,736 sh/day); -2.1% gap"
+    "priority": 2,
+    "note": "BofA double-upgrade catalyst (June 30) drove close to $139.55; today gap -3.2% signals upgrade momentum fading. Highest ATR ($10.58 = 7.8% daily range). Wide stop required (~$4.23/share). If INTC stabilizes at support ($132.41) and reclaims VWAP with volume, ORB breakout is valid. Gap-fill target toward $139.55. Use smaller size ($5k-$7.5k) given wide stop distance. Max $10k."
   },
   "NFLX": {
     "sector": "communication",
@@ -39,9 +56,14 @@
     "premarket_price": 72.84,
     "gap_pct": 0.0203,
     "spread_bp": 1010.4,
+    "support": 71.13,
+    "resistance": 73.74,
+    "stop": 71.13,
+    "target": 75.41,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,899,491 sh/day); +2.0% gap"
+    "priority": 3,
+    "note": "Gap +2.0% with no identified news catalyst — gap origin unclear, treat with caution (may be post-split pricing; ATR $2.56 is consistent with ~$72 level). Solid volume (3.9M sh/day). Support = prev_close ($71.39), stop below prev_close buffer at $71.13. Resistance = premarket + 0.35x ATR at $73.74. Setup: ORB breakout above $73.74 or VWAP reclaim after early fade. Do not chase if gap reverses immediately."
   },
   "AAPL": {
     "sector": "technology",
@@ -51,9 +73,14 @@
     "premarket_price": 293.43,
     "gap_pct": 0.0145,
     "spread_bp": 1008.8,
+    "support": 288.41,
+    "resistance": 296.34,
+    "stop": 288.41,
+    "target": 300.96,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,428,210 sh/day); +1.5% gap"
+    "priority": 4,
+    "note": "Gap +1.5% recovery — Vision Pro VP departure headwind (June 30) appears absorbed. Support = prev_close minus 0.1x ATR buffer at $288.41 (gap-fill invalidation). Resistance = premarket + 0.35x ATR at $296.34. Setup: ORB breakout above premarket high on volume. Stop $288.41. Wide stop distance ($5.02/share) — size to $7.5k max. Elevated caution: stock had inconsistent data last two sessions."
   },
   "AMZN": {
     "sector": "consumer",
@@ -63,32 +90,13 @@
     "premarket_price": 239.82,
     "gap_pct": 0.0067,
     "spread_bp": 1006.2,
+    "support": 237.39,
+    "resistance": 242.77,
+    "stop": 237.39,
+    "target": 243.47,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,183,149 sh/day); +0.7% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.06,
-    "atr_day": 0.58,
-    "avg_vol_10d": 3067227,
-    "premarket_price": 24.12,
-    "gap_pct": 0.0025,
-    "spread_bp": 1019.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,067,227 sh/day); +0.2% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 56.96,
-    "atr_day": 1.16,
-    "avg_vol_10d": 2606513,
-    "premarket_price": 56.98,
-    "gap_pct": 0.0004,
-    "spread_bp": 1030.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,606,513 sh/day); +0.0% gap"
+    "priority": 5,
+    "note": "ELEVATED BAR — realized -0.975R loss on 2026-06-24. Smallest gap (+0.7%), no strong catalyst. ORB breakout only; no VWAP reclaim entries. Setup must be unambiguous: clean break above $242.77 on 1.5x+ relative volume. Stop at $237.39, target $243.47 (1.5R). If any doubt, skip AMZN and use another name. Max $10k, prefer $7.5k given elevated-bar rule."
   }
 }

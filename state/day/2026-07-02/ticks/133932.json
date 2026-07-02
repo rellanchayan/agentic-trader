@@ -1,0 +1,28 @@
+{
+  "tick_time_et": "13:39",
+  "tick_time_utc": "2026-07-02T17:39:32Z",
+  "minutes_since_open": 249,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_orders": [],
+  "reasoning": {
+    "market_status": "OPEN per Alpaca (next_close 16:00 ET). Day plan predicted 13:00 ET early close but Alpaca confirms normal hours. Observed holiday is Friday July 3 (fully closed); Thursday July 2 runs full session.",
+    "positions": "Zero positions held. Nothing to manage.",
+    "setup_scan": {
+      "AAPL": "ORB breakout (orb_high 301.13, last 307.97), above VWAP (305.69), rel_volume 1.6, spread 2.3 bp — strong data BUT 249 min since open, 159 min past the 90-minute ORB thesis window. PLAYBOOK prohibits entry this late.",
+      "NFLX": "ORB breakout, above VWAP (76.71), last 78.26 — but rel_volume 1.0 below the 1.2 minimum threshold. Also 249 min since open, past the 90-min window.",
+      "AMZN": "Barely above VWAP (244.44), last 244.71, rel_volume 0.65 — far below 1.2 minimum threshold. No qualifying setup.",
+      "NVDA": "Below VWAP (192.42 vs VWAP 195.56), below ORB range (196.945 low). No setup, chip headwinds.",
+      "INTC": "Well below VWAP (118.70 vs VWAP 123.39), well below ORB low (124.51). Premarket bounce thesis failed completely."
+    },
+    "decision": "NO TRADE. Primary blocker: PLAYBOOK hard rule — do not enter ORB or momentum continuation more than 90 minutes after the opening range. At 249 min since open, all setups are too mature. Secondary: AMZN and NFLX fail the rel_volume minimum (1.2). Day plan mood was MIXED/RANGE calling for caution. Protecting cash is the right call."
+  },
+  "account_snapshot": {
+    "equity": 999662.83,
+    "cash": 999662.83,
+    "day_pnl": 1.71,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  }
+}

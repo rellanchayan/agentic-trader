@@ -29,6 +29,10 @@ made of **rules to follow**, not stories.
 - **Risk-on (trending up):** favor Opening-Range Breakouts and momentum continuation. Buy strength.
 - **Range / quiet:** favor VWAP reclaims and careful mean-reversion. Smaller size.
 - **Risk-off (fear/selling):** trade less, smaller, and don't buy breakouts into weakness.
+- When sector-wide selling is confirmed premarket (multiple names in a sector all gapping down),
+  deprioritize gap-bounce theses in that sector for the full session. A single-name bounce thesis
+  while the surrounding sector is under broad selling pressure is swimming against the tide; wait for
+  the sector to stabilize before buying any name in it.
 
 ## Entries & exits
 - Enter with marketable limit orders so we fill fast but never worse than our price.
@@ -48,6 +52,10 @@ made of **rules to follow**, not stories.
   attempt ticks against a broken API — the loss-stop baseline is never captured, quotes are stale,
   and any order submission will fail silently or with bad data. Log the failure and wait for the
   connection to recover before the next session.
+- Source market hours from the Alpaca /clock endpoint at the start of every premarket run, before
+  writing the day plan. Never infer market hours from the calendar date or from assumptions about
+  holiday schedules — early closes and schedule deviations appear in the clock response, not in
+  calendar logic. An incorrect close-time assumption will corrupt every time-of-day rule in the plan.
 - If docs/day_plan.md does not exist at 9:30 AM ET, treat it as a HALT condition and do not run
   any tick cycles. A missing plan means the premarket phase did not complete, the watchlist is
   unknown, the loss-stop baseline was not captured, and there is no record of market context or
@@ -63,6 +71,19 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-02: No tuning. Tuner was eligible ("ok to tune", 13 days of history, drawdown 0.01%) but
+  no rule fired — parameters left unchanged. Today was a no-trade day: 0 trades, 0 round-trips,
+  $0.00 realized P&L, account equity $999,662.83. A day plan was written (progress), but it was
+  built on an incorrect market-hours assumption (expected 1 PM early close; market ran normal hours).
+  The tick loop had one visible log entry at 13:39 ET for the entire session — one entry across a
+  full session is not a reviewable audit trail; the existing rule requires one entry per cycle, not
+  per session. Two rules added tonight: (1) Infrastructure — always source market hours from the
+  Alpaca /clock endpoint before writing the day plan, never from calendar assumptions. (2) Setups —
+  when sector-wide selling is confirmed premarket, deprioritize gap-bounce theses in that sector for
+  the full session. The third lesson (tick loop must log every pass) was already in the playbook; no
+  duplicate added. Sample still 9 trades across 13 days; both tracked setups remain negative
+  expectancy (ORB -0.721R, momentum -0.975R). No parameter has ever been changed; all settings
+  remain at their defaults.
 - 2026-07-01: No tuning. Tuner was eligible ("ok to tune", 12 days of history, drawdown 0.01%) but
   no rule fired — parameters left unchanged. This is the correct call. Today is the fourth
   consecutive session with no day plan and no intraday log written (2026-06-26, 2026-06-29,

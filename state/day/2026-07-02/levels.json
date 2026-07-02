@@ -3,21 +3,18 @@
     "date": "2026-07-02",
     "generated_utc": "2026-07-02T13:29:14.991218+00:00",
     "source": "watchlist_build",
+    "screened_utc": "2026-07-02T13:45:00.000000+00:00",
+    "screener": "day-screener-agent",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 127.08,
-    "atr_day": 11.03,
-    "avg_vol_10d": 2951072,
-    "premarket_price": 129.02,
-    "gap_pct": 0.0153,
-    "spread_bp": 1002.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,951,072 sh/day); +1.5% gap"
+    "candidates_dropped": ["INTC", "PFE", "BAC"],
+    "drop_reasons": {
+      "INTC": "Confirmed downtrend; no long catalyst. Prev_close $127.08 implies further decline from yesterday's $139.55 reference. Nvidia PC chip competition is active headwind. Small +1.5% bounce does not reverse thesis. No long setup.",
+      "PFE": "ATR $0.59/day is too small. At $10k max trade size (~415 shares), full-ATR move = ~$245 gross — insufficient reward for the friction and risk. No catalyst today.",
+      "BAC": "ATR $1.20/day at $58 price. Full-ATR gross ~$205 per trade. Today's +0.63% gap has no identified catalyst. Reward-to-effort ratio too thin for disciplined day-trading."
+    },
+    "spread_bp_warning": "Six of seven spread_bp values (1003-1037 bp) are premarket quote artifacts — real intraday spreads for these large-caps are 1-5 bp. Only AAPL's 24.1 bp reading appears valid. Spread must be verified at open for all other names before sizing in.",
+    "top": 4,
+    "note": "Pre-market screen finalized by day-screener. ORB levels fill in live after the open (~9:45 AM ET). Final watchlist: NVDA, NFLX, AMZN, AAPL."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,21 +24,12 @@
     "premarket_price": 197.66,
     "gap_pct": 0.0006,
     "spread_bp": 1005.3,
+    "spread_bp_note": "premarket artifact — verify at open; real spread expected 1-2 bp",
+    "support": 195.00,
+    "resistance": 200.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,430,375 sh/day); +0.1% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 23.9,
-    "atr_day": 0.59,
-    "avg_vol_10d": 3157868,
-    "premarket_price": 24.05,
-    "gap_pct": 0.0063,
-    "spread_bp": 1018.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,157,868 sh/day); +0.6% gap"
+    "note": "Most liquid name on list (4.4M avg vol). Flat gap +0.1% from $197.54 — no gap-fill risk; clean slate for ORB. Key level: $200 round-number resistance; support near $195 (premarket low from 7/1). ATR $6.17 supports 1.5R+ setups. Primary name for ORB breakout above $200 with volume."
   },
   "NFLX": {
     "sector": "communication",
@@ -51,9 +39,12 @@
     "premarket_price": 74.31,
     "gap_pct": 0.0016,
     "spread_bp": 1015.9,
+    "spread_bp_note": "premarket artifact — verify at open; real spread expected 1-3 bp",
+    "support": 72.00,
+    "resistance": 75.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,778,655 sh/day); +0.2% gap"
+    "note": "Flat gap +0.2% from $74.19 close. Closed strong on 7/1 after opening with a +2.0% gap (from $71.39) — relative strength in a mixed tape. Recent range $71-$74; now pressing top of range at $74.19. Support $72.00 (prior resistance turned support); resistance $75.00 (round number ceiling). Watch for ORB hold and break above $74.50 toward $75."
   },
   "AMZN": {
     "sector": "consumer",
@@ -63,21 +54,12 @@
     "premarket_price": 241.25,
     "gap_pct": -0.002,
     "spread_bp": 1003.9,
+    "spread_bp_note": "premarket artifact — verify at open; real spread expected 1-3 bp",
+    "support": 238.00,
+    "resistance": 245.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,296,791 sh/day); -0.2% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 58.38,
-    "atr_day": 1.2,
-    "avg_vol_10d": 2608713,
-    "premarket_price": 58.75,
-    "gap_pct": 0.0063,
-    "spread_bp": 1036.7,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,608,713 sh/day); +0.6% gap"
+    "note": "Slight fade -0.2% premarket from $241.74. Highest ATR on list ($8.68/day). ELEVATED BAR IN FORCE (prior -$64 loss on 2026-06-24): only trade if this is the clearest ORB on the board with 1.5x+ relative volume — do not take marginal setups here. Support $238 (7/1 premarket reference); resistance $245 (round number). Good mover if setup is clean."
   },
   "AAPL": {
     "sector": "technology",
@@ -87,8 +69,10 @@
     "premarket_price": 294.62,
     "gap_pct": 0.0007,
     "spread_bp": 24.1,
+    "support": 290.00,
+    "resistance": 300.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,548,123 sh/day); +0.1% gap"
+    "note": "Flat gap +0.1% from $294.42. Only name with verified clean spread (24.1 bp). Closed strong two consecutive days ($289.24 on 6/30 -> $294.42 on 7/1). ATR $8.32/day. Support $290 (round number, yesterday's intraday open zone); resistance $300 (major psychological round number). At $294, max $10k trade = ~34 shares — size is thin so entry must be high-conviction. Watch ORB for break above $295 with volume."
   }
 }

@@ -6,15 +6,30 @@
     "screened_utc": "2026-07-02T13:45:00.000000+00:00",
     "screener": "day-screener-agent",
     "candidates_considered": 7,
-    "candidates_dropped": ["INTC", "PFE", "BAC"],
+    "candidates_dropped": ["PFE", "BAC"],
     "drop_reasons": {
-      "INTC": "Confirmed downtrend; no long catalyst. Prev_close $127.08 implies further decline from yesterday's $139.55 reference. Nvidia PC chip competition is active headwind. Small +1.5% bounce does not reverse thesis. No long setup.",
       "PFE": "ATR $0.59/day is too small. At $10k max trade size (~415 shares), full-ATR move = ~$245 gross — insufficient reward for the friction and risk. No catalyst today.",
       "BAC": "ATR $1.20/day at $58 price. Full-ATR gross ~$205 per trade. Today's +0.63% gap has no identified catalyst. Reward-to-effort ratio too thin for disciplined day-trading."
     },
+    "strategist_override": "INTC reinstated. Screener dropped on downtrend concern; strategist research (2026-07-02) found foundry thesis intact (Apple, Google, NVIDIA orders confirmed), BofA Buy/$160 target, ATR $11/day highest on board, 8.32% one-day pullback = prime bounce setup. Elevated-bar in force: VWAP-reclaim or base-and-break only — no chasing. Size down to $5k max given mixed regime + holiday volume.",
     "spread_bp_warning": "Six of seven spread_bp values (1003-1037 bp) are premarket quote artifacts — real intraday spreads for these large-caps are 1-5 bp. Only AAPL's 24.1 bp reading appears valid. Spread must be verified at open for all other names before sizing in.",
-    "top": 4,
-    "note": "Pre-market screen finalized by day-screener. ORB levels fill in live after the open (~9:45 AM ET). Final watchlist: NVDA, NFLX, AMZN, AAPL."
+    "top": 5,
+    "note": "Pre-market screen finalized. INTC added back per strategist override. ORB levels fill in live after the open (~9:45 AM ET). Final watchlist: INTC, NVDA, NFLX, AMZN, AAPL."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 127.08,
+    "atr_day": 11.03,
+    "avg_vol_10d": 45000000,
+    "premarket_price": 129.02,
+    "gap_pct": 0.015,
+    "spread_bp": 1037.0,
+    "spread_bp_note": "premarket artifact — verify at open; real spread expected 2-4 bp",
+    "support": 124.00,
+    "resistance": 132.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "ELEVATED BAR + SIZE DOWN ($5k max). Bounce candidate after 8.32% drop on 7/1 from $139.55 to $127.08. Foundry thesis intact (Apple, Google, NVIDIA orders). BofA Buy with $160 target. Gapping +1.5% to $129. ATR $11.03/day — highest on board, BUT also means a failed bounce loses $2-3/share in minutes. Korean chip weakness (Kospi -7.9% overnight) is active sector headwind. REGIME = MIXED: wait for ORB (9:30-9:45), then VWAP reclaim OR base-and-break above ORB high only. NO chasing the gap. If INTC sells off at open, let it find a floor before considering. Earnings July 23."
   },
   "NVDA": {
     "sector": "technology",

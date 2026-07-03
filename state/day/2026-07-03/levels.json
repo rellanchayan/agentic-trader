@@ -2,10 +2,18 @@
   "_meta": {
     "date": "2026-07-03",
     "generated_utc": "2026-07-03T13:29:58.613253+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-07-03T13:35:00.000000+00:00",
+    "source": "watchlist_build + day_screener",
     "candidates_considered": 8,
-    "top": 8,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "kept": 5,
+    "dropped": ["PFE", "BAC", "NKE"],
+    "drop_reasons": {
+      "PFE": "no premarket quote — honesty rule requires dropping names with no live data; also ATR only $0.58 severely limits intraday P&L potential",
+      "BAC": "no real catalyst today; ATR only $1.18 (2.0% of price) makes intraday reward too small for a 3.5-hour holiday session; gap +0.4% is noise-level",
+      "NKE": "lowest volume on list (2.0M avg — thinnest of the 8); ATR only $1.46; no catalyst; gap -0.4% is noise"
+    },
+    "session_note": "Holiday-shortened Friday — market closes 1:00 PM ET. Flatten deadline 12:45 PM ET. No new entries after 11:00 AM ET. Expect 30-50% of normal volume with wider intraday spreads. The spread_bp values shown are pre-market artifacts and are not a reason to avoid these large-caps; regular-session spreads will be 1-15 bp.",
+    "note": "ORB high/low fill in live after the first 15 minutes (9:30-9:45 AM ET). Do not act before ORB forms."
   },
   "NVDA": {
     "sector": "technology",
@@ -15,21 +23,25 @@
     "premarket_price": 203.13,
     "gap_pct": 0.0443,
     "spread_bp": 838.4,
+    "support": [200.00, 194.51],
+    "resistance": [205.00, 207.50],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,648,606 sh/day); +4.4% gap"
+    "note": "PRIMARY setup. Gapped +4.4% on likely AI/chip catalyst; fell from $197.54 (July 1 close) to $194.51 on July 2 then bounced hard overnight to $203.13 premarket. Highest volume on list (4.6M). Watch ORB break above opening range for gap-and-go continuation. Key support: $200 round number (first pullback floor), $194.51 is full gap fill. Resistance: $205 round then $207.50."
   },
   "AMZN": {
     "sector": "consumer",
-    "prev_close": 242.3,
+    "prev_close": 242.30,
     "atr_day": 8.58,
     "avg_vol_10d": 3284156,
     "premarket_price": 246.55,
     "gap_pct": 0.0175,
     "spread_bp": 996.1,
+    "support": [244.00, 242.30],
+    "resistance": [248.00, 250.00],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,284,156 sh/day); +1.8% gap"
+    "note": "Gapped +1.8% on rate-cut optimism from June NFP miss (57K actual vs. 114K expected on July 2). Good ATR ($8.58) and solid liquidity (3.3M). Support at $244 (premarket base) and $242.30 (full gap fill / prev close). Resistance at $248 then $250 round number."
   },
   "NFLX": {
     "sector": "communication",
@@ -39,9 +51,25 @@
     "premarket_price": 78.25,
     "gap_pct": 0.0085,
     "spread_bp": 975.0,
+    "support": [77.50, 77.00],
+    "resistance": [79.00, 80.00],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,746,190 sh/day); +0.9% gap"
+    "note": "Surged +4.6% on July 2 ($74.19 to $77.59) and continues +0.9% today — momentum continuation. Second-highest avg volume (3.7M). Support at $77.50 (prev close) and $77.00 round. Resistance at $79 then $80 round number. Trade with the trend if opening volume confirms."
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 308.24,
+    "atr_day": 8.90,
+    "avg_vol_10d": 2809904,
+    "premarket_price": 306.39,
+    "gap_pct": -0.006,
+    "spread_bp": 965.7,
+    "support": [305.00, 303.00],
+    "resistance": [308.24, 310.00],
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Surged +4.7% on July 2 ($294.42 to $308.24) on Intel foundry catalyst (Apple confirmed as INTC fab customer). Today pulling back slightly (-0.6% to $306.39 premarket) — normal consolidation after a large single-day move. Support at $305.00 (round / premarket floor) and $303.00. Gap fill / resistance at $308.24 (prev close); above that $310 round number. ORB above $308.24 would be a continuation signal."
   },
   "INTC": {
     "sector": "technology",
@@ -51,56 +79,10 @@
     "premarket_price": 119.21,
     "gap_pct": -0.0098,
     "spread_bp": 1082.1,
+    "support": [118.00, 115.00],
+    "resistance": [120.39, 122.50],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,794,303 sh/day); -1.0% gap"
-  },
-  "AAPL": {
-    "sector": "technology",
-    "prev_close": 308.24,
-    "atr_day": 8.9,
-    "avg_vol_10d": 2809904,
-    "premarket_price": 306.39,
-    "gap_pct": -0.006,
-    "spread_bp": 965.7,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,809,904 sh/day); -0.6% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.31,
-    "atr_day": 0.58,
-    "avg_vol_10d": 3315721,
-    "premarket_price": null,
-    "gap_pct": null,
-    "spread_bp": null,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,315,721 sh/day); no premarket quote"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 58.69,
-    "atr_day": 1.18,
-    "avg_vol_10d": 2438581,
-    "premarket_price": 58.92,
-    "gap_pct": 0.0039,
-    "spread_bp": 1019.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,438,581 sh/day); +0.4% gap"
-  },
-  "NKE": {
-    "sector": "consumer",
-    "prev_close": 44.08,
-    "atr_day": 1.46,
-    "avg_vol_10d": 2024097,
-    "premarket_price": 43.88,
-    "gap_pct": -0.0044,
-    "spread_bp": 1068.7,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,024,097 sh/day); -0.4% gap"
+    "note": "CAUTION — active downtrend: fell -5.3% on July 2 (from $127.08 to $120.39) and gapping down another -1.0% today to $119.21. Long-only: only actionable on a confirmed bounce/reversal after a clear base forms — do NOT buy a falling knife. High ATR ($11.08, 9.2% of price) means a real bounce can be $5-8/share but failed bounces also hurt fast. Size down to $5,000 max if traded. Support at $118.00 then $115.00. Resistance at $120.39 (gap fill / prev close) then $122.50."
   }
 }

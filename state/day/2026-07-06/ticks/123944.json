@@ -1,0 +1,66 @@
+{
+  "tick_time_et": "12:39:44",
+  "date": "2026-07-06",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_orders": [],
+  "decision_summary": "No qualifying setup. ORB continuation window expired at ~11:15 AM ET (90 min post-ORB). No VWAP reclaim setups in progress. Chip-sector disarm active (INTC at $124.08 below VWAP $125.45).",
+  "per_name_analysis": {
+    "AAPL": {
+      "last": 312.14,
+      "rel_volume": 0.64,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "spread_bp": 1.0,
+      "verdict": "SKIP",
+      "reason": "rel_volume 0.64 below 1.2x minimum; ORB entry window expired (90+ min since open)"
+    },
+    "AMZN": {
+      "last": 244.80,
+      "rel_volume": 0.65,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "spread_bp": 39.2,
+      "verdict": "SKIP",
+      "reason": "rel_volume 0.65 below minimum; spread 39.2bp exceeds 25bp max"
+    },
+    "INTC": {
+      "last": 124.08,
+      "rel_volume": 0.88,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "spread_bp": 1.6,
+      "verdict": "SKIP",
+      "reason": "Below VWAP $125.45; chip-sector disarm active per playbook"
+    },
+    "NFLX": {
+      "last": 76.34,
+      "rel_volume": 0.76,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "spread_bp": 1.3,
+      "verdict": "SKIP",
+      "reason": "rel_volume 0.76 below minimum; no VWAP reclaim setup (already above VWAP)"
+    },
+    "NVDA": {
+      "last": 196.72,
+      "rel_volume": 1.22,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "spread_bp": 0.5,
+      "verdict": "SKIP",
+      "reason": "Chip-sector disarm active (INTC below VWAP, sector not broadly stabilized); ORB entry window expired 90+ min ago; entry not validated by sector"
+    }
+  },
+  "account_state": {
+    "equity": 999662.81,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "day_mood": "MIXED / RANGE",
+  "chip_sector_disarm": true,
+  "orb_window_expired": true
+}

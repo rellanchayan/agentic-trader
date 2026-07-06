@@ -1,0 +1,59 @@
+{
+  "tick_time_et": "2026-07-06T11:40:42-04:00",
+  "tick_time_utc": "2026-07-06T15:40:42Z",
+  "minutes_since_open": 130,
+  "action": "HOLD",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "decision_summary": "No trade this tick. Flat with zero open positions.",
+  "market_review": {
+    "AAPL": {
+      "last": 314.04,
+      "rel_volume": 0.78,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "decision": "SKIP — rel_vol 0.78 below 1.2x minimum; ORB window expired at ~11:15 ET (90-min rule); no fresh VWAP reclaim setup ($3.25 above VWAP)"
+    },
+    "AMZN": {
+      "last": 244.88,
+      "rel_volume": 0.66,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "decision": "SKIP — rel_vol 0.66 well below 1.2x minimum (plan required 1.5x for ORB in mixed conditions); below ORB high $245.42; ORB window expired"
+    },
+    "INTC": {
+      "last": 125.25,
+      "rel_volume": 1.0,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "decision": "SKIP — below VWAP (bounce not holding); chip-sector conditional not met; rel_vol 1.0 below 1.2x minimum; chip-sector disarm partial"
+    },
+    "NFLX": {
+      "last": 76.34,
+      "rel_volume": 0.94,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "decision": "SKIP — rel_vol 0.94 below 1.2x minimum; only $0.06 above VWAP (not a clean reclaim); plan says skip unless clean setup with no better alternative"
+    },
+    "NVDA": {
+      "last": 196.4,
+      "rel_volume": 1.2,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "decision": "SKIP — best candidate on the screen but: (1) 11:40 ET is past the 90-min ORB continuation window; (2) chip-sector disarm partially in effect (INTC below VWAP confirms sector not fully stabilized); (3) day plan classified as Watch Only / Lower Priority; no independent VWAP reclaim signal"
+    }
+  },
+  "reasoning": [
+    "Time: 11:40 ET is 25+ minutes past the 90-minute ORB continuation cutoff (~11:15 ET). The day plan is explicit: any thesis seeded in the ORB that has not triggered by 11:00 AM is skipped for the day.",
+    "Volume: Four of five names have rel_volume below the 1.2x minimum. NVDA is exactly at the minimum (1.2) but disqualified on time and sector grounds.",
+    "Setups: No clean VWAP reclaim exists. AAPL, AMZN, NFLX, and NVDA are all already above VWAP without a recent dip-below-then-reclaim pattern visible in the snapshot.",
+    "Chip sector: INTC being below VWAP at 11:40 ET confirms the chip-sector disarm from July 2 remains partially in effect. The plan required NVDA AND chip sector broadly firm to lift the disarm for NVDA. INTC not holding above VWAP is the key condition that is not met.",
+    "AMZN is the closest to a trigger ($0.54 below ORB high) but 0.66 rel_vol is too weak for an ORB entry even in a normal session, let alone past the time window.",
+    "Playbook: When unsure, do nothing. A missed trade costs nothing; a forced trade on a stale setup costs money."
+  ]
+}

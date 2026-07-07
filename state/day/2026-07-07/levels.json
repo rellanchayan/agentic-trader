@@ -2,10 +2,17 @@
   "_meta": {
     "date": "2026-07-07",
     "generated_utc": "2026-07-07T13:29:00.137177+00:00",
+    "screened_utc": "2026-07-07T13:35:00.000000+00:00",
     "source": "watchlist_build",
+    "screener": "day-screener",
     "candidates_considered": 8,
-    "top": 8,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 6,
+    "dropped": ["PFE", "NKE"],
+    "drop_reasons": {
+      "PFE": "ATR $0.60 caps max P&L at ~$250/trade at $10K limit; no catalyst; yesterday plan also said skip",
+      "NKE": "no catalyst; lowest avg volume in universe (2.0M); ATR $1.50 yields weak absolute P&L; yesterday plan said skip"
+    },
+    "note": "Pre-market screen. ORB levels fill in live after the open. Spread_bp values are pre-market artifacts — they will compress sharply at the open and are not a filter. INTC and NVDA are conditional on chip-sector stabilization at 9:45 AM ET."
   },
   "INTC": {
     "sector": "technology",
@@ -15,9 +22,11 @@
     "premarket_price": 117.08,
     "gap_pct": -0.0423,
     "spread_bp": 1013.0,
+    "support": 115.00,
+    "resistance": 120.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,708,212 sh/day); -4.2% gap"
+    "note": "gapped -4.2% on continued AI/chip-sector pressure; highest ATR ($10.55) in today's universe, yielding ~$897 P&L per ATR-move at max size; CONDITIONAL — do NOT arm unless NVDA is also holding positive and chip sector (SMH) is broadly stabilizing at 9:45 AM; setup: VWAP reclaim bounce after gap holds, or ORB breakout; support ~115.00; resistance ~120.00 (round number) then gap-fill at prev_close 122.25"
   },
   "NVDA": {
     "sector": "technology",
@@ -27,9 +36,11 @@
     "premarket_price": 192.24,
     "gap_pct": -0.0171,
     "spread_bp": 1001.9,
+    "support": 190.00,
+    "resistance": 195.59,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,699,876 sh/day); -1.7% gap"
+    "note": "gapped -1.7% extending chip-sector weakness; most liquid name in universe (4.7M avg vol, ~$315 P&L per ATR-move at max size); CONDITIONAL — chip-sector disarm from Jul 2 still active; setup: ORB breakout or VWAP reclaim only if sector confirms at 9:45 AM; support ~190.00 (round number); resistance is gap-fill at prev_close 195.59, then 197-198 area"
   },
   "NFLX": {
     "sector": "communication",
@@ -39,21 +50,11 @@
     "premarket_price": 77.21,
     "gap_pct": 0.0153,
     "spread_bp": 1014.2,
+    "support": 76.00,
+    "resistance": 78.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,657,205 sh/day); +1.5% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 23.74,
-    "atr_day": 0.6,
-    "avg_vol_10d": 3220252,
-    "premarket_price": 24.07,
-    "gap_pct": 0.0139,
-    "spread_bp": 1009.8,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,220,252 sh/day); +1.4% gap"
+    "note": "gapped +1.5% recovering from yesterday's -1.0% fade; clean gap with a clear reason (recovery bounce); CAUTION: earnings July 16 — pre-earnings drift is active, keep size conservative; setup: ORB breakout above ~77.21 or VWAP reclaim; support at prev_close ~76.00; resistance at 78.00 round number"
   },
   "AMZN": {
     "sector": "consumer",
@@ -63,9 +64,11 @@
     "premarket_price": 245.75,
     "gap_pct": 0.0065,
     "spread_bp": 1018.5,
+    "support": 244.00,
+    "resistance": 248.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,201,388 sh/day); +0.7% gap"
+    "note": "gapped +0.7% continuing Wells Fargo Overweight momentum (PT $313, raised Jul 2); primary pick today; not exposed to AI-chip headwinds; setup: ORB breakout above premarket level or VWAP reclaim; support at prev_close 244.16; near-term resistance ~248.00; $250.00 is the key round-number ceiling and second target"
   },
   "AAPL": {
     "sector": "technology",
@@ -75,32 +78,24 @@
     "premarket_price": 314.85,
     "gap_pct": 0.0068,
     "spread_bp": 1003.0,
+    "support": 312.00,
+    "resistance": 315.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,825,502 sh/day); +0.7% gap"
-  },
-  "NKE": {
-    "sector": "consumer",
-    "prev_close": 43.34,
-    "atr_day": 1.5,
-    "avg_vol_10d": 2046100,
-    "premarket_price": 43.74,
-    "gap_pct": 0.0092,
-    "spread_bp": 1010.5,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,046,100 sh/day); +0.9% gap"
+    "note": "gapped +0.7% extending strong multi-day momentum (+4.8% Jul 2, +1.4% Jul 6); rotation beneficiary (buys chips, does not make them); setup: ORB breakout or VWAP reclaim; support at prev_close 312.73; $315.00 round-number resistance is near-term ceiling; secondary target $318.00"
   },
   "BAC": {
     "sector": "financials",
-    "prev_close": 59.9,
-    "atr_day": 1.2,
+    "prev_close": 59.90,
+    "atr_day": 1.20,
     "avg_vol_10d": 2386317,
     "premarket_price": 60.22,
     "gap_pct": 0.0053,
     "spread_bp": 1013.0,
+    "support": 59.50,
+    "resistance": 61.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,386,317 sh/day); +0.5% gap"
+    "note": "gapped +0.5% continuing JPMorgan upgrade catalyst (PT raised $57.50 -> $62.50 on Jul 6); $2.28 still to analyst target; lowest absolute ATR in kept universe ($1.20, ~$199 P&L per ATR-move at max size) — lowest-priority watch; setup: ORB breakout above ORB high; support ~59.50; resistance ~61.00 (round number), then 62.50 (analyst target)"
   }
 }

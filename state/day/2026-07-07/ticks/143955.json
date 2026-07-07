@@ -1,0 +1,103 @@
+{
+  "tick_time_et": "14:39",
+  "tick_file": "143955.json",
+  "timestamp_utc": "2026-07-07T18:39:55Z",
+  "minutes_since_open": 309,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_evaluated": [
+    {
+      "ticker": "NVDA",
+      "last": 197.53,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 0.99,
+      "verdict": "SKIP",
+      "reasons": [
+        "DISARMED — chip sector disarm in effect all session per day plan",
+        "Sector not stabilized: INTC at $110.545 is BELOW VWAP ($110.92) AND below ORB low ($111.21)",
+        "rel_volume 0.99x below 1.2x minimum",
+        "ORB/momentum window closed at 11:00 AM ET (4.5 hours ago)"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "last": 245.58,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 0.55,
+      "verdict": "SKIP",
+      "reasons": [
+        "rel_volume 0.55x far below 1.2x minimum",
+        "No ORB breakout — ORB high $247.78 is $2.20 away",
+        "ORB/momentum window closed at 11:00 AM ET"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "last": 312.815,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.55,
+      "verdict": "SKIP",
+      "reasons": [
+        "Below VWAP ($312.90)",
+        "rel_volume 0.55x below 1.2x minimum",
+        "No ORB breakout — ORB high $315.47 is $2.66 away"
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "last": 76.47,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.52,
+      "verdict": "SKIP",
+      "reasons": [
+        "Below VWAP ($77.00)",
+        "rel_volume 0.52x below 1.2x minimum",
+        "No ORB breakout — ORB high $78.12 is $1.65 away",
+        "Primary candidate has faded entire session; now below ORB low ($76.585)"
+      ]
+    },
+    {
+      "ticker": "BAC",
+      "last": 60.055,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.83,
+      "verdict": "SKIP",
+      "reasons": [
+        "Below VWAP ($60.25)",
+        "rel_volume 0.83x below 1.2x minimum",
+        "No ORB breakout — ORB high $60.815 is $0.76 away"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "last": 110.545,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.59,
+      "verdict": "SKIP",
+      "reasons": [
+        "DISARMED — chip sector disarm in effect all session per day plan",
+        "Below VWAP ($110.92)",
+        "Below ORB low ($111.21) — confirms sector weakness"
+      ]
+    }
+  ],
+  "open_orders_reviewed": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "time_context": "309 minutes into session. ORB/momentum window closed at 11:00 AM ET. Day plan sets 3:00 PM ET as last entry time (21 min away). FOMC minutes tomorrow at 2:00 PM — caution warranted.",
+  "summary": "No qualifying setup. NVDA is the only broken-out name but the chip sector disarm holds firm (INTC confirming weakness at session lows). All armed names (AMZN, NFLX, AAPL, BAC) show rel_volume well below the 1.2x minimum. Entry windows closed. Correct action is to hold flat and wait for the flatten window at 3:50 PM."
+}

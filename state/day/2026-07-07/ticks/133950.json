@@ -1,0 +1,23 @@
+{
+  "tick_time_et": "13:39:50",
+  "date": "2026-07-07",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "positions_managed": 0,
+  "new_entries_considered": 5,
+  "new_entries_placed": 0,
+  "reason": "ORB/momentum window closed at 11:00 AM ET (249 min into session). No armed name meets all entry criteria. NFLX (primary): below VWAP ($76.69 vs $77.07), rel_vol 0.56x (need >=1.2). AMZN: above VWAP but rel_vol 0.60x — insufficient volume. AAPL: below VWAP, rel_vol 0.61x. BAC: below VWAP, rel_vol 0.91x. NVDA: confirmed ORB breakout and above VWAP (rel_vol 1.10x) but chip sector disarm active — INTC at $110.86 is below its VWAP ($110.92) and below its ORB low ($111.21); sector not broadly stabilized per playbook rule. INTC: disarmed. No qualifying setup; no trade is the correct call.",
+  "market_snapshot": {
+    "NFLX": {"last": 76.69, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.56},
+    "AAPL": {"last": 312.775, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.61},
+    "AMZN": {"last": 245.42, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.60},
+    "BAC": {"last": 60.16, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.91},
+    "NVDA": {"last": 197.76, "above_vwap": true, "orb_breakout": true, "rel_volume": 1.10, "status": "DISARMED"},
+    "INTC": {"last": 110.86, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.87, "status": "DISARMED"}
+  },
+  "day_pnl": 0.0,
+  "equity": 999662.81,
+  "positions": 0,
+  "trades_used": 0,
+  "trades_remaining": 20
+}

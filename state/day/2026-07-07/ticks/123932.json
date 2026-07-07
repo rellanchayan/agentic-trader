@@ -1,0 +1,101 @@
+{
+  "tick_time_et": "12:39:32",
+  "tick_time_utc": "2026-07-07T16:39:32Z",
+  "snapshot_timestamp_et": "2026-07-07T12:39:32-04:00",
+  "minutes_since_open": 189,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "positions_managed": [],
+  "new_orders": [],
+  "action": "NO_TRADE",
+  "decision_summary": "No open positions to manage. No new entry taken this tick. 90-minute ORB/momentum window has passed. All armed names below minimum relative volume thresholds. Chip sector disarm still active.",
+  "candidate_review": {
+    "NVDA": {
+      "armed": false,
+      "disarm_reason": "Full-session sector disarm (chip sector-wide selloff confirmed premarket). Disarm condition requires MULTIPLE chip names stabilizing above VWAP. Only NVDA has recovered (above VWAP $193.38 at $197.06). INTC remains below VWAP ($110.785 vs $110.90). Sector stabilization is NOT confirmed. Additionally, 174 minutes have elapsed since the ORB closed (9:45 AM), far beyond the 90-minute entry window. Both conditions independently block entry.",
+      "last": 197.06,
+      "vwap": 193.38,
+      "above_vwap": true,
+      "orb_high": 193.22,
+      "orb_breakout": true,
+      "rel_volume": 1.22,
+      "verdict": "DISARMED — single-name chip bounce does not lift full-session sector disarm; also beyond 90-min ORB window."
+    },
+    "NFLX": {
+      "armed": true,
+      "priority": "primary",
+      "last": 76.79,
+      "vwap": 77.12,
+      "above_vwap": false,
+      "orb_high": 78.12,
+      "orb_low": 76.585,
+      "orb_breakout": false,
+      "rel_volume": 0.62,
+      "verdict": "SKIP — deteriorated from 10:41 tick (was above VWAP at $77.72). Now BELOW VWAP by $0.33. No ORB breakout. Rel volume 0.62x far below 1.2x minimum. Thesis is fading, not developing. Sitting between ORB low ($76.585) and VWAP — no directional edge."
+    },
+    "AAPL": {
+      "armed": true,
+      "priority": "secondary",
+      "last": 313.375,
+      "vwap": 312.93,
+      "above_vwap": true,
+      "orb_high": 315.47,
+      "orb_breakout": false,
+      "rel_volume": 0.70,
+      "verdict": "SKIP — above VWAP but $2.10 below ORB high; rel_volume 0.70 far below 1.2x minimum. No breakout, no volume confirmation. Additionally beyond 90-min ORB window."
+    },
+    "AMZN": {
+      "armed": true,
+      "priority": "secondary",
+      "last": 245.41,
+      "vwap": 245.15,
+      "above_vwap": true,
+      "orb_high": 247.78,
+      "orb_breakout": false,
+      "rel_volume": 0.67,
+      "verdict": "SKIP — above VWAP but $2.37 below ORB high; rel_volume 0.67 far below 1.2x minimum. No setup."
+    },
+    "BAC": {
+      "armed": true,
+      "priority": "tertiary",
+      "last": 60.10,
+      "vwap": 60.31,
+      "above_vwap": false,
+      "orb_high": 60.815,
+      "orb_low": 60.16,
+      "orb_breakout": false,
+      "rel_volume": 1.05,
+      "verdict": "SKIP — below VWAP, no ORB breakout, rel_volume 1.05 below 1.2x minimum. Drifting lower from 10:41 level ($60.12 to $60.10). Plan requires clean breakout above $60.815 — price is $0.715 away and fading."
+    },
+    "INTC": {
+      "armed": false,
+      "disarm_reason": "Full-session sector disarm. Additionally, spread_bp is 70.7 — far above the 25 bp maximum allowed. INTC still below VWAP ($110.785 vs $110.90), confirming sector has not stabilized.",
+      "verdict": "DISARMED — do not touch for full session. Spread alone (70.7 bp) would block submission."
+    }
+  },
+  "key_observations": [
+    "NVDA has made a dramatic reversal: from $191.73 below VWAP at 10:41 to $197.06 well above VWAP now (+$5.33). ORB breakout triggered. BUT disarm is still correct: INTC at $110.785 is still below VWAP $110.90. The sector has not broadly stabilized.",
+    "NFLX (primary target) has weakened since 10:41: was above VWAP at $77.72; now below VWAP at $76.79. No volume pickup. Primary setup has deteriorated, not improved.",
+    "AAPL and AMZN remain above VWAP but volume is very thin (0.70x and 0.67x). Neither has approached its ORB high. These are drift-up moves, not breakouts.",
+    "BAC continues to drift lower — was at $60.12 at 10:41, now $60.10. Below VWAP throughout the session. Tertiary disqualification confirmed.",
+    "189 minutes since open: the 90-minute ORB/momentum entry window has closed per playbook rule. Even if volume improved suddenly, a new ORB entry at this hour inherits a mature trend with most of the move already done.",
+    "Day mood MIXED remains intact. FOMC minutes tomorrow at 2:00 PM add tail risk — conservative sizing (or no trading) is still the correct posture.",
+    "Oil situation: no WTI spike above $71 or Brent above $74 noted in plan triggers; background risk only.",
+    "Capital preservation is the right call. $0 P&L is not a failure — a forced trade in thin, expired-window conditions would cost real money."
+  ],
+  "next_tick_watch": [
+    "NFLX: If it reclaims VWAP ($77.12) with a volume surge above 1.2x rel_volume, reassess for VWAP reclaim setup. However, time is getting late (past 90-min ORB window). Any entry would need to be fresh-catalyst-driven, not just a drift back to VWAP.",
+    "NVDA: Do not touch unless INTC also recovers clearly above its VWAP AND both names hold above their VWAPs. That would be the first signal that sector-wide stabilization is occurring. Watch but do not trade.",
+    "AAPL/AMZN: Watch for volume surge. If rel_volume crosses 1.2x on either and price is within range of ORB high, ORB entry becomes thinkable — but the time window makes it very marginal.",
+    "BAC: Skip for the day. Not even close to the plan's entry condition."
+  ],
+  "account_snapshot": {
+    "equity": 999662.81,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  }
+}

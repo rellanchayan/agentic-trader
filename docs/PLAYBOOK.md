@@ -74,6 +74,18 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-07: No tuning. Tuner eligible ("ok to tune", 15 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day on an open market. The premarket
+  routine did not run, so no watchlist was screened, no day plan was written, no loss-stop baseline
+  was captured, and the tick loop had nothing to act on — the bot was silent for the entire session.
+  Account equity $999,662.81, $0 realized P&L, ended flat. This is the same premarket failure seen
+  on 2026-06-17, 2026-06-19, 2026-06-22, 2026-06-23, and again now: a full trading session lost not
+  because of a bad trading decision but because the scheduler did not run the premarket phase. The
+  existing Infrastructure rule (missing day_plan.md at open = HALT) already covers the symptom; the
+  root cause is that the premarket phase itself is not being reliably scheduled. Premarket scheduling
+  reliability is a process priority, not a parameter-tuning problem — no tuner setting changes that.
+  No parameter has ever been changed; all settings remain at their defaults. Sample remains 9 trades
+  across 15 days (0.6 trades/day), win rate 22%, ORB -0.721R, momentum -0.975R.
 - 2026-07-03: No tuning. Tuner eligible ("ok to tune", 14 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was a full US market holiday (Independence Day
   observed). Zero trades, $0 P&L, equity $999,662.81 (-0.01% total return). Three durable rules

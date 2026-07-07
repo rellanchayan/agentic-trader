@@ -1,0 +1,91 @@
+{
+  "tick_time_et": "10:41:26",
+  "tick_time_utc": "2026-07-07T14:41:26Z",
+  "snapshot_timestamp_et": "2026-07-07T10:40:09-04:00",
+  "minutes_since_open": 71,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "positions_managed": [],
+  "new_orders": [],
+  "action": "NO_TRADE",
+  "decision_summary": "No open positions to manage. No new entry taken this tick.",
+  "candidate_review": {
+    "NFLX": {
+      "armed": true,
+      "priority": "primary",
+      "last": 77.72,
+      "vwap": 77.28,
+      "above_vwap": true,
+      "orb_high": 78.12,
+      "orb_breakout": false,
+      "rel_volume": 0.84,
+      "verdict": "WAIT — above VWAP (bullish) but no ORB breakout ($0.40 below $78.12) and rel_volume 0.84 is below the 1.2x minimum. Need BOTH breakout AND volume to confirm."
+    },
+    "AAPL": {
+      "armed": true,
+      "priority": "secondary",
+      "last": 313.02,
+      "vwap": 312.28,
+      "above_vwap": true,
+      "orb_high": 315.47,
+      "orb_breakout": false,
+      "rel_volume": 0.90,
+      "verdict": "WAIT — above VWAP but $2.45 below ORB high and rel_volume 0.90 below minimum. No setup active."
+    },
+    "AMZN": {
+      "armed": true,
+      "priority": "secondary",
+      "last": 245.02,
+      "vwap": 246.58,
+      "above_vwap": false,
+      "orb_high": 247.78,
+      "orb_breakout": false,
+      "rel_volume": 0.83,
+      "verdict": "SKIP — below VWAP ($1.56 under), no breakout, volume thin. Fading."
+    },
+    "BAC": {
+      "armed": true,
+      "priority": "tertiary",
+      "last": 60.12,
+      "vwap": 60.48,
+      "above_vwap": false,
+      "orb_high": 60.815,
+      "orb_low": 60.16,
+      "orb_breakout": false,
+      "rel_volume": 1.44,
+      "verdict": "SKIP — below VWAP, sitting just above ORB LOW (not high). Plan requires clean breakout ABOVE $60.815; price is $0.70 away and drifting down. Volume elevated but setup is not bullish."
+    },
+    "INTC": {
+      "armed": false,
+      "disarm_reason": "Full-session sector disarm: chip sector-wide selloff confirmed premarket. INTC at $108.87, well below ORB low $111.21 and VWAP $111.92 — confirms disarm was correct.",
+      "verdict": "DISARMED — do not touch for full session."
+    },
+    "NVDA": {
+      "armed": false,
+      "disarm_reason": "Full-session sector disarm: chip sector-wide selloff. NVDA at $191.73, below VWAP $192.26 and near ORB low $191.44.",
+      "verdict": "DISARMED — do not touch for full session."
+    }
+  },
+  "key_observations": [
+    "NFLX is the closest to a valid setup: above VWAP, $0.40 below ORB high. Watching for volume to pick up.",
+    "Momentum entry window closes at 11:00 AM ET (approx 19 minutes from now). Next tick is the last clean momentum window.",
+    "INTC and NVDA confirm the sector selloff narrative: both well below VWAP and ORB lows. Disarm was correct.",
+    "MIXED day mood holding. No reason to force a trade — clean setups only.",
+    "FOMC minutes tomorrow (Wed 2:00 PM) adds tail risk; sizing will remain conservative all session.",
+    "Oil situation (Iran/Strait of Hormuz) — no spike above WTI $71 / Brent $74 yet; background risk only."
+  ],
+  "next_tick_watch": [
+    "NFLX: If volume crosses 1.2x AND price breaks cleanly above $78.12, buy with marketable limit ~$78.20. Stop under ORB high ~$77.90. Target ~$78.60 (2.5x ATR).",
+    "AAPL: If rel_volume rises and price approaches $315.47, reassess for ORB breakout.",
+    "BAC: Would need price to clear $60.815 cleanly with 1.4x+ volume — tertiary, low probability today."
+  ],
+  "account_snapshot": {
+    "equity": 999662.81,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  }
+}

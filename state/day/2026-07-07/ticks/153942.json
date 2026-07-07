@@ -1,0 +1,64 @@
+{
+  "tick_time_et": "15:39:42",
+  "date": "2026-07-07",
+  "verdict": "NO_TRADE",
+  "reason": "Past no-new-entries cutoff (3:00 PM day plan, 3:30 PM system config). No open positions or open orders. No qualifying setup.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "setup_scan": {
+    "NVDA": {
+      "candidate": false,
+      "reason": "Chip sector disarm active. INTC at $109.875 below VWAP ($110.73) and below ORB low ($111.21) — sector not stabilized. Also past entry cutoff.",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "rel_volume": 0.97
+    },
+    "AMZN": {
+      "candidate": false,
+      "reason": "Rel_volume 0.53x below 1.2x minimum. No ORB breakout ($2.34 below ORB high $247.78). Past entry cutoff.",
+      "orb_breakout": false,
+      "above_vwap": true,
+      "rel_volume": 0.53
+    },
+    "NFLX": {
+      "candidate": false,
+      "reason": "Below VWAP ($76.36 vs $76.91). Rel_volume 0.51x. Faded all session.",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "rel_volume": 0.51
+    },
+    "AAPL": {
+      "candidate": false,
+      "reason": "Below VWAP ($311.84 vs $312.77). Rel_volume 0.54x.",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "rel_volume": 0.54
+    },
+    "BAC": {
+      "candidate": false,
+      "reason": "Below VWAP ($60.01 vs $60.22). No ORB breakout.",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "rel_volume": 0.82
+    },
+    "INTC": {
+      "candidate": false,
+      "reason": "Sector disarmed. Below VWAP and below ORB low.",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "rel_volume": 1.49
+    }
+  },
+  "account_state": {
+    "equity": 999662.81,
+    "day_pnl": 0.0,
+    "positions": 0,
+    "trades_used": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "order_submitted": false
+}

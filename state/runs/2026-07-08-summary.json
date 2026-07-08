@@ -1,0 +1,22 @@
+{
+  "date": "2026-07-08",
+  "num_trades": 0,
+  "num_roundtrips": 0,
+  "realized_pnl": 0,
+  "win_rate": 0.0,
+  "avg_win_r": 0.0,
+  "avg_loss_r": 0.0,
+  "fill_rate": null,
+  "fill_details": {
+    "final_orders": 0,
+    "filled": 0,
+    "partial": 0,
+    "unfilled": 0,
+    "pending": 0
+  },
+  "hit_loss_stop": false,
+  "ended_flat": true,
+  "leftover_positions": {},
+  "per_setup": {},
+  "roundtrips": []
+}

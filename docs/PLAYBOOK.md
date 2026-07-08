@@ -74,6 +74,17 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-08: No tuning. Tuner eligible ("ok to tune", 16 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day by design: regime was RISK-OFF
+  (Iran/oil shock premarket, FOMC minutes at 2:00 PM ET), and zero trades was the planned and correct
+  outcome. Notably, the premarket phase ran correctly today — a positive step after the failure on
+  2026-07-07. No new positions, $0 realized P&L, ended flat. The tuner's reason for inaction: no
+  tuning rule triggered. The two negative-expectancy setups (ORB -0.721R across 2 trades, momentum
+  -0.975R across 1 trade) have not generated enough fresh evidence to move any parameter — the
+  sample is still 9 total trades over 16 days (0.56 trades/day), win rate 22.2%, avg win +0.60R,
+  avg loss -1.46R. Skipping a RISK-OFF day entirely is consistent with the existing playbook rule
+  ("Risk-off: trade less, smaller, don't buy breakouts into weakness") — no new rule needed. The
+  tuning ledger remains empty; no parameter has ever been changed from its default.
 - 2026-07-07: No tuning. Tuner eligible ("ok to tune", 15 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day on an open market. The premarket
   routine did not run, so no watchlist was screened, no day plan was written, no loss-stop baseline

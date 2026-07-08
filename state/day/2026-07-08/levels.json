@@ -2,10 +2,20 @@
   "_meta": {
     "date": "2026-07-08",
     "generated_utc": "2026-07-08T13:29:55.808695+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-07-08T13:30:30.000000+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 3,
+    "dropped": ["AMZN", "INTC", "PFE", "BAC"],
+    "drop_reasons": {
+      "AMZN": "gap -0.9% and spread 1016bp; gap-fill thesis duplicates NVDA which has higher avg volume; FOMC minutes at 2pm adds macro risk to consumer names; no bullish catalyst",
+      "INTC": "chip-sector headwinds still in play from yesterday (Samsung guidance); gap -1.0%, spread 1008bp, no fresh catalyst; sector disarm from yesterday plan not yet lifted",
+      "PFE": "ATR $0.61 far too slow to day-trade at our limits; gap +0.2% is noise; spread 1012bp; confirmed drop from yesterday plan as well",
+      "BAC": "ATR $1.19 too slow in dollar terms; gap -0.7% wrong direction for long-only; spread 1013bp"
+    },
+    "session_risk": "FOMC minutes 2:00 PM ET (June meeting, Chair Warsh) — HIGH RISK. No new entries after 1:30 PM ET. Begin reducing open positions by 1:45 PM.",
+    "data_note": "NVDA premarket price updated to 195.23 (-0.9%) from earlier read of 203.32 (+3.2%) — live data at market open supersedes task-brief figures. All spread_bp figures are pre-market artifacts; liquid large-caps compress to <10bp at 9:30 ET.",
+    "note": "Pre-market screen refined by day-screener. ORB levels fill in live after the open."
   },
   "AAPL": {
     "sector": "technology",
@@ -15,9 +25,11 @@
     "premarket_price": 318.16,
     "gap_pct": 0.024,
     "spread_bp": 494.1,
+    "support": [315.0, 310.69],
+    "resistance": [318.16, 320.0, 325.0],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,820,920 sh/day); +2.4% gap"
+    "note": "gapped +2.4%; best setup of the day — best spread (494bp, likely <5bp at open), highest dollar ATR ($8.78), no chip-sector exposure; primary setup is ORB breakout above 318.16 with volume; support at 315.00 (round number inside gap) and prev_close 310.69; no new entries after 1:30pm (FOMC minutes 2pm)"
   },
   "NFLX": {
     "sector": "communication",
@@ -27,9 +39,11 @@
     "premarket_price": 77.55,
     "gap_pct": 0.0183,
     "spread_bp": 662.8,
+    "support": [77.0, 76.16],
+    "resistance": [77.55, 78.0, 78.98],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,224,094 sh/day); +1.8% gap"
+    "note": "gapped +1.8%; pre-earnings positioning catalyst (earnings July 16, 8 days away); gap momentum consistent with yesterday (+1.5%); spread 662bp pre-mkt; CAUTION: dollar ATR only $2.82 — size carefully and use tighter stops than ATR suggests; primary setup is ORB breakout above 77.55; if price fades to 77.00 and reclaims, VWAP-reclaim entry valid; no new entries after 1:30pm"
   },
   "NVDA": {
     "sector": "technology",
@@ -39,56 +53,10 @@
     "premarket_price": 195.23,
     "gap_pct": -0.0088,
     "spread_bp": 1013.2,
+    "support": [193.0, 190.0],
+    "resistance": [196.97, 199.0, 200.0],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,602,641 sh/day); -0.9% gap"
-  },
-  "AMZN": {
-    "sector": "consumer",
-    "prev_close": 245.7,
-    "atr_day": 8.05,
-    "avg_vol_10d": 3112646,
-    "premarket_price": 243.61,
-    "gap_pct": -0.0085,
-    "spread_bp": 1016.4,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,112,646 sh/day); -0.9% gap"
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 110.35,
-    "atr_day": 11.12,
-    "avg_vol_10d": 2556537,
-    "premarket_price": 109.27,
-    "gap_pct": -0.0098,
-    "spread_bp": 1007.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,556,537 sh/day); -1.0% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.07,
-    "atr_day": 0.61,
-    "avg_vol_10d": 3188175,
-    "premarket_price": 24.11,
-    "gap_pct": 0.0017,
-    "spread_bp": 1012.0,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,188,175 sh/day); +0.2% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 59.85,
-    "atr_day": 1.19,
-    "avg_vol_10d": 2318454,
-    "premarket_price": 59.45,
-    "gap_pct": -0.0067,
-    "spread_bp": 1012.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,318,454 sh/day); -0.7% gap"
+    "note": "gapped -0.9%; CONDITIONAL WATCH ONLY — chip-sector headwinds from yesterday (Samsung guidance) still in play; most liquid name on list (4.6M avg vol); spread 1013bp is pre-mkt artifact, NVDA opens near-penny spread; gap-fill long thesis ONLY if price reverses above 195.50 and holds; resistance at prev_close 196.97 and 200.00; do NOT chase gap-and-go long into weakness; skip entirely if AAPL or NFLX setup is clean and capital is deployed; no new entries after 1:30pm"
   }
 }

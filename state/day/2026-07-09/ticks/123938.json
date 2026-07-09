@@ -1,0 +1,57 @@
+{
+  "tick_time_et": "12:39:38",
+  "tick_hhmmss": "123938",
+  "date": "2026-07-09",
+  "action": "NO_TRADE",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account_snapshot": {
+    "equity": 999662.81,
+    "cash": 999662.81,
+    "buying_power": 3998651.24,
+    "daytrade_count": 0
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "position_management": {
+    "action": "NONE",
+    "reason": "No open positions to manage."
+  },
+  "new_entry_assessment": {
+    "INTC": {
+      "status": "DISQUALIFIED",
+      "reason": "Spread 209.5 bp exceeds max_spread_bp of 25 bp. Also below VWAP (above_vwap=false, last $112.13 vs VWAP $113.96). Was primary target per day plan but untradeable at this spread."
+    },
+    "NVDA": {
+      "status": "PASS — ambiguous setup, no entry",
+      "reason": "Spread 1.5 bp OK, quote age 1.0 sec OK, rel_volume 1.20 (at exact minimum threshold). Last $201.865 vs VWAP $201.48 — only 0.19% above VWAP. No confirmed two-bar VWAP reclaim visible from snapshot. VWAP reclaim requires: (1) pullback below VWAP, (2) two consecutive bars closing above VWAP, (3) volume increase on reclaim bar. Cannot confirm criteria from snapshot alone. Plan rule: if ambiguous, pass. Historical setup expectancy also negative (22.2% win rate). No entry."
+    },
+    "AAPL": {
+      "status": "SKIP",
+      "reason": "Day plan says SKIP. ORB breakout signal present but 90-minute rule blocks ORB entries (189 min since open, ORB window closed ~10:15 AM ET). Rel volume 0.57 also below minimum."
+    },
+    "AMZN": {
+      "status": "SKIP",
+      "reason": "Day plan says SKIP. Rel volume 0.75 below minimum 1.2. No fresh catalyst."
+    },
+    "NFLX": {
+      "status": "SKIP",
+      "reason": "Day plan says SKIP. Pre-earnings (July 16), Bernstein price target cut, rel volume 0.60 below minimum 1.2, below VWAP."
+    }
+  },
+  "rules_applied": [
+    "90-minute ORB window: closed at ~10:15 AM ET; no ORB or momentum entries.",
+    "max_spread_bp=25: INTC at 209.5 bp disqualified.",
+    "min_rel_volume=1.2: AAPL (0.57), AMZN (0.75), NFLX (0.60) below threshold.",
+    "Plan regime MIXED-CAUTIOUS: VWAP reclaim for INTC/NVDA only; INTC spread disqualifies; NVDA ambiguous.",
+    "Playbook: when unsure, do nothing — a missed trade costs nothing, a forced trade costs money."
+  ],
+  "open_orders_action": "None. No open orders to cancel.",
+  "final_decision": "NO TRADE. Flat. All criteria not clearly met. Preserving capital."
+}

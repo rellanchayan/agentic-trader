@@ -44,6 +44,11 @@ made of **rules to follow**, not stories.
 - Flatten limits must be set near the current bid at the time of submission, never from a cached or
   stale price. A stale flatten limit will miss the market entirely and leave a position open into the
   close. If the first pass fails to fill, the next pass must re-quote fresh before submitting.
+- When the spread gate fires mid-session on a name that was a strong premarket candidate, treat it
+  as a probable thesis failure rather than a timing issue to wait out. A wide live-session spread on
+  a high-gap name — especially combined with price below VWAP — is a reversal signal, not merely a
+  transaction-cost problem. (2026-07-09: INTC 209.5 bp spread at 12:39 PM with price below VWAP;
+  stock broke below ORB low by 2:39 PM. The gate fired early; the chart confirmed it two hours later.)
 
 ## Sizing
 - Size from risk first: lose no more than the per-trade risk budget if stopped.
@@ -74,6 +79,20 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-09: No tuning. Tuner eligible ("ok to tune", 17 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day: INTC blocked at the spread
+  gate (209.5 bp at 12:39 PM vs 25 bp max) and subsequently broke down below its ORB low —
+  the gate was correct and the chart confirmed it two hours later. NVDA never hit the 1.2x relative
+  volume minimum. $0 realized P&L, account equity $999,662.81, ended flat. Three lessons from today:
+  (1) Wide live-session spread on a high-gap name is a reversal signal — rule added to Entries &
+  exits. (2) The intraday log has only two entries today, both well after the ORB window closed; if
+  earlier ticks fired, they are not recorded — the "log every cycle" rule is on the books but must
+  be verified in practice. (3) Over 17 days the bot has been idle 82% of the time (14 no-trade
+  sessions out of 17, 9 total trades at 0.53/day, 22.2% win rate). This may reflect appropriate
+  discipline or gates that are too strict to ever fire; premarket planning should explicitly ask
+  whether a clean setup would generate an order, as a self-check. Sample still 9 trades (ORB
+  -0.721R across 2 trades, momentum -0.975R across 1 trade); no parameter changed; tuning ledger
+  remains empty.
 - 2026-07-08: No tuning. Tuner eligible ("ok to tune", 16 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day by design: regime was RISK-OFF
   (Iran/oil shock premarket, FOMC minutes at 2:00 PM ET), and zero trades was the planned and correct

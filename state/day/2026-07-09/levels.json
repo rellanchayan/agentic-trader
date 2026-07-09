@@ -2,10 +2,17 @@
   "_meta": {
     "date": "2026-07-09",
     "generated_utc": "2026-07-09T13:29:48.945254+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-07-09T13:33:00.431743+00:00",
+    "source": "watchlist_build + day_screener",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 5,
+    "dropped": ["PFE", "BAC"],
+    "drop_reason": {
+      "PFE": "ATR $0.62/day — dollar range too small to day-trade profitably; negligible +0.2% gap; no setup",
+      "BAC": "ATR $1.22/day — dollar range too small; flat +0.1% gap; no setup; least liquid by volume"
+    },
+    "spread_note": "All spread_bp values (~800-1027) are pre-market artifacts captured before 9:30 AM ET. Intraday spreads for these large-caps will be 1-5 bp. Do not use spread_bp to filter during market hours.",
+    "note": "Pre-market screen. ORB levels fill in live after the open."
   },
   "INTC": {
     "sector": "technology",
@@ -13,23 +20,31 @@
     "atr_day": 10.72,
     "avg_vol_10d": 2605568,
     "premarket_price": 115.38,
+    "premarket_high": null,
+    "premarket_low": null,
     "gap_pct": 0.0463,
     "spread_bp": 1013.2,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,605,568 sh/day); +4.6% gap"
+    "support": [112.50, 110.27],
+    "resistance": [115.50, 118.00],
+    "note": "Gap +4.63% — strongest catalyst on the list today; likely news-driven. ATR $10.72 gives meaningful intraday range. Primary setup: ORB breakout above premarket high (~$115.38) targets $118. Gap-fade: if sellers show early, watch $112.50 (half-gap fill) and $110.27 (full gap fill / prev close). At ~$115 and $10K max, approx 87 shares."
   },
   "AMZN": {
     "sector": "consumer",
-    "prev_close": 243.6,
+    "prev_close": 243.60,
     "atr_day": 8.13,
     "avg_vol_10d": 2981152,
-    "premarket_price": 239.9,
+    "premarket_price": 239.90,
+    "premarket_high": null,
+    "premarket_low": null,
     "gap_pct": -0.0152,
     "spread_bp": 1008.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,981,152 sh/day); -1.5% gap"
+    "support": [237.00, 235.50],
+    "resistance": [243.60, 246.00],
+    "note": "Gap -1.52% with ATR $8.13. Gap-fill long: if ORB holds above $238-239, target $243.60 (prev close). Continuation short: if ORB breaks below $237, next support $235.50 (prev close minus ATR). Liquid at 2.98M/day avg volume."
   },
   "NFLX": {
     "sector": "communication",
@@ -37,23 +52,31 @@
     "atr_day": 2.64,
     "avg_vol_10d": 3108757,
     "premarket_price": 74.55,
+    "premarket_high": null,
+    "premarket_low": null,
     "gap_pct": -0.0136,
     "spread_bp": 1008.7,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,108,757 sh/day); -1.4% gap"
+    "support": [73.50, 72.00],
+    "resistance": [75.58, 77.50],
+    "note": "Gap -1.36%. Highest volume on the list (3.11M/day). Dollar ATR small ($2.64) — keep targets within 1 ATR of entry. Gap fill to $75.58 (prev close) is primary resistance; failure to reclaim opens $73.50. ORB defines direction; do not anticipate."
   },
   "NVDA": {
     "sector": "technology",
     "prev_close": 204.07,
-    "atr_day": 6.6,
+    "atr_day": 6.60,
     "avg_vol_10d": 4754206,
     "premarket_price": 203.23,
+    "premarket_high": null,
+    "premarket_low": null,
     "gap_pct": -0.0041,
     "spread_bp": 829.1,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,754,206 sh/day); -0.4% gap"
+    "support": [200.00, 197.50],
+    "resistance": [204.07, 207.00],
+    "note": "Flat gap (-0.41%) — no pre-open directional bias. Highest volume on the list (4.75M/day) and best relative spread. $200 is major psychological support; $204.07 is prev close and gap-fill resistance; $207 is next round target above. Wait for ORB before entering — do not guess direction."
   },
   "AAPL": {
     "sector": "technology",
@@ -61,34 +84,14 @@
     "atr_day": 8.87,
     "avg_vol_10d": 2797743,
     "premarket_price": 311.98,
+    "premarket_high": null,
+    "premarket_low": null,
     "gap_pct": -0.0043,
     "spread_bp": 1001.7,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,797,743 sh/day); -0.4% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.04,
-    "atr_day": 0.62,
-    "avg_vol_10d": 2921942,
-    "premarket_price": 24.09,
-    "gap_pct": 0.0021,
-    "spread_bp": 1008.5,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,921,942 sh/day); +0.2% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 58.31,
-    "atr_day": 1.22,
-    "avg_vol_10d": 2333547,
-    "premarket_price": 58.38,
-    "gap_pct": 0.0011,
-    "spread_bp": 1027.7,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,333,547 sh/day); +0.1% gap"
+    "support": [310.00, 308.00],
+    "resistance": [313.33, 317.00],
+    "note": "Flat gap (-0.43%) after yesterday's Broadcom chip-supply catalyst (+2.4% on July 8). Watching for either continuation buy if price reclaims $313.33 (prev close) on volume, or fade if broad market weakens. $310 is key psychological floor. ATR $8.87 supports meaningful risk/reward on ORB setups."
   }
 }

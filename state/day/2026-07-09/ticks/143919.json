@@ -1,0 +1,84 @@
+{
+  "tick_time_et": "14:39:19",
+  "tick_hhmmss": "143919",
+  "date": "2026-07-09",
+  "action": "NO_TRADE",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account_snapshot": {
+    "equity": 999662.81,
+    "cash": 999662.81,
+    "buying_power": 3998651.24,
+    "daytrade_count": 0
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "minutes_since_open": 309,
+  "position_management": {
+    "action": "NONE",
+    "reason": "No open positions to manage."
+  },
+  "new_entry_assessment": {
+    "INTC": {
+      "status": "DISQUALIFIED — setup broken",
+      "last": 112.675,
+      "vwap": 113.6,
+      "orb_high": 116.55,
+      "orb_low": 113.42,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.11,
+      "spread_bp": 2.7,
+      "reason": "Price $112.675 is below VWAP ($113.60, -0.84%) AND below ORB low ($113.42, -0.66%). Primary today's setup (VWAP reclaim or ORB breakout) has completely failed to materialize — INTC is in ORB breakdown territory, not a breakout. rel_volume 1.11 also below minimum 1.2. No entry possible or warranted."
+    },
+    "NVDA": {
+      "status": "DISQUALIFIED — rel_volume below minimum; price too far above VWAP for fresh reclaim entry",
+      "last": 204.105,
+      "vwap": 201.95,
+      "orb_high": 204.46,
+      "orb_low": 201.555,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 1.02,
+      "spread_bp": 1.0,
+      "reason": "rel_volume 1.02 is below minimum 1.2 — fails the volume gate. Price is $204.11, which is +$2.16 (+1.07%) above VWAP ($201.95). A VWAP reclaim entry would be taken near the VWAP level, not 1% above it — entering now is chasing a move that happened earlier in the session. Plan says no ORB entry on NVDA. No entry warranted."
+    },
+    "AMZN": {
+      "status": "DISQUALIFIED — spread 202 bp exceeds max 25 bp",
+      "last": 245.04,
+      "bid": 240.09,
+      "ask": 244.99,
+      "spread_bp": 202.0,
+      "reason": "Bid/ask spread 202 bp is 8x the 25 bp maximum. Completely untradeable. Also day plan says SKIP."
+    },
+    "AAPL": {
+      "status": "SKIP — day plan",
+      "last": 314.63,
+      "rel_volume": 0.5,
+      "reason": "Day plan says SKIP — no fresh catalyst, Broadcom story absorbed, earnings July 30. rel_volume 0.5 also well below minimum 1.2."
+    },
+    "NFLX": {
+      "status": "SKIP — day plan",
+      "last": 74.715,
+      "rel_volume": 0.58,
+      "reason": "Day plan says SKIP — earnings July 16 (7 days away), Bernstein price target cut, no catalyst. rel_volume 0.58 below minimum 1.2."
+    }
+  },
+  "open_orders_action": "None. No open orders to cancel.",
+  "rules_applied": [
+    "min_rel_volume=1.2: INTC (1.11), NVDA (1.02), AAPL (0.5), NFLX (0.58), AMZN (~0.6) all below threshold.",
+    "max_spread_bp=25: AMZN at 202 bp disqualified.",
+    "VWAP reclaim requires price AT or just crossing above VWAP — NVDA is 1.07% above VWAP at 2:39 PM; no fresh reclaim entry.",
+    "INTC has broken below ORB low ($113.42) and VWAP ($113.60) — relief-bounce thesis invalidated.",
+    "Plan regime MIXED-CAUTIOUS: VWAP reclaim for INTC/NVDA only; INTC setup broken; NVDA rel_volume fails gate.",
+    "Playbook: when unsure, do nothing — a missed trade costs nothing, a forced trade costs money.",
+    "No-new-entries cutoff is 3:30 PM ET; we are at 2:39 PM so still in window, but no qualifying setups exist."
+  ],
+  "final_decision": "NO TRADE. Flat. Both primary (INTC) and secondary (NVDA) candidates fail entry criteria. Preserving capital and loss budget."
+}

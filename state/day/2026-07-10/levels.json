@@ -2,24 +2,22 @@
   "_meta": {
     "date": "2026-07-10",
     "generated_utc": "2026-07-10T13:29:16.386946+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-07-10T13:33:24+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 75.46,
-    "atr_day": 2.61,
-    "avg_vol_10d": 2975171,
-    "premarket_price": 78.38,
-    "gap_pct": 0.0387,
-    "spread_bp": 1629.3,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,975,171 sh/day); +3.9% gap"
+    "kept": 3,
+    "dropped": ["AMZN", "AAPL", "PFE", "BAC"],
+    "drop_reasons": {
+      "AMZN": "Flat +0.5% gap, no catalyst. Prior stopped-out name (June 24, -0.975R). Playbook: no re-entry without a brand-new setup.",
+      "AAPL": "Flat -0.4% gap, no catalyst. Identical skip rationale as July 9 — Broadcom news fully absorbed, no fresh trigger.",
+      "PFE": "ATR $0.61 on a $24 stock — insufficient intraday range. Max $7,500 trade earns ~$190 if full ATR plays out. Not viable.",
+      "BAC": "Earnings July 14 (4 days). Pre-earnings quiet window, ATR $1.18, +0.6% gap is noise. No catalyst."
+    },
+    "spread_note": "All spread_bp figures are premarket illiquidity artifacts. Large-caps trade at 1-5 bp during regular hours. Do not gate on premarket spread. Exception: if INTC live spread exceeds 100 bp intraday, treat as reversal signal per playbook (2026-07-09 lesson).",
+    "note": "ORB levels fill in live after the open. Three names kept with clear intraday setups. NVDA is primary; NFLX and INTC are secondary with reduced size."
   },
   "NVDA": {
+    "rank": 1,
     "sector": "technology",
     "prev_close": 202.69,
     "atr_day": 6.59,
@@ -29,9 +27,31 @@
     "spread_bp": 566.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,916,604 sh/day); +1.5% gap"
+    "support": 202.69,
+    "support2": 200.00,
+    "resistance": 206.00,
+    "resistance2": 210.00,
+    "note": "PRIMARY. Gapped +1.5% premarket on continued semiconductor sector strength. Most liquid name on the list (4.9M avg vol/day). ATR $6.59 provides solid intraday range. Support at $202.69 (prev close, gap-fill target) and $200.00 (major round number / psychological floor). Resistance at $206.00 (premarket high zone) and $210.00 (next round number). Watch for ORB breakout above ORB high with volume, or VWAP reclaim on pullback. No imminent earnings. Full size up to $7,500 if setup is clean."
+  },
+  "NFLX": {
+    "rank": 2,
+    "sector": "communication",
+    "prev_close": 75.46,
+    "atr_day": 2.61,
+    "avg_vol_10d": 2975171,
+    "premarket_price": 78.38,
+    "gap_pct": 0.0387,
+    "spread_bp": 1629.3,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 76.00,
+    "support2": 75.46,
+    "resistance": 78.50,
+    "resistance2": 80.00,
+    "note": "WATCH. Largest gap today: +3.9% (~$2.92). Must confirm catalyst before entry — do not trade a gap without knowing why. Earnings July 16 (6 days away); intraday only, no overnight exposure under any circumstance. Support at $76.00 (round number, first gap-fill waypoint) and $75.46 (prev close / full gap-fill). Resistance at $78.50 (near premarket high) and $80.00 (round number). VWAP reclaim preferred; ORB breakout permitted if catalyst is real and volume confirms. Size capped at $5,000 due to earnings proximity."
   },
   "INTC": {
+    "rank": 3,
     "sector": "technology",
     "prev_close": 112.53,
     "atr_day": 10.59,
@@ -41,54 +61,10 @@
     "spread_bp": 1004.7,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,701,635 sh/day); -2.7% gap"
-  },
-  "AMZN": {
-    "sector": "consumer",
-    "prev_close": 246.96,
-    "atr_day": 8.1,
-    "avg_vol_10d": 2793740,
-    "premarket_price": 248.14,
-    "gap_pct": 0.0048,
-    "spread_bp": 1011.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,793,740 sh/day); +0.5% gap"
-  },
-  "AAPL": {
-    "sector": "technology",
-    "prev_close": 316.16,
-    "atr_day": 8.92,
-    "avg_vol_10d": 2717879,
-    "premarket_price": 314.76,
-    "gap_pct": -0.0044,
-    "spread_bp": 1003.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,717,879 sh/day); -0.4% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.25,
-    "atr_day": 0.61,
-    "avg_vol_10d": 2611738,
-    "premarket_price": 24.36,
-    "gap_pct": 0.0045,
-    "spread_bp": 24.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,611,738 sh/day); +0.4% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 59.23,
-    "atr_day": 1.18,
-    "avg_vol_10d": 2267665,
-    "premarket_price": 59.61,
-    "gap_pct": 0.0063,
-    "spread_bp": 1006.5,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,267,665 sh/day); +0.6% gap"
+    "support": 108.00,
+    "support2": 105.00,
+    "resistance": 112.53,
+    "resistance2": 115.00,
+    "note": "SECONDARY. Gapped -2.7% after yesterday's bounce at $112.53 reversed. ATR $10.59 is the largest here and offers range, but gap-down context is bearish — we cannot short, so setup requires a genuine reversal. VWAP reclaim only: wait for price to stabilize near $108-109, then look for two consecutive bars above VWAP with rising volume before entering long. Do not chase a gap-down continuation. Resistance at $112.53 (prev close / full gap-fill) and $115.00 (yesterday's premarket high). Support at $108.00 (round number below premarket) and $105.00. Earnings July 23 (13 days). Warning: yesterday INTC live-session spread hit 209.5 bp and broke down two hours later — if spread exceeds 100 bp intraday, treat as reversal signal and exit any position. Size capped at $5,000."
   }
 }

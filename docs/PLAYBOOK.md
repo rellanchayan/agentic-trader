@@ -35,11 +35,21 @@ made of **rules to follow**, not stories.
   while the surrounding sector is under broad selling pressure is swimming against the tide; wait for
   the sector to stabilize before buying any name in it.
 - A premarket sector disarm stays in effect for the full session unless the tape shows broad stabilization across the sector (multiple names in the sector recovering and holding above VWAP). Do not lift the disarm for a single name bouncing in isolation.
+- **Momentum setup:** early evidence is negative (0/1 wins, -0.975R). Until the setup proves out,
+  require two extra confirmations beyond the base screen: (a) sector momentum must broadly align with
+  the individual name, and (b) entry must be within 60 minutes of the ORB that seeded the thesis.
+- When the primary candidate does not produce a clean setup by mid-morning, fully commit to the
+  secondary pick — do not spend subsequent ticks re-evaluating the primary. Today NFLX correctly
+  passed, NVDA correctly substituted, and the trade worked.
 
 ## Entries & exits
 - Enter with marketable limit orders so we fill fast but never worse than our price.
 - Set the stop at a level that means "the idea was wrong," not just a random number. Honor it instantly.
 - Take profit at the target; don't get greedy and give back a winner.
+- When an ORB position hits its defined target intraday, exit at that level — do not ride to EOD
+  flatten. EOD exits are a safety net, not an exit strategy. Over 3 ORB trades the average win was
+  only +0.559R against a 2.5 ATR target, which means EOD flatten is systematically cutting winners
+  short. Treat the target as an active exit trigger.
 - A typical good trade risks a few hundred dollars to make more than it risks (aim for wins ≥ 1.5R).
 - Flatten limits must be set near the current bid at the time of submission, never from a cached or
   stale price. A stale flatten limit will miss the market entirely and leave a position open into the
@@ -79,6 +89,19 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-10: No tuning. Tuner eligible ("ok to tune", 18 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was a winning session: NVDA ORB buy at $207.22,
+  EOD exit at $210.59, +$84.25 P&L (+0.355R). The plan correctly passed on the primary pick (NFLX
+  did not produce a clean setup) and executed on the secondary. Entry was 70 minutes into the
+  session — late in the ORB window but valid per the 90-minute rule; spread was 1.4 bp (well inside
+  the 25 bp gate). Three lessons encoded tonight: (1) Entries & exits — ORB wins are being capped
+  by EOD flatten (avg win +0.559R vs 2.5 ATR target across 3 trades); target levels must be used as
+  active exit triggers, not just reference points — rule added. (2) Setups — momentum is 0/1 wins
+  (-0.975R); require sector alignment and entry within 60 minutes of the seeding ORB before entering
+  any momentum trade — rule added. (3) Setups — when the primary candidate passes, fully commit to
+  the secondary immediately; do not re-evaluate the primary on subsequent ticks — rule added. Over
+  18 days: 11 trades (0.61/day), 36.4% win rate, ORB -0.362R across 3 trades, momentum -0.975R
+  across 1 trade. No parameter has ever been changed; all settings remain at their defaults.
 - 2026-07-09: No tuning. Tuner eligible ("ok to tune", 17 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day: INTC blocked at the spread
   gate (209.5 bp at 12:39 PM vs 25 bp max) and subsequently broke down below its ORB low —

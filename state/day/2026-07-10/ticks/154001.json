@@ -1,0 +1,62 @@
+{
+  "tick": "154001",
+  "time_et": "15:40:01",
+  "date": "2026-07-10",
+  "action": "HOLD",
+  "reason": "Past no-new-entries cutoff (15:30 ET). NVDA x25: entry $207.22, now $209.915 (+$67.38 unrealized, +0.27R). Above VWAP $208.56, ORB breakout holding above $204.98, 1.40x rel vol, spread 0.5 bp. Stop $197.74 / target $223.94 — neither hit. Flatten window opens 15:50 ET; flatten-close will handle liquidation. NFLX: below ORB low $73.58, ORB window closed, no setup. INTC: rel vol 0.87 below 1.2x gate, skip per plan. No new entries.",
+  "positions": 1,
+  "trades_today": 1,
+  "day_pnl": 67.38,
+  "account": {
+    "equity": 999730.19,
+    "cash": 994482.31,
+    "buying_power": 3992623.29
+  },
+  "positions_detail": [
+    {
+      "ticker": "NVDA",
+      "qty": 25,
+      "avg_entry_price": 207.22,
+      "current_price": 209.915,
+      "unrealized_pl": 67.375,
+      "stop": 197.74,
+      "target": 223.94,
+      "status": "HOLD — stop not hit, target not reached, flatten-close handles EOD"
+    }
+  ],
+  "market_snapshot": {
+    "NVDA": {
+      "last": 209.905,
+      "bid": 209.92,
+      "ask": 209.93,
+      "spread_bp": 0.5,
+      "vwap": 208.56,
+      "orb_high": 204.98,
+      "rel_volume": 1.4,
+      "above_vwap": true,
+      "orb_breakout": true
+    },
+    "NFLX": {
+      "last": 73.38,
+      "bid": 73.39,
+      "ask": 73.4,
+      "spread_bp": 1.4,
+      "vwap": 73.31,
+      "orb_high": 75.54,
+      "orb_low": 73.58,
+      "rel_volume": 0.88,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    "INTC": {
+      "last": 110.175,
+      "rel_volume": 0.87,
+      "skip": true
+    }
+  },
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "minutes_to_flatten_window": 10
+  }
+}

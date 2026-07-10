@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260710-104017-NVDA",
+  "ticker": "NVDA",
+  "side": "BUY",
+  "qty": 25,
+  "limit_price": 207.56,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "ORB breakout above $204.98 confirmed; price $207.29 above VWAP $206.24; 1.85x relative volume; spread 1.4 bp. 70 min since open \u2014 within 90-min ORB window. Mixed regime but all breakout gates satisfied.",
+  "risk": "Stop at $197.74 (1.5x ATR_day $6.55 below entry). Thesis invalid if price falls back below ORB high $204.98.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 197.74,
+  "target": 223.94,
+  "quote_age_sec": 0.3,
+  "spread_bp": 1.4,
+  "status": "submitted",
+  "alpaca_order_id": "f7024ed4-ed5c-4130-8b73-938fdbfdb896",
+  "client_order_id": "T-20260710-104017-NVDA",
+  "submitted_at_utc": "2026-07-10T14:43:15.052168+00:00"
+}

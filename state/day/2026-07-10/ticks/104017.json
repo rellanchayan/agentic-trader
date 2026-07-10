@@ -1,0 +1,34 @@
+{
+  "time_et": "10:40:17",
+  "tick": "104017",
+  "action": "BUY_SUBMITTED",
+  "decision_summary": "NVDA ORB breakout — all gates pass. NFLX below ORB low and below VWAP — no setup. INTC spread 71.2 bp — skip. Submitted BUY NVDA x25 @ $207.56 LIMIT DAY.",
+  "orders_submitted": [
+    {
+      "trade_id": "T-20260710-104017-NVDA",
+      "ticker": "NVDA",
+      "side": "BUY",
+      "qty": 25,
+      "limit_price": 207.56,
+      "stop": 197.74,
+      "target": 223.94,
+      "alpaca_order_id": "f7024ed4-ed5c-4130-8b73-938fdbfdb896",
+      "status": "PENDING_NEW",
+      "setup": "orb",
+      "risk_usd": 245.5,
+      "value_usd": 5189.0,
+      "rr": 1.67
+    }
+  ],
+  "market_snapshot": {
+    "NVDA": {"last": 207.29, "vwap": 206.24, "orb_high": 204.98, "orb_breakout": true, "rel_volume": 1.85, "spread_bp": 1.4},
+    "NFLX": {"last": 73.12, "vwap": 73.63, "orb_high": 75.54, "orb_breakout": false, "rel_volume": 1.69, "spread_bp": 2.7},
+    "INTC": {"last": 109.23, "vwap": 108.97, "spread_bp": 71.2, "skip": "plan says skip, spread confirms"}
+  },
+  "account_at_tick": {
+    "equity": 999662.81,
+    "day_pnl": 0.0,
+    "trades_today": 1,
+    "positions_open": 0
+  }
+}

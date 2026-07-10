@@ -1,0 +1,54 @@
+{
+  "tick": "123948",
+  "time_et": "12:39:48",
+  "date": "2026-07-10",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "NVDA position healthy: 25 shares, entry $207.22, current $209.97, +$66.75 unrealized (+0.29R). Above VWAP $207.66, ORB breakout holding above $204.98, 1.83x rel vol, spread 1.4 bp. Stop $197.74 / target $223.94 intact — holding. ORB window closed at 11:00 AM ET — no new ORB entries. NFLX $72.79 below VWAP $73.38 and below ORB low $73.58 — ORB never triggered, setup invalid. INTC: SKIP per day plan. No new entries qualify.",
+  "positions_held": [
+    {
+      "ticker": "NVDA",
+      "qty": 25,
+      "avg_entry_price": 207.22,
+      "current_price": 209.97,
+      "unrealized_pl": 66.75,
+      "unrealized_r": 0.29,
+      "stop": 197.74,
+      "target": 223.94,
+      "action": "HOLD"
+    }
+  ],
+  "candidates_reviewed": [
+    {
+      "ticker": "NVDA",
+      "consideration": "existing position — HOLD",
+      "last": 209.97,
+      "vwap": 207.66,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 1.83,
+      "spread_bp": 1.4
+    },
+    {
+      "ticker": "NFLX",
+      "consideration": "below VWAP ($72.79 vs $73.38) and below ORB low $73.58; ORB breakout never triggered — no trade",
+      "last": 72.79,
+      "vwap": 73.38,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.13,
+      "spread_bp": 1.4
+    },
+    {
+      "ticker": "INTC",
+      "consideration": "SKIP per day plan"
+    }
+  ],
+  "account_snapshot": {
+    "equity": 999729.56,
+    "day_pnl": 66.75,
+    "trades_today": 1,
+    "positions_open": 1
+  },
+  "new_orders_submitted": []
+}

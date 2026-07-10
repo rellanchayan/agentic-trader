@@ -1,0 +1,119 @@
+{
+  "date": "2026-07-10",
+  "timestamp_et": "2026-07-10T09:40:03.254154-04:00",
+  "minutes_since_open": 10,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999662.81,
+    "cash": 999662.81,
+    "buying_power": 3998651.24,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": {
+    "date": "2026-07-10",
+    "loss_stop_usd": 3000.0,
+    "baseline_equity": 999662.81,
+    "current_equity": 999662.81,
+    "day_pnl": 0.0,
+    "tripped": false,
+    "note": "ok"
+  },
+  "budget": {
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "daily_deploy_cap_usd": 50000
+  },
+  "positions": [],
+  "open_orders": [],
+  "market": {
+    "INTC": {
+      "last": 108.27,
+      "bid": 108.17,
+      "ask": 108.22,
+      "quote_age_sec": 0.2,
+      "spread_bp": 4.6,
+      "vwap": 108.93,
+      "orb_high": 109.98,
+      "orb_low": 108.06,
+      "atr_1m": 0.633,
+      "atr_day": 9.88,
+      "rel_volume": 1.42,
+      "volume_today": 86621,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 108.33,
+      "marketable_sell_limit": 108.06
+    },
+    "NFLX": {
+      "last": 74.7,
+      "bid": 74.59,
+      "ask": 74.64,
+      "quote_age_sec": 0.3,
+      "spread_bp": 6.7,
+      "vwap": 74.58,
+      "orb_high": 75.54,
+      "orb_low": 74.15,
+      "atr_1m": 0.411,
+      "atr_day": 2.56,
+      "rel_volume": 2.29,
+      "volume_today": 155918,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "marketable_buy_limit": 74.71,
+      "marketable_sell_limit": 74.52
+    },
+    "NVDA": {
+      "last": 203.555,
+      "bid": 203.43,
+      "ask": 203.46,
+      "quote_age_sec": 0.2,
+      "spread_bp": 1.5,
+      "vwap": 203.99,
+      "orb_high": 204.98,
+      "orb_low": 202.07,
+      "atr_1m": 0.858,
+      "atr_day": 6.32,
+      "rel_volume": 1.95,
+      "volume_today": 227634,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 203.66,
+      "marketable_sell_limit": 203.23
+    }
+  },
+  "recent_ticks": [],
+  "config_snapshot": {
+    "orb_minutes": 15,
+    "orb_breakout_buffer_bp": 5,
+    "vwap_reclaim_buffer_bp": 5,
+    "stop_atr_mult": 1.5,
+    "target_atr_mult": 2.5,
+    "risk_per_trade_usd": 250,
+    "per_trade_max_usd": 10000,
+    "daily_deploy_cap_usd": 50000,
+    "max_open_positions": 8,
+    "daily_loss_stop_usd": 3000,
+    "max_position_pct": 0.25,
+    "min_rel_volume": 1.2,
+    "max_spread_bp": 25,
+    "min_quote_freshness_sec": 30,
+    "limit_buy_above_ask_pct": 0.001,
+    "limit_sell_below_bid_pct": 0.001,
+    "no_new_entries_after_et": "15:30",
+    "flatten_start_et": "15:50",
+    "pdt_equity_floor_usd": 26000,
+    "max_trades_per_day": 20,
+    "setup_enabled": {
+      "orb": true,
+      "vwap_reclaim": true,
+      "momentum": true,
+      "mean_reversion": true
+    }
+  }
+}

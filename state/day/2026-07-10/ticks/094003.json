@@ -1,0 +1,44 @@
+{
+  "tick_id": "094003",
+  "time_et": "09:40:03",
+  "date": "2026-07-10",
+  "verdict": "NO_TRADE",
+  "reason": "Too early — 15-min ORB window not yet closed (entries open at 9:45 AM ET). NFLX above VWAP with strong relative volume (2.29x) and tight spread (6.7 bp) but ORB range still forming; no breakout above $75.54 ORB high. NVDA below VWAP ($203.56 vs $203.99 VWAP); VWAP reclaim setup not active. INTC is a planned skip. No open positions to manage.",
+  "positions_open": 0,
+  "trades_today": 0,
+  "account": {
+    "equity": 999662.81,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0
+  },
+  "market_snapshot": {
+    "NFLX": {
+      "last": 74.7,
+      "vwap": 74.58,
+      "above_vwap": true,
+      "orb_high": 75.54,
+      "orb_low": 74.15,
+      "orb_breakout": false,
+      "rel_volume": 2.29,
+      "spread_bp": 6.7,
+      "note": "Watching for ORB break above $75.54 after 9:45 AM ET"
+    },
+    "NVDA": {
+      "last": 203.555,
+      "vwap": 203.99,
+      "above_vwap": false,
+      "orb_high": 204.98,
+      "orb_low": 202.07,
+      "orb_breakout": false,
+      "rel_volume": 1.95,
+      "spread_bp": 1.5,
+      "note": "Below VWAP — VWAP reclaim not active"
+    },
+    "INTC": {
+      "last": 108.27,
+      "note": "SKIP per plan — gapping down, prior breakdown confirmed"
+    }
+  },
+  "orders_submitted": [],
+  "next_focus": "9:42 AM tick: check if ORB range locked in (9:45 AM gate). NFLX primary watch — ORB breakout above $75.54 with 1.2x+ vol. NVDA secondary — watch for VWAP reclaim."
+}

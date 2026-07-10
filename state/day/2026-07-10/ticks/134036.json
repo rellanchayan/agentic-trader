@@ -1,0 +1,57 @@
+{
+  "tick": "134036",
+  "time_et": "13:40:36",
+  "timestamp_utc": "2026-07-10T17:40:36Z",
+  "action": "HOLD",
+  "positions_reviewed": [
+    {
+      "ticker": "NVDA",
+      "qty": 25,
+      "avg_entry": 207.22,
+      "current_price": 210.51,
+      "bid": 210.66,
+      "ask": 210.68,
+      "vwap": 208.02,
+      "orb_high": 204.98,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 1.63,
+      "spread_bp": 0.9,
+      "unrealized_pl": 85.51,
+      "unrealized_r": 0.36,
+      "stop": 197.74,
+      "target": 223.94,
+      "stop_hit": false,
+      "target_hit": false,
+      "thesis_intact": true,
+      "decision": "HOLD",
+      "reason": "Price $210.51 is above VWAP $208.02 and ORB high $204.98. Stop at $197.74 not approached — $12.77/share buffer. Target $223.94 not reached. Rel vol 1.63x, spread 0.9 bp. Thesis fully intact. Holding."
+    }
+  ],
+  "new_entries_considered": [
+    {
+      "ticker": "NFLX",
+      "decision": "SKIP",
+      "reason": "Price $72.57 below VWAP $73.29 and below ORB low $73.58. ORB breakout never triggered ($75.54 ORB high). Rel vol 1.0x below 1.2x minimum. No valid setup of any kind."
+    },
+    {
+      "ticker": "INTC",
+      "decision": "SKIP",
+      "reason": "Day plan says SKIP for INTC — gapping down second consecutive day, breakdown confirmed. Additionally rel vol 0.96 < 1.2x minimum, and ORB window closed at 11:00 AM ET."
+    },
+    {
+      "ticker": "NVDA",
+      "decision": "SKIP",
+      "reason": "Already holding 25 shares. No pyramid entries without a fresh setup trigger. ORB window closed."
+    }
+  ],
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "summary": "HOLD NVDA. No new entries — ORB window closed at 11:00 AM ET; NFLX below VWAP and ORB low with volume sub-1.2x; INTC day-plan skip plus volume sub-1.2x. Position up +$85.51 (+0.36R). Stop/target unchanged.",
+  "day_pnl": 85.63,
+  "positions_open": 1,
+  "trades_today": 1,
+  "trades_remaining": 19
+}

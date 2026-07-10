@@ -1,15 +1,15 @@
 {
   "date": "2026-07-10",
-  "timestamp_et": "2026-07-10T13:39:37.219434-04:00",
-  "minutes_since_open": 249,
+  "timestamp_et": "2026-07-10T14:39:45.960955-04:00",
+  "minutes_since_open": 309,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
   },
   "account": {
-    "equity": 999748.44,
+    "equity": 999727.94,
     "cash": 994482.31,
-    "buying_power": 3992674.39,
+    "buying_power": 3992616.99,
     "daytrade_count": 0,
     "pattern_day_trader": false
   },
@@ -17,8 +17,8 @@
     "date": "2026-07-10",
     "loss_stop_usd": 3000.0,
     "baseline_equity": 999662.81,
-    "current_equity": 999748.44,
-    "day_pnl": 85.63,
+    "current_equity": 999727.94,
+    "day_pnl": 65.13,
     "tripped": false,
     "note": "ok"
   },
@@ -34,67 +34,67 @@
       "ticker": "NVDA",
       "qty": 25.0,
       "avg_entry_price": 207.22,
-      "current_price": 210.6403,
-      "market_value": 5266.0075,
-      "unrealized_pl": 85.5075,
-      "unrealized_plpc": 0.01651
+      "current_price": 209.825,
+      "market_value": 5245.625,
+      "unrealized_pl": 65.125,
+      "unrealized_plpc": 0.01257
     }
   ],
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 110.68,
-      "bid": 110.76,
-      "ask": 110.78,
-      "quote_age_sec": 0.3,
+      "last": 109.945,
+      "bid": 109.98,
+      "ask": 110.0,
+      "quote_age_sec": 0.2,
       "spread_bp": 1.8,
-      "vwap": 109.17,
+      "vwap": 109.32,
       "orb_high": 109.98,
       "orb_low": 107.47,
-      "atr_1m": 0.12,
+      "atr_1m": 0.107,
       "atr_day": 9.92,
-      "rel_volume": 0.96,
-      "volume_today": 1547341,
+      "rel_volume": 0.9,
+      "volume_today": 1811410,
       "above_vwap": true,
-      "orb_breakout": true,
-      "marketable_buy_limit": 110.89,
-      "marketable_sell_limit": 110.65
+      "orb_breakout": false,
+      "marketable_buy_limit": 110.11,
+      "marketable_sell_limit": 109.87
     },
     "NFLX": {
-      "last": 72.57,
-      "bid": 72.58,
-      "ask": 72.59,
-      "quote_age_sec": 1.0,
+      "last": 73.49,
+      "bid": 73.46,
+      "ask": 73.47,
+      "quote_age_sec": 0.6,
       "spread_bp": 1.4,
-      "vwap": 73.29,
+      "vwap": 73.27,
       "orb_high": 75.54,
       "orb_low": 73.58,
-      "atr_1m": 0.046,
+      "atr_1m": 0.036,
       "atr_day": 2.67,
-      "rel_volume": 1.0,
-      "volume_today": 1798110,
-      "above_vwap": false,
+      "rel_volume": 0.92,
+      "volume_today": 2064712,
+      "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 72.66,
-      "marketable_sell_limit": 72.51
+      "marketable_buy_limit": 73.54,
+      "marketable_sell_limit": 73.39
     },
     "NVDA": {
-      "last": 210.51,
-      "bid": 210.66,
-      "ask": 210.68,
+      "last": 209.875,
+      "bid": 209.82,
+      "ask": 209.84,
       "quote_age_sec": 0.3,
-      "spread_bp": 0.9,
-      "vwap": 208.02,
+      "spread_bp": 1.0,
+      "vwap": 208.33,
       "orb_high": 204.98,
       "orb_low": 202.07,
-      "atr_1m": 0.172,
-      "atr_day": 6.73,
-      "rel_volume": 1.63,
-      "volume_today": 5248118,
+      "atr_1m": 0.135,
+      "atr_day": 6.74,
+      "rel_volume": 1.48,
+      "volume_today": 6023346,
       "above_vwap": true,
       "orb_breakout": true,
-      "marketable_buy_limit": 210.89,
-      "marketable_sell_limit": 210.45
+      "marketable_buy_limit": 210.05,
+      "marketable_sell_limit": 209.61
     }
   },
   "recent_ticks": [
@@ -135,6 +135,15 @@
       "reason": "NVDA position healthy: 25 shares, entry $207.22, current $209.97, +$66.75 unrealized (+0.29R). Above VWAP $207.66, ORB breakout holding above $204.98, 1.83x rel vol, spread 1.4 bp. Stop $197.74 / target $223.94 intact \u2014 holding. ORB window closed at 11:00 AM ET \u2014 no new ORB entries. NFLX $72.79 below VWAP $73.38 and below ORB low $73.58 \u2014 ORB never triggered, setup invalid. INTC: SKIP per day plan. No new entries qualify.",
       "positions": 1,
       "trades_today": 1
+    },
+    {
+      "time_et": "13:40:36",
+      "tick": "134036",
+      "action": "HOLD",
+      "reason": "NVDA \u00d725 healthy: entry $207.22, current $210.51 (+$85.51 unrealized, +0.36R). Above VWAP $208.02, ORB breakout holding above $204.98, 1.63x rel vol, spread 0.9 bp. Stop $197.74 / target $223.94 intact \u2014 holding. ORB window closed 11:00 AM ET \u2014 no new ORB entries. NFLX below VWAP $73.29 and below ORB low $73.58, rel vol 1.0x \u2014 no setup. INTC SKIP per day plan (also rel vol 0.96 < 1.2x). No new entries qualify.",
+      "positions": 1,
+      "trades_today": 1,
+      "day_pnl": 85.63
     }
   ],
   "config_snapshot": {

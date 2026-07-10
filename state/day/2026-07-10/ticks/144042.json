@@ -1,0 +1,92 @@
+{
+  "tick": "144042",
+  "time_et": "14:40:42",
+  "time_utc": "2026-07-10T18:40:42Z",
+  "action": "HOLD",
+  "positions_reviewed": [
+    {
+      "ticker": "NVDA",
+      "qty": 25,
+      "avg_entry": 207.22,
+      "current_price": 209.875,
+      "unrealized_pl": 65.125,
+      "unrealized_r": 0.27,
+      "stop": 197.74,
+      "target": 223.94,
+      "stop_hit": false,
+      "target_hit": false,
+      "thesis_intact": true,
+      "above_vwap": true,
+      "vwap": 208.33,
+      "orb_breakout": true,
+      "orb_high": 204.98,
+      "rel_volume": 1.48,
+      "spread_bp": 1.0,
+      "decision": "HOLD",
+      "reason": "Stop $197.74 not hit (price $209.875 is $12.10 above stop). Target $223.94 not hit. Thesis intact: above VWAP $208.33, ORB breakout holding above $204.98, rel volume 1.48x, spread 1.0 bp. Small pullback from 13:40 tick ($210.51 → $209.875) is well within noise (ATR_1m $0.135, ATR_day $6.74). No change needed."
+    }
+  ],
+  "new_entries_considered": [
+    {
+      "ticker": "NFLX",
+      "considered": true,
+      "decision": "NO_TRADE",
+      "reason": "ORB window closed at 11:00 AM ET (now 2:40 PM). Price $73.49 is below ORB high $75.54 — no ORB breakout ever triggered. Rel volume 0.92x is below 1.2x minimum gate. No qualifying setup."
+    },
+    {
+      "ticker": "INTC",
+      "considered": true,
+      "decision": "NO_TRADE",
+      "reason": "Explicitly SKIP per day plan. Gapping down, broken chart, earnings July 23, no positive catalyst."
+    }
+  ],
+  "open_orders_cancelled": [],
+  "market_snapshot": {
+    "NVDA": {
+      "last": 209.875,
+      "bid": 209.82,
+      "ask": 209.84,
+      "spread_bp": 1.0,
+      "vwap": 208.33,
+      "orb_high": 204.98,
+      "orb_low": 202.07,
+      "rel_volume": 1.48,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "atr_1m": 0.135
+    },
+    "NFLX": {
+      "last": 73.49,
+      "bid": 73.46,
+      "ask": 73.47,
+      "spread_bp": 1.4,
+      "vwap": 73.27,
+      "orb_high": 75.54,
+      "orb_low": 73.58,
+      "rel_volume": 0.92,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    "INTC": {
+      "last": 109.945,
+      "bid": 109.98,
+      "ask": 110.0,
+      "spread_bp": 1.8,
+      "vwap": 109.32,
+      "orb_high": 109.98,
+      "orb_low": 107.47,
+      "rel_volume": 0.9,
+      "above_vwap": true,
+      "orb_breakout": false
+    }
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "day_pnl": 65.13,
+  "positions_open": 1,
+  "trades_today": 1,
+  "trades_remaining": 19,
+  "summary": "HOLD NVDA x25. Thesis intact at 2:40 PM ET — above VWAP, above ORB high, 1.48x rel vol. Price $209.875, +$65.13 unrealized (+0.27R). No new entries: NFLX volume below gate and ORB window closed; INTC skip per plan. Flatten window opens at 3:50 PM ET."
+}

@@ -1,0 +1,45 @@
+{
+  "tick": "114002",
+  "time_et": "11:40:02",
+  "timestamp_et": "2026-07-10T11:40:02-04:00",
+  "action": "NO_TRADE",
+  "reason": "NVDA position healthy: 25 shares, entry $207.22, current $209.24, +$49.50 unrealized (+0.21R). Above VWAP $206.84, ORB breakout holding above $204.98, 1.84x rel vol, spread 1.4 bp. Stop $197.74 / target $223.94 intact — holding. NFLX below VWAP ($73.03 vs VWAP $73.46) and below ORB low $73.58; ORB breakout (above $75.54) never triggered — no trade. INTC: SKIP per day plan. No new entries qualify.",
+  "positions_reviewed": {
+    "NVDA": {
+      "qty": 25,
+      "avg_entry_price": 207.22,
+      "current_price": 209.24,
+      "unrealized_pl": 49.5,
+      "r_achieved": 0.21,
+      "stop": 197.74,
+      "target": 223.94,
+      "above_vwap": true,
+      "orb_breakout_holding": true,
+      "decision": "HOLD"
+    }
+  },
+  "names_screened": {
+    "NFLX": {
+      "last": 73.03,
+      "vwap": 73.46,
+      "above_vwap": false,
+      "orb_high": 75.54,
+      "orb_low": 73.58,
+      "orb_breakout": false,
+      "decision": "NO_TRADE",
+      "reason": "Below VWAP and ORB low; ORB breakout never triggered"
+    },
+    "INTC": {
+      "last": 108.97,
+      "decision": "SKIP",
+      "reason": "Day plan SKIP: negative gap, sector headwinds, earnings July 23"
+    }
+  },
+  "account_snapshot": {
+    "equity": 999711.51,
+    "day_pnl": 48.7,
+    "trades_today": 1,
+    "positions_open": 1,
+    "loss_budget_remaining": 3051.5
+  }
+}

@@ -2,10 +2,12 @@
   "_meta": {
     "date": "2026-07-13",
     "generated_utc": "2026-07-13T13:30:02.340541+00:00",
+    "screener_edit_utc": "2026-07-13T13:31:53.605273+00:00",
     "source": "watchlist_build",
     "candidates_considered": 7,
-    "top": 7,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 4,
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this.",
+    "screener_note": "Kept 4 of 7 names. Dropped: INTC (persistent multi-session downtrend, live spread hit 209.5 bp on 2026-07-09, earnings July 23, no positive catalyst), PFE (ATR $0.56 yields trivially small dollar reward — not worth the slot), BAC (earnings TOMORROW July 14 — pre-earnings binary risk, ATR $1.09 also too small). Pre-market spreads shown here are pre-open quotes; for NFLX the 9.4 bp spread signals active pre-market trading. Live-session spread gate is 25 bp at entry time for all names."
   },
   "NVDA": {
     "sector": "technology",
@@ -15,21 +17,11 @@
     "premarket_price": 204.12,
     "gap_pct": -0.0326,
     "spread_bp": 575.6,
+    "support": 202.00,
+    "resistance": 210.99,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (5,281,731 sh/day); -3.3% gap"
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 109.85,
-    "atr_day": 9.75,
-    "avg_vol_10d": 2600325,
-    "premarket_price": 106.63,
-    "gap_pct": -0.0293,
-    "spread_bp": 875.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,600,325 sh/day); -2.9% gap"
+    "note": "PRIMARY WATCH. Most liquid name on the list (5.28M avg vol/day). Gap widened to -3.26% (-$6.87) in pre-market — nearly one full ATR in size, suggesting real tech-sector selling not noise. Support: $202 area (intraday floor near pre-market price), $200 round number (key psychological). Resistance: $207 (prior pre-market support now acts as ceiling), $210.99 (prev close / full gap fill). Setup: VWAP reclaim — if price stabilizes above $202 and reclaims VWAP with 1.2x+ relative volume on two consecutive bars, enter long; first target $207, second target gap fill $210.99 if momentum holds. ORB breakout also armed if 15-min range forms cleanly. No entries before 9:45 AM ET. If price continues falling through $200 on open, stand aside — do not buy a falling knife. Spread gate 25 bp at entry. Max size $7,500 (reduced from $10k given larger-than-normal gap and elevated uncertainty)."
   },
   "NFLX": {
     "sector": "communication",
@@ -39,9 +31,11 @@
     "premarket_price": 74.45,
     "gap_pct": 0.0146,
     "spread_bp": 9.4,
+    "support": 73.38,
+    "resistance": 75.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,902,444 sh/day); +1.5% gap"
+    "note": "SECONDARY WATCH — upgraded from tertiary. Pre-market spread collapsed to 9.4 bp (essentially live-session quality), signaling active pre-market trading and a likely catalyst. Gap +1.46% (+$1.07) is the strongest upside gap on the list. Earnings July 16 (3 days away) add noise but also pre-earnings momentum. ATR $2.66 limits absolute dollar moves. Support: prev close $73.38 (key floor — if price fades here, skip), $72.50 round area, $71.72 (~1 ATR below prev close). Resistance: $75.00 round number (primary target), $75.46 (July 10 closing price — prior resistance). Setup: ORB breakout ONLY — let the 15-min range form, enter only if price cleanly breaks above ORB high with 1.2x+ relative volume AND live spread under 25 bp. Do not enter before 9:45 AM ET. If price fades toward $73.38 at the open, the gap is exhausted — do not enter. Spread gate 25 bp at entry. Max size $7,500."
   },
   "AAPL": {
     "sector": "technology",
@@ -51,21 +45,11 @@
     "premarket_price": 312.76,
     "gap_pct": -0.0081,
     "spread_bp": 257.4,
+    "support": 310.00,
+    "resistance": 315.32,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,264,660 sh/day); -0.8% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.19,
-    "atr_day": 0.56,
-    "avg_vol_10d": 2379886,
-    "premarket_price": 24.34,
-    "gap_pct": 0.0062,
-    "spread_bp": 135.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,379,886 sh/day); +0.6% gap"
+    "note": "SECONDARY WATCH. Liquid (2.26M avg vol), large ATR $8.91. Gap flipped to -0.81% (-$2.56) — consistent with the broad tech-sector selling visible in NVDA's wider gap. Support: $310 round number (important technical level), $306 (~1 ATR below prev close). Resistance: prev close $315.32 (gap fill / first ceiling), $320 round number. Setup: VWAP reclaim if AAPL stabilizes in early trading — two consecutive bars above VWAP with 1.2x+ relative volume. Lower priority than NVDA since both are downside-gapping tech names; do not open both simultaneously. Spread gate 25 bp at entry. Max size $7,500."
   },
   "AMZN": {
     "sector": "consumer",
@@ -75,20 +59,10 @@
     "premarket_price": 244.75,
     "gap_pct": -0.0024,
     "spread_bp": 44.1,
+    "support": 242.00,
+    "resistance": 245.35,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,404,227 sh/day); -0.2% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 59.64,
-    "atr_day": 1.09,
-    "avg_vol_10d": 2148352,
-    "premarket_price": 59.89,
-    "gap_pct": 0.0042,
-    "spread_bp": 1058.6,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,148,352 sh/day); +0.4% gap"
+    "note": "TERTIARY WATCH. Liquid (2.40M avg vol), solid ATR $7.69. Near-flat premarket (-0.24%, -$0.60) — relatively resilient if broader tech is selling. Pre-market spread improved to 44.1 bp (will normalize to ~2 bp at open). Support: $242-243 area, $240 round number. Resistance: prev close $245.35 (first ceiling), $250 round number. Setup: VWAP reclaim only — two consecutive bars above VWAP with 1.2x+ relative volume. Consider only if NVDA and NFLX both fail to produce clean setups; do not spread capital across multiple names in the same tick. Spread gate 25 bp at entry. Max size $7,500."
   }
 }

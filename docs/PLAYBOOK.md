@@ -89,6 +89,19 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-13: No tuning. Tuner eligible ("ok to tune", 19 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day: RISK-OFF regime driven by
+  US/Iran military escalation. The premarket plan correctly set a hard conditional — "if NFLX does
+  not present a clean setup by 11 AM ET, take zero trades" — and executed it exactly. No trades
+  were placed; equity $999,747.04, ended flat. No new rule is warranted tonight. A zero-trade day
+  with no fills provides no new statistical signal about entry quality, stop placement, or sizing.
+  The RISK-OFF pattern is already in the playbook ("Risk-off: trade less, smaller, don't buy
+  breakouts into weakness"). The conditional-plan execution pattern is already in the playbook
+  ("when the primary candidate does not produce a clean setup by mid-morning, commit to the
+  secondary — or take zero trades"). This is the second RISK-OFF zero-trade day in the current
+  history (after 2026-07-08). Both were correct outcomes. Over 19 days: 11 trades (0.58/day),
+  36.4% win rate, avg win +0.559R, avg loss -1.197R, ORB -0.362R across 3 trades, momentum
+  -0.975R across 1 trade. No parameter has ever been changed; tuning ledger remains empty.
 - 2026-07-10: No tuning. Tuner eligible ("ok to tune", 18 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was a winning session: NVDA ORB buy at $207.22,
   EOD exit at $210.59, +$84.25 P&L (+0.355R). The plan correctly passed on the primary pick (NFLX

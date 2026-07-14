@@ -1,0 +1,61 @@
+{
+  "tick_time_et": "10:41:45",
+  "tick_time_utc": "2026-07-14T14:41:45Z",
+  "minutes_since_open": 71,
+  "action": "NO_TRADE",
+  "halt_reason": "missing_day_plan",
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "slots_remaining": 8,
+  "trades_remaining": 20,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "AMZN": {
+      "last": 245.83,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 1.07,
+      "spread_bp": 2.4,
+      "note": "above VWAP but rel_volume 1.07x below 1.2x minimum — no setup"
+    },
+    "INTC": {
+      "last": 104.855,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.62,
+      "spread_bp": 11.5,
+      "note": "below VWAP and below ORB low (106.245) — no long setup; semiconductor weakness ongoing"
+    },
+    "NFLX": {
+      "last": 73.375,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 1.73,
+      "spread_bp": 1.4,
+      "orb_high": 73.38,
+      "note": "best candidate — testing ORB high (73.375 vs 73.38) with 1.73x volume and 1.4 bp spread. No confirmed breakout. Cannot trade without day plan or CPI/Fed Chair context."
+    },
+    "NVDA": {
+      "last": 206.79,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 1.01,
+      "spread_bp": 1.9,
+      "note": "above VWAP but rel_volume 1.01x below 1.2x minimum — no setup"
+    }
+  },
+  "decision": "NO_TRADE",
+  "rationale": [
+    "PRIMARY: docs/plan/2026-07-14.md does not exist — HALT condition per playbook. Premarket phase did not complete; watchlist context, strategic mood assessment, and armed/disarmed setup classifications are unknown.",
+    "SECONDARY: Extreme macro uncertainty today. Per yesterday's plan (2026-07-13), today has June CPI (released 8:30 AM ET), five major bank earnings pre-market (JPM BAC GS WFC C), and Fed Chair Warsh testimony (started 10:00 AM ET, currently ongoing). Trading blind without knowing how CPI and bank earnings landed is irresponsible.",
+    "SETUP QUALITY: Even absent HALT condition, no clean entry exists. AMZN and NVDA both fail rel_volume minimum (1.07x and 1.01x vs 1.2x required). INTC is below VWAP and below ORB low — no long. NFLX is the best candidate (rel_volume 1.73x, spread 1.4 bp, testing ORB high) but orb_breakout is false and NFLX reports Q2 earnings Thursday July 16 after close — without day plan context I cannot confirm its armed status.",
+    "PLAYBOOK: When unsure, do nothing. A missed trade costs nothing; a forced trade costs money."
+  ],
+  "orders_placed": [],
+  "positions_managed": "none — flat"
+}

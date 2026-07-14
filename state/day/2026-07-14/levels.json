@@ -2,81 +2,83 @@
   "_meta": {
     "date": "2026-07-14",
     "generated_utc": "2026-07-14T13:29:14.834472+00:00",
+    "screener_edit_utc": "2026-07-14T14:05:00+00:00",
     "source": "watchlist_build",
+    "screener": "day-screener-agent",
     "candidates_considered": 6,
-    "top": 6,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "kept": 4,
+    "top": 4,
+    "dropped": ["PFE", "BAC"],
+    "drop_reasons": {
+      "PFE": "ATR $0.58 on $24 stock (2.4% daily range); flat gap; no catalyst; stop at 1.5x ATR = $0.87 is narrower than typical open spread — not a viable day-trade.",
+      "BAC": "ATR $1.09 on $59 stock (1.8% daily range); BAC reported Q2 earnings this morning yet premarket is flat ($59.53 vs close $59.54) — muted post-earnings reaction leaves no directional edge; daily range too small for ATR-based stop/target framework."
+    },
+    "macro_context": "CPI June released 8:30 AM ET today (before screen); NVDA +7.4% and INTC +5.1% pre-market gaps indicate benign print drove tech/semi relief rally. Bank earnings (JPM, BAC, GS, WFC, C) also out pre-market. Fed Chair Warsh testimony 10:00 AM ET — intraday volatility risk around that time. NFLX earnings Thursday Jul 16 after close.",
+    "spread_bp_warning": "All spread_bp values (~1000bp) are pre-market artifacts from thin pre-market book. Do NOT use for entry decisions. Measure actual bid-ask spread at market open; entry gate is 25bp per config.",
+    "note": "Pre-market screen edited by day-screener. ORB levels fill in live 9:45-9:50 AM ET. Dropped PFE (tiny ATR, no catalyst) and BAC (tiny ATR, flat post-earnings). Ranked by opportunity: gap magnitude x ATR x liquidity."
   },
   "NVDA": {
+    "rank": 1,
     "sector": "technology",
     "prev_close": 203.49,
     "atr_day": 6.85,
+    "gap_fill": 203.49,
+    "support": 215.00,
+    "resistance": 220.00,
     "avg_vol_10d": 5243334,
     "premarket_price": 218.51,
     "gap_pct": 0.0738,
     "spread_bp": 1051.2,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (5,243,334 sh/day); +7.4% gap"
+    "note": "gapped +7.4% (+$15.02) on CPI relief rally and semiconductor sector recovery after yesterday's broad semi selloff; highest liquidity on the list (5.24M avg vol); primary setup: ORB breakout above premarket high $218.51 or VWAP reclaim after morning shakeout; support at $215 round number; resistance at $220 round number; extreme downside pivot (gap fill) at $203.49 — if price trades back there, the thesis is broken; sizing: risk $250/trade, ATR stop 1.5x$6.85=$10.28, entry ~$218 implies ~24 shares (~$5,200 deployed); skip if semiconductor sector shows renewed selling or spread is above 25bp at open"
   },
   "INTC": {
+    "rank": 2,
     "sector": "technology",
     "prev_close": 103.03,
     "atr_day": 9.95,
+    "gap_fill": 103.03,
+    "support": 105.00,
+    "resistance": 110.00,
     "avg_vol_10d": 2788263,
     "premarket_price": 108.25,
     "gap_pct": 0.0507,
     "spread_bp": 1006.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,788,263 sh/day); +5.1% gap"
-  },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 73.86,
-    "atr_day": 2.43,
-    "avg_vol_10d": 2695888,
-    "premarket_price": 72.95,
-    "gap_pct": -0.0123,
-    "spread_bp": 1010.2,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,695,888 sh/day); -1.2% gap"
+    "note": "gapped +5.1% (+$5.22) on same CPI/semi-recovery catalyst as NVDA; ATR $9.95 is the highest on today's list — signals large expected daily swings but demands very small sizing (risk $250/trade, stop 1.5x$9.95=$14.93 implies ~17 shares ~$1,840 deployed); setup: ORB breakout above premarket high $108.25 or VWAP reclaim; resistance at $110 (psychological and near pre-selloff range from July 12); support at $105 round; gap fill at $103.03 is the hard downside pivot; yesterday INTC had a sector-level disarm — confirm the sector is genuinely recovering (NVDA holding gains, volume on semis elevated) before treating INTC as armed; skip if relative volume is below 1.2x or spread exceeds 25bp at open"
   },
   "AMZN": {
+    "rank": 3,
     "sector": "consumer",
     "prev_close": 247.32,
     "atr_day": 7.38,
+    "gap_fill": 247.32,
+    "support": 245.00,
+    "resistance": 247.32,
     "avg_vol_10d": 2041477,
     "premarket_price": 245.81,
     "gap_pct": -0.0061,
     "spread_bp": 1008.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,041,477 sh/day); -0.6% gap"
+    "note": "flat gap (-0.6%, -$1.51) — no independent catalyst today; kept because ATR $7.38 gives viable ORB range on a high-event macro day; on a benign CPI tape the broad market may carry AMZN upward; prev close $247.32 acts as both resistance and the gap-fill target — a long that fills the gap and holds $247.32 becomes support sets up a possible continuation; support at $245 round number near current premarket; only trade if broad market direction is confirmed clear after CPI reaction and Warsh testimony (10 AM ET); skip if no directional conviction in first 30 minutes or spread above 25bp"
   },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 24.48,
-    "atr_day": 0.58,
-    "avg_vol_10d": 2275564,
-    "premarket_price": 24.48,
-    "gap_pct": 0.0,
-    "spread_bp": 1016.9,
+  "NFLX": {
+    "rank": 4,
+    "sector": "communication",
+    "prev_close": 73.86,
+    "atr_day": 2.43,
+    "gap_fill": 73.86,
+    "support": 72.00,
+    "resistance": 73.86,
+    "avg_vol_10d": 2695888,
+    "premarket_price": 72.95,
+    "gap_pct": -0.0123,
+    "spread_bp": 1010.2,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,275,564 sh/day); +0.0% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 59.54,
-    "atr_day": 1.09,
-    "avg_vol_10d": 2142509,
-    "premarket_price": 59.53,
-    "gap_pct": -0.0002,
-    "spread_bp": 1043.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,142,509 sh/day); -0.0% gap"
+    "note": "minor gap down (-1.2%, -$0.91) with Q2 earnings Thursday Jul 16 after close (2 days away); pre-earnings positioning can create intraday drift in either direction; was the only armed name yesterday and showed relative strength; gap fill to prev close $73.86 is the natural long target; support at $72.00 round number; ATR $2.43 is the smallest on the kept list — limits profit potential, so size conservatively (risk $250/trade, stop 1.5x$2.43=$3.65 implies ~68 shares ~$4,960 deployed — check that stop is not wider than realistic intraday range); reduce to half-size if pre-earnings jitter is visible in tape; skip entirely if spread exceeds 25bp at open, if broad market is negative, or if price breaks below $72 in the first 15 minutes"
   }
 }

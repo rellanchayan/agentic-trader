@@ -50,6 +50,7 @@ made of **rules to follow**, not stories.
   flatten. EOD exits are a safety net, not an exit strategy. Over 3 ORB trades the average win was
   only +0.559R against a 2.5 ATR target, which means EOD flatten is systematically cutting winners
   short. Treat the target as an active exit trigger.
+- Before entering any trade, verify that the distance from entry to target is at least 2x the distance from entry to stop (minimum 2:1 R/R). Across 11 live trades, average wins are only +0.56R against average losses of -1.20R — the structural shortfall is losses running past stop and winners being harvested early. A setup that does not offer a clear 2:1 structure at entry should be skipped even if all other criteria pass.
 - A typical good trade risks a few hundred dollars to make more than it risks (aim for wins ≥ 1.5R).
 - Flatten limits must be set near the current bid at the time of submission, never from a cached or
   stale price. A stale flatten limit will miss the market entirely and leave a position open into the
@@ -89,6 +90,20 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-17: No tuning. Tuner eligible ("ok to tune", 20 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day: the premarket phase did not
+  run, so no watchlist was screened, no day plan was written, and the tick loop had no context to
+  act on. This is the sixth documented premarket scheduling failure (previous: 2026-07-07,
+  2026-06-23, 2026-06-22, 2026-06-19, 2026-06-17). A missed premarket is a missed trading day —
+  the bot cannot trade safely without a plan, a loss-stop baseline, or a screened watchlist. NFLX
+  presented an excellent technical setup during the session (ORB breakout, 2.68x rel_vol, 1.4 bp
+  spread) but was correctly rejected because the 90-minute ORB window had already closed; the
+  existing time-of-day rule worked as designed. Account equity $999,747.04, $0 realized P&L,
+  ended flat. One durable rule added tonight: the R/R structural shortfall across 11 live trades is
+  clear — average wins +0.56R, average losses -1.20R — so a hard minimum 2:1 R/R check at entry
+  is now required before any trade is placed; rule added to Entries & exits. Over 20 days: 11
+  trades (0.55/day), 36.4% win rate, ORB -0.362R across 3 trades, momentum -0.975R across 1
+  trade. No parameter has ever been changed; tuning ledger remains empty.
 - 2026-07-13: No tuning. Tuner eligible ("ok to tune", 19 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day: RISK-OFF regime driven by
   US/Iran military escalation. The premarket plan correctly set a hard conditional — "if NFLX does

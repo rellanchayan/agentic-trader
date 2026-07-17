@@ -1,0 +1,43 @@
+{
+  "tick_time_et": "14:40:13",
+  "tick_hhmmss": "144013",
+  "date": "2026-07-17",
+  "timestamp_utc": "2026-07-17T18:40:13Z",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "decision_summary": "No trade. Three compounding reasons blocked all entries.",
+  "reasons": [
+    "NO_DAY_PLAN: docs/plan/2026-07-17.md does not exist. Playbook HALT rule: missing day plan = no new entries. Premarket phase did not complete its plan-writing step. Market regime, watchlist, and candidate rationale are unknown.",
+    "ORB_WINDOW_EXPIRED: ORB formed 09:30-09:45 ET. Playbook 90-minute entry rule means last valid ORB/momentum entry was 11:15 ET. Current time 14:40 ET is ~3h25m past that deadline. NFLX (orb_breakout=true, rel_volume 2.68x, spread 1.4 bp) is the strongest technical candidate but entering now would be chasing a 5-hour-old breakout at the tail of the trend.",
+    "NO_VWAP_RECLAIM_CONFIRMED: Cannot confirm a 'just reclaimed VWAP from below' setup without prior-tick state. The current snapshot shows above_vwap status but not the transition that would signal a fresh reclaim.",
+    "MEAN_REVERSION_BLOCKED: Mean reversion requires a range/quiet day assessment (playbook: 'Mean-reversion: range/risk-off days only'). Without a day plan, the regime is unknown and taking a mean-reversion bet is unwarranted speculation."
+  ],
+  "market_scan": {
+    "names_passing_spread_gate_25bp": ["AAPL (18.9bp)", "MSFT (5.3bp)", "AMZN (1.2bp)", "NFLX (1.4bp)", "TSLA (2.6bp)"],
+    "names_passing_rel_volume_1_2x": ["AMZN (1.23x)", "NFLX (2.68x)"],
+    "best_candidate_nflx": {
+      "last": 69.15,
+      "spread_bp": 1.4,
+      "rel_volume": 2.68,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_high": 67.08,
+      "rejection_reason": "90-min ORB window expired. Entry at 14:40 is ~3h25m past the 11:15 ET deadline."
+    },
+    "best_candidate_amzn": {
+      "last": 247.595,
+      "spread_bp": 1.2,
+      "rel_volume": 1.23,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rejection_reason": "Below VWAP, no ORB breakout, no clear directional setup."
+    }
+  },
+  "infrastructure_note": "docs/plan/2026-07-17.md was not written by premarket. This is the same premarket planning failure seen repeatedly (2026-06-17, 2026-06-19, 2026-06-22, 2026-06-23, 2026-07-07). The playbook HALT rule applies."
+}

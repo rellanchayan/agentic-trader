@@ -90,6 +90,15 @@ made of **rules to follow**, not stories.
   being scheduled and executing before the next trading session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-20: No tuning. Tuner eligible ("ok to tune", 21 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day: the premarket phase did not
+  run for the seventh time, producing ten consecutive zero-trade sessions since 2026-07-10. Account
+  equity $999,747.04, $0 realized P&L, ended flat. Over 21 days: 11 trades (0.524/day), 36.4% win
+  rate, avg win +0.559R, avg loss -1.197R; ORB -0.362R across 3 trades, momentum -0.975R across 1
+  trade. Ten straight zero-trade days with no premarket run provide no new signal about entry
+  quality, stop placement, or sizing — there is nothing for the tuner to act on. The recurring
+  premarket scheduling failure is the dominant operational problem; it cannot be fixed by adjusting
+  any tunable parameter. Tuning ledger remains empty; no parameter has ever been changed.
 - 2026-07-17: No tuning. Tuner eligible ("ok to tune", 20 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day: the premarket phase did not
   run, so no watchlist was screened, no day plan was written, and the tick loop had no context to

@@ -3,9 +3,24 @@
     "date": "2026-07-20",
     "generated_utc": "2026-07-20T13:29:16.585167+00:00",
     "source": "watchlist_build",
+    "screened_by": "day-screener",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Pre-market screen validated by day-screener. All 4 names kept; priority order is NVDA > INTC > NFLX > BAC. ORB levels fill in live after the open. ETFs (SPY/QQQ/IWM) considered but no premarket quote data available today — not added per honesty rule."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 202.80,
+    "atr_day": 7.28,
+    "avg_vol_10d": 4750827,
+    "premarket_price": 200.61,
+    "gap_pct": -0.0108,
+    "spread_bp": 550.3,
+    "support": 200.00,
+    "resistance": 202.80,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "PRIMARY. Gapped -1.1%; $200.00 is the key psychological support — a hold above it favors VWAP reclaim or ORB long, a break below it flips bias to short (not in our playbook, so stand aside if it loses $200). No near-term earnings. Tightest premarket spread of the four names (550 bp vs 1000+ bp for others); live-session spread expected to compress well below 25 bp. Full $10,000 size allowed."
   },
   "INTC": {
     "sector": "technology",
@@ -15,21 +30,11 @@
     "premarket_price": 97.58,
     "gap_pct": 0.0268,
     "spread_bp": 1004.3,
+    "support": 95.00,
+    "resistance": 99.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,635,945 sh/day); +2.7% gap"
-  },
-  "NVDA": {
-    "sector": "technology",
-    "prev_close": 202.8,
-    "atr_day": 7.28,
-    "avg_vol_10d": 4750827,
-    "premarket_price": 200.61,
-    "gap_pct": -0.0108,
-    "spread_bp": 550.3,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (4,750,827 sh/day); -1.1% gap"
+    "note": "SECONDARY. Best gap on the board today (+2.7%); large ATR ($9.18) creates genuine reward room. WARNING: earnings July 23 — only 3 days away; cap position at $5,000 maximum regardless of setup quality. History of intraday spread blowouts (July 9 lesson: spread hit 209 bp mid-session then stock broke ORB low); treat any live-session spread above 25 bp as a thesis-failure signal, not a timing issue to wait out. Only activate INTC if NVDA does not produce a clean ORB setup by 10:15 AM ET."
   },
   "NFLX": {
     "sector": "communication",
@@ -39,9 +44,11 @@
     "premarket_price": 68.23,
     "gap_pct": -0.0093,
     "spread_bp": 1006.8,
+    "support": 67.50,
+    "resistance": 69.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,118,462 sh/day); -0.9% gap"
+    "note": "CONDITIONAL. Post-earnings (reported July 16 after close); July 17 live-session data confirmed spread of 1.4 bp and 2.68x relative volume — post-earnings activity can be clean to trade. Small drift -0.9% premarket; ATR $2.81 limits per-share reward, so spread cost matters even more. Only trade if: ORB forms cleanly, relative volume is at least 1.2x at entry, and live-session spread is below 25 bp. Skip if tape shows communication sector broadly weak. Cap at $7,500."
   },
   "BAC": {
     "sector": "financials",
@@ -51,8 +58,10 @@
     "premarket_price": 61.36,
     "gap_pct": 0.0013,
     "spread_bp": 1023.5,
+    "support": 61.00,
+    "resistance": 62.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,486,150 sh/day); +0.1% gap"
+    "note": "LOWEST PRIORITY. Essentially flat premarket (+0.1%); no identifiable catalyst today. Already reported earnings July 14 (beat, but muted post-earnings reaction — news was priced in). Tiny ATR $1.23 severely limits reward per dollar of spread risk. VWAP reclaim setup only — no ORB breakout entries. Skip entirely if any other name on this list has a clean setup forming. If activated, cap at $7,500."
   }
 }

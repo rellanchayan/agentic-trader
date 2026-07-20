@@ -1,0 +1,35 @@
+{
+  "tick_time_et": "14:41",
+  "tick_time_utc": "2026-07-20T18:41:36Z",
+  "minutes_since_open": 311,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "market_scan": {
+    "AAPL": {"spread_bp": 2.5, "rel_volume": 1.24, "above_vwap": false, "verdict": "REJECT — below VWAP"},
+    "AMD":  {"spread_bp": 25.4, "rel_volume": 0.69, "above_vwap": true,  "verdict": "REJECT — spread exceeds 25bp max"},
+    "AMZN": {"spread_bp": 1.6,  "rel_volume": 1.05, "above_vwap": false, "verdict": "REJECT — volume below 1.2x"},
+    "AVGO": {"spread_bp": 16.0, "rel_volume": 0.86, "above_vwap": false, "verdict": "REJECT — volume below 1.2x, below VWAP"},
+    "CRM":  {"spread_bp": 1012.5, "rel_volume": 0.98, "above_vwap": true, "verdict": "REJECT — spread 1012bp"},
+    "GOOGL":{"spread_bp": 10.8, "rel_volume": 1.23, "above_vwap": false, "verdict": "REJECT — below VWAP"},
+    "META": {"spread_bp": 192.4, "rel_volume": 0.38, "above_vwap": true, "verdict": "REJECT — spread 192bp"},
+    "MSFT": {"spread_bp": 1.7,  "rel_volume": 0.97, "above_vwap": true,  "orb_breakout": true, "verdict": "REJECT — volume 0.97x below 1.2x minimum"},
+    "NFLX": {"spread_bp": 1.5,  "rel_volume": 1.27, "above_vwap": false, "verdict": "REJECT — below VWAP, no reclaim structure"},
+    "NVDA": {"spread_bp": 1.5,  "rel_volume": 0.78, "above_vwap": false, "verdict": "REJECT — volume below 1.2x, below VWAP"},
+    "ORCL": {"spread_bp": 184.5, "rel_volume": 0.80, "above_vwap": true, "verdict": "REJECT — spread 184bp"},
+    "TSLA": {"spread_bp": 3.8,  "rel_volume": 1.19, "above_vwap": false, "verdict": "REJECT — volume 1.19x barely below 1.2x, below VWAP"}
+  },
+  "reasons_no_trade": [
+    "HALT: docs/plan/2026-07-20.md missing — premarket phase did not complete (PLAYBOOK Infrastructure rule: missing plan = HALT)",
+    "ORB window closed at 11:15 AM ET; 310 minutes since open — all ORB and momentum setups are definitively stale per 90-min rule",
+    "No name passes spread + volume + above VWAP gates simultaneously",
+    "Only 49 minutes until no-new-entries time (15:30 ET); insufficient runway even if a setup had appeared"
+  ],
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "positions_open": 0,
+  "position_slots_remaining": 8,
+  "loss_budget_remaining": 3000.0
+}

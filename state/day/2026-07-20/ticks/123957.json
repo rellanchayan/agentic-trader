@@ -1,0 +1,115 @@
+{
+  "tick_time_et": "12:39",
+  "tick_time_utc": "2026-07-20T16:39:57Z",
+  "minutes_since_open": 189,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_orders": [],
+  "cancelled_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "analysis": {
+    "halt_reason": "Missing day plan (docs/plan/2026-07-20.md does not exist). Per PLAYBOOK Infrastructure rule: missing day plan = HALT condition, no new entries. This is the second consecutive tick under HALT. Previous tick at 09:41 also halted for the same reason.",
+    "orb_window_complete": true,
+    "orb_90min_window_expired": true,
+    "orb_90min_cutoff_et": "11:15",
+    "minutes_past_orb_cutoff": 84,
+    "clock_flags": {
+      "past_no_new_entries": false,
+      "in_flatten_window": false
+    },
+    "market_overview": "12 names in snapshot. ORB breakouts: AMZN, CRM, META, MSFT. Above VWAP: AMZN, AVGO, CRM, META, MSFT, NFLX, ORCL. Wide-spread rejects: AMD 293bp, CRM 718bp, META 401bp, AVGO 59bp, ORCL 218bp, GOOGL 88bp (all above 25bp max). Below VWAP: AAPL, AMD, GOOGL, NVDA, TSLA.",
+    "entry_candidates_screened": [
+      {
+        "ticker": "NFLX",
+        "spread_bp": 1.5,
+        "rel_volume": 1.63,
+        "above_vwap": true,
+        "orb_breakout": false,
+        "quote_age_sec": 0.3,
+        "setup_considered": "vwap_reclaim",
+        "status": "REJECTED_no_plan",
+        "detail": "Best name on screen (spread and vol both pass), above VWAP. VWAP reclaim setup possible but cannot enter without day plan establishing market mood, watchlist authorization, and risk context."
+      },
+      {
+        "ticker": "AMZN",
+        "spread_bp": 9.9,
+        "rel_volume": 1.15,
+        "above_vwap": true,
+        "orb_breakout": true,
+        "quote_age_sec": 0.3,
+        "setup_considered": "orb",
+        "status": "REJECTED_multiple",
+        "detail": "ORB breakout confirmed, above VWAP, spread 9.9bp (pass). Fails: (1) rel_vol 1.15 < 1.2 minimum, (2) 174 minutes since ORB formation, 90-min rule says no ORB/momentum entries after 11:15 AM ET, (3) no plan."
+      },
+      {
+        "ticker": "MSFT",
+        "spread_bp": 12.4,
+        "rel_volume": 1.16,
+        "above_vwap": true,
+        "orb_breakout": true,
+        "quote_age_sec": 0.9,
+        "setup_considered": "orb",
+        "status": "REJECTED_multiple",
+        "detail": "ORB breakout confirmed, above VWAP, spread 12.4bp (pass). Fails: (1) rel_vol 1.16 < 1.2 minimum, (2) 174 minutes since ORB formation, 90-min rule disqualifies, (3) no plan."
+      },
+      {
+        "ticker": "AAPL",
+        "spread_bp": 17.9,
+        "rel_volume": 1.43,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "status": "REJECTED_below_vwap_no_breakout"
+      },
+      {
+        "ticker": "TSLA",
+        "spread_bp": 18.1,
+        "rel_volume": 1.49,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "status": "REJECTED_below_vwap_no_breakout"
+      },
+      {
+        "ticker": "NVDA",
+        "spread_bp": 1.5,
+        "rel_volume": 1.0,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "status": "REJECTED_below_vwap_rel_vol_below_min"
+      },
+      {
+        "ticker": "AMD",
+        "spread_bp": 293.3,
+        "status": "REJECTED_spread_too_wide"
+      },
+      {
+        "ticker": "CRM",
+        "spread_bp": 717.9,
+        "status": "REJECTED_spread_too_wide"
+      },
+      {
+        "ticker": "META",
+        "spread_bp": 400.6,
+        "status": "REJECTED_spread_too_wide"
+      },
+      {
+        "ticker": "AVGO",
+        "spread_bp": 59.4,
+        "status": "REJECTED_spread_too_wide"
+      },
+      {
+        "ticker": "ORCL",
+        "spread_bp": 217.8,
+        "status": "REJECTED_spread_too_wide"
+      },
+      {
+        "ticker": "GOOGL",
+        "spread_bp": 88.2,
+        "status": "REJECTED_spread_too_wide"
+      }
+    ],
+    "decision_rationale": "Primary halt: no day plan (docs/plan/2026-07-20.md missing). Secondary: 90-minute ORB window expired at 11:15 AM ET; all ORB and momentum continuation entries are disqualified at 12:39 PM (174 min past ORB). Only NFLX passes spread (1.5bp) and volume (1.63x) gates but cannot be entered without a plan establishing market mood, watchlist authorization, and risk context. All other names fail one or more hard gates. Protecting capital by staying flat."
+  }
+}

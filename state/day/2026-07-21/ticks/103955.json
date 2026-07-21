@@ -1,0 +1,78 @@
+{
+  "tick_time_et": "2026-07-21T10:39:55-04:00",
+  "tick_hhmmss": "103955",
+  "minutes_since_open": 69,
+  "decision": "NO_TRADE",
+  "positions_managed": [],
+  "new_orders": [],
+  "account_snapshot": {
+    "equity": 999747.04,
+    "cash": 999747.04,
+    "buying_power": 3998988.16,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_review": {
+    "INTC": {
+      "last": 103.02,
+      "vwap": 102.79,
+      "orb_high": 104.16,
+      "orb_low": 102.3,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "spread_bp": 4.9,
+      "rel_volume": 1.42,
+      "atr_1m": 0.238,
+      "marketable_buy_limit": 103.18,
+      "assessment": "NO ENTRY. Price $103.02 within ORB range; orb_breakout=false. Breakout trigger $104.16 is $1.14 (4.8 ATRs) above current price. Considered VWAP reclaim (above_vwap=true, spread OK, rel_vol OK): entry $103.18, stop $102.55 (below VWAP with cloud-mode buffer), risk/share $0.63, target at ORB high $104.16 gives reward $0.98, R/R 1.56:1 — FAILS mandatory 2:1 minimum. A tighter stop would statistically pass 2:1 but violates cloud-mode widening rule. ORB window closes 11:00 AM ET."
+    },
+    "NVDA": {
+      "last": 205.42,
+      "vwap": 206.16,
+      "orb_high": 208.61,
+      "orb_low": 206.275,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "spread_bp": 1.5,
+      "rel_volume": 1.25,
+      "atr_1m": 0.294,
+      "marketable_buy_limit": 205.66,
+      "assessment": "HARD SKIP. Price $205.42 is below VWAP $206.16 AND below ORB low $206.275. Fading gap — day plan explicitly says skip. No long setup possible."
+    },
+    "NFLX": {
+      "last": 67.69,
+      "vwap": 67.69,
+      "orb_high": 67.76,
+      "orb_low": 67.16,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "spread_bp": 1.5,
+      "rel_volume": 1.45,
+      "atr_1m": 0.08,
+      "marketable_buy_limit": 67.72,
+      "assessment": "SKIP. Price at VWAP, above_vwap=false. No catalyst. VWAP reclaim setup: entry $67.72, stop $67.52 (1.5x ATR below), target $67.96 gives R/R ~1.2:1 — fails 2:1. Lowest priority per day plan."
+    }
+  },
+  "reasoning": {
+    "setup_checks": {
+      "INTC_ORB": "BLOCKED — orb_breakout=false; price $1.14 below trigger; cannot anticipate breakout with current-tick marketable limit",
+      "INTC_VWAP_reclaim": "BLOCKED — R/R 1.56:1 fails mandatory 2:1 minimum (stop widened for cloud-mode cadence)",
+      "NVDA_ORB": "BLOCKED — price below VWAP and below ORB low; fading gap; day plan hard skip",
+      "NFLX_VWAP_reclaim": "BLOCKED — above_vwap=false; R/R ~1.2:1 fails 2:1; no catalyst; lowest priority"
+    },
+    "governing_rules": [
+      "Minimum 2:1 R/R required before any entry",
+      "Cloud-mode: use wider stops, do not assume ability to react between ticks",
+      "Do not buy fading gaps (NVDA — day plan explicit rule)",
+      "ORB breakout requires orb_breakout=true or confirmed price above ORB high",
+      "When unsure, do nothing — missed trade costs nothing, forced trade costs money"
+    ],
+    "watch_next_tick": "INTC ORB window closes 11:00 AM ET. If price clears $104.16 with volume before 11:00 AM, that is a valid ORB breakout entry. After 11:00 AM, INTC ORB/momentum setup is disarmed for the day. NVDA needs to reclaim VWAP $206.16 before any long thesis applies."
+  }
+}

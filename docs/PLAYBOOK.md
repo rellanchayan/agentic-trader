@@ -88,8 +88,28 @@ made of **rules to follow**, not stories.
   them. Two consecutive sessions with no intraday log (2026-06-26 and 2026-06-29) despite non-trivial
   premarket setups is a strong signal the loop is not running. Verify the tick loop is actually
   being scheduled and executing before the next trading session.
+- The premarket phase and the tick loop are independently scheduled. A day_plan.md being present at
+  9:30 AM ET does not confirm that the tick loop will run. On 2026-07-21 a full premarket plan was
+  written yet the tick loop produced zero intraday log entries for the second consecutive session
+  (2026-07-20 also silent). A valid setup in INTC was available during the session and was entirely
+  missed — not rejected by any gate, simply unseen. Treat two consecutive sessions of zero intraday
+  log entries as a tick-loop scheduling failure requiring investigation, regardless of whether a plan
+  exists. The fix is in the scheduler, not in any tunable parameter.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-21: No tuning. Tuner eligible ("ok to tune", 22 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day for the second consecutive
+  session (2026-07-20 also zero). The key distinction from prior silent days: a premarket plan was
+  written today, yet the tick loop still produced no intraday log entries. This confirms that the
+  premarket phase and the tick loop are independently scheduled — a plan being present is not
+  sufficient to guarantee loop execution. INTC presented a valid setup during the session and was
+  entirely missed, not because any gate rejected it, but because the loop never saw it. This is a
+  reliability failure, not a trading-parameter problem; no tuner setting can address it. A new
+  infrastructure rule has been added documenting this failure mode and making two consecutive silent
+  sessions a trigger for scheduler investigation. Account equity $999,747.04, $0 realized P&L,
+  ended flat. Over 22 days: 11 trades (0.5/day), 36.4% win rate, avg win +0.559R, avg loss -1.197R;
+  ORB -0.362R across 3 trades, momentum -0.975R across 1 trade. Tuning ledger remains absent; no
+  parameter has ever been changed.
 - 2026-07-20: No tuning. Tuner eligible ("ok to tune", 21 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day: the premarket phase did not
   run for the seventh time, producing ten consecutive zero-trade sessions since 2026-07-10. Account

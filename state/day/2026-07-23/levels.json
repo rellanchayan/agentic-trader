@@ -2,36 +2,16 @@
   "_meta": {
     "date": "2026-07-23",
     "generated_utc": "2026-07-23T13:30:02.390100+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-07-23T13:35:09.947531+00:00",
+    "source": "watchlist_build → day_screener",
     "candidates_considered": 4,
-    "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 61.65,
-    "atr_day": 1.22,
-    "avg_vol_10d": 2599739,
-    "premarket_price": 60.05,
-    "gap_pct": -0.026,
-    "spread_bp": 651.2,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,599,739 sh/day); -2.6% gap"
-  },
-  "NVDA": {
-    "sector": "technology",
-    "prev_close": 212.07,
-    "atr_day": 7.4,
-    "avg_vol_10d": 4514772,
-    "premarket_price": 210.0,
-    "gap_pct": -0.0098,
-    "spread_bp": 333.3,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (4,514,772 sh/day); -1.0% gap"
+    "final_watchlist_count": 3,
+    "skipped": ["BAC — tiny ATR ($1.22) makes 2:1 R/R structurally unworkable; widest premarket spread (651.2 bp); no identifiable catalyst for the -2.6% gap; kept in file for reference with status=skip"],
+    "critical_flag": "INTC EARNINGS TONIGHT — Q2 2026 results after the close on 2026-07-23. All INTC positions must be flat by 3:55 PM ET. No exceptions.",
+    "note": "Pre-market screen finalized by day-screener. Priority order: INTC (primary), NVDA (secondary), NFLX (tertiary). BAC retained in file but marked skip. ORB levels fill in live after the first 15 minutes of trading — orb_high and orb_low are null until then."
   },
   "INTC": {
+    "status": "primary",
     "sector": "technology",
     "prev_close": 102.61,
     "atr_day": 7.99,
@@ -39,11 +19,31 @@
     "premarket_price": 103.32,
     "gap_pct": 0.007,
     "spread_bp": 549.7,
+    "support": 100.00,
+    "resistance": 105.40,
+    "resistance_2": 110.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,543,254 sh/day); +0.7% gap"
+    "note": "EARNINGS TONIGHT (Q2 2026, after close 2026-07-23) — must be flat by 3:55 PM, zero exceptions. Gap +0.7% to $103.32; small pre-earnings positioning bounce after yesterday closed at $102.61 (yesterday the stock gapped -3% from $105.40 to $102.19 premarket and recovered slightly). Support at $100.00 (round number and psychological level); resistance at $105.40 (the July 22 reference close, gap-fill target) and $110.00 (intermediate zone from July 21 spike high). Premarket spread 549.7 bp will compress at the open — verify live spread < 25 bp before any entry (per July 9 lesson: wide live spread on a high-gap name is a reversal signal, not a wait-it-out timing problem). Elevated intraday volatility expected on earnings day: larger swings, faster reversals, potential pre-earnings run-up or fade. Cap position size at $7,500 (below standard $10,000) given pre-earnings uncertainty. ORB breakout above orb_high (filled live) or VWAP reclaim are both armed. 2:1 R/R required at entry. Entry window 9:45 AM to 11:00 AM ET only."
+  },
+  "NVDA": {
+    "status": "secondary",
+    "sector": "technology",
+    "prev_close": 212.07,
+    "atr_day": 7.40,
+    "avg_vol_10d": 4514772,
+    "premarket_price": 210.00,
+    "gap_pct": -0.0098,
+    "spread_bp": 333.3,
+    "support": 207.50,
+    "resistance": 212.07,
+    "resistance_2": 218.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Gap -1.0% to $210.00 with no specific NVDA catalyst; following general market softness. Most liquid name on the list (4.5M shares/day avg). No earnings risk this week. Premarket spread 333.3 bp will compress sharply at the open — NVDA regularly trades sub-5 bp in regular session. Support at $207.50 (July 22 close area; also near the July 10 session trade entry at $207.22); resistance at $212.07 (prev close, gap-fill target) and $218.00 (last week's premarket spike high from July 21). VWAP reclaim is the preferred setup in a cautious market; avoid entering an ORB breakout if the broader Nasdaq tape is still declining at the time of entry. If INTC produces a clean setup before mid-morning, commit fully to INTC and stop re-evaluating NVDA (per playbook primary/secondary rule). Entry window 9:45 AM to 11:00 AM ET."
   },
   "NFLX": {
+    "status": "tertiary",
     "sector": "communication",
     "prev_close": 68.53,
     "atr_day": 2.71,
@@ -51,8 +51,26 @@
     "premarket_price": 68.31,
     "gap_pct": -0.0032,
     "spread_bp": 19.0,
+    "support": 67.00,
+    "resistance": 70.00,
+    "resistance_2": 71.22,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,558,882 sh/day); -0.3% gap"
+    "note": "Best premarket spread on the list at 19.0 bp — session-quality liquidity already premarket; no spread concern. Gap -0.3%, essentially flat, no fresh catalyst. Post-earnings digestion: NFLX dropped 8-9% after the July 16 Q2 report (weak Q3 guidance) and has been consolidating in the $67-70 range since. Support at $67.00 (post-earnings base); resistance at $70.00 (round number ceiling) and $71.22 (yesterday's premarket spike that reversed fully). Small ATR ($2.71 on a ~$68 stock) means the 2:1 R/R structure is tight — calculate stop and target explicitly before entry and skip if the math does not clear 2:1. VWAP reclaim only; no ORB breakout thesis without a catalyst. TERTIARY: only consider if both INTC and NVDA have been evaluated and produced no clean setup. Do not reach for NFLX."
+  },
+  "BAC": {
+    "status": "skip",
+    "sector": "financials",
+    "prev_close": 61.65,
+    "atr_day": 1.22,
+    "avg_vol_10d": 2599739,
+    "premarket_price": 60.05,
+    "gap_pct": -0.026,
+    "spread_bp": 651.2,
+    "support": 60.00,
+    "resistance": 61.65,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SKIP TODAY. Three problems: (1) Smallest ATR on the list at $1.22 — at $10,000 max size, a stop at the ORB low would require ~82+ shares and the target distance to achieve 2:1 R/R often exceeds a realistic intraday range; the math is structurally difficult. (2) Widest premarket spread at 651.2 bp — while this will compress in regular session, it signals thinner premarket participation than NVDA (333 bp) or INTC (549 bp). (3) The -2.6% gap is significant for a stock with a $1.22 ATR but has no identifiable catalyst; BAC's last major event was the Q2 earnings beat on July 14 (nine days ago). The gap may reflect sector-wide financial selling. Regular-session spread would be ~5 bp — the spread is not a disqualifier by itself, but combined with ATR and the no-catalyst gap, this name offers the worst setup quality of the four. Only revisit if all three primary names produce zero qualifying setups AND live spread confirms tight."
   }
 }

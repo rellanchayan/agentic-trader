@@ -95,8 +95,29 @@ made of **rules to follow**, not stories.
   missed — not rejected by any gate, simply unseen. Treat two consecutive sessions of zero intraday
   log entries as a tick-loop scheduling failure requiring investigation, regardless of whether a plan
   exists. The fix is in the scheduler, not in any tunable parameter.
+- A single intraday log entry arriving after all entry windows have closed is the same scheduling
+  failure as zero entries. It confirms only that the loop booted once, not that it ran at the
+  required 2-minute cadence during the trading window. On 2026-07-23, one tick at 2:41 PM was the
+  entire intraday record — every entry window had expired hours earlier. Any session where all
+  intraday log entries post-date the last valid entry window must be treated as a scheduling failure.
+  The tick scheduler must be confirmed live and cadence-correct before market open, independently of
+  the premarket scheduler.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-23: No tuning. Tuner eligible ("ok to tune", 23 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. This was the fifth consecutive zero-trade session (July 13,
+  17, 20, 21, 23); the last trades placed were July 10. The failure mode today was distinct from July
+  21 (zero ticks): the tick loop ran exactly once, at 2:41 PM ET — more than five hours after the
+  open and outside every entry window in the plan — but the practical consequence is the same: the
+  session went unevaluated during the only window that mattered (NFLX VWAP reclaim, 9:45–11:00 AM).
+  The premarket phase ran correctly: the plan was written at 9:29 AM (RISK-OFF, NFLX primary, INTC
+  fully disarmed for evening earnings), and the INTC disarm was vindicated — the stock was $1.70
+  below VWAP and below its ORB low by the time the lone tick arrived. A new infrastructure rule has
+  been added: a single late-afternoon log entry is not evidence of a running tick loop; any session
+  where all log entries post-date the last valid entry window is a scheduling failure requiring
+  investigation. Account equity $999,747.04, $0 realized P&L, ended flat. Over 23 days: 11 trades
+  (0.48/day), 36.4% win rate, avg win +0.559R, avg loss -1.197R; ORB -0.362R across 3 trades,
+  momentum -0.975R across 1 trade. No parameter has ever been changed; tuning ledger remains empty.
 - 2026-07-21: No tuning. Tuner eligible ("ok to tune", 22 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day for the second consecutive
   session (2026-07-20 also zero). The key distinction from prior silent days: a premarket plan was

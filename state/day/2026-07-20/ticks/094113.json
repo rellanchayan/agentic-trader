@@ -1,0 +1,31 @@
+{
+  "tick_time_et": "09:41",
+  "tick_time_utc": "2026-07-20T13:41:13Z",
+  "minutes_since_open": 11,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_orders": [],
+  "cancelled_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "analysis": {
+    "halt_reason": "Missing day plan (docs/plan/2026-07-20.md does not exist). Per PLAYBOOK Infrastructure rule: missing day plan at open = HALT condition. Premarket phase did not complete.",
+    "orb_window_complete": false,
+    "minutes_to_orb": 4,
+    "market_overview": "9 names on watchlist. Many spreads too wide: AMD 595bp, AVGO 83bp, CRM 838bp, META 500bp. Clean-spread names: NVDA 2.4bp, AAPL 2.7bp, NFLX 3.0bp, AMZN 5.2bp, MSFT 10.7bp. GOOGL at 25.5bp is marginally above 25bp max. Above-VWAP names: AMZN, AVGO, GOOGL, MSFT, NVDA, ORCL. No ORB breakouts confirmed. NVDA near ORB high (207.56 vs 207.71), AMZN near ORB high (249.875 vs 250.07) — but ORB window not yet complete and no breakout signal.",
+    "entry_candidates_screened": [
+      {"ticker": "NVDA", "spread_bp": 2.4, "rel_volume": 3.3, "above_vwap": true, "orb_breakout": false, "status": "PASS_SCREEN_but_ORB_incomplete_and_no_plan"},
+      {"ticker": "MSFT", "spread_bp": 10.7, "rel_volume": 3.29, "above_vwap": true, "orb_breakout": false, "status": "PASS_SCREEN_but_ORB_incomplete_and_no_plan"},
+      {"ticker": "AMZN", "spread_bp": 5.2, "rel_volume": 2.48, "above_vwap": true, "orb_breakout": false, "status": "PASS_SCREEN_but_ORB_incomplete_and_no_plan"},
+      {"ticker": "AMD", "spread_bp": 595.3, "status": "REJECTED_spread_too_wide"},
+      {"ticker": "CRM", "spread_bp": 837.7, "status": "REJECTED_spread_too_wide"},
+      {"ticker": "META", "spread_bp": 500.4, "status": "REJECTED_spread_too_wide"},
+      {"ticker": "AVGO", "spread_bp": 83.0, "status": "REJECTED_spread_too_wide"},
+      {"ticker": "GOOGL", "spread_bp": 25.5, "status": "REJECTED_spread_marginally_above_25bp_max"},
+      {"ticker": "ORCL", "rel_volume": 0.89, "status": "REJECTED_volume_below_1.2x_min"}
+    ],
+    "decision_rationale": "Primary halt: no day plan. Secondary: ORB window not yet complete (11 min in, need 15). Even if plan existed and ORB formed, no breakout signal exists yet. Watchlist shows interesting setups forming (NVDA, MSFT, AMZN all above VWAP with good volume and tight spreads) that could be actionable once ORB window completes at ~9:45 ET — but only if the plan question is resolved."
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "date": "2026-07-24",
+    "generated_utc": "2026-07-24T13:30:10.365948+00:00",
+    "screened_utc": "2026-07-24T13:32:09.231445+00:00",
+    "source": "watchlist_build → day_screener",
+    "candidates_considered": 4,
+    "final_watchlist_count": 3,
+    "skipped": [
+      "BAC — ATR $1.22 structurally too small for 2:1 R/R at any reasonable stop width; no identified catalyst; third consecutive skip. Current file shows -2.35% gap ($59.86) vs. task briefing +0.4% ($61.55) — same data quality concern as INTC, but does not change the skip decision."
+    ],
+    "data_quality_flag": "INTC and BAC show significant price discrepancies between the initial task briefing and the current file (regenerated at 13:30:10 UTC = 9:30:10 AM ET, market open). Task briefing: INTC $105.32 (+5.3% gap, spread 497bp), BAC $61.55 (+0.4%). Current file: INTC $100.09 (+0.04% gap, spread 7.0bp), BAC $59.86 (-2.35%). NFLX was identical ($68.91) in both reads; NVDA moved only slightly. Most likely cause: the script re-run at market open pulled a stale closing print for INTC and BAC while capturing live spreads. A $5.23 gap fill in under 40 seconds of trading is implausible. Tick agent must verify INTC live price independently at 9:35 AM ET before establishing any thesis. If INTC is live near $105, the earnings gap is real and INTC upgrades to primary.",
+    "note": "Friday 2026-07-24. INTC reported Q2 2026 earnings after close 2026-07-23 — earnings gap direction is unconfirmed due to data quality issue (see data_quality_flag). Priority order as filed: NVDA (primary, most liquid, clear levels), INTC (secondary, post-earnings direction TBD), NFLX (tertiary, flat, tight spread, small ATR). BAC skip. All spreads will normalize fully in the first minute of regular session — verify live spread < 25bp before any entry. Avoid new positions after 2:00 PM ET on a Friday without a fresh catalyst."
+  },
+  "NVDA": {
+    "status": "primary",
+    "armed": true,
+    "sector": "technology",
+    "prev_close": 208.76,
+    "atr_day": 7.28,
+    "avg_vol_10d": 4457023,
+    "premarket_price": 207.56,
+    "gap_pct": -0.0057,
+    "spread_bp": 41.0,
+    "support": 206.00,
+    "support_2": 203.00,
+    "resistance": 208.76,
+    "resistance_2": 212.07,
+    "orb_high": null,
+    "orb_low": null,
+    "key_levels": {
+      "203.00": "round-number floor; below here signals broader tech weakness",
+      "206.00": "primary intraday support; area of prior session lows",
+      "207.50": "secondary support from July 22-23 cluster (per prior screener)",
+      "207.56": "today's file premarket reference",
+      "208.76": "prev close — gap-fill target and first resistance",
+      "212.07": "7/22 session close — upper resistance if gap fills and holds",
+      "218.00": "7/21 premarket spike high — extended target on strong day"
+    },
+    "note": "PRIMARY. No catalyst; -0.6% gap is noise on the most liquid name on the list (4.46M avg vol/day). NVDA fell from $212.07 (7/22 close) to $208.76 (7/23 close) — recent trend is soft. Preferred setup: VWAP reclaim — wait for price to hold above $206 support and reclaim VWAP before entering long. ORB breakout above $208.76 (gap fill) with volume expansion is the alternative entry. Do not enter short side without clear tape breakdown below $206. Spread of 41bp will compress to sub-5bp as session volume arrives — verify live spread < 10bp before entry. 2:1 R/R required; calculate stop and target from the ORB before submitting. Max size $10,000. Entry window 9:45–11:00 AM ET."
+  },
+  "INTC": {
+    "status": "secondary",
+    "armed": true,
+    "sector": "technology",
+    "prev_close": 100.05,
+    "atr_day": 7.40,
+    "avg_vol_10d": 3653418,
+    "premarket_price": 100.09,
+    "gap_pct": 0.0004,
+    "spread_bp": 7.0,
+    "support": 100.00,
+    "support_2": 98.00,
+    "resistance": 102.61,
+    "resistance_2": 105.40,
+    "orb_high": null,
+    "orb_low": null,
+    "key_levels": {
+      "98.00": "round-number secondary support; gap-fill target if earnings disappointed",
+      "100.00": "major psychological floor — near prev close; do not let a long position through this level",
+      "100.05": "7/23 session close (prev_close)",
+      "100.09": "current file premarket price (data quality suspect — VERIFY LIVE)",
+      "102.61": "7/22 session close — first resistance above current level",
+      "103.32": "7/23 premarket reference — secondary resistance zone",
+      "105.32": "task briefing premarket price (unconfirmed in current file — VERIFY LIVE)",
+      "105.40": "7/21 reference close — key resistance; ORB breakout trigger if price reaches here",
+      "108.00": "intermediate round-number target above $105.40",
+      "110.00": "7/21 spike high — major resistance and primary target on strong gap-and-go"
+    },
+    "note": "SECONDARY. DATA QUALITY FLAG: task briefing showed INTC gapping +5.3% to $105.32 (spread 497bp) on Q2 2026 earnings released after 7/23 close; current file shows INTC at $100.09 (+0.04%, spread 7.0bp). Tick agent must check the live INTC price at 9:35 AM ET before acting. SCENARIO A (live price near $105): earnings gap is real; upgrade INTC to primary. ORB breakout above $105.40 is the entry trigger. Target $108 then $110. Verify live spread < 25bp before submitting — playbook rule: if live spread widens above 25bp mid-session on a high-gap name, treat as reversal signal not timing issue (2026-07-09 INTC lesson). Cap size at $7,500 given post-earnings volatility. SCENARIO B (live price near $100): flat-after-earnings; direction undetermined. Do not trade in the first 15 minutes. Wait for ORB to form; a confirmed break above $102.61 with volume is the long setup. ATR $7.40, avg vol 3.65M — liquid. Entry window 9:45–11:00 AM ET in either scenario."
+  },
+  "NFLX": {
+    "status": "tertiary",
+    "armed": true,
+    "sector": "communication",
+    "prev_close": 68.86,
+    "atr_day": 2.52,
+    "avg_vol_10d": 3634791,
+    "premarket_price": 68.91,
+    "gap_pct": 0.0007,
+    "spread_bp": 20.3,
+    "support": 67.00,
+    "resistance": 70.00,
+    "resistance_2": 71.22,
+    "orb_high": null,
+    "orb_low": null,
+    "key_levels": {
+      "67.00": "post-Q2 earnings support base — two-week floor after weak guidance",
+      "68.00": "intraday round-number support",
+      "68.86": "prev close (7/23)",
+      "68.91": "today's premarket (consistent across both file reads — most reliable quote on the list)",
+      "70.00": "round-number ceiling; tested and rejected multiple times this week",
+      "71.22": "prior premarket spike high (7/22) — upper resistance if $70 breaks"
+    },
+    "note": "TERTIARY. No catalyst; +0.1% gap is noise. Spread of 20.3bp is session-quality and was consistent across both file reads — this is the most reliable premarket quote on the list. Post-Q2 earnings consolidation in $67–$70 range for two weeks. ATR $2.52 on ~$69 stock makes 2:1 R/R tight: stop at ORB low, target at 2x requires roughly $1.26 stop / $2.52 target — calculate explicitly before entry and skip if math does not clear 2:1 cleanly. VWAP reclaim only; no ORB breakout thesis without a fresh catalyst. Only consider if both NVDA and INTC have been assessed and produced no qualifying setup. Do not reach for NFLX."
+  },
+  "BAC": {
+    "status": "skip",
+    "armed": false,
+    "sector": "financials",
+    "prev_close": 61.30,
+    "atr_day": 1.22,
+    "avg_vol_10d": 2684072,
+    "premarket_price": 59.86,
+    "gap_pct": -0.0235,
+    "spread_bp": 544.6,
+    "support": 59.00,
+    "resistance": 61.30,
+    "orb_high": null,
+    "orb_low": null,
+    "key_levels": {
+      "59.00": "round-number floor near current premarket",
+      "60.00": "psychological level",
+      "61.30": "prev close — gap-fill resistance",
+      "62.00": "round-number resistance above gap fill"
+    },
+    "note": "SKIP. ATR $1.22 is structurally too small for 2:1 R/R at any reasonable stop width — consistent across three sessions. Current file shows -2.35% gap ($59.86), which conflicts with the task briefing (+0.4%, $61.55); same data quality concern as INTC but does not change the skip decision (ATR is the disqualifier regardless of gap direction). Volume 2.68M avg/day is the least liquid on the list. No identified catalyst. Only revisit if NVDA, INTC, and NFLX all produce zero qualifying setups AND a specific catalyst is confirmed AND live spread is below 15bp."
+  }
+}

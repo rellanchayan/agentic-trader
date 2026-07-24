@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "date": "2026-07-22",
+    "generated_utc": "2026-07-22T13:30:08.432622+00:00",
+    "source": "watchlist_build",
+    "screened_by": "day-screener",
+    "screened_utc": "2026-07-22T13:35:00.000000+00:00",
+    "candidates_considered": 4,
+    "top": 3,
+    "note": "Day-screener pass: BAC dropped (no catalyst, flat gap -0.34%, ATR $1.29 too small for 2:1 R/R at $10k max, lowest volume at 2.5M/day). QQQ and SPY are natural additions given GOOGL earnings today after close and semiconductor sector momentum, but no live quote data was available from watchlist_build for today — do not add without real data. Final list: 3 names. ORB levels fill in live after the open."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 105.40,
+    "atr_day": 8.53,
+    "avg_vol_10d": 3616781,
+    "premarket_price": 102.19,
+    "gap_pct": -0.0305,
+    "spread_bp": 8.8,
+    "support": 100.00,
+    "resistance": 105.40,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "PRIMARY. Pre-earnings Wednesday; Q2 earnings Thursday July 23 after close. Fading yesterday's +15% Apple foundry gap (prev close $97.07 pre-news, closed $105.40 post-news). Down 3% in premarket to $102.19. Support: $100.00 (round-number floor, must hold) and $97.00 (pre-catalyst close from July 20 — major structural floor). Resistance: $105.40 (yesterday's close, key pivot) and $108.00 (upper area of yesterday's intraday range). Spread 8.8 bp premarket is excellent; verify live spread <25 bp before any entry. Setup: ORB breakout above $105.40 with volume targets $108+; if $100 breaks cleanly, thesis fails — do not buy. Minimum 2:1 R/R required. No overnight hold — flat before EOD, zero exposure to tomorrow's earnings open."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 207.24,
+    "atr_day": 7.19,
+    "avg_vol_10d": 4478945,
+    "premarket_price": 206.82,
+    "gap_pct": -0.002,
+    "spread_bp": 113.6,
+    "support": 203.00,
+    "resistance": 207.24,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SECONDARY. Most liquid name on list (4.5M shares/day, ATR $7.19). Flat open (-0.2%) after yesterday's semiconductor sector rally. GOOGL Q2 earnings after close today create a potential tech-sector tailwind; monitor whether the broad Nasdaq holds positive as the session progresses. Spread 113.6 bp premarket will tighten to <15 bp at open for a liquid name like NVDA. Support: $203.00 (recent consolidation zone) and $200.00 (round-number floor). Resistance: $207.24 (yesterday's close, initial pivot) and $210.00 (round-number ceiling). Setup: ORB breakout above $207-208 with volume targets $210+. Sector check required before entry: QQQ must be positive. If QQQ is flat or down, skip NVDA for that tick."
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 68.62,
+    "atr_day": 2.76,
+    "avg_vol_10d": 3513490,
+    "premarket_price": 71.22,
+    "gap_pct": 0.0378,
+    "spread_bp": 450.7,
+    "support": 68.62,
+    "resistance": 72.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "TERTIARY. Gapped +3.78% (~$2.60) to $71.22 premarket; catalyst unclear (possibly GOOGL earnings anticipation or sector rotation into communication/streaming names). CAUTION 1: premarket spread 450.7 bp is prohibitive — NFLX is a liquid large-cap and spread will tighten at open, but must verify live spread <25 bp before any consideration. If spread stays wide at open, skip for the session. CAUTION 2: the gap is nearly equal to the full daily ATR ($2.76), so intraday range is likely compressed — limited upside after the open. Context: NFLX posted Q2 earnings July 16 (slight EPS beat, revenue miss), shares fell ~8.6%; the $67.97 post-earnings low is the key structural floor. Yesterday's close $68.62 becomes support if gap holds. Support: $68.62 (yesterday's close) and $67.97 (post-earnings low). Resistance: $72.00 (round number) and $73.50 (pre-earnings range). Setup: if gap holds and spread is tight, VWAP reclaim from the open offers a mean-reversion entry. If gap fades back below $69.50 in the first 15 minutes, treat as gap-fill risk and stand aside."
+  }
+}

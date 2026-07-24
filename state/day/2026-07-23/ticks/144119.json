@@ -1,0 +1,28 @@
+{
+  "tick_time_et": "14:41",
+  "tick_time_utc": "2026-07-23T18:41:19Z",
+  "tick_hhmmss": "144119",
+  "minutes_since_open": 311,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used_today": 0,
+  "position_slots_used": 0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "BAC":  {"last": 61.33,  "vwap": 61.03,  "above_vwap": true,  "orb_breakout": false, "rel_volume": 0.91, "spread_bp": 1.6},
+    "INTC": {"last": 99.795, "vwap": 101.49, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.93, "spread_bp": 3.0},
+    "NFLX": {"last": 69.015, "vwap": 68.68,  "above_vwap": true,  "orb_breakout": true,  "rel_volume": 0.70, "spread_bp": 1.4},
+    "NVDA": {"last": 208.19, "vwap": 208.59, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.96, "spread_bp": 1.4}
+  },
+  "reasoning": {
+    "positions": "No open positions to manage.",
+    "new_entries": "No trade this tick. Key reasons: (1) NFLX stand-down triggered — plan required VWAP reclaim by 11:00 AM ET; it is now 2:41 PM with no clean reclaim observed in the window. NFLX's ORB breakout at 2:41 PM is irrelevant — the 90-minute ORB window closed at ~11:00 AM and the plan explicitly says stand down. (2) All four names fail the 1.2x minimum relative volume threshold: BAC 0.91, INTC 0.93, NFLX 0.70, NVDA 0.96. (3) INTC fully disarmed for the session due to Q2 earnings tonight — price is additionally below ORB low, confirming breakdown. (4) NVDA below VWAP with no reclaim setup forming; rel_volume 0.96 fails the gate. (5) BAC: plan calls it last resort only if macro turned positive, which it has not on a RISK-OFF day; rel_volume 0.91 also fails. (6) RISK-OFF regime: plan disarms ORB and momentum setups explicitly. No setup meets all required criteria.",
+    "open_orders": "No open orders to cancel."
+  }
+}

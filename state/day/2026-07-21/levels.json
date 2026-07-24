@@ -1,0 +1,57 @@
+{
+  "_meta": {
+    "date": "2026-07-21",
+    "generated_utc": "2026-07-21T13:32:49.687056+00:00",
+    "screened_utc": "2026-07-21T13:35:00+00:00",
+    "source": "day_screener",
+    "candidates_considered": 4,
+    "top": 3,
+    "dropped": ["BAC"],
+    "drop_reasons": {
+      "BAC": "ATR $1.21 too small for meaningful R/R on a $60 stock; no catalyst; flat open; plan flagged as lowest priority — do not force"
+    },
+    "note": "Refreshed at open (13:32 UTC). Pre-market noisy quotes replaced by live-session prices and spreads. ORB levels fill in live after the first 15 minutes. Spreads at this snapshot are from the first 2 minutes of trading and may still be wider than mid-session."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 207.34,
+    "atr_day": 7.19,
+    "avg_vol_10d": 4187578,
+    "premarket_price": 206.84,
+    "gap_pct": -0.0024,
+    "spread_bp": 5.8,
+    "support": 200.00,
+    "resistance": 210.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "PRIMARY. Spread 5.8 bp — excellent. Most liquid name (4.19M avg). Flat open; no single catalyst today — trade the ORB direction. Support at $200 (round, ~1 ATR below). Resistance at $210 (round). Spread gate: already clear at <25 bp. Wait for 15-min ORB to form (9:30-9:45 AM), enter above ORB high on volume confirmation. Verify QQQ tape is still positive before entry."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 103.11,
+    "atr_day": 8.39,
+    "avg_vol_10d": 3307468,
+    "premarket_price": 101.12,
+    "gap_pct": -0.0193,
+    "spread_bp": 321.4,
+    "support": 99.00,
+    "resistance": 105.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "CONDITIONAL — spread gate required. Spread 321.4 bp at open is 13x the 25 bp threshold; DO NOT enter until live spread compresses to <25 bp. Plan documents Apple foundry catalyst (Intel 18A process); ATR $8.39 and vol 3.31M are solid. Opened below prev close ($103.11) at $101.12 — negative early. Support at $99 (round). Resistance at $105 (near prev close). If spread stays wide all session, treat as thesis failure per July-9 playbook rule and skip entirely. History of spread blowout (July 9 lesson). Secondary to NVDA: only take INTC setup if NVDA produces no clean entry by 10:15 AM ET."
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 67.29,
+    "atr_day": 2.65,
+    "avg_vol_10d": 3160241,
+    "premarket_price": 67.53,
+    "gap_pct": 0.0036,
+    "spread_bp": 4.4,
+    "support": 65.00,
+    "resistance": 70.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "BACKUP / VWAP-RECLAIM ONLY. Spread 4.4 bp — excellent. Vol 3.16M — good. Post-earnings digestion (Q2 reported July 16, beat EPS slightly, missed revenue, stock fell ~8.6% after hours). No fresh catalyst today. ATR $2.65 is small — a 1.5R target from a $1 stop yields only $1.50 move, so R/R math is tight. Do not use ORB breakout setup. Only entry: clean VWAP reclaim on rising volume after an early dip. Skip NFLX if semi names (NVDA or INTC) produce entries. Support at $65 (round, recent lows). Resistance at $70 (round, ~1 ATR above)."
+  }
+}

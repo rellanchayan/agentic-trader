@@ -88,8 +88,41 @@ made of **rules to follow**, not stories.
   them. Two consecutive sessions with no intraday log (2026-06-26 and 2026-06-29) despite non-trivial
   premarket setups is a strong signal the loop is not running. Verify the tick loop is actually
   being scheduled and executing before the next trading session.
+- The premarket phase must include an explicit check that `run_phase.sh tick` is scheduled to fire
+  at 9:30 AM ET before the premarket phase exits. Premarket completing successfully does not
+  guarantee the tick loop will start. On six consecutive sessions (2026-07-13 through 2026-07-24)
+  the premarket ran cleanly and the tick loop either did not run at all or ran once, hours late.
+  These two phases are scheduled independently; do not assume premarket success implies tick
+  availability. If the scheduler state cannot be confirmed, treat it as a HALT condition.
+- The screener output (`levels.json`) and the plan narrative must converge into one canonical
+  machine-readable armed-setups state before the premarket phase exits. When `levels.json` arms a
+  name that the plan simultaneously disarms — or ranks setups differently — the tick loop has no
+  single authoritative source of truth and is forced to arbitrate at evaluation time. After the
+  narrative plan is finalized, the plan's decisions must overwrite or replace the screener's raw
+  ranking so the tick loop reads exactly one file and never faces a conflict between two artifacts
+  written minutes apart.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-24: No tuning. Tuner eligible ("ok to tune", 21 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was the sixth consecutive zero-trade session
+  (July 13, 17, 20, 21, 23, 24); the last actual orders placed were July 10 and the last confirmed
+  round-trips were June 18 — 26 calendar days ago. The cause is not market conditions or strategy
+  parameters. The premarket phase ran cleanly at 9:32 AM ET (plan written, screener executed,
+  baseline captured). The tick loop ran zero times. INTC was correctly disarmed — earnings beat
+  but the 12.4% after-hours gain was fully erased before the open, a "sell the news" pattern the
+  plan identified at 9:32 AM. NFLX was a sound VWAP-reclaim candidate with a 9:45–11:00 AM entry
+  window and a 20.3 bp premarket spread — a legitimate setup the system was never present to
+  evaluate. The screener and plan document produced conflicting rankings for the second consecutive
+  session (`levels.json` armed INTC and ranked NVDA primary; the plan disarmed INTC and promoted
+  NFLX to primary). Six consecutive zero-trade sessions due to a scheduler failure is not a signal
+  for parameter adjustment; it is a system availability failure. Two new Infrastructure rules added
+  tonight: (1) the premarket phase must explicitly verify the tick loop is scheduled to fire at
+  9:30 AM before exiting — premarket success does not guarantee tick availability; (2) the screener
+  output and plan narrative must converge into one canonical armed-setups state before premarket
+  exits, so the tick loop reads a single authoritative file with no arbitration required. Account
+  equity $999,747.04, $0 realized P&L, ended flat. Over 21 days: 11 trades (0.52/day), 36.4% win
+  rate, avg win +0.559R, avg loss -1.197R, ORB -0.362R across 3 trades, momentum -0.975R across 1
+  trade. No parameter has ever been changed; tuning ledger remains empty.
 - 2026-07-17: No tuning. Tuner eligible ("ok to tune", 20 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day: the premarket phase did not
   run, so no watchlist was screened, no day plan was written, and the tick loop had no context to

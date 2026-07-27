@@ -108,6 +108,13 @@ made of **rules to follow**, not stories.
   the premarket ran cleanly and the tick loop either did not run at all or ran once, hours late.
   These two phases are scheduled independently; do not assume premarket success implies tick
   availability. If the scheduler state cannot be confirmed, treat it as a HALT condition.
+- A single intraday log entry that falls within the entry window but is followed by silence for
+  the remainder of the session must be treated as a loop-exit failure, not a no-trade decision.
+  It confirms the loop started and the decision logic is healthy, but the process exited after one
+  iteration rather than maintaining 2-minute cadence. On 2026-07-27, one tick at 10:40 AM ET (within
+  the ORB entry window) correctly rejected all candidates, then no further ticks ran. The fix is in
+  the scheduler — it must keep the loop process alive from 9:30 AM through 3:56 PM ET, not merely
+  launch it once. Verify cadence continuity independently of whether a plan exists or a first tick ran.
 - The screener output (`levels.json`) and the plan narrative must converge into one canonical
   machine-readable armed-setups state before the premarket phase exits. When `levels.json` arms a
   name that the plan simultaneously disarms — or ranks setups differently — the tick loop has no
@@ -117,6 +124,22 @@ made of **rules to follow**, not stories.
   written minutes apart.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-27: No tuning. Tuner eligible ("ok to tune", 25 days of history, drawdown 0.0%) but no
+  rule fired — parameters left unchanged. Today was the seventh consecutive zero-trade session.
+  The pattern today is meaningfully different from the prior six: the tick loop ran exactly once,
+  at 10:40 AM ET — 70 minutes after the open, but still within the ORB entry window. It evaluated
+  all candidates and correctly skipped them (no setup qualified). No subsequent ticks followed for
+  the remainder of the session. This confirms two things: (1) the decision logic is working — the
+  one tick that ran made correct judgments; (2) the failure is that the loop exits after a single
+  iteration rather than maintaining the required 2-minute cadence. "Runs once then stops" is a
+  distinct and previously undocumented failure mode from "never runs" and "runs once hours too late."
+  A new infrastructure rule has been added below: a single intraday log entry within the entry
+  window, followed by silence, must be treated as a loop-exit failure, not a valid no-trade session.
+  The decision logic does not need adjustment; the scheduler must be confirmed to keep the loop alive
+  for the full trading window (9:30 AM–3:56 PM ET), not merely start it. Account equity $999,747.04,
+  $0 realized P&L, ended flat. Over 25 days: 11 trades (0.44/day), 36.4% win rate, avg win +0.559R,
+  avg loss -1.197R, ORB -0.362R across 3 trades, momentum -0.975R across 1 trade. No parameter has
+  ever been changed; tuning ledger remains empty.
 - 2026-07-24: No tuning. Tuner eligible ("ok to tune", 21 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was the sixth consecutive zero-trade session
   (July 13, 17, 20, 21, 23, 24); the last actual orders placed were July 10 and the last confirmed

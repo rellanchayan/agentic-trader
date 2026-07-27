@@ -2,13 +2,16 @@
   "_meta": {
     "date": "2026-07-27",
     "generated_utc": "2026-07-27T13:29:25.888781+00:00",
-    "source": "watchlist_build",
+    "source": "day_screener",
     "plan_override_utc": "2026-07-27T13:32:00.000000+00:00",
+    "screened_utc": "2026-07-27T14:15:00.000000+00:00",
     "plan_note": "Plan-narrative decisions written back here per playbook rule (2026-07-24). This file is the single canonical armed-setup source. Tick loop reads this file only.",
+    "screener_note": "Day-screener confirmed all 4 names. Armed/disarmed decisions and entry conditions preserved from premarket strategist. Added support/resistance levels. Spread_bp values (~1000 bp) are a paper-API pre-market artifact — do not use them to gate trades. Re-check live spread via context.py at submission and apply the 25 bp gate.",
     "candidates_considered": 4,
-    "top": 4,
+    "names_kept": 4,
     "regime": "risk-on",
-    "regime_reason": "US-Iran ceasefire pause; oil -6.7%; NDX futures +1.63%; S&P +0.96%."
+    "regime_reason": "US-Iran ceasefire pause; oil -6.7%; NDX futures +1.63%; S&P +0.96%.",
+    "fomc_caution": "FOMC meeting begins July 28 (decision July 29). Even in a risk-on open, expect afternoon tape to fade conviction. Flatten before 3:50 PM without exception. Entry windows already constrained to 9:45-11:00 AM — honor them."
   },
   "NVDA": {
     "rank": 1,
@@ -22,6 +25,10 @@
     "premarket_price": 208.28,
     "gap_pct": 0.0058,
     "spread_bp": 1003.5,
+    "support": 207.07,
+    "support_2": 205.00,
+    "resistance": 210.00,
+    "resistance_2": 215.00,
     "orb_high": null,
     "orb_low": null,
     "entry_window_start": "09:45",
@@ -34,7 +41,7 @@
       "price above VWAP",
       "rel_vol >= 1.2"
     ],
-    "note": "Primary. Risk-on + AMD +3.03% sympathy + no earnings until Aug 26. ORB breakout above 15-min high is primary trigger. VWAP reclaim secondary if ORB does not fire cleanly."
+    "note": "Primary. Risk-on + AMD +3.03% sympathy + no earnings until Aug 26. ORB breakout above 15-min high is primary trigger. VWAP reclaim secondary if ORB does not fire cleanly. Support: $207.07 (prev close / gap fill) and $205 (round). Resistance: $210 (round ceiling of recent range), $215 (next round)."
   },
   "NFLX": {
     "rank": 2,
@@ -48,6 +55,10 @@
     "premarket_price": 70.66,
     "gap_pct": 0.008,
     "spread_bp": 1014.8,
+    "support": 70.00,
+    "support_2": 69.00,
+    "resistance": 71.50,
+    "resistance_2": 73.00,
     "orb_high": null,
     "orb_low": null,
     "entry_window_start": "09:45",
@@ -60,7 +71,7 @@
       "rel_vol >= 1.0",
       "price above premarket high 70.66"
     ],
-    "note": "Secondary. Post-earnings stabilization bounce (+0.80% gap). Weak Q3 guide limits upside conviction. VWAP reclaim only — no ORB breakout on an earnings-shadow name. Skip if not above VWAP by 10:15 AM."
+    "note": "Secondary. Post-earnings stabilization bounce (+0.80% gap). Weak Q3 guide limits upside conviction. VWAP reclaim only — no ORB breakout on an earnings-shadow name. Skip if not above VWAP by 10:15 AM. Support: $70.00 (round / prev close gap-fill), $69.00 (prior support area). Resistance: $71.50 (~ATR above prev close), $73.00 (next meaningful level). Spread was 20 bp on July 24 — cleanest spread of all names at open."
   },
   "INTC": {
     "rank": 3,
@@ -75,6 +86,10 @@
     "premarket_price": 93.66,
     "gap_pct": 0.014,
     "spread_bp": 1011.2,
+    "support": 92.37,
+    "support_2": 90.00,
+    "resistance": 95.00,
+    "resistance_2": 100.00,
     "orb_high": null,
     "orb_low": null,
     "entry_window_start": "10:00",
@@ -88,7 +103,7 @@
       "rel_vol >= 1.2"
     ],
     "disarm_if_any_condition_fails": true,
-    "note": "Conditional watch only. Post-earnings reversal: stock spiked to $112.70 AH on Jul 23 earnings beat, then cratered to $92.37 by Jul 24 close. AI capex ($20B) overhang. Dead-cat bounce risk. VWAP reclaim only if all 4 conditions clear simultaneously. If any fails, skip for the day — do not revisit."
+    "note": "Conditional watch only. Post-earnings reversal: stock spiked to $112.70 AH on Jul 23 earnings beat, then cratered to $92.37 by Jul 24 close. AI capex ($20B) overhang. Dead-cat bounce risk. VWAP reclaim only if all 4 conditions clear simultaneously. If any fails, skip for the day — do not revisit. Support: $92.37 (prev close / gap fill), $90.00 (round, key floor). Resistance: $95.00 (round), $100.00 (major — the prior support level that was lost in the post-earnings crash; now acts as hard ceiling)."
   },
   "BAC": {
     "rank": 4,
@@ -100,9 +115,13 @@
     "premarket_price": 62.66,
     "gap_pct": 0.0098,
     "spread_bp": 1006.9,
+    "support": 62.05,
+    "support_2": 61.00,
+    "resistance": 63.00,
+    "resistance_2": 64.00,
     "orb_high": null,
     "orb_low": null,
     "max_trade_usd": 0,
-    "note": "Deprioritized. ATR $1.20 too tight for 2:1 R/R within $10k cap. FOMC Wednesday creates direct rate-decision risk for financials. No fresh catalyst today. Skip unless NVDA and NFLX both pass and no other candidate exists — bar is live spread < 15 bp and a clean ORB."
+    "note": "Deprioritized. ATR $1.20 too tight for 2:1 R/R within $10k cap. FOMC Wednesday creates direct rate-decision risk for financials. No fresh catalyst today. Skip unless NVDA and NFLX both pass and no other candidate exists — bar is live spread < 15 bp and a clean ORB. Note: spread was 544 bp on July 24 — must verify it has normalized before any consideration. Support: $62.05 (prev close), $61.00 (round). Resistance: $63.00 (round), $64.00."
   }
 }

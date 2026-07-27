@@ -3,23 +3,18 @@
     "date": "2026-07-27",
     "generated_utc": "2026-07-27T13:29:25.888781+00:00",
     "source": "watchlist_build",
+    "plan_override_utc": "2026-07-27T13:32:00.000000+00:00",
+    "plan_note": "Plan-narrative decisions written back here per playbook rule (2026-07-24). This file is the single canonical armed-setup source. Tick loop reads this file only.",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 92.37,
-    "atr_day": 7.63,
-    "avg_vol_10d": 3974123,
-    "premarket_price": 93.66,
-    "gap_pct": 0.014,
-    "spread_bp": 1011.2,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,974,123 sh/day); +1.4% gap"
+    "regime": "risk-on",
+    "regime_reason": "US-Iran ceasefire pause; oil -6.7%; NDX futures +1.63%; S&P +0.96%."
   },
   "NVDA": {
+    "rank": 1,
+    "armed": true,
+    "setup_primary": "orb_breakout",
+    "setup_secondary": "vwap_reclaim",
     "sector": "technology",
     "prev_close": 207.07,
     "atr_day": 7.53,
@@ -29,9 +24,23 @@
     "spread_bp": 1003.5,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,146,399 sh/day); +0.6% gap"
+    "entry_window_start": "09:45",
+    "entry_window_end": "11:00",
+    "max_trade_usd": 7500,
+    "min_rr_ratio": 2.0,
+    "entry_conditions": [
+      "live_spread_bp < 25",
+      "ndx_up_pct >= 0.50 and trending at entry",
+      "price above VWAP",
+      "rel_vol >= 1.2"
+    ],
+    "note": "Primary. Risk-on + AMD +3.03% sympathy + no earnings until Aug 26. ORB breakout above 15-min high is primary trigger. VWAP reclaim secondary if ORB does not fire cleanly."
   },
   "NFLX": {
+    "rank": 2,
+    "armed": true,
+    "setup_primary": "vwap_reclaim",
+    "setup_secondary": null,
     "sector": "communication",
     "prev_close": 70.1,
     "atr_day": 2.57,
@@ -41,9 +50,49 @@
     "spread_bp": 1014.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,586,978 sh/day); +0.8% gap"
+    "entry_window_start": "09:45",
+    "entry_window_end": "11:00",
+    "max_trade_usd": 5000,
+    "min_rr_ratio": 2.0,
+    "entry_conditions": [
+      "live_spread_bp < 25",
+      "price reclaims and holds VWAP for at least one 2-min bar",
+      "rel_vol >= 1.0",
+      "price above premarket high 70.66"
+    ],
+    "note": "Secondary. Post-earnings stabilization bounce (+0.80% gap). Weak Q3 guide limits upside conviction. VWAP reclaim only — no ORB breakout on an earnings-shadow name. Skip if not above VWAP by 10:15 AM."
+  },
+  "INTC": {
+    "rank": 3,
+    "armed": false,
+    "armed_if_conditions": true,
+    "setup_primary": "vwap_reclaim",
+    "setup_secondary": null,
+    "sector": "technology",
+    "prev_close": 92.37,
+    "atr_day": 7.63,
+    "avg_vol_10d": 3974123,
+    "premarket_price": 93.66,
+    "gap_pct": 0.014,
+    "spread_bp": 1011.2,
+    "orb_high": null,
+    "orb_low": null,
+    "entry_window_start": "10:00",
+    "entry_window_end": "10:45",
+    "max_trade_usd": 5000,
+    "min_rr_ratio": 2.0,
+    "entry_conditions": [
+      "live_spread_bp < 20",
+      "price holds above 93.50 for at least 10 min after open",
+      "NVDA is green and above its VWAP at time of entry",
+      "rel_vol >= 1.2"
+    ],
+    "disarm_if_any_condition_fails": true,
+    "note": "Conditional watch only. Post-earnings reversal: stock spiked to $112.70 AH on Jul 23 earnings beat, then cratered to $92.37 by Jul 24 close. AI capex ($20B) overhang. Dead-cat bounce risk. VWAP reclaim only if all 4 conditions clear simultaneously. If any fails, skip for the day — do not revisit."
   },
   "BAC": {
+    "rank": 4,
+    "armed": false,
     "sector": "financials",
     "prev_close": 62.05,
     "atr_day": 1.2,
@@ -53,6 +102,7 @@
     "spread_bp": 1006.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,786,300 sh/day); +1.0% gap"
+    "max_trade_usd": 0,
+    "note": "Deprioritized. ATR $1.20 too tight for 2:1 R/R within $10k cap. FOMC Wednesday creates direct rate-decision risk for financials. No fresh catalyst today. Skip unless NVDA and NFLX both pass and no other candidate exists — bar is live spread < 15 bp and a clean ORB."
   }
 }

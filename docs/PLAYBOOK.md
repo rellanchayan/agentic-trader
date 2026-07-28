@@ -124,6 +124,17 @@ made of **rules to follow**, not stories.
   written minutes apart.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-28: No tuning. Tuner eligible ("ok to tune", 26 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Today was the eighth consecutive zero-trade session
+  (July 13, 17, 20, 21, 23, 24, 27, 28); the tick loop ran once, at 9:31 AM ET — fourteen minutes
+  before the 9:45 AM ORB entry window opens. That pre-window gate rejection was correct decision
+  logic; the failure is the same loop-exit pattern as 2026-07-27: one iteration ran, then the loop
+  exited rather than sustaining 2-minute cadence through the trading window and beyond. No new
+  infrastructure rule is needed — the loop-exit failure mode is already documented; the scheduler
+  must hold the loop process alive from 9:30 AM through 3:56 PM ET regardless of how early the
+  first tick fires or whether it found any actionable setup. Account equity $999,747.04, $0 realized
+  P&L, ended flat. Over 26 days: 11 trades (0.42/day), 36.4% win rate, avg win +0.559R, avg loss
+  -1.197R, ORB -0.362R across 3 trades, momentum -0.975R across 1 trade; tuning ledger remains empty.
 - 2026-07-27: No tuning. Tuner eligible ("ok to tune", 25 days of history, drawdown 0.0%) but no
   rule fired — parameters left unchanged. Today was the seventh consecutive zero-trade session.
   The pattern today is meaningfully different from the prior six: the tick loop ran exactly once,

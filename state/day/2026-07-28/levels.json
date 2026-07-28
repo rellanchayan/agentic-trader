@@ -5,31 +5,11 @@
     "source": "watchlist_build",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 91.66,
-    "atr_day": 7.21,
-    "avg_vol_10d": 3901688,
-    "premarket_price": 87.38,
-    "gap_pct": -0.0467,
-    "spread_bp": 1004.8,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,901,688 sh/day); -4.7% gap"
-  },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 70.4,
-    "atr_day": 2.54,
-    "avg_vol_10d": 3505442,
-    "premarket_price": 71.7,
-    "gap_pct": 0.0185,
-    "spread_bp": 1015.3,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,505,442 sh/day); +1.8% gap"
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this.",
+    "screener_reviewed_utc": "2026-07-28T13:33:00+00:00",
+    "screener_kept": 4,
+    "screener_dropped": 0,
+    "screener_note": "All 4 names kept. NVDA primary (best spread, solid vol). BAC secondary (highest rel_vol, Consumer Confidence catalyst at 10 AM). INTC conditional (rel_vol 0.93x at open, below 1.2x threshold; requires hard conditions before arming). NFLX flagged (spread 47 bp at open exceeds 25 bp max; reassess at 9:45 ORB time). Macro context: FOMC tomorrow, MSFT+META earnings Wed after close — favor range/VWAP setups over aggressive breakouts; size conservatively."
   },
   "NVDA": {
     "sector": "technology",
@@ -38,10 +18,14 @@
     "avg_vol_10d": 4434797,
     "premarket_price": 196.06,
     "gap_pct": -0.0025,
-    "spread_bp": 1004.3,
+    "spread_bp": 3.6,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,434,797 sh/day); -0.2% gap"
+    "support": 194.00,
+    "resistance": 196.56,
+    "vwap_estimate": 194.55,
+    "note": "liquid (4,434,797 sh/day); -0.2% gap",
+    "screener_note": "PRIMARY. Session spread 3.6 bp, rel_vol 1.33x at open — best liquidity profile on the board. Trading at $194.19, below VWAP $194.55 and below prev_close $196.56. Stock dropped ~$13 from Monday's open on AI-capex concern ahead of MSFT/META earnings Wed. ATR $7.96 gives clean room for 2:1 R/R. Setup: VWAP reclaim above $194.55 is the primary trigger; ORB breakout above the 15-min high is secondary. Do not enter if NVDA is still declining through VWAP at 9:45 AM with no volume surge. Support $194.00 (ORB low area); resistance $196.56 (prev close ceiling)."
   },
   "BAC": {
     "sector": "financials",
@@ -50,9 +34,45 @@
     "avg_vol_10d": 2785241,
     "premarket_price": 62.53,
     "gap_pct": 0.0058,
-    "spread_bp": 1020.3,
+    "spread_bp": 4.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,785,241 sh/day); +0.6% gap"
+    "support": 62.08,
+    "resistance": 62.53,
+    "vwap_estimate": 62.19,
+    "note": "liquid (2,785,241 sh/day); +0.6% gap",
+    "screener_note": "SECONDARY. Session spread 4.8 bp, rel_vol 1.72x at open — highest relative volume of the four names. Consumer Confidence at 10:00 AM ET today is a direct catalyst for financials; FOMC tomorrow adds rate-sensitivity all session. ATR $1.20 is the main constraint: daily range is small, so do not set targets wider than 1x ATR (~$1.20) and keep stops tight. VWAP reclaim setup only ($62.19); ORB breakout not advised on this ATR. Support $62.08 (ORB low area); resistance $62.53 (premarket high). Watch Consumer Confidence print at 10 AM — a miss could push this lower immediately."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 91.66,
+    "atr_day": 7.21,
+    "avg_vol_10d": 3901688,
+    "premarket_price": 87.38,
+    "gap_pct": -0.0467,
+    "spread_bp": 9.3,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 86.70,
+    "resistance": 88.00,
+    "vwap_estimate": 87.05,
+    "note": "liquid (3,901,688 sh/day); -4.7% gap",
+    "screener_note": "CONDITIONAL — DO NOT ARM YET. Rel_vol only 0.93x at open, well below the 1.2x minimum required for any setup. The -4.7% gap is continuation of the post-earnings rejection (stock spiked to $112 on Jul 23 earnings, then was systematically sold back to $91.66 by Jul 27 close; today is another leg down). Playbook rule: do not buy a gap-bounce in a name still in active post-earnings selling without volume confirmation of a reversal. All four conditions must be met before arming: (1) rel_vol > 1.2x by 9:45 AM; (2) live spread < 20 bp; (3) NVDA also above its VWAP at time of potential entry; (4) price holds above VWAP $87.05 for at least two consecutive 2-min bars. If any condition fails at 9:45 AM, skip INTC for the full session — no second chances. Setup if armed: VWAP reclaim only, entry window 10:00–10:45 AM; max size $5,000. Support $86.70 (ORB low area); resistance $88.00 (round number)."
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 70.4,
+    "atr_day": 2.54,
+    "avg_vol_10d": 3505442,
+    "premarket_price": 71.7,
+    "gap_pct": 0.0185,
+    "spread_bp": 47.0,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 71.25,
+    "resistance": 72.09,
+    "vwap_estimate": 71.73,
+    "note": "liquid (3,505,442 sh/day); +1.8% gap",
+    "screener_note": "FLAGGED — NOT TRADEABLE YET. Session spread at open was 47 bp (config max is 25 bp); rel_vol 0.81x (below 1.0x). Both conditions fail at the open. No fresh individual catalyst — earnings were Jul 16 with a weak Q3 guide, stock has been digesting since. Spread will likely tighten to 10-20 bp by 9:45 AM as the book fills; reassess at ORB time. Only arm if by 9:45 AM: (1) live spread confirmed < 25 bp, (2) rel_vol > 1.0x, (3) price above VWAP $71.73. If those three are not all true at 9:45, skip for the day — do not revisit. Setup if armed: VWAP reclaim only; max size $5,000. Support $71.25 (ORB low area); resistance $72.09 (ORB high area)."
   }
 }

@@ -2,12 +2,21 @@
   "_meta": {
     "date": "2026-07-29",
     "generated_utc": "2026-07-29T13:30:41.689312+00:00",
+    "plan_override_utc": "2026-07-29T13:32:00.000000+00:00",
     "source": "watchlist_build",
+    "plan_note": "Plan-narrative decisions written back here per playbook rule (2026-07-24). This file is the single canonical armed-setup source. Tick loop reads this file only.",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "regime": "mixed_range",
+    "regime_reason": "S&P futures +0.2%, NQ +0.3% — mildly green. Semiconductor sector in broad premarket sell-off (NVDA, AMD, MU, SNDK all negative). FOMC decision at 2:00 PM ET with ~30% hike probability. MSFT+META earnings after close. Tradeable window: 9:45–11:00 AM only.",
+    "fomc_caution": "FOMC announcement at 2:00 PM ET. Any position opened today MUST be fully closed by 1:30 PM ET. No exceptions. The entire afternoon session (2:00 PM through close) carries binary rate-decision risk."
   },
   "NVDA": {
+    "rank": 1,
+    "armed": false,
+    "armed_if_conditions": true,
+    "setup_primary": "vwap_reclaim",
+    "setup_secondary": null,
     "sector": "technology",
     "prev_close": 197.05,
     "atr_day": 7.68,
@@ -15,11 +24,29 @@
     "premarket_price": 195.68,
     "gap_pct": -0.007,
     "spread_bp": 4.1,
+    "support": 195.68,
+    "support_2": 193.00,
+    "resistance": 197.05,
+    "resistance_2": 200.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,650,723 sh/day); -0.7% gap"
+    "entry_window_start": "09:45",
+    "entry_window_end": "11:00",
+    "max_trade_usd": 5000,
+    "min_rr_ratio": 2.0,
+    "entry_conditions": [
+      "sector_stabilization: NVDA + at least one other chip name (AMD/MU/INTC) visibly above VWAP",
+      "live_spread_bp < 25",
+      "price above VWAP at time of entry",
+      "rel_vol >= 1.2"
+    ],
+    "disarm_reason": "Semiconductor sector in broad premarket sell-off. NVDA AMD MU SNDK all negative premarket. AI circular-financing concerns + SK Hynix miss spreading from Asian markets. Sector disarm per playbook: deprioritize gap-bounce and ORB breakout theses when multiple sector names are gapping down.",
+    "note": "Sector disarmed. Conditional path: VWAP reclaim only if sector broadly stabilizes (multiple chip names above VWAP after ORB forms). No ORB breakout in a down sector. Support: $195.68 (premarket low / gap level), $193.00 (round). Resistance: $197.05 (prev close), $200.00 (round). Max trade $5,000. Spread gate re-checked live — premarket 4.1 bp is fine but must verify at submission."
   },
   "INTC": {
+    "rank": 4,
+    "armed": false,
+    "armed_if_conditions": false,
     "sector": "technology",
     "prev_close": 86.24,
     "atr_day": 7.39,
@@ -29,9 +56,16 @@
     "spread_bp": 8.1,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,169,779 sh/day); +0.6% gap"
+    "max_trade_usd": 0,
+    "disarm_reason": "Sector disarm — INTC bouncing +0.6% in isolation while rest of chip sector (NVDA AMD MU SNDK) is negative premarket. Dead-cat bounce after prior-session heavy decline. Playbook: 'Do not lift the disarm for a single name bouncing in isolation.' Post-earnings reversal pattern ongoing.",
+    "note": "Fully disarmed all session. No conditional path. Even if INTC holds its premarket gain, the sector context must show documented broad recovery (multiple names above VWAP) before any chip name is reconsidered — and NVDA would be re-evaluated before INTC. Support: $86.24 (prev close), $84.00 (round). Resistance: $88.00 (round), $90.00 (prior support)."
   },
   "NFLX": {
+    "rank": 2,
+    "armed": false,
+    "armed_if_conditions": true,
+    "setup_primary": "vwap_reclaim",
+    "setup_secondary": null,
     "sector": "communication",
     "prev_close": 72.37,
     "atr_day": 2.66,
@@ -39,11 +73,29 @@
     "premarket_price": 72.66,
     "gap_pct": 0.004,
     "spread_bp": 231.2,
+    "support": 72.37,
+    "support_2": 71.00,
+    "resistance": 73.00,
+    "resistance_2": 74.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,525,543 sh/day); +0.4% gap"
+    "entry_window_start": "09:45",
+    "entry_window_end": "11:00",
+    "max_trade_usd": 5000,
+    "min_rr_ratio": 2.0,
+    "entry_conditions": [
+      "live_spread_bp < 25 — REQUIRED: check at every tick, premarket spread 231.2 bp is disqualifying",
+      "price reclaims and holds VWAP for at least one 2-min bar",
+      "rel_vol >= 1.0",
+      "price above ORB high (forms after 9:45 AM)"
+    ],
+    "disarm_reason": "Premarket spread 231.2 bp — far exceeds 25 bp hard limit. Note: spread may narrow significantly after the open; tick loop must recheck at every tick from 9:45 AM.",
+    "note": "Communication sector — isolated from semiconductor sell-off. Slight +0.4% gap, slight positive bias. Theoretically the cleanest long candidate today IF spread normalizes. Tick loop: check live spread at every tick 9:45-11:00 AM. If spread < 25 bp with rel_vol >= 1.0 and price above VWAP, arm VWAP reclaim immediately. Support: $72.37 (prev close / gap fill), $71.00 (round). Resistance: $73.00 (round), $74.00. ATR $2.66: at $72.66/share, max 5000/72.66 = ~68 shares. Stop 0.5 ATR below entry (~$1.33). Target 1.0 ATR above entry (~$2.66). R/R = 2:1."
   },
   "BAC": {
+    "rank": 3,
+    "armed": false,
+    "armed_if_conditions": false,
     "sector": "financials",
     "prev_close": 62.62,
     "atr_day": 1.15,
@@ -53,6 +105,8 @@
     "spread_bp": 8.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,654,853 sh/day); -0.5% gap"
+    "max_trade_usd": 0,
+    "disarm_reason": "FOMC rate decision at 2:00 PM ET — direct binary event risk for bank stocks. ~30% market-implied probability of a surprise hike. Additionally ATR $1.15 is very tight, making 2:1 R/R difficult to construct without an unusual catalyst. No positive catalyst today. Gap -0.5% with no news.",
+    "note": "Fully deprioritized all session. No conditional path. Spread 8.0 bp is acceptable in isolation but FOMC and tight ATR are independent sufficient reasons to skip. Support: $62.28 (premarket low), $62.00 (round), $61.00 (round floor). Resistance: $62.62 (prev close), $63.00 (round)."
   }
 }

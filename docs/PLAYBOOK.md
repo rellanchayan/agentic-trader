@@ -41,6 +41,11 @@ made of **rules to follow**, not stories.
 - When the primary candidate does not produce a clean setup by mid-morning, fully commit to the
   secondary pick — do not spend subsequent ticks re-evaluating the primary. Today NFLX correctly
   passed, NVDA correctly substituted, and the trade worked.
+- When the semiconductor sector disarm has been active for 2 or more consecutive sessions, the
+  premarket strategist must add at least one non-semiconductor substitute from the qualified universe
+  (SPY, QQQ, JPM, AMZN, TSLA, GOOGL) to the watchlist for that day. A 4-name watchlist concentrated
+  in semiconductors leaves the system structurally idle across any multi-day sector rout; the
+  substitute ensures at least one armed candidate exists each session.
 
 ## Entries & exits
 - Enter with marketable limit orders so we fill fast but never worse than our price.
@@ -124,6 +129,18 @@ made of **rules to follow**, not stories.
   written minutes apart.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-29: No tuning. Tuner eligible ("ok to tune", 27 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Today was the 19th consecutive zero-trade session (last
+  trade July 10). All four watchlist names were blocked by independent gates: NVDA and INTC by
+  sector disarm, NFLX by a 231 bp spread, BAC by FOMC event risk. One durable rule added tonight:
+  when the semiconductor sector disarm has been active for 2 or more consecutive sessions, the
+  premarket strategist must add at least one non-semiconductor substitute (SPY, QQQ, JPM, AMZN,
+  TSLA, GOOGL) to the watchlist to ensure at least one armed candidate each session. A 4-name
+  watchlist concentrated in semis leaves the system structurally idle during multi-day sector routs.
+  Account equity $999,640.93 (-0.036% total return), $0 realized P&L, ended flat. Over 27 days:
+  11 trades (0.41/day), 36.4% win rate, avg win +0.559R, avg loss -1.197R, ORB -0.362R across 3
+  trades, momentum -0.975R across 1 trade. Tuning ledger remains empty; no parameter has ever been
+  changed.
 - 2026-07-28: No tuning. Tuner eligible ("ok to tune", 26 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was the eighth consecutive zero-trade session
   (July 13, 17, 20, 21, 23, 24, 27, 28); the tick loop ran once, at 9:31 AM ET — fourteen minutes

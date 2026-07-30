@@ -127,8 +127,29 @@ made of **rules to follow**, not stories.
   narrative plan is finalized, the plan's decisions must overwrite or replace the screener's raw
   ranking so the tick loop reads exactly one file and never faces a conflict between two artifacts
   written minutes apart.
+- When a primary candidate is armed unconditionally (not gated on a conditional trigger) and passes
+  all pre-session gates, every tick that runs during that candidate's entry window must produce
+  either a submitted order or a timestamped skip record documenting which gate blocked it. A session
+  where an armed, unconditional candidate existed but neither an order nor a skip record was written
+  is a tick-loop failure, not a no-trade decision — the loop may have missed the entry window
+  entirely or silently exited before evaluating the candidate. On 2026-07-30, AMZN was armed
+  unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-30: No tuning. Tuner eligible ("ok to tune", 28 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Today was the 10th+ consecutive zero-trade session; the
+  last executed trade was July 10. Realized P&L $0.00; account equity $999,657.58 (up $16.65 from
+  open, entirely paper-account interest, not trading income). The primary candidate today was AMZN,
+  armed unconditionally and passing all pre-session gates. No order was placed and no skip record
+  exists for the session, which means the tick loop either did not run during AMZN's entry window
+  or silently exited without evaluating it. This is a new variant of the recurring tick-loop
+  cadence failure: prior sessions showed "ran once then stopped" or "ran once hours late"; today
+  shows an armed unconditional candidate with no evaluation trace at all. A new infrastructure rule
+  has been added: when a primary candidate is armed unconditionally and passes all pre-session
+  gates, every tick that runs during the entry window must produce either a submitted order or a
+  timestamped skip record; absence of both is a confirmed loop failure. Tuning ledger remains empty;
+  no parameter has ever been changed. Over 28 days: 11 trades (0.39/day), 36.4% win rate, avg win
+  +0.559R, avg loss -1.197R, ORB -0.362R across 3 trades, momentum -0.975R across 1 trade.
 - 2026-07-29: No tuning. Tuner eligible ("ok to tune", 27 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was the 19th consecutive zero-trade session (last
   trade July 10). All four watchlist names were blocked by independent gates: NVDA and INTC by

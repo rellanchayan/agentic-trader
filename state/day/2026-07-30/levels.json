@@ -2,69 +2,84 @@
   "_meta": {
     "date": "2026-07-30",
     "generated_utc": "2026-07-30T13:29:04.297838+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-07-30T13:30:00.000000+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 5,
-    "top": 5,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "kept": 4,
+    "dropped": ["BAC"],
+    "drop_reason": {
+      "BAC": "gap +0.11% is flat; ATR $1.19 too tight for clean 2:1 R/R; no catalyst post-FOMC; watchlist slot wasted"
+    },
+    "missing_data_note": "MSFT and META are natural additions today (both reported earnings after yesterday's close per the 2026-07-29 plan) but no premarket quotes are available in this data set. Run watchlist_build.py again or add manually if live quotes are available.",
+    "spread_note": "Premarket spread_bp values are all ~1000 bp — this is normal thin-market artifact before the open. Liquid large-caps tighten to single-digit bp by 9:35 AM ET. The live daytrade_guard spread gate (25 bp max) applies at order time, not here.",
+    "note": "ORB levels fill in live after the open. Do not edit orb_high/orb_low here; the tick loop writes them automatically after the first 15 minutes."
   },
   "INTC": {
     "sector": "technology",
     "prev_close": 81.92,
+    "prior_close": 81.92,
     "atr_day": 7.41,
     "avg_vol_10d": 3881968,
     "premarket_price": 85.75,
     "gap_pct": 0.0468,
     "spread_bp": 1006.5,
+    "support": 81.92,
+    "key_support": 81.92,
+    "resistance": 86.24,
+    "key_resistance": 86.24,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,881,968 sh/day); +4.7% gap"
+    "note": "gapped +4.7% to $85.75 premarket; semiconductor recovery after yesterday's sector rout; prior two-day close was $86.24 — premarket is almost back to that level; watch for ORB breakout above $86.24 (prior level + confirmation) or fade/gap-fill if price stalls below $85.75; support at $81.92 (yesterday's close = full gap fill); ATR $7.41 gives good range; liquid (3.88M sh/day)"
   },
   "NVDA": {
     "sector": "technology",
     "prev_close": 190.1,
+    "prior_close": 190.1,
     "atr_day": 7.78,
     "avg_vol_10d": 4844009,
     "premarket_price": 194.4,
     "gap_pct": 0.0226,
     "spread_bp": 1004.1,
+    "support": 190.1,
+    "key_support": 190.1,
+    "resistance": 197.05,
+    "key_resistance": 197.05,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,844,009 sh/day); +2.3% gap"
+    "note": "gapped +2.3% to $194.40 premarket; recovering after falling from $197.05 to $190.10 during yesterday's semiconductor sell-off; MSFT/META earnings likely showed strong AI infrastructure demand lifting chip sentiment; key resistance at $197.05 (prior two-day close); key support at $190.10 (yesterday's close = full gap fill); intermediate support near $192.00 (round); highest volume name on the list (4.84M sh/day); ATR $7.78 gives strong range; preferred ORB setup if sector tone is constructive"
   },
   "NFLX": {
     "sector": "communication",
     "prev_close": 73.63,
+    "prior_close": 73.63,
     "atr_day": 2.69,
     "avg_vol_10d": 3682089,
     "premarket_price": 71.93,
     "gap_pct": -0.0231,
     "spread_bp": 1009.3,
+    "support": 71.0,
+    "key_support": 71.0,
+    "resistance": 73.63,
+    "key_resistance": 73.63,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,682,089 sh/day); -2.3% gap"
+    "note": "gapped -2.3% to $71.93 premarket (nearly one full ATR down); catalyst unknown but gap is meaningful; SPREAD GATE: live session spread must be below 25 bp before any entry — premarket ~1009 bp is a thin-market artifact that typically normalizes for large-caps by 9:35 AM; key resistance at $73.63 (prev_close / full gap fill); intermediate resistance $72.50 (round); key support at $71.00 (round) then $70.00 (major); ATR $2.69 is tight — size accordingly; watch for ORB long above gap open if spread clears, or short continuation below $71.93 with spread clear; liquid (3.68M sh/day)"
   },
   "AMZN": {
     "sector": "consumer",
     "prev_close": 226.82,
+    "prior_close": 226.82,
     "atr_day": 6.4,
     "avg_vol_10d": 2018393,
     "premarket_price": 234.97,
     "gap_pct": 0.0359,
     "spread_bp": 1002.2,
+    "support": 233.0,
+    "key_support": 233.0,
+    "resistance": 237.0,
+    "key_resistance": 237.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,018,393 sh/day); +3.6% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 61.07,
-    "atr_day": 1.19,
-    "avg_vol_10d": 2650988,
-    "premarket_price": 61.14,
-    "gap_pct": 0.0011,
-    "spread_bp": 1014.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,650,988 sh/day); +0.1% gap"
+    "note": "gapped +3.6% to $234.97 premarket (+$8.15); largest dollar gap on the list and 1.27x ATR — likely earnings or major catalyst; watch for ORB breakout above $235.00 (round / premarket level) for continuation toward $237.00 then $240.00; support at $233.00 (round) then $226.82 (prev_close / full gap fill); ATR $6.40 gives good range; liquid (2.02M sh/day at $235 = ~$475M daily dollar volume); highest-conviction setup if gap holds into the open"
   }
 }

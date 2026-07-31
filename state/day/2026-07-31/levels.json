@@ -2,18 +2,31 @@
   "_meta": {
     "date": "2026-07-31",
     "generated_utc": "2026-07-31T13:29:17.841676+00:00",
-    "source": "watchlist_build",
-    "screener_finalized_utc": "2026-07-31T13:35:00.000000+00:00",
+    "plan_finalized_utc": "2026-07-31T13:35:00.000000+00:00",
+    "source": "premarket_strategist — plan decisions overwrite screener ranking per PLAYBOOK infrastructure rule",
     "candidates_considered": 5,
-    "top": 3,
-    "dropped": {
-      "NFLX": "No catalyst today. ATR $2.69 on ~$72 makes 2:1 R/R structurally difficult ($10k cap = ~138 shares; 1x ATR = ~$371 max gain). Persistent live-session spread issues documented on 2026-07-28 and 2026-07-30 (47-231 bp live). No conditional path.",
-      "BAC": "Essentially flat gap (+0.2%). ATR $1.21 on $62 = 2% daily range. No catalyst. Explicit SKIP in 2026-07-30 plan. No conditional path."
+    "top": 4,
+    "note": "Premarket spreads (~430–1021 bp) reflect thin pre-open quoting only. Live session spread gate of 25 bp applies after 9:30 AM ET. ORB levels (orb_high / orb_low) fill in live after the open. This file is the canonical armed-setups state; the tick loop reads ONLY this file.",
+    "regime": "RISK-ON",
+    "regime_rationale": "S&P 500 futures +0.3%, Nasdaq-100 futures +1.0%. AMZN Q2 2026 earnings beat (AWS +36.7% YoY, AI/chips each $25B run rate). Chip sector recovering broadly (INTC +5.5%, NVDA +1.8% premarket). ECI Q2 2026 inline at +0.9% QoQ — non-event. FOMC held 3.50-3.75% on July 29 — fully in rearview.",
+    "sector_disarm_semiconductor": {
+      "premarket_status": "CONDITIONALLY_LIFTED",
+      "confirmation_check": "At 9:45 AM ET verify both NVDA and INTC are above their VWAPs. If both above: LIFTED for full session. If only one: that one armed with caution, other skipped. If neither: disarm stays active, skip both NVDA and INTC.",
+      "rationale": "NVDA +1.8% and INTC +5.5% premarket together with AMD and MU — multiple names in the sector recovering on the same shared catalyst (AMZN CapEx commitment validating AI chip demand). This is the breadth required by the playbook."
     },
-    "primary_catalyst": "AMZN Q2 2026 earnings reported after close 2026-07-30. AMZN gapping +12.1% confirms AWS/cloud beat, validating AI-infrastructure spending thesis — sympathetically positive for NVDA and INTC.",
-    "note": "Pre-market screen finalized by day-screener. ORB levels fill in live after the open (orb_high/orb_low remain null until tick loop writes them). All premarket spread_bp readings (~430-1007 bp) reflect thin pre-open quoting, NOT untradeable conditions. Live session spread gate of 25 bp applies after 9:30 AM ET."
+    "macro_events_today": [
+      {"time_et": "08:30", "event": "Employment Cost Index Q2 2026", "status": "RELEASED", "result": "+0.9% QoQ (inline with forecast), non-event"},
+      {"time_et": "10:00", "event": "Michigan Consumer Sentiment (Final, July)", "status": "UPCOMING", "note": "Preliminary 54.4 beat 51.0 consensus. Pause new entries 9:58–10:05 AM to avoid whipsaw."}
+    ],
+    "entry_window_close": "11:00",
+    "no_new_entries_after": "11:00",
+    "flatten_begin": "15:30",
+    "flat_by": "15:55"
   },
   "AMZN": {
+    "rank": 1,
+    "armed_status": "ARMED",
+    "armed_condition": "unconditional",
     "sector": "consumer",
     "prev_close": 235.75,
     "atr_day": 6.86,
@@ -27,9 +40,21 @@
     "resistance": 270.00,
     "vwap_approx": 264.00,
     "setup": "orb",
-    "note": "PRIMARY. Gapped +12.1% ($235.75 to $264.31) on AMZN Q2 2026 earnings beat (AWS/cloud revenue). Earnings are already reported — no binary event risk remaining today. Gap-and-go ORB setup: let 9:30-9:45 AM range form, enter above ORB high on volume confirmation (rel vol >= 1.0), stop below ORB low. Key support $258 (round number / premarket floor); key resistance $270 (round number target). Spread gate: live spread must be < 25 bp; premarket 430 bp is better than peers and should normalize quickly. No time-limit restriction (earnings already out — normal 3:55 PM flatten applies)."
+    "entry_window_open": "09:45",
+    "entry_window_close": "11:00",
+    "max_shares": 37,
+    "gates": {
+      "spread_bp_max": 25,
+      "rel_vol_min": 1.0,
+      "rr_min": 2.0,
+      "price_must_be_above": "orb_high"
+    },
+    "note": "PRIMARY — ARMED unconditionally. Gapped +12.1% ($235.75 to $264.31) on AMZN Q2 2026 earnings beat: AWS +36.7% YoY (fastest in 18 quarters), AI/chips each >$25B run rate, CapEx raised to ~$220B, Q3 guide $197-202B revenue. Earnings binary event is resolved — normal 3:55 PM flatten applies. ORB setup: let 9:30-9:45 AM range form, enter LONG above ORB high on volume (rel_vol >= 1.0x), stop just below ORB low, require >= 2:1 R/R. Pause entries 9:58-10:05 AM for Michigan sentiment release at 10:00 AM. Key support: $258 (premarket floor / round number). Key resistance: $265 and $270 (round numbers above premarket). At ~$264/share: $10k limit = ~37 shares max."
   },
   "NVDA": {
+    "rank": 2,
+    "armed_status": "CONDITIONAL",
+    "armed_condition": "sector_disarm_lifted_at_0945 AND spread_lt_25bp",
     "sector": "technology",
     "prev_close": 195.04,
     "atr_day": 7.65,
@@ -43,9 +68,23 @@
     "resistance": 200.00,
     "vwap_approx": 197.00,
     "setup": "orb",
-    "note": "SECONDARY (conditional). Gapped +1.2% ($195.04 to $197.45) on sympathy with AMZN AWS beat confirming AI-infrastructure demand. Most liquid name in list (4.96M avg vol/day). ATR $7.65 on ~$197 gives room for 2:1 R/R within $10k cap. Key support: $195.00 (previous close, round number floor). Key resistance: $200.00 (major round number — break-and-hold above $200 with volume is the cleanest ORB trigger). Condition: live spread < 25 bp after open."
+    "entry_window_open": "09:45",
+    "entry_window_close": "11:00",
+    "max_shares": 50,
+    "gates": {
+      "spread_bp_max": 25,
+      "rel_vol_min": 1.0,
+      "rr_min": 2.0,
+      "price_must_be_above": "orb_high",
+      "sector_disarm_check_time": "09:45",
+      "sector_disarm_check": "nvda_above_vwap AND intc_above_vwap"
+    },
+    "note": "SECONDARY — CONDITIONAL on sector disarm lifted at 9:45 AM. Gapped +1.2% ($195.04 to $197.45) on sympathy with AMZN AWS beat validating AI chip demand. Most liquid name (4.96M avg vol/day). ATR $7.65 on ~$197 provides good R/R room within $10k cap. Key support: $195.00 (previous close, round number). Key resistance: $200.00 (major round number — clean break above with volume is the strongest ORB trigger). Evaluate NVDA only after AMZN fails to produce a setup by 10:00 AM. Do not pursue both simultaneously."
   },
   "INTC": {
+    "rank": 3,
+    "armed_status": "CONDITIONAL",
+    "armed_condition": "sector_disarm_lifted_at_0945 AND spread_lt_25bp AND amzn_and_nvda_both_failed",
     "sector": "technology",
     "prev_close": 91.16,
     "atr_day": 7.92,
@@ -59,6 +98,65 @@
     "resistance": 97.00,
     "vwap_approx": 95.50,
     "setup": "orb",
-    "note": "TERTIARY (conditional). Gapped +5.1% ($91.16 to $95.83) on AMZN cloud beat (same sector sympathy as NVDA). Extremely volatile: ATR $7.92 on ~$96 = 8.2% typical daily range — use strict stop at ORB low, do not widen stops to accommodate volatility. Key support: $93.00 (round number, midpoint of gap). Key resistance: $97.00 (round number ceiling above premarket). Condition: live spread < 25 bp at entry evaluation. If spread is wide at entry point, treat as a skip signal and pass on the setup entirely. Size conservatively relative to AMZN and NVDA given the elevated intraday volatility."
+    "entry_window_open": "09:45",
+    "entry_window_close": "11:00",
+    "max_shares": 104,
+    "gates": {
+      "spread_bp_max": 25,
+      "rel_vol_min": 1.0,
+      "rr_min": 2.0,
+      "price_must_be_above": "orb_high",
+      "sector_disarm_check_time": "09:45",
+      "sector_disarm_check": "nvda_above_vwap AND intc_above_vwap",
+      "priority_gate": "amzn_and_nvda_must_have_no_active_position_and_no_clean_setup_by_1030"
+    },
+    "note": "TERTIARY — CONDITIONAL (sector disarm + AMZN and NVDA both failed). Gapped +5.1% ($91.16 to $95.83) on same sector catalyst as NVDA. ATR $7.92 on ~$96 = ~8% daily range; high intraday volatility. CRITICAL SPREAD WARNING: INTC has run 209.5 bp live-session spread (July 9 at 12:39 PM); per playbook any wide live spread on a gap name is a thesis failure signal. If spread exceeds 25 bp at evaluation, skip INTC for the remainder of the session with no second chance. Key support: $93. Key resistance: $97. At ~$96, $10k limit = ~104 shares; size conservatively."
+  },
+  "NFLX": {
+    "rank": 4,
+    "armed_status": "CONDITIONAL",
+    "armed_condition": "spread_lt_25bp_by_1000 AND price_above_vwap AND all_higher_priority_names_failed",
+    "sector": "communication",
+    "prev_close": 73.16,
+    "atr_day": 2.69,
+    "avg_vol_10d": 3696380,
+    "premarket_price": 72.18,
+    "gap_pct": -0.0134,
+    "spread_bp": 1005.8,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 71.50,
+    "resistance": 74.00,
+    "vwap_approx": 72.50,
+    "setup": "vwap_reclaim",
+    "entry_window_open": "09:45",
+    "entry_window_close": "11:00",
+    "max_shares": 138,
+    "gates": {
+      "spread_bp_max": 25,
+      "spread_check_deadline": "10:00",
+      "rel_vol_min": 1.0,
+      "rr_min": 2.0,
+      "price_must_be_above": "vwap",
+      "spread_gate_is_hard": true,
+      "spread_gate_note": "NFLX failed spread gate on July 28 (47 bp), July 29 (231.2 bp). If spread >= 25 bp at 10:00 AM, skip for the full session with no further evaluation."
+    },
+    "note": "FOURTH PRIORITY — CONDITIONAL (spread hard gate). Small -1.3% gap ($73.16 to $72.18). No specific catalyst. Setup is VWAP reclaim (not ORB breakout), appropriate for a mild negative gap in a risk-on tape. Persistent spread failures: 47 bp July 28, 231.2 bp July 29. Hard gate: if live spread is >= 25 bp at 10:00 AM ET, skip NFLX for the full session — do not wait for normalization. ATR $2.69 is small; target requires $5.38 move (2 ATR). Only trade on a high-conviction VWAP reclaim with strong volume. Key support: $71.50. Key resistance: $74.00."
+  },
+  "BAC": {
+    "rank": 5,
+    "armed_status": "SKIP",
+    "armed_condition": "none",
+    "sector": "financials",
+    "prev_close": 61.76,
+    "atr_day": 1.21,
+    "avg_vol_10d": 2599691,
+    "premarket_price": 61.87,
+    "gap_pct": 0.0018,
+    "spread_bp": 1021.5,
+    "orb_high": null,
+    "orb_low": null,
+    "setup": "none",
+    "note": "SKIP — no catalyst, ATR $1.21 too small for meaningful 2:1 R/R within $10k cap. Essentially flat gap (+0.2%). Do not evaluate."
   }
 }

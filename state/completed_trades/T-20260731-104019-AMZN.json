@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260731-104019-AMZN",
+  "created_at_utc": "2026-07-31T14:40:19Z",
+  "ticker": "AMZN",
+  "side": "BUY",
+  "qty": 36,
+  "limit_price": 270.96,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "AMZN ORB breakout: price 270.68 above orb_high 269.41 on 5.94x relative volume. Primary armed unconditional setup. Strong earnings catalyst (AWS +36.7% YoY, Q2 blowout). Spread 4.1 bp, quote 0.9 sec fresh. RISK-ON day. Entry window 9:45-11:00 AM, evaluating at 10:40 AM.",
+  "risk": "Stop at 269.21, just below ORB high 269.41. If price falls back below the breakout level the ORB thesis is invalidated. Max loss 36 shares x $1.75 = $63.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 269.21,
+  "target": 274.46,
+  "quote_age_sec": 0.9,
+  "spread_bp": 4.1,
+  "status": "submitted",
+  "alpaca_order_id": "b13e1a20-e4b1-41e3-8e5a-da26931dc639",
+  "client_order_id": "T-20260731-104019-AMZN",
+  "submitted_at_utc": "2026-07-31T14:44:44.518492+00:00"
+}

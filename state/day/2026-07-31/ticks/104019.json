@@ -1,0 +1,114 @@
+{
+  "tick_time_et": "2026-07-31T10:40:19-04:00",
+  "tick_time_utc": "2026-07-31T14:40:19Z",
+  "minutes_since_open": 70,
+
+  "positions_managed": [],
+  "positions_note": "No open positions at start of tick. Nothing to manage.",
+
+  "market_snapshot": {
+    "AMZN": {
+      "last": 270.68, "bid": 270.58, "ask": 270.69,
+      "spread_bp": 4.1, "quote_age_sec": 0.9,
+      "vwap": 268.15, "orb_high": 269.41, "orb_low": 262.09,
+      "atr_1m": 0.71, "rel_volume": 5.94,
+      "above_vwap": true, "orb_breakout": true,
+      "marketable_buy_limit": 270.96
+    },
+    "NVDA": {
+      "last": 197.7, "spread_bp": 2.0, "quote_age_sec": 0.8,
+      "vwap": 197.53, "orb_high": 200.09, "orb_low": 197.11,
+      "atr_1m": 0.365, "rel_volume": 1.34,
+      "above_vwap": true, "orb_breakout": false
+    },
+    "INTC": {
+      "last": 93.2, "spread_bp": 4.3, "quote_age_sec": 0.8,
+      "vwap": 94.39, "orb_high": 97.83, "orb_low": 93.66,
+      "rel_volume": 2.65,
+      "above_vwap": false, "orb_breakout": false
+    },
+    "NFLX": {
+      "last": 71.17, "spread_bp": 1.4, "quote_age_sec": 1.0,
+      "vwap": 71.87, "orb_high": 72.74, "orb_low": 71.965,
+      "rel_volume": 1.35,
+      "above_vwap": false, "orb_breakout": false
+    },
+    "BAC": {
+      "last": 61.865, "spread_bp": 1.6,
+      "above_vwap": true, "orb_breakout": false,
+      "status": "SKIP per plan — no catalyst, small ATR"
+    }
+  },
+
+  "setup_evaluation": {
+    "AMZN": {
+      "plan_status": "ARMED UNCONDITIONAL — primary",
+      "setup": "orb",
+      "gate_spread_bp": "4.1 bp < 25 bp PASS",
+      "gate_orb_breakout": "price 270.68 > orb_high 269.41 PASS",
+      "gate_rel_volume": "5.94x >= 1.0x PASS",
+      "gate_entry_window": "10:40 AM < 11:00 AM PASS",
+      "gate_rr": "entry 270.96, stop 269.21, target 274.46 -> R/R 2.0:1 >= 2.0 PASS",
+      "sizing": {
+        "entry": 270.96,
+        "stop": 269.21,
+        "target": 274.46,
+        "risk_per_share": 1.75,
+        "qty_by_risk": 142,
+        "qty_by_cash": 36,
+        "qty": 36,
+        "deploy_usd": 9754.56,
+        "max_risk_usd": 63.0
+      },
+      "decision": "BUY"
+    },
+    "NVDA": {
+      "plan_status": "CONDITIONAL — secondary, requires sector disarm lifted at 9:45 AM",
+      "sector_disarm_check": "NVDA above_vwap=true at tick time — disarm lifted for NVDA",
+      "gate_orb_breakout": "price 197.7 < orb_high 200.09 FAIL",
+      "decision": "SKIP — no ORB trigger yet"
+    },
+    "INTC": {
+      "plan_status": "CONDITIONAL — tertiary, requires sector disarm lifted",
+      "gate_above_vwap_at_945": "above_vwap=false at tick time FAIL",
+      "decision": "SKIP — sector disarm condition not met for INTC"
+    },
+    "NFLX": {
+      "plan_status": "CONDITIONAL — 4th priority, VWAP reclaim only",
+      "gate_above_vwap": "above_vwap=false FAIL",
+      "decision": "SKIP — below VWAP, higher priority names still in play"
+    },
+    "BAC": {
+      "plan_status": "SKIP",
+      "decision": "SKIP — per plan, no catalyst"
+    }
+  },
+
+  "action_taken": {
+    "type": "BUY",
+    "trade_id": "T-20260731-104019-AMZN",
+    "alpaca_order_id": "b13e1a20-e4b1-41e3-8e5a-da26931dc639",
+    "ticker": "AMZN",
+    "qty": 36,
+    "limit_price": 270.96,
+    "stop": 269.21,
+    "target": 274.46,
+    "constitution_check": "PASS",
+    "daytrade_guard_check": "PASS",
+    "submitted": true
+  },
+
+  "open_orders_cancelled": [],
+
+  "account_state": {
+    "equity": 999657.56,
+    "cash": 999657.56,
+    "buying_power": 3998630.24,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used_today": 0,
+    "trades_remaining": 20,
+    "positions_open_before_tick": 0,
+    "position_slots_remaining": 8
+  }
+}

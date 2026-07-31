@@ -35,6 +35,10 @@ made of **rules to follow**, not stories.
   while the surrounding sector is under broad selling pressure is swimming against the tide; wait for
   the sector to stabilize before buying any name in it.
 - A premarket sector disarm stays in effect for the full session unless the tape shows broad stabilization across the sector (multiple names in the sector recovering and holding above VWAP). Do not lift the disarm for a single name bouncing in isolation.
+- **ORB setup:** early evidence is negative (4 trades, -0.36R expectancy; losses routinely exceed
+  the defined stop level, wins are small). Until the setup demonstrates positive expectancy, require
+  textbook entry quality: relative volume >1.5x, spread <15 bp, clean break above the ORB high, and
+  a confirmed companion stop order placed with the broker before the position is considered managed.
 - **Momentum setup:** early evidence is negative (0/1 wins, -0.975R). Until the setup proves out,
   require two extra confirmations beyond the base screen: (a) sector momentum must broadly align with
   the individual name, and (b) entry must be within 60 minutes of the ORB that seeded the thesis.
@@ -50,6 +54,7 @@ made of **rules to follow**, not stories.
 ## Entries & exits
 - Enter with marketable limit orders so we fill fast but never worse than our price.
 - Set the stop at a level that means "the idea was wrong," not just a random number. Honor it instantly.
+- When a position is entered, place a companion stop order with the broker on the same tick — before the entry is considered managed. The EOD flatten runs at most once per session and is a safety net, not a stop loss. On 2026-07-31, AMZN fell $4.34/share below entry before flatten ran because no automated stop was in place; the defined stop would have limited loss to $1.66/share.
 - Take profit at the target; don't get greedy and give back a winner.
 - When an ORB position hits its defined target intraday, exit at that level — do not ride to EOD
   flatten. EOD exits are a safety net, not an exit strategy. Over 3 ORB trades the average win was
@@ -136,6 +141,18 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-07-31: No tuning. Tuner eligible ("ok to tune", 29 days of history) but no rule fired —
+  parameters left unchanged. Today: 1 AMZN ORB trade, bought 36 @ $270.87, closed by flatten at
+  ~$266.53, loss ~$156. The position fell through its defined stop at $269.21 before flatten ran
+  because no companion stop order was in place — the position drifted $2.68/share past the stop
+  level unmanaged. Two lessons encoded tonight: (1) Entries & exits — a companion stop order must
+  be placed with the broker on the same tick as the entry; EOD flatten is a safety net, not a stop
+  loss; rule added. (2) Setups — ORB is now 4 trades at -0.36R expectancy with losses exceeding
+  defined stops; added an explicit ORB warning in Setups requiring >1.5x rel vol, <15 bp spread,
+  and a confirmed companion stop before any ORB entry. Account equity $999,501.34 (-0.05% total
+  return). Over 29 days: 12 trades, 33.3% win rate, avg win +0.51R, avg loss -1.10R, ORB -0.36R
+  across 4 trades, momentum -0.975R across 1 trade. Tuning ledger remains empty; no parameter has
+  ever been changed.
 - 2026-07-30: No tuning. Tuner eligible ("ok to tune", 28 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Today was the 10th+ consecutive zero-trade session; the
   last executed trade was July 10. Realized P&L $0.00; account equity $999,657.58 (up $16.65 from

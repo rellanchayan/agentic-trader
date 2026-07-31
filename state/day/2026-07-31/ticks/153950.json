@@ -1,0 +1,88 @@
+{
+  "tick_time_et": "2026-07-31T15:39:50-04:00",
+  "tick_time_utc": "2026-07-31T19:39:50Z",
+  "minutes_since_open": 369,
+
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "note": "3:39 PM ET — past 3:30 PM no-new-entries cutoff; flatten window opens at 3:50 PM"
+  },
+
+  "positions_managed": [],
+  "positions_note": "No open positions. Confirmed via context snapshot and live Alpaca /positions call (returned []). We are flat.",
+
+  "account_state": {
+    "equity": 999501.34,
+    "cash": 999501.34,
+    "buying_power": 3998005.36,
+    "day_pnl": -156.22,
+    "loss_budget_remaining": 2843.78,
+    "trades_used_today": 1,
+    "trades_remaining": 19,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+
+  "market_snapshot": {
+    "AMZN": {
+      "last": 271.905,
+      "bid": 271.55,
+      "ask": 271.59,
+      "spread_bp": 1.5,
+      "quote_age_sec": 0.4,
+      "vwap": 269.57,
+      "orb_high": 269.41,
+      "orb_low": 262.09,
+      "atr_1m": 0.412,
+      "rel_volume": 2.32,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "note": "AMZN trading $271.91, above VWAP and ORB high. Prior BUY order placed at 10:40 AM (36 shares @ $270.96, limit). Now flat — position closed or order never confirmed filled. Cannot claim fill without reconcile."
+    },
+    "NVDA": {
+      "last": 200.505,
+      "spread_bp": 20.4,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "note": "Spread 20.4 bp — would fail spread gate even if entry window were open. Past entry window anyway."
+    },
+    "INTC": {
+      "last": 92.03,
+      "spread_bp": 3.3,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "Below VWAP, no ORB breakout. Below ORB low (93.66). No setup."
+    },
+    "NFLX": {
+      "last": 71.575,
+      "spread_bp": 1.4,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "Below VWAP, no ORB breakout. Spread fine but setup absent."
+    },
+    "BAC": {
+      "last": 62.075,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "note": "SKIP per plan — no catalyst, ATR too small."
+    }
+  },
+
+  "setup_evaluation": {
+    "reason_no_new_entries": "past_no_new_entries = TRUE. It is 3:39 PM ET. The plan's last entry gate was 11:00 AM; the hard system cutoff is 3:30 PM. Both are well in the past. No new positions may be opened this tick regardless of setup quality.",
+    "new_entries_considered": false
+  },
+
+  "action_taken": {
+    "type": "HOLD",
+    "reason": "Flat (no open positions), past no-new-entries window (3:39 PM > 3:30 PM hard cutoff). Waiting for flatten window at 3:50 PM — but we are already flat, so flatten phase will have nothing to do. Logging tick as required by playbook. No orders placed or cancelled."
+  },
+
+  "open_orders_cancelled": [],
+
+  "prior_trade_context": {
+    "amzn_buy_10_40": "AMZN BUY placed at 10:40 AM (36 shares, limit $270.96, stop $269.21, target $274.46). Currently flat with -$156.22 day P&L. AMZN now at $271.91, above entry and above stop — if position was open, it would show unrealized profit. Flat status suggests either: (a) position was stopped out during intraday dip and AMZN since recovered, or (b) DAY order did not fill. Only --reconcile confirms. Do not claim a fill."
+  }
+}

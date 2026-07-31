@@ -3,9 +3,15 @@
     "date": "2026-07-31",
     "generated_utc": "2026-07-31T13:29:17.841676+00:00",
     "source": "watchlist_build",
+    "screener_finalized_utc": "2026-07-31T13:35:00.000000+00:00",
     "candidates_considered": 5,
-    "top": 5,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 3,
+    "dropped": {
+      "NFLX": "No catalyst today. ATR $2.69 on ~$72 makes 2:1 R/R structurally difficult ($10k cap = ~138 shares; 1x ATR = ~$371 max gain). Persistent live-session spread issues documented on 2026-07-28 and 2026-07-30 (47-231 bp live). No conditional path.",
+      "BAC": "Essentially flat gap (+0.2%). ATR $1.21 on $62 = 2% daily range. No catalyst. Explicit SKIP in 2026-07-30 plan. No conditional path."
+    },
+    "primary_catalyst": "AMZN Q2 2026 earnings reported after close 2026-07-30. AMZN gapping +12.1% confirms AWS/cloud beat, validating AI-infrastructure spending thesis — sympathetically positive for NVDA and INTC.",
+    "note": "Pre-market screen finalized by day-screener. ORB levels fill in live after the open (orb_high/orb_low remain null until tick loop writes them). All premarket spread_bp readings (~430-1007 bp) reflect thin pre-open quoting, NOT untradeable conditions. Live session spread gate of 25 bp applies after 9:30 AM ET."
   },
   "AMZN": {
     "sector": "consumer",
@@ -17,19 +23,11 @@
     "spread_bp": 430.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,178,927 sh/day); +12.1% gap"
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 91.16,
-    "atr_day": 7.92,
-    "avg_vol_10d": 4049030,
-    "premarket_price": 95.83,
-    "gap_pct": 0.0512,
-    "spread_bp": 1007.0,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (4,049,030 sh/day); +5.1% gap"
+    "support": 258.00,
+    "resistance": 270.00,
+    "vwap_approx": 264.00,
+    "setup": "orb",
+    "note": "PRIMARY. Gapped +12.1% ($235.75 to $264.31) on AMZN Q2 2026 earnings beat (AWS/cloud revenue). Earnings are already reported — no binary event risk remaining today. Gap-and-go ORB setup: let 9:30-9:45 AM range form, enter above ORB high on volume confirmation (rel vol >= 1.0), stop below ORB low. Key support $258 (round number / premarket floor); key resistance $270 (round number target). Spread gate: live spread must be < 25 bp; premarket 430 bp is better than peers and should normalize quickly. No time-limit restriction (earnings already out — normal 3:55 PM flatten applies)."
   },
   "NVDA": {
     "sector": "technology",
@@ -41,30 +39,26 @@
     "spread_bp": 1005.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,960,595 sh/day); +1.2% gap"
+    "support": 195.00,
+    "resistance": 200.00,
+    "vwap_approx": 197.00,
+    "setup": "orb",
+    "note": "SECONDARY (conditional). Gapped +1.2% ($195.04 to $197.45) on sympathy with AMZN AWS beat confirming AI-infrastructure demand. Most liquid name in list (4.96M avg vol/day). ATR $7.65 on ~$197 gives room for 2:1 R/R within $10k cap. Key support: $195.00 (previous close, round number floor). Key resistance: $200.00 (major round number — break-and-hold above $200 with volume is the cleanest ORB trigger). Condition: live spread < 25 bp after open."
   },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 73.16,
-    "atr_day": 2.69,
-    "avg_vol_10d": 3696380,
-    "premarket_price": 72.18,
-    "gap_pct": -0.0134,
-    "spread_bp": 1005.8,
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 91.16,
+    "atr_day": 7.92,
+    "avg_vol_10d": 4049030,
+    "premarket_price": 95.83,
+    "gap_pct": 0.0512,
+    "spread_bp": 1007.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,696,380 sh/day); -1.3% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 61.76,
-    "atr_day": 1.21,
-    "avg_vol_10d": 2599691,
-    "premarket_price": 61.87,
-    "gap_pct": 0.0018,
-    "spread_bp": 1021.5,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,599,691 sh/day); +0.2% gap"
+    "support": 93.00,
+    "resistance": 97.00,
+    "vwap_approx": 95.50,
+    "setup": "orb",
+    "note": "TERTIARY (conditional). Gapped +5.1% ($91.16 to $95.83) on AMZN cloud beat (same sector sympathy as NVDA). Extremely volatile: ATR $7.92 on ~$96 = 8.2% typical daily range — use strict stop at ORB low, do not widen stops to accommodate volatility. Key support: $93.00 (round number, midpoint of gap). Key resistance: $97.00 (round number ceiling above premarket). Condition: live spread < 25 bp at entry evaluation. If spread is wide at entry point, treat as a skip signal and pass on the setup entirely. Size conservatively relative to AMZN and NVDA given the elevated intraday volatility."
   }
 }

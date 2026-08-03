@@ -141,6 +141,17 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-03: No tuning. Tuner eligible ("ok to tune", 30 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Today was a no-trade day: all 3 armed setups (AAPL ORB,
+  AMZN ORB, NFLX VWAP reclaim) had their entry windows expire at 11:00 AM without a trade executed.
+  AAPL was blocked by the spread gate (89.7 bp vs. 15 bp max). AMZN passed all pre-entry criteria
+  but price never broke above the ORB high of $286.90 (was $1.22 short at the last observation).
+  NFLX never produced a VWAP reclaim and rel_vol was below the minimum threshold. All three existing
+  gates fired correctly — this is a valid no-trade outcome, not a loop failure. No new rules are
+  warranted; the existing gates covered every case. Account equity $999,501.32, $0 realized P&L,
+  ended flat. Over 30 days: 12 trades (0.40/day), 33.3% win rate, avg win +0.51R, avg loss -1.10R,
+  ORB -0.362R across 3 trades, momentum -0.975R across 1 trade, fill rate 91.7% (11/12). Tuning
+  ledger remains empty; no parameter has ever been changed.
 - 2026-07-31: No tuning. Tuner eligible ("ok to tune", 29 days of history) but no rule fired —
   parameters left unchanged. Today: 1 AMZN ORB trade, bought 36 @ $270.87, closed by flatten at
   ~$266.53, loss ~$156. The position fell through its defined stop at $269.21 before flatten ran

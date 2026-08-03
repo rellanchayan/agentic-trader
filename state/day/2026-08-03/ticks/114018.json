@@ -1,0 +1,72 @@
+{
+  "tick_id": "2026-08-03T114018-ET",
+  "timestamp_et": "2026-08-03T11:40:18-04:00",
+  "timestamp_utc": "2026-08-03T15:40:18Z",
+  "minutes_since_open": 130,
+  "action": "NO_ACTION",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "AAPL",
+      "plan_priority": 1,
+      "setup": "orb",
+      "last": 303.815,
+      "orb_high": 311.77,
+      "orb_low": 305.26,
+      "vwap": 305.78,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.91,
+      "spread_bp": 2.0,
+      "quote_age_sec": 0.9,
+      "decision": "SKIP",
+      "reason": "Entry window 9:45-11:00 AM ET EXPIRED (now 11:40 AM). Additionally: (1) AAPL was disqualified at prior tick (10:39 AM) by spread gate (89.7 bp) and price below Friday close ($308.73); that disqualification remains in effect. (2) Price $303.815 is $7.955 below ORB high of $311.77 — no breakout occurred during or after the entry window. (3) Price is below VWAP $305.78. Thesis did not materialize. AAPL will not be re-evaluated today."
+    },
+    {
+      "ticker": "AMZN",
+      "plan_priority": 2,
+      "setup": "orb",
+      "last": 285.84,
+      "orb_high": 286.90,
+      "orb_low": 278.215,
+      "vwap": 284.59,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 2.79,
+      "spread_bp": 41.7,
+      "quote_age_sec": 0.6,
+      "decision": "SKIP",
+      "reason": "Entry window 9:45-11:00 AM ET EXPIRED (now 11:40 AM). AMZN never produced an ORB breakout during the window: at 10:39 AM price was $285.685 vs ORB high $286.90 — fell $1.22 short of the trigger. Now at $285.84, still $1.06 below ORB high. Additionally, current spread is 41.7 bp — above both the plan's 15 bp ORB cap and the hard config limit of 25 bp. Even if the window were still open, spread alone would disqualify the entry. No trade today for AMZN."
+    },
+    {
+      "ticker": "NFLX",
+      "plan_priority": 3,
+      "setup": "vwap_reclaim",
+      "last": 73.245,
+      "orb_high": 73.905,
+      "orb_low": 72.66,
+      "vwap": 73.14,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 1.03,
+      "spread_bp": 1.4,
+      "quote_age_sec": 0.4,
+      "decision": "SKIP",
+      "reason": "Entry window 9:45-11:00 AM ET EXPIRED (now 11:40 AM). At the prior tick (10:39 AM), NFLX was at $72.665, below VWAP $73.25. It has since recovered above VWAP ($73.245 vs VWAP $73.14), which superficially resembles the VWAP reclaim pattern, but: (1) the entry window is 40 minutes past close — cannot enter at 11:40 AM on a setup armed only until 11:00 AM; (2) rel_vol 1.03x is below the 1.2x minimum required by config; (3) we cannot confirm the reclaim was clean during the window — we did not observe an entry opportunity in real time. No trade."
+    }
+  ],
+  "open_orders_reviewed": [],
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "prior_tick_context": {
+    "tick_id": "2026-08-03T103926-ET",
+    "key_decision": "AAPL disqualified by spread gate (89.7 bp) + price below Friday close. AMZN waiting for ORB breakout — never triggered. NFLX waiting for VWAP reclaim — did not trigger during window."
+  },
+  "summary": "No action. All three armed entry windows expired at 11:00 AM ET. AAPL was disqualified at the prior tick and remains disqualified. AMZN never broke above ORB high ($286.90) during its entry window and now has a 41.7 bp spread. NFLX appears to have crossed above VWAP since the last tick but the entry window closed 40 minutes ago and rel_vol (1.03x) is below the 1.2x minimum. We are flat, $0 P&L, full loss budget intact. No further entries are expected today — all entry windows per the day plan have now expired. Next action is EOD flatten at ~3:50 PM ET, but currently holding nothing so flatten is a no-op unless a position is somehow opened."
+}

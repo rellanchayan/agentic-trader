@@ -1,0 +1,35 @@
+{
+  "tick_time": "15:39",
+  "timestamp_et": "2026-08-04T15:39:34-04:00",
+  "action": "NO_TRADE",
+  "verdict": "PROCEED",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "reason_skipped": "Past all entry windows. last entry window closed 11:00 AM ET. Also past 2:30 PM AMD-earnings cutoff. rel_vol 0.87 (< 1.5x ORB minimum)."
+    },
+    {
+      "ticker": "NVDA",
+      "reason_skipped": "Past all entry windows. last entry window closed 11:00 AM ET. Also past 2:30 PM AMD-earnings cutoff. rel_vol 0.69 (< 1.5x ORB minimum)."
+    },
+    {
+      "ticker": "NFLX",
+      "reason_skipped": "Past all entry windows (closed 11:00 AM ET). past_no_new_entries flag active. rel_vol 1.04 (< 1.2x minimum). orb_breakout false."
+    },
+    {
+      "ticker": "AAPL",
+      "reason_skipped": "Past all entry windows (closed 11:00 AM ET). past_no_new_entries flag active. rel_vol 0.87 (< 1.5x ORB minimum). Backup only."
+    },
+    {
+      "ticker": "AMZN",
+      "reason_skipped": "Disarmed per plan (spread 57.4 bp premarket). below VWAP (277.79 vs 278.03)."
+    }
+  ],
+  "note": "All entry windows expired at 11:00 AM ET. Hard no-new-entries cutoff passed at 3:30 PM ET. No positions to manage — flat. Day P&L -$5.89 (well within $3,000 loss budget). SCHEDULING NOTE: Only 1 prior tick logged today (09:40) — the entry window 9:45–11:00 AM appears to have run with no ticks, consistent with the recurring loop-exit failure pattern documented in the PLAYBOOK.",
+  "day_pnl": -5.89,
+  "equity": 999495.43,
+  "trades_today": 0,
+  "positions_open": 0,
+  "flatten_needed": false
+}

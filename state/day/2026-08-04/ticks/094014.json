@@ -1,0 +1,61 @@
+{
+  "tick_id": "2026-08-04T094014",
+  "timestamp_et": "2026-08-04T09:40:14-04:00",
+  "minutes_since_open": 10,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "market_assessment": {
+    "INTC": {
+      "last": 97.26,
+      "spread_bp": 131.6,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 3.53,
+      "verdict": "SKIP — spread 131.6 bp far exceeds 15 bp ORB limit. Bid $96.60 / Ask $97.88 is extremely wide. Despite being above VWAP, untradeable."
+    },
+    "NVDA": {
+      "last": 210.96,
+      "vwap": 211.09,
+      "spread_bp": 44.0,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 2.02,
+      "verdict": "SKIP — below VWAP ($210.96 vs $211.09). Per plan: semiconductor disarm remains in effect for NVDA when it is below VWAP at evaluation. Spread 44.0 bp also fails."
+    },
+    "NFLX": {
+      "last": 73.12,
+      "vwap": 72.90,
+      "spread_bp": 5.5,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 2.45,
+      "verdict": "BEST CANDIDATE — above VWAP, spread 5.5 bp (well under limit), rel_vol 2.45x. ORB high $73.36 not yet broken. VWAP reclaim thesis intact (premarket gap down, now recovered above VWAP). Entry window opens 9:45 AM — 5 minutes away. Watch closely."
+    },
+    "AAPL": {
+      "last": 303.27,
+      "vwap": 303.23,
+      "spread_bp": 18.1,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 4.53,
+      "verdict": "CONDITIONAL/BACKUP — spread 18.1 bp exceeds 15 bp ORB limit. Backup only per plan; all primary candidates must be evaluated first. High rel_vol 4.53x is notable but spread disqualifies for now."
+    },
+    "AMZN": {
+      "last": 277.78,
+      "spread_bp": 5.4,
+      "above_vwap": false,
+      "verdict": "DISARMED per plan — historical spread failures. Below VWAP."
+    }
+  },
+  "primary_reason_no_trade": "Entry window not yet open. Day plan requires waiting until 9:45 AM ET for the 15-minute ORB to form before any entries. Current time is 9:40 AM — 5 minutes early. Even if window were open, INTC (131.6 bp spread) and NVDA (below VWAP + 44.0 bp spread) both fail mandatory gates. NFLX is the only viable candidate and will be evaluated at 9:45 AM.",
+  "next_tick_focus": "At 9:45 AM: (1) Check INTC — if spread drops below 15 bp AND still above VWAP AND rel_vol > 1.5x AND ORB breakout confirmed, trade INTC. (2) Check NVDA — if above VWAP AND spread < 15 bp AND rel_vol > 1.5x AND ORB breakout confirmed, semiconductor disarm formally lifted and NVDA armed. (3) NFLX VWAP reclaim — if still above VWAP, spread < 15 bp, rel_vol > 1.2x, enter NFLX VWAP reclaim. Verify 2:1 R/R at entry.",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

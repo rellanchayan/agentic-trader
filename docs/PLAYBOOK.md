@@ -70,6 +70,12 @@ made of **rules to follow**, not stories.
   a high-gap name — especially combined with price below VWAP — is a reversal signal, not merely a
   transaction-cost problem. (2026-07-09: INTC 209.5 bp spread at 12:39 PM with price below VWAP;
   stock broke below ORB low by 2:39 PM. The gate fired early; the chart confirmed it two hours later.)
+- Premarket spread readings are not a reliable proxy for open-session liquidity on large-gap names.
+  INTC showed 6.4 bp premarket on 2026-08-04 and blew out to 131.6 bp at the open — a 20x widening.
+  When a candidate has a premarket gap of 3% or more, expect opening-minutes spread to be far wider
+  than the premarket reading. The live spread gate fires at every tick and is the authoritative check;
+  do not arm a high-gap name in the plan on the assumption that a tight premarket spread guarantees a
+  clean entry.
 
 ## Sizing
 - Size from risk first: lose no more than the per-trade risk budget if stopped.
@@ -141,6 +147,17 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-04: No tuning. Tuner eligible ("ok to tune", 31 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day caused by a tick-loop scheduling
+  failure (ticks only at 9:40 AM and 3:39 PM; the entire 9:45–11:00 AM entry window was uncovered —
+  second consecutive session with this pattern). The analytical work was sound: NFLX was the best
+  candidate at 9:40 AM (5.5 bp spread, above VWAP, 2.45x rel_vol) and would likely have passed entry
+  gates at 9:45 AM. One durable trading rule added tonight: INTC's premarket spread was 6.4 bp but
+  blew out to 131.6 bp at the open (20x widening) — tight premarket spreads are not reliable proxies
+  for open-session liquidity on high-gap names. Rule added to Entries & exits. Account equity
+  $999,495.43, $0 realized P&L, ended flat. Over 31 days: 12 trades (0.39/day), 33.3% win rate,
+  avg win +0.51R, avg loss -1.10R, ORB -0.362R across 3 trades, momentum -0.975R across 1 trade,
+  fill rate 91.7% (11/12). Tuning ledger remains empty; no parameter has ever been changed.
 - 2026-08-03: No tuning. Tuner eligible ("ok to tune", 30 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Today was a no-trade day: all 3 armed setups (AAPL ORB,
   AMZN ORB, NFLX VWAP reclaim) had their entry windows expire at 11:00 AM without a trade executed.

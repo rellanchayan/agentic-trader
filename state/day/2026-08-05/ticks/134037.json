@@ -1,0 +1,18 @@
+{
+  "tick_time_et": "2026-08-05T13:40:37-04:00",
+  "minutes_since_open": 250,
+  "verdict": "HOLD",
+  "action": "HOLD",
+  "reason": "All ORB/VWAP entry windows closed at 11:00 AM (250 min since open). No open positions to manage. No new entries possible under any armed setup. AAPL $309.77 has technically broken ORB high ($309.26) and is above VWAP with 1.0 bp spread but rel_vol only 0.84x (need 1.5x) and entry window closed 150+ min ago — conditional backup only, no trigger. INTC $101.73 above ORB high ($101.06) and above VWAP with 2.9 bp spread but rel_vol 0.58x (need 1.5x) and entry window closed 150+ min ago — playbook hard rule: no ORB entries >90 min after opening range. AMZN $271.54 far below VWAP $275.47 and ORB high $282.72, setup failed. NFLX $73.48 below VWAP $73.93, no VWAP reclaim. NVDA $221.05 disarmed (AMD sector drag, rel_vol 1.03x below disarm threshold). Mean-reversion not armed (risk-on regime). Day P&L $0.00. 0/20 trades. 0/8 positions. 8/8 slots free. Next action: flatten window begins at 3:50 PM ET.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "market_snapshot": {
+    "AAPL": {"last": 309.765, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.84, "spread_bp": 1.0},
+    "AMZN": {"last": 271.54, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.69, "spread_bp": 2.9},
+    "INTC": {"last": 101.73, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.58, "spread_bp": 2.9},
+    "NFLX": {"last": 73.475, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.60, "spread_bp": 1.4},
+    "NVDA": {"last": 221.05, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.03, "spread_bp": 0.9}
+  },
+  "orders_submitted": []
+}

@@ -1,0 +1,91 @@
+{
+  "tick_id": "2026-08-05T10:39:49-04:00",
+  "action": "WAIT",
+  "clock": {
+    "minutes_since_open": 69,
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "entry_window_open": true,
+    "entry_window_closes_et": "11:00 AM",
+    "minutes_remaining_in_window": 21
+  },
+  "account": {
+    "equity": 999495.37,
+    "cash": 999495.37,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "AMZN",
+      "setup": "orb",
+      "armed": true,
+      "priority": "primary",
+      "gates": {
+        "spread_bp": {"value": 125.0, "max": 15, "pass": false, "reason": "125 bp >> 15 bp max — FAIL"},
+        "rel_volume": {"value": 0.93, "min": 1.5, "pass": false, "reason": "0.93x << 1.5x min — FAIL"},
+        "orb_breakout": {"value": false, "pass": false, "reason": "price $277.52 below ORB high $282.72"},
+        "above_vwap": {"value": false, "pass": false}
+      },
+      "verdict": "SKIP",
+      "skip_reason": "Spread 125 bp (max 15 bp), rel_vol 0.93x (min 1.5x), no ORB breakout. Multiple gate failures."
+    },
+    {
+      "ticker": "INTC",
+      "setup": "orb",
+      "armed": true,
+      "priority": "secondary",
+      "gates": {
+        "spread_bp": {"value": 4.1, "max": 15, "pass": true},
+        "rel_volume": {"value": 0.91, "min": 1.5, "pass": false, "reason": "0.91x << 1.5x min — FAIL"},
+        "orb_breakout": {"value": false, "pass": false, "reason": "price $98.53 below ORB high $101.06"},
+        "above_vwap": {"value": false, "pass": false},
+        "sector_caveat": "AMD sector headwinds — monitoring INTC only if AMD stabilizes"
+      },
+      "verdict": "SKIP",
+      "skip_reason": "Rel_vol 0.91x (min 1.5x), no ORB breakout, below VWAP."
+    },
+    {
+      "ticker": "NFLX",
+      "setup": "vwap_reclaim",
+      "armed": true,
+      "priority": "tertiary",
+      "gates": {
+        "spread_bp": {"value": 4.0, "max": 15, "pass": true},
+        "rel_volume": {"value": 0.88, "min": 1.5, "pass": false, "reason": "0.88x << 1.5x min — FAIL"},
+        "above_vwap": {"value": true, "pass": true, "note": "already above VWAP — reclaim occurred but rel_vol insufficient to confirm conviction"},
+        "quote_age_sec": {"value": 1.3, "max": 30, "pass": true}
+      },
+      "verdict": "SKIP",
+      "skip_reason": "Rel_vol 0.88x (min 1.5x) — insufficient volume conviction for VWAP reclaim entry."
+    },
+    {
+      "ticker": "AAPL",
+      "setup": "orb",
+      "armed": false,
+      "priority": "backup_only",
+      "gates": {
+        "spread_bp": {"value": 4.2, "max": 15, "pass": true},
+        "rel_volume": {"value": 1.39, "min": 1.5, "pass": false, "reason": "1.39x < 1.5x min — FAIL (marginal)"},
+        "orb_breakout": {"value": false, "pass": false, "reason": "price $307.56 below ORB high $309.26"},
+        "above_vwap": {"value": false, "pass": false}
+      },
+      "verdict": "SKIP",
+      "skip_reason": "Backup only (AMZN and INTC still being evaluated). Rel_vol 1.39x marginal but below 1.5x threshold. Not actionable."
+    },
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "armed": false,
+      "priority": "disarmed",
+      "verdict": "SKIP",
+      "skip_reason": "DISARMED per day plan — AMD sector drag, 3% gap premarket, wide opening spreads expected."
+    }
+  ],
+  "decision": "WAIT — no candidate meets all required entry criteria. ORB entry window closes in ~21 minutes (11:00 AM ET). No positions to manage."
+}

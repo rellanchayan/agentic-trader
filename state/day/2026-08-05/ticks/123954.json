@@ -1,0 +1,61 @@
+{
+  "tick_time_et": "2026-08-05T12:39:54-04:00",
+  "minutes_since_open": 189,
+  "action": "HOLD",
+  "reason": "All ORB and VWAP reclaim entry windows closed at 11:00 AM ET (189 min since open). No open positions to manage. No qualifying new setups.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trades_considered": [
+    {
+      "ticker": "INTC",
+      "setup": "orb",
+      "verdict": "SKIP",
+      "reason": "INTC at $102.06 is above ORB high $101.06 (orb_breakout flag true), but ORB entry window closed at 11:00 AM ET — 100+ minutes ago. Playbook hard rule: no ORB or momentum entries more than 90 minutes after the opening range. Semiconductor sector headwinds from AMD (-8%+ premarket) also still active per day plan. Window is closed; this would be a late chase into a mature trend."
+    },
+    {
+      "ticker": "AMZN",
+      "setup": "orb",
+      "verdict": "SKIP",
+      "reason": "ORB window closed at 11:00 AM. Current price $272.77 is far below ORB high $282.715 and below VWAP $276.12 — setup never triggered and window is now closed."
+    },
+    {
+      "ticker": "NFLX",
+      "setup": "vwap_reclaim",
+      "verdict": "SKIP",
+      "reason": "VWAP reclaim window closed at 11:00 AM. Current price $73.40 is below VWAP $74.01 — no reclaim occurred. rel_vol 0.70x below 1.5x minimum."
+    },
+    {
+      "ticker": "AAPL",
+      "setup": "orb",
+      "verdict": "SKIP",
+      "reason": "Conditional backup only. ORB window closed at 11:00 AM. Price $308.76 just below ORB high $309.26 — no breakout triggered, and window is now closed."
+    },
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "verdict": "SKIP",
+      "reason": "NVDA disarmed all day per day plan — AMD semiconductor sector drag. Price $221.27 approaching ORB high $221.77 but disarm overrides. ORB window also closed."
+    }
+  ],
+  "market_snapshot": {
+    "AAPL": {"last": 308.76, "vwap": 308.55, "orb_high": 309.26, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.99, "spread_bp": 1.6},
+    "AMZN": {"last": 272.77, "vwap": 276.12, "orb_high": 282.715, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.77, "spread_bp": 2.2},
+    "INTC": {"last": 102.06, "vwap": 100.25, "orb_high": 101.06, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.64, "spread_bp": 2.0},
+    "NFLX": {"last": 73.40, "vwap": 74.01, "orb_high": 75.215, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.70, "spread_bp": 1.4},
+    "NVDA": {"last": 221.27, "vwap": 220.01, "orb_high": 221.77, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.18, "spread_bp": 0.9}
+  },
+  "account": {
+    "equity": 999495.37,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "order_submitted": null,
+  "next_action": "Monitor until flatten window at 3:50 PM ET. Remain flat."
+}

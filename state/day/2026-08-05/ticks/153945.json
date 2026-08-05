@@ -1,0 +1,16 @@
+{
+  "time_et": "2026-08-05T15:39:45-04:00",
+  "minutes_since_open": 369,
+  "action": "HOLD",
+  "reason": "Past no-new-entries cutoff (3:30 PM ET). No open positions to manage. Flatten window opens in ~10 min at 3:50 PM. AAPL $309.59 above ORB high and VWAP, rel_vol 0.71x — entry window closed 4+ hrs ago. AMZN $271.45 below VWAP $274.39 and ORB range. INTC $102.53 above ORB high $101.06 and VWAP, rel_vol 0.51x — entry window closed 4+ hrs ago. NFLX $73.66 below VWAP $73.83, no reclaim. NVDA $220.81 disarmed (AMD sector drag). Day P&L $0. 0/20 trades. 0/8 positions. Awaiting flatten window.",
+  "day_pnl": 0.0,
+  "trades": 0,
+  "positions": 0,
+  "market_snapshot": {
+    "AAPL": {"last": 309.59, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.71, "spread_bp": 1.3},
+    "AMZN": {"last": 271.45, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.63, "spread_bp": 1.5},
+    "INTC": {"last": 102.525, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.51, "spread_bp": 3.9},
+    "NFLX": {"last": 73.66, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.55, "spread_bp": 1.4},
+    "NVDA": {"last": 220.81, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.88, "spread_bp": 1.4}
+  }
+}

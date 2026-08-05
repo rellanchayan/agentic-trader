@@ -1,0 +1,13 @@
+{
+  "time_et": "2026-08-05T14:39:31-04:00",
+  "minutes_since_open": 309,
+  "action": "HOLD",
+  "reason": "All ORB/VWAP entry windows closed at 11:00 AM (309 min since open). No open positions to manage. No new entries possible. INTC $102.36 above ORB high $101.06 and VWAP $100.70 but rel_vol 0.53x (need 1.5x) and window closed 219+ min ago — playbook bars ORB entries >90 min after ORB. AMZN $271.40 far below VWAP $274.91 and ORB range ($277.45–$282.72). NFLX $73.49 below VWAP $73.89 and below ORB low $74.09 — no reclaim. AAPL $308.44 below VWAP $308.68 and below ORB high $309.26 — window closed. NVDA $221.85 disarmed per plan (AMD sector drag, gap/spread risk). Mean-reversion not armed (risk-on regime). Flatten window opens at 3:50 PM ET (~71 min from now).",
+  "positions_evaluated": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "loss_budget_remaining": 3000.0,
+  "equity": 999495.37
+}

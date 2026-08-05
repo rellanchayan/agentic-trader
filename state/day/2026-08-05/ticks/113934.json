@@ -1,0 +1,45 @@
+{
+  "tick_time_et": "2026-08-05T11:39:34-04:00",
+  "minutes_since_open": 129,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entries_considered": [],
+  "decision": "No action. All ORB and VWAP entry windows closed at 11:00 AM ET (per plan). No open positions to manage. No setup qualified before the window closed.",
+  "market_snapshot": {
+    "AMZN": {
+      "last": 274.73, "vwap": 277.60, "orb_high": 282.715, "rel_volume": 0.78,
+      "spread_bp": 2.2, "above_vwap": false, "orb_breakout": false,
+      "gate_result": "WINDOW_CLOSED — entry window expired at 11:00 AM"
+    },
+    "INTC": {
+      "last": 100.40, "vwap": 99.91, "orb_high": 101.06, "rel_volume": 0.66,
+      "spread_bp": 3.0, "above_vwap": true, "orb_breakout": false,
+      "gate_result": "WINDOW_CLOSED — entry window expired at 11:00 AM; rel_vol 0.66x < 1.5x required"
+    },
+    "NFLX": {
+      "last": 73.815, "vwap": 74.14, "orb_high": 75.215, "rel_volume": 0.78,
+      "spread_bp": 1.4, "above_vwap": false, "orb_breakout": false,
+      "gate_result": "WINDOW_CLOSED — VWAP reclaim never triggered; below VWAP; window expired at 11:00 AM"
+    },
+    "AAPL": {
+      "last": 308.38, "vwap": 308.54, "orb_high": 309.26, "rel_volume": 1.19,
+      "spread_bp": 11.0, "above_vwap": false, "orb_breakout": false,
+      "gate_result": "WINDOW_CLOSED — conditional backup only; no trigger; window expired at 11:00 AM"
+    },
+    "NVDA": {
+      "last": 219.99, "vwap": 220.01, "orb_high": 221.77, "rel_volume": 1.42,
+      "spread_bp": 15.5, "above_vwap": false, "orb_breakout": false,
+      "gate_result": "DISARMED — AMD sector drag; disarmed premarket per plan"
+    }
+  },
+  "account": {
+    "equity": 999495.37,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "next_action": "Monitor through 3:30 PM ET cutoff for new-entries window. No armed setups remain today. Flatten window opens at 3:50 PM; no positions to flatten."
+}

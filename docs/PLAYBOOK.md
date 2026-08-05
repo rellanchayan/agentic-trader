@@ -147,6 +147,21 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-05: No tuning. Tuner eligible ("ok to tune", 32 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Today was a zero-trade day; 0 placed, 0 filled, $0.00
+  realized P&L, ended flat. Observation: `config.json` has `min_rel_volume: 1.2` (the screener
+  candidate threshold) while the ORB entry rule in the playbook requires >1.5x. These serve
+  different purposes — the config gates initial watchlist inclusion, the playbook rule gates entry.
+  At 09:40 AM today, INTC showed 1.22x rel_vol: it passed the screener minimum but was correctly
+  blocked at the entry stage by the 1.5x rule. The two-tier filter is working as intended. The
+  config value is not wrong, but it is worth tracking: if the screener regularly surfaces candidates
+  that are then rejected by the stricter entry rule, the net effect is wasted evaluation cycles on
+  names that were never going to qualify. If this pattern repeats, raising `min_rel_volume` in
+  config closer to 1.5x would tighten the screener to match actual entry standards. No action
+  taken tonight — the sample of affected candidates is a single instance. Account equity
+  $999,495.37, $0 realized P&L, ended flat. Over 32 days: 12 trades (0.375/day), 33.3% win rate,
+  avg win +0.51R, avg loss -1.10R, ORB -0.362R across 3 trades, momentum -0.975R across 1 trade,
+  fill rate 91.7% (11/12). Tuning ledger remains empty; no parameter has ever been changed.
 - 2026-08-04: No tuning. Tuner eligible ("ok to tune", 31 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day caused by a tick-loop scheduling
   failure (ticks only at 9:40 AM and 3:39 PM; the entire 9:45–11:00 AM entry window was uncovered —

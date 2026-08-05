@@ -1,0 +1,82 @@
+{
+  "_meta": {
+    "date": "2026-08-05",
+    "generated_utc": "2026-08-05T13:32:22.809437+00:00",
+    "source": "watchlist_build",
+    "candidates_considered": 6,
+    "top": 6,
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 219.14,
+    "atr_day": 7.75,
+    "avg_vol_10d": 4602474,
+    "premarket_price": 212.62,
+    "gap_pct": -0.0298,
+    "spread_bp": 619.4,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (4,602,474 sh/day); -3.0% gap"
+  },
+  "PFE": {
+    "sector": "healthcare",
+    "prev_close": 25.64,
+    "atr_day": 0.5,
+    "avg_vol_10d": 2117999,
+    "premarket_price": 26.21,
+    "gap_pct": 0.0222,
+    "spread_bp": 488.4,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,117,999 sh/day); +2.2% gap"
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 74.3,
+    "atr_day": 2.7,
+    "avg_vol_10d": 2590567,
+    "premarket_price": 73.28,
+    "gap_pct": -0.0137,
+    "spread_bp": 259.3,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,590,567 sh/day); -1.4% gap"
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 99.83,
+    "atr_day": 7.47,
+    "avg_vol_10d": 3771634,
+    "premarket_price": 99.63,
+    "gap_pct": -0.002,
+    "spread_bp": 8.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (3,771,634 sh/day); -0.2% gap"
+  },
+  "AMZN": {
+    "sector": "consumer",
+    "prev_close": 281.26,
+    "atr_day": 9.55,
+    "avg_vol_10d": 2786032,
+    "premarket_price": 281.38,
+    "gap_pct": 0.0004,
+    "spread_bp": 5.3,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,786,032 sh/day); +0.0% gap"
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 308.85,
+    "atr_day": 9.31,
+    "avg_vol_10d": 2117532,
+    "premarket_price": 308.24,
+    "gap_pct": -0.002,
+    "spread_bp": 73.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,117,532 sh/day); -0.2% gap"
+  }
+}

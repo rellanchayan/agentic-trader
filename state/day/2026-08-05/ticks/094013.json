@@ -1,0 +1,65 @@
+{
+  "tick_time_et": "2026-08-05T09:40:13-04:00",
+  "minutes_since_open": 10,
+  "verdict": "PROCEED",
+  "action": "WAIT",
+  "reason": "Before 9:45 AM ET — opening range still forming (ORB window opens at 9:45). No trades.",
+  "positions_managed": [],
+  "orders_considered": [],
+  "orders_submitted": [],
+  "market_observations": {
+    "AMZN": {
+      "last": 278.88,
+      "spread_bp": 153.4,
+      "spread_gate": "FAIL (153.4 bp > 15 bp limit)",
+      "above_vwap": false,
+      "vwap": 280.96,
+      "orb_high": 282.715,
+      "orb_breakout": false,
+      "rel_volume": 2.01,
+      "note": "Wide spread, below VWAP. Not actionable even if window were open."
+    },
+    "INTC": {
+      "last": 99.14,
+      "spread_bp": 6.1,
+      "spread_gate": "PASS",
+      "above_vwap": false,
+      "vwap": 99.87,
+      "orb_high": 100.83,
+      "orb_breakout": false,
+      "rel_volume": 1.22,
+      "note": "Spread tight, but below VWAP, no ORB breakout, rel vol below 1.5x. AMD sector caveat active."
+    },
+    "NFLX": {
+      "last": 74.77,
+      "spread_bp": 2.7,
+      "spread_gate": "PASS",
+      "above_vwap": true,
+      "vwap": 74.50,
+      "orb_high": 75.215,
+      "orb_breakout": false,
+      "rel_volume": 1.2,
+      "note": "Spread tight. Already above VWAP — VWAP reclaim thesis would need a dip and reclaim. Monitoring."
+    },
+    "AAPL": {
+      "last": 307.74,
+      "spread_bp": 51.1,
+      "spread_gate": "FAIL (51.1 bp > 15 bp limit)",
+      "above_vwap": true,
+      "rel_volume": 3.09,
+      "note": "Conditional backup only. Spread fails gate."
+    },
+    "NVDA": {
+      "last": 221.01,
+      "spread_bp": 38.9,
+      "spread_gate": "FAIL (38.9 bp > 15 bp limit)",
+      "above_vwap": true,
+      "rel_volume": 4.06,
+      "note": "DISARMED per plan. AMD sector drag, gap, spread too wide."
+    }
+  },
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "next_window": "9:45 AM ET — evaluate AMZN (ORB), INTC (ORB/AMD caveat), NFLX (VWAP reclaim)"
+}

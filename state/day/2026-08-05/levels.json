@@ -2,10 +2,15 @@
   "_meta": {
     "date": "2026-08-05",
     "generated_utc": "2026-08-05T13:32:22.809437+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-08-05T13:38:00+00:00",
+    "source": "watchlist_build + day_screener",
     "candidates_considered": 6,
-    "top": 6,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "dropped": ["PFE"],
+    "drop_reasons": {
+      "PFE": "live spread 1086 bp (bid 24.22 / ask 26.85) at 9:33 ET; ATR only $0.50 per day — untradeable; same extreme spread as yesterday (488 bp premarket, disarmed in prior plan)"
+    },
+    "top": 5,
+    "note": "Refined by day_screener at 9:38 ET. PFE dropped: extreme live spread and tiny ATR. AMZN retained on watchlist but recurring wide-spread pattern (57.4 bp premarket yesterday where it was disarmed, 137 bp live today) makes entry unlikely — tick gate must confirm. WARN: no docs/plan/2026-08-05.md found — premarket phase may not have completed. ORB levels fill in live after open."
   },
   "NVDA": {
     "sector": "technology",
@@ -14,34 +19,26 @@
     "avg_vol_10d": 4602474,
     "premarket_price": 212.62,
     "gap_pct": -0.0298,
-    "spread_bp": 619.4,
+    "spread_bp": 22.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,602,474 sh/day); -3.0% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 25.64,
-    "atr_day": 0.5,
-    "avg_vol_10d": 2117999,
-    "premarket_price": 26.21,
-    "gap_pct": 0.0222,
-    "spread_bp": 488.4,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,117,999 sh/day); +2.2% gap"
+    "support": 215.00,
+    "resistance": 222.00,
+    "note": "gapped -3.0% premarket to 212.62 (AMD Q2 2026 earnings reported after 2026-08-04 close); recovered to near prev_close 219.14 by 9:33 ET — notable gap-fill reversal; live spread 22.8 bp at 9:33 ET (above 15 bp ORB threshold — must tighten before any entry); if ORB holds above 219.14, target 222-224; support 215.00 (midpoint of premarket gap zone); high-gap name: spread blowout risk per playbook — tick gate is authoritative"
   },
   "NFLX": {
     "sector": "communication",
-    "prev_close": 74.3,
-    "atr_day": 2.7,
+    "prev_close": 74.30,
+    "atr_day": 2.70,
     "avg_vol_10d": 2590567,
     "premarket_price": 73.28,
     "gap_pct": -0.0137,
-    "spread_bp": 259.3,
+    "spread_bp": 22.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,590,567 sh/day); -1.4% gap"
+    "support": 73.00,
+    "resistance": 75.00,
+    "note": "gapped -1.4% premarket; recovered near prev_close 74.30 by 9:33 ET; live spread 22.9 bp at 9:33 ET (above 15 bp ORB threshold — monitor for compression); NFLX was best candidate on 2026-08-04 (5.5 bp spread, above VWAP, 2.45x rel_vol) but tick loop failed that day; strong candidate if spread tightens; support 73.00 (premarket low), resistance 75.00 (round number ~1 ATR above open)"
   },
   "INTC": {
     "sector": "technology",
@@ -49,11 +46,13 @@
     "atr_day": 7.47,
     "avg_vol_10d": 3771634,
     "premarket_price": 99.63,
-    "gap_pct": -0.002,
-    "spread_bp": 8.0,
+    "gap_pct": -0.0020,
+    "spread_bp": 5.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,771,634 sh/day); -0.2% gap"
+    "support": 98.00,
+    "resistance": 102.00,
+    "note": "surged +9.7% yesterday on earnings recovery; essentially flat today (-0.2% gap); trading above $100 psychological level at open; excellent live spread 5 bp — best on the list; ORB above ~100.50 targets 102-104; stop below ORB low or 98.00; gap <3% so spread blowout risk is low (unlike yesterday when gap was 3%+ and spread went 6 bp to 131 bp); semiconductor disarm: confirm above VWAP at 9:45 ET — yesterday disarm was conditionally active but tick loop failed so no formal status was recorded"
   },
   "AMZN": {
     "sector": "consumer",
@@ -62,10 +61,12 @@
     "avg_vol_10d": 2786032,
     "premarket_price": 281.38,
     "gap_pct": 0.0004,
-    "spread_bp": 5.3,
+    "spread_bp": 137.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,786,032 sh/day); +0.0% gap"
+    "support": 278.00,
+    "resistance": 285.00,
+    "note": "flat gap (+0.04%); live spread 137 bp at 9:33 ET (bid 281.15 / ask 285.00) — extremely wide; recurring pattern: disarmed yesterday at 57.4 bp premarket, 41.7 bp mid-session on 2026-08-03; tick gate must confirm spread tightens to <15 bp before any entry; entry probability low given multi-session spread pattern; keep on list but treat as low-priority; support 278, resistance 285"
   },
   "AAPL": {
     "sector": "technology",
@@ -73,10 +74,12 @@
     "atr_day": 9.31,
     "avg_vol_10d": 2117532,
     "premarket_price": 308.24,
-    "gap_pct": -0.002,
-    "spread_bp": 73.0,
+    "gap_pct": -0.0020,
+    "spread_bp": 4.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,117,532 sh/day); -0.2% gap"
+    "support": 305.00,
+    "resistance": 312.00,
+    "note": "flat gap (-0.2%); excellent live spread 4.9 bp at 9:33 ET; ORB above prev_close 308.85 targets 312-315 (~ATR extension); stop below ORB low or 305.00; previously blocked by 89.7 bp spread on 2026-08-03 — today spread is clean at the open; very liquid (2.1M sh/day, tight spread); confirm spread <15 bp at 9:45 ET before any entry"
   }
 }

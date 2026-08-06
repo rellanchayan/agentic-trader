@@ -1,0 +1,57 @@
+{
+  "ts_et": "2026-08-06T12:39:44",
+  "verdict": "PROCEED",
+  "action": "none",
+  "decision": "NO TRADE",
+  "positions_managed": [],
+  "new_entries_considered": [],
+  "reason": "All entry windows closed at 11:00 AM ET per day plan. It is 12:39 PM ET — 189 minutes since open. No open positions to manage. No new trades initiated.",
+  "market_snapshot": {
+    "NVDA": {
+      "last": 219.11,
+      "spread_bp": 52.2,
+      "rel_vol": 0.87,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP — entry window closed 11:00 AM ET; also spread 52.2 bp >> 15 bp max"
+    },
+    "INTC": {
+      "last": 100.39,
+      "spread_bp": 2.0,
+      "rel_vol": 0.88,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate": "SKIP — entry window closed 11:00 AM ET; rel_vol 0.88x < 1.5x minimum"
+    },
+    "NFLX": {
+      "last": 73.55,
+      "spread_bp": 1.4,
+      "rel_vol": 0.97,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP — entry window closed 11:00 AM ET; also below VWAP (73.55 vs 73.81)"
+    },
+    "AAPL": {
+      "last": 311.63,
+      "spread_bp": 7.7,
+      "rel_vol": 0.71,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP — entry window closed 11:00 AM ET; also below VWAP, rel_vol 0.71x < 1.5x"
+    },
+    "AMZN": {
+      "gate": "DISARMED — per day plan (Bezos insider selling, sustained spread blowout)"
+    },
+    "PFE": {
+      "gate": "DISARMED — per day plan (ATR too small for meaningful R/R)"
+    }
+  },
+  "account": {
+    "equity": 999495.37,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "notes": "Three prior ticks today: 09:40 HALT (plan missing), 10:39 PROCEED/no trade (all gates failed), 11:40 PROCEED/no trade (windows closed). This is the fourth tick — same outcome. No positions have been opened today. Afternoon session — watchful but idle. Will manage any positions in flatten window (3:50 PM ET+)."
+}

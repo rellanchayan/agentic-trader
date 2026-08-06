@@ -1,0 +1,54 @@
+{
+  "tick_ts_et": "2026-08-06T13:40:02",
+  "verdict": "PROCEED",
+  "action": "none",
+  "reason": "Entry windows closed at 11:00 AM ET — no new positions may be opened.",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "notes": {
+    "INTC": {
+      "spread_bp": 5.0,
+      "rel_vol": 0.73,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "last": 100.43,
+      "vwap": 100.2,
+      "gate": "SKIP entry window closed 11:00 AM (and rel_vol 0.73<1.5)"
+    },
+    "NVDA": {
+      "spread_bp": 24.2,
+      "rel_vol": 0.73,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "last": 218.98,
+      "vwap": 220.33,
+      "gate": "SKIP entry window closed 11:00 AM (also below VWAP)"
+    },
+    "NFLX": {
+      "spread_bp": 1.4,
+      "rel_vol": 0.81,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "last": 73.5,
+      "vwap": 73.78,
+      "gate": "SKIP entry window closed 11:00 AM (also below VWAP, no reclaim)"
+    },
+    "AAPL": {
+      "spread_bp": 43.5,
+      "rel_vol": 0.59,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "last": 311.4,
+      "vwap": 312.69,
+      "gate": "SKIP entry window closed 11:00 AM (also spread 43.5bp>>25bp, below VWAP)"
+    },
+    "AMZN": {
+      "gate": "DISARMED by plan (Bezos insider selling)"
+    },
+    "PFE": {
+      "gate": "DISARMED by plan (ATR too small for 2:1 R/R)"
+    }
+  }
+}

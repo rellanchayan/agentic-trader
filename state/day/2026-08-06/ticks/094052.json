@@ -1,0 +1,10 @@
+{
+  "tick_time_et": "2026-08-06T09:40:52",
+  "verdict": "HALT",
+  "halt_reason": "docs/plan/2026-08-06.md not found — premarket plan not written. Screener (levels.json) and open baseline captured, but no narrative plan exists. PLAYBOOK rule: missing plan at open = HALT condition.",
+  "action": "none",
+  "positions_held": 0,
+  "orders_placed": 0,
+  "day_pnl_usd": 0.0,
+  "equity": 999495.37
+}

@@ -147,6 +147,26 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-06: No tuning. Tuner eligible ("ok to tune", 33 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Today was a fourth consecutive flat day with no trades
+  placed and no premarket plan written (premarket phase skipped or failed again). Four consecutive
+  zero-trade, zero-plan sessions (2026-08-03 through 2026-08-06) is a clear infrastructure signal:
+  the scheduler is not reliably launching the premarket phase, which in turn means the tick loop
+  has no plan to act on. This is not a trading-parameter problem; no tuner setting addresses it.
+  The recurring fix required is confirming that both the premarket phase and the tick loop are
+  actually scheduled and running to cadence before market open — this has been documented in the
+  Infrastructure section repeatedly and the failure mode keeps recurring. Treat four consecutive
+  no-plan sessions as a mandatory scheduler audit before the next trading session: verify that
+  `run_phase.sh premarket` fires before 9:28 AM ET and that `run_phase.sh tick` sustains
+  2-minute cadence from 9:30 AM through 3:56 PM ET. Config fix applied tonight: `min_rel_volume`
+  corrected from 1.2 to 1.5 in state/config.json to align with the entry rule already in this
+  playbook (ORB section: "relative volume >1.5x"). This was a documentation/config mismatch that
+  persisted two days after being identified in the 2026-08-05 journal — it is now resolved.
+  The screener minimum and the ORB entry threshold are now consistent. Account equity approx.
+  $999,495 (unchanged from yesterday, no realized P&L). Over 33 days: 12 trades (0.36/day),
+  33.3% win rate, avg win +0.51R, avg loss -1.10R, ORB -0.362R across 3 trades, momentum
+  -0.975R across 1 trade, fill rate 91.7%. Tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
 - 2026-08-05: No tuning. Tuner eligible ("ok to tune", 32 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Today was a zero-trade day; 0 placed, 0 filled, $0.00
   realized P&L, ended flat. Observation: `config.json` has `min_rel_volume: 1.2` (the screener

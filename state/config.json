@@ -16,7 +16,7 @@
   "daily_loss_stop_usd": 3000,
   "max_position_pct": 0.25,
 
-  "min_rel_volume": 1.2,
+  "min_rel_volume": 1.5,
   "max_spread_bp": 25,
   "min_quote_freshness_sec": 30,
 

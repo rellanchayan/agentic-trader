@@ -1,0 +1,70 @@
+{
+  "ts": "2026-08-06T10:39:39",
+  "verdict": "PROCEED",
+  "action": "none",
+  "reason": "All armed names fail at least one non-negotiable gate. No trade.",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999495.37,
+  "minutes_since_open": 69,
+  "gate_results": {
+    "NVDA": {
+      "armed": true,
+      "setup": "orb",
+      "priority": "primary",
+      "spread_bp": 43.3,
+      "rel_vol": 1.45,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "FAIL",
+      "gate_reason": "spread 43.3 bp exceeds 15 bp limit; also below VWAP and no ORB breakout"
+    },
+    "INTC": {
+      "armed": true,
+      "setup": "orb",
+      "priority": "secondary",
+      "spread_bp": 3.0,
+      "rel_vol": 1.44,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate": "FAIL",
+      "gate_reason": "rel_vol 1.44 below 1.5x threshold; past 10:30 AM checkpoint per day plan — do not hold out"
+    },
+    "NFLX": {
+      "armed": true,
+      "setup": "vwap_reclaim",
+      "priority": "tertiary",
+      "spread_bp": 1.4,
+      "rel_vol": 1.64,
+      "above_vwap": false,
+      "last": 73.61,
+      "vwap": 73.87,
+      "gate": "FAIL",
+      "gate_reason": "price $73.61 below VWAP $73.87 — no reclaim signal present"
+    },
+    "AAPL": {
+      "armed": true,
+      "setup": "orb",
+      "priority": "conditional_backup",
+      "spread_bp": 25.3,
+      "rel_vol": 1.11,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "FAIL",
+      "gate_reason": "spread 25.3 bp exceeds 15 bp limit; rel_vol 1.11 below 1.5x threshold"
+    },
+    "AMZN": {
+      "armed": false,
+      "gate": "DISARMED",
+      "gate_reason": "disarmed in day plan — Bezos insider selling, repeated spread failures"
+    },
+    "PFE": {
+      "armed": false,
+      "gate": "DISARMED",
+      "gate_reason": "disarmed in day plan — insufficient ATR for meaningful R/R"
+    }
+  },
+  "order": null,
+  "observation": "Entry window closes at 11:00 AM ET (~21 min remaining). INTC is closest to a valid setup (spread clean, ORB confirmed, above VWAP) but rel_vol 1.44 fails non-negotiable gate and plan explicitly says to move on past 10:30 AM. NFLX has good vol but needs price to recover above $73.87 VWAP to trigger reclaim entry. Monitor next tick."
+}

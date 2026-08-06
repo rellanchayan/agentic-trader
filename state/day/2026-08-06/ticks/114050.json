@@ -1,0 +1,53 @@
+{
+  "ts": "2026-08-06T11:40:50",
+  "verdict": "PROCEED",
+  "action": "none",
+  "reason": "entry windows closed at 11:00 AM ET — no new positions may be opened",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999495.37,
+  "minutes_since_open": 130,
+  "market_snapshot": {
+    "NVDA": {
+      "last": 217.66,
+      "spread_bp": 1.4,
+      "rel_vol": 1.06,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP — entry window closed 11:00 AM ET"
+    },
+    "INTC": {
+      "last": 100.86,
+      "spread_bp": 3.0,
+      "rel_vol": 1.11,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate": "SKIP — entry window closed 11:00 AM ET (also rel_vol 1.11 < 1.5 minimum)"
+    },
+    "NFLX": {
+      "last": 73.765,
+      "spread_bp": 1.4,
+      "rel_vol": 1.13,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP — entry window closed 11:00 AM ET"
+    },
+    "AAPL": {
+      "last": 310.22,
+      "spread_bp": 18.4,
+      "rel_vol": 0.88,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP — entry window closed 11:00 AM ET (also spread 18.4 bp > 15 bp max)"
+    },
+    "AMZN": {
+      "gate": "DISARMED — Bezos insider selling, sustained spread failure"
+    },
+    "PFE": {
+      "gate": "DISARMED — ATR too small for day-trading reward structure"
+    }
+  },
+  "open_orders": [],
+  "notes": "INTC was the most technically interesting name this session — orb_breakout true, above_vwap true, spread 3.0 bp — but rel_vol peaked at 1.44 at 10:39 AM and has dropped to 1.11 now. Entry window expired at 11:00 AM. No positions opened today. Tick loop running on cadence."
+}

@@ -1,0 +1,81 @@
+{
+  "tick_time_et": "2026-08-06T14:40:03",
+  "tick_time_hhmmss": "144003",
+  "verdict": "PROCEED",
+  "action": "none",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries_considered": [
+    {
+      "ticker": "NVDA",
+      "last": 219.78,
+      "spread_bp": 0.9,
+      "above_vwap": false,
+      "vwap": 220.27,
+      "orb_breakout": false,
+      "rel_volume": 0.65,
+      "atr_1m": 0.142,
+      "gate": "SKIP — entry window closed at 11:00 AM ET (3h40m ago); also below VWAP, rel_vol 0.65x < 1.5x minimum"
+    },
+    {
+      "ticker": "INTC",
+      "last": 100.415,
+      "spread_bp": 3.0,
+      "above_vwap": true,
+      "vwap": 100.22,
+      "orb_breakout": true,
+      "rel_volume": 0.63,
+      "atr_1m": 0.091,
+      "gate": "SKIP — entry window closed at 11:00 AM ET (3h40m ago); also rel_vol 0.63x < 1.5x minimum"
+    },
+    {
+      "ticker": "NFLX",
+      "last": 73.805,
+      "spread_bp": 1.4,
+      "above_vwap": true,
+      "vwap": 73.76,
+      "orb_breakout": false,
+      "rel_volume": 0.72,
+      "atr_1m": 0.026,
+      "gate": "SKIP — entry window closed at 11:00 AM ET (3h40m ago); also rel_vol 0.72x < 1.5x minimum"
+    },
+    {
+      "ticker": "AAPL",
+      "last": 312.02,
+      "spread_bp": 19.5,
+      "above_vwap": false,
+      "vwap": 312.64,
+      "orb_breakout": false,
+      "rel_volume": 0.51,
+      "atr_1m": 0.12,
+      "gate": "SKIP — entry window closed at 11:00 AM ET; also spread 19.5bp > 15bp max, below VWAP, rel_vol 0.51x"
+    },
+    {
+      "ticker": "AMZN",
+      "gate": "SKIP — DISARMED by plan (Bezos $4B insider selling, sustained fundamental overhang)"
+    },
+    {
+      "ticker": "PFE",
+      "gate": "SKIP — DISARMED by plan (ATR $0.50/share, insufficient reward structure for day-trading)"
+    }
+  ],
+  "trade_filed": null,
+  "reason": "All entry windows closed at 11:00 AM ET per the day plan (MIXED/RANGE regime, ORB and VWAP reclaim windows 9:45–11:00 AM only). Current time 14:40 ET is 3h40m past the deadline. Zero positions open, zero open orders. No position management required. No new entries permitted. Waiting for 3:50 PM flatten sweep (which has no positions to close).",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "loss_budget_remaining": 3000.0,
+  "account_equity": 999495.37,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_observations": {
+    "NVDA_note": "Spread has tightened dramatically (0.9bp vs 43.3bp at 10:39 AM). Price drifted below VWAP. Volume thin all day (rel_vol never exceeded 1.45x).",
+    "INTC_note": "Still holding above VWAP and showing orb_breakout, but volume has collapsed (rel_vol 0.63x vs 1.44x at 10:39 AM). The 1.5x volume gate was never met today.",
+    "NFLX_note": "Has reclaimed above VWAP ($73.805 vs VWAP $73.76) but barely — only 4.5 cents above. Volume 0.72x, well below minimum. Entry window long expired.",
+    "AAPL_note": "Spread widened to 19.5bp, significantly above the 15bp max. Below VWAP. Volume thin (0.51x). Would fail multiple gates even if window were open.",
+    "regime_note": "MIXED/RANGE day produced no clean setup during the entry window. Consistent with morning note: NVDA volume gate never cleared, INTC same, NFLX VWAP reclaim thesis never triggered with adequate volume."
+  }
+}

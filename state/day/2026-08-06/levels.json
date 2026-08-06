@@ -2,24 +2,21 @@
   "_meta": {
     "date": "2026-08-06",
     "generated_utc": "2026-08-06T13:43:45.592466+00:00",
+    "screener_pass_utc": "2026-08-06T13:51:31+00:00",
     "source": "watchlist_build",
+    "screener": "day_screener",
     "candidates_considered": 6,
     "top": 6,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "AMZN": {
-    "sector": "consumer",
-    "prev_close": 273.57,
-    "atr_day": 9.76,
-    "avg_vol_10d": 2728121,
-    "premarket_price": 265.98,
-    "gap_pct": -0.0277,
-    "spread_bp": 541.0,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,728,121 sh/day); -2.8% gap"
+    "armed_count": 3,
+    "conditional_count": 1,
+    "disarmed_count": 2,
+    "regime": "MIXED/RANGE",
+    "note": "Pre-market screen aligned by day-screener to docs/plan/2026-08-06.md. ORB levels fill in live after the open."
   },
   "NVDA": {
+    "priority": 1,
+    "arm_status": "ARMED",
+    "setup": "orb_breakout",
     "sector": "technology",
     "prev_close": 222.28,
     "atr_day": 7.59,
@@ -27,11 +24,19 @@
     "premarket_price": 222.4,
     "gap_pct": 0.0005,
     "spread_bp": 3.1,
+    "support": 214.69,
+    "resistance": 229.87,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,665,861 sh/day); +0.1% gap"
+    "entry_window_close_et": "11:00",
+    "max_position_usd": 7500,
+    "note": "PRIMARY — ORB breakout. Highest vol (4.67M sh/day), tightest spread (3.1 bp), flat gap (+0.1%). Semiconductor disarm lifted: AMD shock fading, NVDA and INTC both positive premarket.",
+    "plan_note": "Semiconductor sector disarm (from yesterday's AMD sell-the-news event) is lifted today — NVDA and INTC are both slightly positive premarket, indicating the sector has digested the AMD shock. Premarket spread of 3.1 bp is well within gate. Arm condition: live spread <=15 bp, rel_vol >=1.5x, price above VWAP, clean break above ORB high. Companion stop on same tick as entry. 2:1 R/R required before submission. Do not chase a marginal break in a mixed regime."
   },
   "INTC": {
+    "priority": 2,
+    "arm_status": "ARMED",
+    "setup": "orb_breakout",
     "sector": "technology",
     "prev_close": 97.89,
     "atr_day": 7.51,
@@ -39,11 +44,19 @@
     "premarket_price": 98.37,
     "gap_pct": 0.005,
     "spread_bp": 5.1,
+    "support": 90.38,
+    "resistance": 105.40,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,624,330 sh/day); +0.5% gap"
+    "entry_window_close_et": "11:00",
+    "max_position_usd": 7500,
+    "note": "SECONDARY — ORB breakout. Q2 earnings beat (Data Center & AI rev +59%). AMD sector disarm lifted. Key risk: rel_vol was below 1.5x for two consecutive sessions.",
+    "plan_note": "INTC reported exceptional Q2 earnings Aug 4; +0.5% gap holds those gains cleanly. Sector disarm lifted. Critical caveat: rel_vol peaked at only 1.22x at 9:40 AM yesterday and declined to 0.51x by 3:39 PM — volume has been suppressed for two consecutive sessions. If rel_vol is below 1.5x at 9:45 AM and does not recover by 10:30 AM, abandon INTC and redirect attention to NFLX and AAPL. Arm condition: live spread <=15 bp, rel_vol >=1.5x, above VWAP, clean break above ORB high. Companion stop same tick. 2:1 R/R required."
   },
   "NFLX": {
+    "priority": 3,
+    "arm_status": "ARMED",
+    "setup": "vwap_reclaim",
     "sector": "communication",
     "prev_close": 74.25,
     "atr_day": 2.11,
@@ -51,11 +64,19 @@
     "premarket_price": 74.08,
     "gap_pct": -0.0024,
     "spread_bp": 4.0,
+    "support": 72.14,
+    "resistance": 76.36,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,536,726 sh/day); -0.2% gap"
+    "entry_window_close_et": "11:00",
+    "max_position_usd": 5000,
+    "note": "TERTIARY — VWAP reclaim. Insulated from semiconductor and AMZN news. ATR only $2.11; half-size cap $5,000 (~67 shares). Rel_vol has been the limiting factor in recent sessions.",
+    "plan_note": "NFLX is the preferred setup in a mixed/range regime — VWAP reclaim profits from intraday stabilization rather than requiring a sustained directional trend. Fully insulated from semiconductor drama and Bezos/AMZN selling pressure. ATR is only $2.11: at ~67 shares ($5,000), a full ATR move yields ~$141; target must be >=2x stop distance. Stop ~0.5 ATR below VWAP entry (~$1.06), target ~$2.12 above entry. Rel_vol was only 0.88x at both the 9:40 AM and 10:39 AM ticks yesterday — the vol gate is the key uncertainty. Arm condition: NFLX opens below VWAP then reclaims it with rel_vol >=1.5x, live spread <=15 bp. Companion stop below VWAP on same tick. MAX POSITION $5,000 — do not exceed half-size on this name."
   },
   "AAPL": {
+    "priority": 4,
+    "arm_status": "CONDITIONAL",
+    "setup": "orb_breakout",
     "sector": "technology",
     "prev_close": 314.31,
     "atr_day": 9.57,
@@ -63,11 +84,39 @@
     "premarket_price": 315.01,
     "gap_pct": 0.0022,
     "spread_bp": 2.9,
+    "support": 304.74,
+    "resistance": 323.88,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,167,767 sh/day); +0.2% gap"
+    "entry_window_close_et": "11:00",
+    "max_position_usd": 7500,
+    "note": "CONDITIONAL BACKUP — ORB breakout. Evaluate ONLY if NVDA, INTC, and NFLX have all failed their entry gates with no trade executed. Lowest avg vol in armed group (2.17M sh/day).",
+    "plan_note": "AAPL is a conditional backup only. Do NOT evaluate unless NVDA, INTC, and NFLX have all failed their entry gates without any trade executing. Premarket spread is 2.9 bp (better than yesterday's 73 bp), but AAPL's rel_vol is consistently hard to reach: on Aug 5 rel_vol was only 0.84x at 1:40 PM. The live spread gate is authoritative — if it fires, skip AAPL regardless of other conditions. Arm condition (if reached): live spread <=15 bp, rel_vol >=1.5x, above VWAP, clean break above ORB high. Companion stop same tick. 2:1 R/R required. Not affected by semiconductor or AMZN news today."
+  },
+  "AMZN": {
+    "priority": null,
+    "arm_status": "DISARMED",
+    "setup": null,
+    "sector": "consumer",
+    "prev_close": 273.57,
+    "atr_day": 9.76,
+    "avg_vol_10d": 2728121,
+    "premarket_price": 265.98,
+    "gap_pct": -0.0277,
+    "spread_bp": 541.0,
+    "support": null,
+    "resistance": null,
+    "orb_high": null,
+    "orb_low": null,
+    "entry_window_close_et": null,
+    "max_position_usd": null,
+    "note": "DISARMED — 541 bp premarket spread (gate is <=15 bp). Bezos insider-selling overhang (~15M shares, ~$4B). Sustained fundamental seller across multiple sessions. Do not evaluate at any tick today.",
+    "plan_note": "AMZN has failed the spread gate at every tick during every entry window across multiple consecutive sessions (yesterday: 153 bp at 9:40 AM, 125 bp at 10:39 AM). Today's 541 bp premarket spread is the worst yet. Root cause is fundamental: Jeff Bezos filed to sell approximately 15 million shares worth over $4 billion — a sustained, known seller, not a one-day gap that might fade at the open. Do not attempt a fade or mean-reversion entry on the gap. DISARM is unconditional for all ticks today."
   },
   "PFE": {
+    "priority": null,
+    "arm_status": "DISARMED",
+    "setup": null,
     "sector": "healthcare",
     "prev_close": 26.02,
     "atr_day": 0.49,
@@ -75,8 +124,13 @@
     "premarket_price": 25.99,
     "gap_pct": -0.0012,
     "spread_bp": 3.8,
+    "support": null,
+    "resistance": null,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,229,381 sh/day); -0.1% gap"
+    "entry_window_close_et": null,
+    "max_position_usd": null,
+    "note": "DISARMED — ATR $0.49 is too small for viable day-trading. At ~384 shares per $10k, a full ATR move yields only ~$188. No viable 2:1 R/R structure available. Spread and gap are fine but reward threshold not met.",
+    "plan_note": "Spread (3.8 bp) and gap (-0.1%) are both fine. Disarm reason is purely the ATR: $0.49 per share yields insufficient reward. With 384 shares per $10,000 position and the 2:1 R/R requirement, there is no meaningful profit structure available. PFE is a large-cap healthcare name that does not meet the minimum reward threshold for day-trading. Skip entirely — do not revisit during the session."
   }
 }

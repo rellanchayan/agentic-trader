@@ -1,0 +1,59 @@
+{
+  "ts": "2026-08-06T15:39:42",
+  "verdict": "PROCEED",
+  "action": "none",
+  "reason": "Entry windows closed at 11:00 AM ET — no new positions may be opened. 0 positions, 0 open orders. Approaching flatten window (starts 15:50 ET). NVDA spread 0.9bp (clean) but below VWAP $220.21 at $220.06, rel_vol 0.62x (<1.5x), window expired 4h39m ago. INTC orb_breakout+above_vwap (spread 2.0bp clean, price $100.29 vs VWAP $100.24) but entry window expired and rel_vol 0.57x well below 1.5x gate. NFLX below VWAP ($73.50 vs VWAP $73.75, spread 1.4bp) — no reclaim, window expired. AAPL above VWAP ($312.655 vs VWAP $312.62, spread 2.9bp) but no ORB breakout, rel_vol 0.47x, window expired. AMZN and PFE disarmed by plan. Day ends flat with 0 trades, $0.00 P&L.",
+  "positions": 0,
+  "open_orders": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999495.37,
+  "notes": {
+    "NVDA": {
+      "last": 220.06,
+      "spread_bp": 0.9,
+      "rel_vol": 0.62,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP entry window closed 11:00 AM (and below VWAP, rel_vol 0.62<1.5)"
+    },
+    "INTC": {
+      "last": 100.29,
+      "spread_bp": 2.0,
+      "rel_vol": 0.57,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate": "SKIP entry window closed 11:00 AM (and rel_vol 0.57<1.5)"
+    },
+    "NFLX": {
+      "last": 73.5,
+      "spread_bp": 1.4,
+      "rel_vol": 0.67,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate": "SKIP entry window closed 11:00 AM (and below VWAP, no reclaim)"
+    },
+    "AAPL": {
+      "last": 312.655,
+      "spread_bp": 2.9,
+      "rel_vol": 0.47,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate": "SKIP entry window closed 11:00 AM (no ORB breakout, rel_vol 0.47<1.5)"
+    },
+    "AMZN": {
+      "last": 271.375,
+      "spread_bp": 1.5,
+      "rel_vol": 0.39,
+      "above_vwap": false,
+      "gate": "DISARMED by plan (Bezos insider selling)"
+    },
+    "PFE": {
+      "last": 26.11,
+      "spread_bp": 3.8,
+      "rel_vol": 1.34,
+      "above_vwap": true,
+      "gate": "DISARMED by plan (ATR too small for day-trading)"
+    }
+  }
+}

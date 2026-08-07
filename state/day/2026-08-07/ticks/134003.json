@@ -1,0 +1,78 @@
+{
+  "tick_num": 5,
+  "time_et": "13:40:03",
+  "timestamp_et": "2026-08-07T13:40:03-04:00",
+  "minutes_since_open": 250,
+  "action": "HOLD",
+  "verdict": "PROCEED",
+  "account": {
+    "equity": 999541.95,
+    "cash": 989522.92,
+    "buying_power": 3986144.95,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": {
+    "day_pnl": 46.58,
+    "tripped": false,
+    "loss_budget_remaining": 3046.58
+  },
+  "budget": {
+    "trades_today": 1,
+    "trades_remaining": 19,
+    "positions_open": 1,
+    "position_slots_remaining": 7
+  },
+  "position_review": {
+    "ticker": "NFLX",
+    "qty": 135,
+    "avg_entry_price": 73.87,
+    "current_price": 74.215,
+    "market_value": 10019.025,
+    "unrealized_pl": 46.575,
+    "stop": 73.0,
+    "target": 79.12,
+    "distance_to_stop": 1.215,
+    "distance_to_target": 4.905,
+    "above_vwap": true,
+    "vwap": 73.96,
+    "orb_breakout": true,
+    "orb_high": 73.74,
+    "spread_bp": 1.3,
+    "rel_volume": 0.57,
+    "thesis_intact": true,
+    "decision": "HOLD",
+    "reason": "Price $74.215 above VWAP $73.96 and ORB high $73.74. Stop $73.00 not hit ($1.215 cushion). Target $79.12 not reached ($4.905 away). ORB window expired 11:00 AM — no new entries. Thesis intact."
+  },
+  "risk_flags": [
+    "NO_COMPANION_STOP: open_orders is empty — no broker-side stop order on file with Alpaca. Position has been running without a companion stop since entry at 09:54 AM (4+ hours). Playbook requires companion stop placed on same tick as entry. Price $74.215 is $1.215 above stop $73.00; flatten window opens at 3:50 PM ET (~2h10m away). Risk is contained but not eliminated."
+  ],
+  "new_entry_candidates": [
+    {
+      "ticker": "NVDA",
+      "status": "SKIP",
+      "reason": "Below VWAP ($222.21 vs $222.97). ORB window expired (11:00 AM). No breakout."
+    },
+    {
+      "ticker": "AMZN",
+      "status": "SKIP",
+      "reason": "Below VWAP ($274.33 vs $276.12). ORB window expired (11:00 AM). No breakout."
+    },
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "reason": "Semiconductor disarm active per day plan."
+    },
+    {
+      "ticker": "AAPL",
+      "status": "DISARMED",
+      "reason": "Active sell-side headwind (downgrade to Hold, $280 target) per day plan."
+    },
+    {
+      "ticker": "PFE",
+      "status": "DISARMED",
+      "reason": "Insufficient ATR for disciplined day trading per day plan."
+    }
+  ],
+  "orders_submitted": []
+}

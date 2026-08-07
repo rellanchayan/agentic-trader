@@ -3,12 +3,19 @@
     "date": "2026-08-07",
     "generated_utc": "2026-08-07T13:38:20.727253+00:00",
     "screened_utc": "2026-08-07T13:52:00.000000+00:00",
+    "plan_override_utc": "2026-08-07T13:55:00.000000+00:00",
     "source": "watchlist_build",
     "screener": "day_screener",
     "candidates_considered": 6,
-    "armed": 5,
-    "skipped": 1,
-    "note": "Pre-market screen finalized by day-screener. orb_high/orb_low remain null — filled live after 9:45 AM. support = prev_close - 0.5*ATR; resistance = prev_close + 0.5*ATR; min_move_for_trade = ATR * 0.3."
+    "armed": 3,
+    "skipped": 3,
+    "armed_tickers": ["NVDA", "AMZN", "NFLX"],
+    "skipped_tickers": ["INTC", "AAPL", "PFE"],
+    "regime": "MIXED — cautious tilt to risk-on",
+    "primary": "NVDA",
+    "secondary": "AMZN",
+    "tertiary": "NFLX",
+    "note": "Pre-market screen finalized by day-screener, then overridden by premarket plan (docs/plan/2026-08-07.md). INTC skipped: multi-session chip selloff + fundamental headwinds. AAPL skipped: fresh downgrade to Hold / $280 target. PFE skipped: ATR too small. orb_high/orb_low remain null — filled live after 9:45 AM. support = prev_close - 0.5*ATR; resistance = prev_close + 0.5*ATR; min_move_for_trade = ATR * 0.3."
   },
   "NVDA": {
     "sector": "technology",
@@ -81,7 +88,7 @@
     "min_move_for_trade": 0.62,
     "priority": "low",
     "skip": false,
-    "note": "BORDERLINE / LOW PRIORITY. ATR $2.08 on $73.55 = 2.8% daily range — viable but tight. Excellent spread (2.7bp), decent volume (2.5M). Flat gap. Fully insulated from semiconductor and AMZN news. VWAP reclaim setup only (not ORB). Size down to half position (~$5,000 max, ~67 shares) due to small ATR — full $10k yields only ~$278 gross on a full ATR move, which leaves no margin after 2:1 R/R. Rel_vol gate (>=1.5x) has consistently failed in prior sessions; if below threshold by 10:00 AM, skip."
+    "note": "TERTIARY / CONDITIONAL. ORB breakout OR VWAP reclaim. Entry only if rel_vol >=1.5x AND a clean textbook setup forms. Small ATR ($2.08) — if entering, size to ~$5,000 (~67 shares) not $10,000, to keep 1R risk proportional. 2:1 R/R required at entry. If no clean setup by 11:00 AM ET, skip entirely. Do not force NFLX — it is here as a non-semiconductor diversifier only."
   },
   "AAPL": {
     "sector": "technology",
@@ -97,9 +104,10 @@
     "support": 308.12,
     "resistance": 317.30,
     "min_move_for_trade": 2.75,
-    "priority": "medium",
-    "skip": false,
-    "note": "CONDITIONAL BACKUP. Evaluate only if NVDA, INTC, and AMZN all fail their entry gates. Spread refreshed to 3.5bp (clean, from earlier 15.7bp premarket reading). Flat gap (-0.11%). Lowest avg volume in armed group (2.1M) — rel_vol gate (>=1.5x) is the key uncertainty; has tracked below threshold in recent sessions. Good ATR ($9.18). ORB breakout setup, entry window 9:45-11:00 AM ET only."
+    "priority": null,
+    "skip": true,
+    "skip_reason": "PLAN OVERRIDE: Chinese investment firm downgraded AAPL to Hold with $280 price target (vs ~$312 current) citing services growth concerns and regulatory pressure. Fresh sell-side headwind is active today. Even in a risk-on tape, a 10%-below-market price target creates selling pressure. Do not evaluate at any tick today.",
+    "note": "SKIPPED. Do not evaluate at any tick today."
   },
   "PFE": {
     "sector": "healthcare",

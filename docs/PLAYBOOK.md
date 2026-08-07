@@ -60,6 +60,11 @@ made of **rules to follow**, not stories.
   flatten. EOD exits are a safety net, not an exit strategy. Over 3 ORB trades the average win was
   only +0.559R against a 2.5 ATR target, which means EOD flatten is systematically cutting winners
   short. Treat the target as an active exit trigger.
+- For ORB setups on neutral or quiet-tape days, a 2.5× ATR target can translate to 5–6× the
+  per-share risk and may never be reached in a single session. When the tape is not strongly
+  trending, set the target at 1.5–2.0× the per-share risk rather than 2.5× ATR — wide enough to
+  reward a clean breakout but realistically achievable before the flatten window. (2026-08-07:
+  NFLX ORB target at $79.12 was never approached; trade closed EOD at +0.345R.)
 - Before entering any trade, verify that the distance from entry to target is at least 2x the distance from entry to stop (minimum 2:1 R/R). Across 11 live trades, average wins are only +0.56R against average losses of -1.20R — the structural shortfall is losses running past stop and winners being harvested early. A setup that does not offer a clear 2:1 structure at entry should be skipped even if all other criteria pass.
 - A typical good trade risks a few hundred dollars to make more than it risks (aim for wins ≥ 1.5R).
 - Flatten limits must be set near the current bid at the time of submission, never from a cached or
@@ -147,6 +152,15 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-07: No tuning. Tuner eligible ("ok to tune", 34 days of history) but no rule fired —
+  parameters left unchanged. Today: 1 NFLX ORB round-trip, buy 135 @ $73.87, EOD flatten @
+  $74.17, +$40.50 (+0.345R). Win. All gates passed, no rule violations. The target ($79.12,
+  2.5× ATR) was never approached — the tape was neutral and the objective was structurally too
+  wide for a single session. Lesson added to Entries & exits: on neutral-tape ORB days, prefer a
+  target of 1.5–2.0× per-share risk over 2.5× ATR; the wider ATR-based objective can represent
+  5–6R and may be unreachable intraday. Over 34 days: 14 trades (0.41/day), 42.9% win rate, avg
+  win +0.489R, avg loss -0.940R, ORB -0.1855R across 4 trades, momentum -0.975R across 1 trade.
+  Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-06: No tuning. Tuner eligible ("ok to tune", 33 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Today was a fourth consecutive flat day with no trades
   placed and no premarket plan written (premarket phase skipped or failed again). Four consecutive

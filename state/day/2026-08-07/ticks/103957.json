@@ -1,0 +1,27 @@
+{
+  "time_et": "10:39:57",
+  "tick_num": 2,
+  "action": "HOLD",
+  "positions": [
+    {
+      "ticker": "NFLX",
+      "qty": 135,
+      "avg_entry_price": 73.87,
+      "current_price": 74.1051,
+      "unrealized_pl": 31.74,
+      "stop": 73.0,
+      "target": 79.12,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 1.06,
+      "disposition": "HOLD — thesis intact, price above stop by $1.11, target not reached"
+    }
+  ],
+  "new_entry": null,
+  "new_entry_rationale": "No armed names triggering. NVDA: $222.94 vs ORB high $223.10 (no breakout), rel_vol 1.33x < 1.5x gate. AMZN: $276.15 vs ORB high $277.43 (no breakout), rel_vol 0.90x. AAPL/INTC/PFE all disarmed per plan.",
+  "day_pnl": 31.74,
+  "trades_today": 1,
+  "positions_open": 1,
+  "equity": 999527.11,
+  "loss_budget_remaining": 3031.74
+}

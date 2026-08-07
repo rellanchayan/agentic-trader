@@ -1,0 +1,37 @@
+{
+  "tick_time_et": "09:54:36",
+  "tick_num": 1,
+  "verdict": "PROCEED",
+  "market_snapshot": {
+    "minutes_since_open": 24,
+    "NVDA": {"last": 222.60, "orb_high": 223.10, "orb_breakout": false, "rel_volume": 1.63, "spread_bp": 1.3, "above_vwap": true},
+    "AMZN": {"last": 276.76, "orb_high": 277.43, "orb_breakout": false, "rel_volume": 1.90, "spread_bp": 28.8, "above_vwap": true, "gate_fired": "spread_disarm"},
+    "NFLX": {"last": 73.79, "orb_high": 73.74, "orb_breakout": true, "rel_volume": 1.56, "spread_bp": 2.7, "above_vwap": true},
+    "INTC": {"skipped": "sector_disarm"},
+    "AAPL": {"skipped": "downgrade_headwind"},
+    "PFE":  {"skipped": "atr_too_small"}
+  },
+  "positions_managed": "none (flat entering this tick)",
+  "decision": {
+    "action": "BUY",
+    "ticker": "NFLX",
+    "setup": "orb",
+    "qty": 135,
+    "limit_price": 73.87,
+    "stop": 73.00,
+    "target": 79.12,
+    "rr_ratio": 6.03,
+    "trade_value_usd": 9972.45,
+    "risk_usd": 117.45,
+    "constitution_check": "PASS",
+    "daytrade_guard_check": "PASS",
+    "alpaca_order_id": "7478a1f8-c94c-4f2c-8869-332a504051c5",
+    "order_status": "PENDING_NEW",
+    "companion_stop_note": "Cannot place stop order — CLAUDE.md enforces LIMIT+DAY only. Stop at $73.00 will be monitored on each subsequent tick; sell limit submitted immediately if price falls to or below $73.00."
+  },
+  "next_tick_watch": [
+    "NFLX: monitor fill status; if filled, enforce stop at $73.00 (sell limit if price <= $73.00)",
+    "NVDA: watch for ORB breakout above $223.10 — still a valid secondary entry if NFLX fills",
+    "AMZN: re-check spread; disarmed for now"
+  ]
+}

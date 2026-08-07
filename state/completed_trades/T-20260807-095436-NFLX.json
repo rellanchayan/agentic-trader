@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260807-095436-NFLX",
+  "ticker": "NFLX",
+  "side": "BUY",
+  "qty": 135,
+  "limit_price": 73.87,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "ORB breakout above $73.74 (ORB high) confirmed at 9:54 AM ET. Price $73.79 above VWAP $73.58. Spread 2.7 bp (well within 15 bp gate). Rel_vol 1.56x (meets >1.5x threshold). Primary NVDA has not broken out above ORB high $223.10; secondary AMZN disarmed by spread 28.8 bp > 15 bp max. NFLX is the best available setup in today's MIXED/cautious-risk-on tape after the jobs miss.",
+  "risk": "Stop at $73.00, just below ORB low of $73.125. Risk per share $0.87, total risk $117.45 at 135 shares (well within $250 budget). Idea is wrong if price falls back through the ORB low.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 73.0,
+  "target": 79.12,
+  "quote_age_sec": 0.9,
+  "spread_bp": 2.7,
+  "status": "submitted",
+  "alpaca_order_id": "7478a1f8-c94c-4f2c-8869-332a504051c5",
+  "client_order_id": "T-20260807-095436-NFLX",
+  "submitted_at_utc": "2026-08-07T13:55:48.180791+00:00"
+}

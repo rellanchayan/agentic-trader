@@ -2,10 +2,13 @@
   "_meta": {
     "date": "2026-08-07",
     "generated_utc": "2026-08-07T13:38:20.727253+00:00",
+    "screened_utc": "2026-08-07T13:52:00.000000+00:00",
     "source": "watchlist_build",
+    "screener": "day_screener",
     "candidates_considered": 6,
-    "top": 6,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "armed": 5,
+    "skipped": 1,
+    "note": "Pre-market screen finalized by day-screener. orb_high/orb_low remain null — filled live after 9:45 AM. support = prev_close - 0.5*ATR; resistance = prev_close + 0.5*ATR; min_move_for_trade = ATR * 0.3."
   },
   "NVDA": {
     "sector": "technology",
@@ -17,7 +20,13 @@
     "spread_bp": 1.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,545,726 sh/day); +0.1% gap"
+    "orb_window": "09:30-09:45",
+    "support": 217.84,
+    "resistance": 225.48,
+    "min_move_for_trade": 2.29,
+    "priority": "high",
+    "skip": false,
+    "note": "PRIMARY. Tightest spread in group (1.8bp), highest volume (4.5M sh/day). Flat gap (+0.08%) — no gap overhang to resolve. ORB breakout above opening-range high; require live spread <=15bp, rel_vol >=1.5x, price above VWAP at entry tick. Entry window 9:45-11:00 AM ET only."
   },
   "INTC": {
     "sector": "technology",
@@ -29,7 +38,13 @@
     "spread_bp": 3.9,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,306,062 sh/day); +0.1% gap"
+    "orb_window": "09:30-09:45",
+    "support": 97.79,
+    "resistance": 105.31,
+    "min_move_for_trade": 2.26,
+    "priority": "high",
+    "skip": false,
+    "note": "SECONDARY. Clean spread (3.9bp), solid volume (3.3M sh/day). Holding +0.12% gap; reported exceptional Q2 earnings Aug 4 (Data Center & AI revenue +59%). Caution: rel_vol gate (>=1.5x) has been the failure point in prior two sessions — watch closely at 9:45 AM. If below 1.5x by 10:30 AM, shift attention to AMZN/AAPL. ORB breakout setup, entry window 9:45-11:00 AM ET only."
   },
   "AMZN": {
     "sector": "consumer",
@@ -41,19 +56,13 @@
     "spread_bp": 5.1,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,674,619 sh/day); -0.1% gap"
-  },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 26.2,
-    "atr_day": 0.48,
-    "avg_vol_10d": 2443291,
-    "premarket_price": 26.16,
-    "gap_pct": -0.0013,
-    "spread_bp": 3.8,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,443,291 sh/day); -0.1% gap"
+    "orb_window": "09:30-09:45",
+    "support": 272.04,
+    "resistance": 281.86,
+    "min_move_for_trade": 2.95,
+    "priority": "medium",
+    "skip": false,
+    "note": "TERTIARY (previously disarmed Aug 6; spread has normalized). Spread refreshed to 5.1bp — now within limits. Flat gap (-0.1%) suggests the Bezos insider-selling shock (~$4B, ~15M shares) has been largely absorbed. Risk: an active large institutional selling program creates a ceiling; do not hold AMZN through intraday resistance near 281.86. Live spread gate (<=15bp) is authoritative at entry tick — if spread widens at the open, skip. ORB breakout setup, entry window 9:45-11:00 AM ET only."
   },
   "NFLX": {
     "sector": "communication",
@@ -65,7 +74,13 @@
     "spread_bp": 2.7,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,511,685 sh/day); +0.0% gap"
+    "orb_window": "09:30-09:45",
+    "support": 72.51,
+    "resistance": 74.59,
+    "min_move_for_trade": 0.62,
+    "priority": "low",
+    "skip": false,
+    "note": "BORDERLINE / LOW PRIORITY. ATR $2.08 on $73.55 = 2.8% daily range — viable but tight. Excellent spread (2.7bp), decent volume (2.5M). Flat gap. Fully insulated from semiconductor and AMZN news. VWAP reclaim setup only (not ORB). Size down to half position (~$5,000 max, ~67 shares) due to small ATR — full $10k yields only ~$278 gross on a full ATR move, which leaves no margin after 2:1 R/R. Rel_vol gate (>=1.5x) has consistently failed in prior sessions; if below threshold by 10:00 AM, skip."
   },
   "AAPL": {
     "sector": "technology",
@@ -77,6 +92,31 @@
     "spread_bp": 3.5,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,107,835 sh/day); -0.1% gap"
+    "orb_window": "09:30-09:45",
+    "support": 308.12,
+    "resistance": 317.30,
+    "min_move_for_trade": 2.75,
+    "priority": "medium",
+    "skip": false,
+    "note": "CONDITIONAL BACKUP. Evaluate only if NVDA, INTC, and AMZN all fail their entry gates. Spread refreshed to 3.5bp (clean, from earlier 15.7bp premarket reading). Flat gap (-0.11%). Lowest avg volume in armed group (2.1M) — rel_vol gate (>=1.5x) is the key uncertainty; has tracked below threshold in recent sessions. Good ATR ($9.18). ORB breakout setup, entry window 9:45-11:00 AM ET only."
+  },
+  "PFE": {
+    "sector": "healthcare",
+    "prev_close": 26.20,
+    "atr_day": 0.48,
+    "avg_vol_10d": 2443291,
+    "premarket_price": 26.16,
+    "gap_pct": -0.0013,
+    "spread_bp": 3.8,
+    "orb_high": null,
+    "orb_low": null,
+    "orb_window": "09:30-09:45",
+    "support": 25.96,
+    "resistance": 26.44,
+    "min_move_for_trade": 0.14,
+    "priority": null,
+    "skip": true,
+    "skip_reason": "ATR $0.48 on a $26 stock = 1.8% daily range. Max gross on a full $10k position (~381 shares) is ~$183. No viable risk/reward structure after spread costs and 2:1 R/R minimum. Spread and volume are acceptable; ATR alone disqualifies it. Same disarm as Aug 6.",
+    "note": "SKIPPED. Do not evaluate at any tick today."
   }
 }

@@ -1,0 +1,21 @@
+{
+  "trade_id": "FLAT-2026-08-07-NFLX-1556",
+  "created_at_utc": "2026-08-07T19:56:32.350839+00:00",
+  "ticker": "NFLX",
+  "side": "SELL",
+  "qty": 135.0,
+  "limit_price": 74.13,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "End-of-day flatten (pass 1): closing intraday position to be flat overnight.",
+  "risk": "Marketable sell limit; if unfilled a later, more aggressive pass re-prices it.",
+  "strategy": "flatten",
+  "setup": "eod_flatten",
+  "status": "filled",
+  "alpaca_order_id": "fa728395-0943-4e60-a728-4054d1a6377a",
+  "client_order_id": "FLAT-2026-08-07-NFLX-1556",
+  "submitted_at_utc": "2026-08-07T19:56:33.735594+00:00",
+  "filled_qty": 135.0,
+  "filled_avg_price": 74.17,
+  "reconciled_at_utc": "2026-08-07T19:56:35.169626+00:00"
+}

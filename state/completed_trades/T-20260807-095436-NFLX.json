@@ -14,8 +14,11 @@
   "target": 79.12,
   "quote_age_sec": 0.9,
   "spread_bp": 2.7,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "7478a1f8-c94c-4f2c-8869-332a504051c5",
   "client_order_id": "T-20260807-095436-NFLX",
-  "submitted_at_utc": "2026-08-07T13:55:48.180791+00:00"
+  "submitted_at_utc": "2026-08-07T13:55:48.180791+00:00",
+  "filled_qty": 135.0,
+  "filled_avg_price": 73.87,
+  "reconciled_at_utc": "2026-08-07T19:56:35.248128+00:00"
 }

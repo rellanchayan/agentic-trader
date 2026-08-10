@@ -1,0 +1,92 @@
+{
+  "tick_time_et": "13:40:09",
+  "tick_time_utc": "2026-08-10T17:40:09Z",
+  "action": "NO_TRADE",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "name_evaluations": {
+    "AMZN": {
+      "armed": true,
+      "last": 277.15,
+      "vwap": 277.79,
+      "above_vwap": false,
+      "orb_high": 276.72,
+      "orb_low": 273.665,
+      "orb_breakout": true,
+      "rel_volume": 0.49,
+      "spread_bp": 7.9,
+      "quote_age_sec": 0.8,
+      "gate_results": {
+        "orb_entry_window_open": false,
+        "rel_vol_pass": false,
+        "spread_pass": true,
+        "above_vwap": false
+      },
+      "verdict": "SKIP — ORB entry window expired 11:00 AM ET; rel_vol 0.49x (min 1.5x)"
+    },
+    "INTC": {
+      "armed": false,
+      "disarm_reason": "Dilutive $15B equity offering day — full-session disarm per plan",
+      "verdict": "SKIP — disarmed"
+    },
+    "NFLX": {
+      "armed": true,
+      "last": 75.445,
+      "vwap": 74.88,
+      "above_vwap": true,
+      "orb_high": 74.45,
+      "orb_low": 73.67,
+      "orb_breakout": true,
+      "rel_volume": 0.58,
+      "spread_bp": 1.3,
+      "quote_age_sec": 0.7,
+      "gate_results": {
+        "orb_entry_window_open": false,
+        "vwap_reclaim_window_open": false,
+        "rel_vol_pass": false,
+        "spread_pass": true,
+        "above_vwap": true
+      },
+      "verdict": "SKIP — ORB entry window expired 11:00 AM ET; VWAP reclaim window expired 10:15 AM ET; rel_vol 0.58x (min 1.5x)"
+    },
+    "NVDA": {
+      "armed": "conditional",
+      "last": 218.305,
+      "vwap": 219.75,
+      "above_vwap": false,
+      "orb_high": 224.08,
+      "orb_low": 222.44,
+      "orb_breakout": false,
+      "rel_volume": 1.1,
+      "spread_bp": 1.4,
+      "quote_age_sec": 0.8,
+      "gate_results": {
+        "orb_entry_window_open": false,
+        "rel_vol_pass": false,
+        "spread_pass": true,
+        "above_vwap": false,
+        "above_orb_low": false,
+        "sector_disarm_active": true
+      },
+      "verdict": "SKIP — semiconductor sector disarm active (NVDA $3.44 below ORB low $222.44, below VWAP); ORB window expired; rel_vol 1.10x (min 1.5x)"
+    },
+    "AAPL": {
+      "armed": true,
+      "verdict": "SKIP — absent from market snapshot, cannot evaluate"
+    },
+    "PFE": {
+      "armed": false,
+      "disarm_reason": "ATR too small for viable 2:1 R/R at our size constraints",
+      "verdict": "SKIP — disarmed"
+    }
+  },
+  "decision_summary": "NO TRADE. All ORB entry windows expired at 11:00 AM ET (now 1:40 PM). Every armed name fails the rel_vol gate (AMZN 0.49x, NFLX 0.58x, NVDA 1.10x — all below 1.5x minimum). NVDA semiconductor sector disarm active. INTC/PFE disarmed. AAPL absent. No positions or orders to manage. Standing by for flatten window at 3:50 PM.",
+  "next_action": "Hold flat. Continue monitoring. Flatten window opens at 3:50 PM ET — no positions to flatten currently."
+}

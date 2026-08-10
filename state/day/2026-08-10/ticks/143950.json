@@ -1,0 +1,53 @@
+{
+  "time_et": "14:39:50",
+  "verdict": "NO_TRADE",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "evaluation": {
+    "AMZN": {
+      "armed": true,
+      "orb_breakout": false,
+      "above_vwap": false,
+      "last": 276.54,
+      "vwap": 277.67,
+      "rel_volume": 0.45,
+      "spread_bp": 1.8,
+      "gates_failed": ["orb_window_expired", "orb_breakout_false", "below_vwap", "rel_vol_0.45x<1.5x"]
+    },
+    "INTC": {
+      "armed": false,
+      "disarm_reason": "Dilutive $15B stock offering day — structural selling overhang all session"
+    },
+    "NFLX": {
+      "armed": true,
+      "orb_breakout": true,
+      "above_vwap": true,
+      "last": 75.5,
+      "vwap": 74.95,
+      "rel_volume": 0.53,
+      "spread_bp": 2.7,
+      "gates_failed": ["orb_window_expired", "rel_vol_0.53x<1.5x"]
+    },
+    "NVDA": {
+      "armed": "conditional",
+      "sector_disarmed": true,
+      "orb_breakout": false,
+      "above_vwap": false,
+      "last": 218.465,
+      "vwap": 219.62,
+      "orb_low": 222.44,
+      "rel_volume": 0.97,
+      "spread_bp": 25.7,
+      "gates_failed": ["sector_disarmed", "below_vwap", "below_orb_low", "rel_vol_0.97x<1.5x", "spread_25.7bp>25bp_max"]
+    },
+    "AAPL": {
+      "armed": true,
+      "gates_failed": ["absent_from_market_snapshot"]
+    }
+  },
+  "decision_rationale": "ORB entry window expired 3h39m ago (closed 11:00 AM ET). All names fail the rel_vol gate (min 1.5x). No positions to manage. Staying flat — a missed trade costs nothing; a forced late trade on low-volume afternoon action violates the playbook.",
+  "action_taken": "none"
+}

@@ -1,0 +1,37 @@
+{
+  "time_et": "11:40:00",
+  "action": "NO_TRADE",
+  "reason": "ORB entry window closed at 11:00 AM ET (now 11:40 AM, 130 min since open). All armed names also fail rel_vol gate: AMZN 0.57x (need 1.5x), NFLX 0.66x (need 1.5x), NVDA 1.11x below VWAP and no ORB breakout. INTC disarmed (dilutive offering day). AAPL absent from snapshot. No VWAP reclaim setup available (NFLX window was 10:15 AM, now expired). No positions to manage, no open orders. No qualifying setup exists; taking no action.",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "candidates_evaluated": {
+    "AMZN": {
+      "orb_breakout": true,
+      "above_vwap": true,
+      "spread_bp": 1.8,
+      "rel_volume": 0.57,
+      "gate_result": "FAIL — ORB window closed (11:40 AM > 11:00 AM ET); also rel_vol 0.57 < 1.5x"
+    },
+    "NFLX": {
+      "orb_breakout": true,
+      "above_vwap": true,
+      "spread_bp": 1.3,
+      "rel_volume": 0.66,
+      "gate_result": "FAIL — ORB window closed (11:40 AM > 11:00 AM ET); also rel_vol 0.66 < 1.5x; VWAP reclaim window (10:15 AM) also expired"
+    },
+    "NVDA": {
+      "orb_breakout": false,
+      "above_vwap": false,
+      "spread_bp": 0.9,
+      "rel_volume": 1.11,
+      "gate_result": "FAIL — below VWAP, no ORB breakout, rel_vol 1.11 < 1.5x; semiconductor conditional not met"
+    },
+    "INTC": {
+      "gate_result": "DISARMED — dilutive $15B offering day, skip all session"
+    },
+    "AAPL": {
+      "gate_result": "ABSENT — not in market snapshot, cannot evaluate"
+    }
+  }
+}

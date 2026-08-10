@@ -152,6 +152,20 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-10: No tuning. Tuner eligible ("ok to tune", 35 days of history, drawdown 0.02%) but no
+  rule fired — parameters left unchanged. Evidence reviewed tonight: three sessions (2026-07-10
+  NVDA, 2026-07-31 AMZN, 2026-08-07 NFLX) all share the same structural problem — the 2.5x ATR
+  target is routinely unreachable within a single session, forcing EOD flatten to act as the exit
+  rather than the target. Average ORB outcome across 4 trades is -0.1855R expectancy against a
+  2.5x ATR objective; wins are being harvested early at +0.345R to +0.559R, far below the
+  configured target. The case for reducing `target_atr_mult` from 2.5 toward 2.0 is noted and
+  the directional signal is real, but the tuner's own rule logic evaluated the data and did not
+  fire — no automated change was made. The human reviewer should confirm: (1) whether the tuner
+  rule threshold for `target_atr_mult` requires a stronger signal than what three ORB sessions
+  provide, and (2) if the evidence is now considered sufficient, whether a manual step down to
+  2.0 is warranted outside the tuner's bounds. No parameter has been changed tonight; the tuning
+  ledger remains empty. Over 35 days: 14 trades (0.40/day), 42.9% win rate, avg win +0.49R,
+  avg loss -0.94R, ORB -0.1855R across 4 trades, momentum -0.975R across 1 trade, fill rate 93%.
 - 2026-08-07: No tuning. Tuner eligible ("ok to tune", 34 days of history) but no rule fired —
   parameters left unchanged. Today: 1 NFLX ORB round-trip, buy 135 @ $73.87, EOD flatten @
   $74.17, +$40.50 (+0.345R). Win. All gates passed, no rule violations. The target ($79.12,

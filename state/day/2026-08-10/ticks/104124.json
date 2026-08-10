@@ -1,0 +1,111 @@
+{
+  "tick_time_et": "10:41:24",
+  "tick_id": "104124",
+  "date": "2026-08-10",
+  "minutes_since_open": 71,
+  "orb_window_closes_et": "11:00",
+  "orb_minutes_remaining": 19,
+
+  "account": {
+    "equity": 999535.62,
+    "cash": 999535.62,
+    "buying_power": 3998142.48,
+    "daytrade_count": 0
+  },
+
+  "day_pnl": {
+    "day_pnl_usd": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "tripped": false
+  },
+
+  "budget": {
+    "trades_remaining": 20,
+    "position_slots_remaining": 8,
+    "daily_deploy_used_usd": 0
+  },
+
+  "positions_held": [],
+  "open_orders": [],
+
+  "position_management": "No open positions. Nothing to manage.",
+
+  "market_eval": {
+    "AMZN": {
+      "last": 278.22,
+      "vwap": 276.18,
+      "orb_high": 276.72,
+      "orb_low": 273.665,
+      "spread_bp": 71.7,
+      "rel_volume": 0.61,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "quote_age_sec": 0.3,
+      "gate_results": {
+        "spread_bp_gate": "FAIL — 71.7 bp vs max 15 bp. More than 4x the limit.",
+        "rel_vol_gate": "FAIL — 0.61x vs min 1.5x",
+        "orb_breakout": "PASS",
+        "above_vwap": "PASS",
+        "quote_fresh": "PASS"
+      },
+      "decision": "SKIP — double blocked (spread and rel_vol). Per playbook, a 71.7 bp spread on the day's primary candidate mid-session is a probable thesis failure signal, not a timing issue to wait out. No entry."
+    },
+    "AAPL": {
+      "decision": "SKIP — not present in market data snapshot. Cannot evaluate without live quotes."
+    },
+    "NFLX": {
+      "last": 74.75,
+      "vwap": 74.13,
+      "orb_high": 74.45,
+      "orb_low": 73.67,
+      "spread_bp": 1.3,
+      "rel_volume": 0.79,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "quote_age_sec": 0.8,
+      "gate_results": {
+        "spread_bp_gate": "PASS — 1.3 bp (excellent)",
+        "rel_vol_gate": "FAIL — 0.79x vs min 1.5x",
+        "orb_breakout": "PASS",
+        "above_vwap": "PASS",
+        "quote_fresh": "PASS"
+      },
+      "decision": "SKIP — rel_vol gate fails (0.79x). Price action is constructive (ORB breakout, above VWAP, tight spread) but volume confirmation absent. Cannot enter without volume."
+    },
+    "NVDA": {
+      "last": 220.43,
+      "vwap": 222.01,
+      "orb_high": 224.08,
+      "orb_low": 222.44,
+      "spread_bp": 1.4,
+      "rel_volume": 1.14,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "quote_age_sec": 0.3,
+      "gate_results": {
+        "spread_bp_gate": "PASS — 1.4 bp",
+        "rel_vol_gate": "FAIL — 1.14x vs min 1.5x",
+        "orb_breakout": "FAIL — price $220.43 is below ORB high $224.08",
+        "above_vwap": "FAIL — $220.43 below VWAP $222.01",
+        "semiconductor_conditional": "FAIL — NVDA itself is below VWAP and below ORB high, confirming semiconductor sector is not clean"
+      },
+      "decision": "SKIP — fails multiple gates including its own conditional requirement. Semiconductor sector weak."
+    },
+    "INTC": {
+      "decision": "DISARMED — full session disarm per day plan (dilutive $15B equity offering)."
+    }
+  },
+
+  "action": "NO_TRADE",
+  "reason": "All watchlist names blocked by hard gates. AMZN (primary): 71.7 bp spread (max 15 bp) and rel_vol 0.61 (min 1.5x) — double fail; wide spread on primary candidate is a probable thesis failure per playbook. NFLX: rel_vol 0.79 below 1.5x minimum despite clean ORB breakout and 1.3 bp spread. NVDA: below VWAP, no ORB breakout, rel_vol 1.14, semiconductor conditional fails. AAPL: absent from snapshot. INTC: disarmed. ORB window closes in ~19 minutes; insufficient time and volume for any name to qualify.",
+  "orders_submitted": [],
+  "orders_cancelled": [],
+
+  "market_context": "MIXED/RANGE tape. Futures barely positive. CPI Wednesday is the week's key event. Low volume across the board (rel_vol <1x on most names except NVDA at 1.14x and INTC at 1.3x). AMZN's wide spread suggests thin two-sided activity despite price making a technical ORB breakout. This is consistent with a low-conviction drift-up on a quiet tape, not a high-momentum breakout. No trade is the correct call.",
+
+  "next_tick_notes": "If ORB window expires at 11:00 AM with no entry, the session likely ends flat. No mean-reversion or momentum setups are enabled today per the plan. Watch for any dramatic spread compression on AMZN or volume surge on NFLX in the next ~19 minutes — either could flip a gate — but do not lower the bar.",
+
+  "day_pnl_snapshot": 0.0,
+  "positions_count": 0,
+  "trades_today": 0
+}

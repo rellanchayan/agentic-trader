@@ -2,10 +2,15 @@
   "_meta": {
     "date": "2026-08-10",
     "generated_utc": "2026-08-10T13:38:21.110498+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-08-10T14:00:00.000000+00:00",
+    "source": "watchlist_build + day_screener",
     "candidates_considered": 6,
-    "top": 6,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "final_count": 4,
+    "dropped": {
+      "PFE": "ATR $0.51 on $26.64 stock is too small for meaningful intraday R/R; max $10k trade yields ~$191 risk / ~$382 target at 1-ATR stop. Not worth the overhead.",
+      "AAPL": "Premarket spread 32.1 bp is very wide. Prior sessions carry a sell-side downgrade headwind (Chinese investment firm, PT $280 vs current $305.33); does not meet clean long criteria."
+    },
+    "note": "ORB high/low fill in live after 9:45 AM ET. Screener kept 4 of 6 candidates. SPY/QQQ/IWM not in this run; no quote data available to add honestly."
   },
   "NVDA": {
     "sector": "technology",
@@ -15,45 +20,39 @@
     "premarket_price": 223.21,
     "gap_pct": -0.0009,
     "spread_bp": 1.8,
+    "support": 219.00,
+    "resistance": 228.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,303,400 sh/day); -0.1% gap"
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 97.65,
-    "atr_day": 7.35,
-    "avg_vol_10d": 3243715,
-    "premarket_price": 97.5,
-    "gap_pct": -0.0015,
-    "spread_bp": 4.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,243,715 sh/day); -0.1% gap"
+    "note": "PRIMARY. Most liquid name on list (4.3M sh/day avg). Spread 1.8 bp is excellent. Flat premarket (-0.09%), no gap to chase. Denylist: PASS. Setup: ORB breakout — wait for range to form by 9:45 AM ET, then enter on confirmed break above ORB high with rel_vol >= 1.5x. Stop 0.5 ATR (~$3.75) below entry. Target 1.5-2x ATR above entry (~$228-231 from prev close). Disarm if price opens below 219 and cannot reclaim within first 30 min."
   },
   "AMZN": {
     "sector": "consumer",
     "prev_close": 274.77,
     "atr_day": 9.88,
     "avg_vol_10d": 2649249,
-    "premarket_price": 274.5,
+    "premarket_price": 274.50,
     "gap_pct": -0.001,
     "spread_bp": 21.9,
+    "support": 270.00,
+    "resistance": 280.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,649,249 sh/day); -0.1% gap"
+    "note": "SECONDARY. Liquid (2.6M sh/day avg). ATR $9.88 gives good intraday range. Denylist: PASS. CAUTION: premarket spread 21.9 bp is elevated; prior sessions show AMZN spread normalizes to ~5 bp once regular session opens, but live spread must be <= 15 bp at the tick of any entry — if it is not, disarm. Flat premarket (-0.10%). Setup: ORB breakout, same entry criteria as NVDA. Support at $270 (0.5 ATR below prev close, round level); resistance at $280 (round level ~0.5 ATR above). Max size $10k (~36 shares at $275)."
   },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 26.64,
-    "atr_day": 0.51,
-    "avg_vol_10d": 2554332,
-    "premarket_price": 26.66,
-    "gap_pct": 0.0008,
-    "spread_bp": 3.8,
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 97.65,
+    "atr_day": 7.35,
+    "avg_vol_10d": 3243715,
+    "premarket_price": 97.50,
+    "gap_pct": -0.0015,
+    "spread_bp": 4.1,
+    "support": 94.00,
+    "resistance": 100.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,554,332 sh/day); +0.1% gap"
+    "note": "CONDITIONAL/TERTIARY. Liquid (3.2M sh/day avg). ATR $7.35 is large relative to price (7.5% daily range). Denylist: PASS. SPREAD RISK: prior sessions showed premarket spreads of 4-6 bp blow out to 130+ bp at the open; verify spread <= 15 bp live before any entry — if spread blows out, disarm immediately and do not revisit. Fundamental headwinds persist (tariff concerns, foundry margin, AI capex shifting toward accelerators). Support at $94 (0.5 ATR below); resistance at $100 (major psychological round number). Only trade on clean ORB breakout with confirmed volume and normal spread. Max size $10k (~102 shares at $97.65)."
   },
   "NFLX": {
     "sector": "communication",
@@ -63,20 +62,10 @@
     "premarket_price": 74.22,
     "gap_pct": -0.0007,
     "spread_bp": 6.7,
+    "support": 73.25,
+    "resistance": 75.30,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,469,428 sh/day); -0.1% gap"
-  },
-  "AAPL": {
-    "sector": "technology",
-    "prev_close": 305.33,
-    "atr_day": 9.37,
-    "avg_vol_10d": 2066410,
-    "premarket_price": 305.41,
-    "gap_pct": 0.0003,
-    "spread_bp": 32.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,066,410 sh/day); +0.0% gap"
+    "note": "TERTIARY. Liquid (2.5M sh/day avg). Spread 6.7 bp acceptable. Denylist: PASS. Small ATR ($2.05) constrains per-trade P&L: at max $10k (~134 shares), 1-ATR stop = ~$275 risk, 2:1 target = ~$550. Only enter if rel_vol >= 1.5x AND setup is textbook clean. Support at $73.25 (0.5 ATR below prev close); resistance at $75.30 (0.5 ATR above). If no clean ORB break by 11:00 AM ET, pass entirely — do not force."
   }
 }

@@ -1,0 +1,61 @@
+{
+  "tick_time_et": "09:49:48",
+  "tick_time_utc": "2026-08-10T13:50:37Z",
+  "verdict": "NO_TRADE",
+  "reason": "All armed names fail relative volume gate (min 1.5x). No ORB breakouts on any name. All names below VWAP. INTC disarmed (dilutive offering). No safe entry available.",
+  "evaluations": {
+    "AMZN": {
+      "result": "FAIL",
+      "gates": {
+        "orb_breakout": false,
+        "above_vwap": false,
+        "rel_volume": 0.75,
+        "rel_volume_pass": false,
+        "spread_bp": 3.3,
+        "spread_pass": true
+      },
+      "note": "Price $275.29 below ORB high $276.72. Rel vol 0.75x below 1.5x minimum."
+    },
+    "NFLX": {
+      "result": "FAIL",
+      "gates": {
+        "orb_breakout": false,
+        "above_vwap": false,
+        "rel_volume": 1.12,
+        "rel_volume_pass": false,
+        "spread_bp": 2.7,
+        "spread_pass": true
+      },
+      "note": "Price $73.64 below ORB high $74.45. Rel vol 1.12x below 1.5x minimum. Also below VWAP $73.97, no VWAP reclaim setup."
+    },
+    "NVDA": {
+      "result": "FAIL",
+      "gates": {
+        "orb_breakout": false,
+        "above_vwap": false,
+        "rel_volume": 1.27,
+        "rel_volume_pass": false,
+        "spread_bp": 2.2,
+        "spread_pass": true
+      },
+      "note": "Price $223.22 below ORB high $224.08. Rel vol 1.27x below 1.5x minimum. Semiconductor sector under pressure from INTC offering."
+    },
+    "INTC": {
+      "result": "DISARMED",
+      "note": "$15B dilutive equity offering day. Disarmed per day plan."
+    },
+    "AAPL": {
+      "result": "NO_DATA",
+      "note": "Not in tick_context.json snapshot. Cannot evaluate without live data."
+    }
+  },
+  "positions_managed": [],
+  "orders_submitted": [],
+  "account_snapshot": {
+    "equity": 999535.62,
+    "cash": 999535.62,
+    "day_pnl": 0.0,
+    "open_positions": 0,
+    "trades_today": 0
+  }
+}

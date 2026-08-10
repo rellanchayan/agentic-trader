@@ -1,0 +1,48 @@
+{
+  "time_et": "12:40:19",
+  "timestamp_et": "2026-08-10T12:40:19-04:00",
+  "action": "NO_TRADE",
+  "reason": "ORB entry window closed at 11:00 AM ET (now 12:40 PM). All armed names fail rel_vol gate (min 1.5x): AMZN 0.55x, NFLX 0.66x, NVDA 1.12x. NVDA also below VWAP ($216.97 vs VWAP $220.33) with no ORB breakout — semiconductor sector conditional disarm active. INTC disarmed (dilutive $15B offering day). AAPL absent from market snapshot. PFE disarmed (ATR too small for 2:1 R/R). No positions to manage. No open orders.",
+  "candidates_evaluated": [
+    {
+      "ticker": "AMZN",
+      "status": "BLOCKED",
+      "blocks": ["rel_vol 0.55x < 1.5x minimum", "ORB entry window closed at 11:00 AM ET"],
+      "notes": "ORB breakout intact ($277.72 > orb_high $276.72), spread 1.8 bp excellent, slightly below VWAP"
+    },
+    {
+      "ticker": "NFLX",
+      "status": "BLOCKED",
+      "blocks": ["rel_vol 0.66x < 1.5x minimum", "ORB entry window closed at 11:00 AM ET", "VWAP reclaim window expired 10:15 AM ET"],
+      "notes": "ORB breakout intact ($75.66 > orb_high $74.45), spread 1.3 bp excellent, above VWAP"
+    },
+    {
+      "ticker": "NVDA",
+      "status": "BLOCKED",
+      "blocks": ["rel_vol 1.12x < 1.5x minimum", "below VWAP ($216.97 vs $220.33)", "no ORB breakout (last $216.97 < orb_high $224.08)", "semiconductor sector conditional disarm active"],
+      "notes": "Sector disarm confirmed: NVDA $7 below ORB high, below VWAP"
+    },
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "blocks": ["disarmed for full session — dilutive $15B common stock offering day"]
+    },
+    {
+      "ticker": "AAPL",
+      "status": "ABSENT",
+      "blocks": ["not present in market snapshot"]
+    },
+    {
+      "ticker": "PFE",
+      "status": "DISARMED",
+      "blocks": ["disarmed for full session — ATR $0.51 too small for 2:1 R/R at our size constraints"]
+    }
+  ],
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "equity": 999535.62,
+  "loss_budget_remaining": 3000.0
+}

@@ -1,0 +1,27 @@
+{
+  "time_et": "15:39:33",
+  "timestamp_et": "2026-08-10T15:39:33.297721-04:00",
+  "action": "NO_TRADE",
+  "verdict": "PROCEED",
+  "past_no_new_entries": true,
+  "in_flatten_window": false,
+  "positions": 0,
+  "open_orders": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999535.62,
+  "market_snapshot": {
+    "AMZN": {"last": 277.32, "rel_volume": 0.42, "above_vwap": false, "spread_bp": 0.7, "orb_breakout": true},
+    "NFLX": {"last": 75.62, "rel_volume": 0.51, "above_vwap": true, "spread_bp": 1.3, "orb_breakout": true},
+    "NVDA": {"last": 219.09, "rel_volume": 0.93, "above_vwap": false, "spread_bp": 1.4, "orb_breakout": false},
+    "INTC": {"status": "DISARMED", "reason": "offering day"}
+  },
+  "reason": "Past 3:30 PM ET no-new-entries cutoff (now 3:39 PM). No positions to manage. No open orders. All armed names fail rel_vol gate: AMZN 0.42x (below VWAP), NFLX 0.51x (ORB breakout but window expired 4h39m ago), NVDA 0.93x (below VWAP and ORB low, semiconductor sector disarm active). INTC disarmed (offering day). AAPL absent from snapshot. Session ends flat — no trades taken today.",
+  "gates_checked": {
+    "no_halt_file": true,
+    "day_stop_not_active": true,
+    "past_no_new_entries": true,
+    "entry_window_closed_at": "11:00 AM ET",
+    "no_positions_to_manage": true
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "tick_time": "11:39",
+  "timestamp_et": "2026-08-11T11:39:49-04:00",
+  "minutes_since_open": 129,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "entry_evaluated": {
+    "AAPL": {
+      "result": "SKIP",
+      "reasons": [
+        "spread 18.2 bp > 15 bp gate",
+        "rel_vol 0.42x < 1.5x gate",
+        "plan-disarmed premarket (spread 33.7 bp, no catalyst)"
+      ]
+    },
+    "INTC": {
+      "result": "SKIP",
+      "reasons": [
+        "plan-disarmed for full session: Intel $15B dilutive equity offering creates structural selling overhang",
+        "ORB entry window closed (11:39 AM > 11:00 AM cutoff)",
+        "note: spread 3.1 bp and rel_vol 3.2x would otherwise pass — but plan disarm takes priority"
+      ]
+    },
+    "NFLX": {
+      "result": "SKIP",
+      "reasons": [
+        "rel_vol 0.9x < 1.5x gate",
+        "price $75.31 below VWAP $76.10 — no VWAP reclaim in progress",
+        "ORB entry window closed (11:39 AM > 11:00 AM cutoff)",
+        "no ORB breakout (ORB high $76.475 not reached)"
+      ]
+    },
+    "NVDA": {
+      "result": "SKIP",
+      "reasons": [
+        "rel_vol 1.29x < 1.5x gate",
+        "below VWAP ($219.02 < $219.63) — semiconductor sector condition fails",
+        "ORB entry window closed (11:39 AM > 11:00 AM cutoff)",
+        "no ORB breakout (ORB high $222.09 never reached)"
+      ]
+    },
+    "QQQ": {
+      "result": "SKIP",
+      "reasons": [
+        "not in live quote data",
+        "plan says skip QQQ on MIXED/choppy tape unless NVDA and NFLX both fail all gates AND tape shows clear direction",
+        "MIXED tape — skip"
+      ]
+    }
+  },
+  "note": "ORB entry window closed at 11:00 AM ET — all ORB setups are off the table for the day. Only remaining potential setup is NFLX VWAP reclaim, but rel_vol 0.9x fails the 1.5x gate. INTC shows exceptional metrics (rel_vol 3.2x, spread 3.1 bp, orb_breakout=true) but is disarmed by the day plan due to Intel's $15B dilutive offering. Respecting the plan. Pre-CPI Tuesday with MIXED tape — zero-trade outcome consistent with morning expectation.",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_used": 0,
+  "slots_used": 0,
+  "equity": 999535.62
+}

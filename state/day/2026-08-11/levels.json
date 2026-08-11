@@ -2,22 +2,15 @@
   "_meta": {
     "date": "2026-08-11",
     "generated_utc": "2026-08-11T13:47:46.397703+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-08-11T14:00:00.000000+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 6,
-    "top": 6,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "AMZN": {
-    "sector": "consumer",
-    "prev_close": 274.12,
-    "atr_day": 10.06,
-    "avg_vol_10d": 2526691,
-    "premarket_price": 269.1,
-    "gap_pct": -0.0183,
-    "spread_bp": 328.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,526,691 sh/day); -1.8% gap"
+    "top": 4,
+    "dropped": {
+      "AMZN": "spread 328bp covers ~89% of $10.06 ATR; any trade would need a nearly perfect move just to break even on spread cost; drop regardless of the -1.8% gap catalyst — tick-loop spread gate will re-evaluate at open",
+      "PFE": "ATR $0.54 on $27 stock (2.0% daily range) cannot support a 2:1 R/R structure at $10K max trade size; ~368 shares x full ATR = $199 gross before slippage; no catalyst; second consecutive session disarmed for same reason"
+    },
+    "note": "4 active names: NVDA (primary), INTC, AAPL, NFLX. CPI prints Wednesday 2026-08-13 ~8:30 AM ET — size conservatively today and consider reducing exposure by early Tuesday afternoon. AAPL pre-market spread 33.7bp is almost certainly a thin pre-market artifact; must confirm below 15bp before any tick-loop entry. INTC carries residual underwriter distribution overhang from yesterday's $15B equity offering; check that sector is not under broad selling before entry. ORB levels fill in live after the first 15 minutes of trading."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,9 +20,11 @@
     "premarket_price": 220.12,
     "gap_pct": -0.0005,
     "spread_bp": 2.3,
+    "support": 217.00,
+    "resistance": 223.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,196,750 sh/day); -0.1% gap"
+    "note": "PRIMARY — tightest spread (2.3bp) and highest volume (4.2M sh/day); ATR $7.57 (3.4% of price); flat pre-market, no news; support at 217.00 (round, ~0.4 ATR below close), resistance at 223.00 (round, ~0.4 ATR above); INTC sector overhang resolved after yesterday — evaluate NVDA on its own tape today"
   },
   "INTC": {
     "sector": "technology",
@@ -39,21 +34,25 @@
     "premarket_price": 96.33,
     "gap_pct": 0.0025,
     "spread_bp": 3.1,
+    "support": 95.00,
+    "resistance": 97.50,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,080,879 sh/day); +0.2% gap"
+    "note": "CAUTION — best ATR-to-price ratio in the group (7.5% daily range, $7.17 on $96 stock); spread 3.1bp, vol 3.1M sh/day; stock survived yesterday's $15B offering and closed at $96.09; residual underwriter distribution may suppress rallies today — confirm sector not in broad selling before entry; support at 95.00 (round floor), resistance at 97.50 (round, above close)"
   },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 27.15,
-    "atr_day": 0.54,
-    "avg_vol_10d": 2499967,
-    "premarket_price": 27.16,
-    "gap_pct": 0.0004,
-    "spread_bp": 3.7,
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 306.50,
+    "atr_day": 9.25,
+    "avg_vol_10d": 2027622,
+    "premarket_price": 305.76,
+    "gap_pct": -0.0024,
+    "spread_bp": 33.7,
+    "support": 304.00,
+    "resistance": 308.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,499,967 sh/day); +0.0% gap"
+    "note": "SPREAD WARNING — pre-market spread 33.7bp is almost certainly a thin pre-market artifact (AAPL normally 1-3bp in regular hours); DO NOT enter unless live spread confirmed below 15bp at tick time; ATR $9.25 (3.0% of price) and vol 2.0M sh/day are solid; -0.2% gap, slight drift below prev_close 306.50; support at 304.00 (round, below pre-market), resistance at 308.00 (round, above close)"
   },
   "NFLX": {
     "sector": "communication",
@@ -63,20 +62,10 @@
     "premarket_price": 76.19,
     "gap_pct": 0.0004,
     "spread_bp": 3.9,
+    "support": 75.00,
+    "resistance": 77.25,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,352,546 sh/day); +0.0% gap"
-  },
-  "AAPL": {
-    "sector": "technology",
-    "prev_close": 306.5,
-    "atr_day": 9.25,
-    "avg_vol_10d": 2027622,
-    "premarket_price": 305.76,
-    "gap_pct": -0.0024,
-    "spread_bp": 33.7,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,027,622 sh/day); -0.2% gap"
+    "note": "TERTIARY — cleanest spread of the lower-ATR names (3.9bp); ATR $2.09 (2.7% of price) is modest but workable; vol 2.4M sh/day; flat pre-market, no catalyst; produced a winning trade 2026-08-07 from this price range; if NFLX sets up, target must be 1.5-2.0x per-share risk (not 2.5x ATR — that lesson is in the playbook); support at 75.00 (round), resistance at 77.25 (~0.5 ATR above close)"
   }
 }

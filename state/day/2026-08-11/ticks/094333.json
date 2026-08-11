@@ -1,0 +1,50 @@
+{
+  "tick_id": "094333",
+  "tick_time_et": "2026-08-11T09:43:33-04:00",
+  "minutes_since_open": 13,
+  "action": "NO_TRADE",
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_used_today": 0,
+  "trades_remaining": 20,
+  "slot_used": 0,
+  "slots_remaining": 8,
+  "context": {
+    "no_day_plan": true,
+    "plan_note": "docs/plan/2026-08-11.md does not exist — premarket phase did not write a plan. Operating extra conservatively.",
+    "orb_window_status": "STILL FORMING — closes at 9:45 AM ET (~2 min remaining)",
+    "clock_flags": {
+      "past_no_new_entries": false,
+      "in_flatten_window": false
+    }
+  },
+  "screening": {
+    "NVDA": {
+      "verdict": "WATCH — best candidate, but ORB not triggered yet",
+      "spread_bp": 1.4,
+      "rel_volume": 1.94,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "last": 220.6,
+      "orb_high": 222.09,
+      "gap_to_orb_high": 1.49,
+      "blocked_reason": "ORB window not yet complete; price has not broken above $222.09"
+    },
+    "AAPL":  {"verdict": "BLOCKED", "spread_bp": 10.1, "rel_volume": 0.7,  "blocked_reason": "rel_vol 0.7x < 1.5x minimum"},
+    "AMD":   {"verdict": "BLOCKED", "spread_bp": 49.9, "rel_volume": 1.11, "blocked_reason": "spread 49.9bp > 25bp max"},
+    "AMZN":  {"verdict": "BLOCKED", "spread_bp": 82.3, "rel_volume": 0.6,  "blocked_reason": "spread 82.3bp > 25bp max"},
+    "AVGO":  {"verdict": "BLOCKED", "spread_bp": 372.2,"rel_volume": 1.16, "blocked_reason": "spread 372.2bp > 25bp max; quote_age 6.9s"},
+    "CRM":   {"verdict": "BLOCKED", "spread_bp": 648.6,"rel_volume": 0.65, "blocked_reason": "spread 648.6bp > 25bp max; quote_age 11.7s"},
+    "GOOGL": {"verdict": "BLOCKED", "spread_bp": 26.5, "rel_volume": 1.82, "blocked_reason": "spread 26.5bp just over 25bp max"},
+    "META":  {"verdict": "BLOCKED", "spread_bp": 57.2, "rel_volume": 0.91, "blocked_reason": "spread 57.2bp > 25bp max"},
+    "MSFT":  {"verdict": "BLOCKED", "spread_bp": 120.8,"rel_volume": 0.68, "blocked_reason": "spread 120.8bp > 25bp max"},
+    "NFLX":  {"verdict": "BLOCKED", "spread_bp": 6.6,  "rel_volume": 1.08, "blocked_reason": "rel_vol 1.08x < 1.5x minimum"},
+    "ORCL":  {"verdict": "BLOCKED", "spread_bp": 21.7, "rel_volume": 1.35, "blocked_reason": "rel_vol 1.35x < 1.5x minimum; below VWAP"},
+    "TSLA":  {"verdict": "BLOCKED", "spread_bp": 85.7, "rel_volume": 1.42, "blocked_reason": "spread 85.7bp > 25bp max"}
+  },
+  "reasoning": "Only NVDA passes both the spread gate (1.4bp vs 25bp max) and the rel_vol gate (1.94x vs 1.5x min). NVDA is also above VWAP ($220.60 vs $220.56). However, the ORB window doesn't close until 9:45 AM ET and the ORB high is $222.09 — the price has not broken out. Entering before the ORB is complete would be premature. Additionally, there is no formal day plan written for 2026-08-11, which calls for extra caution. Decision: wait for ORB to complete, then evaluate NVDA if it cleanly breaks $222.09 with rel_vol still above 1.5x and spread under 15bp.",
+  "next_action_plan": "Next tick: evaluate NVDA ORB breakout above $222.09. If price > $222.09, spread < 15bp, rel_vol > 1.5x: compute entry/stop/target and submit BUY with simultaneous companion stop. If ORB high not broken by 11:00 AM, close the entry window. Also watch if GOOGL spread tightens below 25bp (rel_vol 1.82x is strong).",
+  "orders_submitted": [],
+  "orders_cancelled": []
+}

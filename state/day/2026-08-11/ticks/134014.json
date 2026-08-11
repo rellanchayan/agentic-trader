@@ -1,0 +1,104 @@
+{
+  "tick_id": "2026-08-11T134014",
+  "timestamp_et": "2026-08-11T13:40:14-04:00",
+  "minutes_since_open": 250,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders": [],
+  "gate_checks": {
+    "in_flatten_window": false,
+    "past_no_new_entries": false,
+    "orb_window_open": false,
+    "orb_window_closed_minutes_ago": 160,
+    "loss_budget_ok": true,
+    "position_slots_remaining": 8,
+    "trades_remaining": 20
+  },
+  "candidate_evaluation": {
+    "AAPL": {
+      "status": "SKIP",
+      "reasons": [
+        "Plan-disarmed premarket (33.7bp premarket spread, no catalyst)",
+        "rel_vol 0.54x FAILS 1.5x gate",
+        "below_vwap (last $306.41 < VWAP $306.55)",
+        "ORB window closed 160 min ago"
+      ],
+      "metrics": {
+        "last": 306.41,
+        "vwap": 306.55,
+        "rel_volume": 0.54,
+        "spread_bp": 4.2,
+        "above_vwap": false,
+        "orb_breakout": false
+      }
+    },
+    "INTC": {
+      "status": "SKIP",
+      "reasons": [
+        "Plan-disarmed FULL SESSION: Intel $15B common stock dilutive offering",
+        "Sector selling overhang from Monday (-2% SMH)",
+        "Documented spread blowout risk at open (6.4bp premarket -> 131.6bp live on 2026-08-04)",
+        "Plan disarm overrides even strong rel_vol 2.27x and spread 2.1bp metrics"
+      ],
+      "metrics": {
+        "last": 96.805,
+        "vwap": 97.31,
+        "rel_volume": 2.27,
+        "spread_bp": 2.1,
+        "above_vwap": false,
+        "orb_breakout": false
+      }
+    },
+    "NFLX": {
+      "status": "SKIP",
+      "reasons": [
+        "rel_vol 0.68x FAILS 1.5x gate (fifth consecutive tick below 1.5x)",
+        "ORB window closed 160 min ago — no new ORB entries",
+        "below_vwap: last $74.71 is $1.02 below VWAP $75.73 — no VWAP reclaim in progress",
+        "VWAP reclaim requires price to recover and hold above $75.73 with rel_vol >1.5x — not happening"
+      ],
+      "metrics": {
+        "last": 74.71,
+        "vwap": 75.73,
+        "rel_volume": 0.68,
+        "spread_bp": 1.3,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "vwap_deficit": 1.02
+      }
+    },
+    "NVDA": {
+      "status": "SKIP",
+      "reasons": [
+        "rel_vol 0.99x FAILS 1.5x gate",
+        "spread_bp 34.0 FAILS 25bp max (and 15bp plan gate)",
+        "below_vwap: last $217.17 < VWAP $219.08 — semiconductor sector condition fails",
+        "ORB window closed 160 min ago — no new ORB entries",
+        "Sector disarm condition not lifted (multiple semis below VWAP)"
+      ],
+      "metrics": {
+        "last": 217.17,
+        "vwap": 219.08,
+        "rel_volume": 0.99,
+        "spread_bp": 34.0,
+        "above_vwap": false,
+        "orb_breakout": false
+      }
+    },
+    "QQQ": {
+      "status": "SKIP",
+      "reasons": [
+        "Not in live quote data this tick",
+        "MIXED tape — QQQ ORB only valid as last resort per plan, and data unavailable"
+      ]
+    }
+  },
+  "reasoning_summary": "250 minutes into the session (1:40 PM ET). Flat with no positions. All five ticks today have been NO_TRADE. The ORB entry window closed at 11:00 AM ET (160 minutes ago) — no new ORB entries under any circumstances. NFLX is the only name with a potentially live setup (VWAP reclaim) but fails on two counts: (1) rel_vol 0.68x is well below the 1.5x gate, and (2) price is $1.02 below VWAP with no upward momentum visible — a VWAP reclaim requires the price to actually be above VWAP. NVDA fails both the volume gate (0.99x) and the spread gate (34bp), in addition to the sector condition. AAPL and INTC are plan-disarmed. QQQ unavailable in live data. Pre-CPI Tuesday with MIXED/RANGE day plan: zero trades is the correct outcome. The 1.5x rel_vol gate is performing its designed function — blocking entries when institutions are sitting on their hands ahead of a binary macro event (CPI tomorrow).",
+  "day_pnl": 0.0,
+  "account_equity": 999535.62,
+  "loss_budget_remaining": 3000.0,
+  "positions_count": 0,
+  "trades_used_today": 0,
+  "slots_used": 0
+}

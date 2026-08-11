@@ -25,6 +25,7 @@ made of **rules to follow**, not stories.
   that seeded the thesis. A late entry inherits the risk of a mature trend reverting but misses
   the early reward; if the setup was not actionable at the open, skip it for the day.
 - Be careful around scheduled events (Fed, CPI, jobs) — prices whip around. Trade smaller or wait.
+- On pre-CPI session days (the Tuesday before a CPI release), institutional players reduce exposure ahead of the binary macro event; the 1.5x relative-volume gate reliably blocks all entries as a result. A zero-trade outcome on a pre-CPI day is correct behavior — do not adjust gates to force entries.
 
 ## Setups by market mood
 - **Risk-on (trending up):** favor Opening-Range Breakouts and momentum continuation. Buy strength.
@@ -152,6 +153,7 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-11: No tuning. Tuner eligible ("ok to tune", 36 days of history, drawdown 0.02%) but no rule fired — parameters left unchanged. Today was a zero-trade day (pre-CPI Tuesday, MIXED/RANGE regime). Account equity $999,535.62, $0 realized P&L, ended flat. The plan correctly anticipated zero trades: on pre-CPI Tuesdays institutional players reduce exposure before the binary macro event, suppressing relative volume across candidates. This pattern has now repeated on multiple pre-CPI sessions. One durable rule added tonight to Time of day: pre-CPI session days are explicitly named — the 1.5x rel_vol gate reliably blocks all entries as a consequence of institutional caution; zero trades is the expected and correct outcome; do not adjust gates to force entries. Over 36 days: 14 trades (0.39/day), 42.9% win rate, avg win +0.49R, avg loss -0.94R, ORB -0.1855R across 4 trades, momentum -0.975R across 1 trade, fill rate 93%. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-10: No tuning. Tuner eligible ("ok to tune", 35 days of history, drawdown 0.02%) but no
   rule fired — parameters left unchanged. Evidence reviewed tonight: three sessions (2026-07-10
   NVDA, 2026-07-31 AMZN, 2026-08-07 NFLX) all share the same structural problem — the 2.5x ATR

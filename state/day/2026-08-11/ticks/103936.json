@@ -1,0 +1,65 @@
+{
+  "tick_time_et": "10:39:36",
+  "date": "2026-08-11",
+  "action": "NO_TRADE",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_used": 0,
+  "slots_used": 0,
+  "candidates_evaluated": {
+    "NVDA": {
+      "status": "DISARMED",
+      "reasons": [
+        "Sector condition FAIL: above_vwap=false ($218.92 < VWAP $219.85). Plan requires NVDA above VWAP for sector condition to pass.",
+        "Spread 66bp exceeds 15bp gate",
+        "Price $218.92 well below ORB high $222.09 — no breakout",
+        "rel_vol 1.55x passes gate but irrelevant given sector condition failure"
+      ]
+    },
+    "NFLX": {
+      "status": "BLOCKED",
+      "reasons": [
+        "rel_vol 1.12x below 1.5x minimum gate",
+        "No ORB breakout: price $76.255 < ORB high $76.475",
+        "VWAP reclaim not applicable: already above VWAP (above_vwap=true)",
+        "Spread 2.6bp passes gate"
+      ]
+    },
+    "AAPL": {
+      "status": "DISARMED",
+      "reasons": [
+        "Plan-disarmed premarket (33.7bp spread at open; no catalyst)",
+        "rel_vol 0.57x well below 1.5x gate"
+      ]
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "reasons": [
+        "Plan-disarmed: Intel $15B common stock offering creates dilutive selling overhang",
+        "Documented spread blowout risk at open (6.4bp premarket -> 131.6bp live on 2026-08-04)"
+      ]
+    },
+    "QQQ": {
+      "status": "SKIPPED",
+      "reasons": [
+        "Not present in live quote snapshot from context.py",
+        "Plan: skip QQQ on MIXED/choppy tape; evaluate only if tape shows clear NQ trend",
+        "MIXED/RANGE day with no directional catalyst — tape is choppy"
+      ]
+    }
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 218.92, "vwap": 219.85, "orb_high": 222.09, "spread_bp": 66.0, "rel_volume": 1.55, "above_vwap": false},
+    "NFLX": {"last": 76.255, "vwap": 76.24, "orb_high": 76.475, "spread_bp": 2.6, "rel_volume": 1.12, "above_vwap": true},
+    "AAPL": {"last": 306.71, "vwap": 306.64, "orb_high": 309.91, "spread_bp": 1.6, "rel_volume": 0.57, "above_vwap": true},
+    "INTC": {"last": 97.22, "vwap": 97.13, "orb_high": 97.67, "spread_bp": 2.1, "rel_volume": 4.68, "above_vwap": true}
+  },
+  "account": {
+    "equity": 999535.62,
+    "buying_power": 3998142.48,
+    "daytrade_count": 0
+  },
+  "orb_window_closes_et": "11:00",
+  "minutes_remaining_in_orb_window": 21,
+  "decision_rationale": "No name passes all required gates simultaneously. NVDA sector condition fails (below VWAP) as required by today's conditional arm. NFLX fails rel_vol gate (1.12x vs 1.5x required). Other names are plan-disarmed or data-unavailable. MIXED/RANGE pre-CPI tape is low-probability for this system — zero-trade outcome is correct and expected per the day plan. Will continue to monitor in next tick; ORB window closes in 21 minutes."
+}

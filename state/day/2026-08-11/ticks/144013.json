@@ -1,0 +1,71 @@
+{
+  "tick_time_et": "14:40:13",
+  "date": "2026-08-11",
+  "verdict": "NO_TRADE",
+  "positions_managed": 0,
+  "new_entry_considered": false,
+  "reason": "ORB window closed at 11:00 AM ET (220 min ago). No names pass all gates for any available setup.",
+  "gate_results": {
+    "AAPL": {
+      "spread_bp": 2.6,
+      "spread_gate": "PASS",
+      "rel_vol": 0.57,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "plan_armed": false,
+      "plan_note": "disarmed by plan (premarket spread 33.7bp, no catalyst)",
+      "decision": "SKIP"
+    },
+    "INTC": {
+      "spread_bp": 5.2,
+      "spread_gate": "PASS",
+      "rel_vol": 1.97,
+      "rel_vol_gate": "PASS",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "plan_armed": false,
+      "plan_note": "disarmed full session — Intel $15B dilutive offering structural overhang",
+      "decision": "SKIP — plan disarm overrides passing gates"
+    },
+    "NFLX": {
+      "spread_bp": 2.7,
+      "spread_gate": "PASS",
+      "rel_vol": 0.60,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": false,
+      "price": 74.71,
+      "vwap": 75.64,
+      "vwap_gap": -0.93,
+      "orb_breakout": false,
+      "plan_armed": true,
+      "setup": "VWAP reclaim",
+      "decision": "SKIP — rel_vol 0.60x fails 1.5x gate; price below VWAP, no reclaim forming"
+    },
+    "NVDA": {
+      "spread_bp": 53.4,
+      "spread_gate": "FAIL",
+      "rel_vol": 0.90,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": false,
+      "price": 216.79,
+      "vwap": 218.84,
+      "orb_breakout": false,
+      "plan_armed": true,
+      "plan_note": "conditional — semiconductor sector must stabilize",
+      "decision": "SKIP — spread 53.4bp fails 25bp gate; rel_vol 0.90x fails 1.5x gate; below VWAP"
+    }
+  },
+  "account": {
+    "equity": 999535.62,
+    "day_pnl": 0.0,
+    "positions": 0,
+    "open_orders": 0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "slots_used": 0,
+    "slots_remaining": 8
+  },
+  "orders_submitted": [],
+  "notes": "Sixth consecutive NO_TRADE tick. Pre-CPI Tuesday institutional caution correctly identified at premarket. All four watchlist names below VWAP; volume well below 1.5x threshold across three of four names. INTC has the only qualifying volume (1.97x) but remains plan-disarmed. Zero trades is the correct and expected outcome per the morning plan."
+}

@@ -1,0 +1,17 @@
+{
+  "tick_time_et": "15:40",
+  "tick_file": "154035.json",
+  "action": "NO_TRADE",
+  "reason": "Past 3:30 PM ET new-entry cutoff (past_no_new_entries=true). No open positions to manage. No open orders to cancel. Flat, waiting for 3:50 PM flatten window.",
+  "market_review": {
+    "AAPL": "rel_vol 0.56x (FAIL, need 1.5x); spread 3.0bp (PASS); plan-disarmed. Below VWAP ($304.64 < $305.84).",
+    "INTC": "Plan-disarmed full session (Intel $15B dilutive offering). spread 14.3bp (PASS) but disarmed.",
+    "NFLX": "rel_vol 0.60x (FAIL, need 1.5x); spread 1.3bp (PASS). Below VWAP ($74.675 < $75.49), no VWAP reclaim.",
+    "NVDA": "rel_vol 0.83x (FAIL, need 1.5x); spread 0.9bp (PASS). Below VWAP ($218.16 < $218.70), sector condition fails."
+  },
+  "positions": 0,
+  "open_orders": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999535.62
+}

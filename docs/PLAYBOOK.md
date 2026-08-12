@@ -153,6 +153,18 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-12: No tuning. Tuner frozen (last 3 days are net-negative — not optimizing during a losing
+  streak). Note: the 3-day window includes 2026-08-11, which was a deliberate zero-trade pre-CPI day,
+  not a realized loss; the freeze is nonetheless correct and conservative. Today: 1 NVDA ORB trade,
+  entry avg $224.557 (fill below limit $225.10 — excellent execution), EOD flatten avg $223.472,
+  -$47.74 (-0.255R). Stop $220.30, target $234.70; neither was triggered — the position drifted down
+  ~$1.085/share over 5+ hours without testing the thesis in either direction. All entry gates passed:
+  rel_vol 1.81x, spread 11.1 bp, R/R 2.13:1. This was a correctly executed trade that lost a small
+  amount. No new rule is warranted: a clean entry that drifts slowly to EOD flatten at -0.255R is
+  within expected variance for the setup; the EOD flatten safety net worked exactly as intended.
+  Over 37 days: 16 trades (0.43/day), 37.5% win rate, avg win +0.43R, avg loss -0.85R, ORB -0.199R
+  across 5 trades (3 wins), momentum -0.975R across 1 trade. Tuning ledger remains empty; no
+  parameter has ever been changed by the tuner.
 - 2026-08-11: No tuning. Tuner eligible ("ok to tune", 36 days of history, drawdown 0.02%) but no rule fired — parameters left unchanged. Today was a zero-trade day (pre-CPI Tuesday, MIXED/RANGE regime). Account equity $999,535.62, $0 realized P&L, ended flat. The plan correctly anticipated zero trades: on pre-CPI Tuesdays institutional players reduce exposure before the binary macro event, suppressing relative volume across candidates. This pattern has now repeated on multiple pre-CPI sessions. One durable rule added tonight to Time of day: pre-CPI session days are explicitly named — the 1.5x rel_vol gate reliably blocks all entries as a consequence of institutional caution; zero trades is the expected and correct outcome; do not adjust gates to force entries. Over 36 days: 14 trades (0.39/day), 42.9% win rate, avg win +0.49R, avg loss -0.94R, ORB -0.1855R across 4 trades, momentum -0.975R across 1 trade, fill rate 93%. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-10: No tuning. Tuner eligible ("ok to tune", 35 days of history, drawdown 0.02%) but no
   rule fired — parameters left unchanged. Evidence reviewed tonight: three sessions (2026-07-10

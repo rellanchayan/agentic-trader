@@ -1,0 +1,27 @@
+{
+  "tick_time_et": "15:40:39",
+  "date": "2026-08-12",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "positions_managed": [
+    {
+      "ticker": "NVDA",
+      "qty": 44,
+      "avg_entry": 224.557,
+      "current_price": 222.499,
+      "unrealized_pl": -90.55,
+      "stop_order_id": "913ff6a5-035c-4055-97f1-edec1f5d26b1",
+      "stop_price": 220.30,
+      "limit_price": 219.00,
+      "target": 234.70,
+      "stop_hit": false,
+      "target_hit": false
+    }
+  ],
+  "new_entries_considered": [],
+  "reasoning": "15:40 ET — past no-new-entries cutoff (15:30). Entry window expired. NVDA at $222.499, below VWAP $223.26, ORB breakout level $222.45 marginally intact. Unrealized -$90.55. Stop-limit order 913ff6a5 confirmed at $220.30/$219.00. Target $234.70 unreachable in 10 min. Flatten routine begins at 15:50. HOLD with stop protection.",
+  "day_pnl": -90.55,
+  "equity": 999444.22,
+  "loss_budget_remaining": 2908.60,
+  "trades_today": 1
+}

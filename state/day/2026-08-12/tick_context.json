@@ -1,15 +1,15 @@
 {
   "date": "2026-08-12",
-  "timestamp_et": "2026-08-12T11:39:43.033892-04:00",
-  "minutes_since_open": 129,
+  "timestamp_et": "2026-08-12T12:39:54.182711-04:00",
+  "minutes_since_open": 189,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
   },
   "account": {
-    "equity": 999482.06,
+    "equity": 999473.26,
     "cash": 989655.1,
-    "buying_power": 3986135.89,
+    "buying_power": 3986111.25,
     "daytrade_count": 0,
     "pattern_day_trader": false
   },
@@ -17,8 +17,8 @@
     "date": "2026-08-12",
     "loss_stop_usd": 3000.0,
     "baseline_equity": 999535.62,
-    "current_equity": 999482.06,
-    "day_pnl": -53.56,
+    "current_equity": 999473.26,
+    "day_pnl": -62.36,
     "tripped": false,
     "note": "ok"
   },
@@ -34,67 +34,67 @@
       "ticker": "NVDA",
       "qty": 44.0,
       "avg_entry_price": 224.557273,
-      "current_price": 223.34,
-      "market_value": 9826.96,
-      "unrealized_pl": -53.560012,
-      "unrealized_plpc": -0.00542
+      "current_price": 223.1382,
+      "market_value": 9818.0808,
+      "unrealized_pl": -62.439212,
+      "unrealized_plpc": -0.00632
     }
   ],
   "open_orders": [],
   "market": {
     "AMZN": {
-      "last": 268.83,
-      "bid": 268.76,
-      "ask": 268.82,
-      "quote_age_sec": 0.7,
-      "spread_bp": 2.2,
-      "vwap": 269.98,
+      "last": 268.89,
+      "bid": 268.93,
+      "ask": 268.97,
+      "quote_age_sec": 0.3,
+      "spread_bp": 1.5,
+      "vwap": 269.58,
       "orb_high": 273.46,
       "orb_low": 270.33,
-      "atr_1m": 0.172,
-      "atr_day": 9.67,
-      "rel_volume": 0.63,
-      "volume_today": 498559,
+      "atr_1m": 0.15,
+      "atr_day": 9.72,
+      "rel_volume": 0.55,
+      "volume_today": 636338,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 269.09,
-      "marketable_sell_limit": 268.49
+      "marketable_buy_limit": 269.24,
+      "marketable_sell_limit": 268.66
     },
     "NFLX": {
-      "last": 73.72,
-      "bid": 73.68,
-      "ask": 73.69,
-      "quote_age_sec": 1.6,
+      "last": 73.855,
+      "bid": 73.84,
+      "ask": 73.85,
+      "quote_age_sec": 1.7,
       "spread_bp": 1.4,
-      "vwap": 73.91,
+      "vwap": 73.89,
       "orb_high": 74.63,
       "orb_low": 73.8,
-      "atr_1m": 0.035,
+      "atr_1m": 0.024,
       "atr_day": 2.17,
-      "rel_volume": 0.83,
-      "volume_today": 597415,
+      "rel_volume": 0.69,
+      "volume_today": 727399,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 73.76,
-      "marketable_sell_limit": 73.61
+      "marketable_buy_limit": 73.92,
+      "marketable_sell_limit": 73.77
     },
     "NVDA": {
-      "last": 223.35,
-      "bid": 222.6,
-      "ask": 223.38,
+      "last": 222.94,
+      "bid": 223.13,
+      "ask": 224.0,
       "quote_age_sec": 0.6,
-      "spread_bp": 35.0,
-      "vwap": 223.12,
+      "spread_bp": 38.9,
+      "vwap": 223.15,
       "orb_high": 222.45,
       "orb_low": 220.295,
-      "atr_1m": 0.167,
+      "atr_1m": 0.156,
       "atr_day": 7.77,
-      "rel_volume": 1.33,
-      "volume_today": 1826426,
-      "above_vwap": true,
+      "rel_volume": 1.18,
+      "volume_today": 2401306,
+      "above_vwap": false,
       "orb_breakout": true,
-      "marketable_buy_limit": 223.6,
-      "marketable_sell_limit": 222.38
+      "marketable_buy_limit": 224.22,
+      "marketable_sell_limit": 222.91
     }
   },
   "recent_ticks": [
@@ -117,6 +117,14 @@
       "reason": "ORB breakout above $222.45; price $224.64, above VWAP $222.76, rel_vol 1.81x, spread 11.1 bp; post-CPI RISK-ON; both guards PASS",
       "note": "ORDER PENDING \u2014 fill not confirmed. Companion stop-limit SELL at $220.30 must be placed next tick after fill confirmed via --reconcile.",
       "day_pnl": 0.0
+    },
+    {
+      "t": "11:41",
+      "action": "HOLD",
+      "ticker": "NVDA",
+      "note": "Fill confirmed 44 @ $224.557. Price $223.38, stop $220.30 (not hit), target $234.70 (not reached). Above VWAP $223.12. ORB breakout intact. Entry window closed at 11:00 AM \u2014 no new entries. Holding position.",
+      "day_pnl": -53.56,
+      "unrealized_pl": -52.23
     }
   ],
   "config_snapshot": {

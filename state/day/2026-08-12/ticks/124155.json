@@ -1,0 +1,58 @@
+{
+  "timestamp_et": "2026-08-12T12:41:55-04:00",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "ticker": "NVDA",
+  "position": {
+    "qty": 44,
+    "avg_entry": 224.557273,
+    "current_price": 222.94,
+    "bid": 223.13,
+    "ask": 224.0,
+    "spread_bp": 38.9,
+    "unrealized_pl": -70.28,
+    "stop": 220.30,
+    "target": 233.07,
+    "stop_hit": false,
+    "target_hit": false
+  },
+  "stop_order_placed": {
+    "order_id": "913ff6a5-035c-4055-97f1-edec1f5d26b1",
+    "type": "stop_limit",
+    "stop_price": 220.30,
+    "limit_price": 219.00,
+    "qty": 44,
+    "status": "pending_new",
+    "note": "Companion stop order was missing from prior ticks — placed now."
+  },
+  "market_data": {
+    "NVDA": {
+      "last": 222.94,
+      "bid": 223.13,
+      "ask": 224.0,
+      "vwap": 223.15,
+      "orb_high": 222.45,
+      "orb_low": 220.295,
+      "rel_volume": 1.18,
+      "spread_bp": 38.9,
+      "above_vwap": false,
+      "orb_breakout": true
+    },
+    "AMZN": {
+      "last": 268.89,
+      "rel_volume": 0.55,
+      "orb_breakout": false,
+      "status": "DISARMED"
+    },
+    "NFLX": {
+      "last": 73.855,
+      "rel_volume": 0.69,
+      "orb_breakout": false,
+      "status": "entry_window_closed"
+    }
+  },
+  "day_pnl": -70.28,
+  "trades_today": 1,
+  "open_positions": 1,
+  "reason": "Entry window closed at 11:00 AM ET. NVDA position held — stop not hit ($220.30, now protected with Alpaca stop-limit order placed this tick), target ~$233 not reached. No new entries evaluated. Day P&L -$70.28, well within $3,000 loss-stop budget. Position management: stop-limit order placed to rectify missing companion stop from prior ticks."
+}

@@ -1,0 +1,53 @@
+{
+  "tick_time_et": "09:42:58",
+  "tick_time_utc": "2026-08-12T13:42:58Z",
+  "action": "HOLD",
+  "reason": "Entry window not yet open (opens 9:45 AM ET). ORB formation period in progress.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trade": null,
+  "market_snapshot": {
+    "NVDA": {
+      "last": 221.005,
+      "bid": 220.88,
+      "ask": 220.93,
+      "spread_bp": 2.3,
+      "vwap": 221.61,
+      "orb_high": 222.45,
+      "orb_low": 220.295,
+      "rel_volume": 3.2,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "WAIT — before 9:45 AM entry window. rel_vol 3.2x ✓, spread 2.3 bp ✓. No breakout above $222.45 yet."
+    },
+    "NFLX": {
+      "last": 74.08,
+      "bid": 74.06,
+      "ask": 74.11,
+      "spread_bp": 6.7,
+      "vwap": 74.17,
+      "orb_high": 74.63,
+      "orb_low": 73.8,
+      "rel_volume": 1.68,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "WAIT — before 9:45 AM entry window. rel_vol 1.68x ✓, spread 6.7 bp ✓. No breakout above $74.63 yet."
+    },
+    "AMZN": {
+      "note": "DISARMED per day plan (spread history). Not evaluated."
+    }
+  },
+  "account": {
+    "equity": 999535.62,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "decisions": {
+    "positions_to_exit": "none — no open positions",
+    "new_entry_evaluated": false,
+    "entry_blocked_reason": "Entry window opens at 9:45 AM ET; currently 9:42 AM. ORB still forming. No action until 9:45.",
+    "outlook": "NVDA is most promising: 3.2x rel_vol with 2.3 bp spread, direct AI catalyst (CoreWeave/Supermicro earnings), risk-on tape post-CPI. Watch for clean break above $222.45 at 9:45 AM tick."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "tick_time_et": "11:41",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "positions_managed": [
+    {
+      "ticker": "NVDA",
+      "qty": 44,
+      "avg_entry": 224.557273,
+      "current_price": 223.38,
+      "stop": 220.30,
+      "target": 234.70,
+      "stop_triggered": false,
+      "target_reached": false,
+      "above_vwap": true,
+      "vwap": 223.12,
+      "unrealized_pl": -52.23,
+      "decision": "HOLD — stop not hit, target not reached, above VWAP, thesis intact"
+    }
+  ],
+  "new_entries_evaluated": [
+    {
+      "ticker": "NFLX",
+      "skip_reason": "Entry window closed at 11:00 AM ET — past eligible window"
+    },
+    {
+      "ticker": "NVDA",
+      "skip_reason": "Already in position; entry window closed"
+    }
+  ],
+  "fill_reconcile": {
+    "T-20260812-104006-NVDA": {
+      "status": "filled",
+      "filled_qty": 44.0,
+      "filled_avg_price": 224.557273
+    }
+  },
+  "day_pnl": -53.56,
+  "equity": 999482.06,
+  "loss_budget_remaining": 2946.88
+}

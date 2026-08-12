@@ -1,0 +1,63 @@
+{
+  "time_et": "10:40:06",
+  "verdict": "PROCEED",
+  "action": "BUY_SUBMITTED",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "status": "ARMED",
+      "setup": "orb",
+      "gate_results": {
+        "within_entry_window": true,
+        "orb_breakout": true,
+        "above_vwap": true,
+        "rel_vol": "1.81x (gate: >1.5x) PASS",
+        "spread_bp": "11.1 (gate: <15 bp) PASS",
+        "quote_age_sec": "0.7 (gate: <30s) PASS",
+        "rr_ratio": "2.0:1 (gate: >=2:1) PASS",
+        "constitution": "PASS",
+        "daytrade_guard": "PASS"
+      },
+      "decision": "BUY"
+    },
+    {
+      "ticker": "NFLX",
+      "status": "ARMED",
+      "setup": "orb",
+      "gate_results": {
+        "rel_vol": "1.02x (gate: >1.5x) FAIL"
+      },
+      "decision": "SKIP — rel_vol below minimum"
+    },
+    {
+      "ticker": "AMZN",
+      "status": "DISARMED",
+      "decision": "SKIP — disarmed per plan (live spread not yet confirmed clean)"
+    }
+  ],
+  "order_submitted": {
+    "trade_id": "T-20260812-104006-NVDA",
+    "ticker": "NVDA",
+    "side": "BUY",
+    "qty": 44,
+    "limit_price": 225.10,
+    "stop": 220.30,
+    "target": 234.70,
+    "alpaca_order_id": "3d374a64-bb90-47d6-ad15-fea24b272d9d",
+    "alpaca_status": "PENDING_NEW",
+    "submitted_at_utc": "2026-08-12T14:43:07.021723+00:00"
+  },
+  "pending_actions": [
+    "Next tick: run --reconcile to confirm fill. If filled, immediately submit companion SELL LIMIT DAY at $220.30 (stop level) for 44 shares NVDA.",
+    "Monitor target $234.70 — exit actively at target, do not ride to EOD flatten."
+  ],
+  "account_snapshot": {
+    "equity": 999535.62,
+    "cash": 999535.62,
+    "buying_power": 3998142.48,
+    "day_pnl": 0.0,
+    "trades_today": 1,
+    "positions_after": 1
+  }
+}

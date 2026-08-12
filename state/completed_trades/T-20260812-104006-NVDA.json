@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260812-104006-NVDA",
+  "ticker": "NVDA",
+  "side": "BUY",
+  "qty": 44,
+  "limit_price": 225.1,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "NVDA ORB breakout above $222.45 confirmed. Price $224.64 above ORB high and VWAP $222.76. rel_vol 1.81x (gate >1.5x). Spread 11.1 bp (gate <15 bp). Post-CPI RISK-ON tape; direct AI tailwind from CoreWeave/Supermicro earnings. Entry within window (10:40 AM, closes 11:00 AM). 55 min post-ORB (within 90-min limit). All gates pass.",
+  "risk": "Stop at $220.30 (ORB low $220.295). Risk per share $4.80. Dollar risk 44x$4.80=$211.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 220.3,
+  "target": 234.7,
+  "quote_age_sec": 0.7,
+  "spread_bp": 11.1,
+  "status": "submitted",
+  "alpaca_order_id": "3d374a64-bb90-47d6-ad15-fea24b272d9d",
+  "client_order_id": "T-20260812-104006-NVDA",
+  "submitted_at_utc": "2026-08-12T14:43:07.021723+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "phase": "flatten",
+  "aggression": 1,
+  "timestamp_et": "2026-08-12T15:56:15.183637-04:00",
+  "attempted": 1,
+  "submissions": [
+    {
+      "trade_id": "FLAT-2026-08-12-NVDA-1556",
+      "rc": 0,
+      "stdout": "{\"trade_id\": \"FLAT-2026-08-12-NVDA-1556\", \"alpaca_order_id\": \"5e3c793d-dcbd-44bd-ba8b-817ddab19e62\", \"status\": \"OrderStatus.PENDING_NEW\", \"submitted_at\": \"2026-08-12T19:56:19.140156+00:00\", \"saved_to\": \"state/completed_trades/FLAT-2026-08-12-NVDA-1556.json\"}",
+      "stderr": ""
+    }
+  ],
+  "remaining_positions": [],
+  "is_flat": true
+}

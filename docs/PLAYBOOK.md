@@ -144,6 +144,13 @@ made of **rules to follow**, not stories.
   narrative plan is finalized, the plan's decisions must overwrite or replace the screener's raw
   ranking so the tick loop reads exactly one file and never faces a conflict between two artifacts
   written minutes apart.
+- The premarket phase must write docs/day_plan.md before 9:28 AM ET, not merely before the first
+  tick fires. A plan written after 9:30 AM means the first tick correctly HALTs — but the ORB
+  entry window begins expiring while the premarket phase is still completing. On 2026-08-13, the
+  plan was not available at the 9:40 AM first tick; the tick correctly HALTed, but approximately
+  67 minutes of the ORB entry window were consumed before the plan was written. Target premarket
+  completion by 9:28 AM ET (consistent with the scheduled premarket slot). A correct HALT by the
+  tick loop does not undo the opportunity cost of a late plan.
 - When a primary candidate is armed unconditionally (not gated on a conditional trigger) and passes
   all pre-session gates, every tick that runs during that candidate's entry window must produce
   either a submitted order or a timestamped skip record documenting which gate blocked it. A session
@@ -153,6 +160,19 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-13: No tuning. Tuner frozen (last 3 days are net-negative — not optimizing during a losing
+  streak). Today: zero trades. Plan called MIXED/RANGE; NVDA was the sole candidate but the ORB
+  high ($227.20) was never broken and relative volume fell from 1.49x at first evaluation to 0.92x
+  by mid-afternoon — correctly blocked at every gate. Infrastructure note: the premarket phase did
+  not write the plan before the 9:40 AM first tick; the tick correctly HALTed, but approximately
+  67 minutes of the ORB entry window were lost while the plan was still being written. One
+  infrastructure rule added: the premarket phase must write docs/day_plan.md by 9:28 AM ET, not
+  merely before the first tick — a late plan costs entry time whether or not the tick gate fires
+  correctly. Lifetime ORB data (5 trades, 3 wins, 60% win rate, -0.1994R expectancy): losses are
+  systematically larger than wins, not offset by the win rate; the existing strict-entry-quality
+  gate remains the right response. Over 38 days: 16 trades (0.42/day), 37.5% win rate, avg win
+  +0.43R, avg loss -0.85R, ORB -0.199R across 5 trades, momentum -0.975R across 1 trade. Tuning
+  ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-12: No tuning. Tuner frozen (last 3 days are net-negative — not optimizing during a losing
   streak). Note: the 3-day window includes 2026-08-11, which was a deliberate zero-trade pre-CPI day,
   not a realized loss; the freeze is nonetheless correct and conservative. Today: 1 NVDA ORB trade,

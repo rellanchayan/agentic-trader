@@ -1,0 +1,76 @@
+{
+  "tick_id": "2026-08-13T11:50:47-04:00",
+  "hhmmss": "115047",
+  "timestamp_et": "2026-08-13T11:50:47-04:00",
+  "minutes_since_open": 140,
+  "verdict": "NO_TRADE",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "NVDA",
+      "status": "SKIP",
+      "reasons": [
+        "Entry window (9:45–11:00 AM ET) expired 50 minutes ago — window closed without any gate-passing tick",
+        "Price $224.67 below ORB high $227.20 (orb_breakout: false)",
+        "Price $224.67 below VWAP $225.38 (above_vwap: false)",
+        "rel_volume 1.49x — below 1.5x minimum required",
+        "spread_bp 16.0 — above 15 bp plan maximum",
+        "Playbook 90-min rule: entry more than 90 minutes after ORB formation not permitted"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "reasons": ["Stock offering overhang per day plan — full session disarm"]
+    },
+    {
+      "ticker": "PFE",
+      "status": "DISARMED",
+      "reasons": ["No catalyst, ATR too small per day plan — full session disarm"]
+    },
+    {
+      "ticker": "AMZN",
+      "status": "DISARMED",
+      "reasons": ["Standing disarm rule + elevated premarket spread per day plan — full session disarm"]
+    }
+  ],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "account_snapshot": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "buying_power": 3997950.6,
+    "daytrade_count": 0
+  },
+  "day_pnl": {
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "tripped": false
+  },
+  "budget": {
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "market_snapshot": {
+    "NVDA": {
+      "last": 224.67,
+      "vwap": 225.38,
+      "orb_high": 227.2,
+      "orb_low": 224.14,
+      "rel_volume": 1.49,
+      "spread_bp": 16.0,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "INTC": {"status": "disarmed"},
+    "PFE": {"status": "disarmed"},
+    "AMZN": {"status": "disarmed"}
+  },
+  "decision_narrative": "No open positions. NVDA was the only armed candidate per the day plan, with an entry window of 9:45–11:00 AM ET. It is now 11:50 AM — the window closed 50 minutes ago without generating a gate-passing tick. At window close NVDA was below both the ORB high and VWAP, with rel_volume below the 1.5x minimum and spread above the 15 bp plan maximum. Per the plan: 'If NVDA does not produce a clean setup by 11:00 AM: close the evaluation, take zero trades, do not re-open this name.' Additionally the playbook prohibits ORB/momentum entries more than 90 minutes after the opening range. Today is a zero-trade day — the correct and expected outcome for a MIXED/RANGE tape with no qualifying setup. No orders written. No positions to flatten."
+}

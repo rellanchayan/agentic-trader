@@ -1,0 +1,40 @@
+{
+  "ts": "2026-08-13T10:47:38-04:00",
+  "minutes_since_open": 77,
+  "verdict": "PROCEED",
+  "action": "none",
+  "reason": "No qualifying setup. NVDA: price $225.23 below ORB high $227.20 (no breakout) and below VWAP $225.68; ORB+VWAP gates fail. INTC disarmed (stock offering overhang). PFE disarmed (no catalyst, tiny ATR). AMZN disarmed (standing rule). No open positions to manage.",
+  "positions_evaluated": [],
+  "orders_evaluated": [],
+  "market_snapshot": {
+    "NVDA": {
+      "last": 225.23,
+      "vwap": 225.68,
+      "orb_high": 227.2,
+      "orb_low": 224.14,
+      "rel_volume": 1.96,
+      "spread_bp": 0.9,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "INTC": {
+      "status": "DISARMED \u2014 stock offering overhang"
+    },
+    "PFE": {
+      "status": "DISARMED \u2014 no catalyst, tiny ATR"
+    },
+    "AMZN": {
+      "status": "DISARMED \u2014 standing rule"
+    }
+  },
+  "account": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions": 0
+  },
+  "nvda_entry_window_closes_et": "11:00",
+  "entry_window_still_open": true,
+  "next_tick_note": "NVDA entry window closes ~11:00 AM. If price does not clear ORB high + VWAP before then, zero-trade day is confirmed."
+}

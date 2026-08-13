@@ -1,0 +1,34 @@
+{
+  "ts": "2026-08-13T13:40:19-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "NVDA entry window (9:45–11:00 AM) expired 160 minutes ago. NVDA at $225.20 — below ORB high ($227.20), below VWAP ($225.34), rel_vol 1.03x (< 1.5x minimum). ORB breakout never occurred. INTC, PFE, AMZN disarmed for full session per plan. No positions to manage. Zero-trade day.",
+  "market_snapshot": {
+    "NVDA": {
+      "last": 225.20,
+      "vwap": 225.34,
+      "orb_high": 227.20,
+      "orb_low": 224.14,
+      "rel_volume": 1.03,
+      "spread_bp": 0.9,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "INTC": {"status": "DISARMED", "reason": "stock offering overhang"},
+    "PFE": {"status": "DISARMED", "reason": "no catalyst, ATR too small"},
+    "AMZN": {"status": "DISARMED", "reason": "standing rule + elevated spread"}
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "gates_checked": {
+    "nvda_entry_window_open": false,
+    "nvda_rel_volume_gte_1_5x": false,
+    "nvda_above_orb_high": false,
+    "nvda_above_vwap": false,
+    "nvda_spread_lte_15bp": true
+  }
+}

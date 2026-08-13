@@ -1,0 +1,10 @@
+{
+  "ts": "2026-08-13T15:40:06-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "note": "15:40 ET — past no-new-entries cutoff (15:30). Zero positions, zero trades today. NVDA entry window expired at 11:00 AM; price never broke above ORB high ($227.20) with required rel_vol ≥ 1.5x in the window. INTC/PFE/AMZN disarmed per plan. Zero-trade day. Day P&L $0.00.",
+  "equity": 999487.65,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions": 0
+}

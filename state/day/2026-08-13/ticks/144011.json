@@ -1,0 +1,16 @@
+{
+  "ts": "2026-08-13T14:40:11-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "note": "NVDA entry window expired at 11:00 AM ET (220 min ago). Current: $225.55, below ORB high ($227.20) — breakout never triggered. Rel_vol 0.92x (min 1.5x). INTC: DISARMED (stock offering overhang, plan wins). PFE: DISARMED (no catalyst, ATR too small). AMZN: DISARMED (standing rule). No positions to manage. Zero-trade day confirmed — all gates correctly blocking. Day P&L $0.00.",
+  "equity": 999487.65,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions": 0,
+  "market_snapshot": {
+    "NVDA": {"last": 225.55, "orb_high": 227.20, "vwap": 225.36, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.92, "spread_bp": 0.9},
+    "INTC": {"last": 105.39, "orb_breakout": true, "above_vwap": true, "disarmed": "stock offering overhang"},
+    "PFE": {"last": 26.67, "disarmed": "no catalyst, ATR too small"},
+    "AMZN": {"last": 266.02, "disarmed": "standing rule + elevated spread"}
+  }
+}

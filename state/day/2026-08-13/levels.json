@@ -15,9 +15,11 @@
     "premarket_price": 226.43,
     "gap_pct": 0.0021,
     "spread_bp": 1.8,
+    "support": [225.00, 222.50, 220.00],
+    "resistance": [228.00, 230.00, 233.50],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,836,501 sh/day); +0.2% gap"
+    "note": "ARMED (conditional): flat +0.2% gap, no stock-specific news; spread 1.8 bp clean; ORB setup window 9:45-11:00 AM ET in range-bound market. Support: 225.00 (prev_close floor), 222.50 (half-dollar pivot), 220.00 (major round). Resistance: 228.00 (first target), 230.00 (major round), 233.50 (~1x ATR above prev_close). Only enter on confirmed ORB breakout with volume."
   },
   "INTC": {
     "sector": "technology",
@@ -29,7 +31,7 @@
     "spread_bp": 5.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,259,314 sh/day); -0.3% gap"
+    "note": "DISARMED: Intel upsized equity offering to $20B at $95/share — supply pressure risk and sentiment overhang. History of wide opening spreads. Do not trade today."
   },
   "PFE": {
     "sector": "healthcare",
@@ -41,7 +43,7 @@
     "spread_bp": 3.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,350,002 sh/day); +0.1% gap"
+    "note": "DISARMED: ATR only $0.55 — insufficient daily range to produce a gated intraday entry. No catalyst. Do not trade today."
   },
   "AMZN": {
     "sector": "consumer",
@@ -53,6 +55,6 @@
     "spread_bp": 29.4,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,077,515 sh/day); +0.2% gap"
+    "note": "DISARMED: standing disarm — spread blowout history; premarket spread already 29.4 bp (way above 10 bp threshold). Cost to enter+exit at this spread would consume most of any intraday edge. Do not trade today."
   }
 }

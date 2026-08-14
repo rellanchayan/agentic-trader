@@ -5,19 +5,9 @@
     "source": "watchlist_build",
     "candidates_considered": 3,
     "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 106.8,
-    "atr_day": 6.69,
-    "avg_vol_10d": 3276409,
-    "premarket_price": 105.97,
-    "gap_pct": -0.0077,
-    "spread_bp": 3.8,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,276,409 sh/day); -0.8% gap"
+    "note": "Strategist-finalized. Armed/disarm decisions below are canonical for the tick loop. See docs/plan/2026-08-14.md for full rationale.",
+    "regime": "MIXED/RANGE",
+    "plan_written_utc": "2026-08-14T14:10:00+00:00"
   },
   "NVDA": {
     "sector": "technology",
@@ -29,7 +19,43 @@
     "spread_bp": 1.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,682,932 sh/day); -0.1% gap"
+    "armed": true,
+    "priority": 1,
+    "setup": "orb",
+    "target_mult": 1.75,
+    "note": "PRIMARY. Flat gap, 1.8 bp spread, ATR $6.74. Earnings Aug 26 — no event risk today. Entry 9:45-11:00 AM ET. Target 1.5-2.0x per-share risk. Companion stop mandatory at fill."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 106.8,
+    "atr_day": 6.69,
+    "avg_vol_10d": 3276409,
+    "premarket_price": 105.97,
+    "gap_pct": -0.0077,
+    "spread_bp": 3.8,
+    "orb_high": null,
+    "orb_low": null,
+    "armed": true,
+    "priority": 2,
+    "setup": "orb",
+    "target_mult": 1.75,
+    "note": "SECONDARY. $20B offering priced and complete (Aug 13); overhang resolved. MANDATORY: if live spread >15 bp at first evaluation, disarm for full session — do not re-evaluate. Evaluate only if NVDA has not qualified by 10:30 AM ET."
+  },
+  "SPY": {
+    "sector": "broad_market",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "armed": false,
+    "priority": 3,
+    "setup": "orb",
+    "target_mult": 1.5,
+    "note": "TERTIARY — conditional. Arm only if: (a) both NVDA and INTC fail to qualify by 10:30 AM ET, AND (b) Retail Sales (8:30 AM) print strong and S&P opens above prev close with clean ORB structure. Live spread must be <5 bp, rel_vol >1.5x. Added per playbook rule: semi sector pressure for 2+ sessions requires a non-semi substitute."
   },
   "PFE": {
     "sector": "healthcare",
@@ -41,6 +67,9 @@
     "spread_bp": 3.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,288,996 sh/day); +0.0% gap"
+    "armed": false,
+    "priority": 99,
+    "setup": null,
+    "note": "DISARMED. No catalyst; ATR $0.58 too small for a meaningful intraday trade. Do not evaluate."
   }
 }

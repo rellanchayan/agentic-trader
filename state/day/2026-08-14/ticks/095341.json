@@ -1,0 +1,16 @@
+{
+  "tick_time_et": "09:53:41",
+  "tick_time_utc": "2026-08-14T13:53:41Z",
+  "verdict": "HALT",
+  "reason": "docs/plan/2026-08-14.md does not exist. Premarket phase did not complete. Per PLAYBOOK: missing day plan = HALT condition. No trades placed.",
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "trades_today": 0,
+  "actions": [],
+  "market_notes": {
+    "TSLA": "ORB breakout true, above_vwap true, rel_volume 2.79x, spread 2.0bp — would be interesting BUT no plan means no armed setups defined.",
+    "AMD": "ORB breakout true, above_vwap true, rel_volume 2.09x, BUT spread 264.3bp — would fail spread gate anyway.",
+    "general": "No plan, no armed setups, no trades. Premarket must run before next session."
+  }
+}

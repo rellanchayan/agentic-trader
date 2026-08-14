@@ -1,0 +1,119 @@
+{
+  "tick_time": "11:43",
+  "timestamp_et": "2026-08-14T11:43:53-04:00",
+  "minutes_since_open": 133,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "open_orders_reviewed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "status": "ARMED_PRIMARY",
+      "evaluation": "SKIP",
+      "gates_checked": {
+        "orb_entry_window_open": false,
+        "orb_breakout": false,
+        "rel_volume_1_5x": false,
+        "spread_lt_15bp": false,
+        "above_vwap": false,
+        "above_orb_low": false
+      },
+      "detail": "ORB entry window CLOSED (11:43 AM > 11:00 AM deadline). Last $224.78 is BELOW ORB low $225.02 — confirmed breakdown, not a breakout. Spread 35.1 bp (>> 15 bp max). Rel vol 0.93x (< 1.5x). Was $226.68 at 10:50 AM; dropped $1.90 in 53 minutes. Semiconductor sector weakness confirmed. No long setup possible.",
+      "market_data": {
+        "last": 224.78,
+        "bid": 224.73,
+        "ask": 225.52,
+        "spread_bp": 35.1,
+        "vwap": 225.84,
+        "orb_high": 227.47,
+        "orb_low": 225.02,
+        "rel_volume": 0.93,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "quote_age_sec": 1.3
+      }
+    },
+    {
+      "ticker": "INTC",
+      "status": "ARMED_SECONDARY",
+      "evaluation": "SKIP",
+      "gates_checked": {
+        "orb_entry_window_open": false,
+        "orb_breakout": false,
+        "rel_volume_1_5x": true,
+        "spread_lt_15bp": true,
+        "above_vwap": false,
+        "above_orb_low": false
+      },
+      "detail": "ORB entry window CLOSED (11:43 AM > 11:00 AM deadline). Last $102.61 is BELOW ORB low $103.86 — confirmed breakdown ($1.25 below ORB low). Well below VWAP ($104.89). Was $105.09 at 10:50 AM; dropped $2.48 in 53 minutes — active selling, not a long thesis. Even if window were open, price below ORB low means the ORB setup has failed. Per plan: price breaking below ORB low is a reversal confirmation, not a buy signal.",
+      "market_data": {
+        "last": 102.61,
+        "bid": 102.72,
+        "ask": 102.74,
+        "spread_bp": 1.9,
+        "vwap": 104.89,
+        "orb_high": 105.86,
+        "orb_low": 103.86,
+        "rel_volume": 1.67,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "quote_age_sec": 1.3
+      }
+    },
+    {
+      "ticker": "SPY",
+      "status": "CONDITIONAL_TERTIARY",
+      "evaluation": "SKIP",
+      "gates_checked": {
+        "orb_entry_window_open": false,
+        "orb_breakout": false,
+        "rel_volume_1_5x": false,
+        "spread_lt_5bp": true,
+        "above_vwap": false,
+        "conditional_arm_met": false
+      },
+      "detail": "ORB entry window CLOSED (11:43 AM > 11:00 AM deadline). Conditional arm criteria not met: SPY required 'above prior close with clean upward momentum in first 15 minutes' — SPY is currently below VWAP at $775.88 vs $777.29. No ORB breakout (last $775.88 < ORB high $778.505). Rel vol 1.16x fails 1.5x gate. Below VWAP confirms the opening Retail Sales reaction was not strongly supportive.",
+      "market_data": {
+        "last": 775.88,
+        "bid": 775.91,
+        "ask": 775.93,
+        "spread_bp": 0.3,
+        "vwap": 777.29,
+        "orb_high": 778.505,
+        "orb_low": 777.69,
+        "rel_volume": 1.16,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "quote_age_sec": 1.3
+      }
+    },
+    {
+      "ticker": "PFE",
+      "status": "DISARMED_BY_PLAN",
+      "evaluation": "SKIP",
+      "gates_checked": {
+        "armed_in_plan": false,
+        "rel_volume_1_5x": false
+      },
+      "detail": "Explicitly disarmed in day plan: no catalyst, ATR $0.58/day too low for meaningful intraday R/R. Rel vol 0.93x also fails 1.5x gate independently. Not evaluated further.",
+      "market_data": {
+        "last": 26.755,
+        "spread_bp": 3.7,
+        "vwap": 26.61,
+        "orb_high": 26.65,
+        "above_vwap": true,
+        "rel_volume": 0.93,
+        "quote_age_sec": 1.6
+      }
+    }
+  ],
+  "tape_assessment": "Weak/negative. Both semiconductor names (NVDA, INTC) have broken below their ORB lows — confirmed downside moves, not failed breakouts. SPY below VWAP. Semiconductor sector headwind noted in day plan is now fully confirmed by price action. No VWAP reclaim setup exists on any armed name.",
+  "vwap_reclaim_checked": "No armed name is showing a VWAP reclaim. NVDA and INTC are moving away from VWAP, not toward it. PFE is above VWAP but is disarmed.",
+  "reason": "No trade. ORB entry window closed 43 minutes ago (11:00 AM ET deadline). Both primary semiconductor candidates have confirmed downside breaks below their ORB lows. SPY did not meet conditional arm criteria and is also below VWAP. No VWAP reclaim setup on any armed name. Holding cash is the correct disciplined decision.",
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "open_positions": 0,
+  "position_slots_remaining": 8
+}

@@ -1,0 +1,68 @@
+{
+  "tick_time_et": "15:39:47",
+  "tick_file": "153947.json",
+  "action": "NO_TRADE",
+  "reason": "Past no-new-entries cutoff (3:30 PM ET). No positions to manage. No open orders to cancel.",
+  "positions_managed": [],
+  "new_entry_considered": false,
+  "new_entry_blocked_by": "past_no_new_entries flag is true (current time 15:39 ET exceeds 15:30 cutoff)",
+  "market_snapshot": {
+    "NVDA": {
+      "last": 225.06,
+      "vwap": 225.57,
+      "orb_high": 227.47,
+      "orb_low": 225.02,
+      "rel_volume": 0.57,
+      "spread_bp": 0.9,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED — rel_vol 0.57x < 1.5x, price below ORB high, past entry window, past no-new-entries cutoff"
+    },
+    "INTC": {
+      "last": 103.01,
+      "vwap": 104.03,
+      "orb_high": 105.86,
+      "orb_low": 103.86,
+      "rel_volume": 1.03,
+      "spread_bp": 51.6,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "DISARMED since 11:43 tick — spread 51.6 bp > 15 bp gate, price below ORB low (breakdown confirmed), past entry window"
+    },
+    "SPY": {
+      "last": 776.13,
+      "vwap": 776.71,
+      "orb_high": 778.505,
+      "orb_low": 777.69,
+      "rel_volume": 0.8,
+      "spread_bp": 0.5,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "NOT ARMED — arming condition required both semis to fail AND SPY opening strong; SPY was below ORB high all session"
+    },
+    "PFE": {
+      "gate_result": "DISARMED per day plan — no catalyst, insufficient ATR for meaningful trade"
+    },
+    "IWM": {
+      "last": 304.905,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "NOT IN PLAN — not a day-plan armed candidate; cannot trade names not in the plan"
+    }
+  },
+  "portfolio_state": {
+    "positions": 0,
+    "open_orders": 0,
+    "day_pnl_usd": 0.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8,
+    "loss_budget_remaining": 3000.0
+  },
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "next_action": "Flatten window opens at 3:50 PM ET. Already flat — no sells needed. Session will close with zero trades, $0 P&L.",
+  "day_assessment": "Correct zero-trade day. NVDA never broke ORB high ($227.47) with qualifying volume; INTC spread blew out (51.6 bp vs 15 bp gate) confirming the documented playbook pattern; SPY arming conditions never met. Semiconductor sector headwind persisted all session consistent with the plan's MIXED/RANGE call."
+}

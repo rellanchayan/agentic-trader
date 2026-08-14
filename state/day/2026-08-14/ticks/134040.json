@@ -1,0 +1,39 @@
+{
+  "tick_time": "13:40",
+  "action": "NO_TRADE",
+  "equity": 999487.65,
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "status": "SKIP",
+      "gates_failed": ["orb_window_closed", "no_orb_breakout", "below_vwap", "rel_vol_0.67x_lt_1.5x"],
+      "last": 225.135,
+      "orb_high": 227.47,
+      "vwap": 225.68,
+      "rel_volume": 0.67,
+      "spread_bp": 6.2
+    },
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "gates_failed": ["orb_window_closed", "breakdown_below_orb_low"],
+      "last": 102.61,
+      "orb_low": 103.86,
+      "rel_volume": 1.16
+    },
+    {
+      "ticker": "SPY",
+      "status": "SKIP",
+      "gates_failed": ["orb_window_closed", "no_orb_breakout", "below_vwap", "arming_condition_not_met"],
+      "last": 775.48,
+      "orb_high": 778.505,
+      "vwap": 776.94,
+      "rel_volume": 0.89,
+      "spread_bp": 0.4
+    }
+  ],
+  "note": "ORB entry window closed at 11:00 AM (now 1:40 PM). No VWAP reclaim setup on any armed name. Semiconductor sector weak all session — NVDA drifting below VWAP, INTC in breakdown. SPY arming conditions (Retail Sales reaction + strong open) not confirmed. Cash is the correct position."
+}

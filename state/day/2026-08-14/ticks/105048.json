@@ -1,0 +1,76 @@
+{
+  "tick_time": "10:50",
+  "timestamp_et": "2026-08-14T10:50:48-04:00",
+  "minutes_since_open": 80,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "status": "ARMED_PRIMARY",
+      "evaluation": "SKIP",
+      "gates_checked": {
+        "within_entry_window": true,
+        "orb_breakout": false,
+        "rel_volume_1_5x": false,
+        "spread_lt_15bp": true
+      },
+      "detail": "Last $226.68 < ORB high $227.47 — no breakout. Rel vol 1.09x fails 1.5x gate.",
+      "market_data": {
+        "last": 226.68,
+        "orb_high": 227.47,
+        "orb_low": 225.02,
+        "rel_volume": 1.09,
+        "spread_bp": 14.1,
+        "above_vwap": true
+      }
+    },
+    {
+      "ticker": "INTC",
+      "status": "ARMED_SECONDARY",
+      "evaluation": "SKIP",
+      "note": "Eligible after 10:30 AM since NVDA has not produced a qualifying setup",
+      "gates_checked": {
+        "within_entry_window": true,
+        "orb_breakout": false,
+        "rel_volume_1_5x": true,
+        "spread_lt_15bp": true
+      },
+      "detail": "Last $105.09 < ORB high $105.86 — no breakout. Rel vol 2.23x passes; spread 3.8 bp passes. Price not above ORB high.",
+      "market_data": {
+        "last": 105.09,
+        "orb_high": 105.86,
+        "orb_low": 103.86,
+        "rel_volume": 2.23,
+        "spread_bp": 3.8,
+        "above_vwap": true
+      }
+    },
+    {
+      "ticker": "SPY",
+      "status": "CONDITIONAL_TERTIARY",
+      "evaluation": "SKIP",
+      "note": "Condition met (both semis failed by 10:30 AM), but setup not qualifying",
+      "gates_checked": {
+        "within_entry_window": true,
+        "orb_breakout": false,
+        "rel_volume_1_5x": false,
+        "spread_lt_5bp": true,
+        "above_vwap": false
+      },
+      "detail": "No ORB breakout (last $777.26 < ORB high $778.505). Below VWAP $777.91. Rel vol 1.16x fails 1.5x gate.",
+      "market_data": {
+        "last": 777.26,
+        "orb_high": 778.505,
+        "orb_low": 777.69,
+        "rel_volume": 1.16,
+        "spread_bp": 0.4,
+        "above_vwap": false
+      }
+    }
+  ],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "reason": "No qualifying setup on any armed candidate. NVDA: no ORB breakout + rel vol 1.09x. INTC: no ORB breakout. SPY: no ORB breakout, below VWAP, rel vol 1.16x."
+}

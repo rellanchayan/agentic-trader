@@ -151,6 +151,12 @@ made of **rules to follow**, not stories.
   67 minutes of the ORB entry window were consumed before the plan was written. Target premarket
   completion by 9:28 AM ET (consistent with the scheduled premarket slot). A correct HALT by the
   tick loop does not undo the opportunity cost of a late plan.
+- When docs/day_plan.md is absent at the first tick for two consecutive sessions — despite the
+  premarket phase running both days — it is a confirmed premarket timing failure, not a single-day
+  anomaly. On 2026-08-13 and 2026-08-14 the tick loop correctly HALTed on both days, but the
+  consecutive HALTs confirm the premarket schedule is finishing after ticks begin rather than the
+  target of before 9:28 AM ET. Adjust the premarket schedule (earlier launch or tighter completion
+  deadline), not the tick-loop launch timing.
 - When a primary candidate is armed unconditionally (not gated on a conditional trigger) and passes
   all pre-session gates, every tick that runs during that candidate's entry window must produce
   either a submitted order or a timestamped skip record documenting which gate blocked it. A session
@@ -160,6 +166,21 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-14: No tuning. Tuner frozen (last 3 days are net-negative — not optimizing during a
+  losing streak). Fourth consecutive non-positive session: Aug 11 $0, Aug 12 -$47.74, Aug 13 $0,
+  Aug 14 $0. Zero trades placed; closing equity $999,487.65. Infrastructure note: docs/day_plan.md
+  was absent at the first tick (9:53 AM) for the second consecutive session — the tick correctly
+  HALTed, but two consecutive HALTs on the same cause confirms a systematic premarket timing
+  failure, not a one-off. One infrastructure rule added tonight: two consecutive absent-plan HALTs
+  is a confirmed timing failure; the premarket schedule must be adjusted to complete before
+  9:28 AM ET. INTC spread: 3.8 bp premarket → 51.6 bp at open — the third documented occurrence
+  (Jul 9 at 209.5 bp, Aug 4 at 131.6 bp, Aug 14 at 51.6 bp); the existing rule holds. Gates
+  worked correctly: NVDA rel_vol peaked at 1.09x (never reached 1.5x gate) and declined to 0.57x
+  by EOD; both NVDA and INTC broke below their ORB lows, consistent with the semiconductor sector
+  headwind described in the plan — plan thesis accurate, zero trades correct. Over 39 days:
+  16 trades (0.41/day), 37.5% win rate, avg win +0.43R, avg loss -0.85R, ORB -0.1994R across
+  5 trades (3 wins), momentum -0.975R across 1 trade. Tuning ledger remains empty; no parameter
+  has ever been changed by the tuner.
 - 2026-08-13: No tuning. Tuner frozen (last 3 days are net-negative — not optimizing during a losing
   streak). Today: zero trades. Plan called MIXED/RANGE; NVDA was the sole candidate but the ORB
   high ($227.20) was never broken and relative volume fell from 1.49x at first evaluation to 0.92x

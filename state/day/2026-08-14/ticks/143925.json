@@ -1,0 +1,50 @@
+{
+  "t": "14:39",
+  "timestamp_et": "2026-08-14T14:39:25-04:00",
+  "action": "NO_TRADE",
+  "positions_managed": 0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "evaluation": {
+    "NVDA": {
+      "status": "BLOCKED",
+      "reasons": [
+        "ORB entry window closed 11:00 AM (now 2:39 PM)",
+        "last $225.05 < ORB high $227.47 — no ORB breakout",
+        "below VWAP $225.63 — no VWAP reclaim",
+        "rel_vol 0.62x — fails 1.5x gate"
+      ]
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "reasons": [
+        "last $102.615 below ORB low $103.86 — confirmed breakdown from 11:43 tick",
+        "rel_vol 1.01x — fails 1.5x gate",
+        "spread 6.8 bp — inside gate but disarm already active"
+      ]
+    },
+    "SPY": {
+      "status": "BLOCKED",
+      "reasons": [
+        "ORB entry window closed",
+        "below VWAP $776.82 (last $775.99) — no VWAP reclaim",
+        "ORB breakout false",
+        "rel_vol 0.81x — fails 1.5x gate",
+        "SPY arming condition not met (both semis failed AND SPY ORB breakout required)"
+      ]
+    },
+    "PFE": {
+      "status": "DISARMED",
+      "reasons": ["disarmed per plan — no catalyst, ATR too small"]
+    },
+    "IWM": {
+      "status": "NOT_IN_PLAN",
+      "reasons": [
+        "IWM not in day plan and not screened as armed candidate",
+        "rel_vol 1.02x — fails 1.5x gate even if it were armed"
+      ]
+    }
+  },
+  "note": "ORB entry window closed 11:00 AM (now 2:39 PM — 99 minutes past deadline). NVDA $225.05 below ORB high $227.47 and VWAP $225.63, rel vol 0.62x. INTC disarmed (below ORB low). SPY below VWAP, no ORB breakout, rel vol 0.81x. No VWAP reclaim on any armed name. Semiconductor sector weak all session. Holding cash. Day P&L $0. 0 positions."
+}

@@ -1,0 +1,64 @@
+{
+  "tick_time": "2026-08-17T09:42:44-04:00",
+  "tick_id": "094244",
+  "minutes_since_open": 12,
+  "verdict": "NO_TRADE",
+  "reason": "ORB window still forming — entry window opens at 9:45 AM ET (minute 15). No positions to manage. All names below ORB highs and VWAP with no breakout signals.",
+  "positions_managed": [],
+  "trade_evaluated": null,
+  "market_snapshot": {
+    "NVDA": {
+      "last": 225.78,
+      "spread_bp": 0.9,
+      "rel_volume": 1.6,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_high": 227.15,
+      "orb_low": 225.18,
+      "gate_results": {
+        "spread_ok": true,
+        "rel_vol_ok": true,
+        "orb_breakout": false,
+        "decision": "No breakout — ORB forming, wait for 9:45 AM"
+      }
+    },
+    "INTC": {
+      "last": 102.71,
+      "spread_bp": 2.9,
+      "rel_volume": 3.5,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_high": 104.68,
+      "orb_low": 101.86,
+      "gate_results": {
+        "spread_ok": true,
+        "rel_vol_ok": true,
+        "orb_breakout": false,
+        "decision": "No breakout — ORB forming, wait for 9:45 AM"
+      }
+    },
+    "SPY": {
+      "last": 775.585,
+      "spread_bp": 0.3,
+      "rel_volume": 1.38,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_results": {
+        "decision": "Tertiary — only activates if both semis fail by 10:30 AM. Not evaluated yet."
+      }
+    },
+    "QQQ": {
+      "last": 733.03,
+      "spread_bp": 0.5,
+      "rel_volume": 1.56,
+      "above_vwap": true,
+      "orb_breakout": false
+    }
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

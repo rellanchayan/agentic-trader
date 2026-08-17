@@ -1,0 +1,23 @@
+{
+  "tick_id": "133935",
+  "tick_time": "2026-08-17T13:39:35-04:00",
+  "minutes_since_open": 249,
+  "verdict": "NO_TRADE",
+  "reason": "All entry windows closed (9:45–11:00 AM ET, closed 159 min ago). No positions to manage. No open orders. INTC $103.83 has slipped back below ORB high $104.68 (was $104.83 at 12:40 tick — afternoon softening) + rel_vol 1.49x just misses 1.5x gate. NVDA $226.12 below ORB high $227.15, rel_vol 0.82x well below gate. SPY $773.38 below VWAP $775.19, rel_vol 0.74x. QQQ $730.25 below VWAP $732.65, rel_vol 0.95x. Entire tape drifting lower since noon. Flat, no action. Session effectively over for new entries.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trades_placed": [],
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "market_snapshot": {
+    "INTC": {"last": 103.825, "rel_volume": 1.49, "spread_bp": 1.0, "above_vwap": false, "orb_breakout": false, "vwap": 104.16, "orb_high": 104.68},
+    "NVDA": {"last": 226.12, "rel_volume": 0.82, "spread_bp": 1.3, "above_vwap": false, "orb_breakout": false, "vwap": 226.58, "orb_high": 227.15},
+    "SPY": {"last": 773.375, "rel_volume": 0.74, "spread_bp": 0.3, "above_vwap": false, "orb_breakout": false, "vwap": 775.19},
+    "QQQ": {"last": 730.245, "rel_volume": 0.95, "spread_bp": 0.8, "above_vwap": false, "orb_breakout": false, "vwap": 732.65}
+  }
+}

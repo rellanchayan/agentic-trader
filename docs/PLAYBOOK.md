@@ -26,6 +26,7 @@ made of **rules to follow**, not stories.
   the early reward; if the setup was not actionable at the open, skip it for the day.
 - Be careful around scheduled events (Fed, CPI, jobs) — prices whip around. Trade smaller or wait.
 - On pre-CPI session days (the Tuesday before a CPI release), institutional players reduce exposure ahead of the binary macro event; the 1.5x relative-volume gate reliably blocks all entries as a result. A zero-trade outcome on a pre-CPI day is correct behavior — do not adjust gates to force entries.
+- On the 1-2 trading sessions before a scheduled FOMC minutes release, institutional players typically reduce exposure ahead of the binary macro event; relative volume across candidates runs well below the 1.5x gate as a result. A zero-trade outcome on these pre-FOMC-minutes sessions is the expected and correct outcome — do not adjust gates to force entries. (2026-08-17: FOMC July minutes on Wednesday; plan correctly anticipated zero trades Monday on 0.92–1.09x semiconductor rel vol.)
 
 ## Setups by market mood
 - **Risk-on (trending up):** favor Opening-Range Breakouts and momentum continuation. Buy strength.
@@ -51,6 +52,12 @@ made of **rules to follow**, not stories.
   (SPY, QQQ, JPM, AMZN, TSLA, GOOGL) to the watchlist for that day. A 4-name watchlist concentrated
   in semiconductors leaves the system structurally idle across any multi-day sector rout; the
   substitute ensures at least one armed candidate exists each session.
+- When a primary watchlist candidate is within approximately 9 calendar days of its scheduled
+  earnings release, the options market absorbs earnings premium and intraday ranges may be narrower
+  than the ATR suggests. A tight ORB range combined with low relative volume means the breakout
+  signal may not fire cleanly. Evaluate whether a non-earnings-constrained name from the qualified
+  universe (SPY, QQQ, or a stock with no near-term earnings) offers a cleaner primary setup for
+  that session. (2026-08-17: NVDA earnings Aug 26 created a nine-day vol-compression window.)
 
 ## Entries & exits
 - Enter with marketable limit orders so we fill fast but never worse than our price.
@@ -166,6 +173,22 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-17: No tuning. Tuner unfrozen ("ok to tune", 40 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today; no new round-trips means the
+  aggregate statistics are unchanged from yesterday: 16 total trades, ORB -0.199R across 5 trades
+  (3 wins, 2 losses), momentum -0.975R across 1 trade. The learning loop is idle when trade
+  generation is suppressed — there is no new evidence for any parameter to act on. Primary
+  operational failure: docs/intraday/2026-08-17.md was not written; the tick loop's tick-by-tick
+  observations during the session are unrecorded. This is the highest-priority fix before Tuesday's
+  open — without it, a zero-trade session is indistinguishable from a non-running tick loop. Two
+  durable rules added tonight: (1) the 1-2 sessions before a scheduled FOMC minutes release suppress
+  participation similarly to pre-CPI Tuesdays — the 1.5x rel-vol gate reliably blocks entries and a
+  zero-trade outcome is correct (added to Time of day); (2) a primary candidate within ~9 calendar
+  days of its earnings release faces vol compression from options premium absorption, narrowing the
+  ORB range — evaluate a non-earnings-constrained alternate for the primary slot (added to Setups).
+  Closing equity $999,487.65, sixth consecutive session without a realized profit (last win:
+  2026-08-07, +$40.50 NFLX). Total drawdown from $1,000,000 start: $512.35 (0.051%). Tuning ledger
+  remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-14: No tuning. Tuner frozen (last 3 days are net-negative — not optimizing during a
   losing streak). Fourth consecutive non-positive session: Aug 11 $0, Aug 12 -$47.74, Aug 13 $0,
   Aug 14 $0. Zero trades placed; closing equity $999,487.65. Infrastructure note: docs/day_plan.md

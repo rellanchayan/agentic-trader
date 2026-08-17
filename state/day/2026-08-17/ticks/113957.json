@@ -1,0 +1,55 @@
+{
+  "tick_time": "2026-08-17T11:39:57-04:00",
+  "tick_id": "113957",
+  "minutes_since_open": 129,
+  "verdict": "NO_TRADE",
+  "reason": "Entry window closed (9:45–11:00 AM ET). INTC ORB breakout arrived after window (price $104.91 > ORB high $104.68, rel_vol 2.16x, spread 1.0 bp — all gates pass except timing). NVDA no breakout ($227.02 < ORB high $227.15) + rel_vol 1.04x fails 1.5x gate. SPY below VWAP; tertiary window also closed. No positions to manage. Flat.",
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 104.91,
+      "orb_high": 104.68,
+      "orb_low": 101.86,
+      "orb_breakout": true,
+      "rel_volume": 2.16,
+      "spread_bp": 1.0,
+      "above_vwap": true,
+      "gate_rel_vol": "PASS",
+      "gate_spread": "PASS",
+      "gate_breakout": "PASS",
+      "gate_entry_window": "FAIL — 11:39 AM ET is past the 9:45–11:00 AM window",
+      "decision": "SKIP — window closed"
+    },
+    {
+      "ticker": "NVDA",
+      "last": 227.02,
+      "orb_high": 227.15,
+      "orb_low": 225.18,
+      "orb_breakout": false,
+      "rel_volume": 1.04,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "gate_rel_vol": "FAIL (1.04x < 1.5x)",
+      "gate_spread": "PASS",
+      "gate_breakout": "FAIL (price below ORB high)",
+      "gate_entry_window": "FAIL — window closed",
+      "decision": "SKIP — no breakout + low volume + window closed"
+    },
+    {
+      "ticker": "SPY",
+      "last": 775.115,
+      "above_vwap": false,
+      "gate_above_vwap": "FAIL",
+      "gate_entry_window": "FAIL — tertiary window 10:30–11:00 AM ET closed",
+      "decision": "SKIP — below VWAP, window closed"
+    }
+  ],
+  "positions_managed": [],
+  "trades_placed": [],
+  "account_snapshot": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

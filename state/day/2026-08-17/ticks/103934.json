@@ -1,0 +1,61 @@
+{
+  "tick_time": "2026-08-17T10:39:34-04:00",
+  "tick_id": "103934",
+  "minutes_since_open": 69,
+  "verdict": "NO_TRADE",
+  "action": null,
+  "reason": "No ORB breakouts on any armed name. NVDA $226.95 below ORB high $227.15 and rel_vol 1.05x fails 1.5x gate. INTC $103.92 below ORB high $104.68 — spread 1.9 bp and rel_vol 2.34x pass their gates, but price trigger not met (no breakout). SPY tertiary is now active (both semis failed to break ORB highs before 10:30 AM gate), but SPY $775.085 is below VWAP $775.51 — VWAP reclaim setup not triggered. MIXED/RANGE tape + pre-FOMC caution in effect. Entry window closes 11:00 AM ET.",
+  "market_snapshot": {
+    "NVDA": {
+      "last": 226.95,
+      "bid": 226.90,
+      "ask": 226.93,
+      "spread_bp": 1.3,
+      "vwap": 226.0,
+      "orb_high": 227.15,
+      "orb_low": 225.18,
+      "rel_volume": 1.05,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_spread": "PASS",
+      "gate_rel_vol": "FAIL (1.05x < 1.5x)",
+      "gate_price": "FAIL (below ORB high)"
+    },
+    "INTC": {
+      "last": 103.92,
+      "bid": 103.90,
+      "ask": 103.92,
+      "spread_bp": 1.9,
+      "vwap": 103.22,
+      "orb_high": 104.68,
+      "orb_low": 101.86,
+      "rel_volume": 2.34,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_spread": "PASS (1.9 bp < 15 bp; no blowout — structural spread check cleared)",
+      "gate_rel_vol": "PASS (2.34x >= 1.5x)",
+      "gate_price": "FAIL (below ORB high $104.68 by $0.76)"
+    },
+    "SPY": {
+      "last": 775.085,
+      "bid": 775.09,
+      "ask": 775.12,
+      "spread_bp": 0.4,
+      "vwap": 775.51,
+      "orb_high": 776.74,
+      "orb_low": 775.34,
+      "rel_volume": 1.11,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "tertiary_active": true,
+      "gate_spread": "PASS (0.4 bp < 5 bp)",
+      "gate_rel_vol": "FAIL (1.11x < 1.2x tertiary threshold)",
+      "gate_vwap_reclaim": "FAIL (price below VWAP)"
+    }
+  },
+  "positions_managed": [],
+  "trades_today": 0,
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "equity": 999487.65
+}

@@ -2,10 +2,22 @@
   "_meta": {
     "date": "2026-08-17",
     "generated_utc": "2026-08-17T13:32:18.788804+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 3,
-    "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "day_screener_utc": "2026-08-17T13:37:29.826033+00:00",
+    "source": "watchlist_build + day_screener",
+    "screener_candidates_considered": 3,
+    "screener_top": 3,
+    "kept": 2,
+    "dropped": ["PFE"],
+    "added": ["SPY", "QQQ"],
+    "final_watchlist_count": 4,
+    "drop_reasons": {
+      "PFE": "No catalyst, no gap. ATR $0.54/day: at $250 risk per trade the reward structure is too thin to justify execution friction. Disarmed same reason in 2026-08-14 plan."
+    },
+    "add_reasons": {
+      "SPY": "Playbook mandatory: semiconductor sector pressure confirmed across Aug 12-14; at least one non-semi substitute required when disarm spans 2+ sessions.",
+      "QQQ": "Secondary non-semi substitute from playbook qualified universe. Tech-heavy so may correlate with semi weakness; evaluate only if NVDA, INTC, and SPY all fail to produce qualifying setups."
+    },
+    "note": "ORB levels fill in live after the open. Spread fields marked with premarket readings only — live spread gate is authoritative at each tick. SPY and QQQ premarket prices not captured by screener; populate from live quote at first tick."
   },
   "NVDA": {
     "sector": "technology",
@@ -15,9 +27,11 @@
     "premarket_price": 226.62,
     "gap_pct": 0.0007,
     "spread_bp": 34.0,
+    "support": 220.0,
+    "resistance": 230.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,496,896 sh/day); +0.1% gap"
+    "note": "Liquid (3.5M sh/day); ATR $6.50 supports ORB structure. Near-flat premarket (+0.07% gap). CAUTION: premarket spread 34 bp is unusually wide for NVDA and exceeds both the 25 bp config cap and the 15 bp ORB gate — live spread gate is mandatory and non-negotiable at first evaluation. In-session NVDA spread is routinely <5 bp; the wide premarket reading likely reflects thin pre-open participation. If live spread > 15 bp after 9:45 AM ET, disarm for the session. Support $220 (round number, ~1 ATR below close). Resistance $230 (round number). Primary semiconductor candidate."
   },
   "INTC": {
     "sector": "technology",
@@ -27,20 +41,38 @@
     "premarket_price": 102.33,
     "gap_pct": 0.0009,
     "spread_bp": 2.9,
+    "support": 100.0,
+    "resistance": 105.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,337,311 sh/day); +0.1% gap"
+    "note": "Liquid (3.3M sh/day); ATR $6.39 supports ORB structure. Near-flat premarket (+0.09% gap). MANDATORY spread gate: INTC has a documented blowout pattern — 2.9 bp premarket today, but prior premarket readings of 3.8-6.4 bp have widened to 51.6-209.5 bp at the open on three separate sessions (2026-07-09, 2026-08-04, 2026-08-14). If live spread exceeds 15 bp at first post-9:45 AM evaluation, disarm INTC for the full session — do not re-evaluate later that day. A wide live-session spread on INTC is a reversal signal. Support $100 (psychological round number). Resistance $105 (prior week close level). Secondary to NVDA: evaluate only if NVDA has not produced a qualifying setup by 10:30 AM ET."
   },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 26.56,
-    "atr_day": 0.54,
-    "avg_vol_10d": 2188022,
-    "premarket_price": 26.56,
-    "gap_pct": 0.0,
-    "spread_bp": 3.8,
+  "SPY": {
+    "sector": "broad_market",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": 75000000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,188,022 sh/day); +0.0% gap"
+    "note": "Added per playbook rule: semiconductor sector pressure across 3 sessions (Aug 12-14) requires at least one non-semi substitute from qualified universe. SPY is the broadest, most liquid ETF (75M+ sh/day avg). In-session spread typically <2 bp. Premarket price and gap NOT captured by morning screen — read live quote at first tick and populate support/resistance from ORB structure. Condition for arming: evaluate as primary if both NVDA and INTC fail to produce a qualifying setup by 10:30 AM ET. Entry checklist: ORB breakout above opening-range high; live spread < 5 bp; rel_vol > 1.5x; R/R at least 2:1. Target 1.5-2.0x per-share risk on a MIXED tape."
+  },
+  "QQQ": {
+    "sector": "broad_market",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": 50000000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Secondary non-semi substitute from playbook qualified universe (Nasdaq-100 ETF). Extremely liquid (50M+ sh/day avg). CORRELATION WARNING: QQQ is heavily tech and semiconductor weighted — if the semiconductor sector headwind that drove Aug 12-14 pressure continues today, QQQ will likely also be under pressure. Only evaluate if NVDA, INTC, and SPY all fail to produce qualifying setups. Premarket price and gap not captured by screen; populate from live quote at first tick. Same entry checklist as SPY: live spread < 5 bp, rel_vol > 1.5x, 2:1 R/R."
   }
 }

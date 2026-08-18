@@ -1,0 +1,67 @@
+{
+  "tick_time_et": "2026-08-18T09:40:12-04:00",
+  "tick_hhmmss": "094012",
+  "minutes_since_open": 10,
+  "action": "WAIT",
+  "day_pnl": 0.0,
+  "positions_held": 0,
+  "position_slots_remaining": 8,
+  "trades_remaining": 20,
+
+  "positions_managed": [],
+
+  "entry_candidates_evaluated": [
+    {
+      "ticker": "SPY",
+      "status": "BLOCKED",
+      "block_reason": "Entry window not yet open — 9:45 AM gate. Currently 9:40 AM ET, ORB still forming (15-minute ORB ends at 9:45 AM). Conditions otherwise favorable: price above VWAP ($769.10 vs $768.67), spread 0.5 bp (< 5 bp gate), rel_vol 2.92x (> 1.5x gate). Will re-evaluate next tick when window opens.",
+      "setup": "vwap_reclaim",
+      "above_vwap": true,
+      "spread_bp": 0.5,
+      "rel_volume": 2.92,
+      "last": 769.1,
+      "vwap": 768.67,
+      "orb_high": 769.44,
+      "orb_low": 767.92
+    },
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "block_reason": "Plan disarm for full session: sector-wide selling (both INTC and NVDA gapping down), 4.1% premarket gap (spread expected to blow out far above 15 bp gate at open per playbook history), buying into dilution overhang on risk-off day. Live spread 14.2 bp is below the 15 bp cap but plan disarm takes precedence.",
+      "spread_bp": 14.2,
+      "rel_volume": 3.43,
+      "last": 98.565
+    },
+    {
+      "ticker": "NVDA",
+      "status": "DISARMED",
+      "block_reason": "Plan disarm for full session: earnings Aug 26-27 (8 days away, options premium absorbs vol), semiconductor sector disarm (third consecutive session), live spread 30.0 bp exceeds 25 bp gate. All three independent blocks present.",
+      "spread_bp": 30.0,
+      "rel_volume": 3.32,
+      "last": 220.915
+    },
+    {
+      "ticker": "PFE",
+      "status": "DISARMED",
+      "block_reason": "Plan disarm: ATR $0.055/min ($0.57/day) too small for practical intraday trade. ~370 shares at $27.22 = $10,072 deployed to earn a small nominal P&L. No meaningful catalyst.",
+      "spread_bp": 3.7,
+      "rel_volume": 5.33,
+      "last": 27.215
+    },
+    {
+      "ticker": "QQQ",
+      "status": "NOT_ARMED",
+      "block_reason": "QQQ not in today's plan armed setups. Today's plan arms only SPY (VWAP reclaim, conditional). QQQ not evaluated for entry.",
+      "spread_bp": 3.9,
+      "rel_volume": 4.52,
+      "last": 721.32
+    }
+  ],
+
+  "orders_placed": [],
+  "orders_cancelled": [],
+
+  "reasoning_summary": "Flat account, 10 minutes since open. No positions to manage. Only armed setup is SPY VWAP reclaim (per plan), conditional on 9:45-11:00 AM ET entry window. Window not yet open. SPY is currently above VWAP with tight spread and solid relative volume — setup looks conditionally on track. All other names disarmed per plan. Wait for next tick when ORB completes and entry window opens.",
+
+  "next_tick_watch": "SPY: watch for continued hold above VWAP at 9:45 AM. If still above VWAP, spread < 5 bp, rel_vol > 1.5x, evaluate entry into VWAP reclaim long. Stop would be just below VWAP (~$768.20-$768.40). Target ~1.5-2.0x risk per plan (risk-off day, conservative target). Max $5,000 deployed per plan."
+}

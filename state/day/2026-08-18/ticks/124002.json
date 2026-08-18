@@ -1,0 +1,20 @@
+{
+  "tick_time_et": "12:40",
+  "timestamp_utc": "2026-08-18T16:40:02Z",
+  "action": "WAIT",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_submitted": null,
+  "note": "Entry window closed 100 minutes ago (was 9:45-11:00 AM ET per plan). No open positions to manage. SPY: $768.52, above VWAP ($768.43), spread 0.5 bp, rel_vol 1.18x — fails both the entry-window gate (closed at 11:00 AM) and the rel_vol gate (< 1.5x minimum). INTC: $96.08, spread 73.6 bp (>> 15 bp max), below VWAP — disarmed for session. NVDA: $219.90, rel_vol 1.44x (below gate), disarmed for session (earnings Aug 26 + sector disarm). PFE: $27.27, disarmed (ATR $0.57 too small). QQQ: not in today's armed setups. Zero trades today is the correct and expected outcome on a risk-off pre-FOMC-minutes Tuesday with all semiconductor names disarmed.",
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "positions_open": 0,
+  "trades_today": 0,
+  "market_snapshot": {
+    "SPY": {"last": 768.52, "vwap": 768.43, "above_vwap": true, "rel_volume": 1.18, "spread_bp": 0.5},
+    "QQQ": {"last": 718.815, "vwap": 718.62, "above_vwap": true, "rel_volume": 1.98, "spread_bp": 2.9},
+    "NVDA": {"last": 219.9, "vwap": 219.82, "above_vwap": true, "rel_volume": 1.44, "spread_bp": 1.4},
+    "INTC": {"last": 96.08, "vwap": 96.83, "above_vwap": false, "rel_volume": 1.17, "spread_bp": 73.6},
+    "PFE": {"last": 27.27, "vwap": 27.25, "above_vwap": true, "rel_volume": 1.13, "spread_bp": 3.7}
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "tick_time_et": "14:40",
+  "timestamp_utc": "2026-08-18T18:40:01Z",
+  "verdict": "PROCEED",
+  "action": "WAIT",
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "slot_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "SPY": {
+      "last": 768.32,
+      "bid": 768.31,
+      "ask": 768.36,
+      "spread_bp": 0.7,
+      "vwap": 768.37,
+      "above_vwap": false,
+      "rel_volume": 0.9,
+      "orb_breakout": false
+    },
+    "INTC": {
+      "last": 96.03,
+      "spread_bp": 52.2,
+      "above_vwap": false,
+      "rel_volume": 0.88,
+      "disarmed_reason": "spread 52.2 bp > 15 bp gate + sector disarm"
+    },
+    "NVDA": {
+      "last": 220.15,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "rel_volume": 1.14,
+      "disarmed_reason": "earnings 8 days + sector disarm + pre-FOMC"
+    },
+    "PFE": {
+      "last": 27.255,
+      "spread_bp": 3.7,
+      "rel_volume": 0.97,
+      "disarmed_reason": "ATR $0.56/day too small"
+    },
+    "QQQ": {
+      "last": 718.11,
+      "spread_bp": 0.3,
+      "rel_volume": 1.65,
+      "disarmed_reason": "not in today's armed setups"
+    }
+  },
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries_considered": [
+    {
+      "ticker": "SPY",
+      "setup": "vwap_reclaim",
+      "blocked_by": "entry_window_closed",
+      "detail": "Entry window was 9:45–11:00 AM ET; it is now 2:40 PM ET (220 min after close). Additionally: price below VWAP, rel_vol 0.9x < 1.5x gate."
+    }
+  ],
+  "trades_submitted": [],
+  "reasoning": "Entry window for the only armed setup (SPY VWAP reclaim, 9:45–11:00 AM ET) closed 220 minutes ago. All other names remain disarmed per the day plan: INTC (spread + sector disarm), NVDA (earnings + sector + pre-FOMC), PFE (ATR). No positions to manage. No new entries qualify. Zero trades is the correct and expected outcome on a risk-off pre-FOMC-minutes Tuesday.",
+  "plan_alignment": "Fully aligned with 2026-08-18 plan: SPY VWAP reclaim did not produce a clean setup by 11:00 AM ET — plan explicitly states to close the setup and take zero trades in that case."
+}

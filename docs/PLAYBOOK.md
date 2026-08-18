@@ -173,6 +173,20 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-18: No tuning. Tuner unfrozen ("ok to tune", 41 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today; US-Iran tensions (RISK-OFF) and
+  pre-FOMC-minutes Tuesday (Wednesday release of FOMC July minutes) suppressed participation exactly
+  as the existing playbook rules predict. The pre-FOMC-minutes rule added 2026-08-17 was validated
+  by today's session — institutional vol reduction ran at the same magnitude as yesterday, and the
+  1.5x rel-vol gate blocked every candidate. A zero-trade outcome on this session is the expected
+  and correct outcome; no gates were adjusted and none should be. No new durable rules are warranted:
+  both the risk-off and pre-FOMC-minutes patterns are already codified, and today produced no
+  evidence that any existing rule was wrong. Account closed flat at $999,487.65 — the seventh
+  consecutive session without a realized profit (last win: 2026-08-07, +$40.50 NFLX). Total
+  drawdown from $1,000,000 start: $512.35 (0.051%). Aggregate stats unchanged from yesterday (no
+  new round-trips): 16 trades, 37.5% win rate, avg win +0.43R, avg loss -0.85R, ORB -0.199R
+  across 5 trades (3 wins), momentum -0.975R across 1 trade. Tuning ledger remains empty; no
+  parameter has ever been changed by the tuner.
 - 2026-08-17: No tuning. Tuner unfrozen ("ok to tune", 40 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today; no new round-trips means the
   aggregate statistics are unchanged from yesterday: 16 total trades, ORB -0.199R across 5 trades

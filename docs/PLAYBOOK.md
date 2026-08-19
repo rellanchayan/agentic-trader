@@ -14,6 +14,7 @@ made of **rules to follow**, not stories.
 - After two losing trades in a row, slow down and be extra selective.
 - Never re-enter a name you just exited unless a brand-new setup triggers.
 - Never flip-flop inside the spread (buying and selling pennies apart).
+- After eight or more consecutive sessions without a realized profit, conduct a setup-mix review before the next session: count how many blocked sessions had armed candidates the gates correctly filtered vs. sessions where the screener produced no qualifying candidate at all. The two failure modes require different responses — overly strict gates vs. an insufficiently broad screener universe. Do not loosen gates to force entries; diagnose the root cause first.
 
 ## Time of day
 - The first 5 minutes are noisy. Let the opening range (first ~15 min) form before trading breakouts.
@@ -58,6 +59,13 @@ made of **rules to follow**, not stories.
   signal may not fire cleanly. Evaluate whether a non-earnings-constrained name from the qualified
   universe (SPY, QQQ, or a stock with no near-term earnings) offers a cleaner primary setup for
   that session. (2026-08-17: NVDA earnings Aug 26 created a nine-day vol-compression window.)
+- On a MIXED/RANGE gap-up tape, the ORB breakout setup faces structural headwinds — the premarket
+  gap absorbs the directional energy that would otherwise drive a clean intraday extension, and the
+  broader market is not committed to a trending move. When regime is MIXED/RANGE and the tape gapped
+  up premarket, treat VWAP reclaim as the primary setup and require at least 2.0× relative volume
+  for any ORB breakout entry. If relative volume is below 2.0× on a MIXED/RANGE gap-up day, skip
+  ORB and evaluate VWAP reclaim only. (2026-08-19: gate correctly blocked a 1.72× entry; SPY
+  subsequently failed to hold the ORB high, confirming the gate's judgment.)
 
 ## Entries & exits
 - Enter with marketable limit orders so we fill fast but never worse than our price.
@@ -173,6 +181,22 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-19: No tuning. Tuner unfrozen ("ok to tune", 42 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today; eighth consecutive session
+  without a realized profit (last win: 2026-08-07, +$40.50 NFLX). Key observation: the ORB
+  breakout gate (2.0× rel_vol) correctly blocked an entry at 1.72× relative volume on a MIXED/RANGE
+  gap-up session — SPY subsequently failed to hold the ORB high, confirming the gate's judgment.
+  Regime mismatch lesson: on MIXED/RANGE gap-up days, the premarket gap absorbs the directional
+  energy that an ORB breakout depends on; the broader market is not committed to trending. Two
+  durable rules added tonight: (1) Setups — on MIXED/RANGE gap-up tape, treat VWAP reclaim as the
+  primary setup and require ≥2.0× relative volume for any ORB breakout entry; below 2.0× skip ORB
+  entirely. (2) Discipline — after eight or more consecutive no-profit sessions, conduct a setup-mix
+  review to distinguish "gates correctly filtering bad setups" from "screener not generating enough
+  candidates"; the two failure modes need different fixes. Account closed flat at $999,487.65. Total
+  drawdown from $1,000,000 start: $512.35 (0.051%). Aggregate stats (42 days, 16 trades): 37.5%
+  win rate, avg win +0.43R, avg loss -0.85R, ORB -0.20R across 5 trades (3 wins), momentum -0.975R
+  across 1 trade, LIMIT fill rate 94% (15/16). Tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
 - 2026-08-18: No tuning. Tuner unfrozen ("ok to tune", 41 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today; US-Iran tensions (RISK-OFF) and
   pre-FOMC-minutes Tuesday (Wednesday release of FOMC July minutes) suppressed participation exactly

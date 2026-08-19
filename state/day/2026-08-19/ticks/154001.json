@@ -1,0 +1,16 @@
+{
+  "time_et": "2026-08-19T15:40:01-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "Entry window closed (past 15:30 ET cutoff). No open positions. SPY $769.22 below VWAP $770.16, rel_vol 0.90x; QQQ $716.53 below VWAP $716.87, rel_vol 0.78x. All armed candidates (SPY, QQQ) below VWAP and below 1.5x rel_vol gate. INTC/NVDA/PFE disarmed for the session. 0 trades today. Flatten window opens at 15:50 ET.",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "market_snapshot": {
+    "SPY": {"last": 769.22, "vwap": 770.16, "rel_volume": 0.9, "above_vwap": false},
+    "QQQ": {"last": 716.53, "vwap": 716.87, "rel_volume": 0.78, "above_vwap": false},
+    "AAPL": {"last": 315.65, "vwap": 315.72, "rel_volume": 1.09, "armed": false},
+    "INTC": {"last": 93.22, "armed": false, "reason": "disarmed in plan"},
+    "MSFT": {"last": 483.22, "spread_bp": 40.9, "rel_volume": 0.67, "armed": false}
+  }
+}

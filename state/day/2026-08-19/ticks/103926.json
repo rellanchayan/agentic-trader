@@ -1,0 +1,71 @@
+{
+  "time_et": "2026-08-19T10:39:26-04:00",
+  "action": "NO_TRADE",
+  "verdict": "no qualifying setup",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "candidates_evaluated": [
+    {
+      "ticker": "SPY",
+      "armed": true,
+      "setup": "orb",
+      "price": 771.11,
+      "vwap": 769.75,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_high": 770.59,
+      "orb_low": 769.29,
+      "rel_volume": 1.72,
+      "spread_bp": 2.7,
+      "quote_age_sec": 0.6,
+      "result": "BLOCKED",
+      "block_reason": "rel_vol 1.72x < 2.0x required for ORB on MIXED/RANGE day (plan gate); no VWAP reclaim setup (never pulled back below VWAP)"
+    },
+    {
+      "ticker": "QQQ",
+      "armed": true,
+      "setup": "orb_or_vwap_reclaim",
+      "price": 716.735,
+      "vwap": 716.05,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 721.39,
+      "orb_low": 717.17,
+      "rel_volume": 1.59,
+      "spread_bp": 0.7,
+      "quote_age_sec": 0.6,
+      "result": "BLOCKED",
+      "block_reason": "price $716.74 at/below ORB low $717.17 — bearish price action, no buy signal; not an ORB breakout (far below ORB high)"
+    },
+    {
+      "ticker": "INTC",
+      "armed": false,
+      "result": "DISARMED",
+      "block_reason": "plan disarm: premarket spread 59.2 bp, prior precedents confirm wide opening spread on INTC gap days"
+    },
+    {
+      "ticker": "NVDA",
+      "armed": false,
+      "result": "DISARMED",
+      "block_reason": "plan disarm: earnings Aug 26-27 (7 days), within 9-day vol compression window"
+    },
+    {
+      "ticker": "PFE",
+      "armed": false,
+      "result": "DISARMED",
+      "block_reason": "plan disarm: ATR $0.57/day too small for meaningful P&L at permitted size"
+    }
+  ],
+  "context": {
+    "minutes_since_open": 69,
+    "entry_window_open": true,
+    "entry_window_closes_et": "11:00",
+    "regime": "MIXED/RANGE",
+    "fomc_minutes_et": "14:00",
+    "equity": 999487.65,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8,
+    "loss_budget_remaining": 3000.0
+  }
+}

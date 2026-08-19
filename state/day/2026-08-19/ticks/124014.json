@@ -1,0 +1,23 @@
+{
+  "time_et": "2026-08-19T12:40:14-04:00",
+  "minutes_since_open": 190,
+  "action": "NO_TRADE",
+  "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE plan + FOMC 2PM event wall. No open positions to manage. SPY rel_vol 1.16x (below 1.5x gate), QQQ rel_vol 1.02x (below 1.5x gate). FOMC July minutes release at 2:00 PM ET in ~80 minutes — no new entries under any circumstances. INTC, NVDA, PFE all disarmed per plan.",
+  "positions_evaluated": [],
+  "entries_evaluated": [],
+  "market_summary": {
+    "SPY": {"last": 770.51, "vwap": 770.40, "above_vwap": true, "rel_volume": 1.16, "orb_breakout": false},
+    "QQQ": {"last": 718.35, "vwap": 716.94, "above_vwap": true, "rel_volume": 1.02, "orb_breakout": false},
+    "AAPL": {"last": 315.39, "vwap": 315.88, "above_vwap": false, "rel_volume": 1.47, "orb_breakout": true},
+    "INTC": {"status": "disarmed", "reason": "plan-level disarm (spread 59.2bp premarket; playbook precedent)"},
+    "MSFT": {"status": "not in watchlist"}
+  },
+  "account": {
+    "positions": 0,
+    "trades_today": 0,
+    "day_pnl": 0.0,
+    "equity": 999487.65
+  },
+  "next_event": "FOMC July minutes at 2:00 PM ET",
+  "flatten_window_start": "15:50 ET"
+}

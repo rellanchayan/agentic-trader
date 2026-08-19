@@ -1,0 +1,204 @@
+{
+  "date": "2026-08-19",
+  "timestamp_et": "2026-08-19T15:40:01.086181-04:00",
+  "minutes_since_open": 370,
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "buying_power": 3997950.6,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": {
+    "date": "2026-08-19",
+    "loss_stop_usd": 3000.0,
+    "baseline_equity": 999487.65,
+    "current_equity": 999487.65,
+    "day_pnl": 0.0,
+    "tripped": false,
+    "note": "ok"
+  },
+  "budget": {
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "daily_deploy_cap_usd": 50000
+  },
+  "positions": [],
+  "open_orders": [],
+  "market": {
+    "AAPL": {
+      "last": 315.65,
+      "bid": 315.66,
+      "ask": 315.69,
+      "quote_age_sec": 0.9,
+      "spread_bp": 1.0,
+      "vwap": 315.72,
+      "orb_high": 312.33,
+      "orb_low": 309.73,
+      "atr_1m": 0.218,
+      "atr_day": 8.29,
+      "rel_volume": 1.09,
+      "volume_today": 1368999,
+      "above_vwap": false,
+      "orb_breakout": true,
+      "marketable_buy_limit": 316.01,
+      "marketable_sell_limit": 315.34
+    },
+    "INTC": {
+      "last": 93.22,
+      "bid": 93.17,
+      "ask": 93.2,
+      "quote_age_sec": 0.6,
+      "spread_bp": 3.2,
+      "vwap": 93.32,
+      "orb_high": 98.135,
+      "orb_low": 93.78,
+      "atr_1m": 0.11,
+      "atr_day": 6.23,
+      "rel_volume": 1.07,
+      "volume_today": 4139211,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 93.29,
+      "marketable_sell_limit": 93.08
+    },
+    "MSFT": {
+      "last": 483.22,
+      "bid": 483.02,
+      "ask": 485.0,
+      "quote_age_sec": 1.2,
+      "spread_bp": 40.9,
+      "vwap": 483.96,
+      "orb_high": 484.16,
+      "orb_low": 479.72,
+      "atr_1m": 0.225,
+      "atr_day": 12.66,
+      "rel_volume": 0.67,
+      "volume_today": 475059,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 485.48,
+      "marketable_sell_limit": 482.54
+    },
+    "QQQ": {
+      "last": 716.53,
+      "bid": 716.46,
+      "ask": 716.53,
+      "quote_age_sec": 0.6,
+      "spread_bp": 1.0,
+      "vwap": 716.87,
+      "orb_high": 721.39,
+      "orb_low": 717.17,
+      "atr_1m": 0.276,
+      "atr_day": 10.88,
+      "rel_volume": 0.78,
+      "volume_today": 395939,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 717.25,
+      "marketable_sell_limit": 715.74
+    },
+    "SPY": {
+      "last": 769.22,
+      "bid": 769.19,
+      "ask": 769.21,
+      "quote_age_sec": 0.6,
+      "spread_bp": 0.3,
+      "vwap": 770.16,
+      "orb_high": 770.59,
+      "orb_low": 769.29,
+      "atr_1m": 0.209,
+      "atr_day": 6.65,
+      "rel_volume": 0.9,
+      "volume_today": 1007827,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 769.98,
+      "marketable_sell_limit": 768.42
+    }
+  },
+  "recent_ticks": [
+    {
+      "time_et": "2026-08-19T09:39:33-04:00",
+      "action": "NO_TRADE",
+      "reason": "Pre-entry window (9:39 AM < 9:45 AM cutoff); SPY and QQQ below VWAP; SPY spread 12.5 bp > 5 bp plan threshold; no ORB breakouts; INTC disarmed",
+      "positions": 0,
+      "trades_today": 0,
+      "day_pnl": 0.0
+    },
+    {
+      "time_et": "2026-08-19T10:39:26-04:00",
+      "action": "NO_TRADE",
+      "reason": "SPY ORB breakout but rel_vol 1.72x < 2.0x required for ORB on MIXED/RANGE day; no VWAP reclaim setup (price never pulled back below VWAP); QQQ price $716.74 at/below ORB low $717.17 (weak); INTC/NVDA/PFE disarmed; entry window open until 11:00 AM",
+      "positions": 0,
+      "trades_today": 0,
+      "day_pnl": 0.0
+    },
+    {
+      "time_et": "2026-08-19T11:40:16-04:00",
+      "action": "NO_TRADE",
+      "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE day plan with FOMC 2PM event wall. SPY rel_vol 1.35x < 1.5x gate; QQQ rel_vol 1.25x < 1.5x gate. No open positions. Watching for FOMC minutes at 2PM.",
+      "positions": 0,
+      "trades_today": 0,
+      "day_pnl": 0.0
+    },
+    {
+      "time_et": "2026-08-19T12:40:14-04:00",
+      "action": "NO_TRADE",
+      "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE plan + FOMC 2PM event wall. No open positions. SPY rel_vol 1.16x and QQQ rel_vol 1.02x \u2014 both below 1.5x gate. FOMC July minutes release in ~80 minutes; no new entries.",
+      "positions": 0,
+      "trades_today": 0,
+      "day_pnl": 0.0
+    },
+    {
+      "time_et": "2026-08-19T13:39:52-04:00",
+      "action": "NO_TRADE",
+      "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE day plan. FOMC July minutes in ~21 min \u2014 event wall. No positions. SPY rel_vol 1.04x, QQQ rel_vol 0.89x, all below VWAP and vol gate.",
+      "positions": 0,
+      "trades_today": 0,
+      "day_pnl": 0.0
+    },
+    {
+      "time_et": "2026-08-19T14:40:32-04:00",
+      "action": "NO_TRADE",
+      "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE plan. FOMC July minutes released at 2:00 PM \u2014 post-event period, no new entries. SPY $769.82 below VWAP $770.22, rel_vol 0.93x; QQQ $716.61 below VWAP $716.87 and below ORB low $717.17, rel_vol 0.81x. Both armed names below VWAP and vol gate. INTC/NVDA/PFE disarmed. No positions to manage. 0 trades today.",
+      "positions": 0,
+      "trades_today": 0,
+      "day_pnl": 0.0
+    }
+  ],
+  "config_snapshot": {
+    "orb_minutes": 15,
+    "orb_breakout_buffer_bp": 5,
+    "vwap_reclaim_buffer_bp": 5,
+    "stop_atr_mult": 1.5,
+    "target_atr_mult": 2.5,
+    "risk_per_trade_usd": 250,
+    "per_trade_max_usd": 10000,
+    "daily_deploy_cap_usd": 50000,
+    "max_open_positions": 8,
+    "daily_loss_stop_usd": 3000,
+    "max_position_pct": 0.25,
+    "min_rel_volume": 1.5,
+    "max_spread_bp": 25,
+    "min_quote_freshness_sec": 30,
+    "limit_buy_above_ask_pct": 0.001,
+    "limit_sell_below_bid_pct": 0.001,
+    "no_new_entries_after_et": "15:30",
+    "flatten_start_et": "15:50",
+    "pdt_equity_floor_usd": 26000,
+    "max_trades_per_day": 20,
+    "setup_enabled": {
+      "orb": true,
+      "vwap_reclaim": true,
+      "momentum": true,
+      "mean_reversion": true
+    }
+  }
+}

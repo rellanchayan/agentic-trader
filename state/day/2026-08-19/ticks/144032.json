@@ -1,0 +1,47 @@
+{
+  "time_et": "2026-08-19T14:40:32-04:00",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "entries_considered": [
+    {
+      "ticker": "SPY",
+      "armed": true,
+      "gates_checked": {
+        "entry_window_open": false,
+        "above_vwap": false,
+        "rel_volume_gte_1_5x": false,
+        "spread_lt_5bp": true,
+        "post_fomc_event_wall": true
+      },
+      "decision": "SKIP",
+      "reason": "Entry window closed at 11:00 AM ET. Post-FOMC-minutes period (released 2:00 PM). SPY $769.82 below VWAP $770.22. Rel_vol 0.93x < 1.5x gate."
+    },
+    {
+      "ticker": "QQQ",
+      "armed": true,
+      "gates_checked": {
+        "entry_window_open": false,
+        "above_vwap": false,
+        "rel_volume_gte_1_5x": false,
+        "spread_lt_5bp": true,
+        "price_above_orb_high": false
+      },
+      "decision": "SKIP",
+      "reason": "Entry window closed at 11:00 AM ET. QQQ $716.61 below VWAP $716.87 and below ORB low $717.17. Rel_vol 0.81x < 1.5x gate."
+    }
+  ],
+  "market_snapshot": {
+    "SPY": {"last": 769.82, "vwap": 770.22, "rel_volume": 0.93, "spread_bp": 0.5, "above_vwap": false},
+    "QQQ": {"last": 716.61, "vwap": 716.87, "rel_volume": 0.81, "spread_bp": 0.4, "above_vwap": false},
+    "AAPL": {"last": 314.85, "vwap": 315.72, "rel_volume": 1.14, "above_vwap": false, "disarmed": true},
+    "INTC": {"last": 93.00, "vwap": 93.33, "rel_volume": 1.15, "above_vwap": false, "disarmed": true},
+    "MSFT": {"last": 484.42, "vwap": 483.94, "rel_volume": 0.72, "spread_bp": 35.3, "disarmed": true}
+  },
+  "account": {
+    "equity": 999487.65,
+    "positions": 0,
+    "trades_today": 0,
+    "day_pnl": 0.0
+  },
+  "notes": "FOMC July minutes released at 2:00 PM ET. Entry window closed since 11:00 AM per MIXED/RANGE plan. No positions to manage. Session effectively complete for new entries; flatten window opens at 3:50 PM but no positions exist."
+}

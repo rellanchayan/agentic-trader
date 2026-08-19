@@ -1,0 +1,28 @@
+{
+  "tick_time_et": "2026-08-19T09:39:33-04:00",
+  "minutes_since_open": 9,
+  "verdict": "NO_TRADE",
+  "reasons": [
+    "Too early — no entries before 9:45 AM ET per plan (currently 9:39 AM)",
+    "SPY below VWAP ($769.68 vs $770.13 VWAP); spread 12.5 bp exceeds plan's 5 bp SPY threshold",
+    "QQQ below VWAP ($718.39 vs $719.90 VWAP); no ORB breakout",
+    "INTC disarmed (spread 82 bp, plan-level decision)",
+    "AAPL spread 95.7 bp — exceeds 25 bp max",
+    "No open positions to manage"
+  ],
+  "positions_managed": [],
+  "orders_placed": [],
+  "market_snapshot": {
+    "SPY": {"last": 769.68, "vwap": 770.13, "above_vwap": false, "spread_bp": 12.5, "rel_volume": 2.68, "orb_breakout": false},
+    "QQQ": {"last": 718.39, "vwap": 719.90, "above_vwap": false, "spread_bp": 8.8, "rel_volume": 2.39, "orb_breakout": false},
+    "MSFT": {"last": 482.86, "vwap": 481.71, "above_vwap": true, "spread_bp": 6.2, "rel_volume": 4.14, "orb_breakout": false},
+    "INTC": {"last": 94.65, "above_vwap": false, "spread_bp": 82.0, "status": "DISARMED"},
+    "AAPL": {"last": 311.865, "spread_bp": 95.7, "status": "spread_too_wide"}
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

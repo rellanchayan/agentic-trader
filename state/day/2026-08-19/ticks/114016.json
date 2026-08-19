@@ -1,0 +1,23 @@
+{
+  "time_et": "2026-08-19T11:40:16-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE day plan with FOMC 2 PM event wall. SPY rel_vol 1.35x < 1.5x gate; QQQ rel_vol 1.25x < 1.5x gate. No open positions to manage.",
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "market_snapshot": {
+    "SPY": {"last": 770.56, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.35, "spread_bp": 0.4},
+    "QQQ": {"last": 717.49, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.25, "spread_bp": 0.3},
+    "AAPL": {"last": 317.01, "note": "not on today watchlist"},
+    "INTC": {"last": 93.115, "note": "disarmed per plan"},
+    "MSFT": {"last": 485.69, "spread_bp": 100.3, "note": "not on today watchlist; spread disqualifying"}
+  },
+  "setup_analysis": {
+    "SPY_orb": "below ORB high $770.59 (price $770.56); rel_vol 1.35x < 1.5x gate; entry window closed",
+    "QQQ_orb": "price $717.49 below ORB high $721.39; rel_vol 1.25x < 1.5x gate; entry window closed",
+    "new_entries": "CLOSED — plan hard cutoff was 11:00 AM ET"
+  },
+  "next_events": ["FOMC July minutes at 2:00 PM ET", "flatten window ~3:50 PM ET"]
+}

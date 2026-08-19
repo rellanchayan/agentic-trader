@@ -1,0 +1,45 @@
+{
+  "timestamp_et": "2026-08-18T10:39:56-04:00",
+  "action": "WAIT",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "SPY",
+      "setup": "vwap_reclaim",
+      "armed": true,
+      "gates": {
+        "above_vwap": true,
+        "spread_bp": 1.0,
+        "spread_ok": true,
+        "rel_volume": 1.85,
+        "rel_volume_ok": true,
+        "entry_window": true,
+        "fresh_reclaim_signal": false,
+        "rr_ratio": 0.99,
+        "rr_ok": false
+      },
+      "entry_eval": {
+        "ask": 769.16,
+        "vwap": 768.67,
+        "stop_proposed": 768.40,
+        "risk_per_share": 0.76,
+        "target_required_2to1": 770.68,
+        "orb_high": 769.50,
+        "target_above_orb_high_by": 1.18
+      },
+      "decision": "SKIP",
+      "reason": "Two disqualifying conditions: (1) No fresh VWAP reclaim — SPY was already above VWAP at 9:40 AM pre-window tick, no new reclaim impulse at 10:39 AM; hovering $0.30 above VWAP for 60+ minutes is not a reclaim entry. (2) R/R fails mandatory 2:1 minimum — required target $770.68 is $1.18 above ORB high ($769.50) on risk-off tape with live geopolitical tail risk (Iran/oil). Skip per playbook: 'A setup that does not offer a clear 2:1 structure at entry should be skipped even if all other criteria pass.'"
+    },
+    {"ticker": "INTC", "setup": "disarmed", "decision": "SKIP", "reason": "Premarket disarm: 4.1% gap, sector disarm, spread blowout risk."},
+    {"ticker": "NVDA", "setup": "disarmed", "decision": "SKIP", "reason": "Premarket disarm: earnings Aug 26 (8 days), sector disarm, pre-FOMC."},
+    {"ticker": "PFE",  "setup": "disarmed", "decision": "SKIP", "reason": "ATR $0.57 too small, no catalyst."},
+    {"ticker": "QQQ",  "setup": "not_armed", "decision": "SKIP", "reason": "Not on today's armed list."}
+  ],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "trades_today": 0,
+  "regime": "RISK-OFF",
+  "minutes_since_open": 69,
+  "entry_window_closes_in_min": 21
+}

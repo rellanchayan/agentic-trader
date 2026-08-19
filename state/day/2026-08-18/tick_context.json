@@ -1,0 +1,192 @@
+{
+  "date": "2026-08-18",
+  "timestamp_et": "2026-08-18T15:39:58.203564-04:00",
+  "minutes_since_open": 369,
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "buying_power": 3997950.6,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": {
+    "date": "2026-08-18",
+    "loss_stop_usd": 3000.0,
+    "baseline_equity": 999487.65,
+    "current_equity": 999487.65,
+    "day_pnl": 0.0,
+    "tripped": false,
+    "note": "ok"
+  },
+  "budget": {
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "daily_deploy_cap_usd": 50000
+  },
+  "positions": [],
+  "open_orders": [],
+  "market": {
+    "INTC": {
+      "last": 96.06,
+      "bid": 95.52,
+      "ask": 95.97,
+      "quote_age_sec": 0.7,
+      "spread_bp": 47.0,
+      "vwap": 96.57,
+      "orb_high": 99.195,
+      "orb_low": 97.43,
+      "atr_1m": 0.121,
+      "atr_day": 6.62,
+      "rel_volume": 0.85,
+      "volume_today": 3055199,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 96.07,
+      "marketable_sell_limit": 95.42
+    },
+    "NVDA": {
+      "last": 219.18,
+      "bid": 219.08,
+      "ask": 219.12,
+      "quote_age_sec": 0.7,
+      "spread_bp": 1.8,
+      "vwap": 219.84,
+      "orb_high": 221.62,
+      "orb_low": 219.455,
+      "atr_1m": 0.175,
+      "atr_day": 6.53,
+      "rel_volume": 1.06,
+      "volume_today": 3790426,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 219.34,
+      "marketable_sell_limit": 218.86
+    },
+    "PFE": {
+      "last": 27.315,
+      "bid": 27.32,
+      "ask": 27.33,
+      "quote_age_sec": 0.7,
+      "spread_bp": 3.7,
+      "vwap": 27.25,
+      "orb_high": 27.29,
+      "orb_low": 27.13,
+      "atr_1m": 0.01,
+      "atr_day": 0.57,
+      "rel_volume": 1.01,
+      "volume_today": 2103450,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "marketable_buy_limit": 27.36,
+      "marketable_sell_limit": 27.29
+    },
+    "QQQ": {
+      "last": 717.84,
+      "bid": 717.81,
+      "ask": 717.85,
+      "quote_age_sec": 0.7,
+      "spread_bp": 0.6,
+      "vwap": 718.38,
+      "orb_high": 722.12,
+      "orb_low": 718.795,
+      "atr_1m": 0.161,
+      "atr_day": 11.93,
+      "rel_volume": 1.54,
+      "volume_today": 755528,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 718.57,
+      "marketable_sell_limit": 717.09
+    },
+    "SPY": {
+      "last": 767.96,
+      "bid": 767.95,
+      "ask": 767.97,
+      "quote_age_sec": 0.7,
+      "spread_bp": 0.3,
+      "vwap": 768.31,
+      "orb_high": 769.5,
+      "orb_low": 767.92,
+      "atr_1m": 0.091,
+      "atr_day": 7.17,
+      "rel_volume": 0.86,
+      "volume_today": 967321,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 768.74,
+      "marketable_sell_limit": 767.18
+    }
+  },
+  "recent_ticks": [
+    {
+      "t": "09:40",
+      "action": "WAIT",
+      "note": "Pre-entry window (9:45 AM gate not yet open, ORB still forming). SPY above VWAP $769.10 vs $768.67, spread 0.5 bp, rel_vol 2.92x \u2014 conditions look favorable for VWAP reclaim but entry window opens at 9:45 AM. INTC disarmed (sector + 4.1% gap day); NVDA disarmed (earnings 8 days + sector + spread 30 bp); PFE disarmed (ATR too small); QQQ not armed. Will evaluate SPY VWAP reclaim on next tick.",
+      "day_pnl": 0.0
+    },
+    {
+      "t": "10:39",
+      "action": "WAIT",
+      "note": "SPY above VWAP ($768.965 vs $768.67 VWAP), spread 1.0 bp, rel_vol 1.85x \u2014 all gates pass except R/R and fresh-signal check. (1) No fresh reclaim: SPY was already above VWAP at 9:40 AM pre-window tick; no new reclaim signal exists at 10:39 AM, only a 69-min hover $0.30 above VWAP. (2) R/R fails 2:1 minimum: entry ~$769.16, stop below VWAP ~$768.40 ($0.76 risk), required target $770.68 \u2014 $1.18 above ORB high $769.50 on a risk-off tape with live Iran/oil tail risk. Decision: skip, no trade. Entry window closes at 11:00 AM (21 min remaining).",
+      "day_pnl": 0.0
+    },
+    {
+      "t": "11:40",
+      "action": "WAIT",
+      "note": "Entry window closed (11:00 AM ET). SPY below VWAP ($767.835 vs $768.44), rel_vol 1.48x (below 1.5x gate). SPY VWAP reclaim setup expired per plan. All semiconductor names disarmed. Zero trades \u2014 correct outcome on risk-off pre-FOMC-minutes Tuesday.",
+      "day_pnl": 0.0
+    },
+    {
+      "t": "12:40",
+      "action": "WAIT",
+      "note": "Entry window closed 100 min ago (11:00 AM ET). No positions to manage. SPY above VWAP ($768.52 vs $768.43) but rel_vol 1.18x < 1.5x gate AND entry window expired. INTC spread 73.6 bp, below VWAP \u2014 disarmed. NVDA rel_vol 1.44x < 1.5x, disarmed (earnings + sector). PFE disarmed (ATR). QQQ not in armed setups. Zero trades today \u2014 correct on risk-off pre-FOMC-minutes Tuesday.",
+      "day_pnl": 0.0
+    },
+    {
+      "t": "13:40",
+      "action": "WAIT",
+      "note": "Entry window closed 160 min ago (11:00 AM ET). No positions to manage. SPY below VWAP ($768.215 vs $768.44 VWAP), rel_vol 0.97 < 1.5x gate. INTC spread 73.6 bp \u2014 disarmed. NVDA rel_vol 1.27, disarmed (earnings + sector + pre-FOMC). PFE disarmed (ATR). Zero trades today \u2014 correct outcome on risk-off pre-FOMC-minutes Tuesday.",
+      "day_pnl": 0.0
+    },
+    {
+      "t": "14:40",
+      "action": "WAIT",
+      "note": "Entry window closed at 11:00 AM ET (220 min ago). No positions to manage. SPY below VWAP ($768.32 vs $768.37 VWAP), rel_vol 0.9x < 1.5x gate, spread 0.7 bp. INTC spread 52.2 bp (disarmed). NVDA rel_vol 1.14x, disarmed (earnings 8 days + sector). PFE disarmed (ATR). Zero trades today \u2014 correct on risk-off pre-FOMC-minutes Tuesday.",
+      "day_pnl": 0.0
+    }
+  ],
+  "config_snapshot": {
+    "orb_minutes": 15,
+    "orb_breakout_buffer_bp": 5,
+    "vwap_reclaim_buffer_bp": 5,
+    "stop_atr_mult": 1.5,
+    "target_atr_mult": 2.5,
+    "risk_per_trade_usd": 250,
+    "per_trade_max_usd": 10000,
+    "daily_deploy_cap_usd": 50000,
+    "max_open_positions": 8,
+    "daily_loss_stop_usd": 3000,
+    "max_position_pct": 0.25,
+    "min_rel_volume": 1.5,
+    "max_spread_bp": 25,
+    "min_quote_freshness_sec": 30,
+    "limit_buy_above_ask_pct": 0.001,
+    "limit_sell_below_bid_pct": 0.001,
+    "no_new_entries_after_et": "15:30",
+    "flatten_start_et": "15:50",
+    "pdt_equity_floor_usd": 26000,
+    "max_trades_per_day": 20,
+    "setup_enabled": {
+      "orb": true,
+      "vwap_reclaim": true,
+      "momentum": true,
+      "mean_reversion": true
+    }
+  }
+}

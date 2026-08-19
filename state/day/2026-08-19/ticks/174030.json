@@ -1,0 +1,17 @@
+{
+  "time_et": "2026-08-19T13:39:52-04:00",
+  "tick_time": "133952",
+  "action": "NO_TRADE",
+  "reason": "Entry window closed at 11:00 AM ET per MIXED/RANGE day plan. FOMC July minutes release at 2:00 PM ET in ~21 minutes — hard event wall. No open positions. SPY at $769.33 below VWAP $770.31 (rel_vol 1.04x < 1.5x gate). QQQ at $716.22 below VWAP $716.93 (rel_vol 0.89x < 1.5x gate). AAPL ORB breakout true but disarmed (not in day plan). INTC/NVDA/PFE all disarmed for session. Nothing to trade; watching FOMC minutes.",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "market_snapshot": {
+    "SPY": {"last": 769.33, "vwap": 770.31, "rel_volume": 1.04, "above_vwap": false},
+    "QQQ": {"last": 716.22, "vwap": 716.93, "rel_volume": 0.89, "above_vwap": false},
+    "AAPL": {"last": 315.56, "vwap": 315.78, "rel_volume": 1.28, "above_vwap": false, "orb_breakout": true},
+    "INTC": {"last": 93.04, "vwap": 93.37, "rel_volume": 1.31, "above_vwap": false},
+    "MSFT": {"last": 483.39, "vwap": 483.94, "rel_volume": 0.82, "above_vwap": false}
+  }
+}

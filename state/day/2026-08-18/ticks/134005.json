@@ -1,0 +1,17 @@
+{
+  "tick_time_et": "13:40:05",
+  "action": "WAIT",
+  "positions_managed": 0,
+  "orders_cancelled": 0,
+  "entries_evaluated": 5,
+  "trades_submitted": 0,
+  "day_pnl": 0.0,
+  "reason": "Entry window closed 160 min ago (11:00 AM ET). No positions to manage. SPY below VWAP ($768.215 vs $768.44), rel_vol 0.97 below 1.5x gate. INTC spread 73.6 bp (disarmed: spread > 15 bp + sector + gap day). NVDA disarmed (earnings Aug 26 + sector + pre-FOMC minutes). PFE disarmed (ATR $0.56 too small). QQQ not armed per plan. Zero trades today is correct outcome on risk-off pre-FOMC-minutes Tuesday.",
+  "market_snapshot": {
+    "SPY": {"last": 768.215, "vwap": 768.44, "above_vwap": false, "rel_volume": 0.97, "spread_bp": 0.4, "gate": "SKIP — below VWAP + rel_vol < 1.5x + entry window closed"},
+    "NVDA": {"last": 220.28, "vwap": 219.87, "above_vwap": true, "rel_volume": 1.27, "spread_bp": 0.9, "gate": "DISARMED — earnings 8d + sector + pre-FOMC"},
+    "INTC": {"last": 96.015, "vwap": 96.74, "above_vwap": false, "rel_volume": 1.0, "spread_bp": 73.6, "gate": "DISARMED — spread 73.6 bp >> 15 bp max"},
+    "PFE": {"last": 27.225, "vwap": 27.24, "above_vwap": false, "rel_volume": 1.0, "spread_bp": 3.7, "gate": "DISARMED — ATR $0.57 too small"},
+    "QQQ": {"last": 718.2, "vwap": 718.64, "above_vwap": false, "rel_volume": 1.76, "spread_bp": 2.4, "gate": "NOT ARMED per today's plan"}
+  }
+}

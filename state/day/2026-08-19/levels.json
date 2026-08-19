@@ -2,10 +2,17 @@
   "_meta": {
     "date": "2026-08-19",
     "generated_utc": "2026-08-19T13:29:54.781815+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 3,
-    "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "screened_utc": "2026-08-19T13:32:00.000000+00:00",
+    "source": "watchlist_build + day_screener",
+    "candidates_considered": 8,
+    "kept": 5,
+    "dropped": ["NVDA", "PFE", "META"],
+    "drop_reasons": {
+      "NVDA": "earnings Aug 26-27 (7 days); opening spread 170bp; semiconductor sector disarm active 4+ sessions",
+      "PFE": "ATR $0.57 too small for practical day trade; opening spread 1012bp; no catalyst",
+      "META": "opening spread 800bp (extreme artifact); insufficient data for setup"
+    },
+    "note": "Pre-market screen + day-screener sanity check. ORB levels fill in live after the open. FOMC July minutes at 2:00 PM ET today — no new entries after 1:30 PM on any name."
   },
   "INTC": {
     "sector": "technology",
@@ -14,33 +21,67 @@
     "avg_vol_10d": 3869805,
     "premarket_price": 97.96,
     "gap_pct": 0.0131,
-    "spread_bp": 59.2,
+    "spread_bp": 231.7,
+    "support": 95.00,
+    "resistance": 100.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,869,805 sh/day); +1.3% gap"
+    "note": "gap +1.3% from $96.69; opening spread 231bp (premarket was 59bp) — wide opening artifact; live gate must confirm spread <15bp before any entry; support $95.00 (Aug 12 stock-offering floor, $20B raise at $95/share); resistance $100.00 (round number); ATR $6.62 gives usable intraday range if spread tightens"
   },
-  "NVDA": {
+  "SPY": {
+    "sector": "etf_broad",
+    "prev_close": 767.37,
+    "atr_day": 4.28,
+    "avg_vol_10d": 1238757,
+    "premarket_price": 770.43,
+    "gap_pct": 0.0039,
+    "spread_bp": 0.65,
+    "support": 766.95,
+    "resistance": 773.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "gap +0.39% from $767.37; spread 0.65bp — primary liquid vehicle; FOMC July minutes at 2:00 PM ET makes SPY the key name today; VWAP reclaim long is primary setup (9:45-11:00 AM window); support $766.95 (Aug 18 session low); resistance $773 (Aug 17 close cluster); NO new entries after 1:30 PM due to FOMC minutes; max $5,000 per trade on FOMC day"
+  },
+  "QQQ": {
+    "sector": "etf_tech",
+    "prev_close": 717.76,
+    "atr_day": 7.22,
+    "avg_vol_10d": 537581,
+    "premarket_price": 719.85,
+    "gap_pct": 0.0037,
+    "spread_bp": 9.72,
+    "support": 715.97,
+    "resistance": 722.12,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "gap +0.37% from $717.76; spread 9.72bp at open — acceptable, will tighten; tech-heavy ETF, secondary to SPY today; ATR $7.22 larger than SPY giving more intraday range; support $715.97 (Aug 18 low); resistance $722.12 (Aug 18 high); same FOMC minutes cut-off at 1:30 PM applies"
+  },
+  "AAPL": {
     "sector": "technology",
-    "prev_close": 219.73,
-    "atr_day": 6.53,
-    "avg_vol_10d": 3810492,
-    "premarket_price": 221.58,
-    "gap_pct": 0.0084,
-    "spread_bp": 1001.9,
+    "prev_close": 310.16,
+    "atr_day": 5.02,
+    "avg_vol_10d": 1362777,
+    "premarket_price": 310.67,
+    "gap_pct": 0.0000,
+    "spread_bp": 8.05,
+    "support": 305.74,
+    "resistance": 311.48,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,810,492 sh/day); +0.8% gap"
+    "note": "flat open from $310.16 (no meaningful gap, no specific catalyst); spread 8.05bp at open — very liquid; ATR $5.02 gives solid intraday range; support $305.74 (Aug 18 low); resistance $311.48 (Aug 18 high — also near current open, first real upside break level); monitoring name; FOMC cut-off 1:30 PM"
   },
-  "PFE": {
-    "sector": "healthcare",
-    "prev_close": 27.26,
-    "atr_day": 0.57,
-    "avg_vol_10d": 2286320,
-    "premarket_price": 27.47,
-    "gap_pct": 0.0077,
-    "spread_bp": 1012.0,
+  "MSFT": {
+    "sector": "technology",
+    "prev_close": 481.82,
+    "atr_day": 9.30,
+    "avg_vol_10d": 785383,
+    "premarket_price": 480.56,
+    "gap_pct": -0.0026,
+    "spread_bp": 12.9,
+    "support": 477.27,
+    "resistance": 484.07,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,286,320 sh/day); +0.8% gap"
+    "note": "gap -0.26% from $481.82; spread 12.9bp at open — acceptable, will tighten; ATR $9.30 is the largest on today's list — wide daily range gives room to trade; support $477.27 (Aug 18 low); resistance $484.07 (Aug 18 high); $480 is a key round-number pivot — watch which side it holds; FOMC cut-off 1:30 PM"
   }
 }

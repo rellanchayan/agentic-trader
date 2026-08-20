@@ -1,0 +1,34 @@
+{
+  "time_et": "2026-08-20T15:40:11-04:00",
+  "action": "NO_TRADE",
+  "verdict": "PROCEED",
+  "reason": "past_no_new_entries=true (after 15:30 ET cutoff). No positions to manage, no open orders. Flatten window opens 15:50. RISK-OFF plan; whole day has been zero-trade (VWAP reclaim setup never fired inside 9:45-11:00 window). Standing down until /flatten-close.",
+  "market": {
+    "SPY": {
+      "last": 763.49,
+      "vwap": 765.46,
+      "above_vwap": false,
+      "spread_bp": 0.8,
+      "rel_volume": 0.95,
+      "quote_age_sec": 0.3
+    },
+    "QQQ": {
+      "last": 711.495,
+      "vwap": 711.55,
+      "above_vwap": false,
+      "spread_bp": 0.6,
+      "rel_volume": 0.79,
+      "quote_age_sec": 0.6
+    }
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions": 0,
+    "open_orders": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  }
+}

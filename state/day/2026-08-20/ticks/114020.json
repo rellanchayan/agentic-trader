@@ -1,0 +1,40 @@
+{
+  "time_et": "2026-08-20T11:40:20-04:00",
+  "minutes_since_open": 130,
+  "action": "NO_TRADE",
+  "positions": [],
+  "open_orders": [],
+  "decision_summary": "Past 11:00 AM ET entry-window close per today's plan (RISK-OFF, VWAP reclaim only). No entries allowed. Setup was also unmet during the window (rel_vol <1.5x on SPY and QQQ). Currently both names are below VWAP with rel_vol still below the gate.",
+  "market_snapshot": {
+    "SPY": {
+      "last": 765.61,
+      "vwap": 766.69,
+      "above_vwap": false,
+      "spread_bp": 0.4,
+      "rel_volume": 1.31,
+      "orb_high": 767.705,
+      "orb_breakout": false
+    },
+    "QQQ": {
+      "last": 710.43,
+      "vwap": 712.5,
+      "above_vwap": false,
+      "spread_bp": 0.4,
+      "rel_volume": 1.09,
+      "orb_high": 714.84,
+      "orb_breakout": false
+    }
+  },
+  "gates_evaluated": {
+    "entry_window_open": false,
+    "past_entry_window_close_et": "11:00",
+    "current_time_et": "11:40",
+    "regime": "RISK-OFF",
+    "armed_setups": ["SPY VWAP reclaim (window closed)", "QQQ VWAP reclaim (window closed)"]
+  },
+  "day_pnl_usd": 0.0,
+  "loss_budget_remaining_usd": 3000.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "next_action": "Continue standing down until flatten window (15:50 ET). No entries possible per plan; no positions to manage."
+}

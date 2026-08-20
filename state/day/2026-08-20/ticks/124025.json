@@ -1,0 +1,64 @@
+{
+  "time_et": "2026-08-20T12:40:25-04:00",
+  "minutes_since_open": 190,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "action": "NO_TRADE",
+  "verdict": "PROCEED",
+  "regime": "RISK-OFF",
+  "reason": "Past 11:00 AM entry-window close set by today's RISK-OFF plan (VWAP reclaim only, 9:45-11:00 AM window). Plan explicitly forbids new entries after 11:00 AM. Beyond the window rule, the underlying setup would still not fire: both SPY and QQQ are below VWAP with rel_vol under the 1.5x gate, and the plan says do not chase a falling knife.",
+  "account": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "buying_power": 3997950.6,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0
+  },
+  "budget": {
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "positions": [],
+  "open_orders": [],
+  "market": {
+    "SPY": {
+      "last": 766.29,
+      "bid": 766.41,
+      "ask": 766.44,
+      "spread_bp": 0.4,
+      "quote_age_sec": 1.1,
+      "vwap": 766.52,
+      "above_vwap": false,
+      "rel_volume": 1.08,
+      "orb_high": 767.705,
+      "orb_low": 765.89,
+      "orb_breakout": false
+    },
+    "QQQ": {
+      "last": 712.225,
+      "bid": 712.36,
+      "ask": 712.39,
+      "spread_bp": 0.4,
+      "quote_age_sec": 1.0,
+      "vwap": 712.26,
+      "above_vwap": false,
+      "rel_volume": 0.92,
+      "orb_high": 714.84,
+      "orb_low": 711.99,
+      "orb_breakout": false
+    }
+  },
+  "decision_trace": [
+    "Gate verdict: PROCEED (equity 999487.65, day P&L 0.0, loss budget 3000).",
+    "Positions: none. Open orders: none. No management step needed.",
+    "Clock: 12:40 ET, 190 min after open. clock_flags.past_no_new_entries=false, in_flatten_window=false.",
+    "Plan constraint: RISK-OFF, VWAP reclaim only, entry window 9:45-11:00 AM ET. Current time is past the plan's window close by ~100 min. No new entries.",
+    "Even ignoring the window: SPY below VWAP with rel_vol 1.08x < 1.5x gate. QQQ below VWAP with rel_vol 0.92x < 1.5x gate. Neither setup would arm.",
+    "INTC, NVDA, PFE: disarmed for full session per plan (semiconductor sector risk / NVDA earnings 6d out / PFE ATR too low).",
+    "Decision: NO_TRADE. Stand down; wait for flatten window."
+  ]
+}

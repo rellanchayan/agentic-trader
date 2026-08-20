@@ -181,6 +181,19 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-20: No tuning. Tuner unfrozen ("ok to tune", 43 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today; no day plan was written (premarket
+  phase did not complete again). This is the ninth consecutive session without a realized profit (last
+  win: 2026-08-07, +$40.50 NFLX). A session with no plan is an invisible session — the tick loop
+  cannot trade safely and no new evidence about entry quality or stop placement is generated. The
+  setup-mix review recommended in the 2026-08-19 entry (distinguishing "gates correctly filtering bad
+  setups" from "screener not generating enough candidates") remains pending and should be conducted
+  before the next session. No new durable rules are warranted tonight: no trades means no new
+  evidence; the recurring cause is premarket scheduling failure, not any tunable parameter. Account
+  equity approximately $999,487.65 (unchanged from 2026-08-19, no realized P&L). Total drawdown from
+  $1,000,000 start: $512.35 (0.051%). Aggregate stats (43 days, 16 trades): 37.5% win rate, avg win
+  +0.43R, avg loss -0.85R, ORB -0.20R across 5 trades (3 wins), momentum -0.975R across 1 trade,
+  LIMIT fill rate 94%. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-19: No tuning. Tuner unfrozen ("ok to tune", 42 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today; eighth consecutive session
   without a realized profit (last win: 2026-08-07, +$40.50 NFLX). Key observation: the ORB

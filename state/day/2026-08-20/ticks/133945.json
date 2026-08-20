@@ -1,0 +1,10 @@
+{
+  "time_et": "2026-08-20T13:39:45-04:00",
+  "action": "NO_TRADE",
+  "reason": "Past 11:00 AM entry window close (RISK-OFF plan, VWAP reclaim only, 9:45-11:00 window). SPY 764.48 below VWAP 766.37, rel_vol 0.97x, spread 0.4bp. QQQ 710.66 below VWAP 712.17, rel_vol 0.83x, spread 0.4bp. No positions, no open orders. Day P&L $0. Standing down.",
+  "market_snapshot": {
+    "SPY": {"last": 764.48, "vwap": 766.37, "above_vwap": false, "rel_volume": 0.97, "spread_bp": 0.4},
+    "QQQ": {"last": 710.66, "vwap": 712.17, "above_vwap": false, "rel_volume": 0.83, "spread_bp": 0.4}
+  },
+  "account": {"equity": 999487.65, "day_pnl": 0.0, "positions": 0, "trades_today": 0}
+}

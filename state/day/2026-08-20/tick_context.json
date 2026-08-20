@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
-  "timestamp_et": "2026-08-20T12:40:25.195551-04:00",
-  "minutes_since_open": 190,
+  "timestamp_et": "2026-08-20T13:39:45.757357-04:00",
+  "minutes_since_open": 249,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,40 +33,40 @@
   "open_orders": [],
   "market": {
     "QQQ": {
-      "last": 712.225,
-      "bid": 712.36,
-      "ask": 712.39,
-      "quote_age_sec": 1.0,
+      "last": 710.66,
+      "bid": 710.7,
+      "ask": 710.73,
+      "quote_age_sec": 0.5,
       "spread_bp": 0.4,
-      "vwap": 712.26,
+      "vwap": 712.17,
       "orb_high": 714.84,
       "orb_low": 711.99,
-      "atr_1m": 0.211,
+      "atr_1m": 0.162,
       "atr_day": 10.19,
-      "rel_volume": 0.92,
-      "volume_today": 235326,
+      "rel_volume": 0.83,
+      "volume_today": 281585,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 713.1,
-      "marketable_sell_limit": 711.65
+      "marketable_buy_limit": 711.44,
+      "marketable_sell_limit": 709.99
     },
     "SPY": {
-      "last": 766.29,
-      "bid": 766.41,
-      "ask": 766.44,
-      "quote_age_sec": 1.1,
+      "last": 764.48,
+      "bid": 764.5,
+      "ask": 764.53,
+      "quote_age_sec": 0.5,
       "spread_bp": 0.4,
-      "vwap": 766.52,
+      "vwap": 766.37,
       "orb_high": 767.705,
       "orb_low": 765.89,
-      "atr_1m": 0.183,
-      "atr_day": 6.13,
-      "rel_volume": 1.08,
-      "volume_today": 604061,
+      "atr_1m": 0.151,
+      "atr_day": 6.19,
+      "rel_volume": 0.97,
+      "volume_today": 722231,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 767.21,
-      "marketable_sell_limit": 765.64
+      "marketable_buy_limit": 765.29,
+      "marketable_sell_limit": 763.74
     }
   },
   "recent_ticks": [
@@ -84,6 +84,11 @@
       "time_et": "2026-08-20T11:40:20-04:00",
       "action": "NO_TRADE",
       "reason": "Past 11:00 AM entry window close (RISK-OFF plan, VWAP reclaim only, 9:45-11:00 window). SPY 765.61 below VWAP 766.69, rel_vol 1.31x. QQQ 710.43 below VWAP 712.5, rel_vol 1.09x. No positions, no orders."
+    },
+    {
+      "time_et": "2026-08-20T12:40:25-04:00",
+      "action": "NO_TRADE",
+      "reason": "Past 11:00 AM entry window close. RISK-OFF plan permits VWAP reclaim only, 9:45-11:00 AM window. SPY 766.29 below VWAP 766.52, spread 0.4bp, rel_vol 1.08x. QQQ 712.225 below VWAP 712.26, spread 0.4bp, rel_vol 0.92x. Both still below VWAP with rel_vol under 1.5x gate. No positions, no open orders. Day P&L $0. Standing down."
     }
   ],
   "config_snapshot": {

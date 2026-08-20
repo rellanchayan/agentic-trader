@@ -1,0 +1,33 @@
+{
+  "time_et": "2026-08-20T14:40:17-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "Entry window closed at 11:00 AM ET. RISK-OFF plan permits VWAP reclaim only, 9:45-11:00 AM window. Both armed names below VWAP with rel_vol below 1.5x gate.",
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "market": {
+    "SPY": {
+      "last": 763.51,
+      "vwap": 765.95,
+      "above_vwap": false,
+      "rel_volume": 0.93,
+      "spread_bp": 0.9
+    },
+    "QQQ": {
+      "last": 709.08,
+      "vwap": 711.79,
+      "above_vwap": false,
+      "rel_volume": 0.79,
+      "spread_bp": 0.8
+    }
+  },
+  "gates_evaluated": {
+    "entry_window_open": false,
+    "spy_above_vwap": false,
+    "qqq_above_vwap": false,
+    "spy_rel_vol_gate": false,
+    "qqq_rel_vol_gate": false
+  }
+}

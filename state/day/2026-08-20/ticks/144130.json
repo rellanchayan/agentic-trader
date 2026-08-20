@@ -1,0 +1,11 @@
+{
+  "time_et": "2026-08-20T10:40:46-04:00",
+  "action": "NO_TRADE",
+  "reason": "VWAP reclaim setup unmet: SPY above VWAP (766.96 vs 766.60), no flush below VWAP occurred; rel_vol 1.44x below 1.5x gate. QQQ above VWAP (713.64 vs 712.78), no flush; rel_vol 1.13x far below gate. Entry window open until 11:00 AM ET (~20 min remaining) but setup preconditions not met.",
+  "positions_managed": [],
+  "trades_submitted": [],
+  "market_snapshot": {
+    "SPY": {"last": 766.96, "vwap": 766.60, "above_vwap": true, "rel_volume": 1.44, "spread_bp": 0.65, "orb_breakout": false},
+    "QQQ": {"last": 713.64, "vwap": 712.78, "above_vwap": true, "rel_volume": 1.13, "spread_bp": 1.0, "orb_breakout": false}
+  }
+}

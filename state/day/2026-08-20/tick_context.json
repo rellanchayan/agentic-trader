@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
-  "timestamp_et": "2026-08-20T09:39:39.154679-04:00",
-  "minutes_since_open": 9,
+  "timestamp_et": "2026-08-20T10:40:46.437124-04:00",
+  "minutes_since_open": 70,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,43 +33,49 @@
   "open_orders": [],
   "market": {
     "QQQ": {
-      "last": 714.11,
-      "bid": 714.17,
-      "ask": 714.56,
-      "quote_age_sec": 1.0,
-      "spread_bp": 5.5,
-      "vwap": 713.59,
+      "last": 713.64,
+      "bid": 713.37,
+      "ask": 713.44,
+      "quote_age_sec": 0.6,
+      "spread_bp": 1.0,
+      "vwap": 712.78,
       "orb_high": 714.84,
       "orb_low": 711.99,
-      "atr_1m": 0.887,
-      "atr_day": 10.06,
-      "rel_volume": 1.64,
-      "volume_today": 19019,
+      "atr_1m": 0.564,
+      "atr_day": 10.13,
+      "rel_volume": 1.13,
+      "volume_today": 103757,
       "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 715.27,
-      "marketable_sell_limit": 713.46
+      "marketable_buy_limit": 714.15,
+      "marketable_sell_limit": 712.66
     },
     "SPY": {
-      "last": 766.99,
-      "bid": 767.24,
-      "ask": 767.36,
-      "quote_age_sec": 1.0,
-      "spread_bp": 1.6,
-      "vwap": 766.92,
+      "last": 766.96,
+      "bid": 766.84,
+      "ask": 766.89,
+      "quote_age_sec": 0.7,
+      "spread_bp": 0.7,
+      "vwap": 766.6,
       "orb_high": 767.705,
       "orb_low": 765.89,
-      "atr_1m": 0.467,
-      "atr_day": 6.08,
-      "rel_volume": 2.22,
-      "volume_today": 56179,
+      "atr_1m": 0.362,
+      "atr_day": 6.12,
+      "rel_volume": 1.44,
+      "volume_today": 289054,
       "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 768.13,
-      "marketable_sell_limit": 766.47
+      "marketable_buy_limit": 767.66,
+      "marketable_sell_limit": 766.07
     }
   },
-  "recent_ticks": [],
+  "recent_ticks": [
+    {
+      "time_et": "2026-08-20T09:39:39-04:00",
+      "action": "NO_TRADE",
+      "reason": "Pre-9:45 AM window; no VWAP flush on SPY or QQQ. SPY: last=766.99 vwap=766.92 above_vwap=true spread=1.6bp rel_vol=2.22x. QQQ: last=714.11 vwap=713.59 above_vwap=true spread=5.5bp rel_vol=1.64x."
+    }
+  ],
   "config_snapshot": {
     "orb_minutes": 15,
     "orb_breakout_buffer_bp": 5,

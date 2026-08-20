@@ -1,1 +1,2 @@
 {"time_et":"2026-08-20T09:39:39-04:00","action":"NO_TRADE","reason":"Pre-9:45 AM window; no VWAP flush on SPY or QQQ. SPY: last=766.99 vwap=766.92 above_vwap=true spread=1.6bp rel_vol=2.22x. QQQ: last=714.11 vwap=713.59 above_vwap=true spread=5.5bp rel_vol=1.64x."}
+{"time_et":"2026-08-20T10:40:46-04:00","action":"NO_TRADE","reason":"VWAP reclaim setup unmet: SPY above VWAP (766.96 vs 766.60), no flush; rel_vol 1.44x <1.5x gate. QQQ above VWAP (713.64 vs 712.78), no flush; rel_vol 1.13x <1.5x gate. Entry window open until 11:00 AM."}

@@ -1,0 +1,101 @@
+{
+  "date": "2026-08-20",
+  "timestamp_et": "2026-08-20T09:39:39.154679-04:00",
+  "minutes_since_open": 9,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "buying_power": 3997950.6,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": {
+    "date": "2026-08-20",
+    "loss_stop_usd": 3000.0,
+    "baseline_equity": 999487.65,
+    "current_equity": 999487.65,
+    "day_pnl": 0.0,
+    "tripped": false,
+    "note": "ok"
+  },
+  "budget": {
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "daily_deploy_cap_usd": 50000
+  },
+  "positions": [],
+  "open_orders": [],
+  "market": {
+    "QQQ": {
+      "last": 714.11,
+      "bid": 714.17,
+      "ask": 714.56,
+      "quote_age_sec": 1.0,
+      "spread_bp": 5.5,
+      "vwap": 713.59,
+      "orb_high": 714.84,
+      "orb_low": 711.99,
+      "atr_1m": 0.887,
+      "atr_day": 10.06,
+      "rel_volume": 1.64,
+      "volume_today": 19019,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "marketable_buy_limit": 715.27,
+      "marketable_sell_limit": 713.46
+    },
+    "SPY": {
+      "last": 766.99,
+      "bid": 767.24,
+      "ask": 767.36,
+      "quote_age_sec": 1.0,
+      "spread_bp": 1.6,
+      "vwap": 766.92,
+      "orb_high": 767.705,
+      "orb_low": 765.89,
+      "atr_1m": 0.467,
+      "atr_day": 6.08,
+      "rel_volume": 2.22,
+      "volume_today": 56179,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "marketable_buy_limit": 768.13,
+      "marketable_sell_limit": 766.47
+    }
+  },
+  "recent_ticks": [],
+  "config_snapshot": {
+    "orb_minutes": 15,
+    "orb_breakout_buffer_bp": 5,
+    "vwap_reclaim_buffer_bp": 5,
+    "stop_atr_mult": 1.5,
+    "target_atr_mult": 2.5,
+    "risk_per_trade_usd": 250,
+    "per_trade_max_usd": 10000,
+    "daily_deploy_cap_usd": 50000,
+    "max_open_positions": 8,
+    "daily_loss_stop_usd": 3000,
+    "max_position_pct": 0.25,
+    "min_rel_volume": 1.5,
+    "max_spread_bp": 25,
+    "min_quote_freshness_sec": 30,
+    "limit_buy_above_ask_pct": 0.001,
+    "limit_sell_below_bid_pct": 0.001,
+    "no_new_entries_after_et": "15:30",
+    "flatten_start_et": "15:50",
+    "pdt_equity_floor_usd": 26000,
+    "max_trades_per_day": 20,
+    "setup_enabled": {
+      "orb": true,
+      "vwap_reclaim": true,
+      "momentum": true,
+      "mean_reversion": true
+    }
+  }
+}

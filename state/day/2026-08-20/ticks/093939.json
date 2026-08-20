@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "2026-08-20T09:39:39-04:00",
+  "action": "NO_TRADE",
+  "reason": "Pre-9:45 AM entry window not yet open; also neither SPY nor QQQ has flushed below VWAP and reclaimed — VWAP reclaim setup not triggered.",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "spy": {
+    "last": 766.99,
+    "vwap": 766.92,
+    "above_vwap": true,
+    "spread_bp": 1.6,
+    "rel_volume": 2.22,
+    "setup_triggered": false,
+    "reason": "Above VWAP (no flush occurred); pre-9:45 window"
+  },
+  "qqq": {
+    "last": 714.11,
+    "vwap": 713.59,
+    "above_vwap": true,
+    "spread_bp": 5.5,
+    "rel_volume": 1.64,
+    "setup_triggered": false,
+    "reason": "Above VWAP (no flush occurred); spread 5.5 bp > 5 bp limit; pre-9:45 window"
+  }
+}

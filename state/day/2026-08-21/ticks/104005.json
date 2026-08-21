@@ -1,0 +1,20 @@
+{
+  "tick_time_et": "10:40",
+  "tick_time_utc": "2026-08-21T14:40:05Z",
+  "action": "WAIT",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "reasoning": {
+    "nvda": "Price 214.93 below VWAP (216.21) and below ORB low (216.77). No VWAP reclaim (price not at/above VWAP). No ORB breakout (price below ORB high 218.73). Rel vol 1.94 meets gate but no qualifying setup exists.",
+    "spy": "Price 764.335 below VWAP (764.94) and just below ORB low (764.635). Rel vol 1.45 fails the 1.5x VWAP reclaim gate. ORB requires 2.0x (MIXED/RANGE rule) — 1.45 also fails. No setup.",
+    "intc": "Disarmed for full session per day plan (293.8 bp premarket spread)."
+  },
+  "market_snapshot": {
+    "nvda": {"last": 214.93, "vwap": 216.21, "orb_high": 218.73, "orb_low": 216.77, "rel_volume": 1.94, "spread_bp": 1.4, "above_vwap": false, "orb_breakout": false},
+    "spy": {"last": 764.335, "vwap": 764.94, "orb_high": 765.99, "orb_low": 764.635, "rel_volume": 1.45, "spread_bp": 0.5, "above_vwap": false, "orb_breakout": false}
+  },
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "slots_used": 0
+}

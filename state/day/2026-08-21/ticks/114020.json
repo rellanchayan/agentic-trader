@@ -1,0 +1,44 @@
+{
+  "tick_time": "2026-08-21T11:40:20-04:00",
+  "verdict": "WAIT",
+  "positions_at_start": 0,
+  "trades_used_today": 0,
+  "day_pnl": 0.0,
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "armed": false,
+      "reason_skipped": "Disarmed full session: premarket spread 293.8 bp"
+    },
+    {
+      "ticker": "SPY",
+      "armed": true,
+      "setup_checked": "VWAP reclaim / ORB breakout",
+      "above_vwap": true,
+      "rel_vol": 1.2,
+      "spread_bp": 0.3,
+      "orb_breakout": true,
+      "reason_skipped": "Rel vol 1.2x fails both VWAP reclaim gate (1.5x) and ORB gate (2.0x); past 11:00 AM SPY-specific cutoff per day plan"
+    },
+    {
+      "ticker": "NVDA",
+      "armed": true,
+      "setup_checked": "VWAP reclaim",
+      "above_vwap": true,
+      "price": 216.50,
+      "vwap": 215.95,
+      "rel_vol": 1.53,
+      "spread_bp": 1.4,
+      "orb_high": 218.73,
+      "orb_low": 216.77,
+      "entry_limit": 216.79,
+      "stop_candidate": 215.00,
+      "per_share_risk": 1.79,
+      "reward_to_orb_high": 1.41,
+      "effective_rr_ratio": 0.79,
+      "reason_skipped": "ORB high $218.73 caps upside — effective R/R 0.79:1 below 2:1 minimum required by playbook. Rel vol 1.53x is marginal. Earnings Aug 26 (5 days). Friday pre-Jackson Hole uncertainty. 130 min from open."
+    }
+  ],
+  "action_taken": "WAIT — no trade",
+  "reason": "No qualifying setup meets the 2:1 R/R minimum with clear air to target. Waiting for cleaner entry or next tick."
+}

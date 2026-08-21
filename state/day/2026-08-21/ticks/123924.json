@@ -1,0 +1,57 @@
+{
+  "tick_time": "2026-08-21T12:39:24-04:00",
+  "tick_label": "12:39",
+  "verdict": "WAIT",
+  "minutes_since_open": 189,
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "armed": false,
+      "skip_reason": "Disarmed full session — premarket spread 293.8 bp"
+    },
+    {
+      "ticker": "NVDA",
+      "armed": true,
+      "last": 215.68,
+      "vwap": 215.97,
+      "above_vwap": false,
+      "rel_volume": 1.23,
+      "spread_bp": 1.4,
+      "orb_high": 218.73,
+      "orb_breakout": false,
+      "primary_setup": "vwap_reclaim",
+      "gate_results": {
+        "above_vwap": "FAIL — price $215.68 below VWAP $215.97",
+        "rel_volume": "FAIL — 1.23x < 1.5x minimum",
+        "spread": "PASS — 1.4 bp <= 15 bp"
+      },
+      "skip_reason": "NVDA below VWAP and rel vol 1.23x fails gate; no VWAP reclaim in progress"
+    },
+    {
+      "ticker": "SPY",
+      "armed": true,
+      "last": 766.415,
+      "vwap": 765.62,
+      "above_vwap": true,
+      "rel_volume": 1.07,
+      "spread_bp": 2.1,
+      "orb_high": 765.99,
+      "orb_breakout": true,
+      "primary_setup": "vwap_reclaim",
+      "gate_results": {
+        "time_window": "FAIL — ORB window closed at 11:00 AM (now 12:39 PM)",
+        "rel_volume_vwap": "FAIL — 1.07x < 1.5x minimum for VWAP reclaim",
+        "rel_volume_orb": "FAIL — 1.07x < 2.0x required for ORB on MIXED/RANGE day; window also closed"
+      },
+      "skip_reason": "ORB window closed at 11:00 AM; SPY never produced qualifying setup before cutoff (plan: skip if no clean setup by 11 AM)"
+    }
+  ],
+  "new_order": null,
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "slots_used": 0,
+  "slots_remaining": 8,
+  "note": "No armed candidate clears any gate. INTC disarmed. NVDA below VWAP, rel vol insufficient. SPY past entry window and vol insufficient. Correct outcome: WAIT. Next viable evaluation if NVDA reclaims VWAP with 1.5x+ rel vol before 2:00 PM cutoff."
+}

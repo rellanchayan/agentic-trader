@@ -1,7 +1,7 @@
 {
   "_meta": {
     "date": "2026-08-21",
-    "generated_utc": "2026-08-21T13:31:17.257639+00:00",
+    "generated_utc": "2026-08-21T13:32:31.692591+00:00",
     "source": "watchlist_build",
     "candidates_considered": 2,
     "top": 2,
@@ -9,26 +9,26 @@
   },
   "INTC": {
     "sector": "technology",
-    "prev_close": 92.14,
-    "atr_day": 5.55,
-    "avg_vol_10d": 3918990,
-    "premarket_price": 93.61,
-    "gap_pct": 0.016,
-    "spread_bp": 293.8,
+    "prev_close": 92.33,
+    "atr_day": 5.56,
+    "avg_vol_10d": 3924169,
+    "premarket_price": 90.31,
+    "gap_pct": -0.0219,
+    "spread_bp": 289.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,918,990 sh/day); +1.6% gap"
+    "note": "liquid (3,924,169 sh/day); -2.2% gap"
   },
   "NVDA": {
     "sector": "technology",
-    "prev_close": 217.85,
+    "prev_close": 218.07,
     "atr_day": 5.52,
-    "avg_vol_10d": 3153657,
-    "premarket_price": 217.67,
-    "gap_pct": -0.0008,
-    "spread_bp": 2.8,
+    "avg_vol_10d": 3157897,
+    "premarket_price": 218.16,
+    "gap_pct": 0.0004,
+    "spread_bp": 1.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,153,657 sh/day); -0.1% gap"
+    "note": "liquid (3,157,897 sh/day); +0.0% gap"
   }
 }

@@ -1,0 +1,24 @@
+{
+  "tick_time_et": "2026-08-21T15:40:18-04:00",
+  "action": "WAIT",
+  "reason": "past_no_new_entries",
+  "note": "Past 3:30 PM ET hard cutoff — no new entries permitted. 0 positions open, 0 trades today. NVDA below VWAP ($215.04 vs $215.76), below ORB low ($216.77), rel vol 0.89x — disqualified even if window were open. SPY above VWAP ($766.28 vs $765.72), rel vol 0.84x < 1.5x gate, and past 2:00 PM Jackson Hole caution window. INTC disarmed all session (293.8 bp premarket spread). Flatten window starts at 3:50 PM; nothing to flatten. Day ends flat, P&L $0.00.",
+  "market": {
+    "AAPL": {"last": 309.5, "above_vwap": true, "rel_volume": 0.7, "spread_bp": 2.6, "orb_breakout": false},
+    "INTC": {"last": 90.09, "above_vwap": false, "rel_volume": 0.51, "spread_bp": 2.2, "orb_breakout": false, "note": "disarmed all session"},
+    "NVDA": {"last": 215.035, "above_vwap": false, "rel_volume": 0.89, "spread_bp": 0.9, "orb_breakout": false},
+    "QQQ": {"last": 713.81, "above_vwap": true, "rel_volume": 0.76, "spread_bp": 0.3, "orb_breakout": false},
+    "SPY": {"last": 766.275, "above_vwap": true, "rel_volume": 0.84, "spread_bp": 0.1, "orb_breakout": false}
+  },
+  "positions": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "slots_used": 0,
+  "flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "halt_trading": false,
+    "loss_stop_active": false
+  }
+}

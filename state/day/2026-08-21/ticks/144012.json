@@ -1,0 +1,48 @@
+{
+  "tick_time_et": "14:40:12",
+  "date": "2026-08-21",
+  "action": "WAIT",
+  "positions_managed": [],
+  "new_entry_considered": false,
+  "new_entry_reason": "Past 2:00 PM ET entry cutoff stated in day plan for Jackson Hole Friday. Plan bars all new entries after 2:00 PM ET to avoid pre-weekend position-squaring risk into Warsh's first Jackson Hole speech on Aug 28.",
+  "market_snapshot": {
+    "NVDA": {
+      "last": 215.22,
+      "vwap": 215.84,
+      "above_vwap": false,
+      "rel_volume": 0.97,
+      "spread_bp": 0.9,
+      "orb_high": 218.73,
+      "orb_breakout": false,
+      "gate_check": "FAIL — below VWAP (no reclaim); rel vol 0.97x < 1.5x minimum; past 2 PM cutoff"
+    },
+    "SPY": {
+      "last": 765.225,
+      "vwap": 765.67,
+      "above_vwap": false,
+      "rel_volume": 0.86,
+      "spread_bp": 0.3,
+      "orb_high": 765.99,
+      "orb_breakout": false,
+      "gate_check": "FAIL — below VWAP; rel vol 0.86x < 1.5x minimum; past 2 PM cutoff"
+    },
+    "INTC": {
+      "status": "DISARMED all session — 293.8 bp premarket spread"
+    }
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "slots_remaining": 8
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "plan_2pm_cutoff_active": true
+  },
+  "decision_summary": "No action. 0 positions. No setups qualify. Past plan's 2:00 PM ET entry cutoff for Jackson Hole Friday. Next meaningful action: /flatten-close at 3:50 PM ET (no positions to flatten, but routine runs). /postmarket-learn after 4:30 PM."
+}

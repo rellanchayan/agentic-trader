@@ -15,6 +15,7 @@ made of **rules to follow**, not stories.
 - Never re-enter a name you just exited unless a brand-new setup triggers.
 - Never flip-flop inside the spread (buying and selling pennies apart).
 - After eight or more consecutive sessions without a realized profit, conduct a setup-mix review before the next session: count how many blocked sessions had armed candidates the gates correctly filtered vs. sessions where the screener produced no qualifying candidate at all. The two failure modes require different responses — overly strict gates vs. an insufficiently broad screener universe. Do not loosen gates to force entries; diagnose the root cause first.
+- When two consecutive sessions have no morning plan (docs/plans/<date>.md missing), treat it as a scheduler/runner failure, not a content failure — debug the premarket runner before placing any new trade. Two consecutive missing plans is a systemic breakdown; no strategy adjustment will fix it. The fix is in the scheduler. (2026-08-20 and 2026-08-21: second consecutive session with no plan written.)
 
 ## Time of day
 - The first 5 minutes are noisy. Let the opening range (first ~15 min) form before trading breakouts.
@@ -181,6 +182,21 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-21: No tuning. Tuner unfrozen ("ok to tune", 44 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today; no morning plan was written for
+  the second consecutive session (2026-08-20 and 2026-08-21 both missing docs/plans/<date>.md).
+  This is a confirmed systemic premarket runner failure, not a content or strategy issue. Two
+  consecutive missing-plan sessions mean the tick loop cannot execute safely on either day — the
+  watchlist is unknown, the loss-stop baseline was not captured, and there is no reviewable session
+  record. One durable rule added tonight to Discipline: when two consecutive sessions have no morning
+  plan, treat it as a scheduler/runner failure and debug the premarket runner before placing any new
+  trade. No new trading evidence was generated (tenth consecutive session without a realized profit;
+  last win: 2026-08-07, +$40.50 NFLX). Account equity $999,487.65 (unchanged, no realized P&L).
+  Total drawdown from $1,000,000 start: $512.35 (0.051%). Aggregate stats (44 days, 16 trades):
+  37.5% win rate, avg win +0.43R, avg loss -0.85R, ORB -0.1994R across 5 trades (3 wins), momentum
+  -0.975R across 1 trade, Sharpe -77.07 (artifact of near-zero variance on a flat account, not a
+  meaningful signal). Tuning ledger remains empty; no parameter has ever been changed by the tuner.
+  Priority before Monday open: diagnose and fix the premarket runner scheduling failure.
 - 2026-08-20: No tuning. Tuner unfrozen ("ok to tune", 43 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today; no day plan was written (premarket
   phase did not complete again). This is the ninth consecutive session without a realized profit (last

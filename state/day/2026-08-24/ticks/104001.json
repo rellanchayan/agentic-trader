@@ -1,0 +1,66 @@
+{
+  "tick_time_et": "10:40:01",
+  "timestamp_utc": "2026-08-24T14:40:01Z",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entries_evaluated": [
+    {
+      "ticker": "NVDA",
+      "verdict": "SKIP",
+      "reason": "FULLY DISARMED by day plan — earnings report Wed Aug 26 (2 days away, inside 9-day vol-compression window). Premarket spread 52.9bp confirms live gate will fire. Do not re-evaluate intraday."
+    },
+    {
+      "ticker": "INTC",
+      "verdict": "NO_ENTRY",
+      "gates_checked": {
+        "rel_volume": {"value": 1.75, "threshold": 1.5, "pass": true},
+        "spread_bp": {"value": 1.2, "threshold": 15, "pass": true},
+        "above_vwap": {"value": false, "required": true, "pass": false},
+        "entry_window": {"time_et": "10:40", "window": "09:45-11:00", "pass": true}
+      },
+      "blocking_gate": "above_vwap",
+      "detail": "INTC last 86.25 vs VWAP 86.26 — price is BELOW VWAP. VWAP reclaim setup requires a confirmed reclaim above VWAP; that has not occurred. ORB high is 88.90, price $2.65 below — no ORB breakout either. Spread at 1.2bp is clean (no blowout today, unusually tight). Volume at 1.75x is adequate. The single failing gate is price action — setup not confirmed."
+    },
+    {
+      "ticker": "SPY",
+      "verdict": "NO_ENTRY",
+      "gates_checked": {
+        "rel_volume": {"value": 1.27, "threshold": 1.5, "pass": false},
+        "spread_bp": {"value": 1.8, "threshold": 5, "pass": true},
+        "above_vwap": {"value": true, "required": true, "pass": true},
+        "entry_window": {"time_et": "10:40", "window": "09:45-11:00", "pass": true},
+        "orb_breakout": {"value": false, "note": "price 763.655 vs ORB high 764.81"}
+      },
+      "blocking_gate": "rel_volume",
+      "detail": "SPY is above VWAP (763.655 vs 763.30), spread is 1.8bp (well below 5bp SPY gate), price action is constructive. But rel_vol 1.27x fails the 1.5x minimum required by plan for any SPY entry. For ORB breakout in MIXED/RANGE regime, would need 2.0x — also well short. No VWAP reclaim thesis either (price never dipped below VWAP this session based on snapshot). Volume gate blocks all SPY setups this tick."
+    },
+    {
+      "ticker": "AAPL",
+      "verdict": "SKIP",
+      "reason": "Not an armed candidate in today's plan. Additionally rel_vol 1.23x below 1.5x minimum."
+    },
+    {
+      "ticker": "NFLX",
+      "verdict": "SKIP",
+      "reason": "Not an armed candidate in today's plan. rel_vol 0.81x far below 1.5x minimum."
+    }
+  ],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "entry_window_open": true,
+  "entry_window_closes_et": "11:00",
+  "minutes_to_window_close": 20,
+  "market_summary": {
+    "INTC": {"last": 86.25, "vwap": 86.26, "above_vwap": false, "rel_volume": 1.75, "spread_bp": 1.2, "orb_high": 88.9},
+    "SPY": {"last": 763.655, "vwap": 763.3, "above_vwap": true, "rel_volume": 1.27, "spread_bp": 1.8, "orb_high": 764.81},
+    "NVDA": {"status": "DISARMED"},
+    "AAPL": {"last": 312.98, "rel_volume": 1.23, "above_vwap": true, "orb_breakout": true, "note": "not in plan"},
+    "NFLX": {"last": 80.08, "rel_volume": 0.81, "above_vwap": true, "note": "not in plan"}
+  },
+  "next_tick_watch": "INTC: watch for VWAP reclaim above 86.26 with conviction. SPY: watch for rel_vol to build above 1.5x. Entry window closes at 11:00 AM ET — this may be one of the last entry ticks."
+}

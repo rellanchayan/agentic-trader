@@ -1,0 +1,28 @@
+{
+  "tick_time_et": "2026-08-24T11:39:37-04:00",
+  "minutes_since_open": 129,
+  "verdict_preflight": "PROCEED",
+  "action": "HOLD",
+  "reason": "Past the 11:00 AM ET entry window closure defined in today's plan; also past the 90-minute ORB continuation limit (129 min since open). No positions or open orders to manage. No new entries allowed for the rest of today per plan and playbook.",
+  "positions": [],
+  "open_orders": [],
+  "market_snapshot": {
+    "AAPL": {"last": 311.88, "above_vwap": false, "rel_volume": 0.88, "spread_bp": 7.4, "note": "not on today's plan"},
+    "INTC": {"last": 86.835, "above_vwap": true, "rel_volume": 1.42, "spread_bp": 2.3, "vwap": 86.30, "note": "Would have qualified for VWAP reclaim if inside 9:45-11:00 window; too late now."},
+    "NFLX": {"last": 80.18, "above_vwap": true, "rel_volume": 0.73, "spread_bp": 1.2, "note": "rel_vol below 1.5x gate"},
+    "NVDA": {"last": 210.14, "rel_volume": 1.47, "spread_bp": 1.0, "note": "DISARMED — earnings Wed Aug 26 after close"},
+    "SPY":  {"last": 763.86, "above_vwap": true, "rel_volume": 0.96, "spread_bp": 0.7, "note": "rel_vol below 1.5x gate; also past entry window"}
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "plan_entry_window_closed_at_11_am_et": true
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "position_slots_remaining": 8,
+  "trades_remaining": 20,
+  "guards_run": [],
+  "orders_submitted": [],
+  "next_action": "Wait for scheduled ticks; no new entries per plan; flatten pass at 15:50 will be a no-op if we stay flat."
+}

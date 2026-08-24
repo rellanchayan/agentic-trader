@@ -1,0 +1,53 @@
+{
+  "tick_time_et": "12:40:02",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "reason": "Past 11:00 AM entry window (190 minutes since open). No new entries permitted for the rest of the session per today's plan. No positions or open orders to manage.",
+  "gate_checks": {
+    "halt_trading_file": false,
+    "day_stop_active": false,
+    "in_flatten_window": false,
+    "past_no_new_entries": false,
+    "entry_window_open_9_45_to_11_00": false,
+    "comment": "Entry window closed at 11:00 AM ET — it is now 12:40 PM ET"
+  },
+  "market_snapshot": {
+    "INTC": {
+      "last": 87.67,
+      "above_vwap": true,
+      "vwap": 86.57,
+      "rel_volume": 1.24,
+      "spread_bp": 3.4,
+      "gate_fail": "rel_vol 1.24x below 1.5x minimum; entry window also closed"
+    },
+    "SPY": {
+      "last": 764.35,
+      "above_vwap": true,
+      "vwap": 763.62,
+      "rel_volume": 0.83,
+      "spread_bp": 2.0,
+      "gate_fail": "rel_vol 0.83x far below 1.5x minimum; entry window also closed"
+    },
+    "NVDA": {
+      "last": 210.44,
+      "above_vwap": true,
+      "status": "FULLY DISARMED — earnings Wednesday Aug 26"
+    },
+    "AAPL": {
+      "last": 312.19,
+      "note": "Not on today's watchlist"
+    },
+    "NFLX": {
+      "last": 80.19,
+      "note": "Not on today's watchlist"
+    }
+  },
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_used": 0,
+  "position_slots_remaining": 8,
+  "trade_filed": null
+}

@@ -182,6 +182,21 @@ made of **rules to follow**, not stories.
   unconditionally and no order or skip record exists for the session.
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-24: No tuning. Tuner unfrozen ("ok to tune", 45 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today; no morning plan was written for
+  the third consecutive trading session (2026-08-20, 2026-08-21, and 2026-08-24 all missing
+  docs/plans/<date>.md). This is an ongoing confirmed premarket scheduler failure — not a content,
+  strategy, or parameter problem. Both ORB (-0.1994R across 5 trades, 3 wins) and momentum
+  (-0.975R across 1 trade) show negative expectancy, but loosening their gates to force entries
+  would be the wrong response: the system is not seeing these setups because premarket is not
+  running, not because the gates are too strict. No new durable rules are warranted tonight: the
+  two-consecutive-missing-plan rule added on 2026-08-21 already covers this pattern and the
+  diagnosis is unchanged — the fix is in the premarket scheduler, not in any tunable parameter.
+  Aggregate stats (45 days, 16 trades): 37.5% win rate, avg win +0.43R, avg loss -0.85R, avg fill
+  rate 93.75%, ORB -0.1994R (5 trades, 3 wins), momentum -0.975R (1 trade, 0 wins), avg 0.36
+  trades/day. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
+  Priority remains unchanged: diagnose and fix the premarket runner scheduling failure before
+  the next trading session.
 - 2026-08-21: No tuning. Tuner unfrozen ("ok to tune", 44 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today; no morning plan was written for
   the second consecutive session (2026-08-20 and 2026-08-21 both missing docs/plans/<date>.md).

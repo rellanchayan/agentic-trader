@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "15:39:30",
+  "action": "HOLD",
+  "reason": "Past 11:00 AM entry window and past 3:30 PM no-new-entries flag. No positions or open orders to manage.",
+  "gate_results": {
+    "entry_window_open": false,
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "positions_open": 0,
+    "open_orders": 0
+  },
+  "market_snapshot": {
+    "INTC": {"last": 87.36, "above_vwap": true, "rel_volume": 0.96, "spread_bp": 1.1, "gate_blocked": "rel_vol 0.96x < 1.5x minimum"},
+    "SPY": {"last": 763.79, "above_vwap": true, "rel_volume": 0.64, "spread_bp": 0.4, "gate_blocked": "rel_vol 0.64x < 1.5x minimum"},
+    "NVDA": {"last": 208.66, "gate_blocked": "fully disarmed — earnings Wed Aug 26"},
+    "NFLX": {"last": 80.225, "gate_blocked": "not on today watchlist"},
+    "AAPL": {"last": 311.04, "gate_blocked": "not on today watchlist"}
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "equity": 999487.65,
+  "note": "Clean HOLD. No entry criteria met. Already flat. Awaiting 3:50 PM flatten sweep which will be a no-op."
+}

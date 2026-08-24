@@ -1,0 +1,25 @@
+{
+  "timestamp_et": "2026-08-24T13:40:07-04:00",
+  "t": "13:40",
+  "action": "HOLD",
+  "verdict": "PROCEED",
+  "minutes_since_open": 250,
+  "entry_window_open": false,
+  "reason": "Past 11:00 AM ET entry window (250 min since open). No new entries allowed for remainder of session.",
+  "positions_managed": 0,
+  "orders_managed": 0,
+  "market_snapshot": {
+    "INTC": {"last": 87.07, "above_vwap": true, "rel_volume": 1.07, "spread_bp": 2.3, "gate_result": "FAIL — rel_vol 1.07x < 1.5x minimum; past entry window"},
+    "SPY":  {"last": 763.39, "above_vwap": false, "rel_volume": 0.73, "spread_bp": 2.5, "gate_result": "FAIL — rel_vol 0.73x < 1.5x; below VWAP; past entry window"},
+    "NVDA": {"last": 209.55, "above_vwap": false, "rel_volume": 1.07, "spread_bp": 1.0, "gate_result": "DISARMED — earnings Wed Aug 26"},
+    "NFLX": {"last": 80.51, "above_vwap": true, "rel_volume": 0.62, "spread_bp": 1.2, "gate_result": "FAIL — rel_vol 0.62x < 1.5x; not on today's watchlist; past entry window"},
+    "AAPL": {"last": 311.81, "above_vwap": false, "rel_volume": 0.61, "spread_bp": 5.5, "gate_result": "FAIL — not on today's watchlist; rel_vol 0.61x"}
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "loss_budget_remaining": 3000.0,
+  "next_action": "3:50 PM flatten sweep (no-op — already flat)"
+}

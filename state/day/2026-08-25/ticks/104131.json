@@ -1,0 +1,18 @@
+{
+  "tick_time_et": "10:41",
+  "tick_file": "104131.json",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "positions_managed": 0,
+  "new_entries_considered": 3,
+  "new_entries_placed": 0,
+  "day_pnl": 0.0,
+  "account_equity": 999487.65,
+  "reason": "No valid setups. SPY primary: price 765.02 below ORB low 765.91, rel vol 0.96x (below 1.5x minimum) — skip. NVDA secondary: price 211.555 inside ORB range (210.11–212.77), rel vol 2.16x (good), but no breakout confirmation — wait for clean break above 212.77. INTC tertiary: price 88.53 below ORB low 88.975, rel vol 1.48x (below 1.5x) — skip. Broad tape weak: SPY and QQQ both trading below their ORB lows at 70 min since open. Risk-on thesis unconfirmed by price action. When unsure, do nothing.",
+  "market_snapshot": {
+    "SPY": {"last": 765.02, "orb_high": 766.72, "orb_low": 765.91, "rel_volume": 0.96, "above_vwap": false, "orb_breakout": false},
+    "NVDA": {"last": 211.555, "orb_high": 212.765, "orb_low": 210.11, "rel_volume": 2.16, "above_vwap": false, "orb_breakout": false},
+    "INTC": {"last": 88.53, "orb_high": 90.1, "orb_low": 88.975, "rel_volume": 1.48, "above_vwap": false, "orb_breakout": false},
+    "QQQ": {"last": 710.27, "orb_high": 713.075, "orb_low": 710.79, "rel_volume": 0.83, "above_vwap": false, "orb_breakout": false}
+  }
+}

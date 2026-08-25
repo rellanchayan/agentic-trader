@@ -180,8 +180,34 @@ made of **rules to follow**, not stories.
   is a tick-loop failure, not a no-trade decision — the loop may have missed the entry window
   entirely or silently exited before evaluating the candidate. On 2026-07-30, AMZN was armed
   unconditionally and no order or skip record exists for the session.
+- When a plan appears to be missing at the first tick for one or more consecutive sessions, verify
+  that the git sync (cloud_sync.sh push) succeeded before concluding the premarket phase did not run.
+  If GITHUB_TOKEN is not set, cloud_sync.sh push fails silently: the plan is written locally,
+  committed to a detached HEAD, and never pushed to the remote — subsequent cloud sessions cannot
+  find it and the missing-plan HALT fires incorrectly. Before diagnosing a premarket scheduler
+  failure, check cloud_sync.sh push output and confirm the plan commit reached the remote. A real
+  missing plan (premarket did not run) needs a scheduler fix; a git-sync failure (plan was written
+  but not pushed) needs GITHUB_TOKEN set in the environment. The two failure modes are superficially
+  identical from the tick loop's perspective but require completely different fixes. (2026-08-25:
+  docs/plans/2026-08-25.md was written by premarket but invisible to tick sessions because
+  GITHUB_TOKEN was not set and cloud_sync.sh push failed silently.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-25: No tuning. Tuner unfrozen ("ok to tune", 46 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades placed today (correct outcome — all setups
+  below the 1.5x rel-vol gate; SPY/QQQ below ORB lows). Key infrastructure finding: the premarket
+  plan was written (docs/plans/2026-08-25.md exists, RISK-ON moderate) but was invisible to all
+  tick sessions. Root cause: GITHUB_TOKEN not set → cloud_sync.sh push fails silently → plan
+  committed to detached HEAD → unreachable by subsequent cloud sessions → missing-plan HALT fires
+  at 09:40 and holds for the session. Tick and trading logic both worked correctly; the bug is
+  entirely in the git sync infrastructure. One durable infrastructure rule added tonight: when
+  consecutive missing-plan HALTs occur, check cloud_sync.sh push output and remote commit history
+  before concluding premarket did not run — a silent GITHUB_TOKEN failure is superficially identical
+  to premarket never executing. This is the 12th consecutive non-profitable session (last realized
+  profit: 2026-08-07, +$40.50 NFLX). Aggregate stats (46 days, 16 trades): 37.5% win rate, avg win
+  +0.43R, avg loss -0.85R, ORB -0.1994R (5 trades, 3 wins), momentum -0.975R (1 trade, 0 wins),
+  avg 0.35 trades/day. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
+  Priority: set GITHUB_TOKEN in the scheduler environment before the next session.
 - 2026-08-24: No tuning. Tuner unfrozen ("ok to tune", 45 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today; no morning plan was written for
   the third consecutive trading session (2026-08-20, 2026-08-21, and 2026-08-24 all missing

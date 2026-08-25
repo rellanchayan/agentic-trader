@@ -1,0 +1,60 @@
+{
+  "tick_time_et": "2026-08-25T11:40:13-04:00",
+  "action": "HOLD",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "open_orders": 0,
+  "trades_used_today": 0,
+  "analysis": {
+    "orb_window_closed": true,
+    "orb_window_closed_at": "11:00 AM ET",
+    "clock_flags": {
+      "past_no_new_entries": false,
+      "in_flatten_window": false
+    },
+    "named_candidates": {
+      "SPY": {
+        "role": "primary",
+        "last": 765.155,
+        "vwap": 765.34,
+        "orb_high": 766.72,
+        "orb_low": 765.91,
+        "rel_volume": 0.72,
+        "spread_bp": 0.4,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "assessment": "Below ORB low and below VWAP. Rel vol 0.72x (below 1.5x gate). Tape remains weak. ORB window closed. No VWAP reclaim. SKIP."
+      },
+      "NVDA": {
+        "role": "secondary (conditional)",
+        "last": 211.06,
+        "vwap": 212.18,
+        "orb_high": 212.765,
+        "orb_low": 210.11,
+        "rel_volume": 1.6,
+        "spread_bp": 1.4,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "assessment": "Inside ORB range, below VWAP. Rel vol 1.60x (above 1.5x gate) but ORB window expired at 11:00 AM. No VWAP reclaim signal. SKIP."
+      },
+      "INTC": {
+        "role": "tertiary (spread-gate-conditional)",
+        "last": 88.26,
+        "vwap": 89.1,
+        "orb_high": 90.1,
+        "orb_low": 88.975,
+        "rel_volume": 1.03,
+        "spread_bp": 1.1,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "assessment": "Below ORB low and VWAP. Rel vol 1.03x (below 1.5x gate). ORB window closed. SKIP."
+      }
+    },
+    "vwap_reclaim_check": "No armed name currently above VWAP after being below. SPY, NVDA, INTC all below VWAP. No VWAP reclaim setup.",
+    "tape_assessment": "Weak. SPY below its ORB low, not above VWAP. Broad market not confirming the morning risk-on thesis. NVDA has elevated relative volume but is rangebound and below VWAP.",
+    "position_management": "No positions open. Nothing to manage.",
+    "order_management": "No open orders. Nothing to cancel."
+  },
+  "reason_no_trade": "ORB entry window closed at 11:00 AM ET (now 11:40 AM). No VWAP reclaim signals on any armed name. SPY (primary) is below both ORB low and VWAP with 0.72x rel vol — risk-on thesis not confirmed. No valid setup meets all criteria.",
+  "next_watch": "SPY VWAP (765.34) — if price reclaims above it with volume >1.5x, re-evaluate. NVDA VWAP (212.18) — same. All ORB entries are off the table for today."
+}

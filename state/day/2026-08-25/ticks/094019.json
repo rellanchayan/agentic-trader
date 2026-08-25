@@ -1,0 +1,14 @@
+{
+  "tick_time_et": "09:40:19",
+  "date": "2026-08-25",
+  "verdict": "HALT",
+  "reason": "docs/plan/2026-08-25.md is missing. Per playbook rule, a missing day plan at open is a HALT condition. No tick cycles run, no trades placed. This is the 4th consecutive session without a morning plan (2026-08-20, 2026-08-21, 2026-08-24, 2026-08-25). Confirmed premarket scheduler failure — the fix is in the scheduler.",
+  "positions_managed": [],
+  "entries_considered": [],
+  "trades_submitted": [],
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8
+}

@@ -1,0 +1,36 @@
+{
+  "tick_time": "12:39:49",
+  "date": "2026-08-25",
+  "action": "HOLD",
+  "reason": "ORB window expired at 11:00 AM (now 12:39 PM). SPY rel vol 0.64x, no ORB breakout. NVDA rel vol 1.29x, no ORB breakout, earnings-eve vol compression. INTC below ORB range and VWAP. No VWAP reclaims. Momentum not armed.",
+  "positions": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "candidates_evaluated": {
+    "SPY": {
+      "last": 765.875,
+      "orb_high": 766.72,
+      "rel_vol": 0.64,
+      "above_vwap": true,
+      "spread_bp": 0.4,
+      "gate_fail": "ORB window expired; rel_vol 0.64x < 1.5x"
+    },
+    "NVDA": {
+      "last": 212.3,
+      "orb_high": 212.765,
+      "rel_vol": 1.29,
+      "above_vwap": true,
+      "spread_bp": 0.9,
+      "gate_fail": "ORB window expired; rel_vol 1.29x < 1.5x; earnings-eve compression"
+    },
+    "INTC": {
+      "last": 88.56,
+      "orb_high": 90.1,
+      "rel_vol": 0.94,
+      "above_vwap": false,
+      "spread_bp": 1.1,
+      "gate_fail": "ORB window expired; below ORB range and VWAP; rel_vol 0.94x < 1.5x"
+    }
+  }
+}

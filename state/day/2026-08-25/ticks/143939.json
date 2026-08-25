@@ -1,0 +1,63 @@
+{
+  "tick_time_et": "14:39",
+  "tick_time_utc": "2026-08-25T18:39:39Z",
+  "action": "HOLD",
+  "day_pnl": 0.0,
+  "positions_held": 0,
+  "open_orders": 0,
+  "trades_used_today": 0,
+  "trades_remaining": 20,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "evaluations": {
+    "SPY": {
+      "verdict": "SKIP",
+      "reasons": [
+        "ORB entry window closed at 11:00 AM ET",
+        "Price $765.30 below ORB low $765.91 — no ORB breakout",
+        "rel_vol 0.53x < 1.5x minimum gate",
+        "No valid VWAP reclaim — price at VWAP, not reclaiming from below"
+      ],
+      "last": 765.30,
+      "vwap": 765.30,
+      "orb_high": 766.72,
+      "orb_low": 765.91,
+      "rel_volume": 0.53,
+      "spread_bp": 0.5
+    },
+    "NVDA": {
+      "verdict": "SKIP",
+      "reasons": [
+        "ORB entry window closed at 11:00 AM ET",
+        "rel_vol 0.97x < 1.5x minimum gate",
+        "Earnings-eve vol compression (NVDA reports tomorrow after close)",
+        "orb_breakout flag FALSE — insufficient buffer above ORB high"
+      ],
+      "last": 212.85,
+      "vwap": 212.14,
+      "orb_high": 212.765,
+      "orb_low": 210.11,
+      "rel_volume": 0.97,
+      "spread_bp": 0.9
+    },
+    "INTC": {
+      "verdict": "SKIP",
+      "reasons": [
+        "Price $88.16 below VWAP $88.76 — below VWAP",
+        "Price $88.16 below ORB low $88.975 — inside/below ORB range",
+        "rel_vol 0.70x < 1.5x minimum gate",
+        "ORB entry window closed"
+      ],
+      "last": 88.16,
+      "vwap": 88.76,
+      "orb_high": 90.10,
+      "orb_low": 88.975,
+      "rel_volume": 0.70,
+      "spread_bp": 1.1
+    }
+  },
+  "tape_read": "Weak. SPY and QQQ both below their ORB lows. All three armed names have rel_vol below the 1.5x gate. Intraday tape did not confirm the premarket risk-on setup. Correct to hold.",
+  "next_action_notes": "No new entries possible after 3:30 PM ET. Flatten window begins at 3:50 PM ET. No positions to flatten currently — account already flat."
+}

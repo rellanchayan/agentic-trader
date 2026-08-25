@@ -1,0 +1,41 @@
+{
+  "tick_time_et": "13:40:05",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_orders": [],
+  "evaluation": {
+    "SPY": {
+      "last": 764.91,
+      "vwap": 765.34,
+      "above_vwap": false,
+      "rel_volume": 0.56,
+      "orb_breakout": false,
+      "orb_high": 766.72,
+      "orb_low": 765.91,
+      "setup": "none",
+      "blocked_by": ["orb_window_expired", "below_vwap", "rel_vol_0.56x<1.5x"]
+    },
+    "NVDA": {
+      "last": 212.32,
+      "vwap": 212.12,
+      "above_vwap": true,
+      "rel_volume": 1.09,
+      "orb_breakout": false,
+      "orb_high": 212.765,
+      "orb_low": 210.11,
+      "setup": "none",
+      "blocked_by": ["orb_window_expired", "rel_vol_1.09x<1.5x", "earnings_eve_compression"]
+    },
+    "INTC": {
+      "last": 87.675,
+      "vwap": 88.87,
+      "above_vwap": false,
+      "rel_volume": 0.79,
+      "orb_breakout": false,
+      "setup": "none",
+      "blocked_by": ["orb_window_expired", "below_orb_range", "below_vwap", "rel_vol_0.79x<1.5x"]
+    }
+  },
+  "note": "ORB window closed 11:00 AM. SPY (primary): below VWAP 765.34 at 764.91, rel vol 0.56x, no setup. NVDA (secondary): above VWAP but rel vol 1.09x < 1.5x min, ORB window expired, earnings-eve compression; no reclaim setup (already above VWAP). INTC (tertiary): below ORB range and VWAP 88.87 at 87.675, rel vol 0.79x, no setup. Tape weak: SPY+QQQ both below VWAPs. Momentum not armed (earnings-eve plan). No positions to manage. No action.",
+  "day_pnl": 0.0
+}

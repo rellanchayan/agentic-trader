@@ -1,0 +1,26 @@
+{
+  "tick_time_et": "15:39",
+  "timestamp_et": "2026-08-25T15:39:20-04:00",
+  "action": "HOLD",
+  "reason": "Past 15:30 no-new-entries cutoff. No open positions to manage. Flat overnight posture until 15:50 flatten window opens. Market data shows all watchlist names below ORB highs with sub-1.5x rel volume — no valid entry setups even if window were open.",
+  "positions_managed": [],
+  "orders_placed": [],
+  "market_summary": {
+    "SPY": {"last": 765.255, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.53},
+    "QQQ": {"last": 709.71, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.60},
+    "NVDA": {"last": 212.365, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.94},
+    "INTC": {"last": 87.5, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.64},
+    "META": {"last": 567.81, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.47},
+    "AMZN": {"last": 260.54, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.66}
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  }
+}

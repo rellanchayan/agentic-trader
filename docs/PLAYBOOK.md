@@ -60,6 +60,13 @@ made of **rules to follow**, not stories.
   signal may not fire cleanly. Evaluate whether a non-earnings-constrained name from the qualified
   universe (SPY, QQQ, or a stock with no near-term earnings) offers a cleaner primary setup for
   that session. (2026-08-17: NVDA earnings Aug 26 created a nine-day vol-compression window.)
+- The NVDA pre-earnings disarm is a confirmed multi-cycle pattern: in the 5-10 sessions before
+  each NVDA earnings date, options premium absorption produces a recognizable signature — narrowing
+  ORB range, spread blowout (often exceeding the 15 bp gate), and relative volume falling below 1.5x
+  even on otherwise active tape days. On NVDA earnings day itself, no intraday entry of any kind:
+  the stock is binary into the print. The correct premarket response on any NVDA pre-earnings session
+  is to substitute a non-earnings-constrained name as primary before ticks begin — do not wait for
+  gates to fire and report a zero. (2026-08-26: pattern confirmed across multiple NVDA cycles.)
 - On a MIXED/RANGE gap-up tape, the ORB breakout setup faces structural headwinds — the premarket
   gap absorbs the directional energy that would otherwise drive a clean intraday extension, and the
   broader market is not committed to a trending move. When regime is MIXED/RANGE and the tape gapped

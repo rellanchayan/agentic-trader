@@ -193,6 +193,25 @@ made of **rules to follow**, not stories.
   GITHUB_TOKEN was not set and cloud_sync.sh push failed silently.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-26: No tuning. Tuner unfrozen ("ok to tune", 47 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades today (correct outcome). NVDA earnings were
+  released after the close; the session was MIXED/RANGE with a major earnings overhang, and vol
+  compression, spread blowout, and sub-1.5x relative volume correctly blocked every candidate —
+  exactly the pre-earnings disarm pattern documented across prior NVDA cycles. Zero trades on this
+  session is the expected and correct outcome, not a gate failure. Thirteenth consecutive zero-P&L
+  session (last realized profit: 2026-08-07, +$40.50 NFLX). Assessment of the 13-session streak:
+  the sessions break into two categories — (a) legitimate market/event blocking (FOMC minutes vol
+  suppression Aug 17-18, MIXED/RANGE gate Aug 19, NVDA earnings disarm Aug 26) and (b) infrastructure
+  failures (premarket scheduler Aug 20-21, git-sync GITHUB_TOKEN masking the plan Aug 25). Neither
+  category warrants gate loosening; the gates and rules performed correctly throughout. The after-8-
+  session review rule (added 2026-08-19) correctly distinguishes these two failure modes and does not
+  need revision. Two durable additions tonight: (1) Setups — NVDA pre-earnings disarm codified as a
+  confirmed multi-cycle pattern; premarket must substitute a non-earnings-constrained name rather than
+  waiting for gates to fire and report a zero. (2) No other rule changes warranted — the 13-session
+  streak reflects external conditions and infrastructure bugs, not a systematic gate calibration error.
+  Aggregate stats (47 days, 16 trades): 37.5% win rate, avg win +0.43R, avg loss -0.85R, ORB
+  -0.1994R (5 trades, 3 wins), momentum -0.975R (1 trade), fill rate 93.75%, avg 0.34 trades/day.
+  Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-25: No tuning. Tuner unfrozen ("ok to tune", 46 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades placed today (correct outcome — all setups
   below the 1.5x rel-vol gate; SPY/QQQ below ORB lows). Key infrastructure finding: the premarket

@@ -1,0 +1,71 @@
+{
+  "tick_time_et": "2026-08-26T09:42:30-04:00",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "INTC",
+      "considered": true,
+      "result": "SKIP",
+      "reasons": [
+        "ORB window not yet closed (12 of 15 minutes elapsed; ORB valid after 9:45 AM ET)",
+        "Price $86.965 below ORB high $87.28 — no breakout signal",
+        "No VWAP reclaim pattern visible (price already above VWAP, no dip-and-reclaim in this data)"
+      ],
+      "gates_that_passed": ["spread_bp=3.5 < 25", "rel_vol=3.4 > 1.5", "quote_age_sec=0.3 < 30"]
+    },
+    {
+      "ticker": "NVDA",
+      "considered": false,
+      "result": "DISARMED",
+      "reasons": ["Earnings tonight (~4:20 PM ET); fully disarmed per day plan"]
+    },
+    {
+      "ticker": "SPY",
+      "considered": false,
+      "result": "NO_DATA",
+      "reasons": ["SPY is the primary candidate per day plan but is absent from tick_context market data; cannot evaluate"]
+    }
+  ],
+  "market_snapshot": {
+    "INTC": {
+      "last": 86.965,
+      "bid": 86.81,
+      "ask": 86.84,
+      "spread_bp": 3.5,
+      "rel_volume": 3.4,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 87.28,
+      "orb_low": 86.21,
+      "vwap": 86.84,
+      "atr_1m": 0.423
+    },
+    "NVDA": {
+      "last": 212.095,
+      "bid": 211.9,
+      "ask": 211.95,
+      "spread_bp": 2.4,
+      "rel_volume": 3.01,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_high": 213.48,
+      "orb_low": 210.81,
+      "vwap": 212.13,
+      "atr_1m": 0.662
+    }
+  },
+  "account": {
+    "equity": 999487.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "minutes_since_open": 12,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "summary": "No trade. Early in session — ORB window still forming. Primary candidate (SPY) absent from data. INTC structurally clean but no breakout. NVDA disarmed. Waiting for ORB to complete and valid setup to develop."
+}

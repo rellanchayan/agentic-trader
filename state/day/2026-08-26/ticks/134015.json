@@ -1,0 +1,75 @@
+{
+  "tick_time_et": "2026-08-26T13:40:15-04:00",
+  "tick_id": "134015",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "SPY",
+      "setup": "vwap_reclaim",
+      "above_vwap": true,
+      "last": 765.64,
+      "vwap": 765.58,
+      "rel_volume": 0.67,
+      "spread_bp": 1.6,
+      "gate_failed": "rel_vol 0.67x < 1.5x minimum; VWAP reclaim margin only $0.06 with no volume conviction",
+      "decision": "SKIP"
+    },
+    {
+      "ticker": "INTC",
+      "setup": "orb_breakout_potential",
+      "above_vwap": true,
+      "orb_breakout": true,
+      "last": 87.685,
+      "orb_high": 87.32,
+      "rel_volume": 1.01,
+      "spread_bp": 2.3,
+      "gate_failed": "rel_vol 1.01x < 1.5x minimum; ORB entry window closed at 11:00 AM; momentum not armed today (NVDA earnings / negative expectancy)",
+      "decision": "SKIP"
+    },
+    {
+      "ticker": "NVDA",
+      "setup": "none",
+      "gate_failed": "DISARMED for full session — earnings tonight (~4:20 PM ET)",
+      "decision": "SKIP"
+    },
+    {
+      "ticker": "META",
+      "setup": "none",
+      "spread_bp": 155.3,
+      "gate_failed": "spread 155.3 bp >> 25 bp max",
+      "decision": "SKIP"
+    },
+    {
+      "ticker": "QQQ",
+      "setup": "none",
+      "rel_volume": 0.53,
+      "gate_failed": "rel_vol 0.53x < 1.5x minimum; not in day plan",
+      "decision": "SKIP"
+    },
+    {
+      "ticker": "AAPL",
+      "setup": "none",
+      "rel_volume": 0.91,
+      "gate_failed": "rel_vol 0.91x < 1.5x minimum; not in day plan watchlist",
+      "decision": "SKIP"
+    }
+  ],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "key_observations": [
+    "SPY has recovered above VWAP from 12:39 weakness (was $764.52 below VWAP $765.70, now $765.64 above VWAP $765.58) — encouraging directional change but vol is absent (0.67x).",
+    "INTC has broken above its ORB high for the first time this session (now $87.685 vs ORB high $87.32) with a clean 2.3 bp spread — setup is structurally present but volume gate (1.01x) and time-of-day gate (ORB window closed) both block entry.",
+    "All volume gates firing correctly on a MIXED/RANGE NVDA-earnings-eve tape — low participation is expected and consistent with the plan.",
+    "No forced entries; tape must bring the volume to us."
+  ],
+  "next_watch": "SPY VWAP reclaim with rel_vol lifting toward 1.5x is the only live candidate. If rel_vol reaches 1.5x and price stays above VWAP with a clean setup, that is the entry. Entry window open until 3:30 PM ET."
+}

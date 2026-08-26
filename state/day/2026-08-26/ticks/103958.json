@@ -1,0 +1,24 @@
+{
+  "timestamp_et": "2026-08-26T10:39:58-04:00",
+  "minutes_since_open": 69,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "entry_scan": {
+    "SPY": {
+      "status": "BLOCKED",
+      "reason": "rel_vol 1.03x < 1.5x minimum; price $765.23 below VWAP $765.83 and ORB high $766.55 — no reclaim and no breakout"
+    },
+    "INTC": {
+      "status": "BLOCKED",
+      "reason": "spread 2.3bp PASS, rel_vol 1.89x PASS, but price $86.375 below VWAP $86.68 and ORB high $87.32 — no valid VWAP reclaim or ORB breakout setup"
+    },
+    "NVDA": {
+      "status": "DISARMED",
+      "reason": "earnings tonight after close; disarmed for full session per plan"
+    }
+  },
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "note": "Tape directionless. SPY rel_vol 1.03x with price below VWAP/ORB high confirms plan guidance: zero trades when SPY rel_vol < 1.5x and tape is directionless. No forced entries."
+}

@@ -1,0 +1,62 @@
+{
+  "tick_time": "12:39",
+  "timestamp_et": "2026-08-26T12:39:30-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "SPY",
+      "status": "SKIP",
+      "reasons": [
+        "below VWAP ($764.52 vs $765.70) — VWAP reclaim not triggered",
+        "below ORB low ($764.73) — tape weakening",
+        "rel_vol 0.73x — below 1.5x gate",
+        "ORB entry window closed (>11:00 AM)"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "status": "SKIP",
+      "reasons": [
+        "above VWAP ($86.87 vs $86.67) — passes VWAP check",
+        "below ORB high ($87.32) — no ORB breakout",
+        "rel_vol 1.16x — below 1.5x gate",
+        "ORB entry window closed (>11:00 AM)"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "status": "DISARMED",
+      "reasons": ["earnings tonight (~4:20 PM ET) — full session disarm"]
+    },
+    {
+      "ticker": "AAPL",
+      "status": "SKIP",
+      "reasons": [
+        "not in day plan as armed candidate",
+        "rel_vol 1.02x — below 1.5x gate"
+      ]
+    },
+    {
+      "ticker": "QQQ",
+      "status": "SKIP",
+      "reasons": [
+        "below VWAP ($708.97 vs $710.19)",
+        "below ORB low ($708.545)",
+        "rel_vol 0.59x — well below 1.5x gate"
+      ]
+    },
+    {
+      "ticker": "META",
+      "status": "SKIP",
+      "reasons": ["spread 74.6 bp — exceeds 25 bp max gate"]
+    }
+  ],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "positions_open": 0,
+  "position_slots_remaining": 8,
+  "note": "MIXED/RANGE tape. ORB window closed. No VWAP reclaim forming on any armed candidate. SPY is drifting below its ORB low — the primary setup has degraded, not improved, through the session. INTC rel_vol held in the 1.1–1.5x range all session but never broke the ORB high. NVDA fully disarmed per plan (earnings tonight). Correct outcome: zero trades. A zero-trade day with gates correctly blocking marginal setups is better than a forced entry."
+}

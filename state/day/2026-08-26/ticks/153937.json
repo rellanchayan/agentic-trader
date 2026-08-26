@@ -1,0 +1,18 @@
+{
+  "tick_time_et": "15:39:37",
+  "date": "2026-08-26",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "Past no-new-entries cutoff (15:30 ET). Market still open but no new entries permitted. No positions held; account is flat. Day P&L $0.00.",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "market_snapshot": {
+    "AAPL": {"last": 314.97, "rel_volume": 0.83, "above_vwap": true, "orb_breakout": true},
+    "INTC": {"last": 87.75, "rel_volume": 0.86, "above_vwap": true, "orb_breakout": true},
+    "META": {"last": 576.38, "rel_volume": 1.68, "above_vwap": false, "orb_breakout": false},
+    "NVDA": {"last": 210.065, "rel_volume": 1.05, "above_vwap": false, "orb_breakout": false},
+    "QQQ": {"last": 712.1, "rel_volume": 0.48, "above_vwap": true, "orb_breakout": true},
+    "SPY": {"last": 766.65, "rel_volume": 0.67, "above_vwap": true, "orb_breakout": false}
+  }
+}

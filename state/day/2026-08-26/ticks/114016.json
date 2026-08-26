@@ -1,0 +1,61 @@
+{
+  "tick_time_et": "11:40",
+  "tick_hhmmss": "114016",
+  "action": "NO_TRADE",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_remaining": 20,
+  "slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "setups_evaluated": [
+    {
+      "ticker": "SPY",
+      "status": "BLOCKED",
+      "reason": "rel_vol 0.82x fails 1.5x gate. Price $765.48 below VWAP $765.83 (dip phase, not reclaim). ORB window closed (>11:00 AM).",
+      "spread_bp": 0.3,
+      "rel_volume": 0.82,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "last": 765.48,
+      "vwap": 765.83
+    },
+    {
+      "ticker": "INTC",
+      "status": "BLOCKED",
+      "reason": "rel_vol 1.45x just misses 1.5x gate. ORB window closed (>11:00 AM); no VWAP reclaim setup (already above VWAP). Price $86.82 vs ORB high $87.32 — no breakout.",
+      "spread_bp": 2.3,
+      "rel_volume": 1.45,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "last": 86.82,
+      "vwap": 86.64
+    },
+    {
+      "ticker": "NVDA",
+      "status": "DISARMED",
+      "reason": "Earnings tonight (~4:20 PM ET). Full session disarm. Spread 0.9 bp, but binary event risk unacceptable."
+    },
+    {
+      "ticker": "AAPL",
+      "status": "SKIPPED",
+      "reason": "Not in plan. rel_vol 1.19x below gate."
+    },
+    {
+      "ticker": "META",
+      "status": "SKIPPED",
+      "reason": "Not in plan. Spread 31.7 bp exceeds 25 bp max."
+    },
+    {
+      "ticker": "QQQ",
+      "status": "SKIPPED",
+      "reason": "Not in primary plan. rel_vol 0.68x — very low."
+    }
+  ],
+  "market_mood": "MIXED/RANGE (leaning risk-off). PCE slightly hot premarket, NVDA earnings tonight creating broad vol compression and uncertainty.",
+  "notes": "SPY is in the dip phase of a potential VWAP reclaim but hasn't reclaimed yet and volume is insufficient. No clean setup is currently firing. INTC rel_vol is rising (1.45x vs 1.89x at 10:39 — actually slightly lower) but hasn't cleared the gate. Tape remains directionless. Correct outcome is no trade. Will continue watching for SPY VWAP reclaim if volume picks up.",
+  "orders_submitted": [],
+  "positions_managed": []
+}

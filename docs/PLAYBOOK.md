@@ -200,6 +200,35 @@ made of **rules to follow**, not stories.
   GITHUB_TOKEN was not set and cloud_sync.sh push failed silently.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-27: No tuning. Tuner unfrozen ("ok to tune", 48 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades today (fourteenth consecutive no-trade
+  session; last realized P&L: 2026-08-07 +$40.50 NFLX). This is the most diagnostically
+  significant session of the streak: the morning plan issued a GO call in a genuine RISK-ON regime
+  (NVDA +6.7% post-earnings, NQ futures +0.9%), QQQ and SPY were armed unconditionally as primary
+  and secondary, and the plan explicitly warned against self-imposing a zero-trade outcome on a
+  day the gates are designed for. Yet zero trades were placed. Two possible explanations, and the
+  data cannot distinguish them: (1) Gates fired correctly — on Day 1 of Jackson Hole, with Fed
+  Chair Warsh's keynote scheduled for the following morning, institutional participants may have
+  reduced intraday vol participation in a way that kept QQQ/SPY relative volume below the 1.5x
+  gate, similar to the pre-FOMC and pre-CPI suppression patterns already documented. The plan
+  itself noted "some participants may begin hedging into the close" and imposed a 2:30 PM cutoff.
+  (2) Infrastructure failure — without intraday tick logs surviving from today's session, it is
+  impossible to rule out that the tick loop did not maintain 2-minute cadence through the
+  9:45–11:00 AM entry window. A recurring pattern across this project's history: the most
+  consequential sessions are also the ones with no tick-level audit trail. One provisional
+  observation for tracking (not yet a firm rule): Jackson Hole Day 1, when a major Fed speech is
+  scheduled the next morning, may suppress intraday participation similarly to pre-FOMC and
+  pre-CPI sessions. This hypothesis needs at least 2-3 more occurrences before codification.
+  No new rules added to the standing sections tonight — the evidence is too thin and the
+  infrastructure ambiguity is too large to justify a durable rule from a single session.
+  Critical process note: the setup-mix review mandated after eight or more consecutive no-profit
+  sessions (Discipline rule, added 2026-08-19) is now six sessions overdue. This review must be
+  conducted before the next trading session — it is not optional and has already been deferred too
+  long. The review question is whether blocked sessions reflect gates correctly filtering bad setups
+  vs. the screener not generating enough qualifying candidates; the 14-session streak cannot be
+  diagnosed without it. Aggregate stats (48 days, 16 trades): 37.5% win rate, avg win +0.43R, avg
+  loss -0.85R, ORB -0.1994R (5 trades, 3 wins), momentum -0.975R (1 trade), fill rate 93.75%, avg
+  0.33 trades/day. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-26: No tuning. Tuner unfrozen ("ok to tune", 47 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades today (correct outcome). NVDA earnings were
   released after the close; the session was MIXED/RANGE with a major earnings overhang, and vol

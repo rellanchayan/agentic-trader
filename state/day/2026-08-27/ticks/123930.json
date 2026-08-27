@@ -1,0 +1,35 @@
+{
+  "tick_time": "12:39",
+  "timestamp_et": "2026-08-27T12:39:30-04:00",
+  "action": "HOLD",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries_evaluated": [
+    {
+      "ticker": "QQQ",
+      "action": "SKIP",
+      "reason": "Entry window expired 11:00 AM ET (189 min post-open). Also rel_vol 0.74x below 1.5x gate."
+    },
+    {
+      "ticker": "SPY",
+      "action": "SKIP",
+      "reason": "Entry window expired 11:00 AM ET (189 min post-open). Also rel_vol 1.02x below 1.5x gate."
+    },
+    {
+      "ticker": "NVDA",
+      "action": "SKIP",
+      "reason": "90-min momentum continuation window from seeding ORB expired ~11:15 AM ET. Now 189 min post-open — well outside the window. orb_breakout=true, above_vwap=true, rel_vol=2.96x, spread=7.4bp would otherwise pass gates."
+    },
+    {
+      "ticker": "INTC",
+      "action": "SKIP",
+      "reason": "Disarmed. below_vwap, orb_breakout=false, rel_vol=1.03x below 1.5x gate."
+    }
+  ],
+  "trade_submitted": null,
+  "day_pnl": 0.0,
+  "account_equity": 999487.65,
+  "positions_open": 0,
+  "trades_today": 0,
+  "notes": "No open positions to manage. All entry windows closed per plan. Jackson Hole caution applies from 2:30 PM ET. EOD flatten starts 3:50 PM ET."
+}

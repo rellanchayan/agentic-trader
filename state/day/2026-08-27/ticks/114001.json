@@ -1,0 +1,30 @@
+{
+  "tick_time_et": "11:40:01",
+  "date": "2026-08-27",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entry_considered": {
+    "SPY": {
+      "blocked_by": ["entry_window_closed_1100_ET", "rel_volume_1.25x_below_1.5x_min"],
+      "orb_breakout": true,
+      "above_vwap": true
+    },
+    "QQQ": {
+      "blocked_by": ["entry_window_closed_1100_ET", "rel_volume_0.87x_below_1.5x_min", "orb_breakout_false"],
+      "above_vwap": true
+    },
+    "NVDA": {
+      "blocked_by": ["entry_window_closed_1100_ET", "orb_breakout_false", "90min_momentum_window_expired_at_130min_post_open"],
+      "rel_volume": 3.74,
+      "spread_bp": 1.3,
+      "above_vwap": true
+    },
+    "INTC": {
+      "blocked_by": ["rel_volume_1.36x_below_1.5x_min", "orb_breakout_false", "below_vwap"]
+    }
+  },
+  "rationale": "All entry windows for today's plan closed at 11:00 AM ET per day plan. Current time 11:40 AM ET is 40 minutes past the cutoff. 90-minute ORB/momentum window also expired (130 min post-open). No open positions to manage. SPY showed orb_breakout=true and above_vwap but rel_vol only 1.25x (below 1.5x min) and window closed. NVDA: high rel_vol 3.74x, tight spread 1.3bp, above vwap, but ORB high not yet broken and entry window closed. No trade is the correct outcome.",
+  "day_pnl": 0.0,
+  "open_positions": 0,
+  "trades_today": 0
+}

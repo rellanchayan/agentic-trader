@@ -1,0 +1,46 @@
+{
+  "tick_time_et": "13:40:08",
+  "action": "HOLD",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries": [],
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "trades_used": 0,
+  "slots_used": 0,
+  "market_snapshot": {
+    "QQQ": {
+      "last": 719.655,
+      "spread_bp": 0.7,
+      "rel_volume": 0.68,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "BLOCKED — rel_vol 0.68x < 1.5x minimum; entry window expired 11:00 AM ET"
+    },
+    "SPY": {
+      "last": 771.765,
+      "spread_bp": 1.7,
+      "rel_volume": 0.88,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "BLOCKED — rel_vol 0.88x < 1.5x minimum; entry window expired 11:00 AM ET"
+    },
+    "NVDA": {
+      "last": 229.11,
+      "spread_bp": 0.9,
+      "rel_volume": 2.48,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "BLOCKED — 90-min momentum window expired ~11:15 AM ET (now 250 min post-open); plan entry window 9:45–11:00 AM only"
+    },
+    "INTC": {
+      "last": 90.91,
+      "spread_bp": 2.2,
+      "rel_volume": 0.85,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED — below VWAP (90.91 < 91.08), rel_vol 0.85x < 1.5x"
+    }
+  },
+  "reasoning": "No positions to manage. All plan entry windows expired at 11:00 AM ET. NVDA has the best metrics (rel_vol 2.48x, spread 0.9bp, orb_breakout=true, above_vwap) but the 90-minute momentum window from the seeding ORB expired at approximately 11:15 AM ET — now 250 minutes post-open. Entering NVDA at this hour would violate the playbook rule against momentum entries >90 min after the seeding ORB and the plan's explicit 9:45–11:00 AM entry window. QQQ and SPY both have sub-1.5x relative volume and their windows are closed. INTC is below VWAP with low volume. Jackson Hole caution is also approaching at 2:30 PM ET. Correct outcome: no trade. Will idle until EOD flatten at 3:50 PM ET."
+}

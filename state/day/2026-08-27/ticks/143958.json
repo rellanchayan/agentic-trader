@@ -1,0 +1,17 @@
+{
+  "tick_time": "14:39",
+  "action": "HOLD",
+  "positions_managed": [],
+  "entry_considered": false,
+  "entry_blocked_reasons": [
+    "All entry windows expired at 11:00 AM ET per day plan",
+    "Jackson Hole caution: no new entries after 2:30 PM ET (now 14:39 ET)",
+    "QQQ: rel_vol 0.63x < 1.5x gate, entry window closed",
+    "SPY: rel_vol 0.83x < 1.5x gate, entry window closed",
+    "NVDA: rel_vol 2.23x passes but 309 min post-open exceeds 90-min momentum window; past 2:30 PM Jackson Hole cutoff",
+    "INTC: below VWAP, rel_vol 0.74x < 1.5x gate, entry window closed"
+  ],
+  "open_positions": 0,
+  "day_pnl": 0.0,
+  "note": "No open positions. Entry windows closed. Jackson Hole no-new-entry cutoff passed (2:30 PM ET). NVDA metrics pass but timing disqualifies. No trade."
+}

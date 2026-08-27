@@ -1,0 +1,64 @@
+{
+  "tick_time_et": "10:43",
+  "tick_time_hhmmss": "104332",
+  "action": "HOLD",
+  "day_pnl": 0.0,
+  "positions_held": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "QQQ",
+      "plan_status": "ARMED_PRIMARY_UNCONDITIONAL",
+      "spread_bp": 0.7,
+      "spread_gate_15bp": "PASS",
+      "rel_volume": 1.04,
+      "rel_volume_gate_1p5x": "FAIL",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "verdict": "SKIP",
+      "skip_reason": "Relative volume 1.04x is below the 1.5x gate. Cannot enter."
+    },
+    {
+      "ticker": "SPY",
+      "plan_status": "ARMED_SECONDARY_UNCONDITIONAL",
+      "spread_bp": 4.4,
+      "spread_gate_15bp": "PASS",
+      "rel_volume": 1.73,
+      "rel_volume_gate_1p5x": "PASS",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 769.16,
+      "orb_breakout_5bp_threshold": 769.54,
+      "last_price": 769.34,
+      "verdict": "SKIP",
+      "skip_reason": "ORB breakout not confirmed: price 769.34 is above ORB high 769.16 but has not cleared the 5 bp confirmation buffer (threshold ~769.54). VWAP reclaim ambiguous: ORB low (767.16) was below VWAP (768.64), suggesting a prior dip, but reclaim timing is unknown and may be 60+ minutes stale. R/R at stop=768.00 is exactly 2.0:1 — minimum only; not a high-confidence entry in cloud-mode where position cannot be monitored. No clean setup."
+    },
+    {
+      "ticker": "NVDA",
+      "plan_status": "CONDITIONAL",
+      "spread_bp": 4.5,
+      "spread_gate_15bp": "PASS",
+      "rel_volume": 5.32,
+      "above_vwap": false,
+      "last": 223.7,
+      "vwap": 224.3,
+      "orb_high": 225.82,
+      "verdict": "SKIP",
+      "skip_reason": "Below VWAP (223.70 < 224.30). Below ORB high (225.82). No VWAP reclaim (not above VWAP), no ORB breakout. No setup triggering."
+    },
+    {
+      "ticker": "INTC",
+      "plan_status": "CONDITIONAL",
+      "spread_bp": 3.3,
+      "rel_volume": 2.08,
+      "above_vwap": false,
+      "last": 91.02,
+      "vwap": 91.12,
+      "orb_high": 91.455,
+      "verdict": "SKIP",
+      "skip_reason": "Below VWAP (91.02 < 91.12). Below ORB high (91.455). No setup triggering."
+    }
+  ],
+  "minutes_since_open": 69,
+  "entry_window_status": "OPEN until 11:00 AM ET (~21 min remaining)",
+  "note": "Cloud-mode cadence — this may be the last tick before the 11:00 AM entry window closes. However, no setup met all gates cleanly. QQQ blocked by rel vol; SPY ORB not confirmed, VWAP reclaim stale/ambiguous; NVDA and INTC both below VWAP and ORB high. Holding cash."
+}

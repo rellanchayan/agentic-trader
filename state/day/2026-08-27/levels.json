@@ -2,33 +2,66 @@
   "_meta": {
     "date": "2026-08-27",
     "generated_utc": "2026-08-27T13:31:43.919827+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 2,
-    "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "screener_reviewed_utc": "2026-08-27T13:41:30+00:00",
+    "source": "watchlist_build + day-screener",
+    "candidates_considered": 4,
+    "top": 4,
+    "note": "Pre-market screen reviewed and corrected by day-screener at ~9:41 AM ET. PFE removed (spread 1027 bp, ATR $0.61 — fully disarmed). QQQ and SPY added as armed names. NVDA and INTC data corrected (watchlist_build captured stale/wrong quotes). ORB levels fill in live after the open."
   },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 90.41,
-    "atr_day": 4.52,
-    "avg_vol_10d": 3361448,
-    "premarket_price": 91.27,
-    "gap_pct": 0.0095,
-    "spread_bp": 8.8,
+  "QQQ": {
+    "sector": "etf",
+    "prev_close": 711.28,
+    "atr_day": 7.89,
+    "avg_vol_10d": 536954,
+    "premarket_price": 716.85,
+    "gap_pct": 0.0078,
+    "spread_bp": 1.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,361,448 sh/day); +0.9% gap"
+    "support": 711.28,
+    "resistance": 730.0,
+    "note": "PRIMARY armed (unconditional). Nasdaq 100 ETF; best clean expression of NVDA-led tech risk-on. Gap +0.78% at open. Spread 1.0 bp (IEX live 9:41 AM ET) — excellent. avg_vol_10d is IEX-feed only; total market QQQ volume is far higher (~30-50M sh/day). Setup: ORB breakout above orb_high or VWAP reclaim. Entry window 9:45-11:00 AM ET only. Gates: rel vol >1.5x, live spread <15 bp, 2:1 R/R. Do not enter QQQ and SPY simultaneously. No new entries after 2:30 PM ET (Jackson Hole caution)."
+  },
+  "SPY": {
+    "sector": "etf",
+    "prev_close": 765.94,
+    "atr_day": 4.69,
+    "avg_vol_10d": 1190444,
+    "premarket_price": 768.49,
+    "gap_pct": 0.0033,
+    "spread_bp": 0.5,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 764.0,
+    "resistance": 773.0,
+    "note": "SECONDARY armed (unconditional). S&P 500 ETF; use only if QQQ ORB setup does not meet quality criteria. Gap +0.33% at open. Spread 0.5 bp (IEX live 9:41 AM ET) — excellent. avg_vol_10d is IEX-feed only; total market SPY volume is far higher. Same gate and sizing rules as QQQ. Entry window 9:45-11:00 AM ET only. Do not enter SPY if QQQ position is already open. No new entries after 2:30 PM ET."
   },
   "NVDA": {
     "sector": "technology",
-    "prev_close": 223.85,
-    "atr_day": 6.03,
-    "avg_vol_10d": 2888126,
-    "premarket_price": 223.5,
-    "gap_pct": -0.0016,
-    "spread_bp": 89.0,
+    "prev_close": 209.77,
+    "atr_day": 5.4,
+    "avg_vol_10d": 3271905,
+    "premarket_price": 223.75,
+    "gap_pct": 0.0666,
+    "spread_bp": 4.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,888,126 sh/day); -0.2% gap"
+    "support": 220.96,
+    "resistance": 225.25,
+    "note": "CONDITIONAL (post-earnings momentum). Gapped +6.7% ($209.77 -> $223.75) on blockbuster Q2 EPS. SPREAD GATE: premarket was 89 bp; live at 9:41 AM ET is 4.0 bp — gate currently clears (<15 bp threshold). Tick at 9:45 AM must re-confirm spread <15 bp; if spread >15 bp at that evaluation, DISARM for full session with no revisit. Setup: VWAP reclaim preferred over ORB breakout on gap-up name. Require rel vol >1.5x. Stop at VWAP or intraday low (220.96). Entry window 9:45-11:00 AM ET only. Levels corrected by day-screener: original watchlist_build captured stale data (prev_close 223.85, gap -0.2%)."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 88.255,
+    "atr_day": 4.77,
+    "avg_vol_10d": 3703665,
+    "premarket_price": 90.72,
+    "gap_pct": 0.0279,
+    "spread_bp": 95.0,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 88.26,
+    "resistance": 92.61,
+    "note": "CONDITIONAL — EFFECTIVELY DISARMED. Gapped +2.8% ($88.26 -> $90.72) on Intel AI processor news (Diamond Rapids, Crescent Island). SPREAD GATE FAILED: live spread at 9:41 AM ET is 95 bp >> 25 bp gate. Per disarm rule, INTC is off the board for the full session; do not revisit, do not wait for it to tighten. Consistent with documented INTC spread-blowout history at the open (Jul 9: 209 bp, Aug 4: 132 bp, Aug 14: 52 bp). Levels corrected by day-screener: original watchlist_build had wrong prev_close 90.41 and gap 0.95%."
   }
 }

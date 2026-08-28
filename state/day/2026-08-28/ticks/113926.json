@@ -1,0 +1,30 @@
+{
+  "timestamp": "2026-08-28T15:39:26Z",
+  "tick_time_et": "2026-08-28T11:39:26-04:00",
+  "verdict": "NO_ACTION",
+  "reason": "INTC (only armed name) fails 1.5x rel_vol gate: rel_vol 0.93x, below VWAP (91.37 vs 92.12), no ORB breakout. NVDA disarmed premarket (spread 299.1 bp). QQQ/SPY: no quote data. Past 11:00 AM advisory threshold on thin Friday Jackson Hole afternoon — calling the day zero trades.",
+  "candidates_evaluated": {
+    "INTC": {
+      "last": 91.37,
+      "vwap": 92.12,
+      "above_vwap": false,
+      "orb_high": 92.66,
+      "orb_low": 89.975,
+      "orb_breakout": false,
+      "rel_vol": 0.93,
+      "spread_bp": 3.3,
+      "gate_blocked": "rel_vol 0.93x < 1.5x AND below VWAP"
+    },
+    "NVDA": {
+      "status": "disarmed premarket",
+      "reason": "spread 299.1 bp at premarket screen — untradeable"
+    },
+    "QQQ": {
+      "status": "no quote data from IEX"
+    }
+  },
+  "orders_submitted": 0,
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "timing_note": "11:39 AM ET — past plan's 11:00 AM advisory. Calling day zero trades per plan: no clean setup in 10:15–11:00 AM window on MIXED/RANGE Friday with major Fed event."
+}

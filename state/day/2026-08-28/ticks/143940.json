@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-08-28T18:39:40Z",
+  "tick_time_et": "2026-08-28T14:39:40-04:00",
+  "minutes_since_open": 309,
+  "verdict": "NO_ACTION",
+  "reason": "Past 2:00 PM ET hard cutoff for new entries (day plan Friday Jackson Hole rule). Day was called zero trades at 11:39 AM ET and confirmed on every subsequent tick. INTC: rel_vol 0.68x (< 1.5x gate), last $89.575 — below VWAP $91.03 and below ORB low $89.975. No NVDA or QQQ quotes available. Sixth consecutive NO_ACTION tick; all gates blocked, 2 PM cutoff passed.",
+  "positions_checked": [],
+  "positions_open": 0,
+  "open_orders_reviewed": [],
+  "candidates_evaluated": {
+    "INTC": {
+      "last": 89.575,
+      "vwap": 91.03,
+      "above_vwap": false,
+      "orb_low": 89.975,
+      "orb_high": 92.66,
+      "orb_breakout": false,
+      "rel_vol": 0.68,
+      "spread_bp": 2.2,
+      "gate_blocked": "rel_vol 0.68x < 1.5x gate; below VWAP; below ORB low; past 2:00 PM hard cutoff"
+    },
+    "NVDA": {
+      "gate_blocked": "no quote available this tick"
+    },
+    "QQQ": {
+      "gate_blocked": "no quote available this tick"
+    }
+  },
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_used_today": 0,
+  "slots_used": 0,
+  "loss_budget_remaining": 3000.0,
+  "daily_deploy_used": 0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "day_called_zero_trades_at": "11:39 ET"
+}

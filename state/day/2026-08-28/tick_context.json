@@ -1,7 +1,7 @@
 {
   "date": "2026-08-28",
-  "timestamp_et": "2026-08-28T11:39:26.826571-04:00",
-  "minutes_since_open": 129,
+  "timestamp_et": "2026-08-28T12:40:34.738015-04:00",
+  "minutes_since_open": 190,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,22 +33,22 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 91.37,
-      "bid": 91.31,
-      "ask": 91.34,
+      "last": 89.57,
+      "bid": 89.49,
+      "ask": 89.52,
       "quote_age_sec": 0.1,
-      "spread_bp": 3.3,
-      "vwap": 92.12,
+      "spread_bp": 3.4,
+      "vwap": 91.5,
       "orb_high": 92.66,
       "orb_low": 89.975,
-      "atr_1m": 0.094,
-      "atr_day": 4.59,
-      "rel_volume": 0.93,
-      "volume_today": 1032218,
+      "atr_1m": 0.119,
+      "atr_day": 4.65,
+      "rel_volume": 0.87,
+      "volume_today": 1432324,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 91.43,
-      "marketable_sell_limit": 91.22
+      "marketable_buy_limit": 89.61,
+      "marketable_sell_limit": 89.4
     }
   },
   "recent_ticks": [
@@ -94,6 +94,15 @@
           "gate_blocked": "rel_vol < 1.5x"
         }
       },
+      "orders_submitted": 0,
+      "positions_open": 0,
+      "day_pnl": 0.0
+    },
+    {
+      "timestamp": "2026-08-28T15:39:26Z",
+      "tick_time_et": "2026-08-28T11:39:26-04:00",
+      "verdict": "NO_ACTION",
+      "reason": "INTC fails 1.5x rel_vol gate (0.93x), below VWAP (91.37 vs 92.12), no ORB breakout. NVDA disarmed premarket (spread 299.1 bp). QQQ: no quote. Past 11:00 AM advisory \u2014 calling day zero trades on thin Friday Jackson Hole afternoon.",
       "orders_submitted": 0,
       "positions_open": 0,
       "day_pnl": 0.0

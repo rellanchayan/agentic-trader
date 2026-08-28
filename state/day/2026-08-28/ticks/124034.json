@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-08-28T16:40:34Z",
+  "tick_time_et": "2026-08-28T12:40:34-04:00",
+  "verdict": "NO_ACTION",
+  "minutes_since_open": 190,
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "INTC",
+      "last": 89.57,
+      "vwap": 91.50,
+      "above_vwap": false,
+      "orb_high": 92.66,
+      "orb_low": 89.975,
+      "rel_volume": 0.87,
+      "spread_bp": 3.4,
+      "gate_blocked": "rel_vol 0.87x < 1.5x minimum; price below VWAP ($89.57 vs $91.50); below ORB low ($89.975)"
+    }
+  ],
+  "reason": "Day called zero trades at 11:39 AM. INTC is the only name with a live quote; it fails the rel_vol gate (0.87x < 1.5x), is below VWAP, and below ORB low. No NVDA (disarmed premarket — spread 299.1 bp) or QQQ (no quote available). The 11:00 AM advisory was already triggered last tick — on a thin Friday/Jackson Hole afternoon the correct action is to sit on hands. No setup qualifies at 12:40 PM.",
+  "orders_submitted": 0,
+  "positions_open": 0,
+  "trades_used_today": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0
+}

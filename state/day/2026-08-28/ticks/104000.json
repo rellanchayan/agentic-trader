@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-08-28T14:40:00Z",
+  "tick_time_et": "2026-08-28T10:40:00-04:00",
+  "verdict": "NO_ACTION",
+  "reason": "All names below 1.5x rel_vol gate. Post-Warsh tape mildly constructive (SPY/QQQ above VWAP) but participation too thin \u2014 Friday Jackson Hole.",
+  "gate_verdicts": {
+    "NVDA": {
+      "rel_vol": 0.2,
+      "above_vwap": false,
+      "below_orb_low": true,
+      "blocked": true,
+      "block_reason": "rel_vol < 1.5x, below VWAP, below ORB low"
+    },
+    "QQQ": {
+      "rel_vol": 0.02,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "blocked": true,
+      "block_reason": "rel_vol < 1.5x (possible data feed issue)"
+    },
+    "INTC": {
+      "rel_vol": 1.2,
+      "above_vwap": true,
+      "blocked": true,
+      "block_reason": "rel_vol < 1.5x"
+    }
+  },
+  "tape_assessment": {
+    "spy_above_vwap": true,
+    "qqq_above_vwap": true,
+    "warsh_keynote_status": "completed ~10:00-10:20 AM ET; tape not risk-off but very thin participation",
+    "regime": "MIXED/RANGE (Friday Jackson Hole)"
+  },
+  "account": {
+    "equity": 999487.65,
+    "positions_open": 0,
+    "day_pnl": 0.0,
+    "trades_today": 0
+  },
+  "orders_submitted": 0
+}

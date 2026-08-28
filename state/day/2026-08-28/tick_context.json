@@ -1,7 +1,7 @@
 {
   "date": "2026-08-28",
-  "timestamp_et": "2026-08-28T09:39:26.939330-04:00",
-  "minutes_since_open": 9,
+  "timestamp_et": "2026-08-28T10:39:53.030298-04:00",
+  "minutes_since_open": 69,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,25 +33,35 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 91.755,
-      "bid": 91.83,
-      "ask": 91.86,
-      "quote_age_sec": 0.1,
-      "spread_bp": 3.3,
-      "vwap": 90.84,
-      "orb_high": 91.755,
+      "last": 92.445,
+      "bid": 92.4,
+      "ask": 92.42,
+      "quote_age_sec": 0.2,
+      "spread_bp": 2.2,
+      "vwap": 92.2,
+      "orb_high": 92.66,
       "orb_low": 89.975,
-      "atr_1m": 0.414,
-      "atr_day": 4.47,
-      "rel_volume": 1.39,
-      "volume_today": 104854,
+      "atr_1m": 0.183,
+      "atr_day": 4.59,
+      "rel_volume": 1.2,
+      "volume_today": 706817,
       "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 91.95,
-      "marketable_sell_limit": 91.74
+      "marketable_buy_limit": 92.51,
+      "marketable_sell_limit": 92.31
     }
   },
-  "recent_ticks": [],
+  "recent_ticks": [
+    {
+      "timestamp": "2026-08-28T13:40:14Z",
+      "tick_time_et": "2026-08-28T09:39:26-04:00",
+      "verdict": "NO_ACTION",
+      "reason": "Hard timing block: no entries before 10:15 AM ET (Chicago PMI 9:45 AM + Warsh keynote 10:00 AM)",
+      "orders_submitted": 0,
+      "positions_open": 0,
+      "day_pnl": 0.0
+    }
+  ],
   "config_snapshot": {
     "orb_minutes": 15,
     "orb_breakout_buffer_bp": 5,

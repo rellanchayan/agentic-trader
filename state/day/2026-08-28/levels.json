@@ -2,22 +2,11 @@
   "_meta": {
     "date": "2026-08-28",
     "generated_utc": "2026-08-28T13:30:46.508064+00:00",
-    "source": "watchlist_build",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 2,
-    "top": 2,
+    "top": 1,
+    "screener_note": "NVDA dropped: spread_bp 299.1 (untradeable). Only 2 candidates had live IEX quote data; SPY/QQQ/other universe names returned no quote. Do not pad list. One honest name kept.",
     "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "NVDA": {
-    "sector": "technology",
-    "prev_close": 228.17,
-    "atr_day": 6.45,
-    "avg_vol_10d": 3625656,
-    "premarket_price": 223.34,
-    "gap_pct": -0.0212,
-    "spread_bp": 299.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,625,656 sh/day); -2.1% gap"
   },
   "INTC": {
     "sector": "technology",
@@ -27,8 +16,10 @@
     "premarket_price": 90.61,
     "gap_pct": -0.0154,
     "spread_bp": 6.6,
+    "support": 90.00,
+    "resistance": 92.03,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,629,780 sh/day); -1.5% gap"
+    "note": "gapped -1.5% to 90.61 (prev close 92.03). Resistance: 92.03 (gap fill / yesterday's close). Support: 90.00 (round number / psychological floor); secondary support 89.00-89.50 (ATR band below premarket). Premarket spread 6.6 bp is clean, but INTC has documented open-spread blowout history — check live spread at first tick (9:40-9:45 AM); disarm if >25 bp. Jackson Hole keynote (Fed Chair Warsh) today: no new entries after 2:30 PM ET. ORB or VWAP-reclaim setup only; ATR 4.70."
   }
 }

@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-08-28T17:39:44Z",
+  "tick_time_et": "2026-08-28T13:39:44-04:00",
+  "verdict": "NO_ACTION",
+  "reason": "Day called zero trades at 11:39 AM (confirmed 5th tick). INTC: rel_vol 0.77x (< 1.5x gate), last $89.24 below VWAP $91.19 and below ORB low $89.98. No NVDA/QQQ quotes available. 249 minutes past open, past 11 AM call-the-day threshold per plan, approaching 2 PM Friday hard cutoff. All gates blocked. Confirming zero-trade day.",
+  "candidates_evaluated": {
+    "INTC": {
+      "last": 89.24,
+      "vwap": 91.19,
+      "above_vwap": false,
+      "orb_high": 92.66,
+      "orb_low": 89.975,
+      "rel_vol": 0.77,
+      "spread_bp": 3.4,
+      "gate_blocked": "rel_vol 0.77x < 1.5x; below VWAP; below ORB low"
+    },
+    "NVDA": {
+      "gate_blocked": "no live quote in context"
+    },
+    "QQQ": {
+      "gate_blocked": "no live quote in context"
+    }
+  },
+  "orders_submitted": 0,
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "account": {
+    "equity": 999487.65,
+    "trades_today": 0,
+    "loss_budget_remaining": 3000.0
+  }
+}

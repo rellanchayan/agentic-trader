@@ -28,6 +28,15 @@ made of **rules to follow**, not stories.
   the early reward; if the setup was not actionable at the open, skip it for the day.
 - Be careful around scheduled events (Fed, CPI, jobs) — prices whip around. Trade smaller or wait.
 - On pre-CPI session days (the Tuesday before a CPI release), institutional players reduce exposure ahead of the binary macro event; the 1.5x relative-volume gate reliably blocks all entries as a result. A zero-trade outcome on a pre-CPI day is correct behavior — do not adjust gates to force entries.
+- On macro-event Fridays where a binary Fed event (a major speech, a rate decision, or a cluster
+  of simultaneous data releases) forces a hard entry delay past 10:00 AM ET, the effective live
+  entry window may collapse to 45 minutes or less (10:15 AM to 11:00 AM). A zero-trade outcome
+  on a compressed-window Friday is structurally different from a zero-trade outcome on a full-window
+  day where names were unconditionally armed from 9:45 AM. Tag these sessions as "compressed-window"
+  in the plan so they are tracked separately in pattern analysis. A compressed-window Friday zero
+  does not carry the same diagnostic weight as a full-window Thursday zero — conflating the two
+  obscures the signal. (2026-08-28: Warsh Jackson Hole keynote + Chicago PMI + U. Michigan
+  Sentiment + BLS revision all at 10:00 AM ET reduced the live window to 45 minutes on a Friday.)
 - On the 1-2 trading sessions before a scheduled FOMC minutes release, institutional players typically reduce exposure ahead of the binary macro event; relative volume across candidates runs well below the 1.5x gate as a result. A zero-trade outcome on these pre-FOMC-minutes sessions is the expected and correct outcome — do not adjust gates to force entries. (2026-08-17: FOMC July minutes on Wednesday; plan correctly anticipated zero trades Monday on 0.92–1.09x semiconductor rel vol.)
 
 ## Setups by market mood
@@ -198,8 +207,47 @@ made of **rules to follow**, not stories.
   identical from the tick loop's perspective but require completely different fixes. (2026-08-25:
   docs/plans/2026-08-25.md was written by premarket but invisible to tick sessions because
   GITHUB_TOKEN was not set and cloud_sync.sh push failed silently.)
+- Every tick that evaluates candidates must write one timestamped line to the session log, whether
+  or not an order is generated. The minimum record per tick: ticker evaluated, rel-vol reading,
+  spread reading, gate outcome (pass or fail and which gate), and whether an order was submitted.
+  A session where zero trades were placed must still produce a full gate-outcome log — without it,
+  "gates correctly blocked bad setups" and "system structurally cannot generate orders" are
+  indistinguishable from the outside. The 15-session zero-trade streak from 2026-08-07 through
+  2026-08-28 cannot be diagnosed at the setup level because no tick-level gate data survives from
+  any zero-trade session. This is the single highest-priority infrastructure change before the next
+  trading session. (2026-08-28: identified as unresolved root-cause ambiguity for 15 consecutive
+  zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-28: No tuning. Tuner unfrozen ("ok to tune", 49 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Zero trades today (fifteenth consecutive no-trade session;
+  last realized P&L: 2026-08-07 +$40.50 NFLX). Today's zero-trade outcome has more legitimate
+  justification than Thursday's: the session was MIXED/RANGE, and a triple macro event cluster
+  landed simultaneously at 10:00 AM ET — Chicago PMI at 9:45 AM, Fed Chair Warsh's Jackson Hole
+  keynote at 10:00 AM, University of Michigan Consumer Sentiment at 10:00 AM, and the BLS
+  Preliminary Annual Benchmark Revision at 10:00 AM. The effective live entry window was 45
+  minutes (10:15 AM to 11:00 AM). The plan correctly prohibited entries before 10:15 AM, cut off
+  new entries at 2:00 PM, and explicitly gave permission for a zero-trade outcome in thin Friday
+  afternoon tape after a binary Fed event. No rule was violated. The account closed flat at
+  $999,487.65. However, individual-session justification does not resolve the systemic pattern:
+  fifteen consecutive sessions without a single order submitted is not what a functioning
+  day-trading system looks like, and the root cause — whether gates are miscalibrated or the
+  order-generation path has a silent failure — cannot be determined without tick-level gate logs
+  that do not currently exist. Three lessons added tonight: (1) Discipline — the setup-mix review
+  mandated after eight or more consecutive no-profit sessions is now 15 sessions overdue and must
+  be completed before Monday's open. The diagnostic is: in how many of the 15 blocked sessions did
+  a qualifying candidate exist that was correctly filtered by gates (zero trades was right) versus
+  how many sessions had no qualifying signal at all? These are different failure modes and require
+  different responses. (2) Infrastructure — tick-level gate logging is the highest-priority
+  infrastructure change before the next session. Every tick that runs must write one timestamped
+  line recording what was evaluated, what gate fired, and the outcome. Without this, no zero-trade
+  session is auditable and the streak's cause remains unknown. New rule added to Infrastructure.
+  (3) Time of day — compressed-window Friday sessions (where a binary macro event forces the entry
+  delay past 10:00 AM ET) should be tagged and tracked separately in pattern analysis rather than
+  grouped with full-window zero-trade sessions. New note added to Time of day. Aggregate stats (49
+  days, 16 trades): 37.5% win rate, avg win +0.43R, avg loss -0.85R, ORB -0.20R (5 trades, 3
+  wins), momentum -0.975R (1 trade, 0 wins), fill rate 94% (15/16), avg 0.33 trades/day. Tuning
+  ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-08-27: No tuning. Tuner unfrozen ("ok to tune", 48 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades today (fourteenth consecutive no-trade
   session; last realized P&L: 2026-08-07 +$40.50 NFLX). This is the most diagnostically

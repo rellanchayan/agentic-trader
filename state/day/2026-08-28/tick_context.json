@@ -1,9 +1,9 @@
 {
   "date": "2026-08-28",
-  "timestamp_et": "2026-08-28T14:39:40.101186-04:00",
-  "minutes_since_open": 309,
+  "timestamp_et": "2026-08-28T15:39:34.434558-04:00",
+  "minutes_since_open": 369,
   "clock_flags": {
-    "past_no_new_entries": false,
+    "past_no_new_entries": true,
     "in_flatten_window": false
   },
   "account": {
@@ -33,22 +33,22 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 89.575,
-      "bid": 89.55,
-      "ask": 89.57,
-      "quote_age_sec": 0.1,
-      "spread_bp": 2.2,
-      "vwap": 91.03,
+      "last": 89.65,
+      "bid": 89.65,
+      "ask": 89.66,
+      "quote_age_sec": 0.2,
+      "spread_bp": 1.1,
+      "vwap": 90.9,
       "orb_high": 92.66,
       "orb_low": 89.975,
-      "atr_1m": 0.061,
+      "atr_1m": 0.085,
       "atr_day": 4.66,
-      "rel_volume": 0.68,
-      "volume_today": 1860209,
+      "rel_volume": 0.63,
+      "volume_today": 2063755,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 89.66,
-      "marketable_sell_limit": 89.46
+      "marketable_buy_limit": 89.75,
+      "marketable_sell_limit": 89.56
     }
   },
   "recent_ticks": [
@@ -124,6 +124,14 @@
       "orders_submitted": 0,
       "positions_open": 0,
       "day_pnl": 0.0
+    },
+    {
+      "t": "14:39",
+      "action": "NO_ACTION",
+      "note": "Past 2PM hard cutoff. INTC rel_vol 0.68x < 1.5x gate, below VWAP $91.03 and ORB low $89.98. No NVDA/QQQ quotes. Day called zero trades at 11:39 AM, sixth consecutive NO_ACTION tick.",
+      "day_pnl": 0,
+      "trades_used": 0,
+      "slots_used": 0
     }
   ],
   "config_snapshot": {

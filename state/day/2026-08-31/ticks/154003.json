@@ -1,0 +1,19 @@
+{
+  "ts_et": "2026-08-31T15:40:03-04:00",
+  "t": "15:40",
+  "action": "WAIT",
+  "verdict": "no_action",
+  "reason": "Entry window closed at 11:00 AM ET per day plan. past_no_new_entries=true. No positions to manage. Flatten window opens at 15:50 ET; nothing to flatten.",
+  "market_snapshot": {
+    "NVDA": {"last": 219.795, "above_vwap": true, "rel_volume": 0.69, "spread_bp": 0.9, "gate_result": "WINDOW_CLOSED"},
+    "QQQ":  {"last": 715.4,   "above_vwap": true, "rel_volume": 0.68, "spread_bp": 0.7, "gate_result": "WINDOW_CLOSED"},
+    "SPY":  {"last": 766.63,  "above_vwap": true, "rel_volume": 0.69, "spread_bp": 0.3, "gate_result": "WINDOW_CLOSED"},
+    "AAPL": {"last": 316.055, "above_vwap": true, "rel_volume": 0.79, "spread_bp": 21.9,"gate_result": "WINDOW_CLOSED"},
+    "INTC": {"last": 89.705,  "above_vwap": false,"rel_volume": 0.39, "spread_bp": 1.1, "gate_result": "WINDOW_CLOSED"}
+  },
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "orders_submitted": 0,
+  "next_event": "Flatten window opens 15:50 ET; zero positions, nothing to flatten."
+}

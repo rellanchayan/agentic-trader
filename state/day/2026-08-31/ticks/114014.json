@@ -1,0 +1,64 @@
+{
+  "tick_id": "2026-08-31T114014",
+  "ts_et": "2026-08-31T11:40:14-04:00",
+  "ts_utc": "2026-08-31T15:40:14+00:00",
+  "minutes_since_open": 130,
+  "action": "WAIT",
+  "positions_managed": [],
+  "new_orders": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "slots_remaining": 8,
+  "trades_remaining": 20,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "entry_window_closed": true,
+  "entry_window_note": "Day plan closed new entries at 11:00 AM ET — entry window expired 40 minutes ago.",
+  "market_snapshot": {
+    "NVDA": {
+      "last": 219.8,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 0.9,
+      "spread_bp": 0.9,
+      "gate_outcome": "SKIP — entry window closed"
+    },
+    "INTC": {
+      "last": 89.39,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.69,
+      "spread_bp": 1.1,
+      "gate_outcome": "SKIP — entry window closed; also below VWAP and rel_vol 0.69x < 1.5x"
+    },
+    "QQQ": {
+      "last": 714.0,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.88,
+      "spread_bp": 0.7,
+      "gate_outcome": "SKIP — entry window closed; also below VWAP and rel_vol 0.88x < 1.5x"
+    },
+    "SPY": {
+      "last": 765.52,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.93,
+      "spread_bp": 0.9,
+      "gate_outcome": "SKIP — entry window closed; also below VWAP and rel_vol 0.93x < 1.5x"
+    },
+    "AAPL": {
+      "last": 314.755,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.1,
+      "spread_bp": 5.1,
+      "gate_outcome": "SKIP — entry window closed; also below VWAP and rel_vol 1.1x < 1.5x"
+    }
+  },
+  "reasoning": "At 11:40 AM ET, the entry window (9:50-11:00 AM) established in the day plan has been closed for 40 minutes. No new entries are permitted. No positions exist, so no stops or targets to manage. No open orders to cancel. During the entry window, no name met all entry criteria simultaneously: NVDA showed an ORB breakout signal but peaked at only 1.11x rel_vol (gate needed 2.0x for ORB on risk-off day); QQQ, INTC, SPY, and AAPL all remained below VWAP with sub-1.5x relative volume throughout. The correct outcome for a moderate risk-off session with two data events and documented spread blowout history on both individual stock candidates is zero trades. The remaining session (11:40 AM to 3:30 PM) will be held flat. The flatten window opens at 3:50 PM — no action needed until then."
+}

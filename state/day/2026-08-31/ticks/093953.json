@@ -1,0 +1,21 @@
+{
+  "tick_time_et": "2026-08-31T09:39:53-04:00",
+  "minutes_since_open": 9,
+  "verdict": "PROCEED",
+  "action": "WAIT",
+  "reason": "pre-PMI window — no entries before 9:50 AM ET (Chicago PMI 9:45)",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_considered": null,
+  "trade_submitted": null,
+  "market_scan": {
+    "NVDA": {"last": 217.13, "spread_bp": 74.9, "rel_volume": 2.02, "above_vwap": false, "gate_result": "DISARMED_SPREAD"},
+    "INTC": {"last": 90.165, "spread_bp": 4.4, "rel_volume": 2.19, "above_vwap": false, "gate_result": "WINDOW_CLOSED"},
+    "QQQ": {"last": 714.11, "spread_bp": 1.5, "rel_volume": 2.57, "above_vwap": false, "gate_result": "WINDOW_CLOSED"},
+    "SPY": {"last": 766.235, "spread_bp": 0.4, "rel_volume": 2.08, "above_vwap": false, "gate_result": "NOT_ON_WATCHLIST"}
+  },
+  "day_pnl": 0.0,
+  "equity": 999487.65,
+  "trades_today": 0,
+  "positions_open": 0
+}

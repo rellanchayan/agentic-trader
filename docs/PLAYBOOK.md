@@ -219,6 +219,53 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-08-31: No tuning. Tuner unfrozen ("ok to tune", 50 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, 16th consecutive no-trade session (last realized P&L: 2026-08-07 +$40.50 NFLX).
+  Today is Monday — a full-window session with no structural macro justification for a zero-trade
+  outcome. No Jackson Hole, no FOMC minutes, no CPI — none of the documented event-driven suppression
+  patterns apply today.
+  The 16-session streak is not uniformly diagnostic. Sessions 1 through approximately 12 have
+  documented, individually sufficient justifications: FOMC minutes vol suppression (Aug 17-18),
+  MIXED/RANGE gate (Aug 19), premarket scheduler failures (Aug 20-21, Aug 24), git-sync GITHUB_TOKEN
+  masking the plan (Aug 25), NVDA earnings disarm (Aug 26), and a Jackson Hole compressed-window
+  Friday (Aug 28). Sessions 13 onward (Aug 27-31) have no such single sufficient explanation, and
+  today's zero on a full-window Monday adds urgency to diagnosing the root cause.
+  Two hypotheses remain open and unresolved — and the data cannot distinguish them:
+  (a) Gates miscalibrated: the 1.5x relative volume gate or spread gate may be calibrated too
+  conservatively for current market conditions, blocking entries that would have been profitable. If
+  this is the cause, the fix is adjusting gate thresholds — but this cannot be confirmed without
+  knowing what the actual readings were at each tick.
+  (b) Order-generation path has a silent failure: the tick loop may be running but failing to submit
+  orders, or running at insufficient cadence to catch qualifying windows. If this is the cause, no
+  gate adjustment will fix it.
+  The two hypotheses look identical from the outside. They can only be distinguished with tick-level
+  gate logs — which do not currently exist for any zero-trade session. This remains the single
+  highest-priority unresolved infrastructure gap, identified on 2026-08-28 and still unresolved two
+  sessions later. Every tick that runs must write one timestamped line to the session log recording
+  what was evaluated, what gate fired, and the outcome. Without this, no zero-trade session is
+  auditable and the streak's cause will remain unknown indefinitely.
+  The setup-mix review mandated after 8 or more consecutive no-profit sessions (Discipline rule,
+  added 2026-08-19) is now 8 sessions overdue — required after session 8, now at session 16. The
+  review asks: of the 16 zero-trade sessions, how many had a qualifying candidate that gates correctly
+  filtered (gates working) versus how many had no qualifying signal at all (screener universe too
+  narrow or gates too strict)? Without tick-level logs from zero-trade sessions, this review cannot
+  be completed. The review is not optional — it is a standing discipline rule — and its completion
+  depends on implementing the tick-level logging first.
+  Current aggregate stats (50 days, 16 total trades, 0.32 trades/day): 37.5% win rate, avg win
+  +0.43R, avg loss -0.85R. Both tracked setups remain in negative expectancy at small sample:
+  ORB: 5 trades, 3 wins, -0.20R expectancy (losses routinely exceed the defined stop; wins small).
+  Momentum: 1 trade, 0 wins, -0.975R expectancy. These samples are too small to distinguish bad
+  parameters from bad luck or from a broken execution loop — all three explanations remain consistent
+  with the data at 16 trades over 50 days. At 0.32 trades/day, the system is generating trade data
+  at approximately one-quarter the rate needed for meaningful statistical learning.
+  No new durable rules added to standing sections tonight. The evidence is too thin and the
+  infrastructure ambiguity too large to justify parameter changes or new entry rules from a single
+  full-window no-trade Monday. The two highest-priority actions before the next session, in order:
+  (1) Implement tick-level gate logging — every tick, regardless of outcome, must write a timestamped
+  record of what was evaluated and why it was passed or blocked. (2) Conduct the overdue setup-mix
+  review — once logs exist, categorize the 16 zero-trade sessions by failure mode.
 - 2026-08-28: No tuning. Tuner unfrozen ("ok to tune", 49 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Zero trades today (fifteenth consecutive no-trade session;
   last realized P&L: 2026-08-07 +$40.50 NFLX). Today's zero-trade outcome has more legitimate

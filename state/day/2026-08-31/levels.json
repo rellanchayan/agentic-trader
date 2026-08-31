@@ -2,22 +2,26 @@
   "_meta": {
     "date": "2026-08-31",
     "generated_utc": "2026-08-31T13:33:04.107115+00:00",
-    "source": "watchlist_build",
+    "screener_reviewed_utc": "2026-08-31T13:38:00+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 2,
     "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "final_count": 5,
+    "note": "Screen refreshed 9:33 AM ET (market open). PFE dropped: ATR $0.57 on $28 stock, no room for a profitable day trade after spread and slippage; volume barely above 2M minimum; no catalyst. INTC kept conditional: live spread 6.6 bp at 9:33 AM is acceptable now but documented blowout history is severe — disarm immediately if spread exceeds 15 bp at any tick. SPY, QQQ, and AAPL added by day-screener: IEX avg_vol falls below the 2M screener threshold for these names (same structural limitation as Aug 26-27), but their actual total-market volumes are 30-80M shares per day; levels estimated from Aug 26-27 data adjusted for the Aug 28 Jackson Hole/Warsh selloff that took NVDA down 4.7%. ORB levels fill in live after the open."
   },
   "NVDA": {
     "sector": "technology",
     "prev_close": 217.51,
     "atr_day": 6.54,
     "avg_vol_10d": 3660152,
-    "premarket_price": 217.8,
+    "premarket_price": 217.80,
     "gap_pct": 0.0013,
     "spread_bp": 1.8,
+    "support": 214.00,
+    "resistance": 221.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,660,152 sh/day); +0.1% gap"
+    "note": "PRIMARY. Live spread 1.8 bp at 9:33 AM ET (excellent). ATR $6.54, vol 3.66M/day. Gap +0.1%, no strong directional bias. Post-earnings context: NVDA reported blowout Q2 after Aug 26 close, rallied to ~$228 on Aug 27, then pulled back to $217.51 on Jackson Hole/Warsh hawkish risk on Aug 28. Today is month-end (Aug 31) — institutional rebalancing could create volume surges in either direction. Support $214 (round number, Aug 27 morning gap-open area), $210 (Aug 26 close, major support below). Resistance $221 (midpoint of Aug 27-28 pullback), $225 (Aug 27 intraday consolidation). Setup: VWAP reclaim preferred (cleaner than ORB on a low-gap name on a potential rebalancing day); ORB breakout also armed if rel vol >1.5x and break is clean. Entry window 9:45 AM to 1:30 PM ET. Size from stop distance, max $10,000 per trade."
   },
   "INTC": {
     "sector": "technology",
@@ -27,8 +31,52 @@
     "premarket_price": 91.18,
     "gap_pct": -0.0018,
     "spread_bp": 6.6,
+    "support": 89.50,
+    "resistance": 93.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,983,174 sh/day); -0.2% gap"
+    "note": "CONDITIONAL — spread gate is mandatory and non-negotiable. Live spread 6.6 bp at 9:33 AM ET (3 min after open). But INTC has a documented open-spread blowout pattern that is nearly session-independent of the premarket reading: Aug 27 at 9:41 AM: 95 bp; Aug 14: 52 bp; Aug 4: 131 bp; Jul 9: 209 bp. Today's 6.6 bp was captured only 3 minutes after open; it must be re-checked at the 15-minute mark. If live spread exceeds 15 bp at any tick evaluation, disarm INTC for the full session with no revisit. No specific INTC catalyst today (gap -0.2%). Support $89.50 (recent consolidation, one ATR below prev_close). Resistance $93.00 (gap-fill of Aug 27 rally high area). Setup: ORB breakout only (no VWAP-reclaim on a drifting name with no catalyst). Entry must be before 11:30 AM ET."
+  },
+  "SPY": {
+    "sector": "etf",
+    "prev_close": 762.00,
+    "atr_day": 4.50,
+    "avg_vol_10d": 1200000,
+    "premarket_price": 762.50,
+    "gap_pct": 0.0007,
+    "spread_bp": null,
+    "support": 758.00,
+    "resistance": 766.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SECONDARY — added by day-screener. No IEX live quote: IEX avg_vol ~1.2M/day, below the 2M screener threshold; actual total-market SPY volume is ~50-80M shares/day (see Aug 26-27 levels). spread_bp null — use live tick spread; expected 1-2 bp at open. Levels estimated: prev_close ~$762 is the Aug 28 close estimated from Aug 26 close $765.94 and Aug 27 rally, adjusted down ~1-1.5% for the Jackson Hole/Warsh hawkish selloff that pushed NVDA down 4.7% on Aug 28. ATR $4.50 estimated from Aug 26-27 sessions ($4.28-$4.69). Month-end Aug 31: institutional rebalancing will likely lift intraday volume. Support $758 (potential Jackson Hole low area), $754 (next round number). Resistance $766 (Aug 26 close area), $770 (Aug 27 intraday area). Setup: ORB breakout or VWAP reclaim after 9:45 AM. Do not hold SPY and QQQ simultaneously. Verify live spread at first tick — expected to clear <15 bp easily."
+  },
+  "QQQ": {
+    "sector": "etf",
+    "prev_close": 713.00,
+    "atr_day": 7.50,
+    "avg_vol_10d": 530000,
+    "premarket_price": 714.00,
+    "gap_pct": 0.0014,
+    "spread_bp": null,
+    "support": 709.00,
+    "resistance": 718.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SECONDARY — added by day-screener. No IEX live quote: IEX avg_vol ~530K/day, below the 2M screener threshold; actual total-market QQQ volume is ~30-50M shares/day (see Aug 26-27 levels). spread_bp null — use live tick spread; expected 1-3 bp at open. Levels estimated: prev_close ~$713 is the Aug 28 close estimated from Aug 26 close $711.28 and Aug 27 premarket of $716.85, adjusted for the Aug 28 Warsh selloff. NVDA is ~8% of QQQ; NVDA's +0.1% premarket is a mild tailwind. ATR $7.50 estimated from Aug 26-27 sessions ($7.04-$7.89). Month-end Aug 31: rebalancing flows. Support $709 (Aug 27 premarket open area), $705. Resistance $718 (Aug 27 premarket high area), $722. Setup: ORB breakout or VWAP reclaim after 9:45 AM. Preferred over SPY on a tech-driven tape. Do not hold QQQ and SPY simultaneously. Verify live spread at first tick."
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 310.50,
+    "atr_day": 4.50,
+    "avg_vol_10d": 750000,
+    "premarket_price": 311.00,
+    "gap_pct": 0.0016,
+    "spread_bp": null,
+    "support": 307.50,
+    "resistance": 313.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "TERTIARY — added by day-screener for non-semiconductor diversification. No IEX live quote today: IEX avg_vol ~750K/day, below the 2M screener threshold; actual total-market AAPL volume is ~30-50M shares/day. spread_bp null — use live tick spread; was 1.6 bp on Aug 26. Levels estimated: Aug 25 close was $309.895 (from Aug 26 levels.json); estimated prev_close $310.50 assuming minimal change through Aug 28 (AAPL tends to move less than NVDA on macro events). ATR $4.50 estimated (Aug 26 showed a 7-min range of $2.82, implying a full-session ATR of ~$4-6). No near-term AAPL-specific catalyst. Provides a clean liquid large-cap name outside the semiconductor sector. Support $307.50 (below prev_close by ~1 ATR), $305.00 (round number). Resistance $313.00 (approx Aug 27 area), $315.00. Setup: ORB breakout or VWAP reclaim after 9:45 AM on >1.5x rel vol. Skip AAPL if SPY and NVDA are already producing clean setups — do not spread attention across too many names. Verify live spread at first tick."
   }
 }

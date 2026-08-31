@@ -1,0 +1,56 @@
+{
+  "tick_time_et": "2026-08-31T10:39:57-04:00",
+  "action": "WAIT",
+  "positions_managed": [],
+  "entry_evaluated": [
+    {
+      "ticker": "NVDA",
+      "signal": "orb_breakout=true, above_vwap=true",
+      "spread_bp": 0.9,
+      "rel_volume": 1.11,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_vol 1.11x below 1.5x minimum; risk-off day requires 2.0x for ORB breakout"
+    },
+    {
+      "ticker": "QQQ",
+      "signal": "above_vwap=false, orb_breakout=false",
+      "spread_bp": 0.8,
+      "rel_volume": 1.18,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_vol 1.18x below 1.5x minimum; no setup triggered (below VWAP, no ORB break)"
+    },
+    {
+      "ticker": "INTC",
+      "signal": "above_vwap=false, orb_breakout=false",
+      "spread_bp": 2.2,
+      "rel_volume": 0.94,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_vol 0.94x below 1.5x minimum; no setup"
+    },
+    {
+      "ticker": "AAPL",
+      "signal": "above_vwap=false, orb_breakout=false",
+      "spread_bp": 1.0,
+      "rel_volume": 1.45,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_vol 1.45x barely below 1.5x minimum; no setup triggered"
+    },
+    {
+      "ticker": "SPY",
+      "signal": "above_vwap=false, orb_breakout=false",
+      "spread_bp": 0.4,
+      "rel_volume": 1.18,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_vol 1.18x below 1.5x minimum; no setup"
+    }
+  ],
+  "reason_for_no_trade": "No names clear the 1.5x relative-volume gate. NVDA has ORB breakout and is above VWAP, but rel_vol=1.11x — risk-off day requires 2.0x for ORB. All other names are below VWAP with no active setups. Entry window closes at 11:00 AM ET; 21 minutes remain.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "loss_budget_remaining": 3000.0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

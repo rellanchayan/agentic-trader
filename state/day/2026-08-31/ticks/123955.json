@@ -1,0 +1,25 @@
+{
+  "ts_et": "2026-08-31T12:39:55-04:00",
+  "minutes_since_open": 189,
+  "action": "WAIT",
+  "reason": "Entry window closed at 11:00 AM ET per day plan. No positions to manage. No new entries permitted.",
+  "positions": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "candidates_evaluated": {
+    "NVDA": "SKIP — entry window closed",
+    "AAPL": "SKIP — entry window closed",
+    "INTC": "SKIP — entry window closed",
+    "QQQ": "SKIP — entry window closed",
+    "SPY": "SKIP — entry window closed"
+  },
+  "market_summary": {
+    "NVDA": {"last": 219.81, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.76, "spread_bp": 0.9},
+    "QQQ": {"last": 714.385, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.9, "spread_bp": 0.4},
+    "INTC": {"last": 89.735, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.56, "spread_bp": 1.1},
+    "SPY": {"last": 765.41, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.83, "spread_bp": 0.4},
+    "AAPL": {"last": 313.105, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.02, "spread_bp": 1.6}
+  },
+  "gates_checked": ["entry_window_closed_at_1100_ET"],
+  "order_submitted": false
+}

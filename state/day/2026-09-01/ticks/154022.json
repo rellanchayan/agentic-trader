@@ -1,0 +1,25 @@
+{
+  "t": "15:40",
+  "timestamp_et": "2026-09-01T15:40:22-04:00",
+  "action": "HOLD",
+  "reason": "Past no-new-entries cutoff (15:30 ET). Flat. Flatten window starts 15:50 ET.",
+  "positions": 0,
+  "open_orders": 0,
+  "trades_used": 2,
+  "day_pnl": -19.22,
+  "loss_budget_remaining": 2980.78,
+  "market_snapshot": {
+    "AAPL": {"last": 325.46, "above_vwap": true, "rel_volume": 1.4, "note": "Not on today's watchlist"},
+    "INTC": {"last": 88.435, "above_vwap": true, "rel_volume": 0.64, "note": "Fails 1.5x rel vol gate"},
+    "NVDA": {"last": 217.10, "above_vwap": false, "rel_volume": 0.76, "note": "Below VWAP"},
+    "QQQ": {"last": 707.09, "above_vwap": false, "rel_volume": 1.16, "note": "Below VWAP; one-attempt rule applies"},
+    "SPY": {"last": 760.83, "above_vwap": false, "rel_volume": 1.05, "note": "Below VWAP"}
+  },
+  "gates_checked": {
+    "halt_file": "absent",
+    "day_stop": false,
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "next_action": "Flatten window at 15:50 ET — /flatten-close skill"
+}

@@ -2,10 +2,12 @@
   "_meta": {
     "date": "2026-09-01",
     "generated_utc": "2026-09-01T13:32:44.162834+00:00",
-    "source": "watchlist_build",
+    "screener_reviewed_utc": "2026-09-01T13:45:00+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 2,
     "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "final_count": 5,
+    "note": "Screener produced 2 names (NVDA, INTC) — both semiconductor/technology. Day-screener expanded to 5 by adding QQQ, SPY, AAPL per playbook rule requiring non-semiconductor substitutes when the screen is tech-concentrated and primary candidates face documented spread-gate risk. QQQ, SPY, AAPL levels estimated from Aug 31 screener data (IEX avg_vol below 2M threshold for all three; actual total-market volumes are 30–80M shares/day). Post-holiday reopening: mandatory no-entry window before 9:45 AM ET (playbook rule). ISM Manufacturing expected at 10:00 AM ET — avoid new entries 9:55–10:10 AM ET. September is historically the weakest calendar month for equities and this is the first session of September; VWAP reclaim is the primary setup for all names today; ORB breakouts require 2.0x relative volume. Iran/oil geopolitical backdrop from Aug 31 remains active — risk-off tilt for the full session. ORB levels fill in live after the open."
   },
   "NVDA": {
     "sector": "technology",
@@ -15,9 +17,12 @@
     "premarket_price": 215.69,
     "gap_pct": -0.0013,
     "spread_bp": 4.6,
+    "support": 214.00,
+    "resistance": 220.00,
+    "setup": "vwap_reclaim",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,566,733 sh/day); -0.1% gap"
+    "note": "PRIMARY — real screener data. Spread 4.6 bp (excellent, well inside 15 bp gate). Flat premarket (-0.1%), no new catalyst today. Support $214.00 (held as intraday floor on Aug 31 per that session's screener). Resistance $220.00 (round number; prior Aug 31 resistance was $221 — using $220 as the actionable level). ATR $6.59. Setup: VWAP reclaim primary — wait for dip to VWAP after 9:45 AM, confirmed candle hold, enter long with stop below VWAP, target 1.5x risk. ORB secondary only if rel vol is at or above 2.0x (elevated bar for post-holiday September opener). Do not enter any trade before 9:45 AM ET and avoid 9:55–10:10 AM (ISM Manufacturing). Max size $10,000."
   },
   "INTC": {
     "sector": "technology",
@@ -27,8 +32,56 @@
     "premarket_price": 86.78,
     "gap_pct": 0.0013,
     "spread_bp": 5.8,
+    "support": 84.00,
+    "resistance": 89.50,
+    "setup": "vwap_reclaim",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,726,616 sh/day); +0.1% gap"
+    "note": "CONDITIONAL — real screener data. Premarket spread 5.8 bp is acceptable, but INTC has a severe documented open-spread blowout history that is independent of the premarket reading: Aug 27 at 9:41 AM was 95 bp, Aug 14 was 52 bp, Aug 4 was 131 bp, Jul 9 was 209 bp. Treat the 5.8 bp premarket figure as meaningless; verify the live spread at every tick. INTC dropped approximately 5% on Aug 31 (closed $86.67 vs a prior open area near $91), which is one full ATR of decline in a single session. Today's premarket is flat at $86.78 — the stock is consolidating after a sharp down day with no recovery catalyst visible. Support $84.00 (round number, approximately 0.6 ATR below the Aug 31 close; the next meaningful floor after the Aug 31 breakdown). Resistance $89.50 (the prior support area that was violated on Aug 31 now acts as overhead resistance). Setup: VWAP reclaim only — no ORB on a stock coming off a one-ATR down day without a recovery catalyst; the tape must show stabilization and a VWAP hold before any long entry is justified. If the live spread exceeds 15 bp at any tick, disarm INTC for the full session with no revisit. If INTC is disarmed, shift immediately to QQQ as the primary candidate. Max size $7,500."
+  },
+  "QQQ": {
+    "sector": "etf",
+    "prev_close": 712.00,
+    "atr_day": 7.50,
+    "avg_vol_10d": 530000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": 707.00,
+    "resistance": 718.00,
+    "setup": "vwap_reclaim",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SECONDARY — added by day-screener. No IEX live quote (IEX avg_vol ~530K/day falls below the 2M screener threshold); actual total-market QQQ volume is 30–50M shares/day. Levels estimated from Aug 31 screener: Aug 31 prev_close was $713 and premarket was $714; estimating Aug 31 close at ~$712 given the mild risk-off session that produced zero trades. ATR $7.50 carried from Aug 31 screener. Support $707 (Aug 31 screener had $709; nudged down slightly for September seasonal weakness bias). Resistance $718 (unchanged from Aug 31 screener). spread_bp null — use live tick spread; expected 1–3 bp at open for this ETF. Setup: VWAP reclaim primary. QQQ is the most liquid instrument on this watchlist and the preferred fallback if NVDA or INTC trip their spread gates at the open. ORB secondary only at 2.0x relative volume. Do not hold QQQ and SPY simultaneously. No entries before 9:45 AM ET; avoid 9:55–10:10 AM (ISM Manufacturing). Max size $10,000."
+  },
+  "SPY": {
+    "sector": "etf",
+    "prev_close": 760.00,
+    "atr_day": 4.50,
+    "avg_vol_10d": 1200000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": 756.00,
+    "resistance": 765.00,
+    "setup": "vwap_reclaim",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SECONDARY — added by day-screener. No IEX live quote (IEX avg_vol ~1.2M/day falls below the 2M screener threshold); actual total-market SPY volume is 50–80M shares/day. Levels estimated from Aug 31 screener: Aug 31 prev_close was $762 (the Aug 28 close); estimating Aug 31 close at ~$760 given the mild risk-off session and -0.1% futures at the open. ATR $4.50 carried from Aug 31 screener. Support $756 (adjusted from Aug 31 screener's $758 to account for possible continued September weakness). Resistance $765 (round number near the Aug 31 resistance of $766). spread_bp null — use live tick spread; expected 1–2 bp at open. Setup: VWAP reclaim primary. SPY is less preferred than QQQ on a tech-driven tape but is the more diversified instrument when energy names (surging on Iran/oil) distort the Nasdaq reading. If Iran/oil headlines escalate during the session, SPY may show less dislocation than QQQ. Do not hold SPY and QQQ simultaneously. No entries before 9:45 AM ET; avoid 9:55–10:10 AM (ISM Manufacturing). Max size $10,000."
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 309.50,
+    "atr_day": 4.50,
+    "avg_vol_10d": 750000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": 306.00,
+    "resistance": 313.00,
+    "setup": "vwap_reclaim",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "TERTIARY — added by day-screener for non-semiconductor large-cap diversification. No IEX live quote (IEX avg_vol ~750K/day falls below the 2M screener threshold); actual total-market AAPL volume is 30–50M shares/day. Levels estimated from Aug 31 screener: Aug 31 prev_close was $310.50; estimating Aug 31 close at ~$309.50 given mild risk-off conditions. ATR $4.50 carried from Aug 31 screener. Support $306.00 (round number below the $307.50 level from Aug 31 screener). Resistance $313.00 (unchanged from Aug 31 screener). No near-term AAPL-specific catalyst. spread_bp null — use live tick spread; was 1.6 bp on Aug 26. Setup: VWAP reclaim primary. AAPL is the tiebreaker candidate — only evaluate if NVDA, INTC, QQQ, and SPY have all either been traded or failed their entry gates. Do not spread attention across five names simultaneously; the priority order is QQQ first, then NVDA, then INTC (if spread is clean), then SPY, then AAPL last. No entries before 9:45 AM ET; avoid 9:55–10:10 AM (ISM Manufacturing). Max size $7,500."
   }
 }

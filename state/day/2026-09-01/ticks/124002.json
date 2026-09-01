@@ -1,0 +1,52 @@
+{
+  "timestamp_et": "2026-09-01T12:40:02-04:00",
+  "tick_label": "12:40",
+  "action": "HOLD",
+  "reason": "Position management only. QQQ is below VWAP ($708.59 vs $709.15) — VWAP reclaim thesis weakened but formal stop at $707.30 not triggered. No new entries: past 11:00 AM compressed-window cutoff per today's plan. All other names failed gate checks.",
+  "position_review": {
+    "ticker": "QQQ",
+    "qty": 10,
+    "avg_entry": 710.156,
+    "current_price": 708.59,
+    "current_bid": 708.62,
+    "current_ask": 708.66,
+    "vwap": 709.15,
+    "above_vwap": false,
+    "stop": 707.30,
+    "target": 716.60,
+    "buffer_to_stop_per_share": 1.29,
+    "max_additional_loss_usd": 12.90,
+    "unrealized_pl": -15.13,
+    "unrealized_plpc": -0.00213,
+    "thesis_status": "WEAKENED — price back below VWAP after reclaim; formal stop not hit",
+    "action": "HOLD to defined stop",
+    "broker_stop_in_place": false,
+    "broker_stop_note": "No broker stop placed (LIMIT+DAY constraint); stop enforced manually at $707.30"
+  },
+  "new_entry_scan": {
+    "window_open": false,
+    "reason": "Past 11:00 AM compressed-window cutoff; no new entries for remainder of session",
+    "names_checked": {
+      "AAPL": "Not on today's watchlist — disarmed regardless of rel vol (2.08x)",
+      "NVDA": "Rel vol 0.95x — fails 1.5x gate",
+      "INTC": "Rel vol 0.89x — fails 1.5x gate",
+      "SPY": "Below VWAP, rel vol 1.22x — fails both",
+      "QQQ": "One-attempt-per-name rule — already in position"
+    }
+  },
+  "safety_gate": {
+    "verdict": "PROCEED",
+    "equity": 999472.52,
+    "day_pnl": -15.13,
+    "loss_budget_remaining": 2984.74,
+    "halt_trading_file": false,
+    "day_stop_active": false
+  },
+  "orders_submitted": [],
+  "day_summary": {
+    "trades_used": 1,
+    "trades_remaining": 19,
+    "positions_open": 1,
+    "position_slots_remaining": 7
+  }
+}

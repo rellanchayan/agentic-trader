@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260901-103954-QQQ",
+  "created_at_utc": "2026-09-01T14:39:54Z",
+  "ticker": "QQQ",
+  "side": "BUY",
+  "qty": 10,
+  "limit_price": 710.4,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "QQQ VWAP reclaim confirmed. Prior tick (09:42) flagged QQQ below VWAP at 705.81 (VWAP 706.95) as the candidate; now at 10:39 price is 709.62 above VWAP 707.57, exactly as the day plan predicted (ISM/JOLTS resolved, selling exhaustion into 10:00 AM event, reclaim during 10:10-11:00 AM window). ORB high 708.03 also cleared. Rel vol 1.87x (passes 1.5x gate). Spread 0.6 bp (passes 5 bp ETF gate). NVDA and INTC both fail rel-vol gate (1.26x and 1.06x respectively). QQQ is the only unconditionally armed candidate per the day plan. Risk-off sizing applied ($7,500 cap).",
+  "risk": "Thesis fails if price drops back below VWAP (707.57). Hard stop at 707.30. Max loss on 10 shares: $31. Risk-off macro environment (yields 4.78%, oil $92, Iran) could reverse the post-ISM recovery. Only 21 minutes of entry window remaining \u2014 limited time for trade to develop.",
+  "strategy": "intraday",
+  "setup": "vwap_reclaim",
+  "stop": 707.3,
+  "target": 716.6,
+  "quote_age_sec": 0.3,
+  "spread_bp": 0.6,
+  "status": "submitted",
+  "alpaca_order_id": "12504259-2bc0-4270-863c-6b8a365a3702",
+  "client_order_id": "T-20260901-103954-QQQ",
+  "submitted_at_utc": "2026-09-01T14:45:41.837873+00:00"
+}

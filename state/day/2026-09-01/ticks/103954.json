@@ -1,0 +1,109 @@
+{
+  "tick_time_et": "10:39:54",
+  "tick_hhmmss": "103954",
+  "date": "2026-09-01",
+  "timestamp_utc": "2026-09-01T14:39:54Z",
+  "session_type": "COMPRESSED-WINDOW",
+  "regime": "RISK-OFF",
+
+  "positions_managed": {
+    "action": "none",
+    "note": "No positions held at tick start."
+  },
+
+  "candidate_evaluation": {
+    "entry_window_open": true,
+    "entry_window_closes_et": "11:00",
+    "minutes_remaining_in_window": 21,
+    "AAPL": {
+      "outcome": "NOT IN PLAN",
+      "note": "Not on today's watchlist. Plan says do not reach outside listed names."
+    },
+    "NVDA": {
+      "last": 217.75,
+      "vwap": 216.79,
+      "above_vwap": true,
+      "orb_high": 217.24,
+      "orb_breakout": true,
+      "spread_bp": 0.9,
+      "rel_volume": 1.26,
+      "spread_gate": "PASS (0.9 bp < 15 bp)",
+      "rel_vol_gate": "FAIL (1.26x < 1.5x minimum)",
+      "outcome": "BLOCKED — rel vol below 1.5x threshold",
+      "note": "Plan: evaluate-only, spread-gated. Spread passes (0.9 bp) but rel vol fails (1.26x < 1.5x). No entry."
+    },
+    "INTC": {
+      "last": 86.91,
+      "vwap": 86.56,
+      "above_vwap": true,
+      "orb_high": 87.04,
+      "orb_breakout": false,
+      "spread_bp": 1.1,
+      "rel_volume": 1.06,
+      "spread_gate": "PASS (1.1 bp < 15 bp)",
+      "rel_vol_gate": "FAIL (1.06x < 1.5x minimum)",
+      "outcome": "BLOCKED — rel vol below 1.5x threshold",
+      "note": "Plan: evaluate-only, spread-gated. Spread passes (1.1 bp) but rel vol fails badly (1.06x). No entry."
+    },
+    "QQQ": {
+      "last": 709.62,
+      "vwap": 707.57,
+      "above_vwap": true,
+      "orb_high": 708.03,
+      "orb_breakout": true,
+      "spread_bp": 0.6,
+      "rel_volume": 1.87,
+      "quote_age_sec": 0.3,
+      "spread_gate": "PASS (0.6 bp < 5 bp ETF standard)",
+      "rel_vol_gate": "PASS (1.87x >= 1.5x)",
+      "above_vwap_gate": "PASS",
+      "time_gate": "PASS (10:39 AM, window 10:10-11:00 AM)",
+      "rr_gate": "PASS (entry 710.40, stop 707.30, target 716.60 — risk $3.10, reward $6.20 = 2:1)",
+      "outcome": "TRADE — BUY submitted",
+      "setup": "vwap_reclaim",
+      "prior_context": "At 09:42, QQQ was at 705.81 below VWAP 706.95; flagged as VWAP reclaim candidate for post-10:10 AM evaluation. Now at 10:39, QQQ has reclaimed VWAP and broken above ORB high — exactly the ISM-relief-recovery scenario described in the day plan."
+    }
+  },
+
+  "trade_action": {
+    "type": "BUY",
+    "ticker": "QQQ",
+    "setup": "vwap_reclaim",
+    "trade_id": "T-20260901-103954-QQQ",
+    "alpaca_order_id": "12504259-2bc0-4270-863c-6b8a365a3702",
+    "alpaca_status": "PENDING_NEW",
+    "qty": 10,
+    "limit_price": 710.40,
+    "stop": 707.30,
+    "target": 716.60,
+    "risk_per_share": 3.10,
+    "reward_per_share": 6.20,
+    "rr_ratio": 2.0,
+    "total_deployment_usd": 7104.0,
+    "max_loss_usd": 31.0,
+    "target_gain_usd": 62.0,
+    "constitution_result": "PASS",
+    "daytrade_guard_result": "PASS",
+    "submitted": true
+  },
+
+  "companion_stop_note": "Companion stop order (SELL 10 QQQ limit 707.30) NOT yet placed — per protocol, will be placed on next tick once fill is confirmed by --reconcile. Do not consider position managed until stop is placed.",
+
+  "open_orders_cancelled": [],
+
+  "account_snapshot": {
+    "equity": 999487.65,
+    "cash": 999487.65,
+    "buying_power": 3997950.60,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used": 1,
+    "trades_remaining": 19,
+    "position_slots_remaining": 8
+  },
+
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

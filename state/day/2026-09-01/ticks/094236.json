@@ -1,0 +1,68 @@
+{
+  "tick_time_et": "09:42:36",
+  "date": "2026-09-01",
+  "action": "HOLD",
+  "reason": "Pre-data mandatory wait window. Post-holiday rule prohibits entries before 9:45 AM ET. ISM Manufacturing + JOLTS at 10:00 AM ET extend the restriction to 10:10 AM ET. No entries until 10:10 AM.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trades_submitted": [],
+  "market_snapshot": {
+    "QQQ": {
+      "last": 705.805,
+      "vwap": 706.95,
+      "above_vwap": false,
+      "rel_volume": 3.79,
+      "spread_bp": 3.8,
+      "orb_high": 708.03,
+      "orb_low": 705.65,
+      "note": "Below VWAP. Strong rel vol. VWAP reclaim candidate — re-evaluate at 10:10 AM after ISM/JOLTS absorbs."
+    },
+    "NVDA": {
+      "last": 215.74,
+      "vwap": 216.09,
+      "above_vwap": false,
+      "rel_volume": 2.42,
+      "spread_bp": 1.4,
+      "orb_high": 217.24,
+      "orb_low": 215.12,
+      "note": "Spread 1.4 bp — first clean reading in 3 sessions (blew out to 51, 75 bp last two sessions). Below VWAP. Evaluate at 10:10 AM only if spread remains tight."
+    },
+    "INTC": {
+      "last": 85.95,
+      "vwap": 86.56,
+      "above_vwap": false,
+      "rel_volume": 1.65,
+      "spread_bp": 4.7,
+      "note": "Below VWAP. Spread currently clean (4.7 bp), but historical blowout history — evaluate live spread at 10:10 AM."
+    },
+    "SPY": {
+      "last": 761.625,
+      "vwap": 761.8,
+      "above_vwap": false,
+      "rel_volume": 2.22,
+      "spread_bp": 1.4,
+      "note": "Below VWAP. Not on today's watchlist for entries."
+    },
+    "AAPL": {
+      "last": 318.785,
+      "vwap": 317.12,
+      "above_vwap": true,
+      "rel_volume": 3.17,
+      "spread_bp": 18.8,
+      "note": "Above VWAP but spread 18.8 bp exceeds 15 bp gate. Not on today's watchlist."
+    }
+  },
+  "gate_checks": {
+    "halt_file": "absent (ok)",
+    "day_stop": "not tripped (ok)",
+    "time_gate": "BLOCKED — 9:42 AM ET is before the 10:10 AM mandatory entry window (post-holiday + ISM/JOLTS)",
+    "positions_to_manage": "none",
+    "open_orders_to_cancel": "none"
+  },
+  "next_evaluation_target": "10:10 AM ET — QQQ VWAP reclaim primary, NVDA and INTC secondary if spreads hold",
+  "day_pnl": 0.0,
+  "account_equity": 999487.65,
+  "positions_open": 0,
+  "trades_used_today": 0,
+  "loss_budget_remaining": 3000.0
+}

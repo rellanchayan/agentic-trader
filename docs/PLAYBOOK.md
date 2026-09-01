@@ -219,6 +219,34 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-01: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
+  losing streak" (51 days of history, drawdown 0.029%). No parameter was changed. This is the
+  correct outcome: the system is edge-negative at -0.429R all-time expectancy across 18 trades,
+  and the freeze rule exists precisely to prevent chasing noise while losing.
+  Today: 1 QQQ VWAP reclaim round-trip, entry 10:39 AM, exit 1:40 PM, -$19.22, -0.673R. NVDA
+  failed the rel-vol gate again (1.26x vs 1.5x minimum); INTC failed again (1.06x). QQQ was the
+  sole qualifying name for the session.
+  Exit discipline worked: position was closed at $708.234 when the thesis broke (QQQ had been
+  below VWAP for 60+ minutes), rather than holding to the hard stop at $707.30. This saved
+  approximately $9.34 vs. the mechanical stop. Proactive thesis monitoring is producing the
+  intended behavior — exits triggered by thesis failure rather than by the last-resort stop.
+  All-time per-setup stats (18 trades total, 33.3% win rate, avg win +0.38R, avg loss -0.834R):
+  ORB: 5 trades, 3 wins, -0.199R expectancy. Momentum: 1 trade, 0 wins, -0.975R expectancy.
+  VWAP reclaim: 1 trade, 0 wins, -0.673R expectancy. All three setups remain in negative
+  expectancy. The sample sizes for momentum and VWAP reclaim (1 trade each) are far too small to
+  distinguish bad luck from a bad setup. No rule change is warranted for either on one trade.
+  What the freeze means: the tuner will remain frozen as long as the rolling 3-day window is
+  net-negative. To unfreeze, the system needs at least one profitable session in the next three
+  days. "Unfreezing" does not mean tuning will fire — the tuner may also remain inactive after
+  the freeze lifts if no rule threshold is crossed. The freeze is not a problem to solve by
+  adjusting parameters; it is the system working as designed. Do not loosen entry gates to
+  manufacture wins.
+  No new durable rules added to standing sections tonight. One observation worth tracking but not
+  yet codifying: the thesis-break exit (monitoring whether price holds VWAP for 60+ minutes
+  rather than waiting for the hard stop) consistently adds value vs. the mechanical stop — but
+  this is based on one VWAP reclaim trade. Revisit after 3+ VWAP reclaim exits to see if the
+  pattern holds before writing it as a rule. Tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
 - 2026-08-31: No tuning. Tuner unfrozen ("ok to tune", 50 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

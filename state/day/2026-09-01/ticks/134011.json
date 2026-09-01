@@ -1,0 +1,89 @@
+{
+  "tick_time_et": "13:40",
+  "tick_timestamp_utc": "2026-09-01T17:40:11Z",
+  "verdict_from_preflight": "PROCEED",
+  "account": {
+    "equity": 999468.59,
+    "cash": 992386.09,
+    "buying_power": 3989375.36,
+    "daytrade_count": 0
+  },
+  "day_pnl": -19.06,
+  "loss_budget_remaining": 2980.79,
+  "positions_before": [
+    {
+      "ticker": "QQQ",
+      "qty": 10,
+      "avg_entry": 710.156,
+      "current_price": 708.23,
+      "unrealized_pl": -19.26
+    }
+  ],
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "QQQ": {
+      "last": 708.23,
+      "bid": 708.22,
+      "ask": 708.26,
+      "vwap": 709.04,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.31,
+      "spread_bp": 0.6,
+      "quote_age_sec": 0.6
+    },
+    "NVDA": {
+      "last": 218.32,
+      "above_vwap": true,
+      "rel_volume": 0.85,
+      "spread_bp": 1.4
+    },
+    "INTC": {
+      "last": 88.515,
+      "above_vwap": true,
+      "rel_volume": 0.75,
+      "spread_bp": 2.3
+    },
+    "AAPL": {
+      "last": 324.63,
+      "above_vwap": true,
+      "rel_volume": 1.76,
+      "spread_bp": 17.3
+    },
+    "SPY": {
+      "last": 761.915,
+      "above_vwap": false,
+      "rel_volume": 1.12,
+      "spread_bp": 0.7
+    }
+  },
+  "decision": "SELL",
+  "decision_reason": "VWAP reclaim thesis broken. QQQ was bought at 10:39 on VWAP reclaim setup (price above VWAP, confirmed hold). Price has been below VWAP ($709.04) since before the 12:40 PM tick and is still below at 13:40 ($708.23). The premise — price reclaimed VWAP and would trend toward target — is no longer valid. Per the rules: thesis broke means SELL. Target $716.60 is $8.37 away with 130 minutes to close; trajectory does not support holding for target. Hard stop at $707.30 is only $0.93 below current price. Exiting at thesis-break to limit further loss rather than waiting for the hard stop to trigger.",
+  "new_entries_considered": "None. Entry window (10:10-11:00 AM) is closed. No new buys considered. Position management only.",
+  "gate_evaluations": {
+    "AAPL": "SKIP — not on today's watchlist (plan only covers QQQ, NVDA, INTC). Spread 17.3 bp also exceeds 15 bp stock max.",
+    "NVDA": "SKIP — past 11:00 AM entry window cutoff. Rel vol 0.85x (below 1.5x gate). Not evaluated for new entry.",
+    "INTC": "SKIP — past 11:00 AM entry window cutoff. Rel vol 0.75x (below 1.5x gate). Not evaluated for new entry.",
+    "SPY": "SKIP — past 11:00 AM entry window cutoff. Not on today's watchlist.",
+    "QQQ": "SELL (position management) — thesis-break exit submitted."
+  },
+  "action_taken": {
+    "type": "SELL",
+    "ticker": "QQQ",
+    "qty": 10,
+    "limit_price": 707.51,
+    "order_type": "LIMIT",
+    "time_in_force": "DAY",
+    "alpaca_order_id": "80a0182d-a492-4c13-a2fa-f439e3bbe039",
+    "constitution_check": "PASS",
+    "daytrade_guard_check": "PASS",
+    "submitted": true,
+    "status": "PENDING_NEW"
+  },
+  "fill_status": "PENDING — do not claim filled until --reconcile confirms",
+  "trades_used_after": 2,
+  "positions_after": "PENDING — 10 QQQ sell order open"
+}

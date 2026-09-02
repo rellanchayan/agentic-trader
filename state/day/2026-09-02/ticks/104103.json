@@ -1,0 +1,67 @@
+{
+  "tick_time_et": "10:41:03",
+  "tick_time_utc": "2026-09-02T14:41:03Z",
+  "minutes_since_open": 71,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entries_evaluated": [
+    {
+      "ticker": "NVDA",
+      "setup_considered": "orb",
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 1.67,
+      "spread_bp": 0.9,
+      "gate_result": "FAIL",
+      "gate_reason": "MIXED/RANGE day requires 2.0x rel_volume for ORB breakout; 1.67x < 2.0x. Plan explicit: disarm if rel_vol < 2.0x."
+    },
+    {
+      "ticker": "INTC",
+      "setup_considered": "none",
+      "gate_result": "FAIL",
+      "gate_reason": "DISARMED for full session per plan: sector-wide semiconductor selling, spread blowout history."
+    },
+    {
+      "ticker": "PFE",
+      "setup_considered": "orb",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.79,
+      "spread_bp": 3.5,
+      "last": 28.79,
+      "orb_high": 28.955,
+      "gate_result": "FAIL",
+      "gate_reason": "No ORB breakout triggered: price $28.79 is $0.165 below ORB high $28.955. Setup not triggered."
+    },
+    {
+      "ticker": "QQQ",
+      "setup_considered": "vwap_reclaim",
+      "above_vwap": true,
+      "rel_volume": 1.55,
+      "spread_bp": 0.4,
+      "last": 708.96,
+      "vwap": 707.0,
+      "gate_result": "FAIL",
+      "gate_reason": "Plan requires two confirmed ticks above VWAP before entry. This is tick 1 of the session (recent_ticks empty). Cannot confirm two-tick rule. Also: QQQ is $1.96 above VWAP with orb_breakout true — unclear if this is fresh VWAP reclaim or continuation. Wait for second tick to confirm."
+    },
+    {
+      "ticker": "SPY",
+      "setup_considered": "observe_only",
+      "rel_volume": 1.16,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_volume 1.16x fails 1.5x minimum gate. Plan status: OBSERVE only."
+    },
+    {
+      "ticker": "AAPL",
+      "setup_considered": "none",
+      "gate_result": "FAIL",
+      "gate_reason": "Not in today's watchlist."
+    }
+  ],
+  "order_submitted": false,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used": 0,
+  "position_slots_used": 0,
+  "note": "No positions to manage. All candidates evaluated: NVDA fails MIXED/RANGE 2.0x rel-vol gate (1.67x), INTC disarmed, PFE below ORB high, QQQ cannot satisfy two-tick VWAP confirmation on first tick of session, SPY fails rel-vol gate. Holding flat. Will re-evaluate next tick — QQQ VWAP reclaim may be actionable if rel_vol holds and price remains above VWAP."
+}

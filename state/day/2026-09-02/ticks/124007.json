@@ -1,0 +1,97 @@
+{
+  "tick_id": "2026-09-02T124007",
+  "timestamp_et": "2026-09-02T12:40:07-04:00",
+  "minutes_since_open": 190,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_orders": [],
+  "entry_windows_open": false,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "day_pnl": 0.0,
+  "budget": {
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "gate_sweep": {
+    "NVDA": {
+      "status": "BLOCKED",
+      "reasons": [
+        "rel_vol 1.59x < 2.0x required for MIXED/RANGE ORB",
+        "ORB entry window closed at 11:00 AM ET (now 12:40 PM)"
+      ],
+      "last": 226.71,
+      "rel_volume": 1.59,
+      "spread_bp": 1.3,
+      "above_vwap": true,
+      "orb_breakout": true
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "reasons": [
+        "Semiconductor sector disarm active all session per day plan",
+        "rel_vol 0.7x well below 1.5x minimum"
+      ],
+      "last": 90.04,
+      "rel_volume": 0.7,
+      "spread_bp": 1.1,
+      "above_vwap": true,
+      "orb_breakout": true
+    },
+    "PFE": {
+      "status": "BLOCKED",
+      "reasons": [
+        "rel_vol 1.1x < 1.5x minimum",
+        "below VWAP ($28.875 vs VWAP $28.88)",
+        "ORB high ($28.955) not broken",
+        "entry window closed at 11:00 AM ET"
+      ],
+      "last": 28.875,
+      "rel_volume": 1.1,
+      "spread_bp": 3.5,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "QQQ": {
+      "status": "BLOCKED",
+      "reasons": [
+        "rel_vol 1.01x < 1.5x minimum",
+        "VWAP reclaim entry window closed at 11:00 AM ET (now 12:40 PM)"
+      ],
+      "last": 708.575,
+      "rel_volume": 1.01,
+      "spread_bp": 0.7,
+      "above_vwap": true,
+      "orb_breakout": true
+    },
+    "SPY": {
+      "status": "OBSERVE_ONLY",
+      "reasons": [
+        "Observe-only per day plan",
+        "rel_vol 0.79x well below 1.5x minimum"
+      ],
+      "last": 765.14,
+      "rel_volume": 0.79,
+      "spread_bp": 0.4,
+      "above_vwap": true,
+      "orb_breakout": true
+    },
+    "AAPL": {
+      "status": "NOT_ON_WATCHLIST",
+      "reasons": [
+        "Not in day plan watchlist",
+        "rel_vol 1.34x < 1.5x minimum",
+        "ORB high ($328.36) not broken"
+      ],
+      "last": 325.455,
+      "rel_volume": 1.34,
+      "spread_bp": 7.7,
+      "above_vwap": true,
+      "orb_breakout": false
+    }
+  },
+  "regime": "MIXED/RANGE (risk-off lean)",
+  "session_note": "Entry windows closed since 11:00 AM ET. This is the third consecutive HOLD tick. The session remains zero-trade. No names clear any gate; even without the expired windows, NVDA needs 2.0x rel-vol (has 1.59x), QQQ needs 1.5x rel-vol (has 1.01x), PFE is below VWAP and below rel-vol minimum. Flat overnight hold remains forbidden — will watch for in_flatten_window starting ~3:50 PM ET."
+}

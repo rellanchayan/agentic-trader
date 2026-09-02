@@ -2,22 +2,29 @@
   "_meta": {
     "date": "2026-09-02",
     "generated_utc": "2026-09-02T13:30:47.928510+00:00",
-    "source": "watchlist_build",
+    "screener_reviewed_utc": "2026-09-02T13:45:00+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 3,
     "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "final_count": 6,
+    "note": "Screener produced 3 names (NVDA, INTC, PFE). Day-screener retained all three and added QQQ, SPY, AAPL. QQQ and SPY added per playbook rule requiring non-semiconductor substitutes when primary candidates carry documented spread-gate risk. AAPL added on evidence of a strong Sep 1 ORB breakout (ORB high $319.30 cleared, closed $325.46; ATR $6.61 confirmed from live data — screener estimate of $4.50 was stale). QQQ/SPY/AAPL levels anchored on Sep 1 tick-context data (last prices at 3:40 PM ET: QQQ $707.09, SPY $760.83, AAPL $325.46). PFE retained at lowest priority — ATR $0.61 limits intraday R/R; drop first if attention is stretched. Risk-off backdrop carries forward from Sep 1: 10-yr yield ~4.78%, oil ~$92 (Iran tensions), government shutdown risk building. Regime: RISK-OFF. Primary setup for all names: VWAP reclaim. ORB breakout secondary and requires 2.0x relative volume (elevated bar for risk-off). No new entries after 3:30 PM ET. Flat by 3:55 PM ET. ORB levels fill in live after the open."
   },
   "NVDA": {
     "sector": "technology",
     "prev_close": 217.49,
     "atr_day": 6.63,
     "avg_vol_10d": 3872924,
-    "premarket_price": 219.2,
+    "premarket_price": 219.20,
     "gap_pct": 0.0079,
     "spread_bp": 3.2,
+    "bias": "long",
+    "support": 215.00,
+    "resistance": 220.00,
+    "catalyst": "Gapped +0.79% to $219.20 on no specific catalyst; small momentum carry from Sep 1 close. Spread blowout history requires live verification before arming: three consecutive blowouts on Aug 26, Aug 28, Aug 31 (up to 74.9 bp despite tight premarket readings).",
+    "setup_type": "vwap_reclaim",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,872,924 sh/day); +0.8% gap"
+    "note": "EVALUATE-ONLY (spread blowout history). Premarket spread 3.2 bp looks clean but was similarly tight before the Aug 28 (51 bp) and Aug 31 (74.9 bp) blowouts. Do not arm until live spread confirmed below 15 bp. Support: $215.00 (round number; 1 ATR below prev_close is $210.86 — use $215 as the actionable intraday floor). Resistance: $220.00 (round number, near premarket $219.20; 1 ATR above prev_close is $224.12). Risk-off regime: VWAP reclaim primary; ORB breakout secondary only at 2.0x relative volume. Max size $7,500."
   },
   "INTC": {
     "sector": "technology",
@@ -27,9 +34,65 @@
     "premarket_price": 88.03,
     "gap_pct": -0.0106,
     "spread_bp": 6.8,
+    "bias": "short",
+    "support": 86.00,
+    "resistance": 88.97,
+    "catalyst": "Gapped down -1.06% to $88.03 after recovering sharply on Sep 1 (+$2.30 from Aug 31 close). Gap down probes whether the Sep 1 recovery holds. No specific news catalyst. Spread blowout history is the dominant risk: Jul 9 at 209.5 bp, Aug 4 at 131.6 bp, Aug 14 at 51.6 bp.",
+    "setup_type": "vwap_reclaim",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,926,710 sh/day); -1.1% gap"
+    "note": "CONDITIONAL (severe spread blowout history). Premarket spread 6.8 bp — already elevated vs NVDA. Treat 6.8 bp as meaningless; verify live spread at every tick. If live spread exceeds 15 bp, disarm INTC for the full session with no revisit — move to QQQ immediately. Bias short: a stock that gapped up strongly on Sep 1 and is now pulling back often continues lower if it cannot reclaim the prior close. Setup: VWAP reclaim only. Support: $86.00 (round number, ~0.65 ATR below prev_close; prior Aug 31 screener had $84.00 as secondary). Resistance: $88.97 (prev_close = gap fill level, now acts as overhead). Max size $7,500."
+  },
+  "QQQ": {
+    "sector": "etf",
+    "prev_close": 707.00,
+    "atr_day": 8.33,
+    "avg_vol_10d": 530000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "bias": "neutral",
+    "support": 703.00,
+    "resistance": 713.00,
+    "catalyst": "Primary ETF fallback per playbook rule. If NVDA or INTC fail their live spread gates, QQQ is the immediate substitute. Sep 1 close was $707.09 (tick at 3:40 PM ET); ORB range was $705.65-$708.03 — QQQ ended the day inside the ORB (no directional resolution). Today's tape will establish direction. Risk-off backdrop (yields, Iran/oil) creates VWAP reclaim setup.",
+    "setup_type": "vwap_reclaim",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "PRIMARY FALLBACK — added by day-screener. IEX avg_vol ~530K/day reflects IEX market share only; actual total-market QQQ volume is 30–50M shares/day. prev_close $707.00 from Sep 1 tick context (last $707.09 at 3:40 PM ET). ATR $8.33 from Sep 1 tick context (higher than the $7.50 Sep 1 screener estimate). Sep 1 ORB: $705.65-$708.03. Support $703.00 (round number, ~0.5 ATR below). Resistance $713.00 (round number, ~0.7 ATR above). spread_bp null — use live tick; Sep 1 live spread was 0.6 bp (excellent). Do not hold QQQ and SPY simultaneously. Max size $10,000."
+  },
+  "SPY": {
+    "sector": "etf",
+    "prev_close": 761.00,
+    "atr_day": 5.23,
+    "avg_vol_10d": 1200000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "bias": "neutral",
+    "support": 757.00,
+    "resistance": 765.00,
+    "catalyst": "Secondary broad-market ETF. Sep 1 close was $760.83 (tick at 3:40 PM ET); ORB was very tight ($761.20-$762.31) and SPY was essentially flat on the day. More diversified than QQQ — useful if oil/Iran headlines create sector distortion that makes Nasdaq readings unreliable. Energy weighting partially offsets yield-driven tech weakness.",
+    "setup_type": "vwap_reclaim",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "SECONDARY ETF — added by day-screener. IEX avg_vol ~1.2M/day; actual total-market SPY volume is 50–80M shares/day. prev_close $761.00 from Sep 1 tick context (last $760.83 at 3:40 PM ET). ATR $5.23 from Sep 1 tick context. Sep 1 ORB: $761.20-$762.31 (very narrow; market was indecisive). Support $757.00 (~0.75 ATR below). Resistance $765.00 (round number, ~0.75 ATR above). spread_bp null — use live tick; Sep 1 live spread was 1.2 bp. Do not hold SPY and QQQ simultaneously; pick one. Max size $10,000."
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 325.00,
+    "atr_day": 6.61,
+    "avg_vol_10d": 750000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "bias": "long",
+    "support": 320.00,
+    "resistance": 330.00,
+    "catalyst": "Strong Sep 1 ORB breakout: cleared $319.30 ORB high and closed at $325.46 (+$11 from ORB low $314.73). If Sep 2 opens near yesterday's close (~$325), AAPL is in momentum continuation territory. ATR $6.61 confirmed from live Sep 1 data — this is a genuine intraday vehicle, not the $4.50 estimate the prior screener used.",
+    "setup_type": "vwap_reclaim",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "TERTIARY — added by day-screener. IEX avg_vol ~750K/day; actual total-market AAPL volume is 30–50M shares/day. prev_close $325.00 from Sep 1 tick context (last $325.46 at 3:40 PM ET — prior screener estimate of $309.50 was stale; corrected to live data). ATR $6.61 from Sep 1 tick context. Sep 1 ORB: $314.73-$319.30 (ORB breakout confirmed). Support $320.00 (round number near Sep 1 ORB high $319.30, which now acts as floor). Resistance $330.00 (round number, ~0.75 ATR above). Sep 1 live spread was 0.9 bp (excellent). Evaluate AAPL only after QQQ, NVDA, INTC, and SPY have each been assessed. Priority order: QQQ first, NVDA second, INTC third (if spread is clean), SPY fourth, AAPL last. Max size $7,500."
   },
   "PFE": {
     "sector": "healthcare",
@@ -39,8 +102,13 @@
     "premarket_price": 28.81,
     "gap_pct": 0.0086,
     "spread_bp": 6.9,
+    "bias": "long",
+    "support": 28.50,
+    "resistance": 29.00,
+    "catalyst": "Gapped +0.86% on no specific headline; healthcare defensives can attract flows in risk-off environments. However, ATR $0.61 severely limits intraday R/R: a $7,500 position (~263 shares) earns roughly $158 gross on a 1-ATR move, which is marginal for a day-trade.",
+    "setup_type": "vwap_reclaim",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,016,156 sh/day); +0.9% gap"
+    "note": "LOWEST PRIORITY. Real screener data (IEX). Liquid by volume (2M avg) but ATR $0.61 (2.1% of price) makes intraday R/R tight. Spread 6.9 bp is borderline acceptable (below 15 bp gate but not comfortable). Keep on list but evaluate last and only if all higher-priority names have been assessed and rejected. Support: $28.50 (just below prev_close $28.57 — acts as first floor if gap fades). Resistance: $29.00 (round number, approximately 0.7 ATR above prev_close). Do not widen stops to accommodate the small ATR — honor the same R/R discipline. Max size $7,500."
   }
 }

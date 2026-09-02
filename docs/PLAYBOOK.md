@@ -38,6 +38,7 @@ made of **rules to follow**, not stories.
   obscures the signal. (2026-08-28: Warsh Jackson Hole keynote + Chicago PMI + U. Michigan
   Sentiment + BLS revision all at 10:00 AM ET reduced the live window to 45 minutes on a Friday.)
 - On the 1-2 trading sessions before a scheduled FOMC minutes release, institutional players typically reduce exposure ahead of the binary macro event; relative volume across candidates runs well below the 1.5x gate as a result. A zero-trade outcome on these pre-FOMC-minutes sessions is the expected and correct outcome — do not adjust gates to force entries. (2026-08-17: FOMC July minutes on Wednesday; plan correctly anticipated zero trades Monday on 0.92–1.09x semiconductor rel vol.)
+- In the session immediately before a scheduled Non-Farm Payrolls release (the Thursday before a first-Friday NFP), institutional pre-positioning typically compresses relative volume across the watchlist from approximately 2:00 PM ET onward. Do not initiate or extend positions after 2:00 PM ET on a pre-NFP Thursday if rel-vol is declining — the compression is structural, not a tradeable signal. A zero-trade afternoon is the expected and correct outcome. (2026-09-02: NFP on 2026-09-04 expected to dominate Thursday afternoon tape.)
 
 ## Setups by market mood
 - **Risk-on (trending up):** favor Opening-Range Breakouts and momentum continuation. Buy strength.
@@ -63,6 +64,7 @@ made of **rules to follow**, not stories.
   (SPY, QQQ, JPM, AMZN, TSLA, GOOGL) to the watchlist for that day. A 4-name watchlist concentrated
   in semiconductors leaves the system structurally idle across any multi-day sector rout; the
   substitute ensures at least one armed candidate exists each session.
+- When a VWAP reclaim is the primary setup and three or more simultaneous macro headwinds are active (e.g., rapidly rising yields, elevated commodity prices, active geopolitical risk), a single confirmed tick above VWAP is insufficient — require two consecutive confirmed ticks above VWAP, each evaluated at least 2 minutes apart, before submitting the entry. In a heavy macro risk-off environment a single tick of confirmation is more likely a dead-cat bounce than a sustainable reclaim. (2026-09-01: one-tick entry failed within 2 hours under 4.78% yield, $92 oil, US-Iran tensions; two-tick standard was adopted for 2026-09-02 and held.)
 - When a primary watchlist candidate is within approximately 9 calendar days of its scheduled
   earnings release, the options market absorbs earnings premium and intraday ranges may be narrower
   than the ATR suggests. A tight ORB range combined with low relative volume means the breakout
@@ -219,6 +221,24 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-02: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
+  losing streak" (52 days of history, drawdown 0.029%). No parameter was changed. To unfreeze:
+  at least one net-positive session is required. The tuner will not automatically fire on
+  unfreeze — it only evaluates rules once the freeze lifts; the freeze is not the problem to fix.
+  Today: zero trades, $0 realized P&L, closing equity $999,468.26. 50th program session.
+  MIXED/RANGE regime with risk-off lean. Stacked macro headwinds: ADP 38K (extremely weak
+  — slowest since January), 10-year yield 4.79%, oil $94–97/bbl, active US-Iran geopolitical
+  risk. Four watchlist names evaluated (INTC, NVDA, PFE, QQQ); none cleared the elevated entry
+  standards (2.0x rel-vol for ORB, two-tick VWAP confirmation). Zero trades is the correct and
+  expected outcome when no setup clears all gates in a genuinely ambiguous macro environment.
+  Preserving capital on days where the tape sends conflicting signals is discipline, not passivity.
+  All-time stats unchanged (no new trades): 18 orders, 17 filled (94%), 33.3% win rate, avg
+  win +0.38R, avg loss -0.834R, expectancy -0.429R. Last realized profit still 2026-08-07.
+  Two durable rules added tonight: (1) Setups — VWAP reclaim with three or more simultaneous
+  macro headwinds (yields, commodities, geopolitical risk) requires two-tick VWAP confirmation
+  before entry; one tick in heavy risk-off is likely a dead-cat bounce. (2) Time of day —
+  pre-NFP Thursday afternoons compress relative volume structurally from ~2:00 PM ET; no new
+  entries after 2:00 PM when rel-vol is declining on pre-NFP Thursdays.
 - 2026-09-01: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
   losing streak" (51 days of history, drawdown 0.029%). No parameter was changed. This is the
   correct outcome: the system is edge-negative at -0.429R all-time expectancy across 18 trades,

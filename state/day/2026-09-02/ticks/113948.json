@@ -1,0 +1,89 @@
+{
+  "tick_time_et": "2026-09-02T11:39:48-04:00",
+  "tick_hhmmss": "113948",
+  "minutes_since_open": 129,
+  "action": "HOLD",
+  "new_orders": [],
+  "cancels": [],
+  "positions_managed": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "position_slots_used": 0,
+  "position_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "entry_windows_status": {
+    "orb_window_open": false,
+    "orb_window": "9:45 AM – 11:00 AM ET — CLOSED at 11:00 AM (39 min ago)",
+    "vwap_reclaim_window_open": false,
+    "vwap_reclaim_window": "10:00 AM – 11:00 AM ET — CLOSED at 11:00 AM (39 min ago)"
+  },
+  "gate_sweep": {
+    "AAPL": {
+      "last": 326.885,
+      "spread_bp": 39.9,
+      "rel_volume": 1.44,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED",
+      "gate_reason": "Spread 39.9 bp >> 25 bp max. Not on day plan watchlist."
+    },
+    "INTC": {
+      "last": 89.84,
+      "spread_bp": 3.3,
+      "rel_volume": 0.83,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "BLOCKED",
+      "gate_reason": "DISARMED for full session per plan — semiconductor sector selling, spread blowout history. Rel_vol 0.83x also fails 1.5x minimum."
+    },
+    "NVDA": {
+      "last": 226.05,
+      "spread_bp": 1.3,
+      "rel_volume": 1.64,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "BLOCKED",
+      "gate_reason": "Rel_vol 1.64x < 2.0x MIXED/RANGE ORB requirement. Also past 11:00 AM disarm cutoff — plan says evaluate at 9:45 AM only. Entry window expired. Would have needed spread < 10 bp (pass: 1.3 bp), rel_vol >= 2.0x (fail), sector not broadly red (fail — semiconductor sector selling)."
+    },
+    "PFE": {
+      "last": 28.835,
+      "spread_bp": 3.5,
+      "rel_volume": 1.32,
+      "above_vwap": false,
+      "vwap": 28.88,
+      "orb_high": 28.955,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED",
+      "gate_reason": "Rel_vol 1.32x < 1.5x minimum for ORB. Price below VWAP ($28.835 vs $28.88). ORB high not broken ($28.835 < $28.955). Entry window also expired."
+    },
+    "QQQ": {
+      "last": 709.24,
+      "spread_bp": 0.6,
+      "rel_volume": 1.27,
+      "above_vwap": true,
+      "vwap": 707.63,
+      "orb_breakout": true,
+      "prior_tick_rel_vol": 1.55,
+      "gate_result": "BLOCKED",
+      "gate_reason": "Rel_vol declined to 1.27x (from 1.55x at 10:41 tick) — now below 1.5x minimum gate. VWAP reclaim entry window 10:00–11:00 AM ET closed 39 minutes ago. Two-tick VWAP confirmation was met (above VWAP for 2+ consecutive ticks) but rel_vol gate failure and window closure both block entry."
+    },
+    "SPY": {
+      "last": 766.035,
+      "spread_bp": 0.3,
+      "rel_volume": 0.97,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "BLOCKED",
+      "gate_reason": "OBSERVE only per plan. Rel_vol 0.97x < 1.5x minimum. Entry window expired."
+    }
+  },
+  "reasoning_summary": "At 11:39 AM ET (129 minutes since open), all plan entry windows have closed. The ORB entry window (9:45–11:00 AM) and the VWAP reclaim window (10:00–11:00 AM) both expired 39 minutes ago. No candidate passes all gates in any case: INTC is disarmed, NVDA is past its cutoff with insufficient rel_vol (1.64x vs 2.0x required), PFE has insufficient rel_vol and is below VWAP, QQQ rel_vol declined from 1.55x to 1.27x (below 1.5x minimum), SPY is observe-only with rel_vol < 1.0x, and AAPL has a 39.9 bp spread far exceeding the 25 bp max. No open positions exist. No orders placed. No orders cancelled. HOLD is the only correct decision.",
+  "regime": "MIXED/RANGE with risk-off lean",
+  "open_positions_count": 0,
+  "open_orders_count": 0
+}

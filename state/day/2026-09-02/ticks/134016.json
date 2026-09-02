@@ -1,0 +1,52 @@
+{
+  "tick_time_et": "13:40:16",
+  "tick_file": "134016.json",
+  "date": "2026-09-02",
+  "decision": "HOLD",
+  "reason": "All session entry windows expired. ORB window closed at 11:00 AM (160 min ago). VWAP reclaim window closed at 11:00 AM (160 min ago). No open positions or orders to manage.",
+  "positions_managed": [],
+  "new_orders": [],
+  "cancelled_orders": [],
+  "gate_sweep": {
+    "INTC": {
+      "armed": false,
+      "reason": "DISARMED all session per plan (semiconductor sector selling premarket, spread blowout history). Rel_vol 0.62."
+    },
+    "NVDA": {
+      "armed": false,
+      "reason": "ORB entry window closed at 11:00 AM. Rel_vol 1.41 < 2.0x MIXED/RANGE ORB requirement. Double fail."
+    },
+    "PFE": {
+      "armed": false,
+      "reason": "ORB entry window closed at 11:00 AM. Rel_vol 0.98 < 1.5x minimum. Price $28.915 below ORB high $28.955 — no breakout. Triple fail."
+    },
+    "QQQ": {
+      "armed": false,
+      "reason": "VWAP reclaim entry window closed at 11:00 AM. Rel_vol 0.88 < 1.5x minimum. Plan permits VWAP reclaim only (not ORB) for QQQ today. Double fail."
+    },
+    "SPY": {
+      "armed": false,
+      "reason": "Observe-only per plan. Rel_vol 0.71."
+    }
+  },
+  "market_snapshot": {
+    "AAPL": {"last": 325.01, "rel_volume": 1.2, "above_vwap": false, "orb_breakout": false, "spread_bp": 13.5},
+    "INTC": {"last": 89.795, "rel_volume": 0.62, "above_vwap": true, "orb_breakout": true, "spread_bp": 1.1},
+    "NVDA": {"last": 225.01, "rel_volume": 1.41, "above_vwap": true, "orb_breakout": true, "spread_bp": 1.3},
+    "PFE":  {"last": 28.915, "rel_volume": 0.98, "above_vwap": true, "orb_breakout": false, "spread_bp": 3.5},
+    "QQQ":  {"last": 707.955, "rel_volume": 0.88, "above_vwap": true, "orb_breakout": true, "spread_bp": 1.3},
+    "SPY":  {"last": 764.475, "rel_volume": 0.71, "above_vwap": false, "orb_breakout": true, "spread_bp": 0.4}
+  },
+  "account": {
+    "equity": 999468.26,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "notes": "Entry windows expired 160 minutes ago. No candidate cleared any gate during the open window (see prior ticks at 10:41, 11:39, 12:40). Remaining session time allows monitoring but no new entries are structurally available per the day plan's time-of-day rules. Will hold flat to close."
+}

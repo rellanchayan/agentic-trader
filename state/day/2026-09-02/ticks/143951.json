@@ -1,0 +1,36 @@
+{
+  "tick_time_et": "14:39:51",
+  "date": "2026-09-02",
+  "action": "HOLD",
+  "verdict": "no_trade",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trade": null,
+  "reasoning": {
+    "entry_windows": "All entry windows closed since 11:00 AM ET. ORB window was 9:45–11:00 AM, VWAP reclaim window was 10:00–11:00 AM. Both expired 219 minutes ago. No intraday entry is possible after 11:00 AM for any armed setup today.",
+    "position_management": "No open positions. No open orders. Nothing to manage.",
+    "gate_sweep": {
+      "INTC": "DISARMED all session — sector-wide semiconductor selling confirmed premarket. No change.",
+      "NVDA": "rel_vol 1.27x, below 2.0x MIXED/RANGE ORB minimum. ORB window expired 219 min ago. Not actionable.",
+      "PFE": "rel_vol 0.89x, below 1.5x gate minimum. Price $28.915 below ORB high $28.955. Entry window expired. Not actionable.",
+      "QQQ": "rel_vol 0.78x, below 1.5x gate minimum. Above VWAP ($708.25 vs $707.93) but VWAP reclaim window expired 219 min ago. Not actionable.",
+      "SPY": "Observe-only per plan. rel_vol 0.67x. Not actionable.",
+      "AAPL": "Not on watchlist today. rel_vol 1.1x. Spread 17.2 bp. Not actionable."
+    },
+    "macro_context": "MIXED/RANGE regime with risk-off lean. Oil $94–97/bbl, 10Y yields 4.79%, US-Iran escalation, ADP 38K miss. No regime change observed intraday."
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 224.9, "rel_volume": 1.27, "orb_breakout": true, "above_vwap": true},
+    "INTC": {"last": 89.575, "rel_volume": 0.56, "above_vwap": true},
+    "PFE": {"last": 28.915, "rel_volume": 0.89, "orb_breakout": false, "above_vwap": true},
+    "QQQ": {"last": 708.25, "rel_volume": 0.78, "orb_breakout": true, "above_vwap": true},
+    "SPY": {"last": 764.95, "rel_volume": 0.67, "orb_breakout": true, "above_vwap": true}
+  },
+  "account_snapshot": {
+    "equity": 999468.26,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "loss_budget_remaining": 3000.0
+  }
+}

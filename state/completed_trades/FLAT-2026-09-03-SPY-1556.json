@@ -1,0 +1,20 @@
+{
+  "trade_id": "FLAT-2026-09-03-SPY-1556",
+  "created_at_utc": "2026-09-03T19:56:58.692101+00:00",
+  "ticker": "SPY",
+  "side": "SELL",
+  "qty": 12.0,
+  "limit_price": 772.5,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "End-of-day flatten (pass 1): closing intraday position to be flat overnight.",
+  "risk": "Marketable sell limit; if unfilled a later, more aggressive pass re-prices it.",
+  "strategy": "flatten",
+  "setup": "eod_flatten",
+  "status": "partially_filled",
+  "alpaca_order_id": "b1e447b3-cf25-4406-9700-d3fa92eb6c93",
+  "client_order_id": "FLAT-2026-09-03-SPY-1556",
+  "submitted_at_utc": "2026-09-03T19:56:59.829577+00:00",
+  "filled_qty": 1.0,
+  "filled_avg_price": 772.92
+}

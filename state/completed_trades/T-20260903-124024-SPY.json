@@ -14,8 +14,11 @@
   "target": 782.28,
   "quote_age_sec": 0.7,
   "spread_bp": 0.5,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "3eb58655-0189-4eb8-8b78-451006a14833",
   "client_order_id": "T-20260903-124024-SPY",
-  "submitted_at_utc": "2026-09-03T16:46:22.954292+00:00"
+  "submitted_at_utc": "2026-09-03T16:46:22.954292+00:00",
+  "filled_qty": 12.0,
+  "filled_avg_price": 773.12,
+  "reconciled_at_utc": "2026-09-03T19:57:01.049356+00:00"
 }

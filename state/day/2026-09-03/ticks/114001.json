@@ -1,0 +1,46 @@
+{
+  "tick_time_et": "11:40:01",
+  "tick_file": "114001.json",
+  "action": "HOLD",
+  "day_pnl": 0.0,
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "analysis": {
+    "NVDA": {
+      "gate_rel_vol": "FAIL (1.09x < 1.5x required)",
+      "gate_spread": "PASS (4.0 bp < 15 bp)",
+      "gate_above_vwap": "PASS (227.385 > 227.19 VWAP)",
+      "gate_orb_breakout": "FAIL (227.385 < 228.43 ORB high — no confirmed breakout)",
+      "gate_90min_window": "FAIL (90-min ORB window expired at ~11:15 AM; now 11:40 AM)",
+      "verdict": "BLOCKED — rel_vol too low, no ORB breakout, 90-min window expired",
+      "notes": "Hugging Face acquisition catalyst failed to sustain buying through the morning. NVDA ORB is dead for today."
+    },
+    "INTC": {
+      "verdict": "DISARMED per day plan — not evaluated at any tick today"
+    },
+    "QQQ": {
+      "gate_rel_vol": "FAIL (1.30x < 1.5x required)",
+      "gate_spread": "PASS (0.6 bp < 5 bp)",
+      "gate_above_vwap": "PASS (717.19 > 713.36 VWAP) — FIRST tick above VWAP (was below at 10:39 AM)",
+      "gate_two_tick_vwap": "1 of 2 (tick 1 confirmed this cycle; need 1 more)",
+      "verdict": "BLOCKED — rel_vol gate fails; also only at tick 1 of 2 for VWAP reclaim"
+    },
+    "SPY": {
+      "gate_rel_vol": "PASS (1.76x >= 1.5x)",
+      "gate_spread": "PASS (0.4 bp < 3 bp)",
+      "gate_above_vwap": "PASS (772.465 > 769.56 VWAP) — FIRST tick above VWAP (was below at 10:39 AM: $768.20 vs $768.77)",
+      "gate_two_tick_vwap": "1 of 2 (tick 1 confirmed this cycle; need 1 more to satisfy two-tick rule)",
+      "gate_quote_age": "PASS (0.6 sec)",
+      "verdict": "CONDITIONAL — passes all gates except two-tick VWAP confirmation. This is TICK 1. If next tick also shows SPY above VWAP with rel_vol >= 1.5x and spread < 3 bp, entry triggers.",
+      "entry_plan_if_next_tick_confirms": {
+        "setup": "vwap_reclaim",
+        "entry": "marketable_sell_limit ~773.29 (will re-quote fresh at submission)",
+        "stop_logic": "below VWAP (~769.56); will recalculate at next tick",
+        "target_logic": "1.5x to 2.0x per-share risk above entry",
+        "max_size_usd": 10000
+      }
+    }
+  },
+  "reason_no_trade": "SPY passes spread, rel_vol, and VWAP position gates — but this is only the first tick confirming SPY above VWAP after being below it at the 10:39 AM tick. The day plan mandates two consecutive ticks above VWAP (each evaluated at least 2 minutes apart) before any VWAP reclaim entry, given three active macro headwinds (US-Iran geopolitical risk, pre-NFP uncertainty, ISM event morning residual). Entering on a single tick above VWAP would violate the two-tick rule. Next tick: if SPY remains above VWAP with rel_vol >= 1.5x, enter VWAP reclaim."
+}

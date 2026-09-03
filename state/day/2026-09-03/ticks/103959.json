@@ -1,0 +1,109 @@
+{
+  "tick_id": "2026-09-03T10:39:59-04:00",
+  "hhmmss": "103959",
+  "time_et": "10:39",
+  "minutes_since_open": 69,
+  "minutes_since_last_tick": 60,
+  "cadence_note": "~60-min gap since last tick (093950); cloud-mode scheduling. No positions at risk — flat entering this tick.",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "account": {
+    "equity": 999468.26,
+    "cash": 999468.26,
+    "buying_power": 3997873.04,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "budget": {
+    "trades_remaining": 20,
+    "position_slots_remaining": 8,
+    "daily_deploy_cap_usd": 50000
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "ism_blackout_active": false
+  },
+  "candidate_evaluation": {
+    "NVDA": {
+      "armed": true,
+      "setup": "orb",
+      "last": 226.78,
+      "vwap": 227.47,
+      "orb_high": 228.43,
+      "orb_low": 224.765,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.3,
+      "spread_bp": 1.3,
+      "quote_age_sec": 0.4,
+      "gate_results": {
+        "rel_volume_ge_1_5x": "FAIL (1.3x < 1.5x)",
+        "spread_lt_15bp": "PASS (1.3 bp)",
+        "above_vwap": "FAIL (price $226.78 < VWAP $227.47)",
+        "orb_breakout": "FAIL (price $226.78 < ORB high $228.43)"
+      },
+      "verdict": "NO ENTRY — fails rel_vol, above_vwap, and orb_breakout gates",
+      "note": "Rel vol collapsed from 2.29x at 9:39 AM to 1.3x now. Price slipped below VWAP. Hugging Face catalyst did not sustain morning buying. ORB setup is structurally absent."
+    },
+    "INTC": {
+      "armed": false,
+      "verdict": "DISARMED — per plan (no positive catalyst, documented spread blowout pattern, sector headwinds). Do not evaluate."
+    },
+    "QQQ": {
+      "armed": true,
+      "setup": "vwap_reclaim",
+      "last": 711.65,
+      "vwap": 712.18,
+      "orb_high": 713.42,
+      "orb_low": 709.73,
+      "above_vwap": false,
+      "rel_volume": 1.47,
+      "spread_bp": 0.8,
+      "quote_age_sec": 0.4,
+      "gate_results": {
+        "rel_volume_ge_1_5x": "FAIL (1.47x < 1.5x)",
+        "spread_lt_5bp": "PASS (0.8 bp)",
+        "above_vwap": "FAIL (price $711.65 < VWAP $712.18)",
+        "two_tick_vwap_confirmation": "NOT STARTED — price has not reclaimed VWAP"
+      },
+      "verdict": "NO ENTRY — below VWAP, rel_vol slightly under gate",
+      "note": "Rel vol dropped from 2.44x at 9:39 AM to 1.47x now. Price below VWAP. Two-tick confirmation cannot begin until price is above VWAP."
+    },
+    "SPY": {
+      "armed": true,
+      "setup": "vwap_reclaim",
+      "last": 768.20,
+      "vwap": 768.77,
+      "orb_high": 769.875,
+      "orb_low": 767.895,
+      "above_vwap": false,
+      "rel_volume": 2.01,
+      "spread_bp": 2.9,
+      "quote_age_sec": 0.4,
+      "gate_results": {
+        "rel_volume_ge_1_5x": "PASS (2.01x)",
+        "spread_lt_3bp": "PASS (2.9 bp — just inside gate)",
+        "above_vwap": "FAIL (price $768.20 < VWAP $768.77)",
+        "two_tick_vwap_confirmation": "NOT STARTED — price has not reclaimed VWAP"
+      },
+      "verdict": "NO ENTRY — below VWAP; two-tick confirmation cannot start",
+      "note": "SPY is backup only (do not trade alongside QQQ). Both SPY and QQQ below VWAP. When they both reclaim VWAP and hold for two confirmed ticks, QQQ is the preferred entry per plan."
+    },
+    "AAPL": {
+      "armed": false,
+      "spread_bp": 89.6,
+      "verdict": "NOT IN PLAN — spread 89.6 bp far exceeds 25 bp max. Skip."
+    },
+    "MSFT": {
+      "armed": false,
+      "spread_bp": 26.9,
+      "verdict": "NOT IN PLAN — spread 26.9 bp above 25 bp max. Skip."
+    }
+  },
+  "stale_orders_cancelled": [],
+  "summary": "No positions held entering this tick. No valid setup exists: NVDA's Hugging Face catalyst failed to sustain vol (1.3x, well below 1.5x gate) and the stock fell below VWAP without ever touching the ORB high. QQQ and SPY are both below their respective VWAPs — the VWAP reclaim two-tick confirmation process has not started on either. Correct action is HOLD and wait for next tick. Watch for QQQ/SPY reclaiming VWAP. If NVDA does not recover above VWAP with rel vol >= 1.5x by approximately 11:00 AM (90-minute ORB window from 9:30 AM), the ORB setup expires for the day.",
+  "next_tick_instructions": "If NVDA rebounds above VWAP with rel vol >= 1.5x AND breaks above $228.43 ORB high: evaluate ORB entry. If QQQ/SPY reclaim VWAP: start two-tick confirmation clock; enter on second confirmed tick above VWAP with spread/vol gates met. ORB window for NVDA expires ~11:00 AM ET. Pre-NFP compression rule: if rel vol is declining after 2:00 PM, no new entries."
+}

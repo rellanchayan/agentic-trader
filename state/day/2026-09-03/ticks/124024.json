@@ -1,0 +1,21 @@
+{
+  "timestamp_et": "2026-09-03T12:40:24-04:00",
+  "action": "BUY",
+  "ticker": "SPY",
+  "setup": "vwap_reclaim",
+  "note": "SPY VWAP reclaim confirmed: tick 2/2 above VWAP (11:40 AM = tick 1, 12:40 PM = tick 2). SPY $772.95 vs VWAP $770.23 (+$2.72). rel_vol 1.51x (PASS), spread 0.5 bp (PASS). Pre-NFP Thursday — entering before 2:00 PM compression window. NVDA ORB dead (rel_vol 0.89x, 90-min window expired). QQQ blocked (rel_vol 1.17x). All guards PASS.",
+  "trade_id": "T-20260903-124024-SPY",
+  "alpaca_order_id": "3eb58655-0189-4eb8-8b78-451006a14833",
+  "order_status": "PENDING_NEW",
+  "qty": 12,
+  "limit_price": 773.76,
+  "stop": 769.50,
+  "target": 782.28,
+  "day_pnl": 0.0,
+  "candidates_evaluated": {
+    "NVDA": "BLOCKED — rel_vol 0.89x (< 1.5x), ORB window expired (90 min), above VWAP but ORB high $228.43 not broken",
+    "INTC": "DISARMED — full session",
+    "QQQ": "BLOCKED — rel_vol 1.17x (< 1.5x gate), tick 2/2 VWAP confirmation not yet met",
+    "SPY": "SUBMITTED — two-tick VWAP confirmation (ticks 11:40 + 12:40), rel_vol 1.51x PASS, spread 0.5 bp PASS"
+  }
+}

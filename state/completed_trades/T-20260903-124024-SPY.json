@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260903-124024-SPY",
+  "ticker": "SPY",
+  "side": "BUY",
+  "qty": 12,
+  "limit_price": 773.76,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "SPY VWAP reclaim: two-tick VWAP confirmation (11:40 AM tick 1, 12:40 PM tick 2 = confirmed). SPY holding $2.72 above VWAP ($772.95 vs $770.23) for 60+ minutes on 1.51x rel vol. MIXED/RANGE tape, spread 0.5 bp, pre-NFP Thursday \u2014 entering within valid window before 2:00 PM compression.",
+  "risk": "Stop at $769.50 (below VWAP $770.23). Thesis fails if SPY loses VWAP.",
+  "strategy": "intraday",
+  "setup": "vwap_reclaim",
+  "stop": 769.5,
+  "target": 782.28,
+  "quote_age_sec": 0.7,
+  "spread_bp": 0.5,
+  "status": "submitted",
+  "alpaca_order_id": "3eb58655-0189-4eb8-8b78-451006a14833",
+  "client_order_id": "T-20260903-124024-SPY",
+  "submitted_at_utc": "2026-09-03T16:46:22.954292+00:00"
+}

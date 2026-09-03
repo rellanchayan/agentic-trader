@@ -2,10 +2,38 @@
   "_meta": {
     "date": "2026-09-03",
     "generated_utc": "2026-09-03T13:30:07.412333+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 2,
-    "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "source": "watchlist_build + day_screener",
+    "candidates_considered": 6,
+    "top": 6,
+    "note": "Pre-market screen from watchlist_build (NVDA, INTC) expanded by day screener (SPY, QQQ, AAPL, MSFT added). Regime: MIXED/RANGE risk-off lean. Pre-NFP Thursday — per playbook, rel-vol compresses from ~2 PM ET onward; no new entries after 2 PM; effective live window 9:45 AM to 2:00 PM ET. ORB breakouts require 2.0x rel-vol. VWAP reclaim requires two confirmed ticks above VWAP. ORB levels fill in live after the open. SPY, QQQ, AAPL, MSFT levels are estimated (no live quote from watchlist_build for these names)."
+  },
+  "SPY": {
+    "sector": "index",
+    "prev_close": 620.00,
+    "atr_day": 4.50,
+    "avg_vol_10d": 85000000,
+    "premarket_price": 619.10,
+    "gap_pct": -0.0015,
+    "spread_bp": null,
+    "support": 615.00,
+    "resistance": 623.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "broad market anchor ETF; estimated levels — not in watchlist_build output; primary setup is VWAP reclaim in MIXED/RANGE regime; require two confirmed ticks above VWAP before entry; pre-NFP Thursday compresses effective window to 9:45 AM-2:00 PM ET; always qualified per CLAUDE.md"
+  },
+  "QQQ": {
+    "sector": "index",
+    "prev_close": 710.00,
+    "atr_day": 6.00,
+    "avg_vol_10d": 50000000,
+    "premarket_price": 708.50,
+    "gap_pct": -0.0021,
+    "spread_bp": null,
+    "support": 705.00,
+    "resistance": 714.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "tech-focused anchor ETF; prev_close ~$710 anchored from prior session plan data; estimated premarket; primary setup is VWAP reclaim; two-tick VWAP confirmation required per playbook rule adopted 2026-09-01; prior session reclaim failed under stacked macro headwinds — bar remains high"
   },
   "NVDA": {
     "sector": "technology",
@@ -15,9 +43,39 @@
     "premarket_price": 225.38,
     "gap_pct": 0.0042,
     "spread_bp": 33.7,
+    "support": 220.50,
+    "resistance": 228.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,085,251 sh/day); +0.4% gap"
+    "note": "gapped +0.4% premarket with no specific fresh catalyst; semiconductors recovered on 9/2 (NVDA closed +$6.95 vs prior day); spread 33.7bp is normal for pre-market hours, expect <10bp at open; require 2.0x rel-vol for ORB in MIXED/RANGE regime; disarm if spread >10bp or rel-vol <2.0x at 9:45 AM; support ~$220.50 (1 ATR below close), resistance ~$228.00"
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 242.00,
+    "atr_day": 2.20,
+    "avg_vol_10d": 65000000,
+    "premarket_price": 242.50,
+    "gap_pct": 0.0021,
+    "spread_bp": null,
+    "support": 239.50,
+    "resistance": 245.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "most liquid large-cap; estimated levels — no live quote; defensive in risk-off environment; no specific catalyst today; ORB or VWAP reclaim setup; secondary priority behind SPY and QQQ; pre-NFP compressed window applies"
+  },
+  "MSFT": {
+    "sector": "technology",
+    "prev_close": 445.00,
+    "atr_day": 3.60,
+    "avg_vol_10d": 24000000,
+    "premarket_price": 445.50,
+    "gap_pct": 0.0011,
+    "spread_bp": null,
+    "support": 441.00,
+    "resistance": 450.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "defensive large-cap tech; estimated levels — no live quote; no specific catalyst; ORB or VWAP reclaim in MIXED/RANGE regime; tertiary priority — only trade if SPY, QQQ, and NVDA all fail to produce a qualifying setup by mid-morning"
   },
   "INTC": {
     "sector": "technology",
@@ -27,8 +85,10 @@
     "premarket_price": 89.53,
     "gap_pct": -0.0057,
     "spread_bp": 10.1,
+    "support": 88.00,
+    "resistance": 91.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,626,401 sh/day); -0.6% gap"
+    "note": "gapped -0.6% with no specific catalyst; spread 10.1bp premarket is acceptable but INTC has documented blowouts at open on down-gap sessions (premarket 3-7bp expanding to 50-130bp); disarm immediately if live spread >20bp at 9:45 AM; volume adequate (2.6M/day); treat as conditional only; support ~$88.00, resistance ~$91.00"
   }
 }

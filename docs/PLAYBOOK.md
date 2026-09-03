@@ -65,6 +65,8 @@ made of **rules to follow**, not stories.
   in semiconductors leaves the system structurally idle across any multi-day sector rout; the
   substitute ensures at least one armed candidate exists each session.
 - When a VWAP reclaim is the primary setup and three or more simultaneous macro headwinds are active (e.g., rapidly rising yields, elevated commodity prices, active geopolitical risk), a single confirmed tick above VWAP is insufficient — require two consecutive confirmed ticks above VWAP, each evaluated at least 2 minutes apart, before submitting the entry. In a heavy macro risk-off environment a single tick of confirmation is more likely a dead-cat bounce than a sustainable reclaim. (2026-09-01: one-tick entry failed within 2 hours under 4.78% yield, $92 oil, US-Iran tensions; two-tick standard was adopted for 2026-09-02 and held.)
+- In a MIXED/RANGE regime with an active or imminent macro event (pre-NFP Thursday, pre-FOMC day, active risk-off), skip VWAP reclaim entirely — do not enter even with two-tick confirmation. VWAP reclaim is 0-for-2 in this specific combination: 2026-09-01 QQQ loss under stacked macro headwinds, 2026-09-03 SPY loss pre-NFP in MIXED/RANGE. Two-tick confirmation is not sufficient to filter structural false reclaims when institutional flow is directionally negative and a binary macro event is imminent. Wait for a RISK-ON tape with no imminent binary macro event before executing any VWAP reclaim trade.
+- SPY is a backup candidate, not a primary. When both QQQ and SPY qualify for the watchlist, evaluate QQQ first. Before pivoting to SPY as the primary VWAP reclaim or ORB candidate, the tick log must contain a documented gate outcome showing which specific gate blocked QQQ at that tick. An undocumented pivot to SPY is not permitted — QQQ typically offers more directional edge on trend days, and entering SPY without first confirming QQQ's failure produces lower-conviction trades without a traceable reason.
 - When a primary watchlist candidate is within approximately 9 calendar days of its scheduled
   earnings release, the options market absorbs earnings premium and intraday ranges may be narrower
   than the ATR suggests. A tight ORB range combined with low relative volume means the breakout
@@ -221,6 +223,32 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-03: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
+  losing streak" (53 days of history, drawdown 0.03%). No parameter was changed. To unfreeze: at
+  least one net-positive session is required. The tuner will not automatically fire on unfreeze — it
+  only evaluates rules once the freeze lifts; the freeze is not the problem to fix.
+  Today: 1 SPY VWAP reclaim round-trip, -$2.73 (-0.063R). 51st program session. MIXED/RANGE regime,
+  pre-NFP Thursday (NFP release scheduled 2026-09-05). The pre-NFP 2:00 PM compression rule (added
+  2026-09-02) correctly predicted the session structure — structural volume compression materialized
+  on schedule. The loss was -0.063R, a small disciplined exit; this is not a stop-discipline failure.
+  VWAP reclaim is now 0-for-2 all-time: both losses in MIXED/RANGE with active macro suppression
+  (2026-09-01 QQQ under stacked risk-off headwinds; 2026-09-03 SPY pre-NFP). Two trades is a small
+  sample, but the pattern is consistent enough to tighten the environmental filter — not to abandon
+  the setup, but to require a RISK-ON tape with no imminent binary macro event before entering any
+  VWAP reclaim. Two-tick VWAP confirmation alone is insufficient when institutional flow is
+  structurally negative into a macro event.
+  All-time stats (20 trades, 30% win rate, -0.427R expectancy): ORB 5 trades, 3 wins, -0.199R;
+  momentum 1 trade, 0 wins, -0.975R; VWAP reclaim 2 trades, 0 wins, -0.368R. All three setups
+  remain in negative expectancy; samples are too small to abandon any setup but sufficient to
+  tighten environmental filters on VWAP reclaim. Closing equity $999,465.53.
+  Three durable lessons added tonight: (1) Setups — MIXED/RANGE + active or imminent macro event
+  (pre-NFP, pre-FOMC, risk-off) is now a skip condition for VWAP reclaim, even with two-tick VWAP
+  confirmation; wait for RISK-ON and no imminent binary event. (2) Setups — SPY is a backup
+  candidate only; before pivoting from QQQ to SPY as primary, the tick log must document which
+  specific gate blocked QQQ at that tick; an undocumented pivot is not permitted. (3) Time of day —
+  the pre-NFP 2:00 PM compression rule added 2026-09-02 was confirmed valid today; rule reinforced
+  and no revision needed. Tuning ledger remains empty; no parameter has ever been changed by the
+  tuner.
 - 2026-09-02: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
   losing streak" (52 days of history, drawdown 0.029%). No parameter was changed. To unfreeze:
   at least one net-positive session is required. The tuner will not automatically fire on

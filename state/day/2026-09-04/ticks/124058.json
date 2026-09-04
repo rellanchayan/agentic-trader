@@ -1,0 +1,70 @@
+{
+  "tick_time_et": "12:40:58",
+  "tick_time_utc": "2026-09-04T16:40:58Z",
+  "minutes_since_open": 190,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_orders": [],
+  "cancelled_orders": [],
+  "analysis": {
+    "regime": "MIXED/RANGE",
+    "session_tag": "NFP-FRIDAY / COMPRESSED-MACRO",
+    "orb_window_expired": true,
+    "orb_window_expired_at": "11:15 AM ET (90 min after ORB formed at 9:45 AM)",
+    "vwap_reclaim_armed": false,
+    "vwap_reclaim_reason": "Off-table: MIXED/RANGE regime + active NFP macro event per plan and playbook rule",
+    "momentum_armed": false,
+    "momentum_reason": "Off-table: MIXED/RANGE + no sector momentum confirmation per plan",
+    "candidates": {
+      "NVDA": {
+        "last": 231.47,
+        "vwap": 232.86,
+        "orb_high": 233.77,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "rel_volume": 1.08,
+        "spread_bp": 0.9,
+        "gate_outcome": "FAIL",
+        "gate_reason": "ORB window expired; last $2.30 below ORB high (no breakout); below VWAP; rel_vol 1.08x (need 2.0x for MIXED/RANGE); declining vol trend (was 1.33x at 11:39)"
+      },
+      "QQQ": {
+        "last": 718.79,
+        "vwap": 718.85,
+        "orb_high": 720.64,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "rel_volume": 1.23,
+        "spread_bp": 0.4,
+        "gate_outcome": "FAIL",
+        "gate_reason": "ORB window expired; last $1.85 below ORB high (no breakout); below VWAP; rel_vol 1.23x (need 2.0x for MIXED/RANGE)"
+      },
+      "INTC": {
+        "last": 95.39,
+        "above_vwap": true,
+        "orb_breakout": true,
+        "rel_volume": 1.25,
+        "spread_bp": 1.0,
+        "gate_outcome": "DISARMED",
+        "gate_reason": "Disarmed for full session per day plan: no catalyst, spread blowout history (documented 3x in playbook)"
+      },
+      "SPY": {
+        "last": 770.79,
+        "vwap": 770.91,
+        "orb_high": 772.85,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "rel_volume": 0.97,
+        "spread_bp": 0.5,
+        "gate_outcome": "FAIL",
+        "gate_reason": "Not in primary watchlist; ORB window expired; below VWAP; rel_vol 0.97x < 1.5x minimum"
+      }
+    },
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "rationale": "190 minutes since the open. The ORB entry window definitively closed at 11:15 AM ET (90-min post-ORB rule; ORB formed 9:45 AM). This was confirmed in the prior tick at 11:39. No positions are open to manage. All market candidates fail their gates: NVDA and QQQ are below their ORB highs and VWAPs with declining relative volume well below the elevated 2.0x MIXED/RANGE threshold; INTC is disarmed for the full session per plan. VWAP reclaim and momentum setups are both prohibited on this MIXED/RANGE NFP Friday per the day plan and playbook. The broad midday volume compression (NVDA 1.08x, QQQ 1.23x, SPY 0.97x) confirms the MIXED/RANGE structure. Zero trades on this session is the correct and disciplined outcome."
+}

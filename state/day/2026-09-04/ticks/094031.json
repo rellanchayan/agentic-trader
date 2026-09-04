@@ -1,0 +1,56 @@
+{
+  "tick_time_et": "09:40:31",
+  "tick_time_utc": "2026-09-04T13:40:31Z",
+  "action": "HOLD",
+  "reason": "Inside mandatory ORB formation window (9:30-9:45 AM ET). Day plan prohibits any entries before 9:45 AM on an NFP Friday. No ORB breakouts confirmed on any name.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders": [],
+  "market_observations": {
+    "NVDA": {
+      "last": 233.27,
+      "orb_high": 233.32,
+      "orb_breakout": false,
+      "above_vwap": true,
+      "rel_volume": 2.36,
+      "spread_bp": 3.4,
+      "note": "Near ORB high but no confirmed breakout; ORB window still forming"
+    },
+    "QQQ": {
+      "last": 720.24,
+      "orb_high": 720.58,
+      "orb_breakout": false,
+      "above_vwap": true,
+      "rel_volume": 2.69,
+      "spread_bp": 0.8,
+      "note": "Near ORB high; no confirmed breakout; ORB window still forming"
+    },
+    "INTC": {
+      "last": 93.53,
+      "note": "Disarmed for the full session per day plan"
+    },
+    "AAPL": {
+      "last": 326.85,
+      "note": "Not in today's watchlist"
+    },
+    "SPY": {
+      "last": 772.44,
+      "note": "Backup only; QQQ not yet evaluated"
+    }
+  },
+  "day_state": {
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "setups_armed": {
+    "orb": "YES (elevated threshold: 2.0x rel-vol, spread <15bp NVDA / <5bp QQQ)",
+    "vwap_reclaim": "NO (MIXED/RANGE regime; playbook prohibition)",
+    "momentum": "NO (no sector-wide alignment confirmed)",
+    "mean_reversion": "NO"
+  },
+  "decision_notes": "NFP Friday, MIXED/RANGE regime. Still in ORB formation window — no entries until 9:45 AM ET. Both NVDA (2.36x) and QQQ (2.69x) have rel-volume above the 2.0x elevated threshold, which is encouraging, but no breakouts have fired. INTC disarmed. Will re-evaluate at next tick after 9:45 AM when ORB window has closed and breakout evaluation is valid."
+}

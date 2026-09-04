@@ -1,0 +1,78 @@
+{
+  "tick_id": "T-20260904-104058",
+  "timestamp_et": "2026-09-04T10:40:58-04:00",
+  "timestamp_utc": "2026-09-04T14:40:58Z",
+  "minutes_since_open": 70,
+  "action": "HOLD",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "last": 233.64,
+      "orb_high": 233.77,
+      "orb_low": 229.885,
+      "vwap": 233.57,
+      "rel_volume": 1.70,
+      "spread_bp": 0.9,
+      "quote_age_sec": 1.4,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED",
+      "gate_reason": "orb_breakout=false (last $233.64 < ORB high $233.77, still $0.13 below); rel_vol 1.70x < 2.0x elevated threshold required for MIXED/RANGE NFP Friday session"
+    },
+    {
+      "ticker": "QQQ",
+      "setup": "orb",
+      "last": 719.285,
+      "orb_high": 720.64,
+      "orb_low": 718.575,
+      "vwap": 720.08,
+      "rel_volume": 1.53,
+      "spread_bp": 3.5,
+      "quote_age_sec": 1.5,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED",
+      "gate_reason": "orb_breakout=false (last $719.29 < ORB high $720.64); below VWAP $720.08; rel_vol 1.53x < 2.0x elevated threshold. Documented per playbook rule before any SPY pivot."
+    },
+    {
+      "ticker": "INTC",
+      "setup": "disarmed",
+      "last": 95.20,
+      "rel_volume": 1.99,
+      "spread_bp": 2.1,
+      "gate_result": "DISARMED",
+      "gate_reason": "Full-session disarm per plan: no company-specific catalyst on NFP Friday; history of spread blowout at open (Jul 9: 209 bp, Aug 4: 131 bp, Aug 14: 51 bp). No evaluation needed."
+    },
+    {
+      "ticker": "SPY",
+      "setup": "not_primary",
+      "last": 771.10,
+      "rel_volume": 1.33,
+      "spread_bp": 0.4,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED",
+      "gate_reason": "Not in primary watchlist. QQQ gates documented (rel_vol 1.53x < 2.0x, no ORB breakout). SPY itself also fails: rel_vol 1.33x < 2.0x. No pivot warranted."
+    }
+  ],
+  "orders_submitted": [],
+  "market_context": {
+    "regime": "MIXED/RANGE risk-off lean",
+    "session_tag": "NFP-FRIDAY / COMPRESSED-MACRO",
+    "nfp_actual": 162000,
+    "nfp_consensus": 55000,
+    "tape_note": "Strong NFP beat caused sell-the-good-news reaction; rate-hike fears dominate. Futures turned negative post-print. Two Fed speakers fired before open."
+  },
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions": 0,
+    "slots_used": 0,
+    "trades_used": 0,
+    "trades_remaining": 20
+  },
+  "decision_rationale": "No positions to manage. Two watchlist candidates (NVDA, QQQ) both blocked: neither has confirmed an ORB breakout, and both fail the elevated 2.0x relative volume gate required for MIXED/RANGE sessions. INTC disarmed. VWAP reclaim off-table in MIXED/RANGE regime (playbook rule, 0-for-2 in this exact environment). Momentum off-table (no sector alignment, no RISK-ON tape). Zero trades is the correct and expected outcome for this tick. Capital fully preserved at $999,465.31."
+}

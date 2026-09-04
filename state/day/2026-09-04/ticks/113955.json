@@ -1,0 +1,89 @@
+{
+  "tick_id": "113955",
+  "timestamp_et": "2026-09-04T11:39:55-04:00",
+  "minutes_since_open": 129,
+  "action": "HOLD",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "slots_used": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "candidate_evaluation": {
+    "NVDA": {
+      "last": 231.98,
+      "orb_high": 233.77,
+      "orb_breakout_confirmed": false,
+      "distance_from_orb_high": -1.79,
+      "rel_volume": 1.33,
+      "rel_volume_gate": 2.0,
+      "rel_volume_pass": false,
+      "above_vwap": false,
+      "vwap": 233.2,
+      "spread_bp": 0.9,
+      "spread_pass": true,
+      "gate_outcome": "BLOCKED — no ORB breakout (1.79 below ORB high), rel_vol 1.33x < 2.0x elevated gate, below VWAP",
+      "action": "SKIP"
+    },
+    "QQQ": {
+      "last": 717.315,
+      "orb_high": 720.64,
+      "orb_breakout_confirmed": false,
+      "distance_from_orb_high": -3.325,
+      "rel_volume": 1.39,
+      "rel_volume_gate": 2.0,
+      "rel_volume_pass": false,
+      "above_vwap": false,
+      "vwap": 719.09,
+      "spread_bp": 0.8,
+      "spread_pass": true,
+      "gate_outcome": "BLOCKED — no ORB breakout (3.33 below ORB high), rel_vol 1.39x < 2.0x elevated gate, below VWAP",
+      "action": "SKIP"
+    },
+    "SPY": {
+      "last": 769.495,
+      "orb_high": 772.85,
+      "orb_breakout_confirmed": false,
+      "distance_from_orb_high": -3.355,
+      "rel_volume": 1.15,
+      "rel_volume_gate": 2.0,
+      "rel_volume_pass": false,
+      "above_vwap": false,
+      "vwap": 771.05,
+      "spread_bp": 0.4,
+      "spread_pass": true,
+      "gate_outcome": "BLOCKED — no ORB breakout, rel_vol 1.15x < 2.0x elevated gate; QQQ gate documented above per playbook rule before this SPY evaluation",
+      "action": "SKIP"
+    },
+    "INTC": {
+      "gate_outcome": "DISARMED — full session per plan (no catalyst, spread blowout history). Not evaluated.",
+      "action": "SKIP"
+    },
+    "AAPL": {
+      "gate_outcome": "NOT IN WATCHLIST — not evaluated.",
+      "action": "SKIP"
+    }
+  },
+  "timing_check": {
+    "orb_formed_at": "09:45",
+    "orb_entry_window_closes_at": "11:15",
+    "current_time": "11:39",
+    "orb_window_expired": true,
+    "minutes_past_window": 24,
+    "rule": "Do not enter ORB trade more than 90 minutes after the opening range that seeded the thesis"
+  },
+  "setups_disabled": {
+    "vwap_reclaim": "DISABLED — MIXED/RANGE regime + NFP macro day. Playbook: 0-for-2 in this exact combination. Requires RISK-ON tape with no imminent binary macro event.",
+    "momentum": "DISABLED — MIXED/RANGE day with macro event; requires sector momentum alignment + entry within 60 min of ORB (both fail)",
+    "mean_reversion": "DISABLED — trending/news day (NFP Friday), playbook restricts to range/risk-off quiet days"
+  },
+  "regime": "MIXED/RANGE, risk-off lean",
+  "session_tag": "NFP-FRIDAY / COMPRESSED-MACRO",
+  "reasoning": "The NFP beat landed at 8:30 AM and produced sell-the-news behavior. Two Fed speakers fired before the open. The tape has been choppy all morning. NVDA is well below its ORB high and has been declining — the Hugging Face acquisition news failed to sustain a breakout above the opening range. QQQ is 3.33 below its ORB high with insufficient volume. The 90-minute post-ORB entry window expired at 11:15 AM; it is now 11:39 AM. Even if volume were to surge, late ORB entries inherit reversal risk without early-move reward. The correct decision is HOLD with zero new trades. Capital preservation on a difficult NFP Friday is the plan's explicit directive."
+}

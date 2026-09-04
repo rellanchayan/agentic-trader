@@ -39,6 +39,7 @@ made of **rules to follow**, not stories.
   Sentiment + BLS revision all at 10:00 AM ET reduced the live window to 45 minutes on a Friday.)
 - On the 1-2 trading sessions before a scheduled FOMC minutes release, institutional players typically reduce exposure ahead of the binary macro event; relative volume across candidates runs well below the 1.5x gate as a result. A zero-trade outcome on these pre-FOMC-minutes sessions is the expected and correct outcome — do not adjust gates to force entries. (2026-08-17: FOMC July minutes on Wednesday; plan correctly anticipated zero trades Monday on 0.92–1.09x semiconductor rel vol.)
 - In the session immediately before a scheduled Non-Farm Payrolls release (the Thursday before a first-Friday NFP), institutional pre-positioning typically compresses relative volume across the watchlist from approximately 2:00 PM ET onward. Do not initiate or extend positions after 2:00 PM ET on a pre-NFP Thursday if rel-vol is declining — the compression is structural, not a tradeable signal. A zero-trade afternoon is the expected and correct outcome. (2026-09-02: NFP on 2026-09-04 expected to dominate Thursday afternoon tape.)
+- On Non-Farm Payrolls release Fridays, the binary nature of the 8:30 AM ET data print (beat/miss/in-line) typically produces a MIXED/RANGE regime through the morning as the market digests the number. Treat NFP Fridays as structurally equivalent to compressed-window macro Fridays: require 2.0x relative volume for any ORB entry, VWAP reclaim is off-table per the MIXED/RANGE rule, and a zero-trade outcome when no setup clears those gates is correct — do not adjust gates to force entries. Tag NFP Friday sessions separately in pattern analysis; conflating a correct NFP-Friday zero with a full-window Thursday zero obscures the signal. (2026-09-04: first NFP Friday in program history; MIXED/RANGE regime; no setup cleared the 2.0x rel-vol gate all session; INTC orb_breakout flashed true at 14:40 but the active disarm correctly overrode it.)
 
 ## Setups by market mood
 - **Risk-on (trending up):** favor Opening-Range Breakouts and momentum continuation. Buy strength.
@@ -223,6 +224,24 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-04: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
+  losing streak" (54 days of history, drawdown 0.03%). No parameter was changed. To unfreeze: at
+  least one net-positive session is required.
+  Today: zero trades, $0 realized P&L, closing equity $999,465.31. NFP Friday (BLS Non-Farm
+  Payrolls release). MIXED/RANGE regime. The elevated 2.0x relative-volume gate correctly blocked
+  all entries throughout the session — no setup came close to qualifying at any tick. INTC
+  orb_breakout signal flashed true at 14:40 but the active disarm correctly overrode it; the disarm
+  mechanism is working as designed. Zero trades on NFP Friday in a MIXED/RANGE regime is the correct
+  and expected outcome — not a failure of gate calibration.
+  All-time stats (20 trades, 30% win rate, avg win +0.342R, avg loss -0.757R): ORB 5 trades, 3 wins,
+  -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP reclaim 2 trades, 0 wins, -0.368R.
+  Tuning ledger remains empty; no parameter has ever been changed by the tuner.
+  One durable lesson added tonight to Time of day: NFP release Fridays should be tagged and tracked
+  separately from regular Friday zero-trade sessions. The binary 8:30 AM print structurally changes
+  the session character — require 2.0x rel-vol for ORB, VWAP reclaim off-table per the MIXED/RANGE
+  rule, and zero trades when no setup clears the gates is correct. The VWAP reclaim off-table rule
+  (added 2026-09-03) gains one more confirmation: today is a 3rd MIXED/RANGE session with an active
+  macro event where skipping VWAP reclaim was right.
 - 2026-09-03: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
   losing streak" (53 days of history, drawdown 0.03%). No parameter was changed. To unfreeze: at
   least one net-positive session is required. The tuner will not automatically fire on unfreeze — it

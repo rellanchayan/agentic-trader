@@ -1,0 +1,98 @@
+{
+  "tick_time_et": "13:39:46",
+  "tick_file": "133946.json",
+  "minutes_since_open": 249,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_trades": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "slots_used": 0,
+  "trades_remaining": 20,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "gate_outcomes": {
+    "NVDA": {
+      "armed": true,
+      "setup": "orb",
+      "orb_window_open": false,
+      "orb_window_closed_at": "11:15 ET (90-min rule)",
+      "last": 230.43,
+      "orb_high": 233.77,
+      "orb_breakout": false,
+      "above_vwap": false,
+      "vwap": 232.66,
+      "rel_volume": 0.93,
+      "rel_volume_gate": 2.0,
+      "spread_bp": 0.9,
+      "quote_age_sec": 1.8,
+      "gate_result": "FAIL",
+      "gate_reasons": ["ORB window expired 11:15 AM", "price below ORB high (230.43 < 233.77)", "price below VWAP (230.43 < 232.66)", "rel_vol 0.93x < 2.0x elevated gate (declining trend: 1.70@10:40 -> 1.33@11:39 -> 1.08@12:40 -> 0.93 now)"]
+    },
+    "QQQ": {
+      "armed": true,
+      "setup": "orb",
+      "orb_window_open": false,
+      "orb_window_closed_at": "11:15 ET (90-min rule)",
+      "last": 717.15,
+      "orb_high": 720.64,
+      "orb_breakout": false,
+      "above_vwap": false,
+      "vwap": 718.80,
+      "rel_volume": 1.17,
+      "rel_volume_gate": 2.0,
+      "spread_bp": 0.6,
+      "quote_age_sec": 1.9,
+      "gate_result": "FAIL",
+      "gate_reasons": ["ORB window expired 11:15 AM", "price below ORB high (717.15 < 720.64)", "price below VWAP (717.15 < 718.80)", "rel_vol 1.17x < 2.0x elevated gate"]
+    },
+    "INTC": {
+      "armed": false,
+      "disarm_reason": "Disarmed for full session per plan: no catalyst, history of spread blowout at open (Jul 9 at 209bp, Aug 4 at 131bp, Aug 14 at 51bp), thin 0.7% gap on NFP Friday",
+      "last": 94.855,
+      "orb_high": 94.02,
+      "orb_breakout": true,
+      "above_vwap": true,
+      "vwap": 94.69,
+      "rel_volume": 1.14,
+      "rel_volume_gate": 2.0,
+      "spread_bp": 3.2,
+      "quote_age_sec": 1.9,
+      "gate_result": "FAIL",
+      "gate_reasons": ["Session-level disarm in effect (no catalyst, spread blowout history)", "rel_vol 1.14x < 2.0x elevated gate (would fail even if armed)"]
+    },
+    "SPY": {
+      "armed": false,
+      "disarm_reason": "Not on primary watchlist today; backup only per plan. QQQ is the primary Nasdaq proxy and was evaluated first (gate documented above).",
+      "last": 769.65,
+      "orb_high": 772.85,
+      "orb_breakout": false,
+      "above_vwap": false,
+      "vwap": 770.86,
+      "rel_volume": 0.84,
+      "rel_volume_gate": 2.0,
+      "spread_bp": 0.4,
+      "quote_age_sec": 1.6,
+      "gate_result": "FAIL",
+      "gate_reasons": ["Not primary watchlist", "QQQ evaluated first (gate documented)", "price below VWAP (769.65 < 770.86)", "rel_vol 0.84x < 2.0x elevated gate"]
+    },
+    "VWAP_RECLAIM": {
+      "gate_result": "BLOCKED",
+      "reason": "MIXED/RANGE regime + active macro event (NFP Friday) — skipped per playbook rule (0-for-2 all-time in this exact condition: Sept 1 QQQ loss, Sept 3 SPY loss). No evaluation needed."
+    },
+    "MOMENTUM": {
+      "gate_result": "BLOCKED",
+      "reason": "Off-table on MIXED/RANGE day with Fed speakers + NFP shock per plan. No sector momentum alignment possible in this environment."
+    }
+  },
+  "regime": "MIXED/RANGE (risk-off lean)",
+  "session_tag": "NFP-FRIDAY / COMPRESSED-MACRO",
+  "macro_context": "NFP 162K vs 55K consensus (massive beat); 'good news is bad news' reaction (rate hike fears). NVDA rel_vol declining to 0.93x — Hugging Face acquisition catalyst fading. Volume compression consistent with Friday afternoon pattern. All names below VWAP, well below ORB highs. No institutional participation visible.",
+  "key_observation": "NVDA rel_vol trend: 1.70x at 10:40 → 1.33x at 11:39 → 1.08x at 12:40 → 0.93x at 13:39. The Hugging Face acquisition catalyst generated some early morning interest (1.70x was the peak at 10:40) but has fully dissipated by afternoon. The stock is now trading below average volume. Consistent with 'buy the rumor, fade the news' behavior documented in the plan.",
+  "next_tick_notes": "Entries technically possible until 3:30 PM hard cutoff. No setup qualifies and none is expected: ORB window closed, VWAP reclaim off-table, volumes declining. Approaching flatten window at 3:50 PM. If a new name suddenly shows 2.0x+ vol with a clean level, evaluate — but probability is very low this late in a compressed Friday session.",
+  "account_equity": 999465.31,
+  "day_pnl_usd": 0.0
+}

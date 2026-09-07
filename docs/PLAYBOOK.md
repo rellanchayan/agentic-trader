@@ -224,6 +224,27 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-07: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
+  losing streak" (55 days of history, drawdown 0.03%). No parameter was changed. To unfreeze: at
+  least one net-positive session is required.
+  Today: Labor Day holiday. Market closed. Zero trades, $0 realized P&L, closing equity $999,465.31
+  (unchanged from 2026-09-04 — no activity). Tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Tomorrow (2026-09-08) is the first post-Labor Day reopening. Existing post-holiday rules already
+  apply in full: no entries before 9:45 AM ET (mandatory 15-minute wait rule), verify Alpaca /clock
+  at the first tick before placing any order, and confirm GITHUB_TOKEN is set so the premarket plan
+  reaches the remote before tick sessions begin. No new rule is warranted tonight. The elevated
+  first-15-minute volatility commonly seen on post-Labor Day opens — the well-known pattern of
+  institutional participants returning from summer — is already handled by the mandatory 9:45 AM ET
+  wait that was added on 2026-07-03. One observation worth tracking but not yet codifying: when
+  institutional volume surges back after the low-volume August environment, our relative volume
+  gate may fire more readily because the baseline was set against low-summer-volume sessions. A
+  setup that clears 1.5x rel-vol on the first post-Labor Day session should be evaluated with this
+  in mind — "volume returning from vacation" and "volume expressing directional conviction" look the
+  same numerically. Revisit if the pattern repeats next September before writing it as a rule.
+  All-time stats (55 days, 20 trades, 30% win rate, avg win +0.342R, avg loss -0.757R): ORB 5
+  trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP reclaim 2 trades,
+  0 wins, -0.368R. Closing equity $999,465.31 (-0.053% from $1M start).
 - 2026-09-04: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
   losing streak" (54 days of history, drawdown 0.03%). No parameter was changed. To unfreeze: at
   least one net-positive session is required.

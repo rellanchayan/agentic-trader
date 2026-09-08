@@ -1,0 +1,93 @@
+{
+  "tick_id": "134002",
+  "date": "2026-09-08",
+  "time_et": "13:40",
+  "timestamp_utc": "2026-09-08T17:40:02Z",
+  "action": "WAIT",
+  "positions_managed": [],
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account_snapshot": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions_open": 0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 105.70,
+      "vwap": 103.38,
+      "above_vwap": true,
+      "orb_high": 103.20,
+      "orb_breakout": true,
+      "rel_volume": 1.68,
+      "spread_bp": 1.9,
+      "quote_age_sec": 0.4,
+      "atr_1m": 0.13,
+      "marketable_buy_limit": 105.77,
+      "setups_evaluated": {
+        "orb": {
+          "result": "BLOCKED",
+          "reasons": [
+            "Time-disqualified: 250 min since ORB window closed (90-min max per PLAYBOOK)",
+            "rel_vol 1.68x < 2.0x elevated gate required for MIXED/RANGE gap-up day"
+          ]
+        },
+        "vwap_reclaim": {
+          "result": "BLOCKED",
+          "reasons": [
+            "R/R insufficient: entry $105.77, stop $103.25 (below VWAP $103.38), risk $2.52/share — 2:1 target $110.81 unrealistic in MIXED/RANGE at 1:40 PM with INTC +10.4% on day",
+            "Rel-vol fading all session: 5.65x->2.64x->2.17x->1.9x->1.68x — only marginally above 1.5x gate; post-holiday volume-return caution from plan applies",
+            "Cloud-mode tick gaps (~1hr) preclude managing $2.52/share risk position between checks",
+            "Plan discourages forcing afternoon entries ahead of PPI Thursday / CPI Friday"
+          ],
+          "sizing_calc_if_entered": {
+            "entry": 105.77,
+            "stop": 103.25,
+            "risk_per_share": 2.52,
+            "target_2to1": 110.81,
+            "qty_by_risk": 99,
+            "qty_by_cash": 94,
+            "qty_selected": 94,
+            "notional": 9942.38,
+            "assessment": "Sizing would pass hard limits but R/R is not achievable — target blocked"
+          }
+        }
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "last": 226.16,
+      "vwap": 227.93,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.87,
+      "spread_bp": 0.9,
+      "gate_outcome": "BLOCKED: rel_vol 0.87x < 1.5x gate; above_vwap false; no setup available"
+    },
+    {
+      "ticker": "QQQ",
+      "last": 720.38,
+      "rel_volume": 1.26,
+      "above_vwap": true,
+      "gate_outcome": "BLOCKED: rel_vol 1.26x < 1.5x gate; not primary candidate per today's plan"
+    },
+    {
+      "ticker": "SPY",
+      "last": 767.695,
+      "rel_volume": 1.02,
+      "above_vwap": true,
+      "gate_outcome": "BLOCKED: rel_vol 1.02x < 1.5x gate; backup candidate only per PLAYBOOK"
+    }
+  ],
+  "orders_placed": [],
+  "orders_cancelled": [],
+  "open_orders_reviewed": [],
+  "decision_summary": "WAIT. No positions held; nothing to manage. INTC is above VWAP with tight spread but the VWAP reclaim entry is 2.52/share away from stop — the 2:1 R/R target of $110.81 is not achievable in MIXED/RANGE at 1:40 PM on a name already up 10.4% today. ORB is time-disqualified (250 min > 90 min) and rel-vol (1.68x) is below the elevated 2.0x gate for MIXED/RANGE gap-up sessions. All other names fail the rel-vol gate. The plan explicitly warns against forcing afternoon entries in a macro-heavy week. Correct outcome: zero trades this tick."
+}

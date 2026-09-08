@@ -1,0 +1,68 @@
+{
+  "tick_time_et": "09:40:17",
+  "date": "2026-09-08",
+  "verdict": "WAIT",
+  "reason": "Post-Labor Day mandatory 9:45 AM ET entry hold in effect. ORB still forming (10 min since open). No positions to manage. No open orders to cancel.",
+  "positions_managed": [],
+  "entries_considered": [],
+  "action_taken": "none",
+  "account_snapshot": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "loss_budget_remaining": 3000.0
+  },
+  "market_at_tick": {
+    "INTC": {
+      "last": 101.05,
+      "spread_bp": 4.0,
+      "rel_volume": 5.65,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 101.58,
+      "orb_high": 103.20,
+      "orb_low": 100.73,
+      "gate_result": "BLOCKED — pre-entry window (before 09:45 ET); ORB still forming"
+    },
+    "NVDA": {
+      "last": 230.77,
+      "spread_bp": 1.7,
+      "rel_volume": 2.45,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 232.04,
+      "orb_high": 233.69,
+      "orb_low": 230.23,
+      "gate_result": "BLOCKED — pre-entry window (before 09:45 ET); ORB still forming"
+    },
+    "QQQ": {
+      "last": 719.24,
+      "spread_bp": 0.3,
+      "rel_volume": 2.16,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 720.05,
+      "gate_result": "Not primary candidate — watching only"
+    },
+    "SPY": {
+      "last": 768.16,
+      "spread_bp": 0.5,
+      "rel_volume": 2.86,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 768.88,
+      "gate_result": "Not primary candidate — watching only"
+    }
+  },
+  "notes": [
+    "INTC spread 4.0 bp live is much tighter than 16.5 bp premarket — encouraging for later ticks.",
+    "INTC rel-vol 5.65x is strong; 'volume returning from vacation' caveat applies per plan (post-Labor Day baseline was set against low-summer-vol sessions).",
+    "Regime MIXED/RANGE gap-up: ORB gate elevated to 2.0x rel-vol; VWAP reclaim is primary setup but requires two consecutive ticks above VWAP plus 1.5x rel-vol.",
+    "Three macro headwinds active (oil ~$98-100, yield 4.80%, geopolitical risk) — two-tick VWAP confirmation mandatory per PLAYBOOK.",
+    "Plan confirms VWAP reclaim is available today (PPI/CPI are Thu/Fri, not today).",
+    "Next tick at ~09:42 ET will be the first tick inside or near the 09:45 entry window."
+  ]
+}

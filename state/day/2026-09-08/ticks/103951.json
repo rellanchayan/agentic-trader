@@ -1,0 +1,75 @@
+{
+  "tick_id": "103951",
+  "time_et": "10:39",
+  "timestamp": "2026-09-08T10:39:51-04:00",
+  "action": "WAIT",
+  "reason": "INTC first tick above VWAP — two-tick confirmation rule in effect (macro headwinds active). No other setup qualifies.",
+  "account_snapshot": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "loss_budget_remaining": 3000.0
+  },
+  "market_at_tick": {
+    "INTC": {
+      "last": 103.16,
+      "spread_bp": 1.9,
+      "rel_volume": 2.64,
+      "above_vwap": true,
+      "vwap": 101.68,
+      "orb_high": 103.20,
+      "orb_low": 100.39,
+      "orb_breakout": false,
+      "gate_result": "WAIT — Tick 1 of 2 for VWAP reclaim. Two-tick confirmation required (3 macro headwinds: oil ~$98-100, yield 4.80%, geopolitical risk). Spread 1.9 bp PASS, rel-vol 2.64x PASS. ORB breakout false (103.16 vs 103.20 ORB high; 4 cents short). If next tick also above VWAP and all gates pass → enter VWAP reclaim."
+    },
+    "NVDA": {
+      "last": 227.385,
+      "spread_bp": 1.3,
+      "rel_volume": 1.40,
+      "above_vwap": false,
+      "vwap": 229.83,
+      "orb_high": 233.69,
+      "orb_low": 229.48,
+      "orb_breakout": false,
+      "gate_result": "BLOCKED — rel_volume 1.40x fails 1.5x gate; below VWAP. Not actionable."
+    },
+    "QQQ": {
+      "last": 717.91,
+      "spread_bp": 1.0,
+      "rel_volume": 1.45,
+      "above_vwap": true,
+      "vwap": 717.80,
+      "orb_high": 721.86,
+      "orb_low": 716.56,
+      "orb_breakout": false,
+      "gate_result": "Not primary candidate — rel_volume 1.45x just below 1.5x gate; watching only."
+    },
+    "SPY": {
+      "last": 767.08,
+      "spread_bp": 0.7,
+      "rel_volume": 1.79,
+      "above_vwap": false,
+      "vwap": 767.47,
+      "orb_high": 769.69,
+      "orb_low": 767.09,
+      "orb_breakout": false,
+      "gate_result": "Not primary candidate; below VWAP. Not actionable."
+    }
+  },
+  "positions_managed": [],
+  "orders_reviewed": [],
+  "trade_submitted": null,
+  "notes": [
+    "INTC moved from below VWAP (09:40 tick: 101.05 vs VWAP 101.58) to well above VWAP (103.16 vs VWAP 101.68) — a +$1.48 VWAP gain since open.",
+    "INTC spread 1.9 bp is dramatically improved from premarket 16.5 bp and open 4.0 bp — liquidity normalizing.",
+    "INTC rel-vol 2.64x clears both the VWAP reclaim gate (1.5x) and the MIXED/RANGE gap-up ORB gate (2.0x).",
+    "ORB breakout not triggered: INTC at 103.16 vs ORB high 103.20 — 4 cents short. Price is within striking distance.",
+    "Two-tick VWAP confirmation mandatory per PLAYBOOK (three simultaneous macro headwinds: oil ~$98-100, yield 4.80%, geopolitical risk from Houthi attacks). This tick is confirmation #1.",
+    "NVDA: pivot from NVDA as secondary is not needed — INTC is the active candidate with a building setup.",
+    "Next tick: if INTC is still above VWAP with spread <15 bp and rel-vol >1.5x → entry for VWAP reclaim is valid. Also watch whether INTC breaks ORB high 103.20 (would trigger conditional ORB entry at 2.0x rel-vol which is already met).",
+    "No positions to manage — flat entering this tick."
+  ]
+}

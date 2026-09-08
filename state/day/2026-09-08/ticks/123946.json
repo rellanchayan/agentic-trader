@@ -1,0 +1,76 @@
+{
+  "tick_id": "2026-09-08T12:39:46-04:00",
+  "hhmmss": "123946",
+  "t_et": "12:39",
+  "action": "WAIT",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders": [],
+  "gate_outcomes": {
+    "INTC": {
+      "last": 104.705,
+      "vwap": 102.97,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_high": 103.2,
+      "spread_bp": 1.0,
+      "spread_gate": "PASS (1.0 < 15)",
+      "quote_age_sec": 0.0,
+      "quote_age_gate": "PASS (0.0 < 30)",
+      "rel_volume": 1.9,
+      "rel_vol_gate_15x": "PASS (1.9 >= 1.5)",
+      "rel_vol_gate_20x_orb": "FAIL (1.9 < 2.0 — MIXED/RANGE gap-up requires 2.0x for ORB)",
+      "orb_setup": "DISQUALIFIED — 174 min since ORB close (9:45 AM). Exceeds 90-min continuation rule.",
+      "vwap_reclaim_setup": "GATES PASS but R/R insufficient",
+      "vwap_reclaim_rr_calc": {
+        "entry": 104.83,
+        "stop": 102.82,
+        "risk_per_share": 2.01,
+        "target_2to1": 108.85,
+        "assessment": "UNREALISTIC — INTC already +9.3% today ($95.80->$104.71); $108.85 requires another +4% on MIXED/RANGE day"
+      },
+      "additional_disqualifiers": [
+        "Treasury 3-year auction at 1:00 PM ET (21 min away) — yield-spike binary risk for semiconductor sector",
+        "Rel-vol declining trend: 5.65x(09:40) -> 2.64x(10:39) -> 2.17x(11:43) -> 1.9x(12:39) — fading conviction",
+        "Post-holiday vol caution: elevated rel-vol may reflect 'volume returning from vacation' not directional conviction (plan warning)",
+        "VWAP reclaim opportunity window: two-tick confirmation satisfied at 11:43, setup evaluated and declined then; setup is stale — 56 min since confirmation, price only +$0.41"
+      ],
+      "verdict": "SKIP"
+    },
+    "NVDA": {
+      "last": 225.975,
+      "rel_volume": 0.97,
+      "rel_vol_gate": "FAIL (0.97 < 1.5)",
+      "above_vwap": false,
+      "verdict": "SKIP — fails rel-vol gate"
+    },
+    "QQQ": {
+      "last": 719.32,
+      "rel_volume": 1.4,
+      "rel_vol_gate": "FAIL (1.4 < 1.5)",
+      "above_vwap": true,
+      "verdict": "SKIP — fails rel-vol gate"
+    },
+    "SPY": {
+      "last": 767.09,
+      "rel_volume": 1.17,
+      "rel_vol_gate": "FAIL (1.17 < 1.5)",
+      "above_vwap": false,
+      "verdict": "SKIP — fails rel-vol gate"
+    }
+  },
+  "account_snapshot": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8,
+    "positions_open": 0
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "decision_rationale": "No trade. The only name with passing spread/quote/vol gates is INTC, but it fails on two independent grounds: (1) the ORB continuation window expired 84 minutes ago (174 min since close vs. 90-min rule), and (2) the VWAP reclaim R/R is structurally insufficient — a $104.83 entry with a $102.82 stop requires a $108.85 target for minimum 2:1 R/R, unreachable on a MIXED/RANGE day when the stock has already run +9.3% from yesterday's close. Additionally, the 1:00 PM Treasury 3-year auction (21 min out) creates imminent binary yield risk that would be absorbed fully by any open INTC position. NVDA, QQQ, and SPY all fail the 1.5x relative-volume gate. The correct and disciplined action is to WAIT.",
+  "next_tick_watch": "If INTC holds above VWAP through the 1:00 PM auction without a pullback, the VWAP reclaim thesis remains structurally intact but R/R is unlikely to improve enough to justify entry. Watch for rel-vol to recover above 2.0x and price to consolidate closer to VWAP (reducing entry-to-stop distance) before reconsidering. Auction outcome at 1:00 PM will be the key tell for afternoon tape direction."
+}

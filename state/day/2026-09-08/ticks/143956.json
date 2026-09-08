@@ -1,0 +1,47 @@
+{
+  "tick_time_et": "14:39",
+  "timestamp_et": "2026-09-08T14:39:56-04:00",
+  "minutes_since_open": 309,
+  "action": "WAIT",
+  "positions_managed": [],
+  "new_trade": null,
+  "day_pnl": 0.0,
+  "equity": 999465.31,
+  "trades_used": 0,
+  "positions_open": 0,
+  "candidate_analysis": {
+    "INTC": {
+      "last": 105.04,
+      "vwap": 103.56,
+      "spread_bp": 1.9,
+      "rel_volume": 1.51,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_status": "DISQUALIFIED — 294min past ORB close (>90min rule)",
+      "vwap_reclaim_two_tick_satisfied": true,
+      "vwap_reclaim_entry": 105.09,
+      "vwap_reclaim_stop": 103.30,
+      "vwap_reclaim_risk_per_share": 1.79,
+      "vwap_reclaim_target_2_5R": 109.56,
+      "vwap_reclaim_target_move_needed": 4.47,
+      "daily_atr": 4.36,
+      "verdict": "BLOCKED — R/R untenable. Target $109.56 requires +$4.47 in 49min; exceeds daily ATR ($4.36) on stock already +9.6% today. Price fading this hour ($105.70->$105.04). Plan warns against afternoon entries (PPI Thu/CPI Fri macro week)."
+    },
+    "NVDA": {
+      "last": 226.39,
+      "rel_volume": 0.78,
+      "verdict": "BLOCKED — rel-vol 0.78x fails 1.5x gate; below VWAP"
+    },
+    "QQQ": {
+      "last": 719.725,
+      "rel_volume": 1.16,
+      "verdict": "BLOCKED — rel-vol 1.16x fails 1.5x gate"
+    },
+    "SPY": {
+      "last": 767.36,
+      "rel_volume": 0.94,
+      "verdict": "BLOCKED — rel-vol 0.94x fails 1.5x gate; below VWAP"
+    }
+  },
+  "decision_rationale": "No actionable setup. INTC two-tick VWAP reclaim confirmation was achieved at 11:43 but price has extended too far above VWAP for viable R/R — stop must sit below VWAP ($103.30), entry ~$105.09, yields 2.5R target of $109.56 which requires more than a full daily ATR of upside in the final 49 minutes of the valid entry window, in a MIXED/RANGE regime on a stock already up 9.6% today and showing price erosion this hour. Rel-vol is in a steady decline (5.65x at open to 1.51x now) indicating fading conviction. Plan explicitly warns against forcing afternoon entries ahead of the PPI/CPI macro binary sequence Thursday-Friday. All other candidates fail the minimum 1.5x rel-vol gate. WAIT is the correct and disciplined outcome."
+}

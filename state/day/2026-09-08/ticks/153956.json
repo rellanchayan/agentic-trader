@@ -1,0 +1,46 @@
+{
+  "timestamp_et": "2026-09-08T15:39:56-04:00",
+  "action": "WAIT",
+  "reason": "Past no-new-entries cutoff (15:30 ET). INTC rel-vol 1.38x — faded below the 1.5x minimum gate (session fade: 5.65x→2.64x→2.17x→1.9x→1.68x→1.51x→1.38x). ORB disqualified at 369 minutes past ORB close (>90-minute rule). VWAP reclaim R/R failed all afternoon: entry ~$105.09, stop below VWAP ~$103.72, risk ~$1.37/share, 2.5R target ~$108.52 — unrealistic on MIXED/RANGE day already +9.6% with <21 minutes to no-new-entries cutoff. No positions open. No open orders. Zero trades taken today.",
+  "candidates_evaluated": {
+    "INTC": {
+      "last": 104.945,
+      "rel_volume": 1.38,
+      "spread_bp": 1.9,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED — past no-new-entries cutoff (15:30 ET); rel-vol 1.38x below 1.5x minimum; ORB disqualified 369min past close; VWAP reclaim R/R insufficient"
+    },
+    "NVDA": {
+      "last": 225.74,
+      "rel_volume": 0.72,
+      "spread_bp": 0.9,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED — rel-vol 0.72x (far below 1.5x gate); below VWAP; past no-new-entries cutoff"
+    },
+    "QQQ": {
+      "last": 718.675,
+      "rel_volume": 1.15,
+      "spread_bp": 0.7,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED — rel-vol 1.15x below 1.5x gate; below VWAP; past no-new-entries cutoff"
+    },
+    "SPY": {
+      "last": 766.925,
+      "rel_volume": 0.95,
+      "spread_bp": 0.4,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED — rel-vol 0.95x below 1.5x gate; below VWAP; past no-new-entries cutoff"
+    }
+  },
+  "positions": [],
+  "open_orders": [],
+  "order_submitted": null,
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "loss_budget_remaining": 3000.0,
+  "account_equity": 999465.31
+}

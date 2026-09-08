@@ -2,10 +2,11 @@
   "_meta": {
     "date": "2026-09-08",
     "generated_utc": "2026-09-08T13:30:40.858213+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-09-08T13:35:00.000000+00:00",
+    "source": "day-screener",
     "candidates_considered": 2,
-    "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "top": 4,
+    "note": "Post-holiday reopening (Labor Day was Sept 7). Screen produced 2 names; day-screener expanded to 4. INTC kept: spread dramatically improved to 16.5 bp (vs 1,002 bp on Sept 7 holiday; 51-209 bp range over prior sessions) — disarm condition may be lifting, but verify live open spread vs config max of 25 bp; +7.6% gap from $95.80 to $103.09 suggests major positive catalyst (catalyst not confirmed in screen data — magnitude consistent with earnings beat, acquisition news, or major contract win). NVDA kept but flagged: premarket spread 34.2 bp already exceeds config max_spread_bp of 25 — trade gate will reject unless live spread tightens at open; Hugging Face acquisition catalyst 5 days old and largely absorbed; minor +1.5% gap. QQQ added per playbook non-semiconductor substitute rule (INTC disarmed 5+ consecutive sessions Sept 1-7; QQQ confirmed traded in this account on Sept 1). SPY added as standard macro proxy for post-holiday session (confirmed traded Sept 3). No premarket price data for QQQ or SPY from today's watchlist_build screen. Account state from cache (alpaca-py offline): equity $999,465.31, all cash, zero open positions, loss-stop not active, 0 day-trades today. Mandatory 15-min post-holiday wait: no entries before 9:45 AM ET. Key week events: PPI Thurs Sept 10 (+ NVDA ex-div $0.25), CPI Fri Sept 11 (elevated macro risk — 2.0x rel-vol gate for ORB entries that day)."
   },
   "INTC": {
     "sector": "technology",
@@ -15,9 +16,11 @@
     "premarket_price": 103.09,
     "gap_pct": 0.0761,
     "spread_bp": 16.5,
+    "support": 100.0,
+    "resistance": 105.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,512,028 sh/day); +7.6% gap"
+    "note": "Disarm history: spreads ranged 51-1,002 bp over 5 prior sessions (Sept 1-7); today 16.5 bp is the tightest reading in that window — major improvement. HOWEVER config max_spread_bp is 25; if live open spread exceeds 25 bp, treat as re-disarm for this session. +7.6% gap from $95.80 to $103.09: catalyst unknown from screen data, magnitude (nearly 2x ATR in a single overnight move) consistent with earnings beat, M&A bid, or major contract win — NOT a routine technical gap. If gap is from a one-time event (acquisition/earnings), the ORB range will be wide and opening-minute spread may spike. Post-holiday 15-min mandatory wait: no entries before 9:45 AM ET. Support at $100.00 (round-number psychological floor, ~3% below premarket). Resistance at $105.00 (next clean round number; ~1 ATR above premarket). Prior Mizuho cut to $92 (Sept 7) is now contradicted by the gap-up — verify catalyst and whether analyst has updated."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,8 +30,38 @@
     "premarket_price": 233.6,
     "gap_pct": 0.0148,
     "spread_bp": 34.2,
+    "support": 230.0,
+    "resistance": 237.5,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,159,724 sh/day); +1.5% gap"
+    "note": "SPREAD WARNING: premarket 34.2 bp already exceeds config max_spread_bp of 25 — trade gate will block entries unless live spread tightens at open. Monitor live spread at first tick; only arm if spread is confirmed below 25 bp. Hugging Face acquisition ($12.93B, announced Sept 3) catalyst largely absorbed — 5 trading days old, produced only 1.70x rel-vol on Sept 4 (below MIXED/RANGE 2.0x gate). Minor +1.5% gap on post-holiday open. Ex-dividend date Sept 10 ($0.25/share, ~0.11% of price — minor, but avoid holding overnight into Wednesday). Support at $230.00 (prior close and round number). Resistance at $237.50 (approximately 1x ATR above prior close). Standard ORB or VWAP reclaim setup if spread clears."
+  },
+  "QQQ": {
+    "sector": "etf_broad",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Added per playbook non-semiconductor substitute rule: INTC has been disarmed for 5+ consecutive sessions (Sept 1-7). QQQ confirmed traded in this account on Sept 1 (2 completed trades). Nasdaq-100 ETF — structurally extremely liquid (typical avg vol 40-60M shares/day, typical spread 1-5 bp). No premarket price, ATR, or gap data from today's watchlist_build screen (was not in the initial 2-candidate set). All price levels are null — populate from live quote at first tick before treating as an active candidate. Post-holiday macro proxy: useful if individual names show opening spread blowout. Per playbook: QQQ is the primary non-semiconductor substitute; SPY is the backup."
+  },
+  "SPY": {
+    "sector": "etf_broad",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "S&P 500 ETF — standard broad-market proxy for post-holiday session. SPY confirmed traded in this account on Sept 3. Structurally extremely liquid (typical avg vol 60-100M shares/day, typical spread 1-3 bp). No premarket price, ATR, or gap data from today's screen. All price levels null — populate from live quote at first tick. Per playbook: SPY is the backup macro proxy to QQQ; any pivot from QQQ to SPY requires documented evidence that a specific gate blocked QQQ at that tick. CPI on Fri Sept 11 is the week's dominant macro risk — size conservatively on all SPY/QQQ trades this week."
   }
 }

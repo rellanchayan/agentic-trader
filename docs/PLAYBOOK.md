@@ -66,6 +66,7 @@ made of **rules to follow**, not stories.
   in semiconductors leaves the system structurally idle across any multi-day sector rout; the
   substitute ensures at least one armed candidate exists each session.
 - When a VWAP reclaim is the primary setup and three or more simultaneous macro headwinds are active (e.g., rapidly rising yields, elevated commodity prices, active geopolitical risk), a single confirmed tick above VWAP is insufficient — require two consecutive confirmed ticks above VWAP, each evaluated at least 2 minutes apart, before submitting the entry. In a heavy macro risk-off environment a single tick of confirmation is more likely a dead-cat bounce than a sustainable reclaim. (2026-09-01: one-tick entry failed within 2 hours under 4.78% yield, $92 oil, US-Iran tensions; two-tick standard was adopted for 2026-09-02 and held.)
+- When the two-tick VWAP confirmation rule is in effect and the two confirming ticks are separated by more than one evaluation cycle, check the price distance traveled between Tick 1 and Tick 2 before submitting any entry. If price has moved more than 0.5× ATR between the first confirming tick and the second, the setup has expired: the stop must be reset to the new VWAP level (widening risk), the required target moves further out to maintain 2:1 R/R, and a name already extended into its daily range may be unable to reach that target before the close. Do not enter even if the two-tick clock is technically satisfied — the R/R math must clear at the moment of the second tick, not at the moment of the first. A technically valid confirmation that breaks the R/R is not a valid entry. (2026-09-08: INTC Tick 1 at 10:39 AM, Tick 2 at 11:43 AM; price ran $1.14 in 64 minutes; stop to VWAP $102.25 = $2.15/share risk; 2:1 target required $108.60+ on a stock already +8.9% on the day in a MIXED/RANGE regime; no entry correct.)
 - In a MIXED/RANGE regime with an active or imminent macro event (pre-NFP Thursday, pre-FOMC day, active risk-off), skip VWAP reclaim entirely — do not enter even with two-tick confirmation. VWAP reclaim is 0-for-2 in this specific combination: 2026-09-01 QQQ loss under stacked macro headwinds, 2026-09-03 SPY loss pre-NFP in MIXED/RANGE. Two-tick confirmation is not sufficient to filter structural false reclaims when institutional flow is directionally negative and a binary macro event is imminent. Wait for a RISK-ON tape with no imminent binary macro event before executing any VWAP reclaim trade.
 - SPY is a backup candidate, not a primary. When both QQQ and SPY qualify for the watchlist, evaluate QQQ first. Before pivoting to SPY as the primary VWAP reclaim or ORB candidate, the tick log must contain a documented gate outcome showing which specific gate blocked QQQ at that tick. An undocumented pivot to SPY is not permitted — QQQ typically offers more directional edge on trend days, and entering SPY without first confirming QQQ's failure produces lower-conviction trades without a traceable reason.
 - When a primary watchlist candidate is within approximately 9 calendar days of its scheduled
@@ -224,6 +225,27 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-08: No tuning. Tuner unfrozen ("ok to tune", 56 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. The freeze lifted after yesterday's Labor Day entry (the
+  rolling 3-day window cleared), but the aggregate data gives the tuner nothing actionable: overall
+  win rate 30% (6/20 trades), avg win +0.342R, avg loss -0.757R; ORB -0.199R (5 trades, 3 wins),
+  VWAP reclaim -0.368R (2 trades, 0 wins), momentum -0.975R (1 trade, 0 wins). All setups remain
+  in negative expectancy. Tuning ledger remains empty; no parameter has ever been changed by the
+  tuner.
+  Today: zero trades, $0 realized P&L. Account flat at $999,465.31 (unchanged from Labor Day
+  close). INTC was the sole viable candidate (+7.6% gap, spread cleared, rel-vol 2.64x at 10:39 AM).
+  NVDA never viable (premarket spread 34.2 bp). The two-tick VWAP confirmation rule was satisfied at
+  11:43 AM, but by then INTC had run $1.14 from the first confirming tick (64 minutes earlier). Stop
+  to new VWAP at $102.25 required $2.15/share of risk; a 2:1 target required $108.60+; INTC was
+  already +8.9% on the day in a MIXED/RANGE regime. The R/R math was broken. No entry was correct.
+  One durable rule added tonight to Setups: when the two-tick confirmation rule applies and price
+  has traveled more than 0.5× ATR between Tick 1 and Tick 2, the setup has expired regardless of
+  whether the confirmation clock is technically satisfied. The R/R must clear at the moment of Tick
+  2, not Tick 1. A wide time gap between ticks on a fast-moving name effectively resets the entry
+  math and will routinely break 2:1 structure.
+  Closing equity $999,465.31. Cumulative drawdown $534.69 (0.053% from $1M start). All-time stats
+  unchanged from yesterday (no new trades): 56 days, 20 trades, 30% win rate, avg win +0.342R, avg
+  loss -0.757R. Trade generation remains at 0.36/day.
 - 2026-09-07: No tuning. Tuner FROZEN — "last 3 days are net-negative — not optimizing during a
   losing streak" (55 days of history, drawdown 0.03%). No parameter was changed. To unfreeze: at
   least one net-positive session is required.

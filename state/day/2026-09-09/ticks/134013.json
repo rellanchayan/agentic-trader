@@ -1,0 +1,19 @@
+{
+  "ts": "2026-09-09T13:40:13-04:00",
+  "action": "NO_TRADE",
+  "regime": "RISK-OFF",
+  "reason": "RISK-OFF regime holds at 13:40 — no tape reversal; all 4 names below VWAP, rel-vol continuing to decline vs. 12:40 tick. Gate outcomes: INTC rel-vol 1.16x/spread 1.9bp/orb_breakout=true — triple-blocked: (1) ORB not armed in RISK-OFF; (2) rel-vol 1.16x fails 1.5x gate (down from 1.24x at 12:40); (3) ORB entry window expired 11:15 AM ET (2h25m ago). NVDA rel-vol 0.59x — fails gate badly, below VWAP (down from 0.71x at 12:40; 0.25/share dividend ex-date tomorrow creates no intraday edge today). QQQ rel-vol 1.13x — fails 1.5x gate, below VWAP, no orb_breakout. SPY rel-vol 0.87x — fails gate badly, below 1.0x, backup only (QQQ not yet blocked so SPY pivot not permitted anyway). VWAP reclaim remains off-table per plan and playbook (RISK-OFF + pre-PPI Thursday + pre-CPI Friday = specific disarm condition). 3 macro headwinds unabated: oil $100+, yield 4.82%, US-Iran conflict. No order submitted.",
+  "positions": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "slots_remaining": 8,
+  "loss_budget_remaining": 3000.0,
+  "market_snapshot": {
+    "INTC": {"last": 105.29, "vwap": 105.31, "orb_high": 104.43, "rel_volume": 1.16, "spread_bp": 1.9, "orb_breakout": true, "above_vwap": false},
+    "NVDA": {"last": 224.26, "vwap": 224.45, "orb_high": 226.07, "rel_volume": 0.59, "spread_bp": 0.4, "orb_breakout": false, "above_vwap": false},
+    "QQQ":  {"last": 715.79, "vwap": 716.78, "orb_high": 717.49, "rel_volume": 1.13, "spread_bp": 0.6, "orb_breakout": false, "above_vwap": false},
+    "SPY":  {"last": 762.44, "vwap": 762.88, "orb_high": 764.37, "rel_volume": 0.87, "spread_bp": 0.5, "orb_breakout": false, "above_vwap": false}
+  }
+}

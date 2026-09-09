@@ -1,0 +1,17 @@
+{
+  "ts": "2026-09-09T15:39:42-04:00",
+  "action": "NO_TRADE",
+  "regime": "RISK-OFF",
+  "reason": "Past no-new-entries cutoff (15:39 ET > 15:30 ET). Positions=0, open_orders=0. Nothing to manage. Gate outcomes: INTC rel-vol 1.04x fails 1.5x gate; NVDA rel-vol 0.49x fails gate; QQQ rel-vol 0.95x fails gate; SPY rel-vol 0.78x fails gate. RISK-OFF regime unchanged (oil $100+, yield 4.82%, US-Iran conflict). Awaiting flatten window at 15:50 ET.",
+  "positions": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "equity": 999465.31,
+  "loss_budget_remaining": 3000.0,
+  "market_snapshot": {
+    "INTC": {"last": 105.89, "rel_volume": 1.04, "above_vwap": true, "orb_breakout": true},
+    "NVDA": {"last": 223.855, "rel_volume": 0.49, "above_vwap": false, "orb_breakout": false},
+    "QQQ": {"last": 716.05, "rel_volume": 0.95, "above_vwap": false, "orb_breakout": false},
+    "SPY": {"last": 762.88, "rel_volume": 0.78, "above_vwap": false, "orb_breakout": false}
+  }
+}

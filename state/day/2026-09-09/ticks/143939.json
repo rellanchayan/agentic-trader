@@ -1,0 +1,16 @@
+{
+  "ts": "2026-09-09T14:39:39-04:00",
+  "action": "NO_TRADE",
+  "regime": "RISK-OFF",
+  "reason": "RISK-OFF regime holds at 14:39 — no tape reversal, all names fail rel_vol gate. Gate outcomes: INTC rel-vol 1.12x/spread 0.9bp/orb_breakout=true — triple-blocked: (1) ORB not armed in RISK-OFF; (2) rel-vol 1.12x fails 1.5x gate (declining from 1.16x at 13:40); (3) ORB window expired 11:15 AM ET (3h24m ago). NVDA rel-vol 0.51x — fails gate badly, below VWAP; semi-event day (Goldman conf tomorrow, ex-div tomorrow). QQQ rel-vol 1.01x — fails 1.5x gate, below VWAP. SPY rel-vol 0.80x — fails gate, backup only, essentially at VWAP. VWAP reclaim off-table in RISK-OFF + pre-PPI Thu + pre-CPI Fri. 3 macro headwinds unabated: oil $100+, yield 4.82%, US-Iran conflict. No order submitted.",
+  "positions": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "market_snapshot": {
+    "INTC": {"last": 105.745, "rel_volume": 1.12, "spread_bp": 0.9, "above_vwap": true, "orb_breakout": true, "gate": "BLOCKED — rel_vol 1.12x < 1.5x; ORB window expired; RISK-OFF"},
+    "NVDA": {"last": 224.235, "rel_volume": 0.51, "spread_bp": 0.4, "above_vwap": false, "orb_breakout": false, "gate": "BLOCKED — rel_vol 0.51x < 1.5x; below VWAP"},
+    "QQQ": {"last": 716.45, "rel_volume": 1.01, "spread_bp": 0.6, "above_vwap": false, "orb_breakout": false, "gate": "BLOCKED — rel_vol 1.01x < 1.5x; below VWAP"},
+    "SPY": {"last": 762.87, "rel_volume": 0.8, "spread_bp": 2.1, "above_vwap": false, "orb_breakout": false, "gate": "BLOCKED — rel_vol 0.80x < 1.5x; backup only"}
+  }
+}

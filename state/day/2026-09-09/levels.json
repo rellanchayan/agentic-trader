@@ -2,10 +2,12 @@
   "_meta": {
     "date": "2026-09-09",
     "generated_utc": "2026-09-09T13:30:42.846754+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 2,
-    "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "screener_reviewed_utc": "2026-09-09T13:35:00.000000+00:00",
+    "source": "watchlist_build + day_screener_review",
+    "candidates_considered": 4,
+    "top": 4,
+    "regime": "RISK-OFF",
+    "note": "Regime: RISK-OFF. Oil crossed $100/bbl (US-Iran conflict), 10yr yield 4.82%, active geopolitical risk. PPI tomorrow (Sep 10), CPI Friday (Sep 11), FOMC Sep 15-16. Per playbook: ORB disarmed in risk-off; VWAP reclaim off table (risk-off + imminent PPI/CPI binary events). No setup unconditionally armed today. Default posture is sidelines. ORB high/low fill in live after open. See docs/plan/2026-09-09.md for full context."
   },
   "NVDA": {
     "sector": "technology",
@@ -17,7 +19,11 @@
     "spread_bp": 4.4,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,136,464 sh/day); -0.2% gap"
+    "support": 220.00,
+    "resistance": 230.00,
+    "catalyst": "No single-name catalyst today; Goldman Sachs Tech Conference presentation tomorrow (Sep 10); ex-dividend $0.25/share tomorrow — slight mechanical tailwind for today's holders only.",
+    "setup": "watch_only",
+    "note": "Liquid (4.14M sh/day); spread 4.4 bp premarket — cleanest name on the list. Flat gap (-0.23%), no directional catalyst. RISK-OFF disarms ORB; VWAP reclaim off table (playbook: active risk-off + PPI/CPI imminent). Watch only. If tape reverses to RISK-ON and rel-vol clears 1.5x, NVDA is the first name to re-evaluate for ORB. Conference tomorrow adds binary commentary risk — no late-session chase even if setup appears."
   },
   "INTC": {
     "sector": "technology",
@@ -29,6 +35,42 @@
     "spread_bp": 11.6,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,417,734 sh/day); -0.9% gap"
+    "support": 101.00,
+    "resistance": 104.46,
+    "catalyst": "Northland Capital upgrade (Outperform, $120 PT) and ASML foundry milestone still in market from Sep 8; CPU price hike reports ongoing; stock extended +9% over prior two sessions before today's -0.85% pullback.",
+    "setup": "watch_only",
+    "note": "Liquid (2.42M sh/day); spread 11.6 bp premarket (below 15 bp threshold). Gap is only -0.85% — under the 3% blow-out threshold — so opening spread widening risk is lower than prior gap sessions (131 bp on Aug 4, 51 bp on Aug 14), but history warrants caution. Stock is extended: $95.80 close Sep 5 to $104.46 close Sep 8 is a two-session +9% run. RISK-OFF disarms ORB; VWAP reclaim off table (risk-off + PPI imminent). If two-tick VWAP rule is somehow re-evaluated later: R/R must clear at Tick 2, not Tick 1 — if price travels >0.5x ATR ($2.18) between ticks, setup has expired (Sep 8 lesson)."
+  },
+  "QQQ": {
+    "sector": "broad_etf",
+    "prev_close": 721.00,
+    "atr_day": 9.00,
+    "avg_vol_10d": null,
+    "premarket_price": 718.16,
+    "gap_pct": -0.0040,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 715.00,
+    "resistance": 723.00,
+    "catalyst": "Broad Nasdaq-100 proxy; added per playbook non-semiconductor diversification rule (watchlist otherwise concentrated in INTC and NVDA); no single-name catalyst.",
+    "setup": "watch_only",
+    "note": "DATA NOTE: premarket price and prior close are plan estimates (not screener-confirmed); live spread not available. Added because two-name semiconductor-only list is insufficient per playbook rule. Per playbook: evaluate QQQ before SPY — any pivot to SPY requires a documented gate outcome showing what blocked QQQ at that tick. RISK-OFF disarms ORB; VWAP reclaim off table. If tape reverses, QQQ is the primary non-semi candidate ahead of SPY."
+  },
+  "SPY": {
+    "sector": "broad_etf",
+    "prev_close": 769.00,
+    "atr_day": 8.00,
+    "avg_vol_10d": null,
+    "premarket_price": 765.71,
+    "gap_pct": -0.0043,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 763.00,
+    "resistance": 769.00,
+    "catalyst": "Broad S&P 500 proxy; backup to QQQ only; oil and yield headwinds weighing on broad market.",
+    "setup": "watch_only",
+    "note": "DATA NOTE: premarket price and prior close are plan estimates (not screener-confirmed); live spread not available. SPY is backup only — do not trade SPY unless QQQ fails a specific documented gate at that tick. An undocumented pivot from QQQ to SPY is not permitted per playbook. RISK-OFF disarms ORB; VWAP reclaim off table."
   }
 }

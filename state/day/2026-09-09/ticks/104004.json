@@ -1,0 +1,75 @@
+{
+  "tick_id": "2026-09-09T10:40:04-04:00",
+  "hhmmss": "104004",
+  "minutes_since_open": 70,
+  "regime": "RISK-OFF",
+  "action": "NO_TRADE",
+  "positions_held": [],
+  "positions_managed": "none — flat",
+  "new_entries_considered": true,
+  "new_entries_result": "blocked",
+  "gate_outcomes": {
+    "INTC": {
+      "last": 105.49,
+      "rel_volume": 1.78,
+      "spread_bp": 1.9,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_passed": false,
+      "gate_blocker": "RISK-OFF regime — no broad tape reversal; NVDA and SPY both below VWAP confirm mixed market, not risk-on; also $1.06 above ORB high (chasing a 70-min move)"
+    },
+    "NVDA": {
+      "last": 224.46,
+      "rel_volume": 1.13,
+      "spread_bp": 1.3,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_passed": false,
+      "gate_blocker": "fails 1.5x rel-vol gate (1.13x); below VWAP; no ORB breakout"
+    },
+    "QQQ": {
+      "last": 717.85,
+      "rel_volume": 1.80,
+      "spread_bp": 0.8,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_passed": false,
+      "gate_blocker": "RISK-OFF regime — plan requires broad tape reversal (oil below $98, yields falling, futures strongly positive) to re-open ORB; SPY below VWAP + NVDA below VWAP = mixed tape, not risk-on flip; 3 macro headwinds still active (oil $100+, yield 4.82%, US-Iran); QQQ is closest candidate but regime gate blocks it"
+    },
+    "SPY": {
+      "last": 763.605,
+      "rel_volume": 1.22,
+      "spread_bp": 0.4,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_passed": false,
+      "gate_blocker": "backup-only candidate; below VWAP; rel-vol 1.22x fails 1.5x gate; no ORB breakout"
+    }
+  },
+  "regime_change_triggers_checked": {
+    "oil_below_98": "no data confirming; snapshot has no oil price — assume still $100+ per plan",
+    "yields_falling": "no data confirming",
+    "futures_strongly_positive": "NVDA below VWAP + SPY below VWAP = NO",
+    "verdict": "dramatic reversal NOT confirmed — regime stays RISK-OFF"
+  },
+  "potential_qqqq_orb_math_if_regime_cleared": {
+    "entry": 718.69,
+    "stop": 717.20,
+    "risk_per_share": 1.49,
+    "target_2to1": 721.67,
+    "qty_by_risk": 167,
+    "qty_by_cash": 13,
+    "qty": 13,
+    "position_value": 9342.97,
+    "note": "QQQ would have been the candidate if regime cleared — math is valid but regime did not clear"
+  },
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "account_equity": 999465.31,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "slots_remaining": 8
+}

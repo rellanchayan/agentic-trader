@@ -1,0 +1,92 @@
+{
+  "tick_time_et": "2026-09-09T12:40:43-04:00",
+  "tick_time_utc": "2026-09-09T16:40:43Z",
+  "minutes_since_open": 190,
+  "regime": "RISK-OFF",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_considered": [],
+  "gate_outcomes": {
+    "INTC": {
+      "last": 106.11,
+      "rel_volume": 1.24,
+      "spread_bp": 1.9,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "quote_age_sec": 0.4,
+      "outcome": "BLOCKED",
+      "reasons": [
+        "ORB setup NOT ARMED in RISK-OFF regime per day plan",
+        "rel-vol 1.24x fails 1.5x minimum gate (declining: 1.78x at 10:40, 1.48x at 11:39, 1.24x now)",
+        "ORB entry window expired at 11:15 AM ET — 75 minutes ago (no new ORB entries >90 min after open)"
+      ]
+    },
+    "NVDA": {
+      "last": 224.14,
+      "rel_volume": 0.71,
+      "spread_bp": 0.9,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "quote_age_sec": 0.4,
+      "outcome": "BLOCKED",
+      "reasons": [
+        "rel-vol 0.71x fails 1.5x minimum gate by wide margin",
+        "Below VWAP (224.14 vs 224.48)",
+        "No orb_breakout",
+        "RISK-OFF regime blocks all setups regardless"
+      ]
+    },
+    "QQQ": {
+      "last": 716.06,
+      "rel_volume": 1.27,
+      "spread_bp": 0.6,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "quote_age_sec": 0.4,
+      "outcome": "BLOCKED",
+      "reasons": [
+        "rel-vol 1.27x fails 1.5x minimum gate (declining: 1.80x at 10:40, 1.47x at 11:39, 1.27x now)",
+        "Below VWAP (716.06 vs 716.84)",
+        "No orb_breakout",
+        "RISK-OFF regime blocks ORB; VWAP reclaim off-table per plan"
+      ]
+    },
+    "SPY": {
+      "last": 762.25,
+      "rel_volume": 0.97,
+      "spread_bp": 0.4,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "quote_age_sec": 0.4,
+      "outcome": "BLOCKED",
+      "reasons": [
+        "Backup candidate only per playbook — requires documented QQQ gate failure first",
+        "rel-vol 0.97x below 1.0x, far below 1.5x gate (declining: 1.22x at 10:40, 1.15x at 11:39, 0.97x now)",
+        "Below VWAP (762.25 vs 762.90)",
+        "No orb_breakout",
+        "RISK-OFF regime blocks all setups"
+      ]
+    }
+  },
+  "key_observations": [
+    "Rel-vol declining across all 4 names vs. prior ticks — consistent with pre-PPI Thursday institutional compression predicted in day plan",
+    "INTC now above VWAP ($106.11 vs $105.12 VWAP) but no tradeable signal: ORB not armed, rel-vol below gate, window expired",
+    "SPY rel-vol dropped below 1.0x for first time today — broad tape participation fading",
+    "NVDA rel-vol at 0.71x — well below any qualifying level; below VWAP",
+    "No dramatic macro reversal (oil has not pulled back, no yield decline visible from prices)",
+    "3 macro headwinds still active: oil $100+, yield 4.82%, US-Iran conflict",
+    "VWAP reclaim remains off-table: pre-PPI Thursday + pre-CPI Friday + active RISK-OFF meets the skip condition in playbook"
+  ],
+  "account_state": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "position_slots_remaining": 8
+  },
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "next_tick_watch": "Monitor for any oil reversal below $98 or broad futures turn positive — would re-open ORB evaluation. Otherwise expect continued compression into PPI Thursday."
+}

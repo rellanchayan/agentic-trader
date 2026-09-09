@@ -1,0 +1,65 @@
+{
+  "tick_time_et": "09:40:12",
+  "date": "2026-09-09",
+  "minutes_since_open": 10,
+  "verdict": "NO_TRADE",
+  "regime": "RISK-OFF",
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 104.02,
+      "rel_volume": 2.38,
+      "spread_bp": 4.8,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 104.29,
+      "orb_low": 102.84,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "RISK-OFF regime — ORB setup not armed per plan; 3 active macro headwinds (oil $100+, 10yr yield 4.82%, active US-Iran military conflict); ORB also not yet formed (only 10 min since open, need 15 min); orb_breakout=false"
+    },
+    {
+      "ticker": "NVDA",
+      "last": 225.85,
+      "rel_volume": 0.86,
+      "spread_bp": 1.3,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 226.06,
+      "orb_low": 224.60,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "rel_vol gate failed: 0.86x < 1.5x minimum; also risk-off regime and orb_breakout=false"
+    },
+    {
+      "ticker": "QQQ",
+      "last": 717.03,
+      "rel_volume": 1.68,
+      "spread_bp": 0.7,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 717.41,
+      "orb_low": 715.69,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "RISK-OFF regime — ORB not armed; VWAP reclaim OFF TABLE per plan (active risk-off + PPI Thursday + CPI Friday matches playbook condition); orb_breakout=false; 2-minute evaluation QQQ before any SPY pivot documented here"
+    },
+    {
+      "ticker": "SPY",
+      "last": 763.80,
+      "rel_volume": 1.40,
+      "spread_bp": 0.7,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_high": 764.37,
+      "orb_low": 763.285,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "Backup only — QQQ evaluated first (documented above); rel_vol 1.40x fails 1.5x gate; below VWAP; risk-off regime; not eligible as primary"
+    }
+  ],
+  "order_submitted": false,
+  "decision_summary": "NO TRADE. RISK-OFF regime with three active macro headwinds (oil $100+ on US-Iran conflict, 10yr yield 4.82%, active military escalation). Plan has zero setups armed: ORB not armed, VWAP reclaim off-table (pre-PPI/CPI/FOMC), momentum not armed. ORB not yet formed (10 min since open vs 15-min required). No candidate cleared all gates. Preserving capital per plan."
+}

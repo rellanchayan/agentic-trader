@@ -1,0 +1,78 @@
+{
+  "tick_id": "2026-09-09T11:39:47-04:00",
+  "action": "NO_TRADE",
+  "regime": "RISK-OFF",
+  "minutes_since_open": 129,
+  "account": {
+    "equity": 999465.31,
+    "cash": 999465.31,
+    "buying_power": 3997861.24
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "loss_budget_remaining": 3000.0,
+  "candidates": {
+    "INTC": {
+      "last": 104.93,
+      "vwap": 105.06,
+      "above_vwap": false,
+      "rel_volume": 1.48,
+      "spread_bp": 1.9,
+      "orb_breakout": true,
+      "orb_high": 104.43,
+      "orb_low": 102.84,
+      "atr_1m": 0.204,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "Triple-blocked: (1) ORB not armed in RISK-OFF; (2) rel-vol 1.48x fails 1.5x gate; (3) past 90-min ORB window (cutoff 11:15 AM, now 11:39 AM)"
+    },
+    "NVDA": {
+      "last": 224.21,
+      "vwap": 224.54,
+      "above_vwap": false,
+      "rel_volume": 0.90,
+      "spread_bp": 0.4,
+      "orb_breakout": false,
+      "orb_high": 226.07,
+      "orb_low": 224.60,
+      "atr_1m": 0.21,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "rel-vol 0.90x fails 1.5x gate; below VWAP"
+    },
+    "QQQ": {
+      "last": 715.27,
+      "vwap": 717.18,
+      "above_vwap": false,
+      "rel_volume": 1.47,
+      "spread_bp": 0.8,
+      "orb_breakout": false,
+      "orb_high": 717.49,
+      "orb_low": 715.69,
+      "atr_1m": 0.297,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "rel-vol 1.47x fails 1.5x gate (margin: -0.03x); below VWAP; no ORB breakout"
+    },
+    "SPY": {
+      "last": 761.89,
+      "vwap": 763.13,
+      "above_vwap": false,
+      "rel_volume": 1.15,
+      "spread_bp": 0.3,
+      "orb_breakout": false,
+      "orb_high": 764.37,
+      "orb_low": 763.285,
+      "atr_1m": 0.226,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "Backup candidate only (requires documented QQQ gate failure first); rel-vol 1.15x fails gate; below VWAP"
+    }
+  },
+  "macro_headwinds": ["oil $100+", "10yr yield 4.82%", "US-Iran military conflict"],
+  "setups_armed": {
+    "orb": false,
+    "vwap_reclaim": false,
+    "momentum": false,
+    "mean_reversion": false
+  },
+  "reason_no_trade": "RISK-OFF regime unchanged. Three active macro headwinds. No setup unconditionally armed per day plan. All four candidates blocked by gates. No tape reversal signal — all names below VWAP at 11:39 AM. Rel-vol readings declining from 10:40 AM high. Past 90-min ORB window (expired 11:15 AM ET). VWAP reclaim off-table per plan (pre-PPI/CPI). No order submitted.",
+  "order_submitted": false
+}

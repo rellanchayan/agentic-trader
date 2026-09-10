@@ -1,0 +1,63 @@
+{
+  "tick_time_et": "10:39:55",
+  "action": "NO_TRADE",
+  "positions_before": 0,
+  "positions_after": 0,
+  "trades_used_today": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "candidate_evaluations": [
+    {
+      "ticker": "INTC",
+      "last": 101.36,
+      "bid": 101.09,
+      "ask": 101.11,
+      "rel_volume": 1.9,
+      "spread_bp": 2.0,
+      "vwap": 100.89,
+      "orb_high": 103.20,
+      "orb_low": 101.015,
+      "atr_1m": 0.266,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_results": {
+        "sector_disarm": "FAIL — semiconductor sector-wide selling from premarket (INTC, NVDA, MU, AMD all gapping lower); disarm active for full session",
+        "broad_tape_unlock": "FAIL — NVDA ($218.39) is below VWAP ($218.68); ORB and momentum entries require SPY AND sector bellwether both above VWAP; condition not met",
+        "orb_breakout_signal": "FAIL — orb_breakout=false; price $101.36 is $1.84 below ORB high $103.20; no breakout to trade",
+        "vwap_reclaim": "BLOCKED — CPI releases tomorrow (Friday Sep 11); standing rule: skip VWAP reclaim in MIXED/RANGE or RISK-OFF when imminent binary macro event is active; not a judgment call"
+      },
+      "setup_conclusion": "No armed setup. All gates blocked independently. Would need: sector stabilization + broad-tape unlock + ORB high break OR VWAP reclaim unblocked — none of these apply today."
+    },
+    {
+      "ticker": "NVDA",
+      "last": 218.39,
+      "bid": 218.29,
+      "ask": 218.32,
+      "rel_volume": 1.38,
+      "spread_bp": 1.4,
+      "vwap": 218.68,
+      "orb_high": 220.98,
+      "orb_low": 218.30,
+      "atr_1m": 0.199,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_results": {
+        "rel_volume_gate": "FAIL — 1.38x below 1.5x minimum required for any entry",
+        "above_vwap": "FAIL — price $218.39 below VWAP $218.68",
+        "broad_tape_unlock": "FAIL — NVDA is the sector bellwether; it is itself below VWAP; unlock cannot clear",
+        "conference_binary_risk": "FAIL — NVDA presenting at GS Technology Conference today; management commentary is a binary intraday event; no entry before or during presentation",
+        "sector_disarm": "FAIL — semiconductor sector-wide selling active"
+      },
+      "setup_conclusion": "No armed setup. Multiple independent gate failures. Not a viable candidate today."
+    }
+  ],
+  "vol_compression_observation": "PPI+CPI Thursday vol compression confirming as expected. INTC rel-vol: 3.61x at 09:40 AM open → 1.9x at 10:39 AM. Pattern matches 2026-09-09 (INTC 2.38x at open → 1.04x at close). Declining trajectory consistent with dual macro overhang deepening through the session.",
+  "decision_rationale": "RISK-OFF regime per day plan. All three macro headwinds active: oil >$100, 10yr yield ~4.82%, CPI tomorrow. PPI+CPI week Thursday — full-session vol compression rule in effect. Semiconductor sector disarm from premarket. Broad-tape unlock fails (NVDA below VWAP). VWAP reclaim off-table (CPI tomorrow). No ORB breakout firing on either name. Zero trades is the correct and expected outcome per day plan. Consistent with 2026-09-09 outcome.",
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "next_watch": "Monitor NVDA for broad-tape unlock (recovery above VWAP $218.68). Monitor INTC rel-vol trajectory — if it continues declining below 1.5x, the name loses any theoretical candidacy. Any macro reversal signal (oil drop below $98, yield relief, S&P futures turning positive >0.5%) would require re-evaluation."
+}

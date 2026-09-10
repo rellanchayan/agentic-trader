@@ -227,6 +227,29 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-10: No tuning. Tuner unfrozen ("ok to tune", 58 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. Third consecutive zero-trade session (Sep 8, Sep 9, Sep 10).
+  Regime: RISK-OFF all session. Vol compression confirmed across both candidates for the full
+  session: INTC fell from 3.61x relative volume at the open to 0.88x at the close; NVDA fell from
+  3.32x to 0.64x. CPI is scheduled for tomorrow (Sep 11), which puts VWAP reclaim off-table per the
+  existing MIXED/RANGE + imminent binary macro event skip rule. The broad-tape unlock gate (SPY and
+  NVDA both above VWAP required before any ORB or momentum entry) blocked all ORB candidates: NVDA
+  remained below VWAP all session in the RISK-OFF tape. Zero trades is the correct and expected
+  outcome.
+  This session outcome was correctly predicted by yesterday's journal (Sep 9): the CPI overhang and
+  vol compression following Thursday's PPI release were identified as the dominant forces for today.
+  Three existing rules covered every decision point without modification: (1) PPI+CPI week rule
+  (added 2026-09-09) — vol compression is a full-session phenomenon when PPI and CPI fall on
+  consecutive trading days; (2) broad-tape unlock rule — NVDA below VWAP blocks ORB and momentum
+  entries regardless of individual setup quality; (3) VWAP reclaim skip condition — MIXED/RANGE tape
+  with an imminent binary macro event (CPI tomorrow) is a disqualifying combination. No new durable
+  rule is warranted tonight; the rules performed as designed and the evidence adds no new pattern
+  beyond what the Sep 9 journal already captured.
+  All-time stats (58 days, 20 trades, 0.34 trades/day, win rate 30%, avg win +0.342R, avg loss
+  -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Unchanged from 2026-09-09 (no new trades placed).
 - 2026-09-09: No tuning. Tuner unfrozen ("ok to tune", 57 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

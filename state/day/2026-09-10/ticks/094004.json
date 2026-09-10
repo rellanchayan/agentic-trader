@@ -1,0 +1,59 @@
+{
+  "tick_id": "2026-09-10T094004",
+  "timestamp_et": "2026-09-10T09:40:04",
+  "minutes_since_open": 10,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "INTC",
+      "last": 102.08,
+      "vwap": 102.02,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 3.61,
+      "spread_bp": 4.9,
+      "quote_age_sec": 0.3,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "Semiconductor sector disarm active (INTC, NVDA, MU, AMD all gapped down premarket). Broad-tape unlock fails (NVDA below VWAP). RISK-OFF regime; ORB not armed per day plan. PPI+CPI Thursday vol-compression rule in effect."
+    },
+    {
+      "ticker": "NVDA",
+      "last": 219.03,
+      "vwap": 219.60,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 3.32,
+      "spread_bp": 1.8,
+      "quote_age_sec": 0.3,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "NVDA is below VWAP — broad-tape unlock condition fails. Semiconductor sector disarm active. Goldman Sachs Technology Conference binary event risk today. VWAP reclaim off-table (CPI tomorrow). RISK-OFF regime."
+    }
+  ],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "regime": "RISK-OFF",
+  "broad_tape_unlock": false,
+  "broad_tape_unlock_reason": "NVDA below VWAP ($219.03 < $219.60); SPY data not in snapshot but not needed — NVDA alone fails the unlock.",
+  "vwap_reclaim_armed": false,
+  "vwap_reclaim_reason": "CPI August releases tomorrow (Sep 11) — imminent binary macro event. Standing playbook rule (added 2026-09-03, confirmed 2026-09-04): skip VWAP reclaim entirely in RISK-OFF with imminent macro event.",
+  "orb_armed": false,
+  "orb_reason": "Broad-tape unlock fails. Semiconductor sector disarm in effect. RISK-OFF regime.",
+  "momentum_armed": false,
+  "momentum_reason": "Sector-wide selling; no sector momentum alignment for any long.",
+  "summary": "RISK-OFF, PPI+CPI Thursday vol-compression rule active, all setups disarmed. Zero trades is the expected and correct outcome. Capital fully protected.",
+  "macro_context": {
+    "ppi_aug": "+0.4% MoM (in-line, neutral — not bullish)",
+    "cpi_tomorrow": "Sep 11 at 8:30 AM ET, binary event",
+    "oil": "above $100/barrel",
+    "ten_year_yield": "~4.82%",
+    "nvda_conference": "Goldman Sachs Technology Conference today — binary event risk",
+    "semi_sector_premarket": "INTC, NVDA, MU, AMD all gapped down",
+    "fomc_quiet_period": "active since Sep 5; FOMC meeting Sep 15-16"
+  }
+}

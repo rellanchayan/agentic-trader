@@ -1,0 +1,89 @@
+{
+  "tick_time_et": "15:40:06",
+  "tick_id": "154006",
+  "date": "2026-09-10",
+  "verdict": "NO_TRADE",
+  "reason": "past_no_new_entries=true. No new entries permitted after 15:30 ET. Zero positions and zero open orders — nothing to manage or cancel.",
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999465.31,
+    "cash": 999465.31,
+    "buying_power": 3997861.24,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions": [],
+  "open_orders": [],
+  "market_snapshot": {
+    "INTC": {
+      "last": 100.96,
+      "bid": 101.01,
+      "ask": 101.02,
+      "vwap": 101.14,
+      "orb_high": 103.2,
+      "orb_low": 101.015,
+      "spread_bp": 1.0,
+      "quote_age_sec": 0.2,
+      "rel_volume": 0.88,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "NVDA": {
+      "last": 218.35,
+      "bid": 218.38,
+      "ask": 218.4,
+      "vwap": 218.46,
+      "orb_high": 220.98,
+      "orb_low": 218.3,
+      "spread_bp": 0.9,
+      "quote_age_sec": 0.2,
+      "rel_volume": 0.64,
+      "above_vwap": false,
+      "orb_breakout": false
+    }
+  },
+  "gate_outcomes": {
+    "INTC": {
+      "rel_volume": "FAIL (0.88x < 1.5x gate)",
+      "above_vwap": "FAIL (below VWAP $101.14)",
+      "spread_bp": "PASS (1.0 bp < 15 bp max)",
+      "past_no_new_entries": "FAIL — no new entries after 15:30",
+      "orb_breakout": "FAIL ($100.96 vs ORB high $103.20)",
+      "broad_tape_unlock": "FAIL (NVDA below VWAP)"
+    },
+    "NVDA": {
+      "rel_volume": "FAIL (0.64x < 1.5x gate)",
+      "above_vwap": "FAIL (below VWAP $218.46)",
+      "spread_bp": "PASS (0.9 bp < 15 bp max)",
+      "past_no_new_entries": "FAIL — no new entries after 15:30",
+      "orb_breakout": "FAIL ($218.35 vs ORB high $220.98)",
+      "broad_tape_unlock": "FAIL (NVDA below VWAP)"
+    }
+  },
+  "analysis": {
+    "regime": "RISK-OFF",
+    "macro_headwinds": [
+      "CPI August tomorrow (Fri Sep 11) — imminent binary macro event",
+      "Oil above $100/bbl (US-Iran conflict)",
+      "10-year yield ~4.82%"
+    ],
+    "sector_disarm": "Active — INTC, NVDA, MU, AMD all gapped down premarket. No recovery to broad sector stabilization observed.",
+    "broad_tape_unlock": "FAILS — NVDA below VWAP all day; SPY+NVDA both above VWAP is a mandatory prerequisite for ORB/momentum that has not been satisfied at any tick today.",
+    "vwap_reclaim_status": "OFF TABLE — CPI tomorrow is an imminent binary macro event (standing playbook rule, added 2026-09-03, confirmed 2026-09-04).",
+    "vol_compression_pattern": {
+      "INTC": "3.61x (09:40) → 1.90x (10:39) → 1.48x (11:40) → 1.26x (12:40) → 1.06x (13:39) → 0.96x (14:40) → 0.88x (15:40)",
+      "NVDA": "3.32x (09:40) → 1.38x (10:39) → 1.07x (11:40) → 0.91x (12:40) → 0.78x (13:39) → 0.67x (14:40) → 0.64x (15:40)"
+    },
+    "positioning_action": "None. Zero positions. Zero open orders. Nothing to manage or cancel.",
+    "new_entries": "Prohibited — past_no_new_entries=true (after 15:30 ET cutoff).",
+    "next_action": "Flatten window begins at 15:50 ET — but with zero positions, no action is required at flatten time.",
+    "day_summary": "Full session RISK-OFF, PPI+CPI Thursday vol compression confirmed exactly as planned. All setups correctly disarmed from open. Zero trades is the expected and correct outcome."
+  },
+  "trades_submitted": [],
+  "orders_cancelled": []
+}

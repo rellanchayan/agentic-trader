@@ -1,0 +1,58 @@
+{
+  "tick_time_et": "12:40",
+  "tick_time_utc": "2026-09-10T16:40:02Z",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "entries_considered": [],
+  "decision_summary": "NO_TRADE. All gates fail on both names. Vol compression deepening through midday exactly as PPI+CPI Thursday playbook rule forecast.",
+  "gate_outcomes": {
+    "INTC": {
+      "rel_volume": {"value": 1.26, "gate": 1.5, "pass": false},
+      "spread_bp": {"value": 2.0, "gate": 25, "pass": true},
+      "quote_age_sec": {"value": 0.5, "gate": 30, "pass": true},
+      "above_vwap": {"value": false, "note": "INTC $100.90 below VWAP $101.13 — fell below VWAP since 11:40 tick"},
+      "orb_breakout": {"value": false, "note": "INTC $100.90 vs ORB high $103.20 — $2.30 below, not triggering"},
+      "vwap_reclaim": {"armed": false, "reason": "OFF TABLE — CPI tomorrow is imminent binary macro event (standing playbook rule)"},
+      "broad_tape_unlock": {"pass": false, "reason": "NVDA below VWAP — blocks all ORB and momentum entries"},
+      "sector_disarm": {"active": true, "reason": "Semiconductor sector-wide selling since premarket; no broad sector recovery above VWAP"}
+    },
+    "NVDA": {
+      "rel_volume": {"value": 0.91, "gate": 1.5, "pass": false, "note": "Now below 1.0x — severely below gate"},
+      "spread_bp": {"value": 1.4, "gate": 25, "pass": true},
+      "quote_age_sec": {"value": 0.3, "gate": 30, "pass": true},
+      "above_vwap": {"value": false, "note": "NVDA $217.98 below VWAP $218.52"},
+      "orb_breakout": {"value": false, "note": "NVDA $217.98 vs ORB high $220.98 — $3.00 below, not triggering"},
+      "vwap_reclaim": {"armed": false, "reason": "OFF TABLE — CPI tomorrow + GS Conference binary risk today"},
+      "broad_tape_unlock": {"pass": false, "reason": "NVDA itself is below VWAP — self-referential fail"},
+      "sector_disarm": {"active": true, "reason": "Semiconductor sector-wide selling since premarket; Goldman Sachs Technology Conference binary event risk"}
+    }
+  },
+  "vol_compression_trend": {
+    "INTC": "3.61x (09:40) → 1.90x (10:39) → 1.48x (11:40) → 1.26x (12:40)",
+    "NVDA": "3.32x (09:40) → 1.38x (10:39) → 1.07x (11:40) → 0.91x (12:40)"
+  },
+  "regime": "RISK-OFF",
+  "playbook_rules_triggered": [
+    "PPI+CPI Thursday vol compression rule (2026-09-09): full-session phenomenon — zero trades when no candidate maintains 1.5x gate is correct outcome",
+    "Sector-wide semiconductor disarm: no semi recovery signal from any name",
+    "VWAP reclaim OFF TABLE: imminent binary macro event (CPI Sep 11)",
+    "Broad-tape unlock gate: NVDA below VWAP blocks all ORB and momentum entries"
+  ],
+  "market_snapshot": {
+    "INTC": {"last": 100.90, "bid": 100.90, "ask": 100.92, "vwap": 101.13, "orb_high": 103.20, "orb_low": 101.015, "rel_volume": 1.26, "spread_bp": 2.0, "above_vwap": false, "orb_breakout": false},
+    "NVDA": {"last": 217.98, "bid": 217.96, "ask": 217.99, "vwap": 218.52, "orb_high": 220.98, "orb_low": 218.30, "rel_volume": 0.91, "spread_bp": 1.4, "above_vwap": false, "orb_breakout": false}
+  },
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "loss_budget_remaining": 3000.0
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

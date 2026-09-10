@@ -1,0 +1,56 @@
+{
+  "tick_time_et": "11:40:16",
+  "date": "2026-09-10",
+  "action": "NO_TRADE",
+  "verdict": "PROCEED",
+  "regime": "RISK-OFF",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_remaining": 20,
+  "loss_budget_remaining": 3000.0,
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 101.53,
+      "vwap": 101.07,
+      "above_vwap": true,
+      "orb_high": 103.20,
+      "orb_low": 101.015,
+      "orb_breakout": false,
+      "rel_volume": 1.48,
+      "spread_bp": 2.0,
+      "atr_1m": 0.139,
+      "atr_day": 4.43,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_volume 1.48x below 1.5x minimum gate"
+    },
+    {
+      "ticker": "NVDA",
+      "last": 218.61,
+      "vwap": 218.53,
+      "above_vwap": true,
+      "orb_high": 220.98,
+      "orb_low": 218.30,
+      "orb_breakout": false,
+      "rel_volume": 1.07,
+      "spread_bp": 1.4,
+      "atr_1m": 0.201,
+      "atr_day": 7.67,
+      "gate_result": "FAIL",
+      "gate_reason": "rel_volume 1.07x far below 1.5x minimum gate"
+    }
+  ],
+  "setups_evaluated": {
+    "orb_breakout": "NOT_ARMED — neither name at ORB high; sector disarm active",
+    "vwap_reclaim": "OFF_TABLE — CPI Fri Sep 11 imminent binary macro event (standing playbook rule)",
+    "momentum": "NOT_ARMED — sector disarm active; rel-vol below gate on all names",
+    "mean_reversion": "NOT_ARMED — RISK-OFF; no short-side entries permitted"
+  },
+  "rules_applied": [
+    "PPI+CPI Thursday vol compression rule (codified 2026-09-09): zero-trade when no name sustains rel-vol above 1.5x",
+    "VWAP reclaim off-table: imminent binary macro event (CPI tomorrow) per standing playbook rule",
+    "Semiconductor sector disarm: multi-name premarket selling not yet resolved; multiple semi names below VWAP at open",
+    "Broad-tape unlock: SPY data unavailable in context; NVDA marginally above VWAP ($0.08) but insufficient conviction with 1.07x rel-vol"
+  ],
+  "note": "Vol compression deepening as forecast. NVDA marginally above VWAP for first time today ($218.61 vs $218.53) but rel-vol collapsed to 1.07x — no institutional conviction behind the move. INTC 1.48x just below gate. All setups blocked. No trade is the correct outcome per the PPI+CPI Thursday structure. No positions to manage."
+}

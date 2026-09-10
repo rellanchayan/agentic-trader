@@ -1,0 +1,69 @@
+{
+  "tick_time_et": "14:40:05",
+  "date": "2026-09-10",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "decision": {
+    "verdict": "NO_TRADE",
+    "primary_reason": "Vol compression confirmed; all rel-vol gates fail; broad-tape unlock fails; ORB window closed; CPI tomorrow disarms VWAP reclaim.",
+    "gate_outcomes": {
+      "INTC": {
+        "rel_volume": 0.96,
+        "gate_1_5x": "FAIL",
+        "spread_bp": 1.0,
+        "above_vwap": true,
+        "orb_breakout": false,
+        "entry_window_open": false,
+        "note": "rel-vol 0.96x below 1.5x gate; ORB window closed at 11:15 AM ET"
+      },
+      "NVDA": {
+        "rel_volume": 0.67,
+        "gate_1_5x": "FAIL",
+        "spread_bp": 1.4,
+        "above_vwap": false,
+        "orb_breakout": false,
+        "entry_window_open": false,
+        "note": "rel-vol 0.67x well below gate; below VWAP; broad-tape unlock fails"
+      }
+    },
+    "standing_rules_applied": [
+      "VWAP reclaim off-table: CPI tomorrow (imminent binary macro event)",
+      "Broad-tape unlock fails: NVDA below VWAP",
+      "Semiconductor sector disarm active (multi-name semi selling)",
+      "PPI+CPI Thursday full-session vol compression rule active",
+      "ORB entry window closed at 11:15 AM ET (90-min limit)"
+    ]
+  },
+  "market_snapshot": {
+    "INTC": {
+      "last": 101.385,
+      "vwap": 101.15,
+      "orb_high": 103.2,
+      "rel_volume": 0.96,
+      "spread_bp": 1.0,
+      "above_vwap": true
+    },
+    "NVDA": {
+      "last": 218.05,
+      "vwap": 218.51,
+      "orb_high": 220.98,
+      "rel_volume": 0.67,
+      "spread_bp": 1.4,
+      "above_vwap": false
+    }
+  },
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "loss_budget_remaining": 3000.0
+  },
+  "vol_compression_trail": {
+    "INTC": "3.61x -> 1.90x -> 1.48x -> 1.26x -> 1.06x -> 0.96x",
+    "NVDA": "3.32x -> 1.38x -> 1.07x -> 0.91x -> 0.78x -> 0.67x"
+  }
+}

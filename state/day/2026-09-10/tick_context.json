@@ -1,7 +1,7 @@
 {
   "date": "2026-09-10",
-  "timestamp_et": "2026-09-10T13:39:44.915337-04:00",
-  "minutes_since_open": 249,
+  "timestamp_et": "2026-09-10T14:40:05.163879-04:00",
+  "minutes_since_open": 310,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,40 +33,40 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 101.295,
-      "bid": 101.2,
-      "ask": 101.22,
-      "quote_age_sec": 0.2,
-      "spread_bp": 2.0,
+      "last": 101.385,
+      "bid": 101.35,
+      "ask": 101.36,
+      "quote_age_sec": 0.5,
+      "spread_bp": 1.0,
       "vwap": 101.15,
       "orb_high": 103.2,
       "orb_low": 101.015,
-      "atr_1m": 0.077,
+      "atr_1m": 0.092,
       "atr_day": 4.43,
-      "rel_volume": 1.06,
-      "volume_today": 1509844,
+      "rel_volume": 0.96,
+      "volume_today": 1714880,
       "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 101.32,
-      "marketable_sell_limit": 101.1
+      "marketable_buy_limit": 101.46,
+      "marketable_sell_limit": 101.25
     },
     "NVDA": {
-      "last": 218.32,
-      "bid": 218.18,
-      "ask": 218.2,
-      "quote_age_sec": 0.2,
-      "spread_bp": 0.9,
-      "vwap": 218.54,
+      "last": 218.05,
+      "bid": 218.05,
+      "ask": 218.08,
+      "quote_age_sec": 0.4,
+      "spread_bp": 1.4,
+      "vwap": 218.51,
       "orb_high": 220.98,
       "orb_low": 218.3,
-      "atr_1m": 0.109,
+      "atr_1m": 0.083,
       "atr_day": 7.67,
-      "rel_volume": 0.78,
-      "volume_today": 1907482,
+      "rel_volume": 0.67,
+      "volume_today": 2058666,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 218.42,
-      "marketable_sell_limit": 217.96
+      "marketable_buy_limit": 218.3,
+      "marketable_sell_limit": 217.83
     }
   },
   "recent_ticks": [
@@ -98,6 +98,14 @@
       "t": "12:40",
       "action": "NO_TRADE",
       "note": "RISK-OFF / vol compression deepening. INTC $100.90 now BELOW VWAP $101.13 (was above at 11:40); rel-vol 1.26x (FAILS gate 1.5x) / 2.0bp. NVDA $217.98 below VWAP $218.52; rel-vol 0.91x (now below 1.0x, FAILS badly) / 1.4bp. ORB breakout: INTC $100.90 vs ORB high $103.20 (no); NVDA $217.98 vs ORB high $220.98 (no). Broad-tape unlock FAILS (NVDA below VWAP). VWAP reclaim off-table (CPI tomorrow). Semi sector disarm active. Vol compression pattern: INTC 3.61x\u21921.90x\u21921.48x\u21921.26x; NVDA 3.32x\u21921.38x\u21921.07x\u21920.91x. Zero positions, zero orders.",
+      "day_pnl": 0.0,
+      "positions": 0,
+      "trades_remaining": 20
+    },
+    {
+      "t": "13:39",
+      "action": "NO_TRADE",
+      "note": "RISK-OFF / vol compression deepening. INTC 01.295 above VWAP 01.15 (+0.14%) but rel-vol 1.06x (FAILS gate 1.5x) / 2.0bp. NVDA 18.32 below VWAP 18.54; rel-vol 0.78x (FAILS badly) / 0.9bp. Broad-tape unlock FAILS: NVDA below VWAP \u2014 no ORB or momentum entries permitted. VWAP reclaim OFF TABLE: CPI tomorrow is imminent binary macro event (standing rule). ORB breakout: INTC 01.295 vs ORB high 03.20 (no); NVDA 18.32 vs ORB high 20.98 (no). 90-min ORB window closed at 11:15 AM ET \u2014 no late momentum entries. Vol compression pattern: INTC 3.61x->1.90x->1.48x->1.26x->1.06x; NVDA 3.32x->1.38x->1.07x->0.91x->0.78x. Semiconductor sector disarm active \u2014 NVDA below VWAP, sector not broadly stabilized. PPI+CPI Thursday full-session vol compression confirmed as expected per plan. Zero positions, zero orders. Correct outcome.",
       "day_pnl": 0.0,
       "positions": 0,
       "trades_remaining": 20

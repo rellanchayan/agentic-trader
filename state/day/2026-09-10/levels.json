@@ -2,10 +2,11 @@
   "_meta": {
     "date": "2026-09-10",
     "generated_utc": "2026-09-10T13:29:15.339963+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-09-10T13:32:30+00:00",
+    "source": "day_screener",
     "candidates_considered": 2,
     "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Day-screener pass at 9:32 AM ET (2 min into open). Both INTC and NVDA kept: live spreads collapsed to tradeable levels once the open arrived (premarket spreads were illiquidity artifacts). SPY and QQQ evaluated via live quote: SPY spread ~102 bp and QQQ spread ~82 bp at open with no verified prev_close or ATR in screen output — excluded per honesty rule. Watchlist is 2 names; do not pad. ORB levels fill in live after 9:45 AM."
   },
   "INTC": {
     "sector": "technology",
@@ -14,21 +15,25 @@
     "avg_vol_10d": 2419360,
     "premarket_price": 101.88,
     "gap_pct": -0.041,
-    "spread_bp": 1006.1,
+    "spread_bp": 7.8,
+    "support": 101.00,
+    "resistance": 104.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,419,360 sh/day); -4.1% gap"
+    "note": "gapped -4.1% (~$4.36) to ~102.30 at open — significantly wider than yesterday's -0.85% gap; consistent with a hot PPI print and ongoing macro deterioration (oil shock, elevated yields). Live spread 7.8 bp at 9:32 AM — tradeable; premarket 1,006 bp was an opening-auction artifact. Support: 101.00 (near premarket low of 101.88, round number) and 100.00 (major psychological level). Resistance: 104.00 (approx half-gap fill, first ceiling) and 106.24 (full gap fill = prev_close, unlikely today). ATR $4.15 means a normal daily range of ~4%; the gap already consumed nearly one full ATR, so intraday moves may be choppier. Northland Capital upgrade from yesterday still in effect, but macro headwinds may suppress buyers. Wait for ORB to form (no earlier than 9:45 AM) before evaluating entry."
   },
   "NVDA": {
     "sector": "technology",
     "prev_close": 223.77,
-    "atr_day": 7.5,
+    "atr_day": 7.50,
     "avg_vol_10d": 4035178,
     "premarket_price": 220.52,
     "gap_pct": -0.0145,
-    "spread_bp": 1001.3,
+    "spread_bp": 2.3,
+    "support": 218.00,
+    "resistance": 222.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,035,178 sh/day); -1.5% gap"
+    "note": "gapped -1.5% (~$3.55) to ~220.22 at open. Live spread 2.3 bp at 9:32 AM — excellent; best liquidity name on today's watchlist and the preferred vehicle if a clean setup forms. Two active catalysts today: (1) Goldman Sachs Technology Conference presentation — event risk; do not chase late-session strength per yesterday's plan; (2) ex-dividend $0.25/share today — mechanical noise only (~0.11% of price, not a trading catalyst). Support: 218.00 (prior week support zone from yesterday's plan, round number) and 215.00 (secondary). Resistance: 222.00 (near-gap zone / round number) and 223.77 (full gap fill = prev_close). ATR $7.50 gives ~3.4% daily range; with gap already using ~1.6%, there is room to move in either direction. Note: the $0.25 ex-div mechanically reduces today's closing baseline by $0.25 relative to yesterday's close — factor this into gap-fill target math."
   }
 }

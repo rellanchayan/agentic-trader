@@ -1,0 +1,36 @@
+{
+  "t": "13:39",
+  "action": "NO_TRADE",
+  "note": "RISK-OFF / vol compression deepening. INTC 01.295 above VWAP 01.15 (+0.14%) but rel-vol 1.06x (FAILS gate 1.5x) / 2.0bp. NVDA 18.32 below VWAP 18.54; rel-vol 0.78x (FAILS badly) / 0.9bp. Broad-tape unlock FAILS: NVDA below VWAP \u2014 no ORB or momentum entries permitted. VWAP reclaim OFF TABLE: CPI tomorrow is imminent binary macro event (standing rule). ORB breakout: INTC 01.295 vs ORB high 03.20 (no); NVDA 18.32 vs ORB high 20.98 (no). 90-min ORB window closed at 11:15 AM ET \u2014 no late momentum entries. Vol compression pattern: INTC 3.61x->1.90x->1.48x->1.26x->1.06x; NVDA 3.32x->1.38x->1.07x->0.91x->0.78x. Semiconductor sector disarm active \u2014 NVDA below VWAP, sector not broadly stabilized. PPI+CPI Thursday full-session vol compression confirmed as expected per plan. Zero positions, zero orders. Correct outcome.",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_remaining": 20,
+  "timestamp_et": "2026-09-10T13:39:44-04:00",
+  "intc": {
+    "last": 101.295,
+    "vwap": 101.15,
+    "rel_volume": 1.06,
+    "spread_bp": 2.0,
+    "above_vwap": true,
+    "orb_breakout": false,
+    "gate_fails": [
+      "rel_volume 1.06x < 1.5x gate"
+    ]
+  },
+  "nvda": {
+    "last": 218.32,
+    "vwap": 218.54,
+    "rel_volume": 0.78,
+    "spread_bp": 0.9,
+    "above_vwap": false,
+    "orb_breakout": false,
+    "gate_fails": [
+      "below_vwap",
+      "rel_volume 0.78x < 1.5x gate"
+    ]
+  },
+  "broad_tape_unlock": false,
+  "vwap_reclaim_armed": false,
+  "vwap_reclaim_reason": "off_table_cpi_tomorrow",
+  "regime": "RISK-OFF"
+}

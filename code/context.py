@@ -177,6 +177,9 @@ def build(date: str) -> dict:
 
     # Which names to look at: the day's screened list (levels.json) + whatever we hold.
     levels = _load_levels(date)
+    # Support new format {"names": [{ticker, ...}, ...], "date": ..., ...}
+    if levels and isinstance(levels.get("names"), list):
+        levels = {n["ticker"]: n for n in levels["names"] if isinstance(n, dict) and "ticker" in n}
     names = list(levels.keys()) if levels else _load_watchlist()[:12]
     names = [n for n in names if not n.startswith("_")]
     for h in held_symbols:

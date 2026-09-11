@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
-  "timestamp_et": "2026-09-11T09:41:10.575719-04:00",
-  "minutes_since_open": 11,
+  "timestamp_et": "2026-09-11T10:39:53.576192-04:00",
+  "minutes_since_open": 69,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,43 +33,55 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 103.6,
-      "bid": 103.55,
-      "ask": 103.59,
-      "quote_age_sec": 0.1,
-      "spread_bp": 3.9,
-      "vwap": 102.22,
-      "orb_high": 103.71,
+      "last": 103.165,
+      "bid": 103.33,
+      "ask": 103.35,
+      "quote_age_sec": 0.2,
+      "spread_bp": 1.9,
+      "vwap": 103.2,
+      "orb_high": 104.06,
       "orb_low": 101.08,
-      "atr_1m": 0.725,
-      "atr_day": 4.47,
-      "rel_volume": 5.08,
-      "volume_today": 294496,
-      "above_vwap": true,
+      "atr_1m": 0.179,
+      "atr_day": 4.56,
+      "rel_volume": 2.17,
+      "volume_today": 808473,
+      "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 103.69,
-      "marketable_sell_limit": 103.45
+      "marketable_buy_limit": 103.45,
+      "marketable_sell_limit": 103.23
     },
     "NVDA": {
-      "last": 219.99,
-      "bid": 219.53,
-      "ask": 220.04,
-      "quote_age_sec": 0.1,
-      "spread_bp": 23.2,
-      "vwap": 219.86,
+      "last": 219.91,
+      "bid": 220.07,
+      "ask": 220.09,
+      "quote_age_sec": 0.3,
+      "spread_bp": 0.9,
+      "vwap": 220.72,
       "orb_high": 221.22,
       "orb_low": 219.09,
-      "atr_1m": 0.576,
-      "atr_day": 7.57,
-      "rel_volume": 1.84,
-      "volume_today": 165128,
-      "above_vwap": true,
+      "atr_1m": 0.285,
+      "atr_day": 7.63,
+      "rel_volume": 1.19,
+      "volume_today": 677326,
+      "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 220.26,
-      "marketable_sell_limit": 219.31
+      "marketable_buy_limit": 220.31,
+      "marketable_sell_limit": 219.85
     }
   },
-  "recent_ticks": [],
+  "recent_ticks": [
+    {
+      "t": "09:41",
+      "action": "HOLD",
+      "note": "Timing gate: 9:41 AM before mandatory 9:45 AM boundary. INTC: orb_breakout false (last $103.60 vs ORB high $103.71), rel_vol 5.08x PASS, spread 3.9bp PASS \u2014 watch for ORB entry after 9:45 AM. NVDA: rel_vol 1.84x FAIL (need 2.0x), spread 23.2bp FAIL (need <15bp). No positions. VWAP reclaim off-table all session.",
+      "tickers_evaluated": [
+        "INTC",
+        "NVDA"
+      ],
+      "orders_submitted": null,
+      "day_pnl": 0.0
+    }
+  ],
   "config_snapshot": {
     "orb_minutes": 15,
     "orb_breakout_buffer_bp": 5,

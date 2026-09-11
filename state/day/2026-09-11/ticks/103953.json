@@ -1,0 +1,43 @@
+{
+  "tick_time": "10:39:53",
+  "tick_et": "2026-09-11T10:39:53-04:00",
+  "action": "HOLD",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "gate": "broad_tape_unlock",
+      "gate_outcome": "BLOCK",
+      "detail": "NVDA below VWAP ($219.91 vs VWAP $220.72). Broad-tape unlock requires both SPY and NVDA above VWAP before any ORB or momentum entry.",
+      "rel_vol": 2.17,
+      "rel_vol_gate": "PASS",
+      "spread_bp": 1.9,
+      "spread_gate": "PASS",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "last": 103.165,
+      "orb_high": 104.06,
+      "gap_to_orb_high": 0.895
+    },
+    {
+      "ticker": "NVDA",
+      "gate": "rel_vol",
+      "gate_outcome": "BLOCK",
+      "detail": "rel_vol 1.19x below 2.0x minimum (MIXED/RANGE gap-up day elevated threshold). Also below VWAP — serves as the broad-tape unlock bellwether.",
+      "rel_vol": 1.19,
+      "rel_vol_gate": "FAIL",
+      "spread_bp": 0.9,
+      "spread_gate": "PASS",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "last": 219.91,
+      "orb_high": 221.22,
+      "vwap": 220.72
+    }
+  ],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "note": "Primary blocking gate: NVDA below VWAP (broad-tape unlock not satisfied) blocks all ORB and momentum entries. Secondary: no ORB breakout signal on any name. INTC passes rel_vol and spread but cannot enter. 90-min ORB window open until ~11:15 AM ET. VWAP reclaim off-table all session."
+}

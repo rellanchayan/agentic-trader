@@ -1,0 +1,60 @@
+{
+  "tick_time_et": "2026-09-11T11:40:05-04:00",
+  "action": "HOLD",
+  "positions_managed": [],
+  "entries_evaluated": [
+    {
+      "ticker": "INTC",
+      "setup": "orb",
+      "outcome": "BLOCKED",
+      "reasons": [
+        "broad-tape unlock not satisfied: NVDA $219.83 < VWAP $220.53",
+        "90-minute ORB window expired (130 min since open)",
+        "rel_vol 1.54x below 2.0x elevated threshold for MIXED/RANGE gap-up day",
+        "orb_breakout false: last $103.645 vs ORB high $104.06"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "outcome": "BLOCKED",
+      "reasons": [
+        "broad-tape unlock not satisfied: NVDA itself below VWAP",
+        "90-minute ORB window expired (130 min since open)",
+        "rel_vol 0.84x — far below 2.0x minimum"
+      ]
+    }
+  ],
+  "orders_submitted": [],
+  "market_snapshot": {
+    "INTC": {
+      "last": 103.645,
+      "vwap": 103.23,
+      "orb_high": 104.06,
+      "orb_low": 101.08,
+      "rel_volume": 1.54,
+      "spread_bp": 1.9,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    "NVDA": {
+      "last": 219.83,
+      "vwap": 220.53,
+      "orb_high": 221.22,
+      "orb_low": 219.09,
+      "rel_volume": 0.84,
+      "spread_bp": 3.2,
+      "above_vwap": false,
+      "orb_breakout": false
+    }
+  },
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "regime": "MIXED/RANGE",
+  "minutes_since_open": 130
+}

@@ -1,7 +1,7 @@
 {
   "date": "2026-09-11",
-  "timestamp_et": "2026-09-11T10:39:53.576192-04:00",
-  "minutes_since_open": 69,
+  "timestamp_et": "2026-09-11T11:40:05.779861-04:00",
+  "minutes_since_open": 130,
   "clock_flags": {
     "past_no_new_entries": false,
     "in_flatten_window": false
@@ -33,40 +33,40 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 103.165,
-      "bid": 103.33,
-      "ask": 103.35,
-      "quote_age_sec": 0.2,
+      "last": 103.645,
+      "bid": 103.64,
+      "ask": 103.66,
+      "quote_age_sec": 0.3,
       "spread_bp": 1.9,
-      "vwap": 103.2,
+      "vwap": 103.23,
       "orb_high": 104.06,
       "orb_low": 101.08,
-      "atr_1m": 0.179,
+      "atr_1m": 0.124,
       "atr_day": 4.56,
-      "rel_volume": 2.17,
-      "volume_today": 808473,
-      "above_vwap": false,
+      "rel_volume": 1.54,
+      "volume_today": 1092040,
+      "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 103.45,
-      "marketable_sell_limit": 103.23
+      "marketable_buy_limit": 103.76,
+      "marketable_sell_limit": 103.54
     },
     "NVDA": {
-      "last": 219.91,
-      "bid": 220.07,
-      "ask": 220.09,
+      "last": 219.83,
+      "bid": 219.79,
+      "ask": 219.86,
       "quote_age_sec": 0.3,
-      "spread_bp": 0.9,
-      "vwap": 220.72,
+      "spread_bp": 3.2,
+      "vwap": 220.53,
       "orb_high": 221.22,
       "orb_low": 219.09,
-      "atr_1m": 0.285,
+      "atr_1m": 0.146,
       "atr_day": 7.63,
-      "rel_volume": 1.19,
-      "volume_today": 677326,
+      "rel_volume": 0.84,
+      "volume_today": 905824,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 220.31,
-      "marketable_sell_limit": 219.85
+      "marketable_buy_limit": 220.08,
+      "marketable_sell_limit": 219.57
     }
   },
   "recent_ticks": [
@@ -74,6 +74,17 @@
       "t": "09:41",
       "action": "HOLD",
       "note": "Timing gate: 9:41 AM before mandatory 9:45 AM boundary. INTC: orb_breakout false (last $103.60 vs ORB high $103.71), rel_vol 5.08x PASS, spread 3.9bp PASS \u2014 watch for ORB entry after 9:45 AM. NVDA: rel_vol 1.84x FAIL (need 2.0x), spread 23.2bp FAIL (need <15bp). No positions. VWAP reclaim off-table all session.",
+      "tickers_evaluated": [
+        "INTC",
+        "NVDA"
+      ],
+      "orders_submitted": null,
+      "day_pnl": 0.0
+    },
+    {
+      "t": "10:39",
+      "action": "HOLD",
+      "note": "Broad-tape unlock BLOCKED: NVDA below VWAP ($219.91 vs VWAP $220.72). All ORB and momentum entries blocked until NVDA reclaims VWAP. INTC: orb_breakout false (last $103.165 vs ORB high $104.06), rel_vol 2.17x PASS, spread 1.9bp PASS \u2014 good setup quality but broad-tape gate overrides. NVDA: rel_vol 1.19x FAIL (need 2.0x minimum). No positions, 0 trades. VWAP reclaim off-table (MIXED/RANGE + post-CPI/pre-FOMC week). 90-min ORB window still open until ~11:15 AM.",
       "tickers_evaluated": [
         "INTC",
         "NVDA"

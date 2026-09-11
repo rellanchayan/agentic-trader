@@ -1,0 +1,60 @@
+{
+  "tick_id": "2026-09-11T09:41:10-04:00",
+  "hhmmss": "094110",
+  "timestamp_et": "2026-09-11T09:41:10-04:00",
+  "minutes_since_open": 11,
+  "action": "HOLD",
+  "reason": "Hard timing block: 9:41 AM ET is before the mandatory 9:45 AM no-entry boundary. Additionally, INTC has not triggered an ORB breakout (last $103.60 vs ORB high $103.71, gap of $0.11). NVDA fails spread gate (23.2 bp vs 15 bp max) and rel_volume gate (1.84x vs 2.0x elevated threshold for MIXED/RANGE gap-up day).",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "orders_submitted": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 103.60,
+      "orb_high": 103.71,
+      "orb_breakout": false,
+      "rel_volume": 5.08,
+      "spread_bp": 3.9,
+      "above_vwap": true,
+      "vwap": 102.22,
+      "gate_outcomes": {
+        "timing_9_45am": "FAIL — 9:41 AM ET is before mandatory 9:45 AM boundary",
+        "orb_breakout": "FAIL — price $103.60 below ORB high $103.71",
+        "rel_volume_2_0x": "PASS — 5.08x > 2.0x elevated threshold",
+        "spread_15bp": "PASS — 3.9 bp < 15 bp max",
+        "above_vwap": "PASS"
+      },
+      "disposition": "WATCH — most interesting candidate for the next tick if price clears ORB high after 9:45 AM"
+    },
+    {
+      "ticker": "NVDA",
+      "last": 219.99,
+      "orb_high": 221.22,
+      "orb_breakout": false,
+      "rel_volume": 1.84,
+      "spread_bp": 23.2,
+      "above_vwap": true,
+      "vwap": 219.86,
+      "gate_outcomes": {
+        "timing_9_45am": "FAIL — 9:41 AM ET is before mandatory 9:45 AM boundary",
+        "rel_volume_2_0x": "FAIL — 1.84x < 2.0x elevated threshold",
+        "spread_15bp": "FAIL — 23.2 bp > 15 bp max",
+        "orb_breakout": "FAIL — price $219.99 below ORB high $221.22",
+        "above_vwap": "PASS"
+      },
+      "disposition": "NOT ACTIONABLE — fails spread and rel_volume gates independently of timing block"
+    }
+  ],
+  "broad_tape_unlock": {
+    "nvda_above_vwap": true,
+    "spy_above_vwap": "UNKNOWN — SPY not in market snapshot; assume not confirmed",
+    "unlock_status": "INCOMPLETE — SPY confirmation absent"
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "regime": "MIXED/RANGE",
+  "notes": "INTC is the most promising candidate: 5.08x rel_volume, 3.9 bp spread, above VWAP, and showing a catalyst-driven gap (+2.5%). If it clears ORB high $103.71 after 9:45 AM with spread and rel_volume still favorable and broad-tape unlock confirmed (SPY + NVDA both above VWAP), it will be actionable as an ORB entry. VWAP reclaim is off-table all session per plan (MIXED/RANGE + post-CPI + pre-FOMC week). No action taken this tick."
+}

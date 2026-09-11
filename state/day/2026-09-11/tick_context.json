@@ -1,9 +1,9 @@
 {
   "date": "2026-09-11",
-  "timestamp_et": "2026-09-11T14:39:32.653389-04:00",
-  "minutes_since_open": 309,
+  "timestamp_et": "2026-09-11T15:39:30.977282-04:00",
+  "minutes_since_open": 369,
   "clock_flags": {
-    "past_no_new_entries": false,
+    "past_no_new_entries": true,
     "in_flatten_window": false
   },
   "account": {
@@ -33,40 +33,40 @@
   "open_orders": [],
   "market": {
     "INTC": {
-      "last": 103.53,
-      "bid": 103.56,
-      "ask": 103.58,
-      "quote_age_sec": 0.3,
+      "last": 103.07,
+      "bid": 103.11,
+      "ask": 103.13,
+      "quote_age_sec": 0.7,
       "spread_bp": 1.9,
-      "vwap": 103.1,
+      "vwap": 103.11,
       "orb_high": 104.06,
       "orb_low": 101.08,
-      "atr_1m": 0.093,
+      "atr_1m": 0.08,
       "atr_day": 4.56,
-      "rel_volume": 1.13,
-      "volume_today": 1982312,
-      "above_vwap": true,
-      "orb_breakout": false,
-      "marketable_buy_limit": 103.68,
-      "marketable_sell_limit": 103.46
-    },
-    "NVDA": {
-      "last": 219.6,
-      "bid": 219.6,
-      "ask": 219.63,
-      "quote_age_sec": 0.3,
-      "spread_bp": 1.4,
-      "vwap": 220.18,
-      "orb_high": 221.22,
-      "orb_low": 219.09,
-      "atr_1m": 0.112,
-      "atr_day": 7.63,
-      "rel_volume": 0.49,
-      "volume_today": 1287769,
+      "rel_volume": 1.0,
+      "volume_today": 2115306,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 219.85,
-      "marketable_sell_limit": 219.38
+      "marketable_buy_limit": 103.23,
+      "marketable_sell_limit": 103.01
+    },
+    "NVDA": {
+      "last": 218.485,
+      "bid": 218.47,
+      "ask": 218.49,
+      "quote_age_sec": 0.3,
+      "spread_bp": 0.9,
+      "vwap": 220.03,
+      "orb_high": 221.22,
+      "orb_low": 219.09,
+      "atr_1m": 0.127,
+      "atr_day": 7.64,
+      "rel_volume": 0.47,
+      "volume_today": 1471348,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "marketable_buy_limit": 218.71,
+      "marketable_sell_limit": 218.25
     }
   },
   "recent_ticks": [
@@ -107,6 +107,17 @@
       "t": "13:39",
       "action": "HOLD",
       "note": "Four compounding blocking conditions persist into early afternoon. (1) 90-min ORB window expired: 249 min since open; playbook prohibits new ORB entries >90 min after opening range. (2) Broad-tape unlock NOT satisfied: NVDA last $219.09 vs VWAP $220.26 \u2014 gap has WIDENED from -$0.70 at 11:40 to -$1.17 now; all ORB and momentum entries blocked. (3) Relative volume well below gate: INTC 1.31x (need 2.0x for MIXED/RANGE gap-up day), NVDA 0.56x (severely below). (4) VWAP reclaim off-table: post-CPI / pre-FOMC week, MIXED/RANGE regime \u2014 explicitly disabled in plan and playbook. INTC individual: last $103.295, bid $103.30, ask $103.32, spread 1.9bp (PASS on spread), above VWAP $103.08, orb_breakout false (ORB high $104.06 not breached). NVDA: last $219.09, below VWAP $220.26, rel_vol 0.56x. No positions. Day P&L $0. 0/8 slots used. 20 trades remaining. Next window: entry cutoff 3:30 PM ET (110 min away); flatten starts 3:50 PM ET.",
+      "tickers_evaluated": [
+        "INTC",
+        "NVDA"
+      ],
+      "orders_submitted": null,
+      "day_pnl": 0.0
+    },
+    {
+      "t": "14:39",
+      "action": "HOLD",
+      "note": "Four compounding blocking conditions persist into early afternoon. (1) 90-min ORB window expired: 309 min since open; window closed at 11:00 AM ET. (2) Broad-tape unlock NOT satisfied: NVDA last $219.60 vs VWAP $220.18, below VWAP \u2014 blocks all ORB and momentum entries. (3) Relative volume well below gate: INTC 1.13x (need 2.0x for MIXED/RANGE gap-up day), NVDA 0.49x (severely below). (4) VWAP reclaim off-table: post-CPI / pre-FOMC week, MIXED/RANGE regime \u2014 explicitly disabled in plan and playbook (0-for-2 all-time in this environment). INTC individual: last $103.53, bid $103.56, ask $103.58, spread 1.9bp (PASS on spread), above VWAP $103.10, orb_breakout false (ORB high $104.06 not breached). NVDA: last $219.60, below VWAP $220.18, rel_vol 0.49x. No positions. Day P&L $0. 0/8 slots used. 20 trades remaining. Entry cutoff in 51 min (3:30 PM ET); flatten starts 3:50 PM ET.",
       "tickers_evaluated": [
         "INTC",
         "NVDA"

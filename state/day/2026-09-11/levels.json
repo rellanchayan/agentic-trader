@@ -1,34 +1,39 @@
 {
-  "_meta": {
-    "date": "2026-09-11",
-    "generated_utc": "2026-09-11T13:29:31.817919+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 2,
-    "top": 2,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 100.25,
-    "atr_day": 4.43,
-    "avg_vol_10d": 2299846,
-    "premarket_price": 102.79,
-    "gap_pct": 0.0253,
-    "spread_bp": 1002.0,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,299,846 sh/day); +2.5% gap"
-  },
-  "NVDA": {
-    "sector": "technology",
-    "prev_close": 218.37,
-    "atr_day": 7.67,
-    "avg_vol_10d": 3904796,
-    "premarket_price": 221.02,
-    "gap_pct": 0.0121,
-    "spread_bp": 1004.4,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (3,904,796 sh/day); +1.2% gap"
-  }
+  "date": "2026-09-11",
+  "generated_utc": "2026-09-11T13:32:46+00:00",
+  "screener_note": "IEX feed returned bar data for 2 of 42 watchlist candidates. SPY and QQQ had no bars through the feed today — evaluate them live at first tick given the CPI catalyst. Only confirmed-data names are included per the honesty rule.",
+  "names": [
+    {
+      "ticker": "NVDA",
+      "last_price": 221.12,
+      "prev_close": 218.37,
+      "atr_day": 7.67,
+      "avg_vol_10d": 3904796,
+      "premarket_spread_bp": 79.1,
+      "support": 218.00,
+      "resistance": 223.77,
+      "orb_high": null,
+      "orb_low": null,
+      "catalyst": "CPI August releases 8:30 AM ET today (consensus +0.4% MoM / +3.4% YoY); NVDA gapping +1.3% from yesterday's sector-wide semi selloff; GS Technology Conference risk resolved overnight; FOMC Sept 15-16 meeting — favorable CPI could lift rate-cut odds and tech multiples. Broad-tape unlock (SPY AND NVDA above VWAP) required before any entry.",
+      "setup": "orb",
+      "watch": true,
+      "note": "Sector disarm from yesterday (multiple semis selling) lifts only when NVDA and at least one other semi (INTC, AMD, MU) all recover above VWAP simultaneously. Premarket spread (79.1 bp) is wider than typical — recheck live; the 15 bp gate is authoritative. Support is yesterday's close at $218; resistance is the Sep 9 close at $223.77, which is the full recovery target."
+    },
+    {
+      "ticker": "INTC",
+      "last_price": 102.19,
+      "prev_close": 100.25,
+      "atr_day": 4.43,
+      "avg_vol_10d": 2299846,
+      "premarket_spread_bp": 6.8,
+      "support": 100.00,
+      "resistance": 104.50,
+      "orb_high": null,
+      "orb_low": null,
+      "catalyst": "CPI August today — same macro lift as NVDA. INTC gapping +1.9% from its Sep 10 close of $100.25 (fell hard from $106.24 on Sep 9). Northland Capital Markets upgrade to Outperform (Sep 8) remains in play as a potential floor bid. Very tight premarket spread (6.8 bp) signals healthy premarket liquidity — strongest technical positive for this name today.",
+      "setup": "orb",
+      "watch": true,
+      "note": "INTC fell ~$6 on Sep 10 as part of the sector selloff. Today's +1.9% gap is a partial recovery but leaves it well below the Sep 9 level. Support at $100 is both the psychological round and close to yesterday's close ($100.25). Resistance at $104.50 is roughly one ATR ($4.43) above yesterday's close — a realistic intraday target if the CPI print is favorable and the tape turns risk-on. The $106.24 Sep 9 close is a longer-horizon target, not a same-day expectation. Avg volume (2.3M) is just above the 2M liquidity floor — position sizing should be conservative."
+    }
+  ]
 }

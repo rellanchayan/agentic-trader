@@ -227,6 +227,29 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-14: No tuning. Tuner unfrozen ("ok to tune", 60 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. Fourth consecutive zero-trade session (Sep 9, 10, 11, 14).
+  No premarket plan was written today. All-time stats (60 days, 20 trades, 0.33 trades/day, 30%
+  win rate, avg win +0.342R, avg loss -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy;
+  momentum 1 trade, 0 wins, -0.975R; VWAP reclaim 2 trades, 0 wins, -0.368R. All three setups
+  remain in negative expectancy.
+  Zero-trade days are not losses — the tuner's freeze condition (net-negative rolling 3 days) did
+  not trigger. However, no rule threshold was crossed either: with all setups in negative
+  expectancy and only 20 lifetime trades across 60 sessions, the evidence remains too thin and
+  ambiguous to justify any parameter adjustment. The tuner correctly did nothing.
+  Four consecutive zero-trade sessions (not eight) does not yet trigger the setup-mix review rule
+  (which fires at eight or more consecutive no-profit sessions). The current streak is at half the
+  threshold. The correct response is continued observation, not adjustment. If the streak reaches
+  eight sessions, the review is mandatory: distinguish sessions where gates correctly filtered
+  qualifying candidates from sessions where the screener produced no candidate at all — the two
+  failure modes require different fixes.
+  One observation for tracking: three of the four zero-trade days this week (Sep 9, 10, 11) had
+  documented macro event justification (PPI+CPI week vol compression, RISK-OFF tape, CPI release
+  day). Sep 14 had no plan, so its root cause is unknown — if the premarket runner is failing to
+  fire, the no-plan infrastructure rule already applies (debug the scheduler before placing any
+  trade). No new durable rule is warranted tonight.
 - 2026-09-11: No tuning. Tuner unfrozen ("ok to tune", 59 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

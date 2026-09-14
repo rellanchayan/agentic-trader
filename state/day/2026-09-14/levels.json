@@ -1,0 +1,34 @@
+{
+  "_meta": {
+    "date": "2026-09-14",
+    "generated_utc": "2026-09-14T13:30:30.219564+00:00",
+    "source": "watchlist_build",
+    "candidates_considered": 2,
+    "top": 2,
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 102.92,
+    "atr_day": 4.56,
+    "avg_vol_10d": 2258601,
+    "premarket_price": 95.66,
+    "gap_pct": -0.0705,
+    "spread_bp": 7.3,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,258,601 sh/day); -7.0% gap"
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 218.17,
+    "atr_day": 7.64,
+    "avg_vol_10d": 3328886,
+    "premarket_price": 210.65,
+    "gap_pct": -0.0345,
+    "spread_bp": 8.5,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (3,328,886 sh/day); -3.5% gap"
+  }
+}

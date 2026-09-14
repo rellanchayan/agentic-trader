@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "15:40:08",
+  "date": "2026-09-14",
+  "action": "HOLD",
+  "reason": "Past no-new-entries cutoff (15:30 ET). No open positions or orders. No eligible setups — vol compression all session, latest rel_vol: QQQ 0.95x, SPY 0.88x, INTC 1.02x, NVDA 0.72x, AAPL 0.86x. All names above VWAP but no new entries permitted after 15:30. Waiting for flatten window at 15:50; nothing to flatten.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "slots_used": 0,
+  "slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "AAPL": {"last": 334.535, "above_vwap": true, "rel_volume": 0.86, "orb_breakout": false},
+    "INTC": {"last": 97.39,  "above_vwap": true, "rel_volume": 1.02, "orb_breakout": true},
+    "NVDA": {"last": 211.84, "above_vwap": true, "rel_volume": 0.72, "orb_breakout": true},
+    "QQQ":  {"last": 710.73, "above_vwap": true, "rel_volume": 0.95, "orb_breakout": true},
+    "SPY":  {"last": 761.595,"above_vwap": true, "rel_volume": 0.88, "orb_breakout": true}
+  }
+}

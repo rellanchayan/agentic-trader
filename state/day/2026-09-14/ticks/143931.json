@@ -1,0 +1,63 @@
+{
+  "tick_time_et": "14:39",
+  "tick_timestamp_utc": "2026-09-14T18:39:31Z",
+  "action": "HOLD",
+  "positions_managed": [],
+  "entry_evaluated": {
+    "ticker": "QQQ",
+    "setup": "orb",
+    "last": 712.32,
+    "bid": 712.23,
+    "ask": 712.30,
+    "spread_bp": 1.0,
+    "quote_age_sec": 0.2,
+    "rel_volume": 1.04,
+    "vwap": 707.82,
+    "above_vwap": true,
+    "orb_high": 704.45,
+    "orb_low": 702.81,
+    "orb_breakout": true,
+    "minutes_since_open": 309
+  },
+  "gate_evaluation": {
+    "gate_1_rel_volume": {
+      "required": ">=2.0x (elevated: RISK-OFF + pre-FOMC)",
+      "actual": 1.04,
+      "pass": false
+    },
+    "gate_2_spread": {
+      "required": "<=15 bp",
+      "actual": 1.0,
+      "pass": true
+    },
+    "gate_3_broad_tape_unlock": {
+      "required": "SPY AND NVDA both above VWAP",
+      "nvda_last": 212.405,
+      "nvda_vwap": 210.94,
+      "nvda_above_vwap": true,
+      "spy_last": 762.39,
+      "spy_vwap": 760.43,
+      "spy_above_vwap": true,
+      "pass": true
+    },
+    "gate_4_orb_window": {
+      "required": "< 90 min from ORB formation",
+      "minutes_since_open": 309,
+      "window_expired_at_min": 90,
+      "pass": false
+    },
+    "gate_5_rr_structure": {
+      "note": "N/A — blocked by gates 1 and 4",
+      "pass": "N/A"
+    },
+    "overall": "FAIL — gates 1 (rel_vol) and 4 (ORB window) both failed"
+  },
+  "decision": "HOLD — no eligible setup. Zero positions, no open orders. VWAP reclaim off-table (RISK-OFF + pre-FOMC). Momentum off-table (no armed momentum setup). INTC/NVDA sector-disarmed. Vol compression trend confirmed (2.10x→1.55x→1.33x→1.13x→1.04x across session). Pre-FOMC vol suppression playing out exactly as plan anticipated.",
+  "day_pnl": 0.0,
+  "equity": 999465.31,
+  "trades_used_today": 0,
+  "trades_remaining": 20,
+  "slots_used": 0,
+  "slots_remaining": 8,
+  "order_submitted": false
+}

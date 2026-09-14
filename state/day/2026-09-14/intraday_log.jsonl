@@ -1,1 +1,2 @@
 {"t":"09:39","action":"HALT","note":"docs/plans/2026-09-14.md missing — premarket did not complete. No watchlist, no loss-stop baseline. Zero trades this tick.","day_pnl":0.0}
+{"t":"10:39","action":"HOLD","ticker":"QQQ","setup":"orb","rel_vol":2.10,"spread_bp":3.0,"gate_result":"BLOCKED — broad-tape unlock failed (NVDA $210.33 < VWAP $210.39, SPY $758.44 < VWAP $759.50). QQQ orb_breakout true but unlock gate is mandatory prerequisite per playbook.","day_pnl":0.0,"trades_used":0,"slots_used":0}

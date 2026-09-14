@@ -1,0 +1,68 @@
+{
+  "tick_time_et": "12:40:02",
+  "tick_time_utc": "2026-09-14T16:40:02Z",
+  "minutes_since_open": 189,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_trade_considered": {
+    "ticker": "QQQ",
+    "setup": "orb",
+    "evaluation": {
+      "broad_tape_unlock": {
+        "satisfied": true,
+        "nvda_last": 211.805,
+        "nvda_vwap": 210.70,
+        "nvda_above_vwap": true,
+        "spy_last": 762.06,
+        "spy_vwap": 759.91,
+        "spy_above_vwap": true,
+        "note": "Broad-tape unlock satisfied for the second consecutive tick. Improvement from 10:39 tick when both were below VWAP."
+      },
+      "orb_window": {
+        "passed": false,
+        "minutes_since_orb_formation": 174,
+        "limit_minutes": 90,
+        "note": "ORB window expired. ORB formed at approximately 9:45 AM ET (first 15 minutes). At 12:40 PM ET, 174 minutes have elapsed — 84 minutes past the 90-minute limit. Already expired at the 11:40 tick (115 min). No ORB entry valid."
+      },
+      "rel_volume_gate": {
+        "passed": false,
+        "rel_vol_actual": 1.33,
+        "rel_vol_required": 2.0,
+        "note": "1.33x well below elevated 2.0x gate required for RISK-OFF + pre-FOMC regime. Volume has compressed further since 10:39 tick (2.10x) and 11:40 tick (1.55x) — the pre-FOMC vol compression pattern is playing out exactly as the day plan predicted."
+      },
+      "spread_gate": {
+        "passed": true,
+        "spread_bp_actual": 0.7,
+        "spread_bp_limit": 15.0
+      },
+      "orb_breakout_signal": {
+        "orb_high": 704.45,
+        "last_price": 710.49,
+        "orb_breakout": true,
+        "note": "QQQ is $6.04 above ORB high — technically a clean breakout signal. But all other required gates fail."
+      },
+      "vwap_reclaim_gate": {
+        "passed": false,
+        "note": "VWAP reclaim is OFF-TABLE per today's plan. RISK-OFF tape + imminent binary macro event (FOMC Sep 16). Per playbook: 'In a MIXED/RANGE regime with an active or imminent macro event, skip VWAP reclaim entirely.'"
+      },
+      "overall": "BLOCKED — two simultaneous blockers: (1) ORB entry window expired 84 minutes ago; (2) rel_vol 1.33x below 2.0x elevated gate. No eligible setup exists at this tick."
+    },
+    "sector_names_status": {
+      "INTC": "WATCH ONLY — semiconductor sector disarm active, gap -6.6%, plan prohibits any setup all session",
+      "NVDA": "WATCH ONLY — semiconductor sector disarm active, gap -2.7%, plan prohibits any setup all session",
+      "AAPL": "Not on watchlist — not evaluated",
+      "SPY": "Backup only; QQQ is primary and must be documented as failed before pivoting to SPY. Not applicable since QQQ evaluation exists. SPY rel_vol 1.27x is below even the standard 1.5x gate."
+    }
+  },
+  "order_submitted": false,
+  "account_state": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "slots_used": 0,
+    "position_slots_remaining": 8
+  },
+  "session_assessment": "Pre-FOMC vol compression executing exactly as the day plan predicted. Broad-tape unlock has been satisfied since approximately the 11:40 tick (NVDA recovered above VWAP). The ORB window expired at ~11:00 AM ET. Volume continues to compress (2.10x → 1.55x → 1.33x across three evaluation ticks). The controlling blockers at this hour are the expired ORB window and insufficient volume, not the broad-tape unlock. No setup is eligible for the remainder of the day except a new qualifying signal, which is structurally unlikely in a pre-FOMC Monday afternoon. The account protection objective is being met: zero trades in a RISK-OFF pre-FOMC regime is the correct and expected outcome."
+}

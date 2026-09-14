@@ -1,0 +1,11 @@
+{
+  "tick_time_et": "2026-09-14T09:39:38-04:00",
+  "verdict": "HALT",
+  "reason": "docs/plans/2026-09-14.md missing — premarket phase did not complete before market open. Per PLAYBOOK infrastructure rule: a missing day plan is a HALT condition. Watchlist unknown, loss-stop baseline not captured.",
+  "positions_held": [],
+  "open_orders": [],
+  "action": "none",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "slots_used": 0
+}

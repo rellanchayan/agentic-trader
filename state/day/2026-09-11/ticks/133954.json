@@ -1,0 +1,39 @@
+{
+  "tick_time_et": "13:39",
+  "tick_time_utc": "2026-09-11T17:39:54Z",
+  "verdict": "HOLD",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_order": null,
+  "blocking_conditions": [
+    "ORB window expired (249 min since open; window closed at ~11:00 AM)",
+    "Broad-tape unlock NOT satisfied: NVDA $219.09 < VWAP $220.26 (gap widening)",
+    "Rel-vol below 2.0x gate: INTC 1.31x, NVDA 0.56x",
+    "VWAP reclaim off-table: MIXED/RANGE + post-CPI/pre-FOMC week"
+  ],
+  "market_snapshot": {
+    "INTC": {
+      "last": 103.295,
+      "vwap": 103.08,
+      "rel_volume": 1.31,
+      "spread_bp": 1.9,
+      "orb_breakout": false,
+      "above_vwap": true
+    },
+    "NVDA": {
+      "last": 219.09,
+      "vwap": 220.26,
+      "rel_volume": 0.56,
+      "spread_bp": 6.8,
+      "orb_breakout": false,
+      "above_vwap": false
+    }
+  },
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "note": "Four compounding blockers: ORB expired, NVDA below VWAP (-$1.17 gap worsening), rel-vol well below 2.0x gate, VWAP reclaim off-table for MIXED/RANGE+pre-FOMC. Correct zero-trade tick. No setups available."
+}

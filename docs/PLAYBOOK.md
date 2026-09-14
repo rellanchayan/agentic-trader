@@ -227,6 +227,24 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-11: No tuning. Tuner unfrozen ("ok to tune", 59 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. CPI release day (BLS Consumer Price Index, 8:30 AM ET).
+  Account equity $999,465.31. Total return -0.03% since inception (2026-06-25). Fill rate 95%
+  (19/20 lifetime). Bot ended flat; no loss-stop triggered.
+  A zero-trade outcome on CPI release day is the expected and correct result. The prior journal
+  entry (Sep 10) explicitly predicted it: the CPI binary macro event places VWAP reclaim off-table
+  per the MIXED/RANGE + imminent binary macro event skip rule, and the vol-compression pattern
+  documented for the full PPI+CPI week (Sep 9 rule) extends through the CPI print itself. The
+  CPI release is structurally equivalent to NFP release Fridays in its effect on the session: the
+  binary 8:30 AM print typically produces a MIXED/RANGE or whipsaw tape as the market digests the
+  number, with no sustained directional flow available for ORB or momentum entries in the morning
+  window. No new durable rule is warranted tonight — the Sep 9 PPI+CPI week rule and the existing
+  MIXED/RANGE + binary macro event skip rules together already prescribe this outcome correctly.
+  All-time stats (59 days, 20 trades, 0.34 trades/day, 30% win rate, avg win +0.342R, avg loss
+  -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Unchanged from 2026-09-10 (no new trades placed).
 - 2026-09-10: No tuning. Tuner unfrozen ("ok to tune", 58 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

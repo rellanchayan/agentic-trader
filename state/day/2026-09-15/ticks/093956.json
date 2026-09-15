@@ -1,0 +1,63 @@
+{
+  "ts_et": "2026-09-15T09:39:56-04:00",
+  "tick": "093956",
+  "minutes_since_open": 9,
+  "action": "no_trade",
+  "verdict": "HOLD",
+  "reason": "Time gate (pre-9:45 ORB not formed) + broad-tape unlock failed (NVDA below VWAP). QQQ rel_vol 1.94x below 2.0x elevated gate. No orb_breakout signals on any candidate. VWAP reclaim off-table (RISK-OFF + FOMC Day 1).",
+  "candidates_evaluated": {
+    "NVDA": {
+      "last": 212.805,
+      "spread_bp": 6.1,
+      "rel_vol": 2.95,
+      "above_vwap": false,
+      "vwap": 213.15,
+      "orb_high": 213.84,
+      "orb_low": 212.61,
+      "orb_breakout": false,
+      "gates": {
+        "spread": "PASS (<15 bp)",
+        "rel_vol": "PASS (2.95x >= 2.0x)",
+        "above_vwap": "FAIL (below VWAP — broad-tape unlock fails)",
+        "orb_breakout": "FAIL",
+        "time_gate": "FAIL (pre-9:45 AM — ORB not formed)"
+      },
+      "outcome": "BLOCKED — broad-tape unlock fail + pre-9:45 time gate"
+    },
+    "QQQ": {
+      "last": 709.03,
+      "spread_bp": 0.7,
+      "rel_vol": 1.94,
+      "above_vwap": true,
+      "vwap": 708.35,
+      "orb_high": 709.03,
+      "orb_low": 707.63,
+      "orb_breakout": false,
+      "gates": {
+        "spread": "PASS (<15 bp)",
+        "rel_vol": "FAIL (1.94x < 2.0x elevated gate)",
+        "above_vwap": "PASS",
+        "orb_breakout": "FAIL",
+        "time_gate": "FAIL (pre-9:45 AM — ORB not formed)"
+      },
+      "outcome": "BLOCKED — rel_vol below elevated gate + pre-9:45 time gate"
+    },
+    "INTC": {
+      "outcome": "DISARMED — sector disarm active (5th consecutive session)"
+    },
+    "BAC": {
+      "outcome": "NOT IN SNAPSHOT — not evaluated this tick"
+    }
+  },
+  "broad_tape_unlock": {
+    "spy_above_vwap": true,
+    "nvda_above_vwap": false,
+    "result": "FAIL"
+  },
+  "account": {
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0
+  }
+}

@@ -227,6 +227,31 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-15: No tuning. Tuner unfrozen ("ok to tune", 61 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. Fifth consecutive zero-trade session (Sep 9, 10, 11, 14, 15).
+  Account equity $999,465.31, total return -0.03%, fill rate 95% (19/20 lifetime).
+  Session context: RISK-OFF + pre-FOMC Day 1. The FOMC rate decision is scheduled for tomorrow
+  (Sep 16). Institutional pre-positioning ahead of a binary Fed event reliably suppresses relative
+  volume below the 1.5x gate — exactly the pattern already codified for pre-FOMC-minutes sessions
+  (added 2026-08-17) and the broader class of binary macro event days documented throughout the
+  playbook. A zero-trade outcome on pre-FOMC Day 1 in a RISK-OFF tape is the correct and expected
+  result; no gate adjustment is warranted.
+  No new durable rule is warranted tonight. Pre-FOMC sessions (both the minutes release and the
+  rate decision itself) are already covered by the existing binary macro event framework. The
+  RISK-OFF + pre-FOMC combination is structurally identical to RISK-OFF + pre-CPI: institutional
+  participants reduce exposure ahead of the binary print, vol compression ensues, and the 1.5x
+  rel-vol gate correctly blocks all entries. No evidence suggests the gate is miscalibrated.
+  The 5-session zero-trade streak (Sep 9–15) does not yet reach the 8-session threshold that
+  triggers the mandatory setup-mix review. Each of the five sessions has a documented, individually
+  sufficient macro justification: PPI+CPI week vol compression (Sep 9), CPI overhang RISK-OFF
+  (Sep 10), CPI release day (Sep 11), no premarket plan written (Sep 14), pre-FOMC Day 1 RISK-OFF
+  (Sep 15). The streak is not structurally diagnostic at this length — it reflects a genuinely
+  difficult macro calendar, not a systemic gate-calibration failure.
+  All-time stats (61 days, 20 trades, 0.33 trades/day, 30% win rate, avg win +0.342R, avg loss
+  -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Unchanged from 2026-09-14 (no new trades placed).
 - 2026-09-14: No tuning. Tuner unfrozen ("ok to tune", 60 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

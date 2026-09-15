@@ -1,0 +1,70 @@
+{
+  "ts_et": "2026-09-15T12:40:45-04:00",
+  "tick": "124045",
+  "action": "no_trade",
+  "decision_summary": "All entry gates fail. No positions to manage. No trade.",
+  "positions_managed": [],
+  "candidates_evaluated": {
+    "NVDA": {
+      "last": 211.85,
+      "vwap": 212.74,
+      "orb_high": 213.84,
+      "orb_low": 212.61,
+      "spread_bp": 0.9,
+      "rel_vol": 0.82,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x",
+      "notes": "NVDA $211.85 below VWAP $212.74. ORB window expired. Rel-vol 0.82x far below 2.0x elevated gate."
+    },
+    "QQQ": {
+      "last": 705.46,
+      "vwap": 706.40,
+      "orb_high": 709.22,
+      "orb_low": 707.63,
+      "spread_bp": 1.0,
+      "rel_vol": 0.85,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x",
+      "notes": "QQQ $705.46 below VWAP $706.40. ORB window expired. Rel-vol 0.85x far below 2.0x elevated gate."
+    },
+    "SPY": {
+      "last": 757.51,
+      "vwap": 757.76,
+      "orb_high": 760.32,
+      "orb_low": 758.745,
+      "spread_bp": 0.5,
+      "rel_vol": 1.13,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x",
+      "notes": "SPY $757.51 below VWAP $757.76 (narrow miss). ORB window expired. Rel-vol 1.13x below 2.0x elevated gate."
+    },
+    "BAC": {
+      "gate_block": "not_in_snapshot",
+      "notes": "BAC not in market snapshot this tick."
+    },
+    "INTC": {
+      "gate_block": "sector_disarm_active_day5",
+      "notes": "Semiconductor sector disarm active, day 5 consecutive. Watch only, no entry under any circumstances."
+    }
+  },
+  "gate_outcomes": {
+    "broad_tape_unlock": "FAIL — NVDA above_vwap=false, SPY above_vwap=false",
+    "orb_window": "EXPIRED — 190 minutes since open, window closed ~11:00 AM ET",
+    "rel_vol_gate": "FAIL — all names below 2.0x elevated gate (NVDA 0.82x, QQQ 0.85x, SPY 1.13x)",
+    "vwap_reclaim": "OFF-TABLE — RISK-OFF + FOMC Day 1 is explicit disqualification",
+    "time_gate": "OK — 12:40 ET, before 15:30 no-new-entries cutoff; but all other gates fail"
+  },
+  "market_snapshot": {
+    "minutes_since_open": 190,
+    "equity": 999465.31,
+    "day_pnl": 0.0,
+    "positions": 0,
+    "trades_today": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "regime": "RISK-OFF + pre-FOMC Day 1 vol compression",
+  "next_action": "Continue monitoring. No new ORB entries possible (window expired). Flatten window opens 15:50 ET with zero positions so nothing to do at close."
+}

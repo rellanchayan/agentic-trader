@@ -1,0 +1,54 @@
+{
+  "tick": "143916",
+  "ts_et": "2026-09-15T14:39:16-04:00",
+  "ts_utc": "2026-09-15T18:39:16Z",
+  "action": "no_trade",
+  "positions_managed": [],
+  "new_orders": [],
+  "candidates": {
+    "NVDA": {
+      "last": 212.08,
+      "vwap": 212.46,
+      "spread_bp": 1.4,
+      "rel_vol": 0.69,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "QQQ": {
+      "last": 704.9,
+      "vwap": 706.0,
+      "spread_bp": 0.7,
+      "rel_vol": 0.73,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "SPY": {
+      "last": 757.29,
+      "vwap": 757.65,
+      "spread_bp": 0.5,
+      "rel_vol": 0.93,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "INTC": {
+      "gate_block": "sector_disarm_active_day5"
+    },
+    "BAC": {
+      "gate_block": "not_in_snapshot"
+    }
+  },
+  "reason": "ORB window expired (309 min since open, 90 min cutoff at ~11:00 AM). Broad-tape unlock fails (NVDA $212.08 < VWAP $212.46; SPY $757.29 < VWAP $757.65). All rel-vol far below 2.0x elevated gate (NVDA 0.69x, QQQ 0.73x, SPY 0.93x). No orb_breakout on any name. VWAP reclaim off-table (RISK-OFF + pre-FOMC Day 1). No open positions to manage. No open orders to cancel. Pre-FOMC vol compression deepens as expected through the afternoon — sixth consecutive no-trade tick today. A zero-trade outcome on pre-FOMC Day 1 is the correct and expected result.",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_used": 0,
+  "slots_used": 0,
+  "equity": 999465.31,
+  "loss_budget_remaining": 3000.0
+}

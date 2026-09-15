@@ -1,7 +1,7 @@
 {
   "date": "2026-09-15",
-  "timestamp_et": "2026-09-15T13:39:43.818915-04:00",
-  "minutes_since_open": 249,
+  "timestamp_et": "2026-09-15T14:39:16.067980-04:00",
+  "minutes_since_open": 309,
   "day_plan_found": true,
   "day_plan": "# Day Plan \u2014 2026-09-15 (Tuesday)\n\n**Written:** 2026-09-15 before 9:28 AM ET\n**Account equity:** $999,465.31 (all cash, zero positions)\n**Day-stop baseline:** set \u2014 trading halts if equity falls below $996,465.31\n\n---\n\n## Mood: RISK-OFF\n\nFutures are pointing lower across the board (S&P 500 -0.30%, Nasdaq -0.32%, Dow -0.40%,\nRussell 2000 -0.39%) on a combination of surging oil prices (Brent $107.48, WTI $103.31,\nboth up ~1.9%), ongoing U.S.-Iran geopolitical tension, and a highly anticipated FOMC rate\ndecision tomorrow. Today is Day 1 of the two-day Fed meeting; the rate announcement lands\nWednesday September 16 at 2:00 PM ET. Pre-FOMC vol compression is the expected structural\ncondition for the full session. RISK-OFF with pre-FOMC overhang is the default regime;\nit would take a clearly positive, unexpected tape reversal to upgrade this.\n\nThis is the fifth consecutive session under elevated risk conditions (RISK-OFF or pre-FOMC\nsuppression). The Sep 14 journal explicitly predicted these conditions for today. A\nzero-trade outcome on a pre-FOMC Day 1 session is the correct and expected result if no\nsetup clears the elevated gates.\n\n---\n\n## Big Events Today\n\n| Time (ET) | Event | Why it matters |\n|-----------|-------|----------------|\n| 8:30 AM | Retail Sales (August) | Consensus -0.1%; a miss risks further selling |\n| 8:30 AM | Empire State Manufacturing Index (September) | Manufacturing sentiment; moves industrials |\n| 8:30 AM | Import & Export Price Indices (August) | Inflation signal; pressures Fed narrative |\n| 10:00 AM | Business Inventories (July) | Secondary; lower market impact |\n| 10:00 AM | University of Michigan Consumer Sentiment (October preliminary) | Can move consumer names |\n| All day | FOMC Day 1 (two-day meeting Sep 15-16) | No announcement today; but institutional vol compression expected all session |\n| **Wed Sep 16, 2:00 PM ET** | FOMC rate decision + press conference 2:30 PM | Tomorrow's binary event \u2014 dominant force shaping today's tape |\n\nThe cluster of data at 8:30 AM means the opening print will be highly reactive. The\nORB will form in choppier conditions than a clean-open session. Wait for the full\n15-minute opening range to establish before evaluating any breakout.\n\nThe University of Michigan reading at 10:00 AM is another potential whipsaw. Be cautious\naround that time.\n\n---\n\n## Today's Names\n\n### NVDA (NVIDIA) \u2014 CONDITIONALLY ARMED, ORB breakout only\n\n- **Premarket:** $212.72 vs prev close $211.00, gap +0.82%. Small constructive gap.\n- **ATR:** $7.73/share.\n- **Premarket spread:** 63 bp. This is well above the 15 bp entry gate. Per playbook,\n  premarket spreads can be unreliable \u2014 the live spread gate fires every tick and is\n  authoritative. Expect spread to narrow materially at the open on a $3B+ ADV name.\n  Do not enter if live spread remains above 15 bp.\n- **Key levels:** Support $211.00 (prev close). ORB high and low form in the first 15 min.\n  Resistance TBD by the opening range.\n- **Setup:** ORB breakout, conditional. NVDA is also the sector bellwether required for\n  the broad-tape unlock (NVDA AND SPY both above VWAP before any ORB or momentum entry).\n  If NVDA is below VWAP, the broad-tape unlock fails and no ORB entry is permitted on\n  any name \u2014 not just NVDA.\n- **Gate requirements (all must pass):**\n  1. Spread < 15 bp at the time of evaluation\n  2. Relative volume >= 2.0x (elevated gate for RISK-OFF + pre-FOMC sessions)\n  3. Clean break above ORB high\n  4. Broad-tape unlock: NVDA AND SPY both above VWAP\n  5. Entry within 90 minutes of ORB formation (no later than ~11:00 AM ET)\n- **VWAP reclaim:** OFF-TABLE. RISK-OFF + pre-FOMC Day 1 is a disqualifying combination.\n- **Target:** Given pre-FOMC vol compression, use 1.5\u20132.0x per-share risk as target, not\n  the full 2.5x ATR. A compressed-range session will not sustain a $19+ run.\n- **Stop:** Place companion stop order below the ORB low on the same tick as entry.\n\n### INTC (Intel) \u2014 WATCH ONLY, NOT TRADEABLE TODAY\n\n- **Premarket:** $98.45 vs prev close $97.14, gap +1.35%.\n- **Premarket spread:** 1,007.6 bp. Effectively untradeable. Even if the spread narrows\n  at the open, the semiconductor sector disarm has been active for five consecutive\n  sessions (Sep 9, 10, 11, 14, and now Sep 15). Multiple structural catalysts \u2014 Apple\n  dropping Intel Mac support, AI safety essay impact \u2014 are not one-day events.\n- **Sector disarm status:** Active. Per playbook, the disarm stays in effect until broad\n  stabilization is confirmed across multiple semiconductor names \u2014 not a single name bounce.\n- **Action:** WATCH ONLY. No entry of any kind today. This is also the fifth session\n  requiring a non-semiconductor substitute per the playbook rule (disarm active 2+\n  consecutive sessions requires at least one non-semiconductor name on the watchlist).\n- **Replacement note:** QQQ is the designated substitute (see below).\n\n### BAC (Bank of America) \u2014 CONDITIONALLY ARMED, ORB breakout only\n\n- **Premarket:** $59.50 vs prev close $59.47, gap +0.06%. Nearly flat. No news catalyst.\n- **ATR:** $1.25/share. Narrow-range stock.\n- **Premarket spread:** 50.4 bp. Same caution as NVDA \u2014 live spread gate fires at every\n  tick and is authoritative. A flat-gap financial stock should narrow considerably at open.\n- **Key levels:** Support $59.47 (prev close/approximate VWAP anchor). ORB forms in first\n  15 min. With a $1.25 ATR in a RISK-OFF session, expect a tight ORB range.\n- **Setup:** ORB breakout, conditional. BAC is in the financials sector \u2014 different from\n  semiconductors, so the semiconductor disarm does not apply. However, rising oil and\n  geopolitical risk create pressure on financial names (tighter spreads, credit concerns).\n  Today's 8:30 AM Retail Sales number will also directly affect BAC via consumer credit\n  and loan-demand sentiment.\n- **Gate requirements (all must pass):**\n  1. Spread < 15 bp at the time of evaluation (REQUIRED \u2014 do not enter if wide)\n  2. Relative volume >= 2.0x (elevated gate for RISK-OFF + pre-FOMC sessions)\n  3. Clean break above ORB high\n  4. Broad-tape unlock: NVDA AND SPY both above VWAP\n  5. Entry within 90 minutes of ORB formation\n- **VWAP reclaim:** OFF-TABLE. Same disqualification as NVDA.\n- **Target:** 1.5\u20132.0x per-share risk. With ATR $1.25, a 2.0x risk target might be\n  $0.60\u2013$0.80/share from entry \u2014 achievable in a clean breakout, but modest.\n- **Risk:** Small ATR + compressed FOMC session = low reward potential. If the setup\n  does not produce a clean break with volume, skip it.\n\n### QQQ (Invesco Nasdaq 100 ETF) \u2014 ADDED as mandatory substitute, CONDITIONALLY ARMED\n\n- **Rationale:** The semiconductor sector disarm has been active for 5 consecutive\n  sessions. Per playbook: when the disarm is active 2+ consecutive sessions, at least\n  one non-semiconductor substitute from the qualified universe must be added. QQQ is\n  the designated broad-market substitute.\n- **Premarket level:** Approximate \u2014 near $758\u2013$761 range based on yesterday's tape.\n  Exact premarket price confirms at the open.\n- **Setup:** ORB breakout, conditional. Same gate requirements as NVDA and BAC:\n  spread < 15 bp, rel-vol >= 2.0x, clean ORB break, broad-tape unlock.\n- **VWAP reclaim:** OFF-TABLE per RISK-OFF + pre-FOMC rule.\n- **Note:** From yesterday's session, QQQ was the closest to qualifying (2.10x rel-vol\n  at 10:39 ET before vol compression took over). Pre-FOMC Day 1 vol compression will\n  likely follow the same decay pattern: above-gate rel-vol early, falling through the\n  session. Evaluate earliest qualifying tick carefully. Per the two-tick VWAP expiry\n  rule: if the ORB read at Tick 1 and Tick 2 are more than one evaluation cycle apart,\n  check whether price has moved more than 0.5x ATR \u2014 if so, reset the thesis.\n- **SPY vs QQQ:** Per playbook, evaluate QQQ first. Do not pivot to SPY without a\n  documented gate outcome showing which specific gate blocked QQQ.\n\n---\n\n## Which Setups Are Armed\n\n| Setup | Status | Conditions |\n|-------|--------|------------|\n| ORB breakout | ARMED (conditional) | 2.0x rel-vol, spread <15 bp, broad-tape unlock, within 90 min of ORB |\n| Momentum continuation | DISARMED | RISK-OFF tape; do not buy strength into selling |\n| VWAP reclaim | DISARMED | RISK-OFF + pre-FOMC Day 1 is an explicit skip condition; 0-for-2 in this exact combination |\n| Trend fade / mean-reversion | DISARMED | Not a setup in this system |\n\n**Broad-tape unlock reminder:** SPY AND NVDA must both be above VWAP at the time of\nany ORB or momentum evaluation. If NVDA is below VWAP (likely early given futures are\nnegative), the unlock fails for every name on the watchlist, not just NVDA.\n\n**Target sizing in compressed-range session:** Use 1.5\u20132.0x per-share risk as target,\nnot the 2.5x ATR multiplier. Pre-FOMC sessions do not produce $19+ NVDA moves.\n\n**Two-tick VWAP confirmation rule:** Not applicable today (VWAP reclaim is fully off-table).\n\n---\n\n## Hard Limits (restated)\n\n- **Max deployment per day:** $50,000 total across all trades\n- **Max per trade:** $10,000 (approximately 47 shares of NVDA, 168 shares of BAC)\n- **Daily loss-stop:** $3,000 \u2014 if account equity falls to $996,465.31 or below, stop all\n  trading immediately and flatten any open positions\n- **Max open positions:** 8\n- **Max trades per day:** 20\n- **Flat by close:** All positions sold by 3:55 PM ET; no overnight holds under any\n  circumstances. Start closing at 3:50 PM ET.\n- **Order type:** LIMIT + DAY only. No market orders.\n- **No new entries after 3:30 PM ET.**\n- **No entries before 9:45 AM ET** (15-minute opening range must fully form first).\n- **No ORB entries more than 90 minutes after the opening range forms** (~11:00 AM ET).\n- **Pre-FOMC Day 1 hard rule:** VWAP reclaim is off-table. ORB requires 2.0x rel-vol minimum.\n\n---\n\n## Overall Posture: CAUTIOUS\n\nThis session carries four simultaneous headwinds: (1) negative futures across all major\nindices, (2) oil at $107/bbl with geopolitical escalation, (3) FOMC Day 1 with the rate\ndecision 24 hours away, and (4) an 8:30 AM multi-data cluster that will set the tone for\nthe opening print. Vol compression will likely intensify through the session as\ninstitutional players reduce positioning ahead of Wednesday's binary Fed decision.\n\nThe account drawdown is $534.69 on a $999,465.31 base (0.05%). There is no pressure to\ntrade. A fifth consecutive zero-trade day is the correct and expected outcome if gates\nare not all simultaneously satisfied. Protecting the capital baseline is more important\nthan generating a trade for its own sake.\n\nThe three live names (NVDA, BAC, QQQ) are conditionally armed. The gates will decide.\nIf the broad-tape unlock fails all session (as it did Monday from 9:39 to 11:40), no\nentry is permitted regardless of how clean the individual chart looks.\n\n**Do not lower gates to force a trade. Do not enter INTC under any circumstances today.**\n",
   "clock_flags": {
@@ -35,58 +35,58 @@
   "open_orders": [],
   "market": {
     "NVDA": {
-      "last": 211.67,
-      "bid": 211.62,
-      "ask": 211.63,
-      "quote_age_sec": 0.4,
-      "spread_bp": 0.5,
-      "vwap": 212.57,
+      "last": 212.08,
+      "bid": 212.08,
+      "ask": 212.11,
+      "quote_age_sec": 0.2,
+      "spread_bp": 1.4,
+      "vwap": 212.46,
       "orb_high": 213.84,
       "orb_low": 212.61,
-      "atr_1m": 0.107,
+      "atr_1m": 0.085,
       "atr_day": 7.49,
-      "rel_volume": 0.74,
-      "volume_today": 1337784,
+      "rel_volume": 0.69,
+      "volume_today": 1568879,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 211.84,
-      "marketable_sell_limit": 211.41
+      "marketable_buy_limit": 212.32,
+      "marketable_sell_limit": 211.87
     },
     "QQQ": {
-      "last": 704.81,
-      "bid": 704.74,
-      "ask": 704.81,
-      "quote_age_sec": 0.4,
-      "spread_bp": 1.0,
-      "vwap": 706.21,
+      "last": 704.9,
+      "bid": 704.85,
+      "ask": 704.9,
+      "quote_age_sec": 0.2,
+      "spread_bp": 0.7,
+      "vwap": 706.0,
       "orb_high": 709.22,
       "orb_low": 707.63,
-      "atr_1m": 0.131,
+      "atr_1m": 0.111,
       "atr_day": 7.68,
-      "rel_volume": 0.75,
-      "volume_today": 242860,
+      "rel_volume": 0.73,
+      "volume_today": 294697,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 705.51,
-      "marketable_sell_limit": 704.04
+      "marketable_buy_limit": 705.6,
+      "marketable_sell_limit": 704.15
     },
     "SPY": {
-      "last": 757.07,
-      "bid": 757.05,
-      "ask": 757.08,
-      "quote_age_sec": 0.4,
-      "spread_bp": 0.4,
-      "vwap": 757.69,
+      "last": 757.29,
+      "bid": 757.26,
+      "ask": 757.3,
+      "quote_age_sec": 0.2,
+      "spread_bp": 0.5,
+      "vwap": 757.65,
       "orb_high": 760.32,
       "orb_low": 758.745,
-      "atr_1m": 0.137,
+      "atr_1m": 0.116,
       "atr_day": 5.82,
-      "rel_volume": 1.01,
-      "volume_today": 787810,
+      "rel_volume": 0.93,
+      "volume_today": 899976,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 757.84,
-      "marketable_sell_limit": 756.29
+      "marketable_buy_limit": 758.06,
+      "marketable_sell_limit": 756.5
     }
   },
   "recent_ticks": [
@@ -225,6 +225,43 @@
         }
       },
       "reason": "Broad-tape unlock fails (NVDA+SPY both below VWAP; NVDA $211.85 vs VWAP $212.74, SPY $757.51 vs VWAP $757.76). ORB window expired (190 min since open). All rel-vol below 2.0x elevated gate (NVDA 0.82x, QQQ 0.85x, SPY 1.13x). VWAP reclaim off-table (RISK-OFF+FOMC Day1). INTC disarmed day 5. No positions to manage. Pre-FOMC vol compression continues as expected.",
+      "day_pnl": 0.0,
+      "positions": 0
+    },
+    {
+      "ts_et": "2026-09-15T13:39:43-04:00",
+      "tick": "133943",
+      "action": "no_trade",
+      "candidates": {
+        "NVDA": {
+          "spread_bp": 0.5,
+          "rel_vol": 0.74,
+          "above_vwap": false,
+          "orb_breakout": false,
+          "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+        },
+        "QQQ": {
+          "spread_bp": 1.0,
+          "rel_vol": 0.75,
+          "above_vwap": false,
+          "orb_breakout": false,
+          "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+        },
+        "SPY": {
+          "spread_bp": 0.4,
+          "rel_vol": 1.01,
+          "above_vwap": false,
+          "orb_breakout": false,
+          "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+        },
+        "BAC": {
+          "gate_block": "not_in_snapshot"
+        },
+        "INTC": {
+          "gate_block": "sector_disarm_active_day5"
+        }
+      },
+      "reason": "ORB window expired (249 min since open). Broad-tape unlock fails (NVDA $211.67 < VWAP $212.57; SPY $757.07 < VWAP $757.69). All rel-vol far below 2.0x elevated gate (NVDA 0.74x, QQQ 0.75x, SPY 1.01x). VWAP reclaim off-table (RISK-OFF+FOMC Day1). No positions to manage. Pre-FOMC vol compression deepens as expected through midday.",
       "day_pnl": 0.0,
       "positions": 0
     }

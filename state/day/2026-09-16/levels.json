@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "date": "2026-09-16",
+    "generated_utc": "2026-09-16T13:29:31.271594+00:00",
+    "screened_utc": "2026-09-16T13:35:00.000000+00:00",
+    "source": "watchlist_build + day-screener",
+    "candidates_considered": 4,
+    "screened_to": 3,
+    "top": 3,
+    "dropped": ["INTC"],
+    "drop_reasons": {
+      "INTC": "spread 446.5 bp — untradeable; semiconductor sector disarm active day 6 (Sep 9-15 consecutive); structural catalysts not one-day events"
+    },
+    "missing_from_screener": [],
+    "missing_note": "QQQ added manually at 09:34 ET with live quote (bid 707.97, ask 708.11, spread 1.98 bp). Meets all entry criteria.",
+    "session_note": "FOMC rate decision today at 2:00 PM ET. This is a binary event. No new entries after 1:30 PM ET under any circumstances. Morning ORB window only (9:45-11:00 AM). ORB breakout is the only armed setup. Elevated gate: rel-vol >=2.0x required on all names.",
+    "orb_note": "ORB levels fill in live after the open (first 15-minute range)."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 212.16,
+    "atr_day": 7.49,
+    "avg_vol_10d": 2903901,
+    "premarket_price": 214.03,
+    "gap_pct": 0.0088,
+    "spread_bp": 1004.0,
+    "support": 212.16,
+    "support_2": 210.00,
+    "resistance": 215.00,
+    "resistance_2": 217.50,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "gapped +0.9% into FOMC day; sector bellwether — NVDA AND SPY must both be above VWAP for the broad-tape unlock to pass on any name; semiconductor disarm active day 6 (elevated gate: rel-vol >=2.0x required); premarket spread 1,004 bp is premarket noise — expect compression to <20 bp at open on 2.9M sh/day ADV name; support at prev_close 212.16 and round number 210.00; resistance at 215.00 (round number, premarket supply zone) and 217.50; ORB breakout only, window 9:45-11:00 AM; VWAP reclaim off-table; no new entries after 1:30 PM ET (FOMC 2:00 PM)"
+  },
+  "QQQ": {
+    "sector": "broad_etf",
+    "prev_close": 704.60,
+    "atr_day": 6.24,
+    "avg_vol_10d": 521173,
+    "open_price": 708.03,
+    "live_bid": 707.97,
+    "live_ask": 708.11,
+    "gap_pct": 0.0049,
+    "spread_bp": 1.98,
+    "support": 705.00,
+    "support_2": 704.60,
+    "resistance": 710.00,
+    "resistance_2": 712.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "mandatory non-semiconductor substitute (semiconductor disarm active day 6); gap +0.49% on FOMC day; live spread 1.98 bp — excellent; ATR $6.24/share gives meaningful ORB targets; support 705.00 (round) and 704.60 (prev close); resistance 710.00 (round) and 712.00 (recent swing); ORB breakout only, window 9:45-11:00 AM; no new entries after 1:30 PM ET; broad-tape unlock required (NVDA AND SPY above VWAP); elevated gate: rel-vol >=2.0x"
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 59.48,
+    "atr_day": 1.28,
+    "avg_vol_10d": 2370307,
+    "premarket_price": 59.62,
+    "gap_pct": 0.0023,
+    "spread_bp": 1011.5,
+    "support": 59.00,
+    "resistance": 60.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "flat gap +0.2%, no catalyst; LOW PRIORITY — ATR only $1.28/share severely limits reward in a compressed FOMC session (max realistic ORB target ~$0.80-1.00); financials sector is most directly exposed to 2:00 PM rate decision, making any post-10:30 AM hold dangerous; support at 59.00 (round number / psychological), resistance at 60.00 (round number); ORB breakout only, window 9:45-11:00 AM; skip if spread >15 bp at entry tick or rel-vol <2.0x; broad-tape unlock required (NVDA AND SPY above VWAP)"
+  }
+}

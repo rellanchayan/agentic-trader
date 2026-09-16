@@ -1,0 +1,56 @@
+{
+  "tick_time_et": "09:39:39",
+  "tick_file": "093939",
+  "date": "2026-09-16",
+  "timestamp_utc": "2026-09-16T13:39:39Z",
+  "action": "WAIT",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "gate_outcomes": {
+    "orb_window_open": false,
+    "reason_no_entry": "ORB window does not open until 9:45 AM ET (mandatory 15-minute rule). Current time 9:39 AM ET — 6 minutes before any entry is permitted.",
+    "NVDA": {
+      "spread_bp": 0.9,
+      "spread_gate_pass": true,
+      "rel_volume": 1.66,
+      "rel_vol_gate_pass": false,
+      "rel_vol_gate_threshold": 2.0,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "broad_tape_unlock_nvda": true,
+      "broad_tape_unlock_spy": "SPY not in snapshot — unlock cannot be confirmed",
+      "overall": "BLOCKED — ORB window not open; rel_vol 1.66x below 2.0x elevated gate; no orb_breakout signal"
+    },
+    "BAC": {
+      "spread_bp": 3.4,
+      "spread_gate_pass": true,
+      "rel_volume": 3.56,
+      "rel_vol_gate_pass": true,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "overall": "BLOCKED — ORB window not open; below VWAP; no orb_breakout signal; plan designates BAC last-resort only"
+    },
+    "QQQ": {
+      "spread_bp": 1.0,
+      "spread_gate_pass": true,
+      "rel_volume": 1.16,
+      "rel_vol_gate_pass": false,
+      "rel_vol_gate_threshold": 2.0,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "overall": "BLOCKED — ORB window not open; rel_vol 1.16x below 2.0x gate; below VWAP"
+    }
+  },
+  "setup_notes": {
+    "vwap_reclaim": "OFF TABLE all session — MIXED/RANGE + FOMC decision at 2:00 PM ET per plan (0-for-2 all-time in this combination)",
+    "orb": "Armed for 9:45-11:00 AM window only; 2.0x rel_vol elevated gate required; all five gates must pass simultaneously",
+    "fomc_blackout": "Hard blackout 1:30-2:30 PM ET — no new orders of any kind",
+    "post_fomc": "Post-FOMC entries require 3.0x rel_vol and spread ≤10 bp, 50% size"
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "note": "Watching for ORB window to open at 9:45 AM. NVDA is above VWAP (half-unlock), but rel_vol at 1.66x needs to rise above 2.0x before any entry is viable. BAC shows strong rel_vol (3.56x) but is below VWAP and is designated last-resort only. No action this tick."
+}

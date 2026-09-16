@@ -1,0 +1,45 @@
+{
+  "tick_time_et": "14:40:08",
+  "action": "WAIT",
+  "phase": "post_fomc_window",
+  "positions_managed": [],
+  "entry_evaluated": false,
+  "entry_reason": "All post-FOMC gates fail — rel_vol below 3.0x on all names",
+  "gate_results": {
+    "NVDA": {
+      "spread_bp": 1.4, "spread_pass": true,
+      "rel_vol": 0.77, "rel_vol_pass": false,
+      "above_vwap": false, "vwap_pass": false,
+      "window": "post_fomc_open",
+      "verdict": "FAIL (Gate 2: rel_vol 0.77x < 3.0x required)"
+    },
+    "BAC": {
+      "spread_bp": 1.7, "spread_pass": true,
+      "rel_vol": 1.18, "rel_vol_pass": false,
+      "above_vwap": false, "vwap_pass": false,
+      "window": "post_fomc_open",
+      "verdict": "FAIL (Gate 2: rel_vol 1.18x < 3.0x required)"
+    },
+    "QQQ": {
+      "spread_bp": 4.7, "spread_pass": true,
+      "rel_vol": 0.65, "rel_vol_pass": false,
+      "above_vwap": false, "vwap_pass": false,
+      "window": "post_fomc_open",
+      "verdict": "FAIL (Gate 2: rel_vol 0.65x < 3.0x required)"
+    }
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 214.895, "bid": 214.83, "ask": 214.86, "spread_bp": 1.4, "rel_volume": 0.77, "above_vwap": false, "vwap": 215.31},
+    "BAC": {"last": 58.1, "bid": 58.12, "ask": 58.13, "spread_bp": 1.7, "rel_volume": 1.18, "above_vwap": false, "vwap": 58.49},
+    "QQQ": {"last": 707.76, "bid": 707.89, "ask": 708.22, "spread_bp": 4.7, "rel_volume": 0.65, "above_vwap": false, "vwap": 709.74}
+  },
+  "account": {
+    "equity": 999465.31,
+    "cash": 999465.31,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0
+  },
+  "notes": "Post-FOMC window opened at 2:30 PM ET. Vol compression has reached intraday lows across all names. Required 3.0x post-FOMC rel_vol gate is far from being met. Flatten window begins 3:50 PM. No positions to manage. Probable zero-trade day."
+}

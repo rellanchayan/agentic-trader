@@ -1,0 +1,57 @@
+{
+  "tick_time_et": "10:39",
+  "tick_file": "103952.json",
+  "timestamp_et": "2026-09-16T10:39:52-04:00",
+  "minutes_since_open": 69,
+  "action": "WAIT",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "orb_window_open": true,
+  "orb_window_closes_et": "11:00",
+  "gate_evaluation": {
+    "NVDA": {
+      "gate1_spread_bp": {"value": 0.9, "threshold": 15, "pass": true},
+      "gate2_rel_volume": {"value": 1.09, "threshold": 2.0, "pass": false},
+      "gate3_orb_breakout": {"value": true, "pass": true},
+      "gate4_broad_tape_unlock": {"nvda_above_vwap": true, "spy_in_snapshot": false, "pass": false, "note": "SPY not in snapshot; broad-tape unlock unconfirmable"},
+      "gate5_time_before_1100": {"pass": true},
+      "overall": "FAIL",
+      "blocking_gates": ["Gate 2 (rel_vol 1.09x < 2.0x)", "Gate 4 (SPY not in snapshot)"]
+    },
+    "BAC": {
+      "gate1_spread_bp": {"value": 1.7, "threshold": 15, "pass": true},
+      "gate2_rel_volume": {"value": 1.62, "threshold": 2.0, "pass": false},
+      "gate3_orb_breakout": {"value": false, "last": 58.78, "orb_high": 59.37, "pass": false},
+      "gate4_broad_tape_unlock": {"nvda_above_vwap": true, "spy_in_snapshot": false, "pass": false},
+      "gate5_time_before_1100": {"pass": true},
+      "plan_designation": "last-resort only — do not force if NVDA and INTC fail",
+      "overall": "FAIL",
+      "blocking_gates": ["Gate 2 (rel_vol 1.62x < 2.0x)", "Gate 3 (no ORB breakout)"]
+    },
+    "QQQ": {
+      "gate1_spread_bp": {"value": 0.8, "threshold": 15, "pass": true},
+      "gate2_rel_volume": {"value": 0.89, "threshold": 2.0, "pass": false},
+      "gate3_orb_breakout": {"value": true, "pass": true},
+      "gate4_broad_tape_unlock": {"nvda_above_vwap": true, "spy_in_snapshot": false, "pass": false},
+      "gate5_time_before_1100": {"pass": true},
+      "plan_designation": "non-semiconductor substitute; evaluate if INTC and NVDA both fail spread gates",
+      "overall": "FAIL",
+      "blocking_gates": ["Gate 2 (rel_vol 0.89x decisively below even base 1.5x gate)", "Gate 4 (SPY unconfirmed)"]
+    }
+  },
+  "volume_trend_note": "Vol declining from prior tick (09:39): NVDA 1.66x → 1.09x, QQQ 1.16x → 0.89x, BAC 3.56x → 1.62x. Classic FOMC-day institutional vol compression the plan explicitly anticipated.",
+  "regime": "MIXED/RANGE",
+  "vwap_reclaim_status": "OFF TABLE all session (MIXED/RANGE + FOMC event, 0-for-2 all-time in this combination)",
+  "fomc_context": "Hard blackout 1:30-2:30 PM ET. FOMC decision at 2:00 PM. ORB window closes 11:00 AM — approx 21 minutes remaining from this tick.",
+  "decision_rationale": "No candidate passes all five ORB gates. Dominant blocker is Gate 2 (relative volume). All names show declining vol vs. prior tick, consistent with institutional participants reducing directional exposure ahead of the 2:00 PM FOMC announcement. Plan explicitly states a zero-trade day is the correct and expected outcome if gates do not all clear. Do not lower any gate to manufacture a trade on FOMC Day.",
+  "next_tick_notes": "ORB window closes at 11:00 AM. After that, no new ORB or momentum entries are permitted. The 1:30 PM blackout then begins. Post-FOMC (after 2:30 PM) bar requires 3.0x rel-vol and spread ≤10 bp — not likely to be reached in this vol-compressed environment."
+}

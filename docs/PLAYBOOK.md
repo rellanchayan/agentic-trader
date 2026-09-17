@@ -226,8 +226,48 @@ made of **rules to follow**, not stories.
   any zero-trade session. This is the single highest-priority infrastructure change before the next
   trading session. (2026-08-28: identified as unresolved root-cause ambiguity for 15 consecutive
   zero-trade sessions.)
+- The flatten scheduler must fire each of the three close-out passes (3:50, 3:53, and 3:56 PM ET)
+  within 2 minutes of its designated time. Missed flatten passes are not recoverable after market
+  close — positions left open become overnight holds, which violates the flat-overnight rule and
+  removes the ability to compute a realized P&L for the session. At 3:48 PM ET (2 minutes before
+  the first flatten pass), confirm the flatten scheduler is live and armed before relying on it.
+  Do not assume the flatten scheduler is running because the premarket and tick phases ran
+  correctly — the three phases are scheduled independently. Any session where flatten passes are
+  missed must be flagged as a scheduler failure in the post-market reconciliation; the overnight
+  positions are not a trading decision and their exit prices must not be attributed to exit
+  strategy analysis. (2026-09-17: first documented flatten scheduling failure; INTC and NVDA held
+  overnight after all three flatten passes missed the market window.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-17: No tuning. Tuner unfrozen ("ok to tune", 63 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero realized P&L. Two ORB entries were submitted and filled (INTC at 5.46x relative
+  volume, NVDA at 2.35x relative volume — both clean, valid signals that passed all pre-trade guards).
+  However, the flatten scheduler missed all three scheduled close-out passes (3:50, 3:53, and 3:56 PM
+  ET); the first flatten attempt ran at 4:00 PM ET, after market close. Both positions — INTC and NVDA
+  — were held overnight. This is a scheduler/operational failure, not a trading decision failure.
+  The entries themselves are the first confirmed valid ORB signals generated in an unconstrained
+  session since the Sep 9-16 streak of event-driven and infrastructure zeros. The ORB setup performed
+  as expected on the entry side: both names cleared the 1.5x relative-volume gate, the broad-tape
+  unlock (SPY + NVDA above VWAP) was satisfied, and the spread gate cleared. The failure was entirely
+  post-entry in the flatten execution path.
+  Today's result cannot be used as trading evidence in either direction — the operational failure
+  prevented any roundtrip from completing, so no exit price, no realized gain or loss, and no R-
+  multiple can be attributed to today's trade decisions. These entries are quarantined from setup
+  statistics until the flatten failure is resolved and the positions are reconciled.
+  New durable infrastructure rule added to Infrastructure: the flatten scheduler must fire each of
+  the three scheduled passes (3:50, 3:53, and 3:56 PM ET) within 2 minutes of its designated time.
+  A flatten pass is not recoverable after market close. If any of the three passes misses its window,
+  the post-market reconciliation must flag any remaining positions as a scheduler failure, not an
+  exit decision. The flatten scheduler must be independently confirmed live at the 3:48 PM ET mark
+  (2 minutes before the first pass) — do not assume the scheduler is running because premarket and
+  tick phases ran correctly. The three phases (premarket, tick, flatten) are scheduled independently;
+  each must be verified separately. (2026-09-17: first documented flatten scheduling failure; INTC
+  and NVDA held overnight.)
+  All-time stats (63 days, per-setup breakdown unchanged from 2026-09-16 — no completed roundtrips
+  today): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP reclaim
+  2 trades, 0 wins, -0.368R.
 - 2026-09-16: No tuning. Tuner unfrozen ("ok to tune", 62 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

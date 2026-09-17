@@ -1,0 +1,64 @@
+{
+  "tick_time_et": "2026-09-17T12:39:45-04:00",
+  "action": "HOLD",
+  "positions_reviewed": [
+    {
+      "ticker": "INTC",
+      "qty": 91,
+      "avg_entry": 109.600659,
+      "current_price": 110.92,
+      "stop": 107.00,
+      "target": 115.07,
+      "vwap": 108.55,
+      "above_vwap": true,
+      "rel_volume": 2.82,
+      "spread_bp": 1.8,
+      "unrealized_pl": 120.06,
+      "decision": "HOLD",
+      "reason": "Thesis intact. Price $110.92 well above stop $107.00 and VWAP $108.55. Rel-vol 2.82x confirms momentum. No exit signal."
+    },
+    {
+      "ticker": "NVDA",
+      "qty": 45,
+      "avg_entry": 219.2,
+      "current_price": 218.86,
+      "stop": 218.40,
+      "target": 222.66,
+      "vwap": 218.81,
+      "above_vwap": true,
+      "orb_high": 218.68,
+      "rel_volume": 1.33,
+      "spread_bp": 0.9,
+      "unrealized_pl": -15.30,
+      "decision": "HOLD",
+      "reason": "Price $218.86 still above stop $218.40 and above VWAP $218.81 (by $0.05) and above ORB high $218.68. Thesis technically intact. Momentum weakened (rel-vol 1.33x vs 2.35x at entry). Stop at $218.40 is the defined 'idea was wrong' level — honor it; do not front-run. Distance to stop: $0.46/share, $20.70 total. Note: hourly tick cadence means price could pierce stop before next check."
+    }
+  ],
+  "new_entries_considered": [
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "current_price": 58.445,
+      "vwap": 57.93,
+      "rel_volume": 1.06,
+      "gate_result": "BLOCK",
+      "block_reason": "rel_volume 1.06x below 1.5x minimum"
+    }
+  ],
+  "open_orders_cancelled": [],
+  "new_orders_submitted": [],
+  "market_snapshot": {
+    "SPY": {"last": 762.28, "vwap": 761.57, "above_vwap": true, "rel_volume": 1.03},
+    "NVDA": {"last": 218.905, "vwap": 218.81, "above_vwap": true, "rel_volume": 1.33},
+    "INTC": {"last": 110.92, "vwap": 108.55, "above_vwap": true, "rel_volume": 2.82},
+    "BAC": {"last": 58.445, "vwap": 57.93, "above_vwap": true, "rel_volume": 1.06}
+  },
+  "day_pnl": 104.76,
+  "loss_budget_remaining": 3106.11,
+  "slots_used": 2,
+  "trades_today": 2,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

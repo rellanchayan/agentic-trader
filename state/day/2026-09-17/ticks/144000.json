@@ -1,0 +1,78 @@
+{
+  "tick_time_et": "14:40",
+  "tick_hhmmss": "144000",
+  "date": "2026-09-17",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999550.22,
+    "cash": 979627.65,
+    "buying_power": 3974293.8,
+    "daytrade_count": 0
+  },
+  "day_pnl": {
+    "day_pnl": 84.91,
+    "loss_budget_remaining": 3086.28,
+    "tripped": false
+  },
+  "budget": {
+    "trades_today": 2,
+    "trades_remaining": 18,
+    "positions_open": 2,
+    "position_slots_remaining": 6
+  },
+  "positions_review": [
+    {
+      "ticker": "INTC",
+      "qty": 91,
+      "avg_entry": 109.600659,
+      "current_price": 110.42,
+      "stop": 107.00,
+      "target": 115.07,
+      "margin_above_stop": 3.42,
+      "margin_above_vwap": 1.52,
+      "vwap": 108.90,
+      "unrealized_pl": 74.56,
+      "rel_volume": 1.99,
+      "thesis_intact": true,
+      "decision": "HOLD",
+      "reason": "Price $110.42 above stop $107.00 by $3.42, above VWAP $108.90, target $115.07 not yet reached. Rel-vol 1.99x — momentum healthy. Thesis intact."
+    },
+    {
+      "ticker": "NVDA",
+      "qty": 45,
+      "avg_entry": 219.20,
+      "current_price": 219.43,
+      "stop": 218.40,
+      "target": 222.66,
+      "margin_above_stop": 1.03,
+      "margin_above_vwap": 0.55,
+      "vwap": 218.88,
+      "orb_high": 218.68,
+      "unrealized_pl": 10.35,
+      "rel_volume": 1.01,
+      "thesis_intact": true,
+      "decision": "HOLD",
+      "reason": "Price $219.43 above stop $218.40 (margin $1.03), above VWAP $218.88 (+$0.55), above ORB high $218.68. Target $222.66 not yet reached. Momentum continues to fade (rel-vol 1.01x vs 2.35x at entry) but stop not hit. Thesis technically intact — hold until stop or target."
+    }
+  ],
+  "new_entry_evaluation": {
+    "orb_window_open": false,
+    "orb_window_note": "ORB window expired at 11:00 AM ET (90 min post-open). No new ORB entries allowed.",
+    "bac_evaluation": {
+      "considered": true,
+      "setup": "VWAP reclaim",
+      "above_vwap": true,
+      "rel_volume": 0.9,
+      "gate_result": "FAIL — rel_volume 0.9x < 1.5x minimum",
+      "decision": "NO ENTRY"
+    },
+    "result": "NO NEW ENTRIES — all gates fail or window expired"
+  },
+  "open_orders_reviewed": [],
+  "summary": "HOLD both positions. INTC and NVDA both above their stops and VWAP. NVDA momentum fading but stop not hit. No new entries (ORB window expired, BAC rel-vol gate fails). Flatten window opens at 15:50 ET."
+}

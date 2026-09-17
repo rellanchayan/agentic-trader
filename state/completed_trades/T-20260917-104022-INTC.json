@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260917-104022-INTC",
+  "created_at_utc": "2026-09-17T14:40:22Z",
+  "ticker": "INTC",
+  "side": "BUY",
+  "qty": 91,
+  "limit_price": 109.69,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "ORB breakout above 107.04 on 5.46x relative volume \u2014 exceptional institutional conviction. Sector disarm lifted this tick: both INTC and NVDA above VWAP at first post-9:45 evaluation. INTC is co-primary per day plan with disarm lifted. Multiple catalysts: ~10% CPU price hike announced, SK Hynix Ohio fab reports, Tigress Financial PT raised to $145. Spread 2.7bp, broad-tape unlock satisfied, RISK-ON regime confirmed.",
+  "risk": "Stop at 107.00, just below ORB high of 107.04. If price drops back below the opening range, ORB breakout thesis is broken. Trade is extended $2.53 above ORB high \u2014 requires continued institutional buying to reach target. Hard stop at 107.00.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 107.0,
+  "target": 115.07,
+  "quote_age_sec": 0.3,
+  "spread_bp": 2.7,
+  "status": "submitted",
+  "alpaca_order_id": "eab96d40-e888-44d2-8509-880110a88bf8",
+  "client_order_id": "T-20260917-104022-INTC",
+  "submitted_at_utc": "2026-09-17T14:45:34.758568+00:00"
+}

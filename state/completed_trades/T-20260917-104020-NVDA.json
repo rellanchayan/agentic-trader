@@ -1,0 +1,22 @@
+{
+  "trade_id": "T-20260917-104020-NVDA",
+  "created_at_utc": "2026-09-17T14:40:20Z",
+  "ticker": "NVDA",
+  "side": "BUY",
+  "qty": 45,
+  "limit_price": 219.82,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "ORB breakout above 218.68 on 2.35x relative volume. RISK-ON tape; sector disarm lifted this tick (INTC and NVDA both above VWAP at first post-9:45 evaluation). Broad-tape unlock satisfied: SPY above VWAP (761.89 > 761.36) and NVDA above VWAP (219.74 > 218.67). Price only ~0.5% above ORB high \u2014 clean, unextended breakout. Primary unconditional candidate per day plan.",
+  "risk": "Stop at 218.40, just below ORB high of 218.68. If price drops back below the opening range, breakout thesis is broken. Hard stop there \u2014 no exceptions.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 218.4,
+  "target": 222.66,
+  "quote_age_sec": 0.3,
+  "spread_bp": 0.9,
+  "status": "submitted",
+  "alpaca_order_id": "ffb118dc-5937-4e8b-8137-96a44aba7310",
+  "client_order_id": "T-20260917-104020-NVDA",
+  "submitted_at_utc": "2026-09-17T14:45:26.783604+00:00"
+}

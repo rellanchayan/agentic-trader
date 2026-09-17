@@ -1,0 +1,126 @@
+{
+  "tick_time_et": "10:40",
+  "tick_time_utc": "2026-09-17T14:40:20Z",
+  "minutes_since_open": 70,
+  "action": "BUY",
+  "positions_before": [],
+  "open_orders_before": [],
+
+  "sector_disarm_check": {
+    "evaluated_at": "10:40 (first post-9:45 tick — previous tick was 09:39)",
+    "NVDA_above_vwap": true,
+    "NVDA_price": 219.735,
+    "NVDA_vwap": 218.67,
+    "INTC_above_vwap": true,
+    "INTC_price": 109.57,
+    "INTC_vwap": 107.74,
+    "both_above_vwap": true,
+    "disarm_lifted": true,
+    "note": "Both INTC and NVDA above VWAP at first post-9:45 evaluation. Sector disarm LIFTED. Irreversible for this session."
+  },
+
+  "broad_tape_unlock": {
+    "SPY_above_vwap": true,
+    "SPY_price": 761.89,
+    "SPY_vwap": 761.36,
+    "NVDA_above_vwap": true,
+    "unlock_passed": true
+  },
+
+  "gate_outcomes": {
+    "NVDA": {
+      "orb_breakout": true,
+      "rel_volume": 2.35,
+      "rel_volume_gate": "PASS (>1.5x)",
+      "spread_bp": 0.9,
+      "spread_gate": "PASS (<15bp)",
+      "quote_age_sec": 0.3,
+      "quote_gate": "PASS (<30s)",
+      "above_vwap": true,
+      "broad_tape_unlock": "PASS",
+      "within_orb_window": true,
+      "entry_window": "9:45 AM - 11:00 AM ET",
+      "overall": "PASS — ordered"
+    },
+    "INTC": {
+      "orb_breakout": true,
+      "rel_volume": 5.46,
+      "rel_volume_gate": "PASS (>1.5x)",
+      "spread_bp": 2.7,
+      "spread_gate": "PASS (<15bp)",
+      "quote_age_sec": 0.3,
+      "quote_gate": "PASS (<30s)",
+      "above_vwap": true,
+      "broad_tape_unlock": "PASS",
+      "sector_disarm": "LIFTED",
+      "within_orb_window": true,
+      "entry_window": "9:45 AM - 11:00 AM ET",
+      "overall": "PASS — ordered"
+    },
+    "BAC": {
+      "orb_breakout": false,
+      "above_vwap": true,
+      "rel_volume": 1.58,
+      "overall": "SKIP — orb_breakout FALSE; secondary candidate, no ORB trigger; NVDA and INTC produced primary entries"
+    },
+    "SPY": {
+      "overall": "SKIP — not on primary watchlist; used as broad-tape unlock proxy only"
+    },
+    "QQQ": {
+      "overall": "SKIP — not on primary watchlist today"
+    }
+  },
+
+  "orders_submitted": [
+    {
+      "trade_id": "T-20260917-104020-NVDA",
+      "alpaca_order_id": "ffb118dc-5937-4e8b-8137-96a44aba7310",
+      "ticker": "NVDA",
+      "side": "BUY",
+      "qty": 45,
+      "limit_price": 219.82,
+      "stop": 218.40,
+      "target": 222.66,
+      "risk_per_share": 1.42,
+      "rr_ratio": 2.0,
+      "qty_by_risk": 176,
+      "qty_by_cash": 45,
+      "notional": 9891.90,
+      "constitution_check": "PASS",
+      "daytrade_guard_check": "PASS",
+      "status": "PENDING_NEW"
+    },
+    {
+      "trade_id": "T-20260917-104022-INTC",
+      "alpaca_order_id": "eab96d40-e888-44d2-8509-880110a88bf8",
+      "ticker": "INTC",
+      "side": "BUY",
+      "qty": 91,
+      "limit_price": 109.69,
+      "stop": 107.00,
+      "target": 115.07,
+      "risk_per_share": 2.69,
+      "rr_ratio": 2.0,
+      "qty_by_risk": 92,
+      "qty_by_cash": 91,
+      "notional": 9981.79,
+      "constitution_check": "PASS",
+      "daytrade_guard_check": "PASS",
+      "status": "PENDING_NEW"
+    }
+  ],
+
+  "budget_after": {
+    "trades_used": 2,
+    "trades_remaining": 18,
+    "position_slots_used": 2,
+    "position_slots_remaining": 6,
+    "daily_deploy_used_usd": 19873.69,
+    "daily_deploy_remaining_usd": 30126.31
+  },
+
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+
+  "reasoning": "This is the first tick after the 9:45 AM ORB entry window opened. Previous tick (09:39) was pre-9:45 with broad-tape unlock FAIL. Now at 10:40 (cloud-mode hourly cadence): (1) Broad-tape unlock PASSES — SPY and NVDA both above VWAP. (2) Sector disarm evaluated at first post-9:45 opportunity — both INTC and NVDA above VWAP, disarm LIFTED. NVDA is the primary unconditional ORB candidate with textbook entry: price 219.74 is only ~0.5% above ORB high 218.68, rel_vol 2.35x, spread 0.9bp. INTC is co-primary with disarm lifted: extraordinary 5.46x rel_vol, multiple catalysts (CPU price hike, SK Hynix fab, PT raise to $145), spread 2.7bp clear. INTC is more extended ($2.53 above ORB high) but the exceptional volume and catalysts justify entry per the day plan's co-primary designation. Both trades sized at $10k cap, 2:1 R/R minimum. Total deployed $19,874 of $50k cap. RISK-ON tape, FOMC +25bp absorbed cleanly, first unconstrained session of the 7-session zero-trade streak."
+}

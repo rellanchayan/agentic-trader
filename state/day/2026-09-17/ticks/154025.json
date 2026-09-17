@@ -1,0 +1,58 @@
+{
+  "tick_id": "154025",
+  "timestamp_et": "2026-09-17T15:40:25",
+  "timestamp_utc": "2026-09-17T19:40:25",
+  "action": "HOLD",
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "minutes_to_flatten": 10
+  },
+  "positions_evaluated": [
+    {
+      "ticker": "INTC",
+      "qty": 91,
+      "avg_entry": 109.600659,
+      "current_price": 109.45,
+      "stop": 107.00,
+      "target": 115.07,
+      "vwap": 109.01,
+      "orb_high": 107.04,
+      "unrealized_pl": -13.71,
+      "above_vwap": true,
+      "above_orb_high": true,
+      "stop_hit": false,
+      "target_hit": false,
+      "thesis_intact": true,
+      "decision": "HOLD",
+      "reasoning": "Price $109.45 > stop $107.00 (margin +$2.45). Above VWAP $109.01 (+$0.44). Above ORB high $107.04. ORB breakout thesis intact. Holding to target $115.07 or stop."
+    },
+    {
+      "ticker": "NVDA",
+      "qty": 45,
+      "avg_entry": 219.2,
+      "current_price": 219.67,
+      "stop": 218.40,
+      "target": 222.66,
+      "vwap": 218.95,
+      "orb_high": 218.68,
+      "unrealized_pl": 21.15,
+      "above_vwap": true,
+      "above_orb_high": true,
+      "stop_hit": false,
+      "target_hit": false,
+      "thesis_intact": true,
+      "decision": "HOLD",
+      "reasoning": "Price $219.67 > stop $218.40 (margin +$1.27). Above VWAP $218.95 (+$0.72). Above ORB high $218.68. ORB breakout thesis intact. Holding to target $222.66 or stop."
+    }
+  ],
+  "new_entries_evaluated": [],
+  "new_entries_reason": "past_no_new_entries=true (past 3:30 PM ET); no new entries permitted this tick or any future tick today",
+  "orders_placed": [],
+  "orders_cancelled": [],
+  "day_pnl": 7.44,
+  "day_pnl_unrealized": 7.44,
+  "slots_used": 2,
+  "trades_today": 2,
+  "notes": "10 minutes to flatten window (3:50 PM). Next tick expected in flatten window — will issue SELL orders for both positions with marketable sell limits. Both theses intact; holding. No stops or targets triggered this tick."
+}

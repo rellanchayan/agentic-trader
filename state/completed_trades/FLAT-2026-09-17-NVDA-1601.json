@@ -1,0 +1,18 @@
+{
+  "trade_id": "FLAT-2026-09-17-NVDA-1601",
+  "created_at_utc": "2026-09-17T20:01:13.542177+00:00",
+  "ticker": "NVDA",
+  "side": "SELL",
+  "qty": 45.0,
+  "limit_price": 206.44,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "End-of-day flatten (pass 3): closing intraday position to be flat overnight.",
+  "risk": "Marketable sell limit; if unfilled a later, more aggressive pass re-prices it.",
+  "strategy": "flatten",
+  "setup": "eod_flatten",
+  "status": "submitted",
+  "alpaca_order_id": "579f8b6e-c27f-44c9-b358-58de5629f71b",
+  "client_order_id": "FLAT-2026-09-17-NVDA-1601",
+  "submitted_at_utc": "2026-09-17T20:01:14.439429+00:00"
+}

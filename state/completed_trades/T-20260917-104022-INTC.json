@@ -15,8 +15,11 @@
   "target": 115.07,
   "quote_age_sec": 0.3,
   "spread_bp": 2.7,
-  "status": "submitted",
+  "status": "filled",
   "alpaca_order_id": "eab96d40-e888-44d2-8509-880110a88bf8",
   "client_order_id": "T-20260917-104022-INTC",
-  "submitted_at_utc": "2026-09-17T14:45:34.758568+00:00"
+  "submitted_at_utc": "2026-09-17T14:45:34.758568+00:00",
+  "filled_qty": 91.0,
+  "filled_avg_price": 109.600659,
+  "reconciled_at_utc": "2026-09-17T20:00:49.679837+00:00"
 }

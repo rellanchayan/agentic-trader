@@ -1,0 +1,70 @@
+{
+  "tick_time_et": "09:39",
+  "tick_time_utc": "2026-09-17T13:39:39Z",
+  "minutes_since_open": 9,
+  "action": "HOLD",
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "positions_open": 0,
+  "position_slots_remaining": 8,
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "outcome": "SKIP",
+      "reasons": [
+        "Pre-9:45 AM mandatory no-entry window in force (9 min since open)",
+        "SPY below VWAP: broad-tape unlock NOT satisfied (SPY 761.11 vs VWAP 761.98)",
+        "NVDA has not cleared ORB high (218.29 vs orb_high 218.66)"
+      ]
+    },
+    {
+      "ticker": "INTC",
+      "setup": "orb",
+      "outcome": "SKIP",
+      "reasons": [
+        "Pre-9:45 AM mandatory no-entry window in force",
+        "Semiconductor sector disarm evaluation deferred to 9:45 AM tick (both INTC and NVDA must be above VWAP)",
+        "INTC has not cleared ORB high (106.24 vs orb_high 107.04)"
+      ]
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "outcome": "SKIP",
+      "reasons": [
+        "Pre-9:45 AM mandatory no-entry window in force",
+        "Two-tick VWAP confirmation rule requires two consecutive ticks above VWAP — this is tick 1 (no prior confirmation)",
+        "rel_volume 1.37x is below the 1.5x minimum gate"
+      ]
+    }
+  ],
+  "market_snapshot": {
+    "SPY": {"last": 761.11, "vwap": 761.98, "above_vwap": false, "rel_volume": 2.69},
+    "QQQ": {"last": 713.49, "vwap": 714.75, "above_vwap": false, "rel_volume": 2.65},
+    "NVDA": {"last": 218.29, "vwap": 217.89, "above_vwap": true, "orb_high": 218.66, "orb_breakout": false, "rel_volume": 3.8},
+    "INTC": {"last": 106.24, "vwap": 105.93, "above_vwap": true, "orb_high": 107.04, "orb_breakout": false, "rel_volume": 13.55},
+    "BAC": {"last": 58.13, "vwap": 58.12, "above_vwap": true, "orb_high": 58.425, "orb_breakout": false, "rel_volume": 1.37}
+  },
+  "key_levels_to_watch": {
+    "NVDA": "Watch for break above 218.66 (ORB high) with rel-vol >1.5x, spread <=15bp, AND SPY above VWAP",
+    "INTC": "9:45 AM sector disarm check: if INTC AND NVDA both above VWAP, disarm lifted, arm for ORB breakout above 107.04",
+    "BAC": "Two-tick VWAP confirmation required; tick 1 logged here (above 58.12); need second confirming tick with rel-vol >1.5x"
+  },
+  "flags": {
+    "broad_tape_unlock": false,
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "sector_disarm_active": true,
+    "sector_disarm_eval_tick": "09:45"
+  },
+  "next_tick_priorities": [
+    "SECTOR DISARM CHECK: Are INTC and NVDA both above VWAP? If yes, lift disarm and arm INTC.",
+    "BROAD TAPE CHECK: Is SPY above VWAP? Required for ORB/momentum entries.",
+    "NVDA ORB: Is price above 218.66 on >1.5x rel-vol with spread <=15bp?",
+    "BAC VWAP: Is BAC still above VWAP (58.12)? Tick 2 of confirmation if yes."
+  ]
+}

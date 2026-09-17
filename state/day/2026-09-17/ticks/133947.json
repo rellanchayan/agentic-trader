@@ -1,0 +1,71 @@
+{
+  "tick_time_et": "13:39:47",
+  "date": "2026-09-17",
+  "action": "HOLD",
+  "new_orders": [],
+  "positions_reviewed": [
+    {
+      "ticker": "INTC",
+      "qty": 91,
+      "avg_entry": 109.60,
+      "current_price": 110.93,
+      "stop": 107.00,
+      "target": 115.07,
+      "unrealized_pl": 120.97,
+      "vwap": 108.75,
+      "above_vwap": true,
+      "rel_vol": 2.31,
+      "spread_bp": 0.9,
+      "margin_to_stop": 3.93,
+      "decision": "HOLD",
+      "reason": "Thesis intact: price $3.89 above ORB high ($107.04), $2.18 above VWAP ($108.75), stop not hit (margin $3.93). Rel-vol 2.31x strong. Targeting $115.07 (+$4.14 from current)."
+    },
+    {
+      "ticker": "NVDA",
+      "qty": 45,
+      "avg_entry": 219.20,
+      "current_price": 219.06,
+      "stop": 218.40,
+      "target": 222.66,
+      "unrealized_pl": -6.30,
+      "vwap": 218.82,
+      "above_vwap": true,
+      "rel_vol": 1.14,
+      "spread_bp": 0.9,
+      "margin_to_stop": 0.66,
+      "decision": "HOLD",
+      "reason": "Thesis technically intact: price above stop ($218.40), above VWAP ($218.82) by $0.24, above ORB high ($218.68) by $0.38. Stop not hit; holding at defined stop $218.40. Concern: momentum fading (rel-vol 1.14x now vs 2.35x at entry, declining each tick). Will sell immediately if price drops to or below $218.40."
+    }
+  ],
+  "new_entries_considered": [
+    {
+      "ticker": "BAC",
+      "above_vwap": true,
+      "rel_vol": 0.97,
+      "gate_outcome": "FAIL — rel_vol 0.97x < 1.5x minimum. Also, ORB window expired (past 11:00 AM); BAC VWAP reclaim would require 1.5x rel-vol min and is secondary to primary NVDA/INTC entries that already ran.",
+      "decision": "NO ENTRY"
+    }
+  ],
+  "open_orders_canceled": [],
+  "market_snapshot": {
+    "SPY": {"last": 762.27, "vwap": 761.71, "above_vwap": true, "rel_vol": 0.96},
+    "INTC": {"last": 110.905, "vwap": 108.75, "above_vwap": true, "rel_vol": 2.31, "spread_bp": 0.9},
+    "NVDA": {"last": 219.12, "vwap": 218.82, "above_vwap": true, "rel_vol": 1.14, "spread_bp": 0.9},
+    "BAC": {"last": 58.33, "vwap": 58.01, "above_vwap": true, "rel_vol": 0.97, "spread_bp": 1.7}
+  },
+  "account": {
+    "equity": 999579.98,
+    "day_pnl": 114.67,
+    "loss_budget_remaining": 3115.59,
+    "trades_today": 2,
+    "trades_remaining": 18,
+    "positions_open": 2,
+    "position_slots_remaining": 6
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "minutes_since_open": 249,
+    "note": "ORB/momentum window expired (11:00 AM ET). New entries still allowed for VWAP reclaim until 3:30 PM ET. Flatten starts 3:50 PM ET."
+  }
+}

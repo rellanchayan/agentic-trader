@@ -1,0 +1,64 @@
+{
+  "tick_time": "2026-09-16T12:39:20-04:00",
+  "tick_label": "12:39",
+  "action": "WAIT",
+  "positions_managed": [],
+  "entries_evaluated": [
+    {
+      "ticker": "NVDA",
+      "spread_bp": 0.9,
+      "spread_gate": "PASS",
+      "rel_volume": 0.91,
+      "rel_vol_gate": "FAIL (needs >2.0x; window expired)",
+      "orb_breakout": true,
+      "orb_window_gate": "FAIL (expired 11:00 AM ET)",
+      "above_vwap": true,
+      "vwap_reclaim_gate": "FAIL (off-table: MIXED/RANGE+FOMC)",
+      "verdict": "NO ENTRY — ORB window expired; vol below gate"
+    },
+    {
+      "ticker": "BAC",
+      "spread_bp": 1.7,
+      "spread_gate": "PASS",
+      "rel_volume": 1.27,
+      "rel_vol_gate": "FAIL (needs >2.0x; window expired)",
+      "orb_breakout": false,
+      "orb_window_gate": "FAIL (expired 11:00 AM ET)",
+      "above_vwap": false,
+      "vwap_reclaim_gate": "FAIL (off-table: MIXED/RANGE+FOMC)",
+      "verdict": "NO ENTRY — ORB window expired; below VWAP; vol below gate"
+    },
+    {
+      "ticker": "QQQ",
+      "spread_bp": 0.8,
+      "spread_gate": "PASS",
+      "rel_volume": 0.63,
+      "rel_vol_gate": "FAIL (needs >2.0x; window expired)",
+      "orb_breakout": true,
+      "orb_window_gate": "FAIL (expired 11:00 AM ET)",
+      "above_vwap": true,
+      "vwap_reclaim_gate": "FAIL (off-table: MIXED/RANGE+FOMC)",
+      "verdict": "NO ENTRY — ORB window expired; vol deeply below gate"
+    }
+  ],
+  "market_snapshot": {
+    "NVDA": {"last": 215.915, "spread_bp": 0.9, "rel_volume": 0.91, "above_vwap": true, "vwap": 215.27},
+    "BAC": {"last": 58.305, "spread_bp": 1.7, "rel_volume": 1.27, "above_vwap": false, "vwap": 58.6},
+    "QQQ": {"last": 710.02, "spread_bp": 0.8, "rel_volume": 0.63, "above_vwap": true, "vwap": 709.92}
+  },
+  "time_constraints": {
+    "orb_window_open": false,
+    "orb_window_expired_at": "11:00 AM ET",
+    "vwap_reclaim_armed": false,
+    "vwap_reclaim_reason": "MIXED/RANGE + FOMC event — off-table all session",
+    "fomc_blackout_starts": "1:30 PM ET",
+    "fomc_decision": "2:00 PM ET",
+    "post_fomc_window": "2:30 PM ET",
+    "post_fomc_bar": "3.0x rel-vol + spread ≤10 bp + 50% size"
+  },
+  "day_pnl": 0.0,
+  "trades_remaining": 20,
+  "position_slots": 8,
+  "open_positions": 0,
+  "note": "Fourth consecutive WAIT. ORB window closed 99 min ago. VWAP reclaim structurally off-table (MIXED/RANGE+FOMC). Vol compression deepening across all names into FOMC announcement (NVDA: 1.04x→0.91x, QQQ: 0.74x→0.63x, BAC: 1.47x→1.27x). Post-FOMC bar at 3.0x rel-vol is unlikely to be met at current vol trajectory absent a dramatic post-announcement surge. No open positions to manage. Sitting flat into FOMC blackout at 1:30 PM."
+}

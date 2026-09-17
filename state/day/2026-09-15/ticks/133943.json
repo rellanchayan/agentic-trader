@@ -1,0 +1,67 @@
+{
+  "ts_et": "2026-09-15T13:39:43-04:00",
+  "tick": "133943",
+  "action": "no_trade",
+  "minutes_since_open": 249,
+  "account": {
+    "equity": 999465.31,
+    "cash": 999465.31,
+    "buying_power": 3997861.24,
+    "daytrade_count": 0
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "open_orders": 0,
+  "candidates": {
+    "NVDA": {
+      "last": 211.67,
+      "vwap": 212.57,
+      "orb_high": 213.84,
+      "orb_low": 212.61,
+      "spread_bp": 0.5,
+      "rel_vol": 0.74,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "QQQ": {
+      "last": 704.81,
+      "vwap": 706.21,
+      "orb_high": 709.22,
+      "orb_low": 707.63,
+      "spread_bp": 1.0,
+      "rel_vol": 0.75,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "SPY": {
+      "last": 757.07,
+      "vwap": 757.69,
+      "orb_high": 760.32,
+      "orb_low": 758.745,
+      "spread_bp": 0.4,
+      "rel_vol": 1.01,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "BAC": {
+      "gate_block": "not_in_snapshot"
+    },
+    "INTC": {
+      "gate_block": "sector_disarm_active_day5"
+    }
+  },
+  "gate_outcomes": {
+    "orb_window": "EXPIRED — 249 min since open, window closed at ~11:15 AM ET",
+    "broad_tape_unlock": "FAIL — NVDA $211.67 < VWAP $212.57; SPY $757.07 < VWAP $757.69",
+    "rel_vol_2x_gate": "FAIL — NVDA 0.74x, QQQ 0.75x, SPY 1.01x (all < 2.0x elevated gate)",
+    "vwap_reclaim": "OFF-TABLE — RISK-OFF + FOMC Day 1 explicit skip condition",
+    "orb_breakout_signal": "NONE — all names below ORB high",
+    "positions_to_manage": "NONE — flat"
+  },
+  "reason": "ORB window expired (249 min since open). Broad-tape unlock fails (NVDA $211.67 < VWAP $212.57; SPY $757.07 < VWAP $757.69). All rel-vol far below 2.0x elevated gate (NVDA 0.74x, QQQ 0.75x, SPY 1.01x). VWAP reclaim off-table (RISK-OFF+FOMC Day1). No positions to manage. Pre-FOMC vol compression deepens as expected through midday. Fifth consecutive no-trade tick this session.",
+  "decision": "no_trade",
+  "orders_submitted": []
+}

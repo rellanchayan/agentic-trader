@@ -1,0 +1,57 @@
+{
+  "timestamp_et": "2026-09-11T15:39:30-04:00",
+  "tick_time": "15:39",
+  "action": "HOLD",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 103.07,
+      "bid": 103.11,
+      "ask": 103.13,
+      "spread_bp": 1.9,
+      "vwap": 103.11,
+      "above_vwap": false,
+      "orb_high": 104.06,
+      "orb_breakout": false,
+      "rel_volume": 1.0,
+      "gate_outcomes": {
+        "entry_cutoff": "BLOCKED — past 3:30 PM ET no-new-entries cutoff (369 min since open)",
+        "orb_window": "BLOCKED — 369 min since open, window expires at 90 min",
+        "broad_tape_unlock": "BLOCKED — NVDA below VWAP ($218.485 < $220.03)",
+        "rel_volume": "FAIL — 1.0x vs 2.0x required (MIXED/RANGE gap-up, CPI day)",
+        "spread": "PASS — 1.9bp < 15bp",
+        "vwap_reclaim": "OFF-TABLE — MIXED/RANGE + CPI day (active macro event)",
+        "final": "BLOCKED"
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "last": 218.485,
+      "bid": 218.47,
+      "ask": 218.49,
+      "spread_bp": 0.9,
+      "vwap": 220.03,
+      "above_vwap": false,
+      "orb_high": 221.22,
+      "orb_breakout": false,
+      "rel_volume": 0.47,
+      "gate_outcomes": {
+        "entry_cutoff": "BLOCKED — past 3:30 PM ET no-new-entries cutoff",
+        "orb_window": "BLOCKED — 369 min since open, window expires at 90 min",
+        "broad_tape_unlock": "BLOCKED — NVDA itself below VWAP ($218.485 < $220.03)",
+        "rel_volume": "FAIL — 0.47x vs 2.0x required",
+        "spread": "PASS — 0.9bp < 15bp",
+        "vwap_reclaim": "OFF-TABLE — MIXED/RANGE + CPI day (active macro event)",
+        "final": "BLOCKED"
+      }
+    }
+  ],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "positions_open": 0,
+  "position_slots_remaining": 8,
+  "decision_rationale": "Past 3:30 PM ET entry cutoff — no new entries permitted. No open positions or orders to manage. CPI day (2026-09-11): MIXED/RANGE regime all session, NVDA below VWAP all day (broad-tape unlock never satisfied), VWAP reclaim off-table (active CPI macro event). Zero-trade session confirmed. Will be flat at close."
+}

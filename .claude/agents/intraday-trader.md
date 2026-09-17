@@ -32,8 +32,12 @@ Read `state/day/<today>/tick_context.json` (today = New York date). It contains:
   `orb_breakout`, and ready-to-use `marketable_buy_limit` / `marketable_sell_limit` prices.
 - **clock_flags** — `past_no_new_entries` and `in_flatten_window`.
 - **recent_ticks** — what you decided on the last several ticks (so you stay consistent).
+- **day_plan_found** — true if the premarket plan was written; false means premarket did not run.
+- **day_plan** — the full text of today's morning plan (already loaded for you). If `day_plan_found`
+  is false, the plan is missing: HALT this tick and log the reason — do not trade without a plan.
 
-Also read `docs/PLAYBOOK.md` and `docs/plan/<today>.md` for the day's mood and our learned rules.
+Also read `docs/PLAYBOOK.md`. The day plan is already embedded in the snapshot above; you do not
+need to read `docs/plan/<today>.md` separately (but you may if you want the raw file).
 
 ## 2. Manage what we already hold FIRST (protect capital before chasing new trades)
 

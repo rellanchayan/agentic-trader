@@ -36,6 +36,7 @@ from daypnl import evaluate as daypnl_evaluate, load_config
 ROOT = Path(__file__).resolve().parent.parent
 WATCHLIST_FILE = ROOT / "state" / "watchlist.txt"
 COMPLETED_DIR = ROOT / "state" / "completed_trades"
+PLAN_DIR = ROOT / "docs" / "plan"  # singular — premarket always writes here
 
 SESSION_MINUTES = 390  # 9:30–16:00 = 6.5 hours
 
@@ -83,6 +84,14 @@ def _todays_trade_count() -> int:
         except Exception:
             continue
     return n
+
+
+def _load_day_plan(date: str) -> tuple[str | None, bool]:
+    """Return (plan_text, found). Reads docs/plan/<date>.md (singular — always)."""
+    p = PLAN_DIR / f"{date}.md"
+    if p.exists():
+        return p.read_text(), True
+    return None, False
 
 
 def _recent_intraday_log(date: str, n: int = 10) -> list[dict]:
@@ -251,10 +260,14 @@ def build(date: str) -> dict:
     trades_today = _todays_trade_count()
     pnl = daypnl_evaluate(date, account["equity"])
 
+    plan_text, plan_found = _load_day_plan(date)
+
     context = {
         "date": date,
         "timestamp_et": now_et.isoformat(),
         "minutes_since_open": mins,
+        "day_plan_found": plan_found,
+        "day_plan": plan_text,  # None when premarket has not yet run
         "clock_flags": {
             "past_no_new_entries": is_after(config.get("no_new_entries_after_et", "15:30"), now_et),
             "in_flatten_window": is_after(config.get("flatten_start_et", "15:50"), now_et),

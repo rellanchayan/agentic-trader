@@ -1,0 +1,105 @@
+{
+  "tick_time_et": "13:40",
+  "tick_time_utc": "2026-09-14T17:40:11Z",
+  "hhmmss": "134011",
+  "minutes_since_open": 250,
+  "action": "HOLD",
+  "orders_submitted": [],
+  "positions_managed": [],
+  "account_snapshot": {
+    "equity": 999465.31,
+    "cash": 999465.31,
+    "buying_power": 3997861.24,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "day_pnl": {
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "tripped": false
+  },
+  "budget": {
+    "trades_used": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "last": 98.29,
+      "vwap": 96.76,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 1.26,
+      "spread_bp": 2.0,
+      "quote_age_sec": 1.1,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "Sector disarm active all session (semiconductor sector sell-off, coordinated with NVDA, AI safety essay + Apple Mac ecosystem news). Per plan: WATCH ONLY, no ORB, no fade, no bounce. Sector disarm stays in effect for full session per playbook."
+    },
+    {
+      "ticker": "NVDA",
+      "last": 212.47,
+      "vwap": 210.82,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 0.88,
+      "spread_bp": 1.4,
+      "quote_age_sec": 1.0,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "Sector disarm active all session (semiconductor sector sell-off). Per plan: WATCH ONLY. NVDA is also the broad-tape unlock variable — currently above VWAP ($212.47 > $210.82), so broad-tape unlock IS satisfied at this tick."
+    },
+    {
+      "ticker": "QQQ",
+      "last": 712.425,
+      "vwap": 707.15,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 1.13,
+      "spread_bp": 0.7,
+      "quote_age_sec": 0.4,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "Two gates fail: (1) ORB window expired — 235 minutes past ORB formation vs. 90-minute maximum per playbook. ORB entry window closed at approximately 11:15 AM ET. (2) rel_vol 1.13x far below the elevated 2.0x gate required for RISK-OFF + pre-FOMC day. Individual gate checks: spread 0.7 bp PASS (< 15 bp limit), quote_age 0.4 sec PASS, broad-tape unlock PASS (NVDA above VWAP, SPY above VWAP). But ORB expiry and rel_vol fail are both blocking. No entry.",
+      "setup_considered": "orb"
+    },
+    {
+      "ticker": "SPY",
+      "last": 762.80,
+      "vwap": 760.24,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 1.08,
+      "spread_bp": 0.7,
+      "quote_age_sec": 1.1,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "SPY is a backup candidate only per the plan — QQQ is the named candidate. QQQ evaluation documented above. SPY also fails independently: ORB window expired (235 min > 90 min limit), rel_vol 1.08x below the 2.0x elevated gate. Not evaluated further per plan rule: document QQQ gate outcome before pivoting to SPY."
+    }
+  ],
+  "broad_tape_unlock": {
+    "nvda_above_vwap": true,
+    "spy_above_vwap": true,
+    "unlock_satisfied": true,
+    "note": "Unlock satisfied for third consecutive tick (was blocked at 10:39, satisfied since 11:40). Irrelevant this tick — ORB window expired and rel_vol too low regardless."
+  },
+  "regime_context": {
+    "regime": "RISK-OFF",
+    "pre_fomc": true,
+    "fomc_date": "2026-09-16",
+    "semiconductor_sector_disarm": true,
+    "vwap_reclaim_off_table": true,
+    "momentum_off_table": true,
+    "orb_armed_for": "QQQ only, but window now expired"
+  },
+  "vol_compression_series": {
+    "1039_qqq_rel_vol": 2.10,
+    "1140_qqq_rel_vol": 1.55,
+    "1240_qqq_rel_vol": 1.33,
+    "1340_qqq_rel_vol": 1.13,
+    "note": "Confirmed pre-FOMC vol compression — rel_vol declining every tick as predicted by the plan. Pattern matches pre-CPI Tuesday behavior documented in PLAYBOOK."
+  },
+  "summary": "No trade. Consistent with prior three ticks and the plan's explicit expectation of a zero-trade session. ORB window for QQQ expired at approximately 11:15 AM ET and will not re-open. Relative volume continues compressing under pre-FOMC institutional flow reduction. INTC and NVDA sector-disarmed for full session. VWAP reclaim and momentum off-table per plan. Capital preserved. Day P&L $0.00."
+}

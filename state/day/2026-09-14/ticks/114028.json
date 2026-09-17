@@ -1,0 +1,76 @@
+{
+  "tick_time_et": "11:40:28",
+  "tick_id": "114028",
+  "date": "2026-09-14",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "QQQ",
+      "setup": "orb",
+      "orb_breakout": true,
+      "last": 709.82,
+      "vwap": 705.59,
+      "above_vwap": true,
+      "rel_vol": 1.55,
+      "spread_bp": 0.6,
+      "quote_age_sec": 0.3,
+      "marketable_buy_limit": 710.58,
+      "gate_results": {
+        "rel_vol_2x_gate": "FAIL — 1.55x < 2.0x required (RISK-OFF + pre-FOMC elevated gate)",
+        "spread_gate": "PASS — 0.6 bp < 15 bp",
+        "broad_tape_unlock": "PASS — NVDA $211.90 > VWAP $210.52 AND SPY $761.21 > VWAP $759.38",
+        "orb_breakout_gate": "PASS — orb_breakout=true",
+        "orb_entry_window": "FAIL — 115 min since ORB formed at 9:45 AM, exceeds 90-min limit",
+        "rr_check": "NOT EVALUATED (upstream gates failed)"
+      },
+      "decision": "SKIP — two gates fail: rel_vol and ORB entry window expired"
+    },
+    {
+      "ticker": "SPY",
+      "setup": "orb",
+      "note": "Evaluated as secondary after QQQ blocked by rel_vol gate",
+      "rel_vol": 1.46,
+      "spread_bp": 0.4,
+      "gate_results": {
+        "rel_vol_gate": "FAIL — 1.46x < 1.5x standard gate (below even standard threshold)",
+        "qqqgate_doc": "QQQ blocked by rel_vol gate (1.55x < 2.0x) — pivot to SPY documented"
+      },
+      "decision": "SKIP — fails rel_vol gate"
+    },
+    {
+      "ticker": "INTC",
+      "decision": "SKIP — sector disarm active for full session (semiconductor sector-wide sell-off)"
+    },
+    {
+      "ticker": "NVDA",
+      "decision": "SKIP — sector disarm active for full session (semiconductor sector-wide sell-off)"
+    }
+  ],
+  "broad_tape_unlock": {
+    "nvda_last": 211.90,
+    "nvda_vwap": 210.52,
+    "nvda_above_vwap": true,
+    "spy_last": 761.21,
+    "spy_vwap": 759.38,
+    "spy_above_vwap": true,
+    "unlock_satisfied": true,
+    "note": "Unlock satisfied at this tick — progress from 10:39 tick when both were below VWAP. However, all other gates block entry."
+  },
+  "key_observations": [
+    "QQQ rel_vol fell from 2.10x at 10:39 to 1.55x at 11:40 — vol compression accelerating, consistent with pre-FOMC suppression pattern.",
+    "Broad-tape unlock is now satisfied (both NVDA and SPY above VWAP), but this alone is insufficient — all five gates must pass simultaneously.",
+    "ORB entry window has expired (115 min > 90 min limit). Even if vol recovered, late entry inherits reversal risk with no early-session reward.",
+    "Pre-FOMC vol compression playing out exactly as day plan predicted (same pattern as Aug 17-18 pre-FOMC minutes sessions).",
+    "Zero trades is the correct and expected outcome for this session."
+  ],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "slots_used": 0,
+  "slots_remaining": 8,
+  "open_positions": [],
+  "in_flatten_window": false,
+  "past_no_new_entries": false
+}

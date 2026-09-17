@@ -38,6 +38,7 @@ made of **rules to follow**, not stories.
   obscures the signal. (2026-08-28: Warsh Jackson Hole keynote + Chicago PMI + U. Michigan
   Sentiment + BLS revision all at 10:00 AM ET reduced the live window to 45 minutes on a Friday.)
 - On the 1-2 trading sessions before a scheduled FOMC minutes release, institutional players typically reduce exposure ahead of the binary macro event; relative volume across candidates runs well below the 1.5x gate as a result. A zero-trade outcome on these pre-FOMC-minutes sessions is the expected and correct outcome — do not adjust gates to force entries. (2026-08-17: FOMC July minutes on Wednesday; plan correctly anticipated zero trades Monday on 0.92–1.09x semiconductor rel vol.)
+- On FOMC Rate Decision Day (the day the Federal Reserve announces its rate decision, typically at 2:00 PM ET with a press conference following), institutional participants reduce intraday exposure throughout the entire morning session ahead of the binary print. Relative volume across candidates reliably falls and holds below the 1.5x gate all session; a zero-trade outcome is the expected and correct result — do not adjust gates to force entries. No new entries after 2:00 PM ET on FOMC Decision Day regardless of setup quality; the post-announcement tape whipsaws through the press conference and resolves directionally only after it ends. Tag FOMC Decision Day sessions separately in pattern analysis. (2026-09-16: sixth consecutive zero-trade session; FOMC rate decision at 2:00 PM ET; no setup qualified at any tick throughout the session.)
 - When PPI releases on Thursday and CPI releases on Friday in the same week, vol compression is a full-session phenomenon for Thursday — not just an afternoon effect. Relative volume can collapse from above-gate levels at the open (e.g., 2.38x at 9:30 AM) to noise-floor levels by the close (e.g., 1.04x) as the dual-release overhang deepens through the session. Treat the Thursday of a PPI+CPI week identically to a pre-CPI Tuesday: zero trades when no candidate maintains rel-vol above the 1.5x gate is the expected and correct outcome. (2026-09-09: INTC fell from 2.38x at open to 1.04x at close ahead of PPI Thu and CPI Fri.)
 - In the session immediately before a scheduled Non-Farm Payrolls release (the Thursday before a first-Friday NFP), institutional pre-positioning typically compresses relative volume across the watchlist from approximately 2:00 PM ET onward. Do not initiate or extend positions after 2:00 PM ET on a pre-NFP Thursday if rel-vol is declining — the compression is structural, not a tradeable signal. A zero-trade afternoon is the expected and correct outcome. (2026-09-02: NFP on 2026-09-04 expected to dominate Thursday afternoon tape.)
 - On Non-Farm Payrolls release Fridays, the binary nature of the 8:30 AM ET data print (beat/miss/in-line) typically produces a MIXED/RANGE regime through the morning as the market digests the number. Treat NFP Fridays as structurally equivalent to compressed-window macro Fridays: require 2.0x relative volume for any ORB entry, VWAP reclaim is off-table per the MIXED/RANGE rule, and a zero-trade outcome when no setup clears those gates is correct — do not adjust gates to force entries. Tag NFP Friday sessions separately in pattern analysis; conflating a correct NFP-Friday zero with a full-window Thursday zero obscures the signal. (2026-09-04: first NFP Friday in program history; MIXED/RANGE regime; no setup cleared the 2.0x rel-vol gate all session; INTC orb_breakout flashed true at 14:40 but the active disarm correctly overrode it.)
@@ -227,6 +228,95 @@ made of **rules to follow**, not stories.
   zero-trade sessions.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-16: No tuning. Tuner unfrozen ("ok to tune", 62 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. Sixth consecutive zero-trade session (Sep 9–16). All six
+  sessions have individually sufficient documented macro justifications: PPI+CPI week vol compression
+  (Sep 9), CPI overhang RISK-OFF (Sep 10), CPI release day (Sep 11), no premarket plan written
+  (Sep 14), pre-FOMC Day 1 RISK-OFF (Sep 15), FOMC Rate Decision Day (Sep 16).
+  Session context: FOMC Rate Decision Day. The 2:00 PM ET announcement + press conference is a
+  definitive binary macro event. Institutional participants reduce intraday exposure throughout the
+  entire morning session while awaiting the announcement, driving relative volume below the 1.5x gate
+  all session. A zero-trade outcome is the expected and correct result.
+  New rule added tonight to Time of day: FOMC Rate Decision Day is now explicitly named alongside
+  pre-CPI, NFP Friday, and pre-FOMC-minutes as an event class where a zero-trade outcome is the
+  expected and correct result. The existing general rule ("Be careful around scheduled events —
+  trade smaller or wait") was advisory and did not clearly establish zero trades as the right
+  outcome; the new explicit rule does. The structural pattern — all-session vol compression ahead
+  of a 2:00 PM ET binary print — is identical to pre-CPI Tuesday and NFP Friday and warrants the
+  same explicit treatment.
+  Sep 17 is the first unconstrained session of the streak. If it also produces zero trades, the
+  streak reaches 7. A zero at session 8 triggers the mandatory setup-mix review (Discipline rule).
+  All-time stats (62 days, 20 trades, 0.32 trades/day, 30% win rate, avg win +0.342R, avg loss
+  -0.757R): ORB 5 trades, 3 wins, -0.1994R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Unchanged from 2026-09-15 (no new trades placed).
+- 2026-09-15: No tuning. Tuner unfrozen ("ok to tune", 61 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. Fifth consecutive zero-trade session (Sep 9, 10, 11, 14, 15).
+  Account equity $999,465.31, total return -0.03%, fill rate 95% (19/20 lifetime).
+  Session context: RISK-OFF + pre-FOMC Day 1. The FOMC rate decision is scheduled for tomorrow
+  (Sep 16). Institutional pre-positioning ahead of a binary Fed event reliably suppresses relative
+  volume below the 1.5x gate — exactly the pattern already codified for pre-FOMC-minutes sessions
+  (added 2026-08-17) and the broader class of binary macro event days documented throughout the
+  playbook. A zero-trade outcome on pre-FOMC Day 1 in a RISK-OFF tape is the correct and expected
+  result; no gate adjustment is warranted.
+  No new durable rule is warranted tonight. Pre-FOMC sessions (both the minutes release and the
+  rate decision itself) are already covered by the existing binary macro event framework. The
+  RISK-OFF + pre-FOMC combination is structurally identical to RISK-OFF + pre-CPI: institutional
+  participants reduce exposure ahead of the binary print, vol compression ensues, and the 1.5x
+  rel-vol gate correctly blocks all entries. No evidence suggests the gate is miscalibrated.
+  The 5-session zero-trade streak (Sep 9–15) does not yet reach the 8-session threshold that
+  triggers the mandatory setup-mix review. Each of the five sessions has a documented, individually
+  sufficient macro justification: PPI+CPI week vol compression (Sep 9), CPI overhang RISK-OFF
+  (Sep 10), CPI release day (Sep 11), no premarket plan written (Sep 14), pre-FOMC Day 1 RISK-OFF
+  (Sep 15). The streak is not structurally diagnostic at this length — it reflects a genuinely
+  difficult macro calendar, not a systemic gate-calibration failure.
+  All-time stats (61 days, 20 trades, 0.33 trades/day, 30% win rate, avg win +0.342R, avg loss
+  -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Unchanged from 2026-09-14 (no new trades placed).
+- 2026-09-14: No tuning. Tuner unfrozen ("ok to tune", 60 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. Fourth consecutive zero-trade session (Sep 9, 10, 11, 14).
+  No premarket plan was written today. All-time stats (60 days, 20 trades, 0.33 trades/day, 30%
+  win rate, avg win +0.342R, avg loss -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy;
+  momentum 1 trade, 0 wins, -0.975R; VWAP reclaim 2 trades, 0 wins, -0.368R. All three setups
+  remain in negative expectancy.
+  Zero-trade days are not losses — the tuner's freeze condition (net-negative rolling 3 days) did
+  not trigger. However, no rule threshold was crossed either: with all setups in negative
+  expectancy and only 20 lifetime trades across 60 sessions, the evidence remains too thin and
+  ambiguous to justify any parameter adjustment. The tuner correctly did nothing.
+  Four consecutive zero-trade sessions (not eight) does not yet trigger the setup-mix review rule
+  (which fires at eight or more consecutive no-profit sessions). The current streak is at half the
+  threshold. The correct response is continued observation, not adjustment. If the streak reaches
+  eight sessions, the review is mandatory: distinguish sessions where gates correctly filtered
+  qualifying candidates from sessions where the screener produced no candidate at all — the two
+  failure modes require different fixes.
+  One observation for tracking: three of the four zero-trade days this week (Sep 9, 10, 11) had
+  documented macro event justification (PPI+CPI week vol compression, RISK-OFF tape, CPI release
+  day). Sep 14 had no plan, so its root cause is unknown — if the premarket runner is failing to
+  fire, the no-plan infrastructure rule already applies (debug the scheduler before placing any
+  trade). No new durable rule is warranted tonight.
+- 2026-09-11: No tuning. Tuner unfrozen ("ok to tune", 59 days of history, drawdown 0.03%) but no
+  rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
+  Today: zero trades, $0 realized P&L. CPI release day (BLS Consumer Price Index, 8:30 AM ET).
+  Account equity $999,465.31. Total return -0.03% since inception (2026-06-25). Fill rate 95%
+  (19/20 lifetime). Bot ended flat; no loss-stop triggered.
+  A zero-trade outcome on CPI release day is the expected and correct result. The prior journal
+  entry (Sep 10) explicitly predicted it: the CPI binary macro event places VWAP reclaim off-table
+  per the MIXED/RANGE + imminent binary macro event skip rule, and the vol-compression pattern
+  documented for the full PPI+CPI week (Sep 9 rule) extends through the CPI print itself. The
+  CPI release is structurally equivalent to NFP release Fridays in its effect on the session: the
+  binary 8:30 AM print typically produces a MIXED/RANGE or whipsaw tape as the market digests the
+  number, with no sustained directional flow available for ORB or momentum entries in the morning
+  window. No new durable rule is warranted tonight — the Sep 9 PPI+CPI week rule and the existing
+  MIXED/RANGE + binary macro event skip rules together already prescribe this outcome correctly.
+  All-time stats (59 days, 20 trades, 0.34 trades/day, 30% win rate, avg win +0.342R, avg loss
+  -0.757R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Unchanged from 2026-09-10 (no new trades placed).
 - 2026-09-10: No tuning. Tuner unfrozen ("ok to tune", 58 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

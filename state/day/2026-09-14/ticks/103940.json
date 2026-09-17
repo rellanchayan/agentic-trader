@@ -1,0 +1,47 @@
+{
+  "tick_time_et": "10:39:40",
+  "tick_time_utc": "2026-09-14T14:39:40Z",
+  "minutes_since_open": 69,
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entry_evaluated": {
+    "ticker": "QQQ",
+    "setup": "orb",
+    "orb_breakout": true,
+    "rel_vol": 2.10,
+    "spread_bp": 3.0,
+    "above_vwap": false,
+    "last": 704.82,
+    "vwap": 705.13,
+    "gate_outcome": "BLOCKED",
+    "gate_failed": "broad-tape unlock",
+    "gate_detail": "NVDA last $210.33 vs VWAP $210.39 (below VWAP). SPY last $758.44 vs VWAP $759.50 (below VWAP). Playbook rule: SPY AND NVDA must both be above VWAP before any ORB or momentum entry. Gate failed — no entry.",
+    "individual_gates": {
+      "rel_vol_2x": true,
+      "spread_le_15bp": true,
+      "broad_tape_unlock": false,
+      "orb_breakout_signal": true
+    }
+  },
+  "other_names": {
+    "INTC": "WATCH ONLY — sector disarm active, above_vwap false, orb_breakout false",
+    "NVDA": "WATCH ONLY — sector disarm active, above_vwap false (gapped -2.7% premarket, $210.33 vs VWAP $210.39)",
+    "SPY": "Not primary — QQQ evaluated first per playbook, QQQ blocked by unlock, SPY below VWAP"
+  },
+  "regime": "RISK-OFF",
+  "plan_ref": "docs/plan/2026-09-14.md",
+  "playbook_rules_applied": [
+    "Broad-tape unlock: SPY AND NVDA both above VWAP required (added 2026-09-09)",
+    "Sector disarm: INTC and NVDA WATCH ONLY for full session",
+    "VWAP reclaim OFF-TABLE: RISK-OFF + pre-FOMC imminent binary event",
+    "Elevated gate: 2.0x rel_vol required on RISK-OFF + pre-FOMC day"
+  ],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "account_equity": 999465.31,
+  "in_flatten_window": false,
+  "past_no_new_entries": false
+}

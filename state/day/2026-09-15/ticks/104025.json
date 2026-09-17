@@ -1,0 +1,44 @@
+{
+  "ts_et": "2026-09-15T10:40:25-04:00",
+  "tick": "104025",
+  "action": "no_trade",
+  "reason": "Broad-tape unlock fails: NVDA below VWAP ($212.79 vs VWAP $213.07) and SPY below VWAP ($757.15 vs VWAP $758.73). All names also below 2.0x elevated rel-vol gate (NVDA 1.44x, QQQ 1.06x, SPY 1.30x). No orb_breakout signals on any name. VWAP reclaim off-table (RISK-OFF + pre-FOMC Day 1). INTC disarmed (sector disarm active day 5). Zero positions — nothing to manage.",
+  "candidates": {
+    "NVDA": {
+      "spread_bp": 1.4,
+      "rel_vol": 1.44,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+rel_vol_below_2.0x"
+    },
+    "QQQ": {
+      "spread_bp": 0.7,
+      "rel_vol": 1.06,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+rel_vol_below_2.0x"
+    },
+    "SPY": {
+      "spread_bp": 0.4,
+      "rel_vol": 1.30,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_block": "broad_tape_unlock_fail+rel_vol_below_2.0x"
+    },
+    "BAC": {
+      "gate_block": "not_in_snapshot"
+    },
+    "INTC": {
+      "gate_block": "sector_disarm_active_day5"
+    }
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 212.79, "vwap": 213.07, "orb_high": 213.84, "orb_low": 212.61, "rel_volume": 1.44, "spread_bp": 1.4},
+    "QQQ":  {"last": 705.70, "vwap": 707.86, "orb_high": 709.22, "orb_low": 707.63, "rel_volume": 1.06, "spread_bp": 0.7},
+    "SPY":  {"last": 757.15, "vwap": 758.73, "orb_high": 760.32, "orb_low": 758.745, "rel_volume": 1.30, "spread_bp": 0.4}
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "minutes_since_open": 70
+}

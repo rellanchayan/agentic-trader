@@ -1,0 +1,50 @@
+{
+  "ts_et": "2026-09-15T11:39:44-04:00",
+  "tick": "113944",
+  "action": "no_trade",
+  "positions_managed": 0,
+  "candidates": {
+    "NVDA": {
+      "last": 212.32,
+      "vwap": 212.88,
+      "above_vwap": false,
+      "orb_high": 213.84,
+      "orb_breakout": false,
+      "rel_vol": 1.0,
+      "spread_bp": 3.8,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "QQQ": {
+      "last": 705.435,
+      "vwap": 706.73,
+      "above_vwap": false,
+      "orb_high": 709.22,
+      "orb_breakout": false,
+      "rel_vol": 0.95,
+      "spread_bp": 1.3,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "SPY": {
+      "last": 757.42,
+      "vwap": 757.92,
+      "above_vwap": false,
+      "orb_high": 760.32,
+      "orb_breakout": false,
+      "rel_vol": 1.27,
+      "spread_bp": 0.4,
+      "gate_block": "broad_tape_unlock_fail+orb_window_expired+rel_vol_below_2.0x"
+    },
+    "BAC": {
+      "gate_block": "not_in_snapshot"
+    },
+    "INTC": {
+      "gate_block": "sector_disarm_active_day5"
+    }
+  },
+  "reason": "Broad-tape unlock fails (NVDA $212.32 < VWAP $212.88; SPY $757.42 < VWAP $757.92). ORB 90-min window expired at ~11:00 AM ET (now 129 min since open). VWAP reclaim off-table (RISK-OFF + FOMC Day 1). All rel-vol below 2.0x elevated gate (NVDA 1.0x, QQQ 0.95x, SPY 1.27x). No ORB breakouts on any name. INTC disarmed (day 5 semiconductor disarm). No positions to manage.",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "equity": 999465.31,
+  "loss_budget_remaining": 3000.0,
+  "trades_today": 0
+}

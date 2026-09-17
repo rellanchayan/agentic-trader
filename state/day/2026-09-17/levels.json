@@ -2,22 +2,10 @@
   "_meta": {
     "date": "2026-09-17",
     "generated_utc": "2026-09-17T13:29:46.441368+00:00",
-    "source": "watchlist_build",
+    "source": "watchlist_build + day_screener",
     "candidates_considered": 3,
-    "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 101.02,
-    "atr_day": 5.21,
-    "avg_vol_10d": 2422063,
-    "premarket_price": 104.76,
-    "gap_pct": 0.037,
-    "spread_bp": 1002.3,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,422,063 sh/day); +3.7% gap"
+    "top": 5,
+    "note": "Pre-market screen finalized by day screener. ORB levels fill in live after the open. Pre-market spread_bp (~1000 bp) on INTC/NVDA/BAC are thin-market artifacts; live spread at open expected 2-10 bp for all three. SPY and QQQ added as reference/backup; their prev_close and atr_day are estimated from 2026-09-16 plan context — confirm at open. Today is post-FOMC: the 9/16 rate decision is resolved, session should be more directional than yesterday."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,9 +15,29 @@
     "premarket_price": 218.84,
     "gap_pct": 0.0229,
     "spread_bp": 1003.0,
+    "support": 213.94,
+    "resistance": 221.45,
+    "key_levels": [211.00, 213.94, 216.50, 218.84, 221.45],
+    "setup": "orb",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,833,859 sh/day); +2.3% gap"
+    "note": "HIGHEST PRIORITY. Most liquid name (2,833,859 sh/day avg), largest ATR ($7.51). Gapped +2.3% to $218.84 premarket. Dual role: trade candidate AND broad-tape unlock bellwether — all ORB entries on other names require NVDA above VWAP. Post-FOMC follow-through session. Premarket spread 1,003 bp is thin-market artifact; live spread expected 2-5 bp. Support: $213.94 (prev close). Resistance: $218.84 (gap/premarket level), $221.45 (~prev close + 1 ATR). ORB breakout above opening-range high is primary setup; spread must clear <15 bp and rel-vol >=1.5x before entry."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 101.02,
+    "atr_day": 5.21,
+    "avg_vol_10d": 2422063,
+    "premarket_price": 104.76,
+    "gap_pct": 0.037,
+    "spread_bp": 1002.3,
+    "support": 101.02,
+    "resistance": 106.23,
+    "key_levels": [99.00, 101.02, 103.50, 104.76, 106.23],
+    "setup": "orb",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Gapped +3.7% to $104.76 premarket on two catalysts: SK Hynix discussions to bring memory manufacturing to Intel's Ohio fab, and analyst upgrades from Tigress and Northland (PT to $145, AI/Terafab thesis). ATR $5.21, vol 2.42M. Premarket spread 1,002 bp is thin-market artifact; live spread expected 3-8 bp. Support: $101.02 (prev close). Resistance: $104.76 (gap/premarket level), $106.23 (prev close + 1 ATR). Semiconductor sector disarm from prior sessions (triggered Sep 9-15) may lift today if NVDA and sector broadly above VWAP — a single-name bounce does not lift it. ORB setup armed if spread <15 bp, rel-vol >=1.5x, and sector disarm is lifted."
   },
   "BAC": {
     "sector": "financials",
@@ -39,8 +47,44 @@
     "premarket_price": 58.44,
     "gap_pct": 0.0095,
     "spread_bp": 1013.0,
+    "support": 57.00,
+    "resistance": 59.00,
+    "key_levels": [57.00, 57.89, 58.44, 59.00, 59.30],
+    "setup": "orb",
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,588,113 sh/day); +0.9% gap"
+    "note": "LOWEST PRIORITY. Liquid (2,588,113 sh/day) but ATR of $1.41/share is thin — $10,000 notional (~172 sh) risks ~$100 to make ~$200. Gap only +0.95%, essentially flat. Post-FOMC environment may bring elevated vol to financials (rate hike affects NIM outlook), but the small ATR cap on dollar P&L makes this a last-resort candidate. Evaluate only if NVDA and INTC both fail their spread or rel-vol gates by 10:30 AM. Support: $57.89 (prev close), $57.00 (round number). Resistance: $58.44 (premarket), $59.00 (round number), $59.30 (prev close + 1 ATR)."
+  },
+  "SPY": {
+    "sector": "etf_broad",
+    "prev_close": 765.00,
+    "atr_day": 12.00,
+    "avg_vol_10d": 80000000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": 2.0,
+    "support": 760.00,
+    "resistance": 777.00,
+    "key_levels": [755.00, 760.00, 765.00, 770.00, 777.00],
+    "setup": "orb",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "ESTIMATED LEVELS — not in screener output. prev_close ~$765 and atr_day ~$12 estimated from 2026-09-16 plan context (SPY $765.84 premarket on 9/16). Confirm actual levels at open. Extremely liquid (>80M sh/day); live spread typically 1-2 bp. Acts as broad-tape reference for all ORB unlock conditions. Post-FOMC directional follow-through favors SPY if the market has a clear lean. Use as backup candidate if semiconductor names fail gates. Support near $760 (round level). Resistance at $770 and $777 (estimated 1-ATR extension). ORB only — no VWAP reclaim."
+  },
+  "QQQ": {
+    "sector": "etf_nasdaq",
+    "prev_close": 710.00,
+    "atr_day": 11.00,
+    "avg_vol_10d": 40000000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": 2.0,
+    "support": 705.00,
+    "resistance": 721.00,
+    "key_levels": [700.00, 705.00, 710.00, 715.00, 721.00],
+    "setup": "orb",
+    "orb_high": null,
+    "orb_low": null,
+    "note": "ESTIMATED LEVELS — not in screener output. prev_close ~$710 and atr_day ~$11 estimated from 2026-09-16 plan context (QQQ $710.22 premarket on 9/16). Confirm actual levels at open. Very liquid (>40M sh/day); live spread typically 1-2 bp. Designated non-semiconductor backup per playbook (active semiconductor sector disarm requires qualified non-sector name on watchlist). Use if NVDA/INTC fail gates and SPY does not offer clean setup. Support near $705. Resistance at $715 and $721 (estimated 1-ATR extension). ORB only — no VWAP reclaim."
   }
 }

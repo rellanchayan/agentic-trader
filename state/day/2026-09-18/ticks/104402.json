@@ -1,0 +1,41 @@
+{
+  "tick_time_et": "10:44",
+  "timestamp_et": "2026-09-18T10:44:02-04:00",
+  "minutes_since_open": 74,
+  "action": "HOLD",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "setup": "orb_breakout",
+      "rel_volume": 1.48,
+      "spread_bp": 4.6,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "price": 107.85,
+      "vwap": 109.04,
+      "orb_high": 110.46,
+      "orb_low": 108.58,
+      "gate_result": "BLOCKED",
+      "gate_reason": "rel_vol 1.48x < 1.5x minimum; INTC below VWAP ($107.85 vs $109.04); SPY below VWAP (broad-tape unlock fails)"
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "gate_result": "BLOCKED",
+      "gate_reason": "BAC not in context market data — no live price, spread, or VWAP available"
+    }
+  ],
+  "broad_tape": {
+    "SPY_above_vwap": false,
+    "SPY_price": 758.94,
+    "SPY_vwap": 760.10,
+    "NVDA_in_data": false,
+    "unlock_satisfied": false
+  },
+  "order_submitted": false,
+  "day_pnl": 0.0,
+  "trades_today": 2,
+  "position_slots_used": 0,
+  "note": "INTC: 3 gates fail (rel_vol, INTC-below-VWAP, broad-tape unlock). BAC: no live data. No trade."
+}

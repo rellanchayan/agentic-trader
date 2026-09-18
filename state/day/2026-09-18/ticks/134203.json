@@ -1,0 +1,58 @@
+{
+  "tick_time_et": "13:42:03",
+  "date": "2026-09-18",
+  "action": "HOLD",
+  "verdict": "no_trade",
+  "positions_managed": [],
+  "entries_evaluated": [
+    {
+      "ticker": "INTC",
+      "setup": "orb",
+      "status": "BLOCKED",
+      "gates_checked": [
+        {"gate": "rel_volume >= 1.5x", "value": 0.75, "pass": false},
+        {"gate": "INTC above VWAP", "last": 107.14, "vwap": 108.20, "pass": false},
+        {"gate": "SPY above VWAP (broad-tape unlock)", "spy_last": 759.65, "spy_vwap": 759.74, "pass": false},
+        {"gate": "orb_breakout", "value": false, "orb_high": 110.46, "pass": false},
+        {"gate": "spread_bp <= 15", "value": 1.9, "pass": true}
+      ],
+      "note": "All ORB entry gates blocked. INTC drifting lower with declining volume (0.75x). Far from ORB high $110.46. No momentum. Triple Witching afternoon risk."
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "status": "BLOCKED",
+      "gates_checked": [
+        {"gate": "live_data_available", "pass": false}
+      ],
+      "note": "BAC not in market data snapshot — third consecutive tick with no BAC data. Cannot evaluate."
+    }
+  ],
+  "broad_tape": {
+    "SPY_above_vwap": false,
+    "SPY_last": 759.65,
+    "SPY_vwap": 759.74,
+    "QQQ_above_vwap": true,
+    "QQQ_last": 717.41,
+    "QQQ_vwap": 717.17,
+    "IWM_above_vwap": true,
+    "IWM_last": 283.39,
+    "IWM_vwap": 283.28,
+    "unlock_gate_pass": false,
+    "note": "SPY barely below VWAP (-0.09). Broad-tape unlock requires SPY above VWAP — blocked."
+  },
+  "session_context": {
+    "triple_witching": true,
+    "entry_cutoff_et": "14:30",
+    "minutes_to_cutoff": 48,
+    "minutes_since_open": 252
+  },
+  "account": {
+    "equity": 999434.85,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_used": 2,
+    "trades_remaining": 18,
+    "positions_open": 0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "tick_time": "11:42:48",
+  "timestamp_et": "2026-09-18T11:42:48-04:00",
+  "minutes_since_open": 132,
+  "action": "HOLD",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "setup": "orb_breakout",
+      "status": "BLOCKED",
+      "gates_checked": [
+        {"gate": "rel_volume >= 1.5x", "value": 1.06, "pass": false},
+        {"gate": "above_vwap", "value": false, "pass": false},
+        {"gate": "spread_bp <= 15", "value": 1.9, "pass": true},
+        {"gate": "orb_breakout", "value": false, "pass": false},
+        {"gate": "broad_tape_unlock (SPY above VWAP)", "value": false, "pass": false}
+      ],
+      "price_data": {
+        "last": 106.96,
+        "vwap": 108.65,
+        "orb_high": 110.46,
+        "orb_low": 108.58,
+        "spread_bp": 1.9,
+        "rel_volume": 1.06
+      }
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "status": "BLOCKED",
+      "gates_checked": [
+        {"gate": "live_data_available", "value": false, "pass": false}
+      ],
+      "price_data": null
+    }
+  ],
+  "broad_tape": {
+    "SPY": {"last": 759.17, "vwap": 760.00, "above_vwap": false, "rel_volume": 1.07},
+    "QQQ": {"last": 716.52, "vwap": 717.56, "above_vwap": false, "rel_volume": 1.01},
+    "IWM": {"last": 283.02, "vwap": 283.37, "above_vwap": false, "rel_volume": 1.59}
+  },
+  "broad_tape_unlock": false,
+  "reason_no_trade": "All gates fail: INTC rel_vol 1.06x<1.5x, INTC below VWAP ($106.96 vs $108.65), SPY below VWAP (broad-tape unlock fails), BAC no live data. All indices below VWAP — tape broadly weak.",
+  "account": {
+    "equity": 999434.85,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions_open": 0,
+    "trades_today": 2,
+    "trades_remaining": 18
+  }
+}

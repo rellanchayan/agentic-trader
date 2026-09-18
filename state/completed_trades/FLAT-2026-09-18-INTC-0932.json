@@ -1,0 +1,21 @@
+{
+  "trade_id": "FLAT-2026-09-18-INTC-0932",
+  "created_at_utc": "2026-09-18T13:32:36.696198+00:00",
+  "ticker": "INTC",
+  "side": "SELL",
+  "qty": 29.0,
+  "limit_price": 108.53,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "End-of-day flatten (pass 2): closing intraday position to be flat overnight.",
+  "risk": "Marketable sell limit; if unfilled a later, more aggressive pass re-prices it.",
+  "strategy": "flatten",
+  "setup": "eod_flatten",
+  "status": "filled",
+  "alpaca_order_id": "67bd4018-0aa9-4c1d-b801-af858813abbd",
+  "client_order_id": "FLAT-2026-09-18-INTC-0932",
+  "submitted_at_utc": "2026-09-18T13:32:37.617540+00:00",
+  "filled_qty": 29.0,
+  "filled_avg_price": 108.810345,
+  "reconciled_at_utc": "2026-09-18T13:34:44.536716+00:00"
+}

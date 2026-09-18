@@ -1,0 +1,31 @@
+{
+  "phase": "flatten",
+  "aggression": 2,
+  "timestamp_et": "2026-09-18T09:32:34.473372-04:00",
+  "attempted": 2,
+  "submissions": [
+    {
+      "trade_id": "FLAT-2026-09-18-INTC-0932",
+      "rc": 0,
+      "stdout": "{\"trade_id\": \"FLAT-2026-09-18-INTC-0932\", \"alpaca_order_id\": \"67bd4018-0aa9-4c1d-b801-af858813abbd\", \"status\": \"OrderStatus.PENDING_NEW\", \"submitted_at\": \"2026-09-18T13:32:37.617540+00:00\", \"saved_to\": \"state/completed_trades/FLAT-2026-09-18-INTC-0932.json\"}",
+      "stderr": ""
+    },
+    {
+      "trade_id": "FLAT-2026-09-18-NVDA-0932",
+      "rc": 0,
+      "stdout": "{\"trade_id\": \"FLAT-2026-09-18-NVDA-0932\", \"alpaca_order_id\": \"6db3756d-e660-4ab1-a3bb-704ffddf2abb\", \"status\": \"OrderStatus.PENDING_NEW\", \"submitted_at\": \"2026-09-18T13:32:38.727329+00:00\", \"saved_to\": \"state/completed_trades/FLAT-2026-09-18-NVDA-0932.json\"}",
+      "stderr": ""
+    }
+  ],
+  "remaining_positions": [
+    {
+      "ticker": "INTC",
+      "qty": 29.0
+    },
+    {
+      "ticker": "NVDA",
+      "qty": 5.0
+    }
+  ],
+  "is_flat": false
+}

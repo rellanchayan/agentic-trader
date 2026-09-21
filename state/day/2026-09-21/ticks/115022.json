@@ -1,0 +1,35 @@
+{
+  "date": "2026-09-21",
+  "timestamp_et": "2026-09-21T11:50:22.773198-04:00",
+  "tick_time": "11:50",
+  "decision": "HOLD",
+  "positions_reviewed": {
+    "NVDA": {
+      "qty": 44,
+      "avg_entry": 224.46,
+      "current_price": 225.19,
+      "unrealized_pl": 32.12,
+      "stop": 221.58,
+      "target": 230.94,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "action": "HOLD \u2014 stop not hit, target not hit, position healthy"
+    }
+  },
+  "entries_evaluated": {
+    "INTC": {
+      "reason_skipped": "Outside 90-min momentum-continuation window (122 min since ORB at 9:45 AM). Missed ORB entry window.",
+      "action": "SKIP"
+    },
+    "BAC": {
+      "reason_skipped": "rel_vol 1.0x < 1.5x gate.",
+      "action": "DISQUALIFIED"
+    }
+  },
+  "trades_submitted": 0,
+  "day_pnl": 32.12,
+  "loss_budget_remaining": 3032.12,
+  "trades_today": 1,
+  "trades_remaining": 19,
+  "open_positions": 1
+}

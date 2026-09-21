@@ -1,0 +1,37 @@
+{
+  "tick_time": "13:38",
+  "timestamp_et": "2026-09-21T13:38:00-04:00",
+  "action": "HOLD",
+  "positions_managed": [
+    {
+      "ticker": "NVDA",
+      "qty": 44,
+      "avg_entry": 224.46,
+      "current_price": 226.96,
+      "stop": 221.58,
+      "target": 230.94,
+      "unrealized_pl": 110.0,
+      "stop_cushion": 5.38,
+      "target_distance": 3.98,
+      "above_vwap": true,
+      "vwap": 224.88,
+      "verdict": "HOLD — stop not hit, target not hit, thesis intact"
+    }
+  ],
+  "new_entry_candidates": [
+    {
+      "ticker": "INTC",
+      "gate": "FAIL",
+      "reason": "247 min since ORB — outside 90-min momentum-continuation window. Price $121.68 is $2.22 above ORB high $119.46 (chase entry). No entry permitted."
+    },
+    {
+      "ticker": "BAC",
+      "gate": "FAIL",
+      "reason": "rel_vol 0.76x below 1.5x minimum. Disqualified."
+    }
+  ],
+  "day_pnl": 110.0,
+  "slots_used": 1,
+  "trades_today": 1,
+  "trades_remaining": 19
+}

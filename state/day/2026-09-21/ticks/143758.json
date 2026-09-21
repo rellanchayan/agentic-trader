@@ -1,0 +1,49 @@
+{
+  "tick_time_et": "14:37:58",
+  "date": "2026-09-21",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "positions_managed": [
+    {
+      "ticker": "NVDA",
+      "qty": 44,
+      "entry": 224.46,
+      "current_price": 227.635,
+      "unrealized_pl": 139.70,
+      "stop": 221.58,
+      "target": 230.94,
+      "stop_distance": 6.055,
+      "target_distance": 3.305,
+      "above_vwap": true,
+      "vwap": 225.28,
+      "outcome": "HOLD — stop intact, target not yet reached, trend above VWAP"
+    }
+  ],
+  "new_entries_evaluated": [
+    {
+      "ticker": "INTC",
+      "rel_vol": 1.83,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_high": 119.46,
+      "current_price": 121.29,
+      "price_above_orb_high": 1.83,
+      "minutes_since_orb": 292,
+      "gate_outcome": "SKIP — 292 min since ORB exceeds 90-min window; chasing breakout $1.83 above ORB high"
+    },
+    {
+      "ticker": "BAC",
+      "rel_vol": 0.72,
+      "spread_bp": 1.7,
+      "gate_outcome": "SKIP — rel_vol 0.72x below 1.5x minimum gate"
+    }
+  ],
+  "day_pnl": 139.70,
+  "trades_today": 1,
+  "trades_remaining": 19,
+  "positions_open": 1,
+  "account_equity": 999574.55,
+  "loss_stop_remaining": 3139.48,
+  "reason": "No exit triggers on NVDA (stop and target both intact). No valid new entries: INTC outside 90-min ORB window; BAC below rel-vol gate."
+}

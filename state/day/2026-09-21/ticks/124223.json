@@ -1,0 +1,66 @@
+{
+  "tick_time_et": "12:42",
+  "tick_hhmmss": "124223",
+  "action": "HOLD",
+  "positions_reviewed": [
+    {
+      "ticker": "NVDA",
+      "qty": 44,
+      "entry": 224.46,
+      "current": 226.01,
+      "unrealized_pl": 68.20,
+      "stop": 221.58,
+      "target": 230.94,
+      "stop_hit": false,
+      "target_hit": false,
+      "above_vwap": true,
+      "vwap": 224.48,
+      "decision": "HOLD",
+      "reason": "Price $226.01 above stop $221.58 ($4.43 cushion). Target $230.94 not reached ($4.93 away). Above VWAP $224.48. Thesis intact — ORB breakout holding."
+    }
+  ],
+  "new_entries_considered": [
+    {
+      "ticker": "NVDA",
+      "decision": "SKIP",
+      "reason": "rel_vol 1.33x below 1.5x minimum gate. No new entry on existing holding."
+    },
+    {
+      "ticker": "INTC",
+      "decision": "SKIP",
+      "reason": "177 min since ORB formation — outside the 90-min momentum-continuation window per playbook. Price $122.79 is $3.33 above ORB high $119.46; chasing a mature move. No fresh setup.",
+      "market_data": {
+        "last": 122.79,
+        "vwap": 120.58,
+        "orb_high": 119.46,
+        "rel_volume": 2.44,
+        "spread_bp": 2.4
+      }
+    },
+    {
+      "ticker": "BAC",
+      "decision": "SKIP",
+      "reason": "rel_vol 0.87x < 1.5x minimum gate. ORB not broken (orb_breakout=false). Disqualified.",
+      "market_data": {
+        "last": 58.02,
+        "vwap": 57.81,
+        "orb_high": 58.145,
+        "rel_volume": 0.87,
+        "spread_bp": 1.7
+      }
+    }
+  ],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "day_pnl": 67.54,
+  "loss_budget_remaining": 3067.76,
+  "equity": 999502.39,
+  "slots_used": 1,
+  "trades_today": 1,
+  "trades_remaining": 19,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "notes": "Midday hold tick. NVDA position healthy and trending toward target. All three watchlist names fail new-entry gates: NVDA rel_vol low, INTC outside timing window and price chased, BAC rel_vol low. No action required this tick."
+}

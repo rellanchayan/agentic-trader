@@ -1,0 +1,41 @@
+{
+  "tick_time_et": "09:42:19",
+  "verdict": "HOLD",
+  "reason": "ORB period not yet complete (12 min into session, need 15 min to 9:45 AM). No entries before 9:45 AM per plan hard rule.",
+  "positions_managed": [],
+  "new_entries_evaluated": [
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "eligible": false,
+      "reason": "ORB period still forming. orb_breakout=false. Price $224.05 vs ORB high $224.085 — inside range. Spread 11.6 bp ✓, rel_vol 3.05x ✓, above_vwap=true ✓. Will re-evaluate at 9:44 AM tick."
+    },
+    {
+      "ticker": "INTC",
+      "setup": "orb",
+      "eligible": false,
+      "reason": "Spread 48.7 bp far exceeds max_spread_bp=25. Hard gate fail. orb_breakout=false, above_vwap=false."
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "eligible": false,
+      "reason": "above_vwap=false ($57.66 vs VWAP $57.81). No VWAP reclaim trigger. Data fields all present and live (quote_age_sec=0.2). Data check: PASS."
+    }
+  ],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "market_snapshot": {
+    "NVDA": {"last": 224.05, "spread_bp": 11.6, "rel_volume": 3.05, "above_vwap": true, "orb_breakout": false},
+    "INTC": {"last": 116.545, "spread_bp": 48.7, "rel_volume": 9.83, "above_vwap": false, "orb_breakout": false},
+    "BAC":  {"last": 57.66,  "spread_bp": 3.5,  "rel_volume": 2.15, "above_vwap": false, "orb_breakout": false}
+  },
+  "account": {
+    "equity": 999434.85,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_remaining": 20,
+    "slots_remaining": 8
+  },
+  "next_watch": "NVDA ORB high $224.085 — a clean break with rel_vol > 1.5x after 9:45 AM is the primary setup. INTC re-evaluate when spread normalizes below 25 bp. BAC data confirmed live; watch for VWAP reclaim after 9:45 AM."
+}

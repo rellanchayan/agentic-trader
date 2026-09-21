@@ -1,0 +1,21 @@
+{
+  "trade_id": "T-20260921-104536-NVDA",
+  "ticker": "NVDA",
+  "side": "BUY",
+  "qty": 44,
+  "limit_price": 224.7,
+  "order_type": "LIMIT",
+  "time_in_force": "DAY",
+  "reason": "ORB breakout above $224.36 on 1.59x relative volume (RISK-ON day, Nasdaq +1.12%). Price $224.52 is just $0.16 above ORB high \u2014 fresh, not a chase. NVDA confirmed above VWAP ($224.52 vs VWAP $223.60). SPY broad-tape unlock inferred above VWAP from S&P futures +0.70% open and RISK-ON macro context. Sector bellwether leading the tape. Spread 0.9 bp (excellent). 60 minutes post-ORB, within the 90-minute entry window.",
+  "risk": "Stop at ORB low $221.58. Per-share risk $3.12 (entry $224.70 - stop $221.58). Total risk $137.28 (44 shares). Idea invalidated if price falls below the ORB low.",
+  "strategy": "intraday",
+  "setup": "orb",
+  "stop": 221.58,
+  "target": 230.94,
+  "quote_age_sec": 0.3,
+  "spread_bp": 0.9,
+  "status": "submitted",
+  "alpaca_order_id": "e96a356c-e6a6-4e50-bf96-c1391abb43e3",
+  "client_order_id": "T-20260921-104536-NVDA",
+  "submitted_at_utc": "2026-09-21T14:49:33.841666+00:00"
+}

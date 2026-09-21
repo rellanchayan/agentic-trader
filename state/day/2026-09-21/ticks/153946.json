@@ -1,0 +1,53 @@
+{
+  "tick_time_et": "15:39:46",
+  "timestamp_et": "2026-09-21T15:39:46-04:00",
+  "verdict": "PROCEED",
+  "action": "HOLD",
+  "reason": "Past 15:30 entry cutoff — no new entries permitted. Flatten window opens at 15:50 ET (~11 min). NVDA position healthy: stop not hit, target not hit.",
+  "positions_reviewed": [
+    {
+      "ticker": "NVDA",
+      "qty": 44,
+      "avg_entry": 224.46,
+      "current_price": 227.60,
+      "unrealized_pl": 138.16,
+      "stop": 221.58,
+      "target": 230.94,
+      "stop_hit": false,
+      "target_hit": false,
+      "stop_cushion": 6.02,
+      "target_distance": 3.34,
+      "above_vwap": true,
+      "action": "HOLD — flatten window opens at 15:50"
+    }
+  ],
+  "new_entries_evaluated": [
+    {
+      "ticker": "NVDA",
+      "blocked_by": "past_no_new_entries (15:30 cutoff)"
+    },
+    {
+      "ticker": "INTC",
+      "blocked_by": "past_no_new_entries (15:30 cutoff); also outside 90-min ORB window (369+ min since ORB)"
+    },
+    {
+      "ticker": "BAC",
+      "blocked_by": "past_no_new_entries (15:30 cutoff); also rel_vol 0.69x < 1.5x gate"
+    }
+  ],
+  "market_snapshot": {
+    "NVDA": {"last": 227.615, "vwap": 225.70, "orb_high": 224.36, "orb_low": 221.58, "rel_volume": 1.17, "spread_bp": 0.4, "above_vwap": true},
+    "INTC": {"last": 122.34, "vwap": 120.88, "orb_high": 119.46, "rel_volume": 1.67, "spread_bp": 1.6, "above_vwap": true},
+    "BAC":  {"last": 58.04,  "vwap": 57.91,  "orb_high": 58.145, "rel_volume": 0.69, "spread_bp": 1.7, "above_vwap": true}
+  },
+  "account": {
+    "equity": 999573.01,
+    "day_pnl": 138.16,
+    "loss_budget_remaining": 3138.16,
+    "trades_today": 1,
+    "trades_remaining": 19,
+    "positions_open": 1,
+    "position_slots_remaining": 7
+  },
+  "orders_submitted": []
+}

@@ -2,10 +2,12 @@
   "_meta": {
     "date": "2026-09-21",
     "generated_utc": "2026-09-21T13:32:21.212375+00:00",
-    "source": "watchlist_build",
+    "screener_reviewed_utc": "2026-09-21T13:38:00.000000+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 3,
     "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "dropped": [],
+    "note": "All 3 candidates retained after screener review. INTC (primary) and NVDA (secondary/bellwether) are the semiconductor/tech picks — both pass all gates with good ATR. BAC retained as non-semiconductor diversifier but flagged: ATR $1.34 limits intraday move potential and spread 12.1 bp is near the 15 bp gate; disarm immediately if live data (price/VWAP/spread/rel_vol) fails to populate at any tick (playbook 2026-09-18 BAC data rule). NVDA last earnings 2026-08-26; next earnings ~Nov 2026 — pre-earnings disarm NOT triggered. Semiconductor sector disarm not active (both semi names gap <0.3%); no mandatory non-semi substitute required. QQQ/SPY not added: no real data in today's screen and no mandatory trigger condition present. ORB levels (orb_high, orb_low) fill in live after the open — leave null."
   },
   "INTC": {
     "sector": "technology",
@@ -17,7 +19,13 @@
     "spread_bp": 7.6,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,553,155 sh/day); -0.2% gap"
+    "key_levels": {
+      "support": 115.38,
+      "resistance": 121.52,
+      "stop_zone": 112.31,
+      "target_zone": 124.59
+    },
+    "note": "Primary ORB/momentum candidate. Flat -0.2% gap, no specific catalyst. Tight spread (7.6 bp), highest ATR of the three ($6.14 = most daily move potential). Broad-tape unlock is mandatory before any entry: SPY AND NVDA must both be above VWAP at tick of evaluation. Key_levels are rough ATR-based guides; ORB high/low replace them once the opening range forms."
   },
   "BAC": {
     "sector": "financials",
@@ -29,7 +37,13 @@
     "spread_bp": 12.1,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,456,087 sh/day); -0.0% gap"
+    "key_levels": {
+      "support": 57.23,
+      "resistance": 58.57,
+      "stop_zone": 56.56,
+      "target_zone": 59.24
+    },
+    "note": "CAUTION: ATR $1.34 is the smallest of the three — entire daily range from support to resistance is only $1.34; round-trip friction (spread 12.1 bp ~ $0.07/share) is high relative to move potential. Spread 12.1 bp is near the 15 bp gate — passes, but monitor closely. Disarm immediately if live data (price/VWAP/spread/rel_vol) fails to populate at any consecutive tick (playbook 2026-09-18 BAC data-reliability rule). Non-semiconductor diversifier; post-FOMC rate-hike tailwind for financials. VWAP reclaim is the only viable setup given small ATR — do not attempt ORB unless rel-vol > 1.5x."
   },
   "NVDA": {
     "sector": "technology",
@@ -41,6 +55,12 @@
     "spread_bp": 5.4,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,208,369 sh/day); -0.1% gap"
+    "key_levels": {
+      "support": 219.57,
+      "resistance": 225.24,
+      "stop_zone": 216.73,
+      "target_zone": 228.07
+    },
+    "note": "Flat -0.1% gap, no catalyst today. Tightest spread of the three (5.4 bp), good ATR ($5.67). Last earnings 2026-08-26; next earnings ~Nov 2026 — pre-earnings disarm window (9 calendar days) NOT in effect. Also serves as required sector bellwether for the broad-tape unlock gate: NVDA must be above VWAP at any tick where an INTC ORB or momentum entry is evaluated, even if NVDA itself is not being traded."
   }
 }

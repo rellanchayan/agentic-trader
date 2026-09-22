@@ -255,6 +255,20 @@ made of **rules to follow**, not stories.
   postmarket review.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-22: No tuning. Tuner unfrozen ("ok to tune", 66 days of history) but no rule fired —
+  parameters left unchanged.
+  Today: 1 trade — the prescribed NVDA flatten-at-open from yesterday's overnight carryover (44
+  shares sold at the open). 0 roundtrips completed, $0 realized P&L. The flatten-scheduler
+  idempotency bug is now confirmed across three occurrences in six trading days: 2026-09-17
+  (first documented), 2026-09-21 (recurrence), and 2026-09-22 carryover. The required code fix
+  (flatten must submit a new order with a fresh trade_id on CANCELED status, not silently skip)
+  is documented in the 2026-09-21 entry and remains outstanding. No new playbook rule is warranted
+  tonight — the bug and its implications are fully captured in the Infrastructure section and the
+  prior two changelog entries. The fix is in code.
+  All-time stats (66 days, 31 trades, 0.47 trades/day, 19.4% win rate, avg win +0.221R, avg loss
+  -0.489R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. LIMIT fill rate 81% (25/31). Tuning ledger remains empty;
+  no parameter has ever been changed by the tuner.
 - 2026-09-21: No tuning. No rule fired — parameters left unchanged. 65 days of history.
   Today: 1 NVDA ORB fill (44 shares @ $224.46), 0 completed roundtrips, $0 realized P&L.
   Rule violation: NVDA carried overnight (+$108.14 unrealized) — the same flatten idempotency

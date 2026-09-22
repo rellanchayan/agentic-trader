@@ -1,0 +1,77 @@
+{
+  "tick_id": "2026-09-22T12:38:37-04:00",
+  "time_et": "2026-09-22T12:38:37-04:00",
+  "action": "NO_TRADE",
+  "equity": 999641.65,
+  "day_pnl": 17.6,
+  "positions_open": 0,
+  "open_orders": 0,
+  "trades_today": 1,
+  "reason": "BLOCK-1: Flatten scheduler not confirmed (OPERATIONAL PRIORITY #1 from day plan and playbook; same idempotency bug as 2026-09-17 and 2026-09-21 overnight violations; hard gate on all new entries until flatten is confirmed working). BLOCK-2: Time 12:38 PM ET > 12:30 PM no-new-entries cutoff imposed by day plan due to afternoon Fed speaker cluster (Williams, Barkin, Jefferson all at ~1:00 PM ET). BLOCK-3: INTC entry window expired (90-min ORB entry cutoff was 11:00 AM ET; current time 12:38 PM). BLOCK-4: INTC below VWAP (last 121.535 < VWAP 121.77), no ORB breakout (last 121.535 < ORB high 122.32). BLOCK-5: INTC rel_volume 0.94x < 1.5x minimum. BLOCK-6: BAC below VWAP (56.495 < 56.78), rel_volume 1.4x < 1.5x, backup-only not evaluated. BLOCK-7: NVDA re-entry rule applies (overnight position exited at open today). BLOCK-8: SPY absent from snapshot; broad-tape unlock (SPY+NVDA both above VWAP) unverifiable.",
+  "candidates_evaluated": {
+    "INTC": {
+      "last": 121.535,
+      "bid": 121.53,
+      "ask": 121.55,
+      "vwap": 121.77,
+      "orb_high": 122.32,
+      "orb_low": 120.55,
+      "rel_volume": 0.94,
+      "spread_bp": 1.6,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "no_new_entries_past_1230pm",
+        "entry_window_expired_11am",
+        "below_vwap",
+        "rel_vol_below_1.5x",
+        "no_orb_breakout"
+      ]
+    },
+    "BAC": {
+      "last": 56.495,
+      "bid": 56.45,
+      "ask": 56.46,
+      "vwap": 56.78,
+      "orb_high": 58.11,
+      "orb_low": 57.73,
+      "rel_volume": 1.4,
+      "spread_bp": 1.8,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "no_new_entries_past_1230pm",
+        "below_vwap",
+        "rel_vol_below_1.5x",
+        "no_orb_breakout",
+        "backup_only_not_evaluated"
+      ]
+    },
+    "NVDA": {
+      "last": 228.87,
+      "bid": 228.9,
+      "ask": 228.92,
+      "vwap": 228.31,
+      "orb_high": 229.57,
+      "orb_low": 226.59,
+      "rel_volume": 1.18,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "re_entry_rule_applies",
+        "no_orb_breakout"
+      ]
+    }
+  },
+  "no_trade_reasons_summary": {
+    "primary_block": "flatten_scheduler_unconfirmed",
+    "secondary_block": "past_no_new_entries_cutoff_1230pm",
+    "intc_specific": ["entry_window_expired", "below_vwap", "no_orb_breakout", "rel_vol_0.94x"],
+    "bac_specific": ["below_vwap", "no_orb_breakout", "rel_vol_1.4x"],
+    "nvda_specific": ["re_entry_rule", "no_orb_breakout"]
+  }
+}

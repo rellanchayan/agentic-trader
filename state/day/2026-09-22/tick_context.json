@@ -1,7 +1,7 @@
 {
   "date": "2026-09-22",
-  "timestamp_et": "2026-09-22T11:37:11.527122-04:00",
-  "minutes_since_open": 127,
+  "timestamp_et": "2026-09-22T12:38:37.980792-04:00",
+  "minutes_since_open": 188,
   "day_plan_found": true,
   "day_plan": "# Day Plan \u2014 2026-09-22 (Tuesday)\n\n**Written:** 2026-09-22, pre-open  \n**Baseline equity (day-stop reference):** $999,624  \n**Day-stop triggers if equity falls below:** $996,624  \n\n---\n\n## OPERATIONAL PRIORITY #1 \u2014 FLATTEN SYSTEM IS UNCONFIRMED\n\nThe flatten scheduler bug that caused overnight violations on 2026-09-17 and 2026-09-21 has NOT\nbeen confirmed fixed. The idempotency logic still treats CANCELED orders as no-ops instead of\nresubmitting with a fresh trade_id. The 3:50 PM passes have not run correctly in either of the\ntwo sessions this failure occurred.\n\n**HARD GATE (from playbook Infrastructure rule):** If the flatten scheduler cannot be positively\nconfirmed live and working before any intraday entry, do not open new positions that session.\nThis gate is machine-enforced in principle and must be honored manually today.\n\nAction at premarket: before arming any candidate for entry, the tick loop must verify that the\nflatten scheduler will fire the 3:50 PM pass. If it cannot be confirmed, today is NO NEW ENTRIES.\nA missed trading day costs nothing. A third overnight violation damages the account and the\nprogram's credibility.\n\nThe NVDA overnight position (44 shares from 2026-09-21) was reported sold at the open. Confirm\nthat sale is reflected in positions before proceeding.\n\n---\n\n## Mood: MIXED/RANGE\n\n**One-sentence reason:** Futures are slightly softer this morning after the S&P's best day since\nearly August on Monday (+1.49% S&P, +2.26% Nasdaq to a record 27,122), multiple Fed speakers hit\nthis afternoon, and the tape is in digestion mode rather than trend-extension mode.\n\nThe underlying backdrop is constructive \u2014 post-FOMC resolution, tech and AI names leading, oil\nprices lower \u2014 but a single-day digestion after a large rally is the norm, not a breakout day.\nThis is not a risk-off tape; it is a rest day. Trade as MIXED/RANGE.\n\n---\n\n## Big Events Today\n\n| Time (ET) | Event | Risk |\n|---|---|---|\n| 8:15 AM | ADP NER Pulse (weekly jobs, ~20K/week recently) | Modest; already partially digested at open |\n| ~10:00\u201311:00 AM | NY Fed Pres. Williams remarks | Rate-sensitive; watch if yields spike |\n| 1:00 PM | Richmond Fed Pres. Barkin remarks | Rate-sensitive; may move financials |\n| ~1:00 PM | Fed Gov. Jefferson remarks | Same |\n| ~1:00 PM | US M2 Money Supply release | Low market impact normally |\n| ~1:00 PM | Treasury 2-Year Note Auction | Watch for yield response |\n| ~4:30 PM | API crude oil inventory | After close; not relevant to today |\n\n**Implication:** Multiple Fed voices in the early afternoon cluster (roughly 1:00\u20132:00 PM ET)\ncreate real whipsaw risk. Do not initiate new positions after 12:30 PM ET today; the afternoon\nevent cluster narrows the viable entry window.\n\n**No CPI, no NFP, no FOMC decision this week.** Macro calendar is clean relative to recent\nweeks.\n\n---\n\n## NVDA Overnight Liquidation \u2014 Record-Keeping\n\n- NVDA 44 shares from 2026-09-21 entry ($224.46 avg) were reported sold at the open today.\n- Confirm fill price from Alpaca. Record the cross-day P&L in today's postmarket journal.\n- This is NOT a new trading decision. NVDA is not a primary candidate for new entries today per\n  the re-entry rule: \"Never re-enter a name you just exited unless a brand-new setup triggers.\"\n\n---\n\n## Today's Names\n\n### 1. INTC \u2014 Primary Candidate (conditional on flatten confirmation)\n\n| Field | Value |\n|---|---|\n| Screener prev_close | $120.85 |\n| ATR | $6.33 |\n| Premarket price | $121.16 |\n| Screener gap | +0.3% |\n| Spread (premarket) | 4.1 bp |\n| Sector | Technology / Semiconductors |\n\n**Data note:** The screener prev_close of $120.85 appears to be Friday September 19's close.\nIntel reportedly closed near $121.78 on Monday September 21 after a 12.14% single-day gain.\nIf Monday's close was $121.78, today's premarket at $121.16 is a slight gap-DOWN (~0.5%), not a\ngap-up. Treat the ORB levels as the authoritative guide \u2014 they are determined from live price\naction after the open, not from premarket estimates.\n\n**Why it is interesting:** Intel CEO Lip-Bu Tan confirmed at a conference that Intel \"can only\nsupply 50% of customers\" for CPUs \u2014 a shortage story that drives pricing power. Intel also plans\na roughly 10% price increase on PC CPUs in early October. SK Hynix partnership talks for U.S.\nmemory production at the Ohio fab add another leg. Multiple analyst upgrades with a fresh $145\nprice target. This is a name with real, stacking fundamental momentum.\n\n**Caution flags:**\n- INTC ran 12% on Monday. The first day after a large catalyst gap is often a digestion or\n  consolidation day, not an extension. The ORB range may be narrow and the breakout may not\n  have enough energy to extend.\n- After large gaps, spreads widen at the open (the playbook documents a 20x widening on\n  2026-08-04). The live spread gate at every tick is authoritative; 4.1 bp premarket does not\n  guarantee <15 bp at the open.\n- Catalyst stacking (upgrades, gap, momentum) does NOT substitute for the broad-tape unlock.\n  SPY AND NVDA must both be above VWAP before any ORB entry. (Playbook rule confirmed on\n  2026-09-18: INTC had 5.46x rel-vol and 3 upgrades but fell $3.60 from its high in a broken\n  tape.)\n\n**Setup armed (ORB breakout) \u2014 all conditions must hold simultaneously:**\n1. Flatten scheduler confirmed working before any entry.\n2. Broad-tape unlock: SPY AND NVDA both above VWAP at time of evaluation.\n3. Relative volume >= 1.5x at the time of the ORB signal.\n4. Spread < 15 bp live at the time of order submission.\n5. Entry within 90 minutes of the open (before 11:00 AM ET).\n6. No new entries after 12:30 PM ET (afternoon event cluster risk).\n7. Clean break above the 15-minute ORB high.\n\n**Entry level:** Above the 15-minute ORB high (not known until after 9:45 AM ET).  \n**Stop:** Below the 15-minute ORB low. Per-share risk = entry - ORB low.  \n**Target:** At minimum 2x the per-share risk (2:1 R/R required). With ATR of $6.33, a 2:1 target\non a $3-4 stop sets the target at roughly $6-8 above entry. On a digestion day this may not be\nachievable before the close; if the ORB range is narrow and target looks unreachable by 12:30 PM,\nskip.  \n**Size:** $10,000 / limit_price (capped at $10,000, constitution check required).\n\n---\n\n### 2. BAC \u2014 Secondary / Non-Semiconductor Diversification (low conviction)\n\n| Field | Value |\n|---|---|\n| Prev_close | $58.04 |\n| ATR | $1.30 |\n| Premarket price | $57.95 |\n| Gap | -0.2% |\n| Spread (premarket) | 5.2 bp |\n| Sector | Financials |\n\n**Why it is here:** Playbook requires at least one non-semiconductor substitute when tech names\ndominate the watchlist. BAC fills that slot.\n\n**Why it is low conviction:** No specific catalyst today. ATR of $1.30 (~2.2% of stock price) is\nthin. To achieve a 2:1 R/R with a realistic stop (~$0.50 risk), the target is ~$1.00 above entry\n\u2014 a full session ATR move. That only happens on strong trending days, not MIXED/RANGE digestion.\n\n**Setup consideration:** BAC's natural setup in MIXED/RANGE is VWAP reclaim \u2014 but VWAP reclaim\nis OFF TABLE in MIXED/RANGE with multiple active macro events (Fed speakers this afternoon).\nORB breakout requires the same broad-tape unlock as INTC plus 1.5x rel-vol, which is unlikely\non a digestion day with no catalyst.\n\n**Recommendation:** Monitor for data quality (confirm context.py populates price, VWAP, spread,\nand rel_vol cleanly across two consecutive ticks before arming). Do not enter unless all ORB\ngates pass AND INTC has already been evaluated and passed for the session (BAC is backup only).\n\n---\n\n### 3. NVDA \u2014 Not a new entry candidate today\n\n- Overnight position sold at the open. Re-entry rule applies.\n- May become relevant as a broad-tape unlock indicator (NVDA must be above VWAP for the\n  semiconductor unlock condition used when evaluating INTC).\n- If a brand-new, clean ORB setup forms on NVDA mid-session (not before 9:45 AM, inside the\n  90-minute window, all gates pass), that can be evaluated \u2014 but it is not anticipated or\n  pre-armed.\n\n---\n\n## Setups Armed Today\n\n| Setup | Status | Conditions |\n|---|---|---|\n| ORB Breakout (INTC) | ARMED \u2014 conditional | Flatten confirmed + broad-tape unlock + 1.5x rel-vol + <15 bp spread + entry before 11 AM |\n| ORB Breakout (BAC) | MONITOR \u2014 very low priority | Same gates; only if INTC already evaluated and failed |\n| Momentum | OFF TABLE | 0-for-1 all-time (-0.975R); requires two extra confirmations; not armed today |\n| VWAP Reclaim | OFF TABLE | Playbook rule: MIXED/RANGE + multiple Fed speakers = imminent macro events active; VWAP reclaim blocked |\n\n**In MIXED/RANGE:** Trade smaller, do not buy breakouts into weakness, favor patience. If nothing\nqualifies by 11:00 AM, accept a zero-trade day. The money saved by not forcing a bad setup is\nreal profit.\n\n---\n\n## Hard Limits (restated)\n\n- **Max $50,000 deployed today.** Well inside \u2014 three candidates, max 3 trades.\n- **Max $10,000 per single trade.** Every order must pass constitution.py check.\n- **Max 8 open positions.** Not relevant at this scale; hard cap regardless.\n- **Daily loss-stop: -$3,000 from baseline $999,624 = stop if equity falls below $996,624.** If\n  triggered, flatten immediately and stop for the day.\n- **Max 20 trades/day.** No concern at current pace.\n- **Flat by 3:55 PM ET.** No overnight holds. This is the exact rule the flatten bug has violated\n  twice. If flatten cannot be confirmed, no new positions.\n- **LIMIT + DAY orders only.** No market orders. Ever.\n- **No entries before 9:45 AM ET.** Let the ORB form.\n- **No new entries after 12:30 PM ET today** (tighter than the usual 3:30 PM cutoff, due to\n  afternoon Fed speaker cluster).\n\n---\n\n## Today's Stance: CAUTIOUS\n\n**Why cautious and not normal:**\n\n1. The flatten scheduler has not been confirmed fixed. This is a hard gate on new entries.\n2. After Monday's Nasdaq +2.26% record close, today is a digestion session \u2014 not a trend day.\n3. Multiple Fed speakers in the early afternoon add event risk that compresses the usable entry\n   window to approximately 9:45 AM\u201312:30 PM ET (a 2 hour 45 minute window).\n4. INTC's massive Monday move means opening spreads may be wide and the ORB may be narrow.\n5. All three setups (ORB, momentum, VWAP reclaim) carry negative all-time expectancy. High\n   entry standards are mandatory.\n\n**If flatten is confirmed working:** INTC is the primary candidate. Wait for the ORB, confirm\nthe broad-tape unlock (SPY + NVDA above VWAP), wait for 1.5x relative volume, confirm the\nspread is tight live, and enter cleanly above the ORB high with a hard stop below the ORB low.\nExit at the 2:1 target \u2014 do not hold to EOD flatten.\n\n**If flatten cannot be confirmed working:** No new entries. Record zero trades as the correct\noutcome for an unconfirmed-flatten session. The system is not fit for intraday trading until the\nflatten bug is patched.\n\n---\n\n*All data in this plan is sourced from state/day/2026-09-22/levels.json, the account snapshot\nprovided at premarket, and web research completed before the open. No number is invented. If live\ndata at the first tick conflicts with premarket estimates, the live data governs.*\n",
   "clock_flags": {
@@ -35,58 +35,58 @@
   "open_orders": [],
   "market": {
     "BAC": {
-      "last": 56.26,
-      "bid": 56.29,
-      "ask": 56.3,
-      "quote_age_sec": 0.3,
+      "last": 56.495,
+      "bid": 56.45,
+      "ask": 56.46,
+      "quote_age_sec": 0.2,
       "spread_bp": 1.8,
-      "vwap": 56.89,
+      "vwap": 56.78,
       "orb_high": 58.11,
       "orb_low": 57.73,
-      "atr_1m": 0.042,
+      "atr_1m": 0.036,
       "atr_day": 1.44,
-      "rel_volume": 1.5,
-      "volume_today": 1266291,
+      "rel_volume": 1.4,
+      "volume_today": 1778708,
       "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 56.36,
-      "marketable_sell_limit": 56.23
+      "marketable_buy_limit": 56.52,
+      "marketable_sell_limit": 56.39
     },
     "INTC": {
-      "last": 122.09,
-      "bid": 122.11,
-      "ask": 122.13,
-      "quote_age_sec": 0.2,
+      "last": 121.535,
+      "bid": 121.53,
+      "ask": 121.55,
+      "quote_age_sec": 0.1,
       "spread_bp": 1.6,
-      "vwap": 121.75,
+      "vwap": 121.77,
       "orb_high": 122.32,
       "orb_low": 120.55,
-      "atr_1m": 0.171,
+      "atr_1m": 0.127,
       "atr_day": 6.41,
-      "rel_volume": 1.15,
-      "volume_today": 1039597,
-      "above_vwap": true,
+      "rel_volume": 0.94,
+      "volume_today": 1264165,
+      "above_vwap": false,
       "orb_breakout": false,
-      "marketable_buy_limit": 122.25,
-      "marketable_sell_limit": 121.99
+      "marketable_buy_limit": 121.67,
+      "marketable_sell_limit": 121.41
     },
     "NVDA": {
-      "last": 228.315,
-      "bid": 228.3,
-      "ask": 228.32,
-      "quote_age_sec": 0.3,
+      "last": 228.87,
+      "bid": 228.9,
+      "ask": 228.92,
+      "quote_age_sec": 0.2,
       "spread_bp": 0.9,
-      "vwap": 228.27,
+      "vwap": 228.31,
       "orb_high": 229.57,
       "orb_low": 226.59,
-      "atr_1m": 0.141,
+      "atr_1m": 0.085,
       "atr_day": 5.84,
-      "rel_volume": 1.51,
-      "volume_today": 1145652,
+      "rel_volume": 1.18,
+      "volume_today": 1330001,
       "above_vwap": true,
       "orb_breakout": false,
-      "marketable_buy_limit": 228.55,
-      "marketable_sell_limit": 228.07
+      "marketable_buy_limit": 229.15,
+      "marketable_sell_limit": 228.67
     }
   },
   "recent_ticks": [
@@ -145,6 +145,60 @@
             "flatten_unconfirmed",
             "no_orb_breakout",
             "re_entry_rule_applies"
+          ]
+        }
+      }
+    },
+    {
+      "time_et": "2026-09-22T11:37:11-04:00",
+      "action": "NO_TRADE",
+      "reason": "BLOCK-1: Flatten scheduler not confirmed (OPERATIONAL PRIORITY #1; same infrastructure bug as 2026-09-17 and 2026-09-21 overnight violations; hard gate on all new entries until confirmed). BLOCK-2: INTC entry window expired (11:37 AM ET > 90-min cutoff before 11:00 AM ET in day plan). BLOCK-3: INTC orb_breakout=False (last 122.09 < ORB high 122.32). BLOCK-4: INTC rel_volume 1.15x < 1.5x minimum. BLOCK-5: BAC below VWAP (56.26 < 56.89) and far below ORB levels (58.11). BLOCK-6: NVDA re-entry rule applies. BLOCK-7: SPY absent from snapshot; broad-tape unlock (SPY+NVDA both above VWAP) unverifiable.",
+      "equity": 999641.65,
+      "day_pnl": 17.6,
+      "positions": 0,
+      "candidates_evaluated": {
+        "INTC": {
+          "last": 122.09,
+          "vwap": 121.75,
+          "orb_high": 122.32,
+          "orb_low": 120.55,
+          "rel_volume": 1.15,
+          "spread_bp": 1.6,
+          "above_vwap": true,
+          "orb_breakout": false,
+          "blocks": [
+            "flatten_unconfirmed",
+            "entry_window_expired_11am",
+            "rel_vol_below_1.5x",
+            "no_orb_breakout"
+          ]
+        },
+        "BAC": {
+          "last": 56.26,
+          "vwap": 56.89,
+          "orb_high": 58.11,
+          "orb_low": 57.73,
+          "rel_volume": 1.5,
+          "spread_bp": 1.8,
+          "above_vwap": false,
+          "orb_breakout": false,
+          "blocks": [
+            "flatten_unconfirmed",
+            "below_vwap",
+            "no_orb_breakout",
+            "backup_only_not_evaluated"
+          ]
+        },
+        "NVDA": {
+          "last": 228.315,
+          "vwap": 228.27,
+          "rel_volume": 1.51,
+          "spread_bp": 0.9,
+          "above_vwap": true,
+          "orb_breakout": false,
+          "blocks": [
+            "re_entry_rule_applies",
+            "flatten_unconfirmed"
           ]
         }
       }

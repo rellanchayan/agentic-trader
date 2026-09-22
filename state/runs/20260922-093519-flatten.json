@@ -1,0 +1,21 @@
+{
+  "phase": "flatten",
+  "aggression": 2,
+  "timestamp_et": "2026-09-22T09:35:19.597625-04:00",
+  "attempted": 1,
+  "submissions": [
+    {
+      "trade_id": "FLAT-2026-09-22-NVDA-0935",
+      "rc": 0,
+      "stdout": "{\"trade_id\": \"FLAT-2026-09-22-NVDA-0935\", \"alpaca_order_id\": \"33dbb380-497d-4c7c-9965-1e4e52aef0e4\", \"status\": \"OrderStatus.PENDING_NEW\", \"submitted_at\": \"2026-09-22T13:35:23.139554+00:00\", \"saved_to\": \"state/completed_trades/FLAT-2026-09-22-NVDA-0935.json\"}",
+      "stderr": ""
+    }
+  ],
+  "remaining_positions": [
+    {
+      "ticker": "NVDA",
+      "qty": 44.0
+    }
+  ],
+  "is_flat": false
+}

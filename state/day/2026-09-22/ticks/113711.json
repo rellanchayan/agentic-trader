@@ -1,0 +1,67 @@
+{
+  "tick_time_et": "2026-09-22T11:37:11-04:00",
+  "tick_time_utc": "2026-09-22T15:37:11Z",
+  "minutes_since_open": 127,
+  "verdict": "NO_TRADE",
+  "action": "NO_TRADE",
+  "reason_summary": "7 independent blocks prevent any new entry",
+  "blocks": {
+    "BLOCK_1": "Flatten scheduler not confirmed (OPERATIONAL PRIORITY #1 hard gate from day plan; infrastructure bug caused overnight violations on 2026-09-17 and 2026-09-21; no new entries until confirmed fixed)",
+    "BLOCK_2": "INTC entry window expired — 11:37 AM ET is past the 90-minute ORB entry cutoff (before 11:00 AM ET) specified in today's day plan",
+    "BLOCK_3": "INTC orb_breakout=False — last $122.09 is below ORB high $122.32; no clean breakout signal",
+    "BLOCK_4": "INTC rel_volume 1.15x — below the 1.5x minimum required for ORB entry",
+    "BLOCK_5": "BAC below VWAP ($56.26 < $56.89) and $1.85 below ORB low ($57.73); no setup; backup-only and not evaluated further",
+    "BLOCK_6": "NVDA re-entry rule — overnight position sold at open today; re-entry requires brand-new setup, not anticipated or pre-armed",
+    "BLOCK_7": "SPY absent from snapshot — broad-tape unlock condition (SPY + NVDA both above VWAP) cannot be verified"
+  },
+  "positions_managed": [],
+  "orders_placed": [],
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 17.6,
+    "loss_budget_remaining": 3017.6,
+    "trades_today": 1,
+    "trades_remaining": 19,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "market_at_tick": {
+    "INTC": {
+      "last": 122.09,
+      "bid": 122.11,
+      "ask": 122.13,
+      "vwap": 121.75,
+      "orb_high": 122.32,
+      "orb_low": 120.55,
+      "rel_volume": 1.15,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    "BAC": {
+      "last": 56.26,
+      "bid": 56.29,
+      "ask": 56.3,
+      "vwap": 56.89,
+      "orb_high": 58.11,
+      "orb_low": 57.73,
+      "rel_volume": 1.5,
+      "spread_bp": 1.8,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "NVDA": {
+      "last": 228.315,
+      "bid": 228.3,
+      "ask": 228.32,
+      "vwap": 228.27,
+      "orb_high": 229.57,
+      "orb_low": 226.59,
+      "rel_volume": 1.51,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "orb_breakout": false
+    }
+  },
+  "next_action": "Continue monitoring; INTC ORB window expired so no new semiconductor entries today. BAC ORB would require all same gates plus INTC to have been evaluated and rejected first. No_new_entries_after 12:30 PM ET today (Fed speaker cluster risk). Flatten window opens 3:50 PM ET."
+}

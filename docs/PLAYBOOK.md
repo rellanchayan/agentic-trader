@@ -255,6 +255,21 @@ made of **rules to follow**, not stories.
   postmarket review.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-23: No tuning. Tuner unfrozen ("ok to tune", 67 days of history) but no rule fired —
+  parameters left unchanged. A zero-trade day provides no new evidence about entry quality or stop
+  placement; the tuner correctly declined. Today: zero trades, $0 realized P&L, account flat at
+  $999,641.65. The day plan imposed a HALT condition: the flatten scheduler must be confirmed live
+  before any new position, due to two prior failures on Sep 17 and Sep 21. That gate was not cleared,
+  resulting in zero trades. This is the third consecutive session (Sep 17, Sep 21, Sep 23) in which
+  the unresolved flatten-scheduler idempotency bug either caused direct harm or forced a protective
+  HALT. The code fix documented in the Sep 21 entry remains outstanding; no strategy or parameter
+  adjustment will resolve it. Capital preservation by enforcing the HALT condition is correct — do not
+  enter positions until the flatten mechanism is confirmed reliable. No new playbook rule is warranted;
+  the infrastructure section and prior entries fully cover this failure mode.
+  All-time stats (67 days, 31 trades, 0.46 trades/day, 19.4% win rate, avg win +0.221R, avg loss
+  -0.489R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Tuning ledger remains empty; no parameter has ever been
+  changed by the tuner.
 - 2026-09-22: No tuning. Tuner unfrozen ("ok to tune", 66 days of history) but no rule fired —
   parameters left unchanged.
   Today: 1 trade — the prescribed NVDA flatten-at-open from yesterday's overnight carryover (44

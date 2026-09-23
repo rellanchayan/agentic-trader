@@ -1,0 +1,68 @@
+{
+  "tick_time_et": "2026-09-23T14:39:52-04:00",
+  "tick_time_hhmmss": "143952",
+  "verdict": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries_considered": [
+    {
+      "ticker": "BAC",
+      "considered": true,
+      "result": "SKIP",
+      "reasons": [
+        "BAC below VWAP (55.915 < 56.06): VWAP reclaim setup requires price above VWAP at Tick 1",
+        "BAC rel_volume 0.64x is well below min_rel_volume 1.5x gate",
+        "NVDA below VWAP (225.35 < 225.96): broad-tape unlock gate fails — requires SPY AND NVDA both above VWAP",
+        "Flatten scheduler unconfirmed per day plan (failures on Sep 17 and Sep 21): zero-entry condition active"
+      ],
+      "market_snapshot": {
+        "last": 55.915,
+        "vwap": 56.06,
+        "above_vwap": false,
+        "spread_bp": 1.8,
+        "rel_volume": 0.64,
+        "quote_age_sec": 0.1
+      }
+    },
+    {
+      "ticker": "INTC",
+      "considered": true,
+      "result": "SKIP",
+      "reasons": [
+        "NVDA below VWAP (225.35 < 225.96): broad-tape unlock gate fails — INTC entry cannot clear without broad-tape unlock",
+        "INTC rel_volume 0.67x is well below min_rel_volume 1.5x gate",
+        "Flatten scheduler unconfirmed: zero-entry condition active"
+      ],
+      "market_snapshot": {
+        "last": 120.945,
+        "vwap": 120.71,
+        "above_vwap": true,
+        "spread_bp": 2.5,
+        "rel_volume": 0.67,
+        "quote_age_sec": 0.2
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "considered": false,
+      "result": "SKIP",
+      "reasons": [
+        "DISARMED for trading per day plan: prior flatten violations on Sep 21 and Sep 22; operational risk too high"
+      ]
+    }
+  ],
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "position_slots_remaining": 8
+  },
+  "market": {
+    "BAC": {"last": 55.915, "vwap": 56.06, "above_vwap": false, "spread_bp": 1.8, "rel_volume": 0.64},
+    "INTC": {"last": 120.945, "vwap": 120.71, "above_vwap": true, "spread_bp": 2.5, "rel_volume": 0.67},
+    "NVDA": {"last": 225.35, "vwap": 225.96, "above_vwap": false, "spread_bp": 0.9, "rel_volume": 0.88}
+  },
+  "summary": "Flat account, no positions, no trades. Four gates block new entries: (1) BAC below VWAP — no reclaim setup; (2) NVDA below VWAP — broad-tape unlock fails; (3) BAC and INTC rel_vol both well below 1.5x minimum; (4) flatten scheduler unconfirmed (two prior failures Sep 17 and Sep 21) — zero-entry condition active. Note: three consecutive ticks (11:39, 12:40, 13:39 ET) were EXIT due to Alpaca unreachable. Disciplined no-trade tick at 2:39 PM with 81 minutes to close."
+}

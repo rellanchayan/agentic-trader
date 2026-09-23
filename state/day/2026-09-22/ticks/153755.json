@@ -1,0 +1,61 @@
+{
+  "time_et": "2026-09-22T15:37:55-04:00",
+  "action": "NO_TRADE",
+  "reason": "BLOCK-1: Flatten scheduler not confirmed (OPERATIONAL PRIORITY #1; hard gate on all new entries). BLOCK-2: Time 15:37 ET > 15:30 config no-new-entries cutoff. BLOCK-3: Time 15:37 ET > 12:30 PM today-specific cutoff (afternoon Fed speaker cluster). BLOCK-4: INTC entry window expired (90-min cutoff was 11:00 AM ET). BLOCK-5: INTC rel_volume 0.74x < 1.5x minimum. BLOCK-6: BAC below VWAP (56.515 < 56.69) and rel_volume 1.0x < 1.5x. BLOCK-7: NVDA re-entry rule applies. No positions to manage.",
+  "equity": 999641.65,
+  "day_pnl": 17.6,
+  "positions": 0,
+  "open_orders": 0,
+  "candidates_evaluated": {
+    "INTC": {
+      "last": 122.92,
+      "vwap": 121.96,
+      "orb_high": 122.32,
+      "orb_low": 120.55,
+      "rel_volume": 0.74,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "blocks": [
+        "flatten_unconfirmed",
+        "no_new_entries_past_1530",
+        "no_new_entries_past_1230pm",
+        "entry_window_expired_11am",
+        "rel_vol_below_1.5x"
+      ]
+    },
+    "BAC": {
+      "last": 56.515,
+      "vwap": 56.69,
+      "orb_high": 58.11,
+      "orb_low": 57.73,
+      "rel_volume": 1.0,
+      "spread_bp": 1.8,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "no_new_entries_past_1530",
+        "no_new_entries_past_1230pm",
+        "below_vwap",
+        "rel_vol_below_1.5x",
+        "no_orb_breakout",
+        "backup_only_not_evaluated"
+      ]
+    },
+    "NVDA": {
+      "last": 229.72,
+      "vwap": 228.7,
+      "rel_volume": 0.92,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "blocks": [
+        "flatten_unconfirmed",
+        "re_entry_rule_applies",
+        "no_new_entries_past_1530",
+        "no_new_entries_past_1230pm"
+      ]
+    }
+  }
+}

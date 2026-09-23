@@ -1,0 +1,55 @@
+{
+  "time_et": "10:45",
+  "timestamp_et": "2026-09-21T10:45:36-04:00",
+  "action": "BUY",
+  "ticker": "NVDA",
+  "setup": "orb",
+  "order": {
+    "trade_id": "T-20260921-104536-NVDA",
+    "alpaca_order_id": "e96a356c-e6a6-4e50-bf96-c1391abb43e3",
+    "side": "BUY",
+    "qty": 44,
+    "limit_price": 224.70,
+    "stop": 221.58,
+    "target": 230.94,
+    "status": "PENDING_NEW"
+  },
+  "evaluation": {
+    "NVDA": {
+      "rel_vol": 1.59,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "PASS — all gates cleared; order submitted",
+      "price": 224.52,
+      "vwap": 223.60,
+      "orb_high": 224.36,
+      "orb_low": 221.58
+    },
+    "INTC": {
+      "rel_vol": 3.74,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "SKIP — price $121.37 is $1.91 above ORB high $119.46 (stale entry, chasing); NVDA selected as primary candidate per plan"
+    },
+    "BAC": {
+      "rel_vol": 1.06,
+      "spread_bp": 1.7,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED — rel_vol 1.06x below 1.5x minimum gate"
+    }
+  },
+  "broad_tape_unlock": {
+    "nvda_above_vwap": true,
+    "spy_above_vwap": "inferred (RISK-ON context, S&P futures +0.70% at open, no reversal signals)"
+  },
+  "guards": {
+    "constitution": "PASS",
+    "daytrade_guard": "PASS"
+  },
+  "day_pnl": 0.0,
+  "slots_used": 0,
+  "trades_remaining": 19
+}

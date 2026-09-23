@@ -1,0 +1,79 @@
+{
+  "tick_time_et": "2026-09-22T10:40:14.840205-04:00",
+  "hhmmss": "104014",
+  "action": "NO_TRADE",
+  "verdict": "HOLD_CASH",
+  "equity": 999641.65,
+  "day_pnl": 17.6,
+  "loss_budget_remaining": 3017.6,
+  "positions": 0,
+  "open_orders": 0,
+  "trades_used_today": 1,
+  "trades_remaining": 19,
+  "decision_rationale": {
+    "primary_block": "FLATTEN_SCHEDULER_UNCONFIRMED",
+    "primary_block_detail": "Day plan OPERATIONAL PRIORITY #1: flatten scheduler (3:50/3:53/3:56 PM ET passes) has NOT been confirmed working after the 2026-09-17 and 2026-09-21 overnight violations. The idempotency bug (CANCELED order treated as no-op instead of fresh submission) is unconfirmed fixed. Playbook and day plan both require positive confirmation before ANY new entry. Entering without confirmation is the same discipline error logged in the 2026-09-21 playbook entry.",
+    "secondary_blocks": [
+      "INTC rel_volume 1.45x < 1.5x minimum gate",
+      "INTC orb_breakout=False (last 122.18 < ORB high 122.32, not a clean break)",
+      "BAC below VWAP (last 56.83 < VWAP 57.32)",
+      "SPY absent from snapshot \u2014 broad-tape unlock (SPY AND NVDA above VWAP) unverifiable"
+    ]
+  },
+  "candidates": {
+    "INTC": {
+      "last": 122.18,
+      "vwap": 121.78,
+      "orb_high": 122.32,
+      "orb_low": 120.55,
+      "rel_volume": 1.45,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "rel_vol_1.45x<1.5x",
+        "no_orb_breakout"
+      ],
+      "disposition": "BLOCKED"
+    },
+    "BAC": {
+      "last": 56.83,
+      "vwap": 57.32,
+      "rel_volume": 1.57,
+      "spread_bp": 1.8,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "below_vwap",
+        "no_orb_breakout"
+      ],
+      "disposition": "BLOCKED"
+    },
+    "NVDA": {
+      "last": 228.18,
+      "vwap": 228.16,
+      "rel_volume": 1.86,
+      "spread_bp": 0.9,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "blocks": [
+        "flatten_unconfirmed",
+        "no_orb_breakout",
+        "re_entry_rule_applies"
+      ],
+      "note": "Re-entry rule: overnight position sold at open; no brand-new setup formed yet.",
+      "disposition": "BLOCKED"
+    }
+  },
+  "time_of_day_check": {
+    "minutes_since_open": 69,
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "orb_window_open": true,
+    "orb_window_closes_approx": "11:00 ET",
+    "no_new_entries_hard_cutoff_today": "12:30 ET (Fed speaker cluster)"
+  },
+  "note": "Zero-trade outcome is the correct and expected result until the flatten scheduler is confirmed working. A missed trading day costs nothing; a third overnight violation damages the account."
+}

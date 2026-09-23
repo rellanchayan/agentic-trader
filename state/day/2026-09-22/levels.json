@@ -1,0 +1,72 @@
+{
+  "_meta": {
+    "date": "2026-09-22",
+    "generated_utc": "2026-09-22T13:32:12.654212+00:00",
+    "screener_updated_utc": "2026-09-22T14:05:00.000000+00:00",
+    "source": "watchlist_build",
+    "screener": "day_screener",
+    "candidates_considered": 3,
+    "top": 3,
+    "note": "Only 3 names passed today's screen. Gaps are all under 0.5% and no obvious catalysts are visible pre-market; padding the list to hit 5-10 names would require adding lower-quality setups, which violates the honesty rule. All 3 names are liquid large-caps with acceptable spreads (under 8bp) and pass the denylist check. NVDA had an overnight position flattened at open this morning; a fresh intraday trade is permitted under the rules. ORB levels fill in live after the first 15 minutes of trading."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 120.85,
+    "atr_day": 6.33,
+    "avg_vol_10d": 2678799,
+    "premarket_price": 121.16,
+    "gap_pct": 0.0026,
+    "spread_bp": 4.1,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "gapped +0.3% flat open; most liquid of the three. Watch for ORB breakout above ~122.50. ATR $6.33 gives wide intraday range. Stop 0.5x ATR = $3.17 below entry. Spread 4.1bp is tight.",
+    "key_levels": {
+      "support": 119.00,
+      "resistance": 122.50,
+      "orb_trigger": 122.50,
+      "stop_suggestion": 119.33,
+      "target_suggestion": 130.10,
+      "notes": "Support at 119.00 = round number below prev_close. Resistance at 122.50 = round number above premarket. ORB trigger: buy on confirmed break above 122.50 ORB high. Stop = 122.50 - (0.5 x 6.33) = 119.33. Target = 122.50 + (1.2 x 6.33) = 130.10 (R:R approx 2.4:1)."
+    }
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 58.04,
+    "atr_day": 1.3,
+    "avg_vol_10d": 2467577,
+    "premarket_price": 57.95,
+    "gap_pct": -0.0016,
+    "spread_bp": 5.2,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "flat open, small down gap -0.2%. ATR $1.30 is narrow — this is a slow mover. Suitable for tight scalps only. Spread 5.2bp is acceptable. Watch 57.50 support; if ORB breaks above 58.50, that is the long trigger.",
+    "key_levels": {
+      "support": 57.50,
+      "resistance": 58.50,
+      "orb_trigger": 58.50,
+      "stop_suggestion": 57.85,
+      "target_suggestion": 60.06,
+      "notes": "Support at 57.50 = round number near premarket 57.95. Resistance at 58.50 = round number above prev_close 58.04. ORB trigger: buy on break above 58.50 ORB high. Stop = 58.50 - (0.5 x 1.30) = 57.85. Target = 58.50 + (1.2 x 1.30) = 60.06 (R:R approx 2.4:1). Low ATR means small absolute P&L per trade; size appropriately."
+    }
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 229.09,
+    "atr_day": 5.81,
+    "avg_vol_10d": 2214406,
+    "premarket_price": 228.78,
+    "gap_pct": -0.0014,
+    "spread_bp": 7.0,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "overnight position flattened at open this morning — eligible for a fresh intraday trade. Gap -0.1%, essentially flat. Spread 7.0bp on a $229 stock = ~$0.16 actual spread, acceptable. ATR $5.81 gives good intraday range. Watch 226.00 support; ORB break above 231.00 is the long trigger.",
+    "key_levels": {
+      "support": 226.00,
+      "resistance": 231.00,
+      "orb_trigger": 231.00,
+      "stop_suggestion": 228.10,
+      "target_suggestion": 237.97,
+      "notes": "Support at 226.00 = round number roughly 1x ATR below prev_close (229.09 - 5.81 = 223.28; 226 is the nearer round number). Resistance at 231.00 = round number above prev_close 229.09. ORB trigger: buy on confirmed break above 231.00 ORB high. Stop = 231.00 - (0.5 x 5.81) = 228.10. Target = 231.00 + (1.2 x 5.81) = 237.97 (R:R approx 2.4:1). Flattening prior position this morning does not bar fresh intraday entry."
+    }
+  }
+}

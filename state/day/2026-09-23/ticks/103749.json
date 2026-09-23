@@ -1,0 +1,58 @@
+{
+  "tick_time_et": "2026-09-23T10:37:49-04:00",
+  "tick_time_hhmmss": "103749",
+  "verdict": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries_considered": [
+    {
+      "ticker": "BAC",
+      "considered": true,
+      "result": "SKIP",
+      "reasons": [
+        "NVDA below VWAP (225.95 < 227.15): broad-tape unlock gate fails — requires SPY AND NVDA both above VWAP",
+        "BAC rel_volume 1.08x is below min_rel_volume 1.5x gate",
+        "Flatten scheduler unconfirmed per day plan (failures on Sep 17 and Sep 21): zero-entry condition active"
+      ],
+      "market_snapshot": {
+        "last": 56.34,
+        "vwap": 56.25,
+        "above_vwap": true,
+        "spread_bp": 1.8,
+        "rel_volume": 1.08,
+        "quote_age_sec": 0.4
+      }
+    },
+    {
+      "ticker": "INTC",
+      "considered": false,
+      "result": "SKIP",
+      "reasons": [
+        "INTC below VWAP (119.99 < 120.99): VWAP reclaim setup requires price above VWAP",
+        "Conditionally disarmed per day plan: requires sector stabilization and SPY+NVDA above VWAP"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "considered": false,
+      "result": "SKIP",
+      "reasons": [
+        "DISARMED for trading per day plan: 236 bp premarket spread; prior flatten violations on Sep 21 and Sep 22"
+      ]
+    }
+  ],
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "position_slots_remaining": 8
+  },
+  "market": {
+    "BAC": {"last": 56.34, "vwap": 56.25, "above_vwap": true, "spread_bp": 1.8, "rel_volume": 1.08},
+    "INTC": {"last": 119.99, "vwap": 120.99, "above_vwap": false, "spread_bp": 3.3, "rel_volume": 1.4},
+    "NVDA": {"last": 225.95, "vwap": 227.15, "above_vwap": false, "spread_bp": 0.9, "rel_volume": 1.63}
+  },
+  "summary": "Flat account, no positions, no trades. Three gates block new entries: NVDA below VWAP (broad-tape unlock fails), BAC rel_vol below threshold, flatten scheduler unconfirmed. Disciplined no-trade tick."
+}

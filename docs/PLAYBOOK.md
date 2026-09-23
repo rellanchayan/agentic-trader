@@ -71,6 +71,7 @@ made of **rules to follow**, not stories.
 - When the two-tick VWAP confirmation rule is in effect and the two confirming ticks are separated by more than one evaluation cycle, check the price distance traveled between Tick 1 and Tick 2 before submitting any entry. If price has moved more than 0.5× ATR between the first confirming tick and the second, the setup has expired: the stop must be reset to the new VWAP level (widening risk), the required target moves further out to maintain 2:1 R/R, and a name already extended into its daily range may be unable to reach that target before the close. Do not enter even if the two-tick clock is technically satisfied — the R/R math must clear at the moment of the second tick, not at the moment of the first. A technically valid confirmation that breaks the R/R is not a valid entry. (2026-09-08: INTC Tick 1 at 10:39 AM, Tick 2 at 11:43 AM; price ran $1.14 in 64 minutes; stop to VWAP $102.25 = $2.15/share risk; 2:1 target required $108.60+ on a stock already +8.9% on the day in a MIXED/RANGE regime; no entry correct.)
 - In a MIXED/RANGE regime with an active or imminent macro event (pre-NFP Thursday, pre-FOMC day, active risk-off), skip VWAP reclaim entirely — do not enter even with two-tick confirmation. VWAP reclaim is 0-for-2 in this specific combination: 2026-09-01 QQQ loss under stacked macro headwinds, 2026-09-03 SPY loss pre-NFP in MIXED/RANGE. Two-tick confirmation is not sufficient to filter structural false reclaims when institutional flow is directionally negative and a binary macro event is imminent. Wait for a RISK-ON tape with no imminent binary macro event before executing any VWAP reclaim trade.
 - The broad-tape unlock condition must pass before any ORB or momentum entry: SPY AND the leading sector bellwether (currently NVDA) must both be above VWAP at the time of evaluation. A technically valid individual breakout in a tape where the broad market and the sector leader are both below VWAP is swimming against institutional flow — the unlock gate is not optional even when the candidate's own chart is clean. If the broad-tape unlock is not satisfied, skip ORB and momentum entries regardless of relative volume or spread. (2026-09-09: two technically valid INTC ORB signals blocked by SPY+NVDA both below VWAP in a RISK-OFF regime; blocking was correct.)
+- Catalyst stacking (multiple analyst upgrades, gap-up momentum, high premarket relative volume) does not substitute for the broad-tape unlock condition. When SPY is below VWAP and the broad-tape unlock fails, fundamental catalysts are already priced in or overwhelmed by institutional flow — entering into a name with strong overnight news but a broken tape is swimming against structural force, not exploiting edge. Evaluate tape first, catalyst quality second. (2026-09-18: INTC had 3 analyst upgrades overnight and 5.46x premarket rel-vol but fell $3.60 from its high and traded below VWAP all session in a SPY-weak tape; the broad-tape unlock was the correct disqualifying gate.)
 - SPY is a backup candidate, not a primary. When both QQQ and SPY qualify for the watchlist, evaluate QQQ first. Before pivoting to SPY as the primary VWAP reclaim or ORB candidate, the tick log must contain a documented gate outcome showing which specific gate blocked QQQ at that tick. An undocumented pivot to SPY is not permitted — QQQ typically offers more directional edge on trend days, and entering SPY without first confirming QQQ's failure produces lower-conviction trades without a traceable reason.
 - When a primary watchlist candidate is within approximately 9 calendar days of its scheduled
   earnings release, the options market absorbs earnings premium and intraday ranges may be narrower
@@ -237,8 +238,65 @@ made of **rules to follow**, not stories.
   positions are not a trading decision and their exit prices must not be attributed to exit
   strategy analysis. (2026-09-17: first documented flatten scheduling failure; INTC and NVDA held
   overnight after all three flatten passes missed the market window.)
+- The flatten scheduler must be actively verified during the premarket phase, not assumed running.
+  Confirming the scheduler is armed is operational priority #1 in premarket — before screening
+  candidates, before writing the plan. If the flatten scheduler cannot be confirmed live at
+  premarket, treat it as a HALT condition: do not enter new positions in a session where the close-
+  out mechanism is unconfirmed. A single flatten failure with a large book is far more costly than
+  a missed trading day. (2026-09-18: the 2026-09-17 flatten failure cost -$30.46 over two days
+  from two overnight holds; the failure would have been prevented by a premarket scheduler check.)
+- Before arming any candidate in the day plan, verify that the context.py snapshot actually
+  populates that candidate's price, VWAP, spread, and rel_vol fields. A candidate whose live-data
+  fields are blank or stale for two or more consecutive ticks is not evaluable — it is a data
+  failure, not a "hold." Disarm it and substitute a name with confirmed live data, or accept no
+  secondary candidate for that session. Do not carry a data-missing candidate forward as a
+  "monitor" — it will appear armed in tick evaluation but cannot be acted on. (2026-09-18: BAC had
+  no live data available for three consecutive evaluation ticks; the gap was not caught until
+  postmarket review.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-22: No tuning. Tuner unfrozen ("ok to tune", 66 days of history) but no rule fired —
+  parameters left unchanged.
+  Today: 1 trade — the prescribed NVDA flatten-at-open from yesterday's overnight carryover (44
+  shares sold at the open). 0 roundtrips completed, $0 realized P&L. The flatten-scheduler
+  idempotency bug is now confirmed across three occurrences in six trading days: 2026-09-17
+  (first documented), 2026-09-21 (recurrence), and 2026-09-22 carryover. The required code fix
+  (flatten must submit a new order with a fresh trade_id on CANCELED status, not silently skip)
+  is documented in the 2026-09-21 entry and remains outstanding. No new playbook rule is warranted
+  tonight — the bug and its implications are fully captured in the Infrastructure section and the
+  prior two changelog entries. The fix is in code.
+  All-time stats (66 days, 31 trades, 0.47 trades/day, 19.4% win rate, avg win +0.221R, avg loss
+  -0.489R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. LIMIT fill rate 81% (25/31). Tuning ledger remains empty;
+  no parameter has ever been changed by the tuner.
+- 2026-09-21: No tuning. No rule fired — parameters left unchanged. 65 days of history.
+  Today: 1 NVDA ORB fill (44 shares @ $224.46), 0 completed roundtrips, $0 realized P&L.
+  Rule violation: NVDA carried overnight (+$108.14 unrealized) — the same flatten idempotency
+  bug that struck 2026-09-17 struck again. Flatten submitted at exactly 4:00 PM ET (DAY order
+  auto-canceled by market close); passes 2 and 3 detected CANCELED status and treated it as an
+  idempotent no-op instead of submitting a fresh order with a new trade_id. The ORB entry quality
+  was sound on the merits (1.59x relative volume, 0.9 bp spread, above VWAP), but entering without
+  first confirming the flatten scheduler was live — especially after the explicit 2026-09-17
+  warning already in this playbook — was a discipline error. Key lesson: the flatten bug
+  (CANCELED order treated as idempotent no-op) must be fixed in code; flatten must submit a new
+  order with a fresh trade_id whenever it detects CANCELED status on the prior pass, not silently
+  skip. Plan notes and playbook warnings are not a substitute for a code fix. Action for 2026-09-22:
+  liquidate NVDA 44 shares at the open; record the cross-day P&L in that day's journal.
+- 2026-09-18: No tuning. Tuner unfrozen ("ok to tune", 64 days of history) but no rule fired —
+  parameters left unchanged. Tuning ledger remains empty; no parameter has ever been changed by
+  the tuner.
+  Three durable lessons added tonight. (1) Infrastructure — the flatten scheduler must be actively
+  verified during the premarket phase as operational priority #1, not assumed running. If it cannot
+  be confirmed live at premarket, treat it as a HALT condition. The 2026-09-17 flatten failure cost
+  -$30.46 across two days from two overnight holds. (2) Infrastructure — before arming any
+  candidate, verify that context.py actually populates its price, VWAP, spread, and rel_vol fields.
+  A name missing live data for two or more consecutive ticks must be disarmed; it is a data failure,
+  not a hold. BAC had no live data across three evaluation ticks and the gap was not caught until
+  postmarket. (3) Setups — catalyst stacking (analyst upgrades, premarket momentum) does not
+  substitute for the broad-tape unlock gate. When SPY is below VWAP and the tape is broken,
+  fundamental catalysts are already priced in or overwhelmed by institutional flow; INTC's three
+  overnight analyst upgrades and 5.46x premarket rel-vol produced a $3.60 decline from the high
+  and an all-session sub-VWAP close. Tape first, catalyst second.
 - 2026-09-17: No tuning. Tuner unfrozen ("ok to tune", 63 days of history, drawdown 0.03%) but no
   rule fired — parameters left unchanged. Tuning ledger remains empty; no parameter has ever been
   changed by the tuner.

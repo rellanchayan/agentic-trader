@@ -1,0 +1,20 @@
+{
+  "tick_time_et": "2026-09-22T09:36:45-04:00",
+  "minutes_since_open": 6,
+  "verdict": "NO_TRADE",
+  "reason": "ORB window still forming (6 min elapsed, 15 min required). No day plan for today. SPY not in market snapshot so broad-tape unlock (SPY+NVDA above VWAP) cannot be verified. Standard: skip entries until 9:45 AM.",
+  "positions_managed": [],
+  "orders_checked": [],
+  "trade_filed": null,
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 78.32,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "top_candidates_observed": [
+    {"ticker": "META", "rel_vol": 7.33, "spread_bp": 21.7, "above_vwap": true, "note": "ORB not formed yet"},
+    {"ticker": "NVDA", "rel_vol": 3.55, "spread_bp": 1.7, "above_vwap": true, "note": "ORB not formed yet; no SPY data to verify broad-tape unlock"},
+    {"ticker": "AAPL", "rel_vol": 2.86, "spread_bp": 24.0, "above_vwap": false, "note": "Below VWAP"}
+  ]
+}

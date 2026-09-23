@@ -1,0 +1,16 @@
+{
+  "tick_id": "194222",
+  "timestamp_et": "2026-09-18T15:41:23-04:00",
+  "action": "HOLD",
+  "note": "Entry window expired (2:30 PM ET Triple Witching cutoff long passed; now 15:41 ET). 0 open positions \u2014 fully flat. No positions to manage, no orders to cancel. Today: INTC never cleared rel-vol 1.5x gate or broad-tape unlock (SPY+NVDA above VWAP); BAC had no live data all session; entry window expired at 14:43 tick. Awaiting 3:50 PM flatten passes \u2014 already flat so no action needed.",
+  "tickers_evaluated": [],
+  "gates_blocked": [
+    "entry_window_expired_past_2:30pm_triple_witching_cutoff",
+    "past_no_new_entries_flag_set"
+  ],
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "equity": 999434.85,
+  "trades_today": 2
+}

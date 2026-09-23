@@ -1,0 +1,29 @@
+{
+  "tick_time_et": "14:43:56",
+  "date": "2026-09-18",
+  "action": "HOLD",
+  "reason": "entry_window_expired",
+  "detail": "2:30 PM ET Triple Witching entry cutoff has passed (current time 14:43). 0 open positions; nothing to manage. No new entries permitted for the remainder of the session.",
+  "gate_outcomes": {
+    "entry_window": "BLOCKED — past 2:30 PM ET Triple Witching cutoff",
+    "positions_to_manage": "NONE — 0 open positions",
+    "INTC_rel_vol": "BLOCKED — 0.66x < 1.5x minimum (and entry window expired)",
+    "INTC_vwap": "BLOCKED — $106.43 below VWAP $108.07 (and entry window expired)",
+    "SPY_vwap": "PASS — $760.42 above VWAP $759.79 (moot, entry window expired)",
+    "QQQ_vwap": "PASS — $717.98 above VWAP $717.25 (moot, entry window expired)"
+  },
+  "market_snapshot": {
+    "INTC": {"last": 106.425, "vwap": 108.07, "above_vwap": false, "rel_volume": 0.66, "spread_bp": 0.9},
+    "SPY": {"last": 760.415, "vwap": 759.79, "above_vwap": true, "rel_volume": 0.76},
+    "QQQ": {"last": 717.98, "vwap": 717.25, "above_vwap": true, "rel_volume": 0.81},
+    "IWM": {"last": 283.415, "vwap": 283.29, "above_vwap": true, "rel_volume": 0.93}
+  },
+  "account": {
+    "equity": 999434.85,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 2,
+    "loss_stop_tripped": false
+  },
+  "orders_submitted": []
+}

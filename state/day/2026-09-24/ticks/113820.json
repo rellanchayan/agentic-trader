@@ -1,0 +1,37 @@
+{
+  "ts": "2026-09-24T11:38:20-04:00",
+  "tick": "113820",
+  "action": "no_trade",
+  "verdict": "PROCEED",
+  "positions_managed": [],
+  "candidates": {
+    "NVDA": {
+      "last": 222.09,
+      "vwap": 222.21,
+      "above_vwap": false,
+      "rel_vol": 1.1,
+      "spread_bp": 1.4,
+      "gate_blocked": "below_vwap + broad_tape_unlock_fail + rel_vol<1.5"
+    },
+    "BAC": {
+      "last": 55.855,
+      "vwap": 56.17,
+      "above_vwap": false,
+      "rel_vol": 1.41,
+      "spread_bp": 1.8,
+      "gate_blocked": "below_vwap + rel_vol<1.5"
+    },
+    "QQQ": {
+      "last": 735.61,
+      "vwap": 736.40,
+      "above_vwap": false,
+      "rel_vol": 0.57,
+      "spread_bp": 0.5,
+      "gate_blocked": "backup_only + below_vwap + rel_vol<1.5"
+    }
+  },
+  "reason": "All names below VWAP. Broad-tape unlock gate fails (NVDA below VWAP). No VWAP reclaim setup active. rel_vol: NVDA 1.1x, BAC 1.41x, QQQ 0.57x — all below 1.5x minimum. ORB and momentum are off-table in MIXED/RANGE regime. No positions to manage. No trade.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0
+}

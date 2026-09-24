@@ -2,22 +2,15 @@
   "_meta": {
     "date": "2026-09-24",
     "generated_utc": "2026-09-24T13:30:54.636852+00:00",
+    "screener_edited_utc": "2026-09-24T13:35:00.000000+00:00",
     "source": "watchlist_build",
     "candidates_considered": 3,
     "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
-  },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 122.61,
-    "atr_day": 6.62,
-    "avg_vol_10d": 2832610,
-    "premarket_price": 118.61,
-    "gap_pct": -0.0326,
-    "spread_bp": 187.2,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,832,610 sh/day); -3.3% gap"
+    "screener_kept": 2,
+    "screener_dropped": ["INTC"],
+    "screener_added_backup": ["QQQ"],
+    "mood": "mixed_range",
+    "note": "Pre-market screen. INTC dropped: spread 187.2 bp is 12x the 15 bp gate. ORB levels fill in live after the open. Three macro headwinds (5.116% yield, US-Iran war, oil $88.88) require two-tick VWAP confirmation before any entry."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,20 +20,47 @@
     "premarket_price": 222.73,
     "gap_pct": -0.0128,
     "spread_bp": 4.5,
+    "support": 220.00,
+    "resistance": 227.50,
+    "vwap_estimate": 223.50,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,466,077 sh/day); -1.3% gap"
+    "setup": "vwap_reclaim",
+    "armed": true,
+    "note": "liquid (2,466,077 sh/day); -1.3% gap; tight spread 4.5 bp; VWAP reclaim two-tick required; support at round $220 (~1.25 ATR below prev_close), resistance at $227.50 (~0.35 ATR above prev_close); SPY must also be above VWAP before entry; max 44 shares (~$9,812 notional)"
   },
   "BAC": {
     "sector": "financials",
     "prev_close": 56.01,
     "atr_day": 1.37,
     "avg_vol_10d": 2756874,
-    "premarket_price": 56.3,
+    "premarket_price": 56.30,
     "gap_pct": 0.0052,
     "spread_bp": 8.9,
+    "support": 55.60,
+    "resistance": 57.00,
+    "vwap_estimate": 56.20,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,756,874 sh/day); +0.5% gap"
+    "setup": "vwap_reclaim",
+    "armed": true,
+    "note": "liquid (2,756,874 sh/day); +0.5% gap; spread 8.9 bp within gate; VWAP reclaim two-tick required; support at $55.60 (~0.3 ATR below prev_close), resistance at $57.00 (round number, ~0.7 ATR above prev_close); confirm context.py is populating live data before treating as armed each tick; max 177 shares (~$9,965 notional)"
+  },
+  "QQQ": {
+    "sector": "broad_etf",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
+    "vwap_estimate": null,
+    "orb_high": null,
+    "orb_low": null,
+    "setup": "backup",
+    "armed": false,
+    "note": "BACKUP ONLY — not pre-screened; no watchlist_build data. Evaluate only if NVDA is formally gated out mid-session (spread blowout or live-data failure). At evaluation: run spread check (<15 bp), confirm volume, set support/resistance from live chart before treating as armed. Do not use QQQ before documenting the gate-out of NVDA. Same two-tick VWAP reclaim rules and macro-headwind constraints apply."
   }
 }

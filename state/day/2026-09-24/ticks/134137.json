@@ -1,0 +1,43 @@
+{
+  "ts": "2026-09-24T13:41:37-04:00",
+  "tick": "134137",
+  "action": "no_trade",
+  "verdict_from_preflight": "PROCEED",
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "positions_open": 0,
+  "trades_today": 0,
+  "decision": "NO TRADE",
+  "reason": "All candidates blocked by relative volume gate. NVDA is above VWAP (price $223.89 vs VWAP $222.69) with clean 1.3 bp spread, but rel_volume is 0.85x — well below the 1.5x gate. Volume has been fading all session: 1.37x at 10:41 AM → 0.91x at 12:41 PM → 0.85x now. BAC is below VWAP ($55.925 vs VWAP $56.12), so VWAP reclaim setup does not apply. QQQ is above VWAP but rel_volume 0.65x, far below gate. MIXED/RANGE regime — ORB and momentum setups are off-table per the day plan. No open positions to manage. No orders to cancel.",
+  "candidates": {
+    "NVDA": {
+      "last": 223.89,
+      "vwap": 222.69,
+      "above_vwap": true,
+      "spread_bp": 1.3,
+      "rel_vol": 0.85,
+      "gate_blocked": "rel_vol 0.85x < 1.5x gate",
+      "outcome": "SKIP"
+    },
+    "BAC": {
+      "last": 55.925,
+      "vwap": 56.12,
+      "above_vwap": false,
+      "spread_bp": 1.8,
+      "rel_vol": 1.1,
+      "gate_blocked": "below VWAP — no reclaim setup",
+      "outcome": "SKIP"
+    },
+    "QQQ": {
+      "last": 739.97,
+      "vwap": 738.17,
+      "above_vwap": true,
+      "spread_bp": 0.3,
+      "rel_vol": 0.65,
+      "gate_blocked": "rel_vol 0.65x < 1.5x gate (backup only)",
+      "outcome": "SKIP"
+    }
+  },
+  "positions_managed": [],
+  "orders_submitted": []
+}

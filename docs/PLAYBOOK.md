@@ -255,6 +255,16 @@ made of **rules to follow**, not stories.
   postmarket review.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-24: No tuning. Tuner unfrozen ("ok to tune", 68 days of history) but no rule fired —
+  parameters left unchanged. A zero-trade day provides no new signal about entry quality, stop
+  placement, or fill behavior; the tuner correctly declined. Today: zero trades, $0 realized P&L,
+  account flat at $999,641.65. This is the third consecutive zero-trade session (Sep 22, Sep 23,
+  Sep 24). All setup expectancies remain negative: ORB -0.199R (5 trades, 3 wins), momentum
+  -0.975R (1 trade, 0 wins), VWAP reclaim -0.368R (2 trades, 0 wins). Overall win rate 19.4%
+  across 31 trades in 68 days (0.46 trades/day). The sample base is extremely thin — 31 trades
+  across all setups is not enough to distinguish a miscalibrated parameter from a run of bad luck
+  or an infrastructure gap. No parameter adjustment is warranted; continued observation is the
+  correct response. Tuning ledger remains empty; no parameter has ever been changed by the tuner.
 - 2026-09-23: No tuning. Tuner unfrozen ("ok to tune", 67 days of history) but no rule fired —
   parameters left unchanged. A zero-trade day provides no new evidence about entry quality or stop
   placement; the tuner correctly declined. Today: zero trades, $0 realized P&L, account flat at

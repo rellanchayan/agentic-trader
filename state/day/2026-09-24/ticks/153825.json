@@ -1,0 +1,29 @@
+{
+  "ts": "2026-09-24T15:38:25-04:00",
+  "tick": "153825",
+  "action": "no_trade",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "reason": "Past 3:30 PM no-new-entries cutoff (clock_flags.past_no_new_entries=true). Zero positions, zero open orders \u2014 nothing to manage. NVDA above VWAP (rel_vol 0.80x, fails 1.5x gate). BAC at/above VWAP (rel_vol 0.92x, fails 1.5x gate). QQQ above VWAP (rel_vol 0.57x, fails 1.5x gate). MIXED/RANGE regime all day \u2014 ORB/momentum off-table. Entry window closed. No trade.",
+  "candidates": {
+    "NVDA": {
+      "above_vwap": true,
+      "rel_vol": 0.8,
+      "spread_bp": 0.4,
+      "gate_blocked": "past_no_new_entries+rel_vol<1.5"
+    },
+    "BAC": {
+      "above_vwap": true,
+      "rel_vol": 0.92,
+      "spread_bp": 1.8,
+      "gate_blocked": "past_no_new_entries+rel_vol<1.5"
+    },
+    "QQQ": {
+      "above_vwap": true,
+      "rel_vol": 0.57,
+      "spread_bp": 0.4,
+      "gate_blocked": "past_no_new_entries+rel_vol<1.5"
+    }
+  }
+}

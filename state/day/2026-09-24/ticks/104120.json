@@ -1,0 +1,37 @@
+{
+  "ts": "2026-09-24T10:41:20-04:00",
+  "tick_id": "104120",
+  "action": "no_trade",
+  "regime": "MIXED/RANGE",
+  "positions_open": 0,
+  "candidates_evaluated": {
+    "NVDA": {
+      "last": 222.515,
+      "vwap": 222.37,
+      "above_vwap": true,
+      "spread_bp": 1.3,
+      "rel_vol": 1.37,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "rel_vol 1.37x < 1.5x minimum"
+    },
+    "BAC": {
+      "last": 56.21,
+      "vwap": 56.27,
+      "above_vwap": false,
+      "spread_bp": 1.8,
+      "rel_vol": 1.49,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "below VWAP (no reclaim signal) + rel_vol 1.49x marginally below 1.5x gate"
+    },
+    "QQQ": {
+      "last": 737.44,
+      "vwap": 736.73,
+      "above_vwap": true,
+      "spread_bp": 0.8,
+      "rel_vol": 0.60,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "rel_vol 0.60x << 1.5x minimum (backup only, not evaluated further)"
+    }
+  },
+  "decision_summary": "No trade. All three candidates blocked by the 1.5x relative-volume gate. NVDA is above VWAP but rel_vol 1.37x fails the gate. BAC is below VWAP (no VWAP reclaim signal present) and rel_vol barely below gate. QQQ backup has severely depressed rel_vol at 0.60x. Even if rel_vol cleared, the two-tick VWAP confirmation rule would require a second confirmed tick before any entry. Correct outcome: no trade."
+}

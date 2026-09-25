@@ -1,0 +1,49 @@
+{
+  "ts": "2026-09-25T14:38:45-04:00",
+  "tick": "143845",
+  "action": "no_trade",
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "positions": 0,
+  "trades_today": 0,
+  "candidates_evaluated": {
+    "BAC": {
+      "last": 56.47,
+      "vwap": 56.31,
+      "above_vwap": true,
+      "spread_bp": 1.8,
+      "rel_volume": 0.5,
+      "gate_outcome": "FAIL",
+      "gate_reason": "rel_vol 0.50x < 1.5x minimum"
+    },
+    "INTC": {
+      "last": 124.415,
+      "vwap": 124.63,
+      "above_vwap": false,
+      "spread_bp": 2.4,
+      "rel_volume": 0.66,
+      "gate_outcome": "FAIL",
+      "gate_reason": "below VWAP; rel_vol 0.66x < 1.5x minimum"
+    },
+    "NVDA": {
+      "last": 224.25,
+      "vwap": 224.74,
+      "above_vwap": false,
+      "spread_bp": 0.9,
+      "rel_volume": 0.98,
+      "gate_outcome": "DISARMED",
+      "gate_reason": "disarmed day plan (spread 46.4bp premarket); currently below VWAP, broad-tape unlock fails"
+    }
+  },
+  "broad_tape_unlock": {
+    "SPY_above_vwap": true,
+    "NVDA_above_vwap": false,
+    "unlock_passed": false
+  },
+  "halt_conditions": [
+    "PRECONDITION_1: flatten scheduler unconfirmed (8th consecutive session Sep17,Sep21,Sep22,Sep23,Sep24,Sep25 10:42,Sep25 12:43,Sep25 13:47)",
+    "TIME: 14:38 ET past 11:30 AM last-entry soft cutoff (Friday)",
+    "NO_QUALIFYING_SETUP: all candidates fail gates independently"
+  ],
+  "order_submitted": false
+}

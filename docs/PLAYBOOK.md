@@ -124,6 +124,11 @@ made of **rules to follow**, not stories.
   than the premarket reading. The live spread gate fires at every tick and is the authoritative check;
   do not arm a high-gap name in the plan on the assumption that a tight premarket spread guarantees a
   clean entry.
+- A premarket disarm due to wide spread is NOT permanent. NVDA was disarmed premarket on 2026-09-25
+  with a 46.4 bp spread; by 12:43 PM it had tightened to 1.3 bp. The tick agent must evaluate the
+  live spread at every tick regardless of the premarket disarm — if the spread clears the gate during
+  the session and a valid setup forms, the ticker can be re-armed mid-session. Premarket disarm means
+  "not ready at open," not "off-table for the day."
 
 ## Sizing
 - Size from risk first: lose no more than the per-trade risk budget if stopped.
@@ -253,8 +258,27 @@ made of **rules to follow**, not stories.
   "monitor" — it will appear armed in tick evaluation but cannot be acted on. (2026-09-18: BAC had
   no live data available for three consecutive evaluation ticks; the gap was not caught until
   postmarket review.)
+- If the flatten scheduler remains unconfirmed for 5 or more consecutive sessions, this is a
+  systemic infrastructure failure that requires human intervention — the bot cannot self-repair it.
+  At that threshold, the journal and the day plan must explicitly name it an escalation requiring
+  human action before any new trading week begins. Do not continue to document "HALT: scheduler
+  unconfirmed" without escalating. A human must verify or re-configure the scheduler before trading
+  resumes. (2026-09-25: scheduler unconfirmed for 9 consecutive sessions — Sep 17, 21, 22, 23, 24,
+  and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-25: No tuning. Tuner unfrozen ("ok to tune", 69 days of history) but no rule fired —
+  parameters left unchanged. Zero trades today (4th consecutive zero-trade day, 9th impaired/blocked
+  session since Sep 17). The flatten scheduler remained unconfirmed all day — PRECONDITION #1 HALT
+  held. No trades = no new signal for any parameter. All setup expectancies unchanged: ORB -0.199R
+  (5 trades, 3 wins), momentum -0.975R (1 trade, 0 wins), VWAP reclaim -0.368R (2 trades, 0 wins).
+  Overall win rate 19.4% across 31 trades in 69 days. Tuning ledger remains empty; no parameter has
+  ever been changed. Two new observations documented tonight: (1) NVDA's spread recovered intraday
+  from 46.4 bp premarket to 1.3 bp by 12:43 PM — a disarmed ticker can become viable during the
+  session; the live tick data must always be checked rather than assuming the premarket disarm is final.
+  New rule added to Entries & exits section. (2) Flatten scheduler has been unconfirmed for 9
+  consecutive sessions — this requires human intervention before the next trading week. New rule
+  added to Infrastructure section.
 - 2026-09-24: No tuning. Tuner unfrozen ("ok to tune", 68 days of history) but no rule fired —
   parameters left unchanged. A zero-trade day provides no new signal about entry quality, stop
   placement, or fill behavior; the tuner correctly declined. Today: zero trades, $0 realized P&L,

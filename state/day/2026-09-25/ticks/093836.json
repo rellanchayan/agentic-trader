@@ -1,0 +1,15 @@
+{
+  "ts": "2026-09-25T09:38:36-04:00",
+  "tick": "093836",
+  "verdict": "HALT",
+  "reason": "No day plan found (docs/plan/2026-09-25.md missing). PLAYBOOK infrastructure rule: missing plan = HALT condition. Premarket phase did not complete before 9:30 AM ET. No trades placed.",
+  "gate_verdict": "PROCEED",
+  "action": "none",
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "positions": 0,
+  "open_orders": 0,
+  "trades_today": 0,
+  "consecutive_missing_plans": 1,
+  "notes": "First consecutive missing-plan session. Yesterday (2026-09-24) had a plan. Premarket scheduler failure suspected. Do not trade until premarket produces a plan."
+}

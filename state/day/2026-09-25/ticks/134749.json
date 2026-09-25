@@ -1,0 +1,54 @@
+{
+  "tick": "134749",
+  "timestamp_et": "2026-09-25T13:47:49-04:00",
+  "action": "no_trade",
+  "halt_reason": "PRECONDITION_1_FLATTEN_SCHEDULER_UNCONFIRMED",
+  "impaired_session_count": 7,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "positions": 0,
+  "trades_today": 0,
+  "loss_budget_remaining": 3000.0,
+  "broad_tape": {
+    "spy_last": 771.19,
+    "spy_vwap": 769.42,
+    "spy_above_vwap": true,
+    "nvda_last": 224.895,
+    "nvda_vwap": 224.75,
+    "nvda_above_vwap": true,
+    "unlock_met": true
+  },
+  "candidates_evaluated": {
+    "BAC": {
+      "last": 56.54,
+      "vwap": 56.28,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "spread_bp": 1.8,
+      "rel_volume": 0.54,
+      "verdict": "no_setup",
+      "reason": "rel_vol 0.54x below 1.5x minimum"
+    },
+    "INTC": {
+      "last": 124.21,
+      "vwap": 124.67,
+      "above_vwap": false,
+      "spread_bp": 1.6,
+      "rel_volume": 0.71,
+      "verdict": "no_setup",
+      "reason": "below VWAP, rel_vol 0.71x below minimum"
+    },
+    "NVDA": {
+      "last": 224.895,
+      "vwap": 224.75,
+      "above_vwap": true,
+      "spread_bp": 1.3,
+      "rel_volume": 1.08,
+      "orb_breakout": false,
+      "verdict": "no_setup",
+      "reason": "rel_vol 1.08x below 2.0x required for MIXED/RANGE ORB; no ORB breakout; no two-tick VWAP reclaim chain"
+    }
+  },
+  "primary_blocker": "PRECONDITION #1 from day plan: flatten scheduler cannot be confirmed (no crontab, no systemd in cloud environment). Zero trades is the correct and safe outcome. Human intervention required.",
+  "note": "7th consecutive impaired/blocked session. Day plan PRECONDITION #1 is a hard HALT. Even setting aside the scheduler blocker, no qualifying setup exists this tick (all candidates fail rel_vol or VWAP requirements)."
+}

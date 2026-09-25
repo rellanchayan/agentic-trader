@@ -1,0 +1,18 @@
+{
+  "ts": "2026-09-25T12:43:43-04:00",
+  "tick": "124343",
+  "action": "no_trade",
+  "reason": "HALT — flatten scheduler unconfirmed (no crontab, no systemd timers). PRECONDITION #1 hard HALT condition from day plan. 6th impaired/blocked session (Sep 17, 21, 22, 23, 24, 25-12:43).",
+  "market_summary": {
+    "broad_tape_unlock": true,
+    "SPY_above_vwap": true,
+    "NVDA_above_vwap": true,
+    "BAC": {"above_vwap": true, "spread_bp": 1.8, "rel_vol": 0.63, "setup": "none — rel_vol below 1.5x min"},
+    "INTC": {"above_vwap": false, "spread_bp": 2.4, "rel_vol": 0.81, "setup": "none — below VWAP"},
+    "NVDA": {"above_vwap": true, "spread_bp": 1.3, "setup": "none — scheduler HALT; no two-tick reclaim established"}
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "halt_reason": "flatten_scheduler_unconfirmed"
+}

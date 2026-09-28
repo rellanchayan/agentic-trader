@@ -267,6 +267,17 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-28: No tuning. Tuner unfrozen ("ok to tune", 70 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. Zero trades today ($0 realized P&L). Account equity
+  $999,641.65 (total return -0.01% since 2026-06-25). A zero-trade day provides no new signal about
+  entry quality, stop placement, or fill behavior; the tuner correctly declined to act. All setup
+  expectancies remain negative and sample sizes remain thin: ORB -0.199R (5 trades, 3 wins),
+  momentum -0.975R (1 trade, 0 wins), VWAP reclaim -0.368R (2 trades, 0 wins). Overall win rate
+  19.4% across 31 trades in 70 days (0.44 trades/day). Cumulative LIMIT fill rate 81% (25/31 final
+  orders). The Sharpe ratio is deeply negative (-79.62) due to near-zero volatility combined with
+  a tiny negative return — this is a statistical artifact of an account that is almost perfectly flat,
+  not a signal that the strategy is deteriorating. Tuning ledger remains absent; no parameter has
+  ever been changed by the tuner. No new durable rule is warranted tonight.
 - 2026-09-25: No tuning. Tuner unfrozen ("ok to tune", 69 days of history) but no rule fired —
   parameters left unchanged. Zero trades today (4th consecutive zero-trade day, 9th impaired/blocked
   session since Sep 17). The flatten scheduler remained unconfirmed all day — PRECONDITION #1 HALT

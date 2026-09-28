@@ -2,10 +2,66 @@
   "_meta": {
     "date": "2026-09-28",
     "generated_utc": "2026-09-28T13:34:27.773086+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 3,
-    "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "screened_utc": "2026-09-28T14:10:00+00:00",
+    "source": "watchlist_build + day-screener-agent",
+    "candidates_considered": 9,
+    "final_count": 6,
+    "dropped": "AAPL/MSFT/JPM excluded: wide spreads in recent sessions (483 bp, 281 bp, 544 bp on 2026-09-25); no reason to expect tighter on a risk-off gap-down Monday open. AMD excluded: avg_vol below 2M threshold. TSLA excluded: spread 114 bp on 2026-09-25.",
+    "note": "Pre-market screen expanded from 3 to 6 names by day-screener agent. SPY/QQQ/IWM added as broad-market context names and potential trade vehicles — price levels estimated from Friday Sep 25 anchors plus plan guidance ('-0.5% S&P futures'). NVDA (589.8 bp spread) and INTC (42.3 bp spread) disarmed at open — monitor intraday for tightening. BAC (3.5 bp) is the only armed individual-stock name. orb_high/orb_low fill in live after the 15-minute opening range completes. Flatten-scheduler PRECONDITION still outstanding — no entries until confirmed."
+  },
+  "SPY": {
+    "sector": "etf_broad",
+    "prev_close": 769.50,
+    "atr_day": 5.50,
+    "avg_vol_10d": 1300000,
+    "premarket_price": 765.65,
+    "gap_pct": -0.0050,
+    "spread_bp": 1.0,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 762.00,
+    "resistance": 769.50,
+    "vwap_est": 765.65,
+    "rvol_est": 1.2,
+    "float_b": 0.85,
+    "key_levels": [758.00, 762.00, 765.65, 769.50, 773.00],
+    "note": "ARMED — ultra-liquid broad ETF, spread ~1 bp. Mandatory broad-tape direction indicator. Down ~0.5% premarket on US-Iran escalation + 10-year at 5.23%. SPY must be above its VWAP before any long entry on any name (broad-tape unlock first leg). Support 762.00 (estimated technical floor below today's open); resistance 769.50 (Friday close / prior support-turned-ceiling). prev_close and premarket_price estimated: Thursday anchor 767.29, NVDA buyback lifted tape on Friday; premarket estimated from plan's '-0.5% S&P futures' guidance."
+  },
+  "QQQ": {
+    "sector": "etf_tech",
+    "prev_close": 743.00,
+    "atr_day": 8.00,
+    "avg_vol_10d": 520000,
+    "premarket_price": 736.80,
+    "gap_pct": -0.0083,
+    "spread_bp": 1.0,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 732.00,
+    "resistance": 741.00,
+    "vwap_est": 736.80,
+    "rvol_est": 1.1,
+    "float_b": 0.75,
+    "key_levels": [728.00, 732.00, 736.80, 741.00, 744.00],
+    "note": "ARMED — ultra-liquid tech ETF, spread ~1 bp. Nasdaq-100 indicator; correlated with NVDA and INTC. Gapping lower ~0.8% in premarket — tech names under heavier selling than broader market (semiconductors leading down). Support 732.00 (estimated floor); resistance 741.00 (last Friday's Sep 25 floor level, now acts as ceiling). Use to confirm tech-sector direction before any NVDA or INTC evaluation. prev_close estimated from Friday Sep 25 session (Thursday anchor 741.09); premarket estimated proportional to SPY move with extra tech discount."
+  },
+  "IWM": {
+    "sector": "etf_smallcap",
+    "prev_close": 282.00,
+    "atr_day": 3.00,
+    "avg_vol_10d": 1220000,
+    "premarket_price": 280.30,
+    "gap_pct": -0.0060,
+    "spread_bp": 0.8,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 278.00,
+    "resistance": 282.00,
+    "vwap_est": 280.30,
+    "rvol_est": 1.0,
+    "float_b": 0.55,
+    "key_levels": [276.00, 278.00, 280.30, 282.00, 285.00],
+    "note": "ARMED — ultra-liquid small-cap ETF, spread ~0.8 bp. Russell 2000 risk-on/off barometer. Down ~0.6% premarket, consistent with broad risk-off. Support 278.00 (from Sep 25 levels, Sep 24 low area); resistance 282.00 (prev_close, also last week's opening reference). IWM bouncing above VWAP before SPY can be an early signal the risk-off is easing. prev_close estimated from Friday Sep 25 session (Thursday anchor 281.65, slight Friday gain assumed); premarket estimated proportional to broad tape."
   },
   "NVDA": {
     "sector": "technology",
@@ -17,7 +73,13 @@
     "spread_bp": 589.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,288,440 sh/day); -3.1% gap"
+    "support": 222.00,
+    "resistance": 229.00,
+    "vwap_est": 225.00,
+    "rvol_est": 1.5,
+    "float_b": 24.0,
+    "key_levels": [220.00, 222.00, 224.81, 229.00, 232.12],
+    "note": "DISARMED premarket (spread 589.8 bp >> 15 bp gate). Gapped -3.15% despite historic $150B buyback authorization from board — macro headwinds (oil +4%, yields at 5.23%) overriding the company-specific catalyst at open. Spread must tighten below 15 bp before any tick evaluation. Also serves as sector bellwether: NVDA above VWAP is required for the broad-tape unlock (second leg). Support 222.00 (round number below premarket low); resistance 229.00 (midpoint gap-fill area), 232.12 (full gap-fill / prev_close). If spread tightens, watch for VWAP reclaim under two-tick confirmation rule. Per Sep 25 precedent: spread tightened from 36.4 bp premarket to 2.2 bp by ~09:40 — real-time re-check is mandatory."
   },
   "INTC": {
     "sector": "technology",
@@ -29,11 +91,17 @@
     "spread_bp": 42.3,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,623,783 sh/day); -0.1% gap"
+    "support": 118.00,
+    "resistance": 122.50,
+    "vwap_est": 120.60,
+    "rvol_est": 1.1,
+    "float_b": 4.2,
+    "key_levels": [116.00, 118.00, 120.55, 122.50, 124.00],
+    "note": "DISARMED premarket (spread 42.3 bp >> 15 bp gate). Flat gap (-0.05%) but context is bearish: INTC dropped from 126.28 (Thu close) to 120.61 (Fri close) — a -4.5% one-day move — and the chip sector is under continued pressure today. Flat premarket may indicate stabilization or simply thin premarket flow. Sector-wide selling disarm rule requires all three conditions simultaneously before re-arming: spread < 15 bp, chip-sector broad stabilization (not just INTC in isolation), AND broad-tape unlock. Support 118.00 (round number floor below Friday's close); resistance 122.50 (gap area from Friday's decline). Highest ATR on the individual-stock list (5.3%/day) — size risk accordingly if ever re-armed."
   },
   "BAC": {
     "sector": "financials",
-    "prev_close": 56.5,
+    "prev_close": 56.50,
     "atr_day": 1.32,
     "avg_vol_10d": 2378431,
     "premarket_price": 56.47,
@@ -41,6 +109,12 @@
     "spread_bp": 3.5,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,378,431 sh/day); -0.1% gap"
+    "support": 55.75,
+    "resistance": 56.50,
+    "vwap_est": 56.50,
+    "rvol_est": 1.0,
+    "float_b": 7.5,
+    "key_levels": [55.00, 55.75, 56.47, 56.50, 57.00],
+    "note": "CONDITIONALLY ARMED (spread 3.5 bp, passes 15 bp gate). Only armed individual-stock name on the list. Flat gap (-0.05%); no specific company catalyst. Financials have mixed dynamics with 10-year at 5.23% — higher yields can expand net interest margins (bullish for bank earnings) but recession fears and weak consumer sentiment weigh. Primary and only setup: VWAP reclaim, two-tick confirmation required in risk-off. Full 8-condition checklist from day plan must be satisfied including flatten-scheduler PRECONDITION. Support 55.75 (from Sep 25 levels, established floor); resistance 56.50 (prev_close and last week's high). Low ATR (2.3%/day) — must confirm 2:1 R/R is achievable at entry. Playbook non-semiconductor substitute rule: satisfied by BAC's inclusion."
   }
 }

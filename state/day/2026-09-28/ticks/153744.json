@@ -1,0 +1,66 @@
+{
+  "tick_time_et": "15:37",
+  "tick_time_utc": "2026-09-28T19:37:44Z",
+  "action": "NO_TRADE",
+  "reason": "past_no_new_entries",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_submitted": null,
+  "gate_analysis": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "precondition_1_confirmed": false,
+    "precondition_1_note": "Flatten scheduler not confirmed by human — 12th consecutive impaired session",
+    "broad_tape_unlock": {
+      "spy_above_vwap": false,
+      "spy_last": 765.64,
+      "spy_vwap": 766.65,
+      "nvda_above_vwap": false,
+      "nvda_last": 228.83,
+      "nvda_vwap": 230.75,
+      "result": "FAIL"
+    }
+  },
+  "candidates_evaluated": {
+    "BAC": {
+      "last": 55.505,
+      "vwap": 55.97,
+      "above_vwap": false,
+      "rel_volume": 0.61,
+      "spread_bp": 1.8,
+      "blocked_by": ["past_no_new_entries", "below_vwap", "rel_vol_too_low"]
+    },
+    "NVDA": {
+      "last": 228.83,
+      "vwap": 230.75,
+      "above_vwap": false,
+      "rel_volume": 1.58,
+      "spread_bp": 0.9,
+      "blocked_by": ["past_no_new_entries", "below_vwap"]
+    },
+    "INTC": {
+      "last": 115.77,
+      "vwap": 116.4,
+      "above_vwap": false,
+      "rel_volume": 1.0,
+      "spread_bp": 0.9,
+      "blocked_by": ["past_no_new_entries", "below_vwap", "sector_disarm_active"]
+    },
+    "IWM": {
+      "last": 280.4,
+      "vwap": 280.05,
+      "above_vwap": true,
+      "rel_volume": 0.89,
+      "spread_bp": 1.1,
+      "blocked_by": ["past_no_new_entries", "not_on_primary_watchlist", "rel_vol_too_low"]
+    }
+  },
+  "day_summary": {
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "equity": 999641.65,
+    "loss_budget_remaining": 3000.0
+  },
+  "next_event": "flatten-close at 3:50 PM ET"
+}

@@ -1,0 +1,23 @@
+{
+  "tick_time_et": "12:37",
+  "timestamp_et": "2026-09-29T12:37:28-04:00",
+  "minutes_since_open": 187,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_evaluated": [],
+  "decision": {
+    "reason": "PRECONDITION_1_HALT",
+    "detail": "Flatten scheduler unconfirmed for 10+ consecutive sessions (Sep 17–Sep 28). Day plan explicitly blocks all new entries until a human confirms the flatten scheduler is armed. All other gates also fail independently: (1) Broad-tape unlock fails — NVDA below VWAP ($230.29 < $230.49 VWAP); (2) INTC below VWAP ($116.34 < $116.70), rel_vol 0.97 < 1.5 minimum, no ORB breakout; (3) NVDA rel_vol 1.14 < 1.5, no ORB breakout; (4) BAC below VWAP ($54.885 < $55.15), rel_vol 1.03 < 1.5; (5) 187 min past open exceeds 90-min ORB entry window (playbook rule). No positions to manage. Zero open positions, zero open orders."
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 230.29, "vwap": 230.49, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.14, "spread_bp": 1.3},
+    "INTC": {"last": 116.34, "vwap": 116.70, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.97, "spread_bp": 3.4},
+    "BAC":  {"last": 54.885, "vwap": 55.15,  "above_vwap": false, "orb_breakout": false, "rel_volume": 1.03, "spread_bp": 1.8}
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

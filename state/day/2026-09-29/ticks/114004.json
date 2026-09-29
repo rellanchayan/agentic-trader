@@ -1,0 +1,62 @@
+{
+  "tick_time_et": "11:40:04",
+  "date": "2026-09-29",
+  "minutes_since_open": 130,
+  "action": "NO_TRADE",
+  "primary_blocker": "PRECONDITION_1_HALT",
+  "precondition_1_detail": "Flatten scheduler unconfirmed for 10 consecutive sessions (Sep 17 through Sep 28). Day plan requires human confirmation before any entry is permitted.",
+  "candidate_evaluation": {
+    "INTC": {
+      "last": 117.11,
+      "vwap": 116.71,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 1.24,
+      "spread_bp": 1.7,
+      "gate_outcome": "FAIL",
+      "gate_reasons": [
+        "rel_volume 1.24 < 1.5 minimum required",
+        "130 min since open exceeds 90-min ORB window — setup expired"
+      ]
+    },
+    "NVDA": {
+      "last": 230.77,
+      "vwap": 230.51,
+      "orb_high": 232.81,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 1.40,
+      "spread_bp": 4.3,
+      "gate_outcome": "FAIL",
+      "gate_reasons": [
+        "rel_volume 1.40 < 1.5 minimum required",
+        "No ORB breakout (last $230.77 vs ORB high $232.81)",
+        "Spread 4.3 bp: inside 15 bp gate (eligible for re-arm), but other gates block"
+      ]
+    },
+    "BAC": {
+      "last": 54.905,
+      "vwap": 55.23,
+      "above_vwap": false,
+      "rel_volume": 1.21,
+      "spread_bp": 1.8,
+      "gate_outcome": "FAIL",
+      "gate_reasons": [
+        "Below VWAP — no VWAP reclaim signal",
+        "rel_volume 1.21 < 1.5 minimum required",
+        "VWAP reclaim off-table in MIXED/RANGE + imminent binary macro (GDP+PCE tomorrow)"
+      ]
+    }
+  },
+  "broad_tape_check": {
+    "NVDA_above_vwap": true,
+    "note": "SPY not in watchlist; broad-tape unlock requires SPY also above VWAP — not evaluable from this context"
+  },
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "loss_budget_remaining": 3000.0,
+  "account_equity": 999641.65
+}

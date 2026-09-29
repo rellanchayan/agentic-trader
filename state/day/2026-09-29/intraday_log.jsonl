@@ -1,0 +1,1 @@
+{"t":"11:40","action":"NO_TRADE","note":"PRECONDITION #1 HALT: flatten scheduler unconfirmed (10 consecutive sessions). Also: INTC rel_vol 1.24 < 1.5 and 130 min past open exceeds 90-min ORB window; NVDA rel_vol 1.40 < 1.5 no ORB breakout; BAC below VWAP rel_vol 1.21. All gates fail independently of precondition.","day_pnl":0.0}

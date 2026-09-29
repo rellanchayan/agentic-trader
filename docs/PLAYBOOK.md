@@ -41,6 +41,16 @@ made of **rules to follow**, not stories.
 - On FOMC Rate Decision Day (the day the Federal Reserve announces its rate decision, typically at 2:00 PM ET with a press conference following), institutional participants reduce intraday exposure throughout the entire morning session ahead of the binary print. Relative volume across candidates reliably falls and holds below the 1.5x gate all session; a zero-trade outcome is the expected and correct result — do not adjust gates to force entries. No new entries after 2:00 PM ET on FOMC Decision Day regardless of setup quality; the post-announcement tape whipsaws through the press conference and resolves directionally only after it ends. Tag FOMC Decision Day sessions separately in pattern analysis. (2026-09-16: sixth consecutive zero-trade session; FOMC rate decision at 2:00 PM ET; no setup qualified at any tick throughout the session.)
 - When PPI releases on Thursday and CPI releases on Friday in the same week, vol compression is a full-session phenomenon for Thursday — not just an afternoon effect. Relative volume can collapse from above-gate levels at the open (e.g., 2.38x at 9:30 AM) to noise-floor levels by the close (e.g., 1.04x) as the dual-release overhang deepens through the session. Treat the Thursday of a PPI+CPI week identically to a pre-CPI Tuesday: zero trades when no candidate maintains rel-vol above the 1.5x gate is the expected and correct outcome. (2026-09-09: INTC fell from 2.38x at open to 1.04x at close ahead of PPI Thu and CPI Fri.)
 - In the session immediately before a scheduled Non-Farm Payrolls release (the Thursday before a first-Friday NFP), institutional pre-positioning typically compresses relative volume across the watchlist from approximately 2:00 PM ET onward. Do not initiate or extend positions after 2:00 PM ET on a pre-NFP Thursday if rel-vol is declining — the compression is structural, not a tradeable signal. A zero-trade afternoon is the expected and correct outcome. (2026-09-02: NFP on 2026-09-04 expected to dominate Thursday afternoon tape.)
+- On GDP + PCE release days (the quarterly GDP advance/revision print combined with the PCE
+  deflator, typically released at 8:30 AM ET on the last trading day of a calendar quarter), the
+  binary 8:30 AM print distorts the opening range and is structurally equivalent to CPI release
+  day in its effect on the session. No ORB entries around the open — the opening range itself
+  reflects data-reaction noise, not directional intent. No new entries before 9:45–10:00 AM ET
+  at the earliest, and only after the tape has visibly settled. A zero-trade outcome is the
+  expected and correct result if no setup clears the gates after the delay window. Consider
+  whether the session warrants any entry at all given the binary print risk; if in doubt, treat it
+  as a no-trade day. Tag GDP + PCE release sessions separately in pattern analysis. (2026-09-30:
+  first GDP + PCE release day in program history; protocol established from journal 2026-09-29.)
 - On Non-Farm Payrolls release Fridays, the binary nature of the 8:30 AM ET data print (beat/miss/in-line) typically produces a MIXED/RANGE regime through the morning as the market digests the number. Treat NFP Fridays as structurally equivalent to compressed-window macro Fridays: require 2.0x relative volume for any ORB entry, VWAP reclaim is off-table per the MIXED/RANGE rule, and a zero-trade outcome when no setup clears those gates is correct — do not adjust gates to force entries. Tag NFP Friday sessions separately in pattern analysis; conflating a correct NFP-Friday zero with a full-window Thursday zero obscures the signal. (2026-09-04: first NFP Friday in program history; MIXED/RANGE regime; no setup cleared the 2.0x rel-vol gate all session; INTC orb_breakout flashed true at 14:40 but the active disarm correctly overrode it.)
 
 ## Setups by market mood
@@ -118,6 +128,16 @@ made of **rules to follow**, not stories.
   a high-gap name — especially combined with price below VWAP — is a reversal signal, not merely a
   transaction-cost problem. (2026-07-09: INTC 209.5 bp spread at 12:39 PM with price below VWAP;
   stock broke below ORB low by 2:39 PM. The gate fired early; the chart confirmed it two hours later.)
+- The spread re-arm protocol for a wide-premarket-spread name (e.g., NVDA starting at 40–70+ bp)
+  requires a spread deadline: if the name has not tightened to the <15 bp gate by 11:00 AM ET,
+  disarm it for the session and redirect evaluation to names that do qualify. Do not monitor a
+  wide-spread name through the entire session on the expectation that tightening will eventually
+  arrive — on some sessions it does (Sep 25: 589.8 bp to 0.9 bp; Sep 28: 46 bp to 1.3 bp) and
+  on others it does not (Sep 29: 69.5 bp, never tightened to <15 bp through all logged ticks).
+  The re-arm protocol is correct in principle, but a session-long open monitoring slot for a
+  single wide-spread name crowds out attention on qualifying candidates. The deadline is 11:00 AM
+  ET; if not met, the name is not a candidate for that day. (2026-09-29: confirmed by contrast
+  with Sep 25 and Sep 28 where tightening worked within 70 minutes.)
 - Premarket spread readings are not a reliable proxy for open-session liquidity on large-gap names.
   INTC showed 6.4 bp premarket on 2026-08-04 and blew out to 131.6 bp at the open — a 20x widening.
   When a candidate has a premarket gap of 3% or more, expect opening-minutes spread to be far wider
@@ -164,6 +184,15 @@ made of **rules to follow**, not stories.
   missed — not rejected by any gate, simply unseen. Treat two consecutive sessions of zero intraday
   log entries as a tick-loop scheduling failure requiring investigation, regardless of whether a plan
   exists. The fix is in the scheduler, not in any tunable parameter.
+- A session where the first intraday log entry arrives after 11:40 AM ET must be flagged as a
+  tick-loop late-start failure in postmarket reconciliation. The ORB entry window closes at
+  approximately 11:00 AM (90 minutes post-open); a first tick arriving after that window is a
+  scheduling outcome, not a trade decision. "No ORB trades" in a late-start session cannot be
+  counted as a correctly blocked setup — the opportunity window was already closed before the
+  loop evaluated it. Investigate why ticks do not start at 9:30 AM before attributing any
+  late-start zero-trade session to gate behavior. (2026-09-29: recurring pattern confirmed across
+  at least 3–4 sessions; INTC ORB window closed by 11:00 AM with no tick record between 9:30 and
+  11:40 AM.)
 - A single intraday log entry arriving after all entry windows have closed is the same scheduling
   failure as zero entries. It confirms only that the loop booted once, not that it ran at the
   required 2-minute cadence during the trading window. On 2026-07-23, one tick at 2:41 PM was the
@@ -267,6 +296,47 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-29: No tuning. Tuner unfrozen ("ok to tune", 68 days of history) but no rule fired —
+  parameters left unchanged. A zero-trade day provides no new signal about entry quality, stop
+  placement, or fill behavior; the tuner correctly declined. The tuning ledger remains empty; no
+  parameter has ever been changed by the tuner.
+  Today: zero trades, $0 realized P&L. Eleventh consecutive impaired or blocked session since
+  September 17. PRECONDITION #1 (flatten scheduler confirmed live) not cleared, halting all
+  entries. No candidate passed all gates at any logged tick: NVDA, INTC, and BAC all below VWAP
+  with sub-1.5x relative volume throughout. Account flat at $999,641.65.
+  Three durable observations from today, documented here for tracking but not yet written as full
+  standing rules (each adds to an existing pattern rather than establishing a new one):
+
+  (1) The early-session tick gap (9:30–11:40 AM) is now a confirmed recurring pattern — this is
+  the third or fourth session where no tick data exists before mid-morning. The ORB entry window
+  closes at 11:00 AM (90 minutes post-open). If the tick loop does not run before 11:40 AM, the
+  ORB setup cannot be evaluated. Rule added to Infrastructure: a session where the first intraday
+  log entry arrives after 11:40 AM must be flagged as a tick-loop late-start failure in postmarket
+  reconciliation. The ORB opportunity window is already closed or closing by that point; "no trades"
+  in this case is not a decision outcome, it is a scheduling outcome. The root cause (why ticks do
+  not start at 9:30 AM) must be investigated before the next ORB setup is counted as "correctly
+  blocked."
+
+  (2) GDP + PCE day protocol: September 30 is a GDP + PCE print day (8:30 AM ET). These are
+  the highest-binary macro prints of the quarter and are equivalent to CPI release day in their
+  effect on the opening range. No ORB entries around the open — the opening range itself will be
+  distorted by the data reaction. No new entries before 9:45–10:00 AM ET at the earliest, and even
+  then only after the tape stabilizes. Consider whether any entry is worth taking at all on a
+  GDP + PCE print day; a zero-trade outcome is correct if no setup clears the gate after the delay.
+  Rule added to Time of day.
+
+  (3) NVDA spread acceptance: when NVDA's premarket spread does not tighten to under 15 bp by
+  mid-morning (in contrast to the Sep 25 and Sep 28 sessions where spreads collapsed from 589.8 bp
+  and 46 bp respectively to under 2 bp within the first 70 minutes), accept that NVDA is not a
+  tradeable candidate for that session and redirect attention to names that do qualify. Do not
+  monitor NVDA through the entire session waiting for a tightening that may not arrive. The re-arm
+  protocol is correct in principle — but it requires a deadline: if NVDA's spread has not reached
+  the <15 bp gate by 11:00 AM ET, disarm it for the session.
+
+  All-time stats (68 days, 31 trades, 0.46 trades/day, 19.4% win rate, avg win +0.221R, avg loss
+  -0.489R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Lifetime LIMIT fill rate 81% (25/31). Tuning ledger remains
+  empty; no parameter has ever been changed by the tuner.
 - 2026-09-28: No tuning. Tuner unfrozen ("ok to tune", 70 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. Zero trades today ($0 realized P&L). Account equity
   $999,641.65 (total return -0.01% since 2026-06-25). A zero-trade day provides no new signal about

@@ -296,6 +296,27 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-09-30: No tuning. Tuner unfrozen ("ok to tune", 71 days of history) but no rule fired —
+  parameters left unchanged. A zero-trade day provides no new signal about entry quality, stop
+  placement, or fill behavior; the tuner correctly declined. The tuning ledger remains empty; no
+  parameter has ever been changed by the tuner.
+  Today: zero trades, $0 realized P&L. Twelfth consecutive impaired or blocked session since
+  September 17. PRECONDITION #1 (flatten scheduler confirmed live) not cleared, halting all
+  entries. Today is also GDP + PCE release day (8:30 AM ET, end of calendar quarter) — the first
+  occurrence of this event type in program history. A zero-trade outcome is the correct and expected
+  result: the binary 8:30 AM print distorts the opening range (equivalent to CPI release day), and
+  PRECONDITION #1 independently blocked any entry regardless. The GDP + PCE protocol was pre-written
+  in the Time of day section based on yesterday's journal; today confirms it. No new rule is needed.
+  Escalation status: the flatten scheduler has been unconfirmed for 12 consecutive sessions (Sep 17,
+  21, 22, 23, 24, 25, 26, 28, 29, 30 plus Sep 22 carryover and today). The standing infrastructure
+  rule (added 2026-09-25) already declares this a systemic failure requiring human intervention at
+  5+ sessions. The counter is now at 12. Trading cannot resume safely until a human verifies or
+  re-configures the flatten scheduler. The bot will continue to HALT on PRECONDITION #1 in every
+  subsequent session until a human clears it.
+  No new durable rules warranted tonight. All existing rules correctly prescribed the observed
+  outcome. All-time stats (71 days, 31 trades, 0.44 trades/day, 19.4% win rate, avg win +0.221R,
+  avg loss -0.489R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R;
+  VWAP reclaim 2 trades, 0 wins, -0.368R. Account equity $999,641.65. Tuning ledger remains empty.
 - 2026-09-29: No tuning. Tuner unfrozen ("ok to tune", 68 days of history) but no rule fired —
   parameters left unchanged. A zero-trade day provides no new signal about entry quality, stop
   placement, or fill behavior; the tuner correctly declined. The tuning ledger remains empty; no

@@ -1,0 +1,35 @@
+{
+  "tick_time_et": "09:40:36",
+  "tick_time_utc": "2026-09-30T13:40:36Z",
+  "action": "HALT",
+  "reason": "No day plan found (day_plan_found: false). Premarket phase did not complete before ticks began. Per PLAYBOOK and agent rules, no trades are permitted without a plan. Additionally, today is a GDP + PCE release day (binary 8:30 AM ET print); even if a plan existed, no ORB entries would be allowed before 9:45-10:00 AM ET. No positions open, no orders placed.",
+  "positions_managed": [],
+  "new_entries_considered": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "market_notes": {
+    "AAPL": "spread 3.0bp OK, above VWAP, no ORB breakout, rel_vol 3.12x — would be interesting but no plan",
+    "NVDA": "spread 3.5bp OK, above VWAP, no ORB breakout, rel_vol 2.92x — would be interesting but no plan",
+    "GOOGL": "spread 21.3bp OK (under 25bp), above VWAP, rel_vol 3.46x — borderline spread",
+    "MSFT": "spread 36.7bp FAIL (over 25bp max)",
+    "AMD": "spread 71.9bp FAIL (over 25bp max)",
+    "META": "spread 72.4bp FAIL (over 25bp max)",
+    "TSLA": "spread 224.7bp FAIL (over 25bp max)",
+    "AVGO": "spread 249.8bp FAIL (over 25bp max)",
+    "CRM": "spread 1046.9bp FAIL (over 25bp max)",
+    "AMZN": "spread 12.6bp OK but below VWAP",
+    "NFLX": "spread 5.7bp OK but below VWAP, rel_vol only 1.12x (under 1.5x min)",
+    "ORCL": "spread 9.6bp OK but below VWAP"
+  },
+  "gdp_pce_day_note": "Today is a GDP + PCE release day (8:30 AM ET quarterly print). Binary macro event equivalent to CPI release day. No ORB entries before 9:45-10:00 AM ET at earliest. Zero-trade outcome is expected and correct if no setup clears gates after the delay window.",
+  "halt_reason_primary": "Missing day plan (day_plan_found: false)",
+  "halt_reason_secondary": "GDP+PCE release day — no entries before 9:45 AM ET",
+  "infrastructure_note": "This is a confirmed recurring issue. Missing plan is the 12th or more impaired/blocked session. The premarket runner must write the plan before 9:28 AM ET. Investigate premarket scheduler timing before next session."
+}

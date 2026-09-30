@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "date": "2026-09-29",
+    "generated_utc": "2026-09-29T13:30:49.350532+00:00",
+    "screener_updated_utc": "2026-09-29T13:31:00.000000+00:00",
+    "source": "watchlist_build",
+    "candidates_considered": 3,
+    "top": 3,
+    "note": "Pre-market screen reviewed by day-screener agent. All 3 names retained; no additional names added (no fresh quote data available for candidates beyond what the screener returned — honesty rule prohibits padding). ORB levels fill in live after the open."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 228.89,
+    "atr_day": 5.14,
+    "avg_vol_10d": 2713800,
+    "premarket_price": 231.69,
+    "gap_pct": 0.0122,
+    "spread_bp": 69.5,
+    "support": 228.89,
+    "resistance": 234.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "+1.2% gap on continued $150B buyback catalyst (authorized prior sessions); spread 69.5 bp — disarmed at open, monitor every tick for tightening below 15 bp (historical precedent: 589.8 bp on Sep 28 compressed to 1.3 bp by midday Sep 25); semiconductor sector bellwether required for broad-tape unlock — SPY AND NVDA must both be above VWAP before any ORB or momentum entry in any name; support at prev_close 228.89 (key level where yesterday's session closed); resistance at 234.00 (round number, ~1 ATR above premarket price)"
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 116.12,
+    "atr_day": 6.73,
+    "avg_vol_10d": 2922193,
+    "premarket_price": 116.27,
+    "gap_pct": 0.0013,
+    "spread_bp": 5.2,
+    "support": 114.00,
+    "resistance": 118.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "flat +0.1% gap; no company-specific catalyst today; tight spread 5.2 bp passes the gate; semiconductor sector was on multi-day disarm (Sep 28 plan: sector-wide selling from US-Iran risk and 10-yr yield at 5.23%); disarm carries forward until broad sector stabilization confirmed across multiple chip names simultaneously — single-name bounce while peers remain weak is insufficient; support 114.00 (~$2 below prev_close, round number); resistance 118.00 (~$2 above prev_close, round number)"
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 55.46,
+    "atr_day": 1.38,
+    "avg_vol_10d": 2550175,
+    "premarket_price": 55.30,
+    "gap_pct": -0.0029,
+    "spread_bp": 7.2,
+    "support": 54.50,
+    "resistance": 56.00,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "-0.3% gap; no company-specific catalyst; good spread 7.2 bp; non-semiconductor substitute — required by playbook when semiconductor disarm is active for 2+ consecutive sessions; financials have mixed dynamics with yields elevated: higher NIM potential vs. recession headwinds; low ATR (1.38 per day) limits range — target and stop must be sized to this; prev_close 55.46 is near-term resistance given gap-down open; support at 54.50 (~0.7 ATR below, round number); VWAP reclaim is the primary setup if tape stabilizes — two-tick VWAP confirmation required (three simultaneous macro headwinds: oil, yields, geopolitical risk)"
+  }
+}

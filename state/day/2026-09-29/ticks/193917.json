@@ -1,0 +1,7 @@
+{
+  "t": "19:39",
+  "action": "NO_TRADE",
+  "note": "PRECONDITION #1 HALT: flatten scheduler unconfirmed (11+ consecutive sessions). Past no-new-entries cutoff (15:30 ET). No open positions. All stocks below VWAP: NVDA rv=0.86 below VWAP; INTC rv=0.73 below VWAP; BAC rv=0.79 below VWAP. Flatten window (15:50) not yet reached.",
+  "day_pnl": 0.0,
+  "timestamp": "2026-09-29T19:39:17.877806"
+}

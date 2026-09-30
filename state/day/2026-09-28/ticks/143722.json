@@ -1,0 +1,36 @@
+{
+  "tick_time_et": "14:37:22",
+  "action": "NO_TRADE",
+  "verdict_from_preflight": "PROCEED",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "entry_evaluated": {
+    "BAC": {
+      "gate_vwap": "FAIL — last 55.62 < VWAP 56.05",
+      "gate_rel_volume": "FAIL — 0.63x < 1.5x minimum",
+      "gate_broad_tape": "FAIL — NVDA below VWAP"
+    },
+    "NVDA": {
+      "gate_vwap": "FAIL — last 229.81 < VWAP 230.90",
+      "gate_spread": "PASS — 1.3 bp (tight)",
+      "gate_broad_tape": "FAIL — self is the bellwether, below VWAP"
+    },
+    "INTC": {
+      "gate_vwap": "FAIL — last 115.25 < VWAP 116.51",
+      "gate_sector_disarm": "FAIL — semiconductor sector disarm active",
+      "gate_rel_volume": "FAIL — 1.06x < 1.5x minimum"
+    }
+  },
+  "gate_summary": {
+    "precondition_1_flatten_scheduler": "BLOCKED — not confirmed by human (11th consecutive session)",
+    "broad_tape_unlock_spy": "PASS — SPY 766.82 > VWAP 766.73",
+    "broad_tape_unlock_nvda": "FAIL — NVDA 229.81 < VWAP 230.90",
+    "broad_tape_unlock_overall": "FAIL"
+  },
+  "decision_reason": "PRECONDITION #1 unconfirmed and broad-tape unlock fails (NVDA below VWAP). BAC below VWAP with 0.63x rel_vol. No setups qualify under risk-off regime. Zero trades correct.",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "equity": 999641.65
+}

@@ -1,0 +1,56 @@
+{
+  "tick_time_et": "12:40",
+  "timestamp_et": "2026-09-28T12:40:40-04:00",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION#1 unconfirmed — flatten scheduler not confirmed live by a human (10th consecutive impaired session). Hard HALT overrides all other evaluation.",
+  "gate_outcomes": {
+    "precondition_1_flatten_scheduler": "FAIL — unconfirmed, 10th consecutive session",
+    "halt_file": "PASS — .HALT_TRADING absent",
+    "day_stop": "PASS — day P&L $0.00, loss budget $3,000 intact",
+    "market_open": "PASS — 190 min since open, pre-3:30 PM cutoff",
+    "broad_tape_unlock_SPY": "PASS — SPY last 767.46 > VWAP 766.55 (+0.91)",
+    "broad_tape_unlock_NVDA": "PASS — NVDA last 231.42 > VWAP 231.02 (+0.40)",
+    "broad_tape_unlock_combined": "PASS — both SPY and NVDA above VWAP (first time today)"
+  },
+  "candidates": {
+    "BAC": {
+      "spread_bp": 1.8,
+      "spread_gate": "PASS (1.8 < 25 bp)",
+      "above_vwap": false,
+      "vwap_gate": "FAIL — last 55.795 < VWAP 56.19",
+      "rel_volume": 0.73,
+      "rel_vol_gate": "FAIL — 0.73x < 1.5x minimum (2.0x preferred in risk-off)",
+      "verdict": "BLOCKED (VWAP + rel_vol gates fail; PRECONDITION#1 override anyway)"
+    },
+    "NVDA": {
+      "spread_bp": 0.9,
+      "spread_gate": "PASS (0.9 < 15 bp — tightened dramatically from 589.8 bp premarket)",
+      "above_vwap": true,
+      "vwap_gate": "PASS — last 231.42 > VWAP 231.02",
+      "rel_volume": 2.21,
+      "rel_vol_gate": "PASS — 2.21x > 1.5x",
+      "two_tick_status": "Would start Tick 1 of 2 — but moot: PRECONDITION#1 blocks entry",
+      "verdict": "BLOCKED by PRECONDITION#1. Spread/VWAP/rel_vol all pass — NVDA would be evaluable if scheduler confirmed."
+    },
+    "INTC": {
+      "spread_bp": 1.7,
+      "spread_gate": "PASS (1.7 < 15 bp — tightened from 42.3 bp premarket)",
+      "above_vwap": false,
+      "vwap_gate": "FAIL — last 116.415 < VWAP 116.73",
+      "rel_volume": 1.41,
+      "rel_vol_gate": "FAIL — 1.41x < 1.5x",
+      "sector_disarm": "ACTIVE — sector-wide semiconductor selling; chip sector not broadly stabilized",
+      "verdict": "BLOCKED (VWAP + rel_vol + sector disarm; PRECONDITION#1 override anyway)"
+    },
+    "SPY": {
+      "note": "Broad-tape unlock leg only — not evaluated as a trade candidate this tick (QQQ not on watchlist for today; BAC is the non-semiconductor substitute)"
+    }
+  },
+  "positions_managed": "none — 0 open positions",
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_used": 0,
+  "notable": "Broad-tape unlock passes for the first time today (SPY and NVDA both above VWAP). NVDA spread fully recovered from 589.8 bp premarket disarm to 0.9 bp. NVDA above VWAP at 2.21x rel_vol — would be evaluable for two-tick VWAP reclaim if PRECONDITION#1 were cleared. Zero trades is correct under current infrastructure HALT."
+}

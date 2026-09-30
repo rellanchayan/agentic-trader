@@ -1,0 +1,72 @@
+{
+  "tick_time_et": "13:40",
+  "timestamp_et": "2026-09-30T13:40:04-04:00",
+  "action": "NO_TRADE",
+  "decision_summary": "PRECONDITION #1 HALT blocks all entries. No positions to manage.",
+  "precondition_1_halt": true,
+  "precondition_1_note": "Flatten scheduler unconfirmed for 12+ consecutive sessions (Sep 17 through Sep 30). Human intervention required before any new entry.",
+  "gate_evaluation": {
+    "broad_tape_unlock": {
+      "result": "FAIL",
+      "nvda_last": 230.33,
+      "nvda_vwap": 230.65,
+      "nvda_above_vwap": false,
+      "spy_last": 767.37,
+      "spy_vwap": 767.89,
+      "spy_above_vwap": false,
+      "note": "Both NVDA and SPY below VWAP — broad-tape unlock fails even without PRECONDITION #1"
+    },
+    "orb_entry_window": {
+      "result": "CLOSED",
+      "note": "250 minutes since open; ORB window closes at 90 minutes post-open (11:00 AM ET)"
+    },
+    "candidates": {
+      "INTC": {
+        "rel_volume": 0.81,
+        "rel_vol_gate": "FAIL (< 1.5x)",
+        "spread_bp": 1.7,
+        "spread_gate": "PASS (< 15 bp)",
+        "above_vwap": true,
+        "orb_breakout": false,
+        "verdict": "BLOCKED — rel_vol below gate"
+      },
+      "NVDA": {
+        "rel_volume": 1.02,
+        "rel_vol_gate": "FAIL (< 1.5x)",
+        "spread_bp": 0.9,
+        "spread_gate": "PASS (< 15 bp)",
+        "above_vwap": false,
+        "orb_breakout": false,
+        "verdict": "BLOCKED — rel_vol below gate, below VWAP"
+      },
+      "QQQ": {
+        "rel_volume": 0.39,
+        "rel_vol_gate": "FAIL (< 1.5x)",
+        "spread_bp": 0.7,
+        "spread_gate": "PASS",
+        "above_vwap": false,
+        "orb_breakout": true,
+        "vwap_reclaim_eligible": false,
+        "vwap_reclaim_note": "VWAP reclaim off-table in MIXED/RANGE regime (playbook rule)",
+        "verdict": "BLOCKED — rel_vol below gate, VWAP reclaim off-table in MIXED/RANGE"
+      },
+      "SPY": {
+        "rel_volume": 0.51,
+        "rel_vol_gate": "FAIL (< 1.5x)",
+        "above_vwap": false,
+        "verdict": "BLOCKED — rel_vol below gate, below VWAP, tertiary only"
+      }
+    }
+  },
+  "positions_managed": [],
+  "open_orders_reviewed": [],
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "regime": "MIXED/RANGE",
+  "session_notes": "GDP+PCE release day; quarter-end rebalancing flows. Broad tape soft all afternoon. No qualifying candidate at any tick so far today. Session likely zero-trade given ORB window closed and all rel-vol readings well below gate."
+}

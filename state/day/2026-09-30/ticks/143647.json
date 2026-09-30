@@ -1,0 +1,48 @@
+{
+  "t": "14:36",
+  "timestamp_et": "2026-09-30T14:36:47-04:00",
+  "action": "NO_TRADE",
+  "note": "PRECONDITION #1 HALT: flatten scheduler unconfirmed (12+ consecutive sessions, Sep 17–Sep 30). Even if cleared: ORB entry window closed (>90 min since open; window closed at 11:00 AM); broad-tape unlock fails (SPY $766.23 < VWAP $767.77; NVDA $230.545 < VWAP $230.62); INTC above VWAP ($119.41 vs $118.99) but rel_vol 0.76x < 1.5x, no ORB breakout; NVDA rel_vol 0.92x < 1.5x, no ORB breakout; QQQ rel_vol 0.37x < 1.5x, VWAP reclaim off-table in MIXED/RANGE; SPY rel_vol 0.50x < 1.5x. No positions to manage. 54 min to no-new-entries deadline (3:30 PM). Zero P&L, all cash.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "equity": 999641.65,
+  "candidates_checked": {
+    "INTC": {
+      "last": 119.41,
+      "vwap": 118.99,
+      "above_vwap": true,
+      "spread_bp": 1.7,
+      "rel_volume": 0.76,
+      "orb_breakout": false,
+      "gate_result": "BLOCK: rel_vol 0.76x < 1.5x; no ORB breakout; ORB window closed"
+    },
+    "NVDA": {
+      "last": 230.545,
+      "vwap": 230.62,
+      "above_vwap": false,
+      "spread_bp": 0.9,
+      "rel_volume": 0.92,
+      "orb_breakout": false,
+      "gate_result": "BLOCK: below VWAP (broad-tape unlock fails); rel_vol 0.92x < 1.5x; no ORB breakout; ORB window closed"
+    },
+    "QQQ": {
+      "last": 742.6,
+      "vwap": 743.22,
+      "above_vwap": false,
+      "spread_bp": 0.8,
+      "rel_volume": 0.37,
+      "orb_breakout": false,
+      "gate_result": "BLOCK: below VWAP; rel_vol 0.37x < 1.5x; VWAP reclaim off-table in MIXED/RANGE"
+    },
+    "SPY": {
+      "last": 766.23,
+      "vwap": 767.77,
+      "above_vwap": false,
+      "spread_bp": 0.5,
+      "rel_volume": 0.5,
+      "orb_breakout": false,
+      "gate_result": "BLOCK: below VWAP (broad-tape unlock fails); rel_vol 0.50x < 1.5x; QQQ not documented as blocked before pivot"
+    }
+  }
+}

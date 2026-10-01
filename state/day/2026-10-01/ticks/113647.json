@@ -1,0 +1,23 @@
+{
+  "timestamp_et": "2026-10-01T11:36:47-04:00",
+  "minutes_since_open": 126,
+  "decision": "NO_TRADE",
+  "blocks": [
+    "PRECONDITION_1: flatten scheduler unconfirmed for 13 consecutive sessions (Sep 17 through Oct 1); overriding halt per day plan",
+    "ORB_WINDOW_CLOSED: 11:36 AM ET is 36 minutes past the 11:00 AM ORB entry deadline",
+    "BROAD_TAPE_UNLOCK_FAILS: SPY last 759.36 < VWAP 761.42 (above_vwap=false); NVDA last 229.76 < VWAP 230.05 (above_vwap=false)",
+    "REL_VOL_BELOW_GATE: INTC 1.4x, QQQ 1.05x, NVDA 1.38x (all below 2.0x elevated threshold for MIXED regime)",
+    "NO_ORB_BREAKOUTS: orb_breakout=false for all names"
+  ],
+  "market_snapshot": {
+    "SPY": {"last": 759.36, "vwap": 761.42, "above_vwap": false, "rel_volume": 1.31},
+    "NVDA": {"last": 229.755, "vwap": 230.05, "above_vwap": false, "spread_bp": 80.4, "rel_volume": 1.38},
+    "INTC": {"last": 119.005, "vwap": 118.95, "above_vwap": true, "spread_bp": 1.7, "rel_volume": 1.4, "orb_high": 119.79, "orb_breakout": false},
+    "QQQ": {"last": 736.88, "vwap": 739.54, "above_vwap": false, "spread_bp": 0.8, "rel_volume": 1.05, "orb_breakout": false}
+  },
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "note": "All entry conditions independently blocked. Correct outcome is zero trades. No forced entries. Wait for next tick or end of day."
+}

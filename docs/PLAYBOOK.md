@@ -296,6 +296,27 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-01: No tuning. Tuner unfrozen ("ok to tune", 72 days of history) but no rule fired —
+  parameters left unchanged. A zero-trade day blocked by PRECONDITION #1 provides no new signal
+  about entry quality, stop placement, or fill behavior; the tuner correctly declined.
+  Today: zero trades, $0 realized P&L. Thirteenth consecutive impaired or blocked session since
+  September 17. PRECONDITION #1 (flatten scheduler confirmed live) not cleared, halting all entries.
+  Session context: pre-NFP Thursday (NFP release scheduled for tomorrow, Oct 2) and first trading
+  day of Q4 2026. Both contexts are structurally covered by existing rules — the pre-NFP Thursday
+  afternoon compression rule (added 2026-09-02) already applies, and the 10-year at 5.33% places
+  the session squarely within the documented risk-off framework. No new durable rule is warranted:
+  the session was blocked entirely by PRECONDITION #1 before any gate had the opportunity to fire,
+  so today provides zero observational evidence about setup quality, gate calibration, or Q4 opening
+  dynamics. Noting Q4 opening day here for context; if future Q4 opening days develop a recognizable
+  pattern (institutional rebalancing affecting vol profile), revisit then.
+  Escalation status: flatten scheduler unconfirmed for 13 consecutive sessions. The standing
+  infrastructure rule (added 2026-09-25) declared this a systemic failure requiring human intervention
+  at 5+ sessions. The counter is now at 13. No strategy or tuning change can substitute for the
+  required human intervention.
+  No new durable rules warranted tonight. All-time stats (72 days, 31 trades, 0.43 trades/day, 19.4%
+  win rate, avg win +0.221R, avg loss -0.489R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum
+  1 trade, 0 wins, -0.975R; VWAP reclaim 2 trades, 0 wins, -0.368R. Tuning ledger remains empty;
+  no parameter has ever been changed by the tuner.
 - 2026-09-30: No tuning. Tuner unfrozen ("ok to tune", 71 days of history) but no rule fired —
   parameters left unchanged. A zero-trade day provides no new signal about entry quality, stop
   placement, or fill behavior; the tuner correctly declined. The tuning ledger remains empty; no

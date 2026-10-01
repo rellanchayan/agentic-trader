@@ -1,0 +1,24 @@
+{
+  "timestamp_et": "2026-10-01T14:37:49-04:00",
+  "minutes_since_open": 307,
+  "decision": "NO_TRADE",
+  "reason": "PRECONDITION_1_blocks + past_no_new_entries_cutoff (14:37 ET > 14:00 pre-NFP Thursday rule) + ORB_window_closed (expired 11:00 AM) + VWAP_reclaim_off_table (pre-NFP Thursday + MIXED/RANGE) + momentum_off_table (0/1 wins, -0.975R)",
+  "blocking_conditions": [
+    "PRECONDITION_1: flatten scheduler unconfirmed for 13+ consecutive sessions — overriding HALT per day plan",
+    "TIME: 14:37 ET past pre-NFP Thursday 14:00 ET no-new-entries cutoff",
+    "ORB_WINDOW_CLOSED: expired at 11:00 AM ET (90 min post-open)",
+    "VWAP_RECLAIM_OFF_TABLE: pre-NFP Thursday + MIXED/RANGE + imminent binary macro event (NFP Fri 8:30 AM)",
+    "MOMENTUM_OFF_TABLE: 0/1 wins, -0.975R expectancy — positive expectancy required first"
+  ],
+  "market_snapshot": {
+    "SPY": {"last": 764.75, "vwap": 762.01, "above_vwap": true, "rel_volume": 1.07},
+    "NVDA": {"last": 232.08, "vwap": 230.22, "above_vwap": true, "rel_volume": 0.84, "spread_bp": 1.3},
+    "INTC": {"last": 121.085, "vwap": 119.57, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.99, "spread_bp": 3.3},
+    "QQQ":  {"last": 743.47, "vwap": 740.14, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.87, "spread_bp": 0.8}
+  },
+  "broad_tape_unlock": "PASSES (SPY above VWAP, NVDA above VWAP) — but moot: all entry windows closed",
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "account_equity": 999641.65
+}

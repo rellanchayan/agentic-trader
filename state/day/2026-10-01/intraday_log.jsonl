@@ -1,0 +1,1 @@
+{"timestamp_et":"2026-10-01T10:37:47-04:00","minutes_since_open":67,"decision":"NO_TRADE","reason":"PRECONDITION_1_blocks + broad_tape_unlock_fails (SPY below VWAP) + INTC/NVDA/QQQ rel_vol < 2.0x, no ORB breakouts","positions_open":0,"trades_today":0,"day_pnl":0.0}

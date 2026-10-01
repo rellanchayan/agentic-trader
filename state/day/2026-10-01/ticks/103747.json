@@ -1,0 +1,70 @@
+{
+  "timestamp_et": "2026-10-01T10:37:47-04:00",
+  "minutes_since_open": 67,
+  "decision": "NO_TRADE",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "reasons": [
+        "PRECONDITION_1_blocks: flatten_scheduler_unconfirmed_12_sessions",
+        "broad_tape_unlock_fails: SPY below VWAP (761.72 < 762.22)",
+        "rel_vol 1.72x < 2.0x required (MIXED regime)",
+        "no_orb_breakout: last 119.37 < orb_high 119.79"
+      ],
+      "spread_bp": 4.2,
+      "rel_volume": 1.72,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    {
+      "ticker": "NVDA",
+      "status": "DISARMED",
+      "reasons": [
+        "PRECONDITION_1_blocks: flatten_scheduler_unconfirmed_12_sessions",
+        "broad_tape_unlock_fails: SPY below VWAP (761.72 < 762.22)",
+        "rel_vol 1.41x < 2.0x required (MIXED regime)",
+        "no_orb_breakout: last 230.26 < orb_high 231.33"
+      ],
+      "spread_bp": 3.9,
+      "rel_volume": 1.41,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    {
+      "ticker": "QQQ",
+      "status": "DISARMED",
+      "reasons": [
+        "PRECONDITION_1_blocks: flatten_scheduler_unconfirmed_12_sessions",
+        "below_vwap: 739.63 < 740.11",
+        "rel_vol 1.25x < 2.0x required (MIXED regime)",
+        "no_orb_breakout: last 739.63 < orb_high 743.78"
+      ],
+      "spread_bp": 0.9,
+      "rel_volume": 1.25,
+      "above_vwap": false,
+      "orb_breakout": false
+    }
+  ],
+  "gate_outcomes": {
+    "precondition_1_flatten_scheduler": "FAIL — unconfirmed 12+ consecutive sessions",
+    "halt_file": "absent",
+    "broad_tape_unlock": "FAIL — SPY below VWAP (761.72 < 762.22); NVDA above VWAP (pass)",
+    "orb_window_open": true,
+    "past_no_new_entries_cutoff": false,
+    "in_flatten_window": false
+  },
+  "market_snapshot": {
+    "SPY": {"last": 761.715, "vwap": 762.22, "above_vwap": false, "spread_bp": 2.9},
+    "NVDA": {"last": 230.26, "vwap": 230.14, "above_vwap": true, "spread_bp": 3.9, "rel_volume": 1.41},
+    "INTC": {"last": 119.37, "vwap": 118.79, "above_vwap": true, "spread_bp": 4.2, "rel_volume": 1.72},
+    "QQQ": {"last": 739.63, "vwap": 740.11, "above_vwap": false, "spread_bp": 0.9, "rel_volume": 1.25}
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

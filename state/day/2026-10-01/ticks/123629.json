@@ -1,0 +1,22 @@
+{
+  "timestamp_et": "2026-10-01T12:36:29-04:00",
+  "minutes_since_open": 186,
+  "decision": "NO_TRADE",
+  "reasons": [
+    "PRECONDITION_1_blocks: flatten scheduler unconfirmed for 13+ consecutive sessions \u2014 overriding HALT per day plan",
+    "ORB_window_closed: entry window expired at 11:00 AM ET; current time 12:36 PM (96 min past deadline)",
+    "VWAP_reclaim_off_table: pre-NFP Thursday rule \u2014 MIXED/RANGE + imminent binary macro event (NFP tomorrow 8:30 AM)",
+    "momentum_off_table: 0/1 wins -0.975R insufficient expectancy",
+    "No open positions to manage"
+  ],
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "market_notes": {
+    "SPY": "above VWAP (762.41 > 761.23) \u2014 broad tape unlocked BUT ORB window closed",
+    "NVDA": "above VWAP (231.07 > 230.01) spread 4.3 bp \u2014 re-armed but no actionable setup",
+    "INTC": "orb_breakout=True but rel_vol 1.15x < 2.0x required; ORB window also closed",
+    "IWM": "orb_breakout=True rel_vol 1.98x (near 2.0x) but not on watchlist; ORB window closed",
+    "QQQ": "above VWAP, rel_vol 0.91x < 2.0x; no ORB breakout"
+  }
+}

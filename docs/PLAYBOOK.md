@@ -296,6 +296,30 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-02: No tuning. Tuner unfrozen ("ok to tune", 73 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: zero trades, $0 realized P&L. Fourteenth consecutive session without a realized trade
+  (Sep 17 through Oct 2). No morning plan was written today — premarket did not run. NFP Friday
+  (BLS Non-Farm Payrolls release at 8:30 AM ET). A zero-trade outcome on NFP Friday is the
+  expected and correct result: the NFP Friday protocol (require 2.0x rel-vol for ORB, VWAP
+  reclaim off-table in MIXED/RANGE regime) was already in place. Additionally, the missing
+  morning plan independently would have triggered a HALT condition per the standing infrastructure
+  rule (if docs/day_plan.md does not exist at 9:30 AM ET, treat it as a HALT condition). Both
+  the NFP Friday protocol and the missing-plan HALT independently prescribed zero trades; the
+  outcome is doubly correct.
+  No new durable rules warranted tonight. The NFP Friday zero-trade outcome is well-covered by
+  the existing protocol (added 2026-09-04). The missing-plan HALT is covered by the existing
+  infrastructure rule. No tuning change is warranted when a zero-trade day is entirely explained
+  by a missing plan and a macro-event protocol — no new signal about entry quality, stop
+  placement, or fill behavior.
+  Escalation status: flatten scheduler unconfirmed for 14 consecutive sessions. The standing
+  infrastructure rule (added 2026-09-25) declared this a systemic failure requiring human
+  intervention at 5+ sessions. The counter is now at 14. Trading cannot resume safely until a
+  human verifies or re-configures the flatten scheduler.
+  All-time stats (73 days, 31 trades, 0.42 trades/day, 19.4% win rate, avg win +0.22R, avg loss
+  -0.49R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Tuning ledger remains empty.
 - 2026-10-01: No tuning. Tuner unfrozen ("ok to tune", 72 days of history) but no rule fired —
   parameters left unchanged. A zero-trade day blocked by PRECONDITION #1 provides no new signal
   about entry quality, stop placement, or fill behavior; the tuner correctly declined.

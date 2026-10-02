@@ -1,0 +1,48 @@
+{
+  "tick_time_et": "11:38:35",
+  "date": "2026-10-02",
+  "action": "HOLD",
+  "positions_managed": [],
+  "entries_considered": [
+    {
+      "ticker": "TSLA",
+      "setup": "orb",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "rel_volume": 2.77,
+      "spread_bp": 19.3,
+      "verdict": "BLOCKED",
+      "block_reasons": ["PRECONDITION_1_uncleared", "broad_tape_unlock_fail_NVDA_below_VWAP"]
+    },
+    {
+      "ticker": "AVGO",
+      "setup": "orb",
+      "orb_breakout": true,
+      "above_vwap": false,
+      "rel_volume": 2.02,
+      "spread_bp": 17.8,
+      "verdict": "BLOCKED",
+      "block_reasons": ["PRECONDITION_1_uncleared", "above_vwap_false", "broad_tape_unlock_fail_NVDA_below_VWAP"]
+    },
+    {
+      "ticker": "NVDA",
+      "setup": "none",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "rel_volume": 2.35,
+      "spread_bp": 0.9,
+      "verdict": "BLOCKED",
+      "block_reasons": ["above_vwap_false", "broad_tape_unlock_bellwether_itself"]
+    }
+  ],
+  "blockers_active": [
+    "PRECONDITION_1: flatten scheduler unconfirmed (14th consecutive session)",
+    "no_day_plan: docs/plan/2026-10-02.md missing",
+    "broad_tape_unlock_fail: NVDA below VWAP (235.09 vs 236.38)",
+    "NFP_Friday: VWAP reclaim off-table, 2.0x rel-vol gate in effect"
+  ],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "slots_used": 0,
+  "equity": 999641.65
+}

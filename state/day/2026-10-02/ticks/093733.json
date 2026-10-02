@@ -1,0 +1,27 @@
+{
+  "tick_time_et": "09:37:33",
+  "date": "2026-10-02",
+  "action": "HALT",
+  "halt_reasons": [
+    "day_plan_found=false: premarket did not write a plan for today. Per playbook, missing plan is a HALT condition.",
+    "PRECONDITION_1: flatten scheduler unconfirmed for 14 consecutive sessions (Sep 17 through Oct 2). Standing rule requires human intervention before any new position.",
+    "NFP_FRIDAY: Non-Farm Payrolls released 8:30 AM ET. Binary macro print. NFP Friday rules apply: 2.0x rel-vol gate for ORB, VWAP reclaim off-table. Zero trades is correct when no setup clears elevated gates."
+  ],
+  "market_context": {
+    "minutes_since_open": 7,
+    "orb_formed": false,
+    "positions_open": 0,
+    "open_orders": 0,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "slots_remaining": 8
+  },
+  "candidate_scan": {
+    "result": "skipped",
+    "reason": "All three HALT conditions block any evaluation. No setup evaluated."
+  },
+  "order_submitted": false,
+  "equity": 999641.65
+}

@@ -1,0 +1,27 @@
+{
+  "timestamp_et": "2026-10-05T13:38:14-04:00",
+  "tick_time": "133814",
+  "action": "HALT",
+  "reason": "PRECONDITION #1 HALT active: flatten scheduler unconfirmed for 15+ consecutive sessions (Sep 17 through Oct 5). No human confirmation of flatten scheduler logged in intraday notes. Additional blocks: (1) ORB window closed — 248 min since open, past 90-min cutoff; (2) All rel volumes below 1.5x gate (SPY 0.67x, QQQ 0.70x, AAPL 0.93x, BAC 0.76x, NVDA 1.16x); NKE at 1.63x but off-table for longs per BofA Underperform downgrade in day plan; (3) Macro regime MIXED/RANGE leaning RISK-OFF per day plan (10yr ~5.28%, Brent ~$100, Middle East tensions). No setup qualifies on any gate. No trades placed.",
+  "market_snapshot": {
+    "SPY": {"last": 774.34, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.67, "spread_bp": 0.9},
+    "QQQ": {"last": 754.85, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.70, "spread_bp": 0.7},
+    "AAPL": {"last": 333.43, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.93, "spread_bp": 1.2},
+    "NKE": {"last": 33.645, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.63, "spread_bp": 3.0},
+    "BAC": {"last": 54.12, "above_vwap": true, "orb_breakout": false, "rel_volume": 0.76, "spread_bp": 1.8},
+    "NVDA": {"last": 237.48, "above_vwap": true, "orb_breakout": false, "rel_volume": 1.16, "spread_bp": 1.3}
+  },
+  "gate_outcomes": {
+    "SPY": "BLOCKED — rel_volume 0.67x < 1.5x gate; ORB window closed (248 min since open)",
+    "QQQ": "BLOCKED — rel_volume 0.70x < 1.5x gate; ORB window closed (248 min since open)",
+    "AAPL": "BLOCKED — rel_volume 0.93x < 1.5x gate; below VWAP",
+    "NKE": "BLOCKED — off-table for longs per BofA Underperform downgrade in day plan; shorts not permitted",
+    "BAC": "BLOCKED — rel_volume 0.76x < 1.5x gate",
+    "NVDA": "BLOCKED — rel_volume 1.16x < 1.5x gate; PRECONDITION #1 also active"
+  },
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0
+}

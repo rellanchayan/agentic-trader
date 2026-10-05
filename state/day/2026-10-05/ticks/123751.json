@@ -1,0 +1,75 @@
+{
+  "timestamp_et": "2026-10-05T12:37:51-04:00",
+  "tick_time": "123751",
+  "action": "HALT",
+  "reason": "PRECONDITION #1 HALT active: flatten scheduler unconfirmed for 15+ consecutive sessions (Sep 17 through Oct 5). No human confirmation logged in intraday notes. Additional blocks: (1) ORB window closed — 187 minutes since open, past the 90-minute ORB cutoff (11:00 AM ET); (2) all rel volumes below the 1.5x gate: SPY 0.76x, QQQ 0.82x, AAPL 0.92x, BAC 0.87x, NVDA 1.26x; (3) NKE off-table for longs per BofA Underperform downgrade in day plan. No setup qualifies on any gate. No trade placed.",
+  "candidates_evaluated": [
+    {
+      "ticker": "SPY",
+      "last": 773.89,
+      "spread_bp": 0.3,
+      "rel_volume": 0.76,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "PRECONDITION #1 HALT + rel_volume 0.76 < 1.5x gate + ORB window closed"
+    },
+    {
+      "ticker": "QQQ",
+      "last": 754.05,
+      "spread_bp": 0.7,
+      "rel_volume": 0.82,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "PRECONDITION #1 HALT + rel_volume 0.82 < 1.5x gate + ORB window closed"
+    },
+    {
+      "ticker": "AAPL",
+      "last": 334.54,
+      "spread_bp": 2.1,
+      "rel_volume": 0.92,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "PRECONDITION #1 HALT + rel_volume 0.92 < 1.5x gate + ORB window closed"
+    },
+    {
+      "ticker": "BAC",
+      "last": 54.15,
+      "spread_bp": 1.8,
+      "rel_volume": 0.87,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "PRECONDITION #1 HALT + rel_volume 0.87 < 1.5x gate + ORB window closed"
+    },
+    {
+      "ticker": "NKE",
+      "last": 33.625,
+      "spread_bp": 3.0,
+      "rel_volume": 1.95,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "PRECONDITION #1 HALT + BofA Underperform downgrade — longs off-table per day plan"
+    },
+    {
+      "ticker": "NVDA",
+      "last": 236.175,
+      "spread_bp": 0.8,
+      "rel_volume": 1.26,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED",
+      "block_reason": "PRECONDITION #1 HALT + rel_volume 1.26 < 1.5x gate + below VWAP"
+    }
+  ],
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0,
+  "broad_tape_unlock": false,
+  "broad_tape_note": "SPY above VWAP but NVDA below VWAP — broad-tape unlock gate not fully satisfied"
+}

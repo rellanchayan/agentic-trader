@@ -1,0 +1,19 @@
+{
+  "tick_time": "093748",
+  "timestamp_et": "2026-10-05T09:37:48-04:00",
+  "minutes_since_open": 7,
+  "verdict": "HALT",
+  "halt_reasons": [
+    "No day plan found: docs/plan/2026-10-05.md missing — PLAYBOOK HALT condition (missing plan at open)",
+    "Second consecutive session without a morning plan (2026-10-02 also missing) — PLAYBOOK Discipline: treat as scheduler/runner failure",
+    "Flatten scheduler unconfirmed for 15+ consecutive sessions — PRECONDITION #1 HALT active, human intervention required"
+  ],
+  "action": "no_trade",
+  "candidates_evaluated": [],
+  "orders_submitted": [],
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0
+}

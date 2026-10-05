@@ -1,0 +1,18 @@
+{
+  "timestamp_et": "2026-10-05T15:36:39-04:00",
+  "tick_time": "153639",
+  "action": "HALT",
+  "reason": "Past 3:30 PM ET no-new-entries cutoff (clock_flags.past_no_new_entries=true). PRECONDITION #1 HALT also active: flatten scheduler unconfirmed for 15+ consecutive sessions. No open positions to manage. Flatten window begins at 3:50 PM ET.",
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "candidates_evaluated": {
+    "SPY": "SKIP — past no-new-entries cutoff",
+    "QQQ": "SKIP — past no-new-entries cutoff",
+    "AAPL": "SKIP — past no-new-entries cutoff",
+    "NVDA": "SKIP — past no-new-entries cutoff",
+    "BAC": "SKIP — past no-new-entries cutoff",
+    "NKE": "SKIP — off-table (BofA downgrade); also past no-new-entries cutoff"
+  }
+}

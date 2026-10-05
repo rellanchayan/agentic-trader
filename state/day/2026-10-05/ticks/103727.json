@@ -1,0 +1,72 @@
+{
+  "tick_time": "103727",
+  "timestamp_et": "2026-10-05T10:37:27-04:00",
+  "action": "HALT",
+  "reason": "PRECONDITION #1 HALT — flatten scheduler unconfirmed for 15+ consecutive sessions (Sep 17 through Oct 5, 2026). The day plan explicitly blocks all new entries until a human confirms the flatten mechanism is armed. No confirmation has been logged in the intraday notes. Per PLAYBOOK Infrastructure section: 'If the flatten scheduler remains unconfirmed for 5 or more consecutive sessions, this is a systemic infrastructure failure that requires human intervention — the bot cannot self-repair it. A human must verify or re-configure the flatten scheduler before trading resumes.' Counter is now at 15.",
+  "candidates_evaluated": {
+    "SPY": {
+      "last": 771.87,
+      "spread_bp": 3.2,
+      "rel_volume": 1.02,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED — PRECONDITION #1 HALT before any candidate evaluated"
+    },
+    "QQQ": {
+      "last": 752.74,
+      "spread_bp": 1.2,
+      "rel_volume": 1.2,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED — PRECONDITION #1 HALT before any candidate evaluated"
+    },
+    "NVDA": {
+      "last": 237.06,
+      "spread_bp": 0.8,
+      "rel_volume": 2.02,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "note": "Spread tightened dramatically from 75bp at open to 0.8bp now — re-arm criteria satisfied. However PRECONDITION #1 blocks all entries.",
+      "gate_outcome": "BLOCKED — PRECONDITION #1 HALT"
+    },
+    "AAPL": {
+      "last": 333.75,
+      "spread_bp": 4.2,
+      "rel_volume": 1.68,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED — PRECONDITION #1 HALT; also below VWAP"
+    },
+    "BAC": {
+      "last": 54.245,
+      "spread_bp": 3.7,
+      "rel_volume": 1.78,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED — PRECONDITION #1 HALT"
+    },
+    "NKE": {
+      "last": 32.865,
+      "spread_bp": 3.0,
+      "rel_volume": 3.28,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "BofA downgraded to Underperform this morning — longs off-table per day plan.",
+      "gate_outcome": "BLOCKED — PRECONDITION #1 HALT; also day plan disarmed (BofA downgrade)"
+    }
+  },
+  "market_regime": "MIXED/RANGE leaning RISK-OFF",
+  "macro_context": "10yr yield ~5.28%, Brent crude ~$100/bbl, Middle East tensions. Both PMI events (9:45 AM S&P Global PMI and 10:00 AM ISM Non-Manufacturing PMI) have passed.",
+  "broad_tape_unlock": {
+    "SPY_above_vwap": true,
+    "NVDA_above_vwap": true,
+    "unlocked": true,
+    "note": "Broad-tape unlock IS satisfied, but moot — PRECONDITION #1 blocks all entries regardless"
+  },
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0,
+  "escalation_note": "Flatten scheduler unconfirmed counter: 15 consecutive sessions. This is a systemic infrastructure failure. Human intervention required. Bot cannot self-repair. All trading remains halted until a human verifies or re-configures the flatten scheduler."
+}

@@ -1,0 +1,62 @@
+{
+  "time_et": "11:37",
+  "timestamp": "2026-10-06T11:37:50-04:00",
+  "minutes_since_open": 127,
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT+ORB_WINDOW_CLOSED+BROAD_TAPE_UNLOCK_FAIL",
+  "detail": "PRECONDITION #1 uncleared (flatten scheduler unconfirmed for 15 consecutive sessions, no human confirmation in intraday notes). ORB entry window closed (127 min since open, cutoff 90 min = 11:00 AM ET). Broad-tape unlock fails: NVDA below VWAP ($241.53 vs VWAP $242.06). No open positions to manage.",
+  "positions_managed": [],
+  "candidates_evaluated": {
+    "NVDA": {
+      "last": 241.53,
+      "spread_bp": 1.2,
+      "rel_vol": 1.52,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 242.06,
+      "orb_high": 243.34,
+      "gate": "PRECONDITION_1_HALT + ORB_WINDOW_CLOSED + BROAD_TAPE_UNLOCK_FAIL (NVDA below VWAP)"
+    },
+    "INTC": {
+      "last": 113.92,
+      "spread_bp": 7.0,
+      "rel_vol": 1.02,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 115.52,
+      "orb_high": 118.19,
+      "gate": "BLOCKED: rel_vol 1.02x < 1.5x gate AND below VWAP AND ORB window closed"
+    },
+    "BAC": {
+      "last": 54.205,
+      "spread_bp": 1.8,
+      "rel_vol": 0.86,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "vwap": 54.21,
+      "orb_high": 54.4,
+      "gate": "BLOCKED: rel_vol 0.86x < 1.5x gate AND below VWAP"
+    },
+    "NKE": {
+      "last": 34.48,
+      "spread_bp": 2.9,
+      "rel_vol": 1.12,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "vwap": 34.06,
+      "orb_high": 33.86,
+      "gate": "OFF_TABLE per plan: BofA Underperform downgrade + no valid long thesis. Shorts prohibited."
+    }
+  },
+  "broad_tape": {
+    "SPY": {"last": 781.125, "above_vwap": true, "vwap": 779.68},
+    "NVDA": {"last": 241.53, "above_vwap": false, "vwap": 242.06},
+    "unlock": false,
+    "reason": "NVDA below VWAP"
+  },
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "positions_open": 0,
+  "loss_budget_remaining": 3000.0
+}

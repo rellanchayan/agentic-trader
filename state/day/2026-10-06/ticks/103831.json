@@ -1,0 +1,61 @@
+{
+  "timestamp_et": "2026-10-06T10:38:31-04:00",
+  "tick_id": "2026-10-06T103831",
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_HALT",
+  "detail": "Flatten scheduler unconfirmed for 15 consecutive sessions. No human confirmation logged in docs/intraday/2026-10-06.md. All new entries halted per day plan standing rule.",
+  "macro_overlay": "Pre-FOMC-minutes (Oct 7 2:00 PM ET). Vol compression expected. Zero-trade outcome is the expected and correct result even if PRECONDITION #1 were cleared.",
+  "safety_gate": {
+    "verdict": "PROCEED",
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0
+  },
+  "candidates": {
+    "NVDA": {
+      "last": 242.065,
+      "spread_bp": 1.2,
+      "rel_volume": 2.09,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 243.34,
+      "vwap": 242.06,
+      "gate_outcome": "PRECONDITION_1_HALT",
+      "note": "Would pass rel-vol (2.09x) and spread gate (1.2 bp) and broad-tape unlock (SPY above VWAP). ORB signal not yet fired (price $242.07 < ORB high $243.34). ~22 min remain in ORB window."
+    },
+    "INTC": {
+      "last": 114.21,
+      "spread_bp": 8.8,
+      "rel_volume": 1.24,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED_rel_vol_below_1.5x_and_below_vwap",
+      "note": "Sub-1.5x rel-vol (1.24x) and below VWAP ($114.21 vs $116.17). Disarmed on two gates independently of PRECONDITION #1."
+    },
+    "BAC": {
+      "last": 54.28,
+      "spread_bp": 1.8,
+      "rel_volume": 1.04,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_outcome": "BLOCKED_rel_vol_below_1.5x",
+      "note": "Tertiary candidate. Rel-vol 1.04x well below 1.5x gate."
+    },
+    "NKE": {
+      "last": 34.22,
+      "spread_bp": 2.9,
+      "rel_volume": 1.44,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_outcome": "OFF_TABLE_bearish_analyst",
+      "note": "OFF TABLE per day plan. BofA Underperform + no valid long thesis. Shorts prohibited."
+    },
+    "SPY": {
+      "last": 779.44,
+      "above_vwap": true,
+      "note": "Broad-tape unlock: SPY above VWAP. Broad-tape condition PASSES."
+    }
+  },
+  "positions_managed": "none (0 open positions)",
+  "orders_submitted": 0
+}

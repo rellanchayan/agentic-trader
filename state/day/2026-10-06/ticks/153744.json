@@ -1,0 +1,27 @@
+{
+  "time_et": "15:37",
+  "timestamp": "2026-10-06T15:37:44-04:00",
+  "action": "no_trade",
+  "reason": "PAST_NO_NEW_ENTRIES+PRECONDITION_1_HALT+ORB_WINDOW_CLOSED+REL_VOL_FAIL+BROAD_TAPE_UNLOCK_FAIL",
+  "detail": "15:37 ET — past 3:30 PM no-new-entries cutoff. No positions open. PRECONDITION #1 uncleared (flatten scheduler unconfirmed 16 consecutive sessions). All candidates below 1.5x rel-vol gate and below VWAP. SPY at $779.59 below VWAP $779.94 — broad tape unlock fails. Pre-FOMC-minutes vol compression confirmed through close (FOMC minutes Oct 7, 2:00 PM ET). Zero-trade day as expected per day plan pre-FOMC rule.",
+  "market_snapshot": {
+    "NVDA": {"last": 239.375, "spread_bp": 0.8, "rel_vol": 0.9, "above_vwap": false, "vwap": 241.36},
+    "INTC": {"last": 113.44, "spread_bp": 1.8, "rel_vol": 0.93, "above_vwap": false, "vwap": 114.6},
+    "BAC": {"last": 54.105, "spread_bp": 1.8, "rel_vol": 0.59, "above_vwap": false, "vwap": 54.15},
+    "NKE": {"last": 34.385, "spread_bp": 5.8, "rel_vol": 0.74, "above_vwap": true, "vwap": 34.18},
+    "SPY": {"last": 779.59, "spread_bp": 0.3, "rel_vol": 0.59, "above_vwap": false, "vwap": 779.94}
+  },
+  "blockers": [
+    "PAST_NO_NEW_ENTRIES: 3:37 PM ET, cutoff is 3:30 PM — no entries regardless of setup",
+    "PRECONDITION_1_HALT: flatten scheduler unconfirmed for 16 consecutive sessions",
+    "ORB_WINDOW_CLOSED: 367 min since open, cutoff was 90 min (11:00 AM ET)",
+    "REL_VOL_FAIL: all candidates below 1.5x gate (NVDA 0.90, INTC 0.93, BAC 0.59, NKE 0.74)",
+    "BROAD_TAPE_UNLOCK_FAIL: SPY below VWAP (779.59 vs 779.94)"
+  ],
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "positions_open": 0,
+  "minutes_since_open": 367,
+  "next_phase": "flatten-close at 3:50 PM ET"
+}

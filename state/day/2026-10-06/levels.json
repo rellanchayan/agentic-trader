@@ -2,10 +2,12 @@
   "_meta": {
     "date": "2026-10-06",
     "generated_utc": "2026-10-06T13:31:36.966290+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 4,
-    "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "screened_utc": "2026-10-06T14:00:00+00:00",
+    "source": "watchlist_build + day-screener",
+    "candidates_from_build": 4,
+    "screener_kept": 6,
+    "screener_skipped": 1,
+    "note": "Pre-market screen. ORB levels fill in live after the open. NKE flagged skip (251bp spread, BofA downgrade). SPY/QQQ/AAPL added by day-screener using prior-session estimates — no live pre-market quote available for those three; verify spread and price at open. CRITICAL: flatten scheduler (PRECONDITION #1) has been unconfirmed for 15+ consecutive sessions; no entries are possible until human confirms the flatten mechanism is armed."
   },
   "NKE": {
     "sector": "consumer",
@@ -17,7 +19,11 @@
     "spread_bp": 251.3,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,446,445 sh/day); -1.1% gap"
+    "skip": true,
+    "support": null,
+    "resistance": null,
+    "vwap_est": null,
+    "note": "SKIP — two reasons. (1) Spread: 251bp pre-market is 10x the 25bp config maximum. Entry plus exit cost alone would consume the entire ATR ($1.09) on most days. Even if the live spread narrows at the open, the risk of partial-day wide spread is too high. (2) Thesis: BofA downgraded NKE to Underperform with a PT cut to $30 on 2026-10-05; no long thesis is justified under that fresh catalyst. Shorts are not permitted per rules. NKE has no actionable setup today. Do not add levels; do not watch."
   },
   "NVDA": {
     "sector": "technology",
@@ -29,7 +35,11 @@
     "spread_bp": 2.1,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,697,872 sh/day); +0.0% gap"
+    "skip": false,
+    "support": 238.50,
+    "resistance": 248.00,
+    "vwap_est": 243.13,
+    "note": "Primary candidate. Flat gap (+0.0%); 2.1bp pre-market spread (tightest in the screened list); 2.7M avg daily vol; ATR $5.31 gives ample room for clean R:R. CAUTION: on 2026-10-05, pre-market spread quoted 1.7bp but live open spread was 75bp — daytrade_guard rejected entries until spread tightened to 0.8bp at 10:37 AM. Expect the same pattern today. Support: $238.50 (round number support ~1 ATR below prev close). Resistance: $248.00 (~1 ATR above; also near the $250 psychological level). ORB breakout above orb_high and VWAP reclaim are the primary setups; do not enter before 9:45 AM ET."
   },
   "INTC": {
     "sector": "technology",
@@ -41,7 +51,11 @@
     "spread_bp": 7.7,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,058,838 sh/day); -0.3% gap"
+    "skip": false,
+    "support": 114.00,
+    "resistance": 120.00,
+    "vwap_est": 117.86,
+    "note": "WATCHLIST ONLY — verify live spread at 9:30 ET before treating as tradeable. Pre-market spread today is 7.7bp (acceptable), but on 2026-10-05 the pre-market was 343bp and the live open spread was 256bp; the name was dropped for the session. Today's pre-market is dramatically narrower, which may reflect genuine improvement, or it may still blow out at the open. If the live spread exceeds 25bp at the open, remove for the session. If it holds below 25bp, INTC has the highest ATR of any name on the list ($6.13) which offers good R:R. -0.3% minor gap. Support: $114 (round number, ~$3.86 below, between 0.5 and 1 ATR). Resistance: $120 (round number above). ORB setup primary."
   },
   "BAC": {
     "sector": "financials",
@@ -53,6 +67,61 @@
     "spread_bp": 5.5,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,101,489 sh/day); -0.1% gap"
+    "skip": false,
+    "support": 53.50,
+    "resistance": 55.30,
+    "vwap_est": 54.38,
+    "note": "Spread tightens well from pre-market to live open (confirmed on 2026-10-05: 42.7bp pre-market to 5.6bp live). But ATR $0.92 is very small — a full ATR move is less than $1 on a $54 stock. This limits practical R:R on intraday trades. Use as a market-read name for financials sector and trade with smaller size if entry qualifies. Support: $53.50 (round number, just above 1-ATR floor at $53.46). Resistance: $55.30 (1 ATR above prev close). ORB breakout with clear volume confirmation only."
+  },
+  "SPY": {
+    "sector": "etf",
+    "prev_close": 769.65,
+    "atr_day": 5.93,
+    "avg_vol_10d": 1310000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "skip": false,
+    "support": 765.00,
+    "resistance": 773.00,
+    "vwap_est": 769.65,
+    "data_source": "estimated from 2026-10-05 plan; no pre-market quote available for today",
+    "note": "ADDED by screener. Primary market direction indicator and direct trade candidate. No pre-market quote available — prev_close, support, resistance, and vwap_est are estimated from 2026-10-05 session data. Typically ~10bp live spread at the open; one of the most liquid instruments available. On 2026-10-05, SPY produced the session's most credible setup: ORB breakout at 771.87 above ORB high 770.95 at 10:37 AM ET. Support: $765 (~1 ATR below est. prev close). Resistance: $773 (near Oct 5 ORB high zone). Use SPY direction to confirm or override individual-name setups. Verify spread and price at open."
+  },
+  "QQQ": {
+    "sector": "etf",
+    "prev_close": 748.00,
+    "atr_day": 7.87,
+    "avg_vol_10d": 467000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "skip": false,
+    "support": 745.00,
+    "resistance": 754.50,
+    "vwap_est": 748.00,
+    "data_source": "estimated from 2026-10-05 plan; no pre-market quote available for today",
+    "note": "ADDED by screener. Tech ETF with the tightest live spreads in the universe (~1bp on 2026-10-05). Pure momentum vehicle for tech trend days. No pre-market quote available — prev_close, support, resistance estimated from 2026-10-05 plan data (support cited at 747.63, resistance at 754.51). ATR $7.87 provides good R:R. Notional daily volume ~$350M despite modest share count. Support: $745 (round number, near Oct 5 support zone). Resistance: $754.50 (Oct 5 cited resistance). ORB breakout primary; use in same direction as NVDA/AAPL for confirmation. Verify spread and price at open."
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": 333.75,
+    "atr_day": 6.10,
+    "avg_vol_10d": 1050000,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "skip": false,
+    "support": 330.00,
+    "resistance": 338.40,
+    "vwap_est": 333.75,
+    "data_source": "estimated from 2026-10-05 plan; no pre-market quote available for today",
+    "note": "ADDED by screener. Large-cap tech with typically ~6bp live spread. No pre-market quote available — prev_close, support, resistance estimated from 2026-10-05 plan data. ATR $6.10, avg vol ~1.05M shares. On 2026-10-05, AAPL never cleared the 1.5x relative-volume gate. Support: $330.00 (round number, ~$3.75 below prev close, just over 0.5 ATR). Resistance: $338.40 (Sep 18 session high per Oct 5 plan). ORB setup primary. Verify spread and price at open."
   }
 }

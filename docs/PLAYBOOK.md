@@ -159,6 +159,14 @@ made of **rules to follow**, not stories.
   attempt ticks against a broken API — the loss-stop baseline is never captured, quotes are stale,
   and any order submission will fail silently or with bad data. Log the failure and wait for the
   connection to recover before the next session.
+- When Alpaca becomes transiently unreachable during a live tick (connection timeout or 5xx error —
+  distinct from a 401), log the failed tick and continue to the next scheduled tick. A single missed
+  tick due to transient API unavailability is not a reason to halt the session. If 3 or more
+  consecutive ticks fail to reach Alpaca, treat it as a session-level outage: stop entering new
+  trades until connectivity is confirmed restored. Do not conflate transient mid-session outages
+  with a premarket 401 — the latter means the loss-stop baseline was never captured; the former is
+  a temporary monitoring gap that the next tick can recover from. (2026-10-06: recurring pattern;
+  two missed ticks Monday 15:40 ET and Tuesday 12:39, 13:40 ET this week.)
 - Source market hours from the Alpaca /clock endpoint at the start of every premarket run, before
   writing the day plan. Never infer market hours from the calendar date or from assumptions about
   holiday schedules — early closes and schedule deviations appear in the clock response, not in
@@ -296,6 +304,25 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-06: No tuning. Tuner unfrozen ("ok to tune", 75 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: pre-FOMC minutes session (FOMC minutes scheduled Wed Oct 8). Zero trades, $0 realized P&L.
+  NVDA relative volume confirmed the pre-FOMC-minutes vol compression pattern: 2.09x at 10:38 ET
+  falling to 0.96x by 14:37 ET — well below the 1.5x gate all afternoon. A zero-trade outcome is
+  the correct and expected result; the existing pre-FOMC-minutes rule (added 2026-08-17) prescribed
+  this precisely. No gate adjustment warranted. NVDA spread also tightened from premarket levels to
+  1.2 bp by 10:38, confirming the live spread gate works as an entry screen at the time of
+  evaluation, not as a premarket screen — consistent with existing rules.
+  One new infrastructure rule added tonight: the pre-session 401-abort rule (premarket healthcheck)
+  already covers full-day authentication failures, but it did not address transient mid-session
+  connectivity losses. Two missed ticks this week (Monday 15:40 ET and Tuesday 12:39, 13:40 ET) due
+  to Alpaca being temporarily unreachable is a recurring pattern. Rule added: a single transient
+  outage mid-session should be logged and skipped; if 3 or more consecutive ticks fail to reach
+  Alpaca, halt new entries until connectivity is restored.
+  All-time stats (75 days, 31 trades, 0.41 trades/day, 19.4% win rate, avg win +0.22R, avg loss
+  -0.49R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Account equity $999,641.65. Tuning ledger remains empty.
 - 2026-10-02: No tuning. Tuner unfrozen ("ok to tune", 73 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

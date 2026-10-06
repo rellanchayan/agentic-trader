@@ -1,0 +1,59 @@
+{
+  "time_et": "14:37",
+  "timestamp": "2026-10-06T14:37:31-04:00",
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT+ORB_WINDOW_CLOSED+REL_VOL_FAIL+BROAD_TAPE_UNLOCK_FAIL",
+  "detail": "PRECONDITION #1 uncleared (flatten scheduler unconfirmed 15+ sessions). ORB entry window closed (307 min since open, cutoff 90 min = 11:00 AM ET). All armed candidates below 1.5x rel-vol gate. All candidates below VWAP — broad-tape unlock fails. Pre-FOMC-minutes vol compression overlay active (FOMC minutes Oct 7, 2:00 PM ET). No positions to manage. NKE spread tightened to 2.9 bp (from 251 bp premarket) — documented per day plan requirement — but remains OFF TABLE: BofA Underperform active, longs not justified, shorts prohibited, rel-vol 0.77x fails gate, ORB window closed.",
+  "candidates_evaluated": {
+    "NVDA": {
+      "last": 240.205,
+      "spread_bp": 0.8,
+      "rel_vol": 0.96,
+      "above_vwap": false,
+      "vwap": 241.53,
+      "orb_high": 243.34,
+      "orb_breakout": false,
+      "gate": "PRECONDITION_1_HALT+ORB_WINDOW_CLOSED+REL_VOL_FAIL+BROAD_TAPE_UNLOCK_FAIL"
+    },
+    "INTC": {
+      "last": 114.27,
+      "spread_bp": 1.8,
+      "rel_vol": 0.97,
+      "above_vwap": false,
+      "vwap": 114.66,
+      "orb_high": 118.19,
+      "orb_breakout": false,
+      "gate": "REL_VOL_FAIL+BROAD_TAPE_UNLOCK_FAIL+ORB_WINDOW_CLOSED"
+    },
+    "BAC": {
+      "last": 54.055,
+      "spread_bp": 1.9,
+      "rel_vol": 0.58,
+      "above_vwap": false,
+      "vwap": 54.16,
+      "orb_high": 54.4,
+      "orb_breakout": false,
+      "gate": "REL_VOL_FAIL+BROAD_TAPE_UNLOCK_FAIL"
+    },
+    "NKE": {
+      "last": 34.235,
+      "spread_bp": 2.9,
+      "rel_vol": 0.77,
+      "above_vwap": true,
+      "vwap": 34.16,
+      "orb_high": 33.86,
+      "orb_breakout": true,
+      "gate": "OFF_TABLE_bearish_analyst+REL_VOL_FAIL+ORB_WINDOW_CLOSED",
+      "note": "Spread tightened from 251 bp premarket to 2.9 bp live — documented per day plan. Still OFF TABLE: BofA Underperform, longs not justified, shorts prohibited."
+    }
+  },
+  "broad_tape": {
+    "SPY": {"last": 779.84, "vwap": 779.96, "above_vwap": false, "rel_vol": 0.60},
+    "QQQ": {"last": 760.435, "vwap": 761.15, "above_vwap": false, "rel_vol": 0.89}
+  },
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "positions_open": 0,
+  "loss_budget_remaining": 3000.0
+}

@@ -5,7 +5,9 @@
     "source": "watchlist_build",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this.",
+    "screener_reviewed": "2026-10-07",
+    "screener_note": "3 names marked tradeable=true (NVDA, INTC, NKE); BAC dropped to tradeable=false (ATR too thin, no catalyst). NVDA and INTC carry elevated pre-market spreads — both should be re-checked at the open; skip if spread does not tighten below 15bp by 9:32 ET."
   },
   "NVDA": {
     "sector": "technology",
@@ -17,19 +19,10 @@
     "spread_bp": 27.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,751,439 sh/day); -0.2% gap"
-  },
-  "NKE": {
-    "sector": "consumer",
-    "prev_close": 34.34,
-    "atr_day": 1.12,
-    "avg_vol_10d": 2331370,
-    "premarket_price": 34.33,
-    "gap_pct": -0.0001,
-    "spread_bp": 5.8,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,331,370 sh/day); -0.0% gap"
+    "support": 235.31,
+    "resistance": 240.35,
+    "tradeable": true,
+    "note": "Priority HIGH. Liquid (2.75M sh/day), ATR $5.04 (2.1%). Spread 27bp is elevated pre-market — NVDA typically tightens to 1-3bp at the open; skip trade if still above 15bp at 9:32. No gap catalyst today (-0.2%). ORB setup: long above ~240.35, short-side break below ~235.31. Stop ~1 ATR from entry."
   },
   "INTC": {
     "sector": "technology",
@@ -41,7 +34,25 @@
     "spread_bp": 30.6,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,112,787 sh/day); +0.1% gap"
+    "support": 111.20,
+    "resistance": 117.15,
+    "tradeable": true,
+    "note": "Priority MEDIUM (spread-dependent). Best ATR% in group (5.2%, $5.95/day). Spread 30.6bp is above 20bp concern threshold — must confirm tightening below 15bp by 9:32 before entering. No gap catalyst (+0.1%). ORB setup: long above ~117.15, break below ~111.20 signals downside momentum. High ATR justifies watching closely if spread normalizes."
+  },
+  "NKE": {
+    "sector": "consumer",
+    "prev_close": 34.34,
+    "atr_day": 1.12,
+    "avg_vol_10d": 2331370,
+    "premarket_price": 34.33,
+    "gap_pct": -0.0001,
+    "spread_bp": 5.8,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 33.78,
+    "resistance": 34.90,
+    "tradeable": true,
+    "note": "Priority MEDIUM-LOW. Tightest tradeable spread (5.8bp), liquid (2.3M sh/day). ATR $1.12 = 3.3% of price — adequate for ORB but low absolute P&L (max ~$150-200 at $10K position on half-ATR move). No catalyst today. ORB setup: long above ~34.90, cautious break below ~33.78. Lower reward per trade; only take if ORB is clean and relative volume confirms."
   },
   "BAC": {
     "sector": "financials",
@@ -53,6 +64,9 @@
     "spread_bp": 3.8,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,050,897 sh/day); +0.0% gap"
+    "support": 52.61,
+    "resistance": 53.55,
+    "tradeable": false,
+    "note": "DROPPED from active watch. Spread is excellent (3.8bp) and volume is adequate (2.0M sh/day), but ATR is only $0.94 = 1.8% — the thinnest range in the group. At max $10K position (~188 shares), a half-ATR move yields ~$88 gross before commissions. No gap or news catalyst. Not worth watching for ORB today; retain as data-only fallback."
   }
 }

@@ -1,0 +1,50 @@
+{
+  "ts": "2026-10-07T13:37:45-04:00",
+  "minutes_since_open": 247,
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_NOT_CLEARED+PAST_NOON_CUTOFF+PRE_FOMC",
+  "detail": "Flatten scheduler unconfirmed 17 consecutive sessions. Past noon ET hard entry cutoff (13:37 PM > 12:00 PM). FOMC minutes release in ~23 minutes (2:00 PM ET). All three blockers independently prohibit entries. No positions to manage.",
+  "positions_managed": [],
+  "new_entry_considered": false,
+  "market": {
+    "NVDA": {
+      "last": 237.085,
+      "spread_bp": 0.8,
+      "rel_volume": 0.94,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "spread tightened well but rel_volume 0.94 < 1.5x gate, below VWAP, past entry window"
+    },
+    "INTC": {
+      "last": 113.12,
+      "spread_bp": 6.2,
+      "rel_volume": 0.69,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "rel_volume 0.69 < 1.5x gate, below VWAP, past entry window"
+    },
+    "NKE": {
+      "last": 34.19,
+      "spread_bp": 2.9,
+      "rel_volume": 0.71,
+      "above_vwap": true,
+      "disarmed": true,
+      "note": "disarmed — BofA Underperform downgrade active"
+    },
+    "BAC": {
+      "last": 53.605,
+      "spread_bp": 1.9,
+      "rel_volume": 1.1,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "monitor_only": true,
+      "note": "monitor only — ATR too small for tradeable setup; rel_volume 1.1 < 1.5x gate anyway"
+    }
+  },
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "loss_budget_remaining": 3000.0,
+  "slots_remaining": 8,
+  "trades_remaining": 20
+}

@@ -1,0 +1,56 @@
+{
+  "ts": "2026-10-07T10:36:49-04:00",
+  "minutes_since_open": 66,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_NOT_CLEARED",
+  "detail": "Flatten scheduler has not been confirmed by a human for 17 consecutive sessions. Day plan explicitly blocks all new entries until confirmation is documented. No existing positions to manage.",
+  "gate_checks": {
+    "precondition_1_cleared": false,
+    "past_noon_cutoff": false,
+    "in_flatten_window": false,
+    "loss_stop_tripped": false
+  },
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "status": "BLOCKED_PRECONDITION_1",
+      "spread_bp": 1.7,
+      "spread_ok": true,
+      "rel_volume": 1.63,
+      "rel_vol_ok": true,
+      "above_vwap": false,
+      "broad_tape_unlock": false,
+      "orb_breakout": false,
+      "note": "Even without PRECONDITION #1: broad-tape unlock fails (NVDA below VWAP). ORB high $238.90 not cleared."
+    },
+    {
+      "ticker": "INTC",
+      "status": "BLOCKED_PRECONDITION_1",
+      "spread_bp": 3.5,
+      "spread_ok": true,
+      "rel_volume": 1.49,
+      "rel_vol_ok": false,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "note": "Even without PRECONDITION #1: rel-vol 1.49 below 1.5x minimum. ORB high $114.31 not cleared."
+    },
+    {
+      "ticker": "NKE",
+      "status": "DISARMED",
+      "note": "Active BofA Underperform downgrade. No longs permitted."
+    },
+    {
+      "ticker": "BAC",
+      "status": "MONITOR_ONLY",
+      "note": "ATR $0.94 too small for acceptable R/R at $10k per-trade limit."
+    }
+  ],
+  "positions_managed": [],
+  "trades_submitted": [],
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

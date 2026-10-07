@@ -1,0 +1,54 @@
+{
+  "tick_time_et": "2026-10-07T12:37:44-04:00",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_NOT_CLEARED+PAST_NOON_CUTOFF",
+  "detail": "Two independent blockers: (1) Flatten scheduler unconfirmed for 17 consecutive sessions — PRECONDITION #1 not cleared per day plan, all entries halted; (2) Current time 12:37 PM ET is past the noon ET hard entry cutoff (no new entries at or after 12:00 PM). Additionally, FOMC minutes release at 2:00 PM ET makes any new position inadvisable.",
+  "positions_managed": 0,
+  "positions_open": 0,
+  "new_entries_considered": 0,
+  "trades_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "loss_budget_remaining": 3000.0,
+  "market_snapshot": {
+    "NVDA": {
+      "last": 237.11,
+      "bid": 237.01,
+      "ask": 237.04,
+      "spread_bp": 1.3,
+      "vwap": 237.69,
+      "orb_high": 238.9,
+      "rel_volume": 1.11,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_failures": ["above_vwap=false", "orb_breakout=false", "rel_volume<1.5x", "past_noon_cutoff", "precondition_1_not_cleared"]
+    },
+    "INTC": {
+      "last": 113.15,
+      "bid": 113.05,
+      "ask": 113.09,
+      "spread_bp": 3.5,
+      "vwap": 113.59,
+      "orb_high": 114.31,
+      "rel_volume": 0.81,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_failures": ["above_vwap=false", "orb_breakout=false", "rel_volume<1.5x", "past_noon_cutoff", "precondition_1_not_cleared"]
+    },
+    "NKE": {
+      "last": 34.02,
+      "spread_bp": 2.9,
+      "rel_volume": 0.77,
+      "above_vwap": false,
+      "status": "DISARMED_analyst_downgrade"
+    },
+    "BAC": {
+      "last": 53.46,
+      "spread_bp": 1.9,
+      "rel_volume": 1.34,
+      "above_vwap": true,
+      "status": "MONITOR_ONLY_atr_too_small"
+    }
+  },
+  "notes": "Same blocker as prior two ticks. The noon entry cutoff has now passed, making PRECONDITION #1 moot for entries today. Remaining watch: positions are flat, will flatten-close passes at 3:50/3:53/3:56 PM ET if any positions materialize (none expected). FOMC minutes at 2:00 PM ET reinforces staying flat."
+}

@@ -1,0 +1,26 @@
+{
+  "time_et": "2026-10-08T14:38:45-04:00",
+  "action": "none",
+  "verdict": "NO_ACTION",
+  "halt": "PRECONDITION_1+ORB_WINDOW_CLOSED+BROAD_TAPE_UNLOCK_FAIL",
+  "candidates_evaluated": [
+    "NVDA",
+    "INTC",
+    "BAC",
+    "NKE",
+    "QQQ",
+    "SPY"
+  ],
+  "best_candidate": null,
+  "gate_blocked_by": {
+    "NVDA": "precondition_1+orb_window_closed+below_vwap_rel_vol_1.13x",
+    "INTC": "precondition_1+orb_window_closed+below_vwap_rel_vol_1.4x",
+    "BAC": "precondition_1+orb_window_closed (above_vwap but ORB window closed)",
+    "NKE": "disarmed+rel_vol_0.64x",
+    "QQQ": "precondition_1+orb_window_closed+below_vwap_rel_vol_1.38x",
+    "SPY": "precondition_1+orb_window_closed+below_vwap_rel_vol_1.01x"
+  },
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "notes": "PRECONDITION_1 HALT (flatten scheduler unconfirmed 18 sessions). ORB window closed at 308 min. SPY (72.85) and NVDA (30.37) both below VWAP \u2014 broad-tape unlock fails. No new entries possible."
+}

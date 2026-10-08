@@ -1,0 +1,99 @@
+{
+  "tick_time_et": "2026-10-08T11:36:50-04:00",
+  "tick_time_utc": "2026-10-08T15:36:50Z",
+  "minutes_since_open": 126,
+  "verdict": "NO_ACTION",
+  "action_taken": "none",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "halt_conditions": [
+    "PRECONDITION_1: flatten scheduler unconfirmed for 17 consecutive sessions — no new positions allowed until human confirms flatten mechanism is live",
+    "ORB_WINDOW_CLOSED: 126 min since open exceeds 90-min ORB cutoff (window closed at 11:00 AM ET)",
+    "BROAD_TAPE_UNLOCK_FAIL: SPY (774.31) below VWAP (775.18) — broadcast unlock requires both SPY AND NVDA above VWAP"
+  ],
+  "candidate_evaluation": {
+    "NVDA": {
+      "last": 235.795,
+      "spread_bp": 1.3,
+      "rel_volume": 1.05,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gates": {
+        "spread": "PASS (1.3 bp < 15 bp)",
+        "rel_volume": "FAIL (1.05x < 1.5x required)",
+        "orb_window": "FAIL (window closed)",
+        "broad_tape_unlock": "FAIL (SPY below VWAP)"
+      },
+      "outcome": "BLOCKED — rel-vol gate and ORB window both fail"
+    },
+    "BAC": {
+      "last": 52.265,
+      "spread_bp": 1.9,
+      "rel_volume": 2.25,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gates": {
+        "spread": "PASS (1.9 bp < 15 bp)",
+        "rel_volume": "PASS (2.25x > 1.5x)",
+        "orb_window": "FAIL (window closed)",
+        "above_vwap": "FAIL (BAC 52.265 below VWAP 52.81)",
+        "broad_tape_unlock": "FAIL (SPY below VWAP)"
+      },
+      "outcome": "BLOCKED — ORB window closed, BAC below VWAP, broad-tape unlock fails"
+    },
+    "INTC": {
+      "last": 109.305,
+      "spread_bp": 167.8,
+      "rel_volume": 1.49,
+      "above_vwap": false,
+      "gates": {
+        "spread": "FAIL (167.8 bp >> 15 bp limit)",
+        "rel_volume": "FAIL (1.49x < 1.5x)"
+      },
+      "outcome": "BLOCKED — spread 167.8 bp (20x limit), rel-vol just below gate"
+    },
+    "NKE": {
+      "last": 34.2,
+      "spread_bp": 2.9,
+      "rel_volume": 0.69,
+      "gates": {
+        "rel_volume": "FAIL (0.69x << 1.5x)"
+      },
+      "outcome": "DISARMED — BofA Underperform active, rel-vol far below gate"
+    },
+    "QQQ": {
+      "last": 753.53,
+      "spread_bp": 0.7,
+      "rel_volume": 0.87,
+      "above_vwap": false,
+      "gates": {
+        "spread": "PASS (0.7 bp)",
+        "rel_volume": "FAIL (0.87x < 1.5x)",
+        "broad_tape_unlock": "FAIL (SPY below VWAP)"
+      },
+      "outcome": "BLOCKED — rel-vol below gate, broad-tape unlock fails"
+    },
+    "SPY": {
+      "last": 774.31,
+      "spread_bp": 2.2,
+      "rel_volume": 1.07,
+      "above_vwap": false,
+      "gates": {
+        "spread": "PASS (2.2 bp)",
+        "rel_volume": "FAIL (1.07x < 1.5x)",
+        "above_vwap": "FAIL (774.31 below VWAP 775.18)"
+      },
+      "outcome": "BLOCKED — rel-vol below gate, SPY itself below VWAP"
+    }
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "notes": "Tick ran PROCEED from preflight. No trades possible: PRECONDITION_1 HALT (flatten scheduler unconfirmed 17 consecutive sessions) overrides all gates. ORB window independently closed. Broad-tape unlock fails (SPY below VWAP). No individual name clears all gates anyway."
+}

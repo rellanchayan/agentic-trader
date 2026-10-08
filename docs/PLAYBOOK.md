@@ -304,6 +304,20 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-08: No tuning. Tuner unfrozen ("ok to tune", 77 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: eighteenth consecutive zero-trade session (Sep 17 through Oct 8). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65.
+  Morning plan was written (`docs/plan/2026-10-08.md`). Six candidates screened: NVDA (primary,
+  armed), INTC (secondary, high-gap caution), NKE (disarmed, spread 41.2 bp + BofA Underperform),
+  BAC (low-priority), QQQ and SPY (fallbacks). Risk-off tape — all names gapping down premarket,
+  sector-wide semiconductor selling. No binary macro events during the US session.
+  PRECONDITION #1 (flatten scheduler unconfirmed) blocked all entries for the eighteenth
+  consecutive session. The escalation threshold was five sessions; we are 3.6x past it.
+  All-time stats (77 days, 31 trades, 0.40 trades/day, 19.4% win rate, avg win +0.22R, avg loss
+  -0.49R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. Account equity $999,641.65. Tuning ledger remains empty.
 - 2026-10-06: No tuning. Tuner unfrozen ("ok to tune", 75 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

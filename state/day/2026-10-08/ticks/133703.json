@@ -1,0 +1,83 @@
+{
+  "tick_time_et": "2026-10-08T13:37:03-04:00",
+  "verdict": "NO_ACTION",
+  "halt_reasons": [
+    "PRECONDITION_1: flatten scheduler unconfirmed for 17 consecutive sessions — human intervention required",
+    "ORB_WINDOW_CLOSED: 247 minutes since open, window closed at 90 minutes (11:00 AM ET)",
+    "BROAD_TAPE_UNLOCK_FAIL: SPY $771.84 < VWAP $774.26 and NVDA $230.93 < VWAP $234.13"
+  ],
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "regime": "RISK-OFF",
+  "setups_evaluated": {
+    "orb": "off — window closed at 11:00 AM ET",
+    "vwap_reclaim": "off — RISK-OFF tape (playbook prohibition)",
+    "momentum": "off — RISK-OFF tape (playbook prohibition)",
+    "mean_reversion": "off — PRECONDITION_1 HALT blocks all entries"
+  },
+  "candidates": {
+    "NVDA": {
+      "last": 230.93,
+      "spread_bp": 41.2,
+      "rel_volume": 1.15,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "FAIL",
+      "fail_reasons": ["spread 41.2 bp > max 25 bp", "rel_vol 1.15x < min 1.5x", "below VWAP", "ORB window closed"]
+    },
+    "INTC": {
+      "last": 105.78,
+      "spread_bp": 3.8,
+      "rel_volume": 1.39,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "FAIL",
+      "fail_reasons": ["rel_vol 1.39x < min 1.5x", "below VWAP ($105.78 vs VWAP $108.83)", "ORB window closed"]
+    },
+    "BAC": {
+      "last": 53.02,
+      "spread_bp": 1.9,
+      "rel_volume": 1.93,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 53.12,
+      "gate_result": "FAIL",
+      "fail_reasons": ["ORB window closed", "ORB not triggered (last $53.02 < ORB high $53.12)", "PRECONDITION_1 blocks all entries"]
+    },
+    "NKE": {
+      "last": 34.42,
+      "spread_bp": 2.9,
+      "rel_volume": 0.65,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_result": "DISARMED",
+      "fail_reasons": ["disarmed at premarket: BofA Underperform active, low rel-vol"]
+    },
+    "QQQ": {
+      "last": 745.65,
+      "spread_bp": 0.3,
+      "rel_volume": 1.49,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "FAIL",
+      "fail_reasons": ["rel_vol 1.49x < min 1.5x", "below VWAP ($745.65 vs VWAP $750.0)", "ORB window closed"]
+    },
+    "SPY": {
+      "last": 771.84,
+      "spread_bp": 0.4,
+      "rel_volume": 1.05,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_result": "FAIL",
+      "fail_reasons": ["rel_vol 1.05x < min 1.5x", "below VWAP ($771.84 vs VWAP $774.26)", "ORB window closed"]
+    }
+  },
+  "action_taken": "none",
+  "orders_submitted": [],
+  "note": "Clean no-trade tick. PRECONDITION_1 remains active. Broad-tape is weak across the board — SPY and NVDA both below VWAP, no name has sufficient relative volume, ORB window long since closed. This tick adds to the 17-session unconfirmed flatten scheduler streak. Human must confirm flatten scheduler before any entry can occur."
+}

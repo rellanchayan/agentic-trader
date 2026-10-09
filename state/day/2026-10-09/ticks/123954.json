@@ -1,0 +1,46 @@
+{
+  "tick_time_et": "2026-10-09T12:39:54-04:00",
+  "minutes_since_open": 189,
+  "verdict": "NO_ACTION",
+  "halt": "PRECONDITION_1",
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "buying_power": 3998566.60,
+    "daytrade_count": 0
+  },
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "broad_tape_unlock": false,
+  "broad_tape_unlock_reason": "SPY 777.92 above VWAP 776.70 (pass) but NVDA 229.365 below VWAP 230.69 (fail)",
+  "market_snapshot": {
+    "SPY": {"last": 777.92, "vwap": 776.70, "above_vwap": true, "rel_volume": 0.58},
+    "NVDA": {"last": 229.365, "vwap": 230.69, "above_vwap": false, "rel_volume": 0.93, "spread_bp": 2.6},
+    "INTC": {"last": 105.56, "vwap": 106.22, "above_vwap": false, "spread_bp": 2.8, "rel_volume": 1.17},
+    "BAC": {"last": 54.04, "vwap": 53.77, "above_vwap": true, "spread_bp": 1.9, "rel_volume": 1.0},
+    "NKE": {"last": 35.06, "vwap": 34.80, "above_vwap": true, "spread_bp": 2.9, "rel_volume": 0.42},
+    "QQQ": {"last": 750.43, "vwap": 750.15, "above_vwap": true, "rel_volume": 0.62}
+  },
+  "position_management": "no open positions",
+  "entry_evaluation": {
+    "INTC": {
+      "armed": false,
+      "reason": "PRECONDITION_1 + below VWAP (105.56 < 106.22). No VWAP reclaim signal. ORB window closed."
+    },
+    "NVDA": {
+      "armed": false,
+      "reason": "PRECONDITION_1 + below VWAP (229.365 < 230.69). Broad-tape unlock gate."
+    },
+    "BAC": {
+      "armed": false,
+      "reason": "PRECONDITION_1 + low priority per plan + rel_vol 1.0x below 1.5x minimum."
+    },
+    "NKE": {
+      "armed": false,
+      "reason": "PRECONDITION_1 + low priority per plan + rel_vol 0.42x far below 1.5x minimum."
+    }
+  },
+  "order_submitted": null,
+  "decision_rationale": "No action. Primary block: PRECONDITION_1 (flatten scheduler unconfirmed, 19 consecutive sessions). Independent secondary blocks: broad-tape unlock fails (NVDA below VWAP), ORB window closed at 12:39 PM, no VWAP reclaim signals on any name. BAC shows above VWAP and orb_breakout=true but rel_vol 1.0x and low priority per plan. NKE rel_vol 0.42x. Friday afternoon approaching — even if PRECONDITION_1 cleared, no clean setups present."
+}

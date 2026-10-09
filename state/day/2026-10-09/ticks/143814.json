@@ -1,0 +1,40 @@
+{
+  "time_et": "2026-10-09T14:38:14-04:00",
+  "minutes_since_open": 308,
+  "verdict": "NO_ACTION",
+  "halt": "PRECONDITION_1",
+  "action": "none",
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "slots_remaining": 8,
+  "broad_tape_unlock": false,
+  "broad_tape_unlock_reason": "SPY above VWAP but NVDA below VWAP (229.64 < 230.42)",
+  "market_snapshot": {
+    "SPY": {"last": 778.575, "vwap": 777.09, "above_vwap": true, "rel_volume": 0.47, "spread_bp": 1.7},
+    "QQQ": {"last": 751.09, "vwap": 750.32, "above_vwap": true, "rel_volume": 0.49, "spread_bp": 0.3},
+    "NVDA": {"last": 229.64, "vwap": 230.42, "above_vwap": false, "rel_volume": 0.74, "spread_bp": 1.3},
+    "INTC": {"last": 105.325, "vwap": 106.04, "above_vwap": false, "rel_volume": 0.94, "spread_bp": 0.9},
+    "BAC":  {"last": 54.255, "vwap": 53.87, "above_vwap": true, "rel_volume": 0.82, "spread_bp": 1.8},
+    "NKE":  {"last": 34.81, "vwap": 34.82, "above_vwap": false, "rel_volume": 0.35, "spread_bp": 2.9}
+  },
+  "gate_blocked_by": {
+    "INTC": "PRECONDITION_1+below_vwap+past_2:30pm_advisory",
+    "NVDA": "PRECONDITION_1+below_vwap+past_11am_disarmed",
+    "BAC":  "PRECONDITION_1+low_priority+rel_vol_0.82x",
+    "NKE":  "PRECONDITION_1+low_priority+rel_vol_0.35x"
+  },
+  "analysis": {
+    "precondition_1": "BLOCKING — flatten scheduler unconfirmed for 19 consecutive sessions",
+    "timing": "14:38 ET — past 2:30 PM no-new-entry advisory for MIXED/RANGE Fridays",
+    "orb_window": "CLOSED — past 11:00 AM cutoff",
+    "broad_tape": "FAIL — NVDA 229.64 below VWAP 230.42; SPY passes but NVDA fails the AND gate",
+    "intc": "Below VWAP (105.325 < 106.04), spread 0.9 bp. No reclaim signal. Past 2:30 PM.",
+    "nvda": "Below VWAP, disarmed past 11 AM deadline. Tracking for broad-tape gate only.",
+    "bac": "Above VWAP but rel_vol 0.82x below 1.5x minimum gate. Low priority.",
+    "nke": "At VWAP, rel_vol 0.35x far below minimum. Low priority."
+  },
+  "reasoning": "PRECONDITION_1 HALT is the primary block — entries require human confirmation that the flatten scheduler fires at 3:50, 3:53, and 3:56 PM ET. This has not been cleared in 19 sessions. Secondary reasons (all of which would independently block trades even if PRECONDITION_1 were cleared): (1) 14:38 is past the 2:30 PM no-new-entry advisory on a Friday MIXED/RANGE day; (2) broad-tape unlock fails because NVDA is below VWAP; (3) INTC is below VWAP with no reclaim signal; (4) ORB window is closed; (5) all names show rel_vol below the 1.5x minimum gate. No positions to manage. Account remains flat at $0 P&L."
+}

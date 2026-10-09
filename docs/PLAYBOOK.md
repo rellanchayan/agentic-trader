@@ -304,6 +304,20 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-09: No tuning. Tuner unfrozen ("ok to tune", 78 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: nineteenth consecutive zero-trade session (Sep 17 through Oct 9). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65. PRECONDITION #1 (flatten scheduler unconfirmed)
+  blocked all entries for the nineteenth consecutive session.
+  No new durable rule warranted tonight. A zero-trade day blocked entirely by PRECONDITION #1
+  provides no new signal about entry quality, stop placement, or fill behavior. The escalation
+  threshold was five sessions; we are now 14 sessions past it with no human intervention logged.
+  All-time stats (78 days, 31 trades, 0.40 trades/day, 19.4% win rate, avg win +0.22R, avg loss
+  -0.49R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. All setups show negative expectancy; sample sizes remain
+  too thin (31 trades across 78 days) to distinguish miscalibration from noise. Tuning ledger
+  remains empty.
 - 2026-10-08: No tuning. Tuner unfrozen ("ok to tune", 77 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

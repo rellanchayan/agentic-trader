@@ -1,0 +1,73 @@
+{
+  "time_et": "2026-10-09T13:38:19-04:00",
+  "minutes_since_open": 248,
+  "verdict": "NO_ACTION",
+  "halt": "PRECONDITION_1",
+  "action": "none",
+  "positions_managed": [],
+  "new_trade": null,
+  "broad_tape_unlock": false,
+  "broad_tape_unlock_reason": "SPY above VWAP but NVDA below VWAP (229.49 < 230.54)",
+  "candidate_evaluation": {
+    "INTC": {
+      "armed": false,
+      "gates_failed": ["PRECONDITION_1", "below_vwap"],
+      "last": 105.56,
+      "vwap": 106.13,
+      "spread_bp": 1.9,
+      "rel_volume": 0.99,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "notes": "PRECONDITION_1 blocks. Below VWAP. Spread 1.9 bp (pass). ORB window closed."
+    },
+    "NVDA": {
+      "armed": false,
+      "gates_failed": ["PRECONDITION_1", "below_vwap", "past_11am_deadline_disarmed"],
+      "last": 229.49,
+      "vwap": 230.54,
+      "spread_bp": 0.9,
+      "rel_volume": 0.80,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "notes": "PRECONDITION_1 blocks. Below VWAP. Past 11 AM spread re-arm deadline — disarmed for session."
+    },
+    "BAC": {
+      "armed": false,
+      "gates_failed": ["PRECONDITION_1", "low_priority", "rel_vol_0.88x"],
+      "last": 54.125,
+      "vwap": 53.81,
+      "spread_bp": 1.8,
+      "rel_volume": 0.88,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "notes": "PRECONDITION_1 blocks. Low-priority per plan. Rel-vol 0.88x below 1.5x minimum."
+    },
+    "NKE": {
+      "armed": false,
+      "gates_failed": ["PRECONDITION_1", "low_priority", "rel_vol_0.39x"],
+      "last": 34.86,
+      "vwap": 34.82,
+      "spread_bp": 2.9,
+      "rel_volume": 0.39,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "notes": "PRECONDITION_1 blocks. Low-priority per plan. Rel-vol 0.39x far below 1.5x minimum."
+    }
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "loss_budget_remaining": 3000.0
+  },
+  "tape_snapshot": {
+    "SPY_last": 777.985,
+    "SPY_above_vwap": true,
+    "NVDA_last": 229.47,
+    "NVDA_above_vwap": false,
+    "QQQ_last": 750.52,
+    "QQQ_above_vwap": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "time_et": "2026-10-12T13:37:54-04:00",
+  "minutes_since_open": 247,
+  "action": "NO_TRADE",
+  "verdict": "DOCUMENTATION_ONLY",
+  "precondition_1_halt": true,
+  "precondition_1_sessions": 21,
+  "positions_managed": [],
+  "gate_outcomes": {
+    "broad_tape_unlock": {
+      "result": "FAIL",
+      "spy_last": 777.60,
+      "spy_vwap": 778.31,
+      "spy_above_vwap": false,
+      "nvda_last": 226.415,
+      "nvda_vwap": 226.40,
+      "nvda_above_vwap": true,
+      "note": "SPY below VWAP — broad-tape unlock requires BOTH SPY and NVDA above VWAP"
+    },
+    "orb_window": {
+      "result": "EXPIRED",
+      "minutes_since_open": 247,
+      "window_limit_minutes": 90
+    },
+    "NVDA": {
+      "spread_bp": 0.9,
+      "spread_gate": "PASS",
+      "rel_volume": 0.62,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_window_expired": true,
+      "entry_blocked_by": ["rel_vol < 1.5x", "broad_tape_unlock_fail", "PRECONDITION_1"]
+    },
+    "INTC": {
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_volume": 1.01,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_window_expired": true,
+      "entry_blocked_by": ["rel_vol < 1.5x", "below_vwap", "broad_tape_unlock_fail", "PRECONDITION_1"]
+    },
+    "BAC": {
+      "spread_bp": 1.8,
+      "spread_gate": "PASS",
+      "rel_volume": 0.73,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "entry_blocked_by": ["rel_vol < 1.5x", "below_vwap", "broad_tape_unlock_fail", "PRECONDITION_1"]
+    },
+    "NKE": {
+      "spread_bp": 2.8,
+      "spread_gate": "PASS",
+      "rel_volume": 0.45,
+      "rel_vol_gate": "FAIL",
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_window_expired": true,
+      "entry_blocked_by": ["rel_vol < 1.5x", "orb_window_expired", "broad_tape_unlock_fail", "PRECONDITION_1"]
+    }
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

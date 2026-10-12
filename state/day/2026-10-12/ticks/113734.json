@@ -1,0 +1,66 @@
+{
+  "tick_time_et": "2026-10-12T11:37:34-04:00",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "entries_considered": [],
+  "reason": "PRECONDITION #1 HALT — flatten scheduler unconfirmed (20 consecutive sessions). Documentation-only mode. Broad-tape unlock FAILS: SPY $778.19 < VWAP $778.35; NVDA $225.89 < VWAP $226.40. Gate outcomes: NVDA rel_vol 0.88x FAIL (<1.5x); INTC rel_vol 1.42x FAIL (<1.5x), spread 1.0 bp PASS (tightened pre-11AM); BAC rel_vol 1.04x FAIL (<1.5x); NKE rel_vol 0.55x FAIL (<1.5x, also past 90-min ORB window at 127 min). No setup qualifies.",
+  "gate_outcomes": {
+    "broad_tape_unlock": {
+      "pass": false,
+      "spy_last": 778.19,
+      "spy_vwap": 778.35,
+      "spy_above_vwap": false,
+      "nvda_last": 225.89,
+      "nvda_vwap": 226.40,
+      "nvda_above_vwap": false
+    },
+    "NVDA": {
+      "spread_bp": 0.9,
+      "spread_pass": true,
+      "rel_volume": 0.88,
+      "rel_vol_pass": false,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "armed": false,
+      "reason": "rel_vol 0.88x < 1.5x gate"
+    },
+    "INTC": {
+      "spread_bp": 1.0,
+      "spread_pass": true,
+      "rel_volume": 1.42,
+      "rel_vol_pass": false,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "armed": false,
+      "reason": "rel_vol 1.42x < 1.5x gate; broad-tape unlock fails"
+    },
+    "BAC": {
+      "spread_bp": 1.8,
+      "spread_pass": true,
+      "rel_volume": 1.04,
+      "rel_vol_pass": false,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "armed": false,
+      "reason": "rel_vol 1.04x < 1.5x gate"
+    },
+    "NKE": {
+      "spread_bp": 2.9,
+      "spread_pass": true,
+      "rel_volume": 0.55,
+      "rel_vol_pass": false,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "armed": false,
+      "reason": "rel_vol 0.55x < 1.5x gate; past 90-min ORB window (127 min since open); PRECONDITION #1 blocks entry"
+    }
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "minutes_since_open": 127
+}

@@ -1,0 +1,29 @@
+{
+  "tick_time_et": "2026-10-12T09:37:44-04:00",
+  "minutes_since_open": 7,
+  "verdict": "NO_TRADE",
+  "reason": "ORB window not closed (7/15 min elapsed); all orb_breakout=false; broad-tape unlock fails (NVDA last 227.48 < VWAP 228.26); no day plan found",
+  "positions_managed": [],
+  "new_order": null,
+  "candidates_reviewed": [
+    {"ticker": "AAPL", "outcome": "skip", "reason": "ORB not formed yet (7 min)"},
+    {"ticker": "AMD",  "outcome": "skip", "reason": "spread 183bp > 25bp max"},
+    {"ticker": "AMZN", "outcome": "skip", "reason": "ORB not formed yet (7 min)"},
+    {"ticker": "AVGO", "outcome": "skip", "reason": "ORB not formed yet (7 min)"},
+    {"ticker": "CRM",  "outcome": "skip", "reason": "spread 1020bp > 25bp max"},
+    {"ticker": "GOOGL","outcome": "skip", "reason": "spread 82bp > 25bp max"},
+    {"ticker": "META", "outcome": "skip", "reason": "spread 102bp > 25bp max"},
+    {"ticker": "MSFT", "outcome": "skip", "reason": "above VWAP but broad-tape unlock fails (NVDA below VWAP); ORB not formed"},
+    {"ticker": "NFLX", "outcome": "skip", "reason": "above VWAP but broad-tape unlock fails (NVDA below VWAP); ORB not formed"},
+    {"ticker": "NVDA", "outcome": "skip", "reason": "spread 33bp > 25bp max; below VWAP (blocks broad-tape unlock)"},
+    {"ticker": "ORCL", "outcome": "skip", "reason": "spread 231bp > 25bp max"},
+    {"ticker": "TSLA", "outcome": "skip", "reason": "ORB not formed yet (7 min)"}
+  ],
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "open_positions": 0
+  },
+  "notes": "No day plan (docs/plan/2026-10-12.md missing). First missing-plan session — monitor for scheduler issue. Watchlist looks active: AAPL 3.08x rv, AMZN 3.22x rv, CRM 6.5x rv (but 1020bp spread), META 6.1x rv (102bp spread). Clean setups may emerge after ORB closes at 9:45 ET if broad-tape unlock satisfies."
+}

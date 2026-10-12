@@ -1,0 +1,22 @@
+{
+  "time_et": "2026-10-12T15:37:58-04:00",
+  "action": "NO_TRADE",
+  "reason": "Past 3:30 PM no-new-entries cutoff (past_no_new_entries=true, 367 min since open). Flat with 0 positions — nothing to manage. PRECONDITION #1 HALT (flatten scheduler unconfirmed, 21st consecutive session). Documentation-only mode. Broad-tape unlock FAILS: SPY $777.865 < VWAP $778.04. Gate outcomes: NVDA rel_vol 0.5x FAIL (above VWAP $226.81 vs $226.42); INTC rel_vol 0.86x FAIL (below VWAP $101.42 vs $101.45); BAC rel_vol 0.6x FAIL (above VWAP $54.485 vs $54.48); NKE rel_vol 0.4x FAIL (above VWAP $35.275 vs $34.99, orb_breakout=true but ORB window expired). ORB window expired (367 min). No VWAP reclaim candidates. Flatten window opens at 3:50 PM ET — nothing to flatten (already flat). Day P&L $0.00. 0/20 trades, 0/8 slots.",
+  "trades_today": 0,
+  "positions": 0,
+  "day_pnl": 0.0,
+  "market_snapshot": {
+    "SPY": {"last": 777.865, "vwap": 778.04, "above_vwap": false, "rel_volume": 0.52, "spread_bp": 0.6},
+    "QQQ": {"last": 746.35, "vwap": 746.52, "above_vwap": false, "rel_volume": 0.74, "spread_bp": 0.4},
+    "NVDA": {"last": 226.81, "vwap": 226.42, "above_vwap": true, "rel_volume": 0.5, "spread_bp": 0.4},
+    "INTC": {"last": 101.42, "vwap": 101.45, "above_vwap": false, "rel_volume": 0.86, "spread_bp": 2.0},
+    "BAC": {"last": 54.485, "vwap": 54.48, "above_vwap": true, "rel_volume": 0.6, "spread_bp": 1.8},
+    "NKE": {"last": 35.275, "vwap": 34.99, "above_vwap": true, "rel_volume": 0.4, "spread_bp": 2.8, "orb_breakout": true}
+  },
+  "gates_failed": [
+    "past_no_new_entries (3:30 PM cutoff)",
+    "PRECONDITION_1_HALT (flatten scheduler unconfirmed, 21st consecutive session)",
+    "broad_tape_unlock (SPY below VWAP)",
+    "rel_vol_all_names"
+  ]
+}

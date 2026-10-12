@@ -1,0 +1,69 @@
+{
+  "time_et": "2026-10-12T10:38:59-04:00",
+  "minutes_since_open": 68,
+  "action": "NO_TRADE",
+  "halt_reason": "PRECONDITION_1_FLATTEN_UNCONFIRMED",
+  "halt_detail": "Flatten scheduler unconfirmed for 20 consecutive sessions (Sep 17 – Oct 9 + today). Playbook rule: do not enter new positions when the close-out mechanism is unconfirmed. Documentation-only mode active.",
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "broad_tape": {
+    "SPY_last": 777.645,
+    "SPY_vwap": 778.49,
+    "SPY_above_vwap": false,
+    "SPY_rel_vol": 0.68,
+    "NVDA_last": 225.31,
+    "NVDA_vwap": 226.65,
+    "NVDA_above_vwap": false,
+    "NVDA_rel_vol": 1.2,
+    "broad_tape_unlock": false,
+    "broad_tape_unlock_reason": "SPY below VWAP AND NVDA below VWAP — all ORB/momentum entries blocked"
+  },
+  "gate_outcomes": {
+    "NVDA": {
+      "spread_bp": 1.3,
+      "spread_gate": "PASS",
+      "rel_vol": 1.2,
+      "rel_vol_gate": "FAIL (need 1.5x)",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_window_open": true,
+      "verdict": "SKIP — rel_vol below gate"
+    },
+    "INTC": {
+      "spread_bp": 3.0,
+      "spread_gate": "PASS (tightened from 81.9 bp premarket — re-arm eligible before 11 AM)",
+      "rel_vol": 1.93,
+      "rel_vol_gate": "PASS",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "broad_tape_unlock": false,
+      "verdict": "SKIP — broad-tape unlock fails (SPY+NVDA both below VWAP)"
+    },
+    "BAC": {
+      "spread_bp": 1.8,
+      "spread_gate": "PASS",
+      "rel_vol": 1.39,
+      "rel_vol_gate": "FAIL (need 1.5x)",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "verdict": "SKIP — rel_vol below gate"
+    },
+    "NKE": {
+      "spread_bp": 2.9,
+      "spread_gate": "PASS",
+      "rel_vol": 0.62,
+      "rel_vol_gate": "FAIL (need 1.5x — only 0.62x)",
+      "above_vwap": true,
+      "orb_breakout": true,
+      "verdict": "SKIP — rel_vol far below gate despite orb_breakout signal"
+    }
+  },
+  "setup_summary": "No setup qualifies even in hypothetical analysis. NKE shows orb_breakout=true and above_vwap=true but rel_vol of only 0.62x (less than half the 1.5x gate) disqualifies it firmly. INTC has cleared its spread (3.0 bp) and has strong rel_vol (1.93x) but broad-tape unlock fails. Market regime: MIXED/RANGE, Columbus Day, pre-CPI week shadow.",
+  "notes": "INTC spread tracking: was 81.9 bp premarket, now 3.0 bp live — has cleared the <15 bp re-arm gate well before 11 AM. If PRECONDITION #1 were cleared, INTC would be the only candidate with qualifying rel_vol, but broad-tape unlock would still block ORB entry. VWAP reclaim on INTC requires it to be above VWAP (currently $101.075 vs $101.90 VWAP — still below)."
+}

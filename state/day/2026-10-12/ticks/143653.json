@@ -1,0 +1,61 @@
+{
+  "time_et": "2026-10-12T14:36:53-04:00",
+  "minutes_since_open": 306,
+  "action": "NO_TRADE",
+  "halt_reason": "PRECONDITION_1_FLATTEN_UNCONFIRMED",
+  "halt_sessions": 21,
+  "broad_tape_unlock": false,
+  "broad_tape_detail": "SPY $777.40 < VWAP $778.18",
+  "gate_outcomes": {
+    "NVDA": {
+      "last": 226.665,
+      "vwap": 226.41,
+      "above_vwap": true,
+      "rel_volume": 0.54,
+      "spread_bp": 0.4,
+      "rel_vol_gate": "FAIL",
+      "note": "Above VWAP — not a VWAP reclaim candidate. Vol 0.54x < 1.5x required."
+    },
+    "INTC": {
+      "last": 101.16,
+      "vwap": 101.52,
+      "above_vwap": false,
+      "rel_volume": 0.9,
+      "spread_bp": 2.0,
+      "rel_vol_gate": "FAIL",
+      "note": "Below VWAP but rel_vol 0.90x < 1.5x. Past 11 AM re-arm deadline."
+    },
+    "BAC": {
+      "last": 54.51,
+      "vwap": 54.48,
+      "above_vwap": true,
+      "rel_volume": 0.64,
+      "spread_bp": 1.8,
+      "rel_vol_gate": "FAIL",
+      "note": "Above VWAP — not a VWAP reclaim candidate. Vol 0.64x < 1.5x required."
+    },
+    "NKE": {
+      "last": 35.1,
+      "vwap": 34.96,
+      "above_vwap": true,
+      "rel_volume": 0.41,
+      "spread_bp": 2.8,
+      "orb_breakout": true,
+      "rel_vol_gate": "FAIL",
+      "note": "orb_breakout=true but rel_vol 0.41x < 1.5x. ORB window expired (306 min since open)."
+    }
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "time_flags": {
+    "orb_window_open": false,
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "minutes_to_flatten_window": 74
+  }
+}

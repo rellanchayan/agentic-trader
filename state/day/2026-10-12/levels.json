@@ -1,0 +1,144 @@
+{
+  "_meta": {
+    "date": "2026-10-12",
+    "generated_utc": "2026-10-12T13:34:13.380169+00:00",
+    "screened_utc": "2026-10-12T14:00:00+00:00",
+    "source": "watchlist_build + day-screener",
+    "candidates_considered": 4,
+    "top": 4,
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this.",
+    "screener_summary": "INTC dropped: spread_bp=81.9 eats 15.6% of the $5.40 ATR in round-trip cost — unusable. NVDA, BAC, NKE kept. SPY and QQQ added as liquid market anchors (levels require live quote — not fabricated). Regime context: pre-CPI week (CPI ~Oct 14, PPI ~Oct 15); expect compressed relative volume and range-bound tape Mon-Tue. JPM/WFC earnings Tue Oct 13 may create financials sector momentum (watch BAC). Vol-compression playbook rules active this week."
+  },
+  "NVDA": {
+    "ticker": "NVDA",
+    "sector": "technology",
+    "prev_close": 228.75,
+    "atr_day": 5.01,
+    "avg_vol_10d": 2676052,
+    "premarket_price": 228.41,
+    "gap_pct": -0.0015,
+    "spread_bp": 2.2,
+    "orb_high": null,
+    "orb_low": null,
+    "reason": "Leading AI/semiconductor large-cap; tight 2.2 bp spread and $5 ATR make it the most tradeable name on the list. Post-last-week AI sell-off (-1.25% Nasdaq Thu Oct 8 on OpenAI revenue miss), Monday direction set by ORB. Also serves as the broad-tape unlock gate: NVDA above VWAP required before any other name may enter.",
+    "key_levels": {
+      "support": 225.00,
+      "resistance": 231.00,
+      "orb_trigger": 229.00,
+      "stop_approx": 226.50
+    },
+    "setup_type": "orb",
+    "tradeable": true,
+    "note": "No gap catalyst today (-0.15%); direction determined by ORB. Long entry on break above orb_high near 229.00 with stop ~226.50 (0.5x ATR). Support at 225 (round number, ~0.75 ATR below prev_close). Resistance at 231 (~0.45 ATR above prev_close). Caution: premarket spread was 145 bp on Oct 9 — confirm live spread is below 15 bp before any entry."
+  },
+  "INTC": {
+    "ticker": "INTC",
+    "sector": "technology",
+    "prev_close": 102.16,
+    "atr_day": 5.4,
+    "avg_vol_10d": 2042430,
+    "premarket_price": 102.58,
+    "gap_pct": 0.0041,
+    "spread_bp": 81.9,
+    "orb_high": null,
+    "orb_low": null,
+    "reason": "DROPPED — spread_bp=81.9 is prohibitively wide. At $102/share, 81.9 bp = $0.84 bid-ask round-trip cost, which is 15.6% of the $5.40 daily ATR. Entering and exiting destroys any viable R/R structure.",
+    "key_levels": {
+      "support": null,
+      "resistance": null,
+      "orb_trigger": null,
+      "stop_approx": null
+    },
+    "setup_type": "orb",
+    "tradeable": false,
+    "note": "Disarmed: spread 81.9 bp far exceeds the <15 bp gate. Do not trade today. Volume and ATR are otherwise strong — reassess tomorrow if spread normalizes. Note: on Oct 9 the same name had a 3.7 bp spread; today's wide spread may reflect a weekend catalyst or thin premarket liquidity."
+  },
+  "BAC": {
+    "ticker": "BAC",
+    "sector": "financials",
+    "prev_close": 54.72,
+    "atr_day": 0.90,
+    "avg_vol_10d": 2313127,
+    "premarket_price": 54.75,
+    "gap_pct": 0.0005,
+    "spread_bp": 1.8,
+    "orb_high": null,
+    "orb_low": null,
+    "reason": "Major US bank with the tightest spread on the list (1.8 bp) and solid 2.3M avg daily volume. JPM and WFC report Q3 earnings Tuesday Oct 13 — institutional pre-positioning may create financials sector momentum today. Low priority due to small ATR ($0.90 per day).",
+    "key_levels": {
+      "support": 54.00,
+      "resistance": 55.00,
+      "orb_trigger": 55.00,
+      "stop_approx": 54.55
+    },
+    "setup_type": "orb",
+    "tradeable": true,
+    "note": "Low priority: ATR $0.90 limits R/R on a range-bound tape. Support at 54.00 (round number, ~0.8x ATR below prev_close). Resistance at 55.00 is also the ORB trigger; a clean break and hold above 55.00 confirms direction. Stop ~54.55 (0.5x ATR below entry). Size modestly (~$5k notional). Evaluate only if NVDA does not produce a clean ORB setup."
+  },
+  "NKE": {
+    "ticker": "NKE",
+    "sector": "consumer_discretionary",
+    "prev_close": 34.76,
+    "atr_day": 1.07,
+    "avg_vol_10d": 2225417,
+    "premarket_price": 34.78,
+    "gap_pct": 0.0006,
+    "spread_bp": 8.6,
+    "orb_high": null,
+    "orb_low": null,
+    "reason": "Liquid consumer large-cap providing sector diversification; 8.6 bp spread is acceptable. Flat gap means direction set by ORB. Low priority: small ATR, elevated inflation/oil headwinds for consumer discretionary, and a prior BofA Underperform analyst rating.",
+    "key_levels": {
+      "support": 34.00,
+      "resistance": 35.00,
+      "orb_trigger": 35.00,
+      "stop_approx": 34.50
+    },
+    "setup_type": "orb",
+    "tradeable": true,
+    "note": "Low priority. Spread 8.6 bp is acceptable but wider than NVDA/BAC — size modestly. Support at 34.00 (round number, ~0.7x ATR below prev_close). Resistance at 35.00 is also the ORB trigger. Stop ~34.50 (0.47x ATR below entry). Evaluate only if NVDA and BAC do not set up cleanly. BofA Underperform still in play."
+  },
+  "SPY": {
+    "ticker": "SPY",
+    "sector": "broad_market_etf",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "reason": "S&P 500 ETF — structurally the most liquid US equity instrument. Added as a market-direction ORB candidate since the screened list is thin (3 names). No quote data from pre-market screen; all levels must be populated from live tick before trading. Never fabricated.",
+    "key_levels": {
+      "support": null,
+      "resistance": null,
+      "orb_trigger": null,
+      "stop_approx": null
+    },
+    "setup_type": "orb",
+    "tradeable": true,
+    "note": "No premarket data from watchlist screen — levels must come from live quote. Pre-CPI week (CPI ~Oct 14): expect possibly compressed intraday range Mon-Tue. Confirm live spread and ATR before any entry. SPY spread is typically 1-3 bp during regular hours."
+  },
+  "QQQ": {
+    "ticker": "QQQ",
+    "sector": "broad_market_etf",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "orb_high": null,
+    "orb_low": null,
+    "reason": "Nasdaq-100 ETF — second most liquid US ETF; tech-heavy and directly correlated with NVDA's sector. Added as tech-sector ORB anchor. No quote data from pre-market screen; all levels must be populated from live tick before trading. Never fabricated.",
+    "key_levels": {
+      "support": null,
+      "resistance": null,
+      "orb_trigger": null,
+      "stop_approx": null
+    },
+    "setup_type": "orb",
+    "tradeable": true,
+    "note": "No premarket data from watchlist screen — levels must come from live quote. Tech context: Nasdaq fell 1.25% Thu Oct 8 on AI revenue miss; Monday tape signals whether the Friday futures bounce holds. Confirm live spread before trading. QQQ spread is typically 1-4 bp during regular hours."
+  }
+}

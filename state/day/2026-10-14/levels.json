@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "date": "2026-10-14",
+    "generated_utc": "2026-10-14T13:34:51.008448+00:00",
+    "source": "watchlist_build -> day_screener",
+    "candidates_considered": 4,
+    "screener_kept": 3,
+    "screener_dropped": ["INTC — spread 51.9 bp, above 15 bp gate; disarmed for session"],
+    "note": "CPI DAY (Sep 2026 CPI print at 8:30 AM ET). INTC dropped: spread 51.9 bp. ETFs (SPY/QQQ/IWM/DIA) not added: Alpaca data feed returned no qualifying data for them today — do not fabricate. PRECONDITION #1 (flatten scheduler unconfirmed, 22nd consecutive session) still active: no new positions until human confirms. No ORB entries before 9:45 AM on CPI days per playbook. VWAP reclaim off-table on CPI day."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 225.11,
+    "atr_day": 5.22,
+    "avg_vol_10d": 2528361,
+    "premarket_price": 224.91,
+    "gap_pct": -0.0009,
+    "spread_bp": 2.2,
+    "support": 219.89,
+    "resistance": 230.33,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "CPI day — no ORB entries before 9:45 AM. Spread 2.2 bp (excellent). Support: $220.00 round / $219.89 (prev_close minus 1 ATR). Resistance: $225.00 round / $230.33 (prev_close plus 1 ATR). Stop size ~1 ATR ($5.22) below breakout. Tech/semi sector — watch for CPI-driven rate-driven rotation."
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 50.14,
+    "atr_day": 1.2,
+    "avg_vol_10d": 2423963,
+    "premarket_price": 50.14,
+    "gap_pct": 0.0,
+    "spread_bp": 4.0,
+    "support": 48.94,
+    "resistance": 51.34,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "CPI day — financials most directly impacted (rate expectations reprice immediately on print). Spread 4.0 bp (clean). No ORB entries before 9:45 AM. Support: $50.00 round (major) / $48.94 (prev_close minus 1 ATR). Resistance: $51.00 round / $51.34 (prev_close plus 1 ATR). Stop ~1 ATR ($1.20) below entry. Highest-priority name today given direct CPI sensitivity."
+  },
+  "NKE": {
+    "sector": "consumer",
+    "prev_close": 35.26,
+    "atr_day": 1.07,
+    "avg_vol_10d": 2177646,
+    "premarket_price": 35.28,
+    "gap_pct": 0.0006,
+    "spread_bp": 8.5,
+    "support": 34.19,
+    "resistance": 36.33,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "CPI day — consumer discretionary; inflation affects spending outlook but less direct than financials. Spread 8.5 bp (within gate). No ORB entries before 9:45 AM. Support: $35.00 round / $34.19 (prev_close minus 1 ATR). Resistance: $36.00 round / $36.33 (prev_close plus 1 ATR). Low ATR ($1.07) keeps dollar risk tight. Lowest priority of the three."
+  }
+}

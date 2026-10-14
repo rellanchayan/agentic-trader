@@ -1,0 +1,19 @@
+{
+  "tick_time_et": "09:37:27",
+  "date": "2026-10-14",
+  "verdict": "HALT",
+  "reason": "day_plan_found=false — premarket did not run; no day plan exists; rules require halting this tick without a plan",
+  "action_taken": "none",
+  "positions_managed": [],
+  "new_orders": [],
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_used": 0,
+  "slots_used": 0,
+  "market_summary": {
+    "minutes_since_open": 7,
+    "in_flatten_window": false,
+    "past_no_new_entries": false
+  },
+  "notes": "Skipped all trading decisions. Will retry next tick — if premarket still has not run by then, will continue halting."
+}

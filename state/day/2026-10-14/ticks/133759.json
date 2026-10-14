@@ -1,0 +1,38 @@
+{
+  "t": "13:37",
+  "tick_ts": "133759",
+  "action": "NO_TRADE",
+  "note": "PRECONDITION #1 uncleared (flatten scheduler unconfirmed, 23rd consecutive session). CPI day (hot +3.7% YoY) independently blocks entries — no-entry session per playbook. ORB window expired (247 min post-open). NVDA below VWAP ($221.20 vs $223.50) — broad-tape unlock fails. Approaching 2:00 PM ET no-new-entries cutoff per today plan. No orders submitted. Flat.",
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "positions": 0,
+  "trades_today": 0,
+  "candidates": {
+    "NVDA": {
+      "last": 221.20,
+      "vwap": 223.50,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 1.17,
+      "spread_bp": 0.9,
+      "gate_block": "PRECONDITION_1_HALT + CPI_DAY + below_vwap + orb_window_expired_247min"
+    },
+    "BAC": {
+      "last": 50.795,
+      "vwap": 50.12,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 3.07,
+      "spread_bp": 2.0,
+      "gate_block": "PRECONDITION_1_HALT + CPI_DAY + orb_window_expired_247min + low_priority_candidate"
+    },
+    "NKE": {
+      "last": 34.94,
+      "vwap": 34.95,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 0.34,
+      "gate_block": "disarmed_premarket + below_vwap + low_rel_vol"
+    }
+  }
+}

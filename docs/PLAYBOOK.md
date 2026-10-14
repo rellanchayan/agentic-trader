@@ -305,6 +305,28 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-14: No tuning. Tuner unfrozen ("ok to tune", 81 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: twenty-second consecutive zero-trade session (Sep 17 through Oct 14). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65. Two independent blocking paths were active today:
+  (1) PRECONDITION #1 (flatten scheduler unconfirmed) blocked all entries for the twenty-second
+  consecutive session. (2) CPI release day (BLS Consumer Price Index, 8:30 AM ET) — the binary
+  8:30 AM print distorts the opening range and is structurally equivalent to CPI release day in
+  its effect on the session. A zero-trade outcome is the expected and correct result under either
+  condition; having both active simultaneously makes it doubly correct.
+  CPI day observation confirmed: today is the second CPI release day in program history (first was
+  2026-09-11). Both produced zero trades, both were the correct and expected outcome. The CPI release
+  day rule is working as designed — no adjustment warranted.
+  Escalation status: flatten scheduler unconfirmed for 22 consecutive sessions. The standing
+  infrastructure rule (added 2026-09-25) declared this a systemic failure requiring human
+  intervention at 5+ sessions. The counter is now at 22 sessions with no human intervention logged.
+  Trading cannot resume safely until a human verifies or re-configures the flatten scheduler.
+  All-time stats (81 days, 31 trades, 0.38 trades/day, 19.4% win rate, avg win +0.22R, avg loss
+  -0.49R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. All setups show negative expectancy; sample sizes remain too
+  thin (31 trades across 81 days) to distinguish miscalibration from noise. Tuning ledger remains
+  empty; no parameter has ever been changed by the tuner.
 - 2026-10-13: No tuning. Tuner unfrozen ("ok to tune", 80 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

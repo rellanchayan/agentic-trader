@@ -1,0 +1,79 @@
+{
+  "tick_id": "143708",
+  "timestamp_et": "2026-10-13T14:37:08-04:00",
+  "minutes_since_open": 307,
+  "action": "none",
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_AND_PRE_CPI",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "candidates": [
+    {
+      "ticker": "NVDA",
+      "last": 227.42,
+      "vwap": 225.79,
+      "orb_high": 225.63,
+      "rel_vol": 0.80,
+      "spread_bp": 1.3,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "spread 1.3bp clean; rel_vol 0.80x continuing downward trend (0.88x at 13:38, 0.97x at 12:38); ORB technically broken (price 227.42 above ORB high 225.63), above VWAP — vol compressed, no entry"
+    },
+    {
+      "ticker": "INTC",
+      "last": 102.115,
+      "vwap": 100.97,
+      "orb_high": 100.74,
+      "rel_vol": 0.98,
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "spread 2.0bp; rel_vol 0.98x (down from 1.09x at 13:38); ORB broken (price 102.115 above ORB high 100.74); above VWAP 100.97 — vol compressed, no entry"
+    },
+    {
+      "ticker": "BAC",
+      "last": 54.02,
+      "vwap": 54.14,
+      "orb_high": 54.84,
+      "rel_vol": 1.14,
+      "spread_bp": 1.9,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "spread 1.9bp; rel_vol 1.14x (down from 1.26x at 13:38, was 2.51x at 10:38 — steep decline all session); price 54.02 below VWAP 54.14 and ORB high 54.84; no entry"
+    },
+    {
+      "ticker": "NKE",
+      "last": 35.415,
+      "vwap": 35.4,
+      "orb_high": 35.845,
+      "rel_vol": 0.62,
+      "spread_bp": 2.8,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": false,
+      "above_vwap": true,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "spread 2.8bp; rel_vol 0.62x (flat from 0.64x at 13:38, 0.71x at 12:38 — very low); price 35.415 just at VWAP 35.40 (marginal above_vwap); ORB high 35.845 not approached; no entry"
+    }
+  ],
+  "session_observations": {
+    "rel_vol_trend": "Pre-CPI compression confirmed and deepening — all four names at session lows on rel_vol. No name above 1.5x gate since 10:38. BAC was the last name with rel_vol above gate (11:37 at 1.96x) and has now declined to 1.14x.",
+    "price_trend": "NVDA and INTC technically above ORB high and VWAP but on thin volume — not a tradeable setup. BAC and NKE drifting below VWAP. No directional momentum in any name.",
+    "pre_cpi_note": "CPI release tomorrow (Wed Oct 14, 8:30 AM ET). Vol compression now in its 5th hour of session — entirely consistent with institutional pre-positioning. Zero-trade outcome is expected and correct.",
+    "precondition_1": "Still unconfirmed. 22nd consecutive session blocked. Requires human confirmation of flatten scheduler (3:50, 3:53, 3:56 PM ET passes) before any entry can be made.",
+    "account_status": "Flat. 0 positions. $999,641.65 equity. Day P&L $0.00."
+  },
+  "orders_submitted": 0,
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65
+}

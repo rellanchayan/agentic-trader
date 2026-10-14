@@ -1,0 +1,88 @@
+{
+  "tick_id": "103807",
+  "timestamp_et": "2026-10-13T10:38:07-04:00",
+  "minutes_since_open": 68,
+  "verdict": "NO_TRADE",
+  "action": "none",
+  "reason": "PRECONDITION_1_AND_PRE_CPI",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "last": 225.68,
+      "spread_bp": 1.3,
+      "spread_gate": "PASS",
+      "rel_volume": 1.51,
+      "rel_vol_gate": "PASS",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_gate": "FAIL_no_breakout",
+      "precondition_1_gate": "FAIL_scheduler_unconfirmed",
+      "pre_cpi_gate": "FAIL_pre_cpi_day",
+      "result": "BLOCKED",
+      "note": "NVDA spread tightened from premarket 127.1 bp to 1.3 bp — re-armed per spread-deadline rule. Rel-vol 1.51x barely clears 1.5x gate. No ORB breakout (price $225.68 vs ORB high $225.63 — essentially at the level but no confirmed clean break). Both PRECONDITION #1 and pre-CPI protocol independently block entry regardless."
+    },
+    {
+      "ticker": "INTC",
+      "last": 100.68,
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_volume": 1.71,
+      "rel_vol_gate": "PASS",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_gate": "FAIL_no_breakout",
+      "precondition_1_gate": "FAIL_scheduler_unconfirmed",
+      "pre_cpi_gate": "FAIL_pre_cpi_day",
+      "result": "BLOCKED",
+      "note": "INTC spread 2.0 bp and rel-vol 1.71x both within gates. Price above VWAP ($99.95). No ORB breakout confirmed (price $100.68, ORB high $100.74 — just below). Both PRECONDITION #1 and pre-CPI protocol block entry."
+    },
+    {
+      "ticker": "BAC",
+      "last": 54.205,
+      "spread_bp": 1.8,
+      "spread_gate": "PASS",
+      "rel_volume": 2.51,
+      "rel_vol_gate": "PASS",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_gate": "FAIL_no_breakout",
+      "precondition_1_gate": "FAIL_scheduler_unconfirmed",
+      "pre_cpi_gate": "FAIL_pre_cpi_day",
+      "result": "BLOCKED",
+      "note": "BAC live data confirmed populated — price $54.205, VWAP $54.15, spread 1.8 bp, rel-vol 2.51x (highest of the four names). Price below ORB low $54.25 and ORB high $54.84 — no breakout. Both PRECONDITION #1 and pre-CPI protocol block entry."
+    },
+    {
+      "ticker": "NKE",
+      "last": 35.42,
+      "spread_bp": 2.8,
+      "spread_gate": "PASS",
+      "rel_volume": 1.05,
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "orb_gate": "FAIL_no_breakout",
+      "precondition_1_gate": "FAIL_scheduler_unconfirmed",
+      "pre_cpi_gate": "FAIL_pre_cpi_day",
+      "result": "BLOCKED",
+      "note": "NKE rel-vol 1.05x below 1.5x gate. Price below VWAP ($35.47). No ORB breakout. Blocked by rel-vol gate alone — plus PRECONDITION #1 and pre-CPI."
+    }
+  ],
+  "broad_tape_unlock": {
+    "spy_above_vwap": "unknown_not_in_context",
+    "nvda_above_vwap": true,
+    "unlock_status": "partial_unknown",
+    "note": "SPY not in watchlist context. NVDA above VWAP."
+  },
+  "orders_submitted": [],
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "blocking_conditions": [
+    "PRECONDITION_1: flatten scheduler unconfirmed for 21 consecutive sessions (Sep 17 - Oct 13)",
+    "PRE_CPI_DAY: CPI release tomorrow Oct 14 at 8:30 AM ET — institutional pre-positioning suppresses rel-vol"
+  ]
+}

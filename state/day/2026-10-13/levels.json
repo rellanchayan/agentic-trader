@@ -1,0 +1,78 @@
+{
+  "_meta": {
+    "date": "2026-10-13",
+    "generated_utc": "2026-10-13T13:35:05.418132+00:00",
+    "source": "watchlist_build",
+    "screener_edited_utc": "2026-10-13T14:00:00+00:00",
+    "candidates_considered": 4,
+    "top": 4,
+    "names_kept": 4,
+    "names_dropped": 0,
+    "session_flags": [
+      "PRECONDITION_1_HALT: flatten scheduler unconfirmed for 21+ consecutive sessions — no new entries until a human confirms scheduler and logs it",
+      "PRE_CPI_DAY: CPI releases Wed 2026-10-14 at 8:30 AM ET — volume likely below 1.5x gate, trend follow-through reduced, macro whipsaw risk elevated",
+      "NVDA_SPREAD_FLAG: NVDA premarket spread 127.1 bp far exceeds 15 bp gate — armed false, observe only until spread compresses at open"
+    ],
+    "note": "Pre-market screen. ORB levels fill in live after the open. All four names are liquid and pass volume; NVDA fails the spread gate (127.1 bp). PRECONDITION #1 (flatten scheduler unconfirmed 21+ sessions) blocks all new entries this session regardless of armed status. Screener agent has added support, resistance, armed, and session notes."
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 223.78,
+    "atr_day": 5.1,
+    "avg_vol_10d": 2588483,
+    "premarket_price": 225.07,
+    "gap_pct": 0.0058,
+    "spread_bp": 127.1,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 222.00,
+    "resistance": 226.50,
+    "armed": false,
+    "note": "Most liquid name on the list (2.6M sh/day). Premarket spread 127.1 bp is ~8x the 15 bp gate — do NOT enter until spread compresses to under 15 bp at open. +0.6% gap has no confirmed news catalyst; gap may fade. Support at $222 round number (~1 ATR below prev close). Resistance at $226.50 above premarket. High ATR ($5.10) means wide stops. Pre-CPI day: tech names with high beta tend to chop rather than trend the session before macro prints. Even if spread clears, PRECONDITION #1 blocks entry."
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 54.62,
+    "atr_day": 0.89,
+    "avg_vol_10d": 2283273,
+    "premarket_price": 54.56,
+    "gap_pct": -0.001,
+    "spread_bp": 1.8,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 54.00,
+    "resistance": 55.00,
+    "armed": true,
+    "note": "Cleanest spread on the list (1.8 bp). Flat gap (-0.1%); no catalyst. Financials are rate-sensitive: pre-CPI positioning tends to keep financials in a tight range until the print. Support at $54.00 round number. Resistance at $55.00 round number (~1.5 ATR above). Low ATR ($0.89) means small daily range; need a clean ORB break with above-average volume to justify entry. Armed true on spread, but PRECONDITION #1 blocks all entries."
+  },
+  "NKE": {
+    "sector": "consumer",
+    "prev_close": 35.75,
+    "atr_day": 1.09,
+    "avg_vol_10d": 2202393,
+    "premarket_price": 35.78,
+    "gap_pct": 0.0008,
+    "spread_bp": 5.6,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 35.00,
+    "resistance": 36.75,
+    "armed": true,
+    "note": "Acceptable spread (5.6 bp). Flat gap (+0.1%); no news catalyst found. Consumer discretionary names tend to drift on low-catalyst pre-CPI days. Support at $35.00 round number (~0.7 ATR below). Resistance at $36.75 (~1 ATR above prev close). Would need a clean ORB with 1.5x+ relative volume to consider. Armed true on spread, but PRECONDITION #1 blocks all entries."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 98.88,
+    "atr_day": 5.36,
+    "avg_vol_10d": 2018367,
+    "premarket_price": 98.81,
+    "gap_pct": -0.0007,
+    "spread_bp": 4.0,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 97.50,
+    "resistance": 100.00,
+    "armed": true,
+    "note": "Acceptable spread (4.0 bp). Flat gap (-0.1%); no catalyst. Key structural note: approaching $100.00 psychological resistance (only $1.12 above prev close, well within 1 ATR). If price pushes toward $100 at open, expect supply; shorts defend round numbers. Support at $97.50 (prior structure, ~1.4 ATR below). Highest ATR in the list ($5.36) means wide stops required per PLAYBOOK sizing rules. Pre-CPI day: tech names chop; $100 magnet could produce both a fake-out and reversal in the same session. Armed true on spread, but PRECONDITION #1 blocks all entries."
+  }
+}

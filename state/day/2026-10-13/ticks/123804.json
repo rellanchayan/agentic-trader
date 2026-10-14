@@ -1,0 +1,102 @@
+{
+  "tick_id": "123804",
+  "timestamp_et": "2026-10-13T12:38:04-04:00",
+  "minutes_since_open": 188,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_AND_PRE_CPI",
+  "action": "none",
+  "positions_managed": 0,
+  "orders_cancelled": 0,
+  "orders_submitted": 0,
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "loss_budget_remaining": 3000.0,
+  "blocking_conditions": [
+    {
+      "condition": "PRECONDITION_1",
+      "detail": "Flatten scheduler unconfirmed for 21 consecutive sessions (Sep 17 – Oct 13). Human confirmation required before any new positions can be entered. Playbook escalation threshold was 5 sessions; we are 4x past that threshold."
+    },
+    {
+      "condition": "PRE_CPI_DAY",
+      "detail": "September 2026 CPI release tomorrow Wed Oct 14 at 8:30 AM ET. Institutional participants reduce intraday exposure ahead of binary macro events. Rel_vol compression visible across all four names this session. Zero-trade outcome is expected and correct per playbook."
+    }
+  ],
+  "candidates": [
+    {
+      "ticker": "NVDA",
+      "last": 226.96,
+      "spread_bp": 1.3,
+      "spread_gate": "PASS",
+      "rel_vol": 0.97,
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "vwap": 225.3,
+      "orb_high": 225.63,
+      "quote_age_sec": 0.3,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "Price 226.96 technically above ORB high 225.63 and VWAP 225.30 — would be a valid ORB context if blocks cleared. However rel_vol has compressed to 0.97x, well below the 1.5x gate (2.0x required on MIXED/RANGE gap-up day per playbook). Spread 1.3bp clean. No entry possible."
+    },
+    {
+      "ticker": "INTC",
+      "last": 102.62,
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_vol": 1.19,
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "vwap": 100.52,
+      "orb_high": 100.74,
+      "quote_age_sec": 0.3,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "Price 102.62 above ORB high 100.74 and VWAP 100.52 — clean breakout structure technically. Rel_vol 1.19x below 1.5x gate. Spread 2.0bp clean. Both PRECONDITION_1 and pre-CPI block independently."
+    },
+    {
+      "ticker": "BAC",
+      "last": 53.925,
+      "spread_bp": 1.9,
+      "spread_gate": "PASS",
+      "rel_vol": 1.47,
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "vwap": 54.19,
+      "orb_high": 54.84,
+      "quote_age_sec": 0.3,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "Rel_vol 1.47x — just 0.03x below the 1.5x gate. Trending down from 2.51x at 10:38 through 1.96x at 11:37 to 1.47x now. Price below VWAP and well below ORB high 54.84. Live data confirmed populated (no repeat of Sept 18 gap)."
+    },
+    {
+      "ticker": "NKE",
+      "last": 35.335,
+      "spread_bp": 2.8,
+      "spread_gate": "PASS",
+      "rel_vol": 0.71,
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "vwap": 35.44,
+      "orb_high": 35.845,
+      "quote_age_sec": 0.2,
+      "block": "REL_VOL+PRECONDITION_1+PRE_CPI",
+      "note": "Rel_vol 0.71x — well below gate. Price 35.335 below VWAP 35.44 and ORB high 35.845. No catalyst or momentum visible."
+    }
+  ],
+  "session_observations": [
+    "Rel_vol compression is now visible across all four names at minute 188 — consistent with pre-CPI institutional de-risking.",
+    "NVDA and INTC have both technically broken above their ORB highs by this point in the session, but without volume support (NVDA 0.97x, INTC 1.19x). These are not valid ORB setups.",
+    "BAC rel_vol decline: 2.51x (10:38) → 1.96x (11:37) → 1.47x (12:38). Directional trend toward lower participation. On a pre-CPI day this is expected.",
+    "NKE vol at 0.71x — the weakest name today. Price drifted slightly below ORB low zone at 35.415.",
+    "PRECONDITION #1 remains the primary structural block. 21 consecutive sessions without flatten-scheduler confirmation. No human confirmation received. No positions will be opened until this is resolved.",
+    "Pre-CPI protocol independently prohibits entry today. Even if PRECONDITION #1 were cleared right now, VWAP reclaim is off-table (MIXED/RANGE + imminent macro) and ORB requires 2.0x rel_vol (MIXED/RANGE gap-up rule) — no name currently qualifies."
+  ],
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

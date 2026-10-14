@@ -1,0 +1,68 @@
+{
+  "tick_id": "153740",
+  "timestamp_et": "2026-10-13T15:37:40-04:00",
+  "minutes_since_open": 367,
+  "action": "none",
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_AND_PRE_CPI_AND_PAST_NO_NEW_ENTRIES",
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "positions_reviewed": 0,
+  "candidates": [
+    {
+      "ticker": "NVDA",
+      "last": 227.94,
+      "rel_vol": 0.75,
+      "spread_bp": 0.9,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "block": "PAST_NO_NEW_ENTRIES+PRECONDITION_1+PRE_CPI",
+      "note": "spread 0.9bp clean; rel_vol 0.75x (down from 0.80x at 14:37, trend: 1.51→1.16→0.97→0.88→0.80→0.75x); ORB broken above VWAP; past new-entry window; vol compressed all session"
+    },
+    {
+      "ticker": "INTC",
+      "last": 102.37,
+      "rel_vol": 0.91,
+      "spread_bp": 1.0,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "block": "PAST_NO_NEW_ENTRIES+PRECONDITION_1+PRE_CPI",
+      "note": "spread 1.0bp clean; rel_vol 0.91x (down from 0.98x at 14:37, trend: 1.71→1.26→1.19→1.09→0.98→0.91x); ORB broken above VWAP; past new-entry window"
+    },
+    {
+      "ticker": "BAC",
+      "last": 54.125,
+      "rel_vol": 1.07,
+      "spread_bp": 1.8,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": false,
+      "above_vwap": false,
+      "block": "PAST_NO_NEW_ENTRIES+PRECONDITION_1+PRE_CPI",
+      "note": "spread 1.8bp clean; rel_vol 1.07x (down from 1.14x at 14:37, trend: 2.51→1.96→1.47→1.26→1.14→1.07x); price 54.125 below VWAP 54.14 and ORB high 54.84; past new-entry window; live data confirmed populated"
+    },
+    {
+      "ticker": "NKE",
+      "last": 35.495,
+      "rel_vol": 0.58,
+      "spread_bp": 2.8,
+      "spread_gate": "PASS",
+      "rel_vol_gate": "FAIL_below_1.5x",
+      "orb_breakout": false,
+      "above_vwap": true,
+      "block": "PAST_NO_NEW_ENTRIES+PRECONDITION_1+PRE_CPI",
+      "note": "spread 2.8bp; rel_vol 0.58x (down from 0.62x at 14:37); price 35.495 above VWAP 35.41 but below ORB high 35.845; past new-entry window; very low participation"
+    }
+  ],
+  "orders_submitted": 0,
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0
+}

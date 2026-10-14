@@ -15,6 +15,7 @@ made of **rules to follow**, not stories.
 - Never re-enter a name you just exited unless a brand-new setup triggers.
 - Never flip-flop inside the spread (buying and selling pennies apart).
 - After eight or more consecutive sessions without a realized profit, conduct a setup-mix review before the next session: count how many blocked sessions had armed candidates the gates correctly filtered vs. sessions where the screener produced no qualifying candidate at all. The two failure modes require different responses — overly strict gates vs. an insufficiently broad screener universe. Do not loosen gates to force entries; diagnose the root cause first.
+- After 10 or more consecutive blocked sessions (PRECONDITION #1 or any hard infrastructure halt), treat the first re-enabled session as a re-calibration day: require textbook gate confirmation across all criteria without exception, use minimum position size, and do not count the result in setup expectancy analysis until at least one clean roundtrip confirms gates are calibrated to current market conditions. Baselines and VWAP anchors go stale during long halts.
 - When two consecutive sessions have no morning plan (docs/plans/<date>.md missing), treat it as a scheduler/runner failure, not a content failure — debug the premarket runner before placing any new trade. Two consecutive missing plans is a systemic breakdown; no strategy adjustment will fix it. The fix is in the scheduler. (2026-08-20 and 2026-08-21: second consecutive session with no plan written.)
 
 ## Time of day
@@ -304,6 +305,31 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-13: No tuning. Tuner unfrozen ("ok to tune", 80 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: twenty-first consecutive zero-trade session (Sep 17 through Oct 13). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65. PRECONDITION #1 (flatten scheduler unconfirmed)
+  blocked all entries for the twenty-first consecutive session.
+  Today is also the Tuesday before CPI (CPI releases tomorrow, Oct 14). The pre-CPI gate would have
+  independently blocked any entry today — low institutional participation ahead of the binary macro
+  print reliably suppresses relative volume below the 1.5x gate. This is the second confirmed
+  independent blocking path for today: both PRECONDITION #1 and the pre-CPI vol-compression gate
+  would have prevented entries. The zero-trade outcome is doubly correct.
+  Tomorrow (Oct 14) is CPI release day. Treat it as a no-entry session: the binary 8:30 AM ET print
+  distorts the opening range, and a zero-trade outcome is the expected and correct result regardless
+  of PRECONDITION #1 status.
+  Re-calibration note: when PRECONDITION #1 is eventually cleared and trading resumes, the first
+  session back should be treated as a re-calibration session. After 21 consecutive blocked sessions,
+  vol baselines, VWAP anchors, and R/R estimates for individual names will be stale. On the first
+  re-enabled session, require textbook gate confirmation across all criteria (spread, rel-vol,
+  broad-tape unlock) without exception and use minimum position size until at least one clean
+  roundtrip confirms the gates are calibrated to current market conditions.
+  All-time stats (80 days, 31 trades, 0.39 trades/day, 19.4% win rate, avg win +0.22R, avg loss
+  -0.49R): ORB 5 trades, 3 wins, -0.199R expectancy; momentum 1 trade, 0 wins, -0.975R; VWAP
+  reclaim 2 trades, 0 wins, -0.368R. All setups show negative expectancy; sample sizes remain too
+  thin (31 trades across 80 days) to distinguish miscalibration from noise. Tuning ledger remains
+  empty; no parameter has ever been changed by the tuner.
 - 2026-10-12: No tuning. Tuner unfrozen ("ok to tune", 79 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

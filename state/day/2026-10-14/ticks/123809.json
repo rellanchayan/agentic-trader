@@ -1,0 +1,59 @@
+{
+  "tick_time": "12:38:09",
+  "date": "2026-10-14",
+  "minutes_since_open": 188,
+  "verdict": "NO_TRADE",
+  "positions_managed": [],
+  "orders_submitted": [],
+  "halt_conditions": [
+    "PRECONDITION_1: flatten scheduler unconfirmed (23rd consecutive session, Sep 17 through Oct 14)",
+    "CPI_DAY: hot September CPI +3.7% YoY released at 8:30 AM ET — designated no-entry session per playbook"
+  ],
+  "gate_outcomes": {
+    "NVDA": {
+      "last": 221.895,
+      "vwap": 223.72,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 1.35,
+      "spread_bp": 0.9,
+      "orb_window_expired_min": 188,
+      "gate_block": "PRECONDITION_1_HALT + CPI_DAY + below_vwap (221.895 < 223.72) + orb_window_expired_188min",
+      "armed": false
+    },
+    "BAC": {
+      "last": 51.075,
+      "vwap": 50.01,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 3.66,
+      "spread_bp": 2.0,
+      "orb_window_expired_min": 188,
+      "gate_block": "PRECONDITION_1_HALT + CPI_DAY + orb_window_expired_188min + low_priority_candidate",
+      "armed": false,
+      "note": "Technically interesting (above VWAP, 3.66x rel_vol, ORB breakout) but all entry paths blocked"
+    },
+    "NKE": {
+      "last": 34.93,
+      "vwap": 34.95,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 0.38,
+      "spread_bp": 2.9,
+      "gate_block": "disarmed_premarket + below_vwap + low_rel_vol (0.38x < 1.5x gate)",
+      "armed": false
+    }
+  },
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "positions": 0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "loss_budget_remaining": 3000.0
+  },
+  "broad_tape_unlock": false,
+  "broad_tape_reason": "NVDA below VWAP ($221.895 < $223.72) — sector bellwether condition fails",
+  "summary": "23rd consecutive no-trade session due to PRECONDITION #1 (flatten scheduler unconfirmed). CPI day independently designates this a no-entry session. No positions to manage. Account flat."
+}

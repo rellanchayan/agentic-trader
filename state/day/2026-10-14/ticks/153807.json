@@ -1,0 +1,48 @@
+{
+  "tick_time_et": "15:38:07",
+  "tick_timestamp_utc": "2026-10-14T19:38:07Z",
+  "action": "NO_TRADE",
+  "verdict": "PROCEED (gate passed, no action taken)",
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "orders_cancelled": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "positions_open": 0,
+  "decision_summary": "Past 3:30 PM no-new-entries cutoff (clock_flags.past_no_new_entries=true). No positions to manage. PRECONDITION #1 uncleared (flatten scheduler unconfirmed, 22nd+ consecutive session). CPI day (hot +3.7% YoY) independently blocks all entries per playbook no-entry session rule. Account flat.",
+  "candidates": {
+    "NVDA": {
+      "last": 220.935,
+      "vwap": 222.65,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.08,
+      "spread_bp": 6.8,
+      "gate_block": "past_no_new_entries + PRECONDITION_1_HALT + CPI_DAY + below_vwap + orb_expired_368min"
+    },
+    "BAC": {
+      "last": 51.275,
+      "vwap": 50.33,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 2.57,
+      "spread_bp": 2.0,
+      "gate_block": "past_no_new_entries + PRECONDITION_1_HALT + CPI_DAY + orb_expired_368min"
+    },
+    "NKE": {
+      "last": 35.135,
+      "vwap": 34.94,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "rel_volume": 0.34,
+      "spread_bp": 2.8,
+      "gate_block": "past_no_new_entries + disarmed_premarket + low_rel_vol"
+    }
+  },
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false
+  },
+  "minutes_since_open": 368
+}

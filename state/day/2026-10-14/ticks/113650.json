@@ -1,0 +1,70 @@
+{
+  "tick_time_et": "11:36:50",
+  "date": "2026-10-14",
+  "action": "NO_TRADE",
+  "decision": "HOLD — no entry",
+  "blocking_conditions": [
+    "PRECONDITION_1_HALT: flatten scheduler unconfirmed for 23 consecutive sessions (Sep 17 through Oct 14). All entries blocked until human confirms flatten mechanism.",
+    "CPI_DAY_PROTOCOL: September CPI released at 8:30 AM ET (+3.7% YoY, hotter than expected). Playbook explicitly designates CPI release day as no-entry session.",
+    "BROAD_TAPE_UNLOCK_FAILS: NVDA below VWAP ($223.08 vs $224.40). SPY+NVDA both-above-VWAP gate not satisfied.",
+    "ORB_WINDOW_EXPIRED: 126 minutes since open; 90-minute ORB entry window closed at ~11:00 AM ET."
+  ],
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions_open": 0,
+    "trades_today": 0
+  },
+  "candidates_evaluated": {
+    "NVDA": {
+      "last": 223.08,
+      "vwap": 224.40,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.44,
+      "spread_bp": 1.3,
+      "gate_outcomes": {
+        "precondition_1": "FAIL — halt condition active",
+        "cpi_day": "FAIL — no-entry session",
+        "broad_tape_unlock": "FAIL — NVDA below VWAP",
+        "orb_window": "FAIL — 126 min post-open exceeds 90-min rule",
+        "rel_vol_gate": "FAIL — 1.44x below 1.5x minimum"
+      },
+      "verdict": "BLOCKED (multiple gates)"
+    },
+    "BAC": {
+      "last": 50.64,
+      "vwap": 49.82,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 4.6,
+      "spread_bp": 2.0,
+      "gate_outcomes": {
+        "precondition_1": "FAIL — halt condition active",
+        "cpi_day": "FAIL — no-entry session",
+        "orb_window": "FAIL — 126 min post-open exceeds 90-min rule",
+        "priority": "LOW — secondary candidate, thin ATR ($1.20), disqualified before individual gates"
+      },
+      "verdict": "BLOCKED (multiple gates)"
+    },
+    "NKE": {
+      "last": 34.88,
+      "vwap": 34.96,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 0.44,
+      "spread_bp": 2.9,
+      "gate_outcomes": {
+        "precondition_1": "FAIL — halt condition active",
+        "cpi_day": "FAIL — no-entry session",
+        "premarket_status": "DISARMED — ATR too narrow, bearish CPI bias for consumer discretionary",
+        "rel_vol_gate": "FAIL — 0.44x far below 1.5x minimum"
+      },
+      "verdict": "BLOCKED (multiple gates) — disarmed premarket"
+    }
+  },
+  "orders_submitted": 0,
+  "session_note": "23rd consecutive blocked session due to PRECONDITION #1. CPI day independently prescribes zero trades. Both conditions separately sufficient to block all entries. No new entries warranted."
+}

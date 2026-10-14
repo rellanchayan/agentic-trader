@@ -1,0 +1,46 @@
+{
+  "tick_time_et": "14:38",
+  "tick_time_utc": "18:38:10",
+  "action": "NO_TRADE",
+  "positions_open": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "minutes_since_open": 307,
+  "blocks": [
+    "PRECONDITION_1_HALT: flatten scheduler unconfirmed, 22nd consecutive session",
+    "CPI_DAY: no-entry session per playbook (hot +3.7% YoY, active macro uncertainty)",
+    "NO_NEW_ENTRIES_AFTER_1400: plan hard cutoff due to PPI+Retail Sales tomorrow",
+    "ORB_WINDOW_EXPIRED: 307 min since open"
+  ],
+  "candidates": {
+    "NVDA": {
+      "last": 220.48,
+      "vwap": 223.10,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 1.09,
+      "spread_bp": 1.4,
+      "gate_block": "PRECONDITION_1_HALT + CPI_DAY + below_vwap + orb_window_expired + rel_vol_below_1.5x"
+    },
+    "BAC": {
+      "last": 50.855,
+      "vwap": 50.20,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_vol": 2.73,
+      "spread_bp": 2.0,
+      "gate_block": "PRECONDITION_1_HALT + CPI_DAY + orb_window_expired_307min + no_new_entries_after_1400"
+    },
+    "NKE": {
+      "last": 34.88,
+      "vwap": 34.93,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 0.32,
+      "spread_bp": 2.9,
+      "gate_block": "disarmed_premarket + below_vwap + rel_vol_very_low_0.32"
+    }
+  },
+  "note": "PRECONDITION #1 uncleared (flatten scheduler unconfirmed, 22nd consecutive session). CPI day (hot +3.7% YoY) independently blocks entries per playbook. Past 2:00 PM ET no-new-entries cutoff (plan rule: PPI+Retail Sales overhang tomorrow). NVDA below VWAP ($220.48 vs $223.10) — broad-tape unlock fails. ORB window expired (307 min post-open). BAC above VWAP with 2.73x rel-vol but all blocking conditions apply. No orders submitted. Flat."
+}

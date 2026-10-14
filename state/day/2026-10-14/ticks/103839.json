@@ -1,0 +1,27 @@
+{
+  "tick_time_et": "10:38:39",
+  "date": "2026-10-14",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reasons": [
+    "PRECONDITION #1 uncleared: flatten scheduler unconfirmed for 23 consecutive sessions (Sep 17 through Oct 14). All entries blocked per playbook.",
+    "CPI release day: September 2026 CPI +3.7% YoY (hotter than expected). Playbook designates CPI day as no-entry session.",
+    "Broad-tape unlock fails: NVDA below VWAP (last $223.43 vs VWAP $224.83).",
+    "No ORB breakouts on any name (BAC orb_breakout=false, NKE orb_breakout=false, NVDA orb_breakout=false).",
+    "No open positions to manage."
+  ],
+  "positions_managed": [],
+  "trades_submitted": [],
+  "market_snapshot": {
+    "NVDA": {"last": 223.43, "vwap": 224.83, "above_vwap": false, "orb_breakout": false, "rel_volume": 1.74, "spread_bp": 0.9},
+    "BAC": {"last": 49.76, "vwap": 49.76, "above_vwap": true, "orb_breakout": false, "rel_volume": 5.87, "spread_bp": 2.0},
+    "NKE": {"last": 34.93, "vwap": 35.07, "above_vwap": false, "orb_breakout": false, "rel_volume": 0.47, "spread_bp": 2.9}
+  },
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0
+  }
+}

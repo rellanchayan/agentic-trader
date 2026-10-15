@@ -1,0 +1,64 @@
+{
+  "tick_time_et": "2026-10-15T11:37:40",
+  "action": "HALT",
+  "reason_code": "PRECONDITION_1",
+  "summary": "PRECONDITION #1 active (23rd consecutive session). Flatten scheduler unconfirmed since 2026-09-17. ORB entry window also expired. No trade.",
+  "positions_held": 0,
+  "trades_today": 0,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "position_slots_remaining": 8,
+  "trades_remaining": 20,
+  "market_analysis": {
+    "tape_regime": "MIXED_RANGE",
+    "broad_tape_unlock": true,
+    "spy": {
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 1.83,
+      "spread_bp": 0.4
+    },
+    "nvda": {
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 2.62,
+      "spread_bp": 1.4,
+      "assessment": "Strongest candidate technically. ORB breakout confirmed. Spread clean. Rel-vol exceeds 2.0x MIXED/RANGE threshold. Blocked by PRECONDITION #1 and ORB window expiry."
+    },
+    "qqq": {
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 2.39,
+      "spread_bp": 1.7
+    },
+    "bac": {
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.45,
+      "spread_bp": 2.0,
+      "assessment": "Below VWAP. Rel-vol 1.45x (under 1.5x gate). Not qualified."
+    },
+    "aapl": {
+      "above_vwap": false,
+      "rel_volume": 1.47,
+      "spread_bp": 2.3,
+      "assessment": "Not on watchlist. Below VWAP. Not evaluated."
+    }
+  },
+  "entry_evaluation": {
+    "orb_window_open": false,
+    "orb_window_note": "ORB formation window closed ~9:45 AM. 90-minute entry window expired at ~11:15 AM ET. Current time 11:37 AM is 22 min past expiry.",
+    "vwap_reclaim_eligible": false,
+    "vwap_reclaim_note": "VWAP reclaim off-table per playbook: MIXED/RANGE regime with active/imminent macro events (PPI+Retail Sales this morning = binary data double-header). Rule: skip VWAP reclaim entirely in MIXED/RANGE with macro event.",
+    "precondition_1_cleared": false,
+    "precondition_1_note": "Flatten scheduler unconfirmed since 2026-09-17. 23rd consecutive session blocked. Human confirmation required before any new entry."
+  },
+  "gates_evaluated": {
+    "precondition_1": "FAIL - hard block",
+    "orb_window_expired": "FAIL - 11:37 AM is past 11:15 AM cutoff",
+    "vwap_reclaim_eligible": "FAIL - MIXED/RANGE + macro event day",
+    "result": "NO TRADE"
+  },
+  "open_orders_cancelled": 0,
+  "note": "23rd consecutive HALT under PRECONDITION #1. Capital intact at $999,641.65. Tape is actually strong (risk-on internals with SPY, QQQ, NVDA all above VWAP with ORB breakouts and elevated rel-vol) but the infrastructure safety gate correctly overrides. A human must confirm flatten scheduler operation before any entries."
+}

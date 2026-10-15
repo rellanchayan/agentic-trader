@@ -1,0 +1,10 @@
+{
+  "t": "15:37",
+  "timestamp_et": "2026-10-15T15:37:51-04:00",
+  "action": "HALT",
+  "reason": "Past no-new-entries cutoff (15:30 ET). 0 open positions. PRECONDITION #1 still active (23rd consecutive session — flatten scheduler unconfirmed since 2026-09-17). ORB entry window expired (367 min since open). VWAP reclaim window closed (past 15:30 cutoff). No entries, no exits. Awaiting flatten window at 15:50 ET. Market snapshot: NVDA above VWAP (217.53 vs 215.92 VWAP, orb_breakout true, spread 1.4 bp, rel_vol 1.25x), BAC above VWAP (51.695 vs 51.43 VWAP, spread 1.9 bp, rel_vol 0.72x), SPY above VWAP (772.05 vs 768.98 VWAP, orb_breakout true), QQQ above VWAP (728.30 vs 721.99 VWAP, orb_breakout true). AAPL below VWAP (341.74 vs 344.66 VWAP). Broad-tape unlock satisfied but moot — no entries after 15:30.",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "loss_budget_remaining": 3000.0
+}

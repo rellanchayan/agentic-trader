@@ -1,0 +1,6 @@
+{
+  "t": "13:38",
+  "action": "HALT",
+  "note": "PRECONDITION #1 active (23rd consecutive session \u2014 flatten scheduler unconfirmed since 2026-09-17). Per playbook and day plan: no new entries until human confirms flatten mechanism fires at 3:50/3:53/3:56 PM ET. Additional blocker: all quotes stale (quote_age_sec=2537, threshold=30s). ORB entry window expired (248 min since open). VWAP reclaim window open (13:38 ET < 15:30 cutoff) but blocked by PRECONDITION #1 and stale quotes. Market snapshot: NVDA above VWAP (217.20 vs 215.59 VWAP), ORB breakout true, spread 0.9 bp, rel_vol 1.56x. BAC above VWAP (51.83 vs 51.38 VWAP), spread 1.9 bp, rel_vol 0.91x (below 1.5x gate). SPY above VWAP, QQQ above VWAP \u2014 broad-tape unlock technically satisfied but moot under PRECONDITION #1. No order submitted. 0 positions, 0 trades, /bin/bash.00 day P&L. Loss budget ,000 remaining.",
+  "day_pnl": 0.0
+}

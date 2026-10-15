@@ -1,0 +1,27 @@
+{
+  "tick_time_et": "09:39:03",
+  "date": "2026-10-15",
+  "verdict": "HALT",
+  "reason": "day_plan_found is false — premarket did not write a plan for today. Per intraday-trader rules, no trades are placed without a day plan.",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_entries": [],
+  "market_summary": {
+    "minutes_since_open": 9,
+    "orb_window_closed": false,
+    "candidates_checked": 0,
+    "candidates_disqualified": "N/A — halted before evaluation due to missing day plan",
+    "broad_tape_unlock": "NOT_EVALUATED"
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "notes": "Premarket (docs/plan/2026-10-15.md) was not written. This is the first missing plan since 2026-10-14 had a plan. Single missing plan — not yet a two-consecutive-plan scheduler failure requiring debug, but this tick is still halted per intraday-trader spec. No trades until a plan exists."
+}

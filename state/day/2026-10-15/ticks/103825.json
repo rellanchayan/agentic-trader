@@ -1,0 +1,49 @@
+{
+  "tick_time": "10:38",
+  "timestamp_et": "2026-10-15T10:38:25-04:00",
+  "minutes_since_open": 68,
+  "decision": "HALT",
+  "reason": "PRECONDITION #1 active — flatten scheduler unconfirmed since 2026-09-17 (23rd consecutive session). Per playbook Infrastructure rule: no new entries until a human verifies flatten fires at 3:50, 3:53, and 3:56 PM ET and documents the confirmation in the session log. This overrides all other gate evaluations.",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "spread_bp": 1.4,
+      "spread_gate": "PASS (<15 bp)",
+      "rel_volume": 3.49,
+      "rel_vol_gate": "PASS (>2.0x for MIXED/RANGE gap-up)",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "broad_tape_unlock": "PASS (SPY above VWAP, NVDA above VWAP)",
+      "setup": "ORB — not triggered (last $215.775 < orb_high $215.965)",
+      "final_gate": "HALT — PRECONDITION #1 overrides"
+    },
+    {
+      "ticker": "BAC",
+      "spread_bp": 1.9,
+      "spread_gate": "PASS (<15 bp)",
+      "rel_volume": 1.9,
+      "rel_vol_gate": "MARGINAL (1.9x — passes 1.5x gate, below 2.0x MIXED/RANGE ORB threshold)",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "broad_tape_unlock": "PASS",
+      "setup": "VWAP reclaim conditional — two-tick confirmation required; not evaluated due to PRECONDITION #1",
+      "final_gate": "HALT — PRECONDITION #1 overrides"
+    },
+    {
+      "ticker": "SPY",
+      "role": "broad_tape_bellwether",
+      "above_vwap": true,
+      "rel_volume": 2.14,
+      "note": "Broad-tape unlock: satisfied"
+    }
+  ],
+  "order_submitted": false,
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "loss_budget_remaining": 3000.0
+  }
+}

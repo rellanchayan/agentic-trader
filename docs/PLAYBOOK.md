@@ -305,6 +305,19 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-15: No tuning. Tuner unfrozen ("ok to tune", 82 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: twenty-third consecutive zero-trade session (Sep 17 through Oct 15). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65. Blocking conditions remain unchanged:
+  (1) PRECONDITION #1 (flatten scheduler unconfirmed, now 23 sessions — well past the 5-session
+  escalation threshold). (2) No premarket plan written — second consecutive session without a morning
+  plan, which per playbook rule is treated as a systemic scheduler failure requiring a fix to the
+  runner before any new trades. Setup expectancy from historical data: ORB -0.199R (5 trades, 3 wins),
+  momentum -0.975R (1 trade, 0 wins), vwap_reclaim -0.368R (2 trades, 0 wins). All setups negative
+  expectancy; however the sample is too small to justify parameter changes. Core blocker is
+  infrastructure, not strategy. Priority for next session: fix premarket plan pipeline before
+  attempting any trades.
 - 2026-10-14: No tuning. Tuner unfrozen ("ok to tune", 81 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

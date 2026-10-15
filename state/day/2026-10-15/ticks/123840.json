@@ -1,0 +1,45 @@
+{
+  "timestamp_et": "2026-10-15T12:38:40-04:00",
+  "minutes_since_open": 188,
+  "action": "HALT",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "detail": "Flatten scheduler unconfirmed since 2026-09-17. 23rd consecutive session under PRECONDITION #1. Per playbook and day plan: no new entries until human verifies flatten mechanism fires at 3:50, 3:53, and 3:56 PM ET. ORB entry window also expired (188 min since open, window closes at 90 min). VWAP reclaim timing-eligible but blocked by PRECONDITION #1.",
+  "broad_tape_unlock": true,
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "spread_bp": 1.4,
+      "rel_volume": 2.01,
+      "orb_breakout": true,
+      "above_vwap": true,
+      "gate_result": "BLOCKED_PRECONDITION_1",
+      "note": "All individual gates pass (spread <15 bp, rel_vol >2.0x, ORB breakout, above VWAP). PRECONDITION #1 overrides."
+    },
+    {
+      "ticker": "BAC",
+      "spread_bp": 1.9,
+      "rel_volume": 1.17,
+      "orb_breakout": false,
+      "above_vwap": true,
+      "gate_result": "BLOCKED_PRECONDITION_1_AND_LOW_RELVOL",
+      "note": "rel_vol 1.17x below 1.5x minimum. Also blocked by PRECONDITION #1."
+    },
+    {
+      "ticker": "SPY",
+      "spread_bp": 1.0,
+      "rel_volume": 1.53,
+      "orb_breakout": true,
+      "above_vwap": true,
+      "gate_result": "BLOCKED_PRECONDITION_1",
+      "note": "Broad-tape ETF, used as unlock signal. Also blocked by PRECONDITION #1."
+    }
+  ],
+  "order_submitted": false,
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "loss_budget_remaining": 3000.0
+  }
+}

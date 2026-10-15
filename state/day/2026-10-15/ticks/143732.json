@@ -1,0 +1,75 @@
+{
+  "tick_time": "2026-10-15T14:37:32-04:00",
+  "action": "HALT",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "note": "PRECONDITION #1 active (23rd consecutive session \u2014 flatten scheduler unconfirmed since 2026-09-17). Per playbook and day plan: no new entries until human confirms flatten mechanism fires at 3:50/3:53/3:56 PM ET. Additional blockers: ORB entry window expired (307 min since open, well past 90-min window). VWAP reclaim window technically open (14:37 ET < 15:30 cutoff) but blocked by PRECONDITION #1. Market snapshot: NVDA above VWAP (217.07 vs 215.69), orb_breakout true, spread 0.9 bp, rel_vol 1.34x (below 1.5x gate). BAC above VWAP (51.74 vs 51.39), spread 1.9 bp, rel_vol 0.77x (below 1.5x gate). SPY above VWAP, QQQ above VWAP \u2014 broad-tape unlock technically satisfied but moot under PRECONDITION #1. No order submitted. 0 positions, 0 trades, $0.00 day P&L. Loss budget $3,000 remaining.",
+  "market_snapshot": {
+    "minutes_since_open": 307,
+    "positions_open": 0,
+    "trades_today": 0,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "broad_tape_unlock": true,
+    "orb_window_open": false,
+    "vwap_window_open": true
+  },
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "spread_bp": 0.9,
+      "rel_vol": 1.34,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_failures": [
+        "PRECONDITION_1",
+        "rel_vol_below_1.5x"
+      ]
+    },
+    {
+      "ticker": "BAC",
+      "spread_bp": 1.9,
+      "rel_vol": 0.77,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_failures": [
+        "PRECONDITION_1",
+        "rel_vol_below_1.5x"
+      ]
+    },
+    {
+      "ticker": "SPY",
+      "spread_bp": 0.5,
+      "rel_vol": 1.02,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_failures": [
+        "PRECONDITION_1",
+        "rel_vol_below_1.5x"
+      ]
+    },
+    {
+      "ticker": "QQQ",
+      "spread_bp": 1.8,
+      "rel_vol": 1.22,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_failures": [
+        "PRECONDITION_1",
+        "rel_vol_below_1.5x"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "spread_bp": 1.2,
+      "rel_vol": 0.76,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "gate_failures": [
+        "PRECONDITION_1",
+        "below_vwap",
+        "rel_vol_below_1.5x"
+      ]
+    }
+  ],
+  "order_submitted": null
+}

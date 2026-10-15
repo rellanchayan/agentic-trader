@@ -5,7 +5,8 @@
     "source": "watchlist_build",
     "candidates_considered": 3,
     "top": 3,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this.",
+    "screener_review": "Day-screener finalized 2026-10-15. INTC dropped: spread 93.0 bp is prohibitively wide (~$0.86/share round-trip cost at $92.43). BAC and NVDA retained with added support/resistance. SPY, QQQ, AAPL added as structural market-gauge names; the Alpaca IEX feed returned no bar data for these three — all numeric fields null, verify live quote and spread in context.py at first tick before treating as armed. Today carries four 8:30 AM ET macro releases (PPI, Retail Sales, Jobless Claims, Philly Fed); vol-compression day per playbook. Zero-trade outcome is the expected and correct result."
   },
   "BAC": {
     "sector": "financials",
@@ -15,9 +16,11 @@
     "premarket_price": 51.73,
     "gap_pct": 0.0008,
     "spread_bp": 5.8,
+    "support": 51.00,
+    "resistance": 52.50,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,836,087 sh/day); +0.1% gap"
+    "note": "Liquid (2,836,087 IEX sh/day); spread 5.8 bp — within gate. Gapped up ~$1.54 (+3.1%) from 10/13 close ($50.15) on hot CPI print — financials repriced higher on rate-hike expectations. PPI today at 8:30 AM ET is another binary macro event for the sector; watch for continuation or fade. Support at $51.00 (round number, ~0.6 ATR below prev_close); resistance at $52.50 (approx 0.7 ATR above prev_close). ATR $1.20 is narrow — a $10K position at $51.69 (~193 shares) yields only ~$0.60 profit at 0.5 ATR target ($116 gross). Low reward; treat as secondary candidate."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,20 +30,52 @@
     "premarket_price": 214.78,
     "gap_pct": 0.0011,
     "spread_bp": 4.7,
+    "support": 210.00,
+    "resistance": 219.00,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,665,600 sh/day); +0.1% gap"
+    "note": "Liquid (2,665,600 IEX sh/day); spread 4.7 bp — tightest on the list, well within gate. Sold off ~$9.23 from 10/13 close ($223.78) on hot CPI; rate-hike repricing hit tech growth names hard. Now sitting near potential support. Support at $210.00 (round/psychological level, ~$4.55 below prev_close, ~0.8 ATR). Resistance at $219.00 (approx 0.75 ATR above prev_close). PPI + Retail Sales at 8:30 AM ET today continue macro pressure on growth stocks; wait for tape to settle before evaluating any setup. Primary candidate when macro conditions allow."
   },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 92.93,
-    "atr_day": 5.39,
-    "avg_vol_10d": 2038545,
-    "premarket_price": 92.43,
-    "gap_pct": -0.0054,
-    "spread_bp": 93.0,
+  "SPY": {
+    "sector": "index",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,038,545 sh/day); -0.5% gap"
+    "note": "Added by screener as essential broad-tape anchor. The Alpaca IEX feed returned no usable bar data at premarket — all numeric fields null. Verify live quote, VWAP, and spread in context.py at first tick before using. Not a trading candidate unless live data confirms tight spread and sufficient volume. Required for the broad-tape unlock check: no ORB or momentum entries in any name are valid unless SPY is above its VWAP. Monitor-only until live data populates."
+  },
+  "QQQ": {
+    "sector": "index",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Added by screener as tech-sector gauge for NVDA context. The Alpaca IEX feed returned no usable bar data at premarket — all numeric fields null. Verify live quote and spread in context.py at first tick. On a risk-off PPI day, QQQ direction relative to its VWAP provides the sector-bellwether confirmation required before any tech entry. Not a trading candidate unless live data confirms. Monitor-only until live data populates."
+  },
+  "AAPL": {
+    "sector": "technology",
+    "prev_close": null,
+    "atr_day": null,
+    "avg_vol_10d": null,
+    "premarket_price": null,
+    "gap_pct": null,
+    "spread_bp": null,
+    "support": null,
+    "resistance": null,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "Added by screener as the most liquid single-stock technology name. The Alpaca IEX feed returned no usable bar data at premarket — all numeric fields null. Verify live quote, spread, and relative volume in context.py at first tick. AAPL is sensitive to today's Retail Sales print (consumer spending signal directly relevant to iPhone and services revenue). Not armed until live spread confirmed below 15 bp and live volume confirmed above 1.5x relative. Monitor-only until live data populates."
   }
 }

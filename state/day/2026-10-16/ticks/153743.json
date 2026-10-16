@@ -1,0 +1,34 @@
+{
+  "tick_time_et": "2026-10-16T15:37:43-04:00",
+  "tick_time_utc": "2026-10-16T19:37:43Z",
+  "minutes_since_open": 367,
+  "action": "HALT",
+  "reason": "PRECONDITION_1_NOT_CLEARED",
+  "consecutive_blocked_sessions": 28,
+  "decision_summary": "No human confirmation of flatten scheduler in state/. This is the 28th consecutive blocked session since 2026-09-17. Additionally, past_no_new_entries=true (15:37 ET is past 15:30 cutoff), so no new entries would be allowed even if PRECONDITION #1 were cleared. No open positions to manage.",
+  "gate_checks": {
+    "precondition_1_cleared": false,
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "broad_tape_unlock": false,
+    "spy_above_vwap": false,
+    "nvda_above_vwap": false,
+    "orb_window_open": false
+  },
+  "market_snapshot": {
+    "SPY": {"last": 762.57, "vwap": 765.85, "above_vwap": false, "rel_volume": 1.10, "spread_bp": 0.4},
+    "NVDA": {"last": 214.38, "vwap": 216.07, "above_vwap": false, "rel_volume": 1.15, "spread_bp": 1.4},
+    "BAC": {"last": 51.315, "vwap": 51.86, "above_vwap": false, "rel_volume": 1.29, "spread_bp": 1.9},
+    "INTC": {"last": 89.59, "vwap": 91.48, "above_vwap": false, "rel_volume": 1.09, "spread_bp": 1.1},
+    "AAPL": {"last": 343.67, "vwap": 343.91, "above_vwap": false, "rel_volume": 1.07, "spread_bp": 31.6}
+  },
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "open_positions": 0,
+    "open_orders": 0
+  },
+  "trade_placed": null
+}

@@ -1,0 +1,1 @@
+{"ts":"2026-10-16T10:38:06-04:00","action":"HALT","reason":"PRECONDITION_1_NOT_CLEARED","detail":"No human confirmation of flatten scheduler in state/. Day plan: halt until human confirms. 23 consecutive blocked sessions since 2026-09-17. No trades placed.","trade":null,"day_pnl":0.0,"open_positions":0}

@@ -1,0 +1,57 @@
+{
+  "tick_time_et": "2026-10-16T11:38:09-04:00",
+  "minutes_since_open": 128,
+  "action": "HALT",
+  "reason": "PRECONDITION_1_NOT_CLEARED",
+  "precondition_1_status": "NOT CLEARED — no human confirmation of flatten scheduler in state/",
+  "consecutive_blocked_sessions": 24,
+
+  "gate_outcomes": {
+    "NVDA": {
+      "last": 217.485,
+      "spread_bp": 1.4,
+      "spread_gate": "PASS",
+      "rel_volume": 1.67,
+      "rel_vol_gate_orb": "FAIL (need 2.0x for MIXED/RANGE ORB)",
+      "above_vwap": true,
+      "vwap": 216.61,
+      "orb_window": "CLOSED (128 min since open, window was 9:45-11:00 AM)",
+      "orb_breakout": true,
+      "overall": "BLOCKED — PRECONDITION_1 and ORB window closed; VWAP reclaim would need 2-tick confirmation not yet established"
+    },
+    "BAC": {
+      "last": 52.12,
+      "spread_bp": 1.9,
+      "spread_gate": "PASS",
+      "rel_volume": 1.56,
+      "above_vwap": false,
+      "vwap": 52.23,
+      "vwap_reclaim_gate": "NOT TRIGGERED — price below VWAP, no reclaim setup active",
+      "overall": "BLOCKED — PRECONDITION_1; no setup triggered"
+    },
+    "INTC": {
+      "last": 91.495,
+      "spread_bp": 4.4,
+      "spread_gate": "PASS",
+      "rel_volume": 1.52,
+      "above_vwap": false,
+      "vwap": 92.47,
+      "vwap_reclaim_gate": "NOT TRIGGERED — price below VWAP, well below ORB low ($92.83)",
+      "overall": "BLOCKED — PRECONDITION_1; price below VWAP"
+    },
+    "SPY": {
+      "last": 769.085,
+      "above_vwap": false,
+      "vwap": 771.1,
+      "broad_tape_unlock": "FAIL — SPY below VWAP"
+    }
+  },
+
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "summary": "HALT. PRECONDITION #1 (flatten scheduler unconfirmed) blocks all entries. 24th consecutive session halted. No trades placed. ORB window also closed (128 min since open). Gate scan complete: NVDA above VWAP and showing orb_breakout but rel_vol 1.67x is below the 2.0x MIXED/RANGE ORB threshold and the ORB window is closed. BAC and INTC both below VWAP with no reclaim setup. SPY below VWAP, broad-tape unlock fails. Zero positions, zero risk."
+}

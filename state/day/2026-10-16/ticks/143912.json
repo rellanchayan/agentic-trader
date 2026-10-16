@@ -1,0 +1,9 @@
+{
+  "ts": "2026-10-16T14:39:12-04:00",
+  "action": "HALT",
+  "reason": "PRECONDITION_1_NOT_CLEARED",
+  "detail": "No human confirmation of flatten scheduler in state/. 27th consecutive blocked session since 2026-09-17. Additional gate failures: ORB window closed (307 min since open), SPY below VWAP (761.94 vs 767.12) - broad-tape unlock FAIL, NVDA below VWAP (214.55 vs 216.44) - broad-tape unlock FAIL, BAC below VWAP (51.58 vs 51.97) - VWAP reclaim not triggered, INTC below VWAP (90.47 vs 91.89) - VWAP reclaim not triggered. Rel-vol: BAC 1.25x, INTC 1.05x, NVDA 1.14x - all below 2.0x MIXED/RANGE gate. Friday afternoon vol compression underway (14:38 ET). Zero positions, zero open orders. No trades placed.",
+  "trade": null,
+  "day_pnl": 0.0,
+  "open_positions": 0
+}

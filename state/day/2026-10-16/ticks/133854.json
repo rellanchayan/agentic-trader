@@ -1,0 +1,42 @@
+{
+  "tick_time_et": "2026-10-16T13:38:54-04:00",
+  "minutes_since_open": 247,
+  "action": "HALT",
+  "reason": "PRECONDITION_1_NOT_CLEARED",
+  "precondition_check": {
+    "flatten_scheduler_confirmed": false,
+    "confirm_file_found": false,
+    "searched_paths": [
+      "state/*.confirm",
+      "state/*confirm*",
+      "state/*flatten*confirm*",
+      "state/*human*"
+    ]
+  },
+  "market_gates": {
+    "orb_window_open": false,
+    "orb_window_note": "Closed at 11:00 AM ET (ORB = 9:45-11:00 AM only)",
+    "broad_tape_unlock": false,
+    "spy_above_vwap": false,
+    "spy_last": 764.76,
+    "spy_vwap": 768.35,
+    "nvda_above_vwap": false,
+    "nvda_last": 215.61,
+    "nvda_vwap": 216.69,
+    "bac_above_vwap": false,
+    "bac_last": 51.575,
+    "bac_vwap": 52.1,
+    "intc_above_vwap": false,
+    "intc_last": 91.07,
+    "intc_vwap": 92.04,
+    "rel_volume_bac": 1.25,
+    "rel_volume_intc": 1.15,
+    "rel_volume_nvda": 1.24,
+    "min_rel_volume_required_mixed_range": 2.0
+  },
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "decision": "No trade. PRECONDITION #1 not cleared and all market gates failing."
+}

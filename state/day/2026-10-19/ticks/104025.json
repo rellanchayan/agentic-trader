@@ -1,0 +1,34 @@
+{
+  "tick_time_et": "10:40",
+  "tick_file": "104025.json",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION #1 blocked — CronList shows no scheduled jobs; flatten scheduler unconfirmed for 26th consecutive session. No entries permitted per day plan HALT condition.",
+  "gate_checks": {
+    "precondition_1_flatten_scheduler": "FAIL — CronList empty, scheduler not confirmed",
+    "broad_tape_unlock_nvda_above_vwap": "PASS — NVDA 217.07 > VWAP 216.43",
+    "broad_tape_unlock_spy_above_vwap": "UNKNOWN — SPY not tracked in context",
+    "intc_spread_bp": 2.1,
+    "intc_spread_gate": "PASS (<15 bp)",
+    "intc_rel_volume": 2.28,
+    "intc_rel_volume_gate": "PASS (>1.5x)",
+    "intc_above_vwap": false,
+    "intc_orb_breakout": false,
+    "intc_orb_gate": "FAIL — price 93.72 below ORB high 95.345 and VWAP 94.30",
+    "bac_spread_bp": 2.0,
+    "bac_rel_volume": 1.37,
+    "bac_rel_volume_gate": "FAIL — 1.37 < 1.5x minimum",
+    "bac_above_vwap": false,
+    "nvda_spread_bp": 4.1,
+    "nvda_spread_gate": "PASS — re-armed (<15 bp before 11:00 AM)",
+    "nvda_orb_breakout": false
+  },
+  "market_snapshot": {
+    "INTC": {"last": 93.72, "vwap": 94.3, "orb_high": 95.345, "orb_low": 93.82, "spread_bp": 2.1, "rel_volume": 2.28},
+    "NVDA": {"last": 217.07, "vwap": 216.43, "orb_high": 218.025, "orb_low": 214.71, "spread_bp": 4.1, "rel_volume": 1.73},
+    "BAC": {"last": 51.1, "vwap": 51.23, "orb_high": 51.52, "orb_low": 51.02, "spread_bp": 2.0, "rel_volume": 1.37}
+  },
+  "positions": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "equity": 999641.65
+}

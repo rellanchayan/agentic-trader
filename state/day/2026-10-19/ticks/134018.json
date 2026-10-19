@@ -1,0 +1,23 @@
+{
+  "t": "13:40",
+  "timestamp_et": "2026-10-19T13:40:18-04:00",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_UNCLEARED",
+  "detail": "CronList returns no scheduled jobs — flatten scheduler (3:50/3:53/3:56 PM passes) not confirmed live. This is the 29th consecutive session with PRECONDITION #1 active. Per day plan, all entries are halted until the flatten scheduler is confirmed. Independent gate check (secondary): ORB window expired (250 min since open, window closes at 90 min); INTC 92.54 below VWAP 94.22 and ORB high 95.345, rel_vol 1.25 fails 1.5x; BAC 50.52 below VWAP 50.95, rel_vol 0.86 fails 1.5x; NVDA 217.61 above VWAP 217.47, spread 1.8 bp (re-armed), but rel_vol 0.94 fails 1.5x and no ORB breakout. No valid trade under any gate.",
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "market_snapshot": {
+    "INTC": {"last": 92.54, "vwap": 94.22, "spread_bp": 2.2, "rel_volume": 1.25, "above_vwap": false, "orb_breakout": false},
+    "BAC":  {"last": 50.52, "vwap": 50.95, "spread_bp": 2.0, "rel_volume": 0.86, "above_vwap": false, "orb_breakout": false},
+    "NVDA": {"last": 217.61, "vwap": 217.47, "spread_bp": 1.8, "rel_volume": 0.94, "above_vwap": true,  "orb_breakout": false}
+  },
+  "precondition_1_check": "FAIL — CronList empty, no scheduled jobs, 29th consecutive session",
+  "gate_outcomes": {
+    "INTC": "FAIL: below VWAP, rel_vol 1.25 < 1.5x, ORB window expired",
+    "BAC":  "FAIL: below VWAP, rel_vol 0.86 < 1.5x",
+    "NVDA": "FAIL: rel_vol 0.94 < 1.5x, ORB window expired"
+  },
+  "order_submitted": false
+}

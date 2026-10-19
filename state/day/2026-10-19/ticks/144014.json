@@ -1,0 +1,36 @@
+{
+  "tick_time_et": "14:40",
+  "timestamp_et": "2026-10-19T14:40:14-04:00",
+  "minutes_since_open": 310,
+  "action": "NO_TRADE",
+  "precondition_1_cleared": false,
+  "precondition_1_note": "CronList shows no scheduled jobs; flatten scheduler unconfirmed for 30th consecutive session. No entries permitted per day plan HALT condition.",
+  "broad_tape_unlock": false,
+  "broad_tape_unlock_note": "NVDA $217.40 below VWAP $217.46; unlock requires both SPY and NVDA above VWAP.",
+  "market": {
+    "INTC": {
+      "last": 92.24, "vwap": 94.02, "above_vwap": false,
+      "orb_high": 95.345, "orb_breakout": false,
+      "rel_volume": 1.12, "spread_bp": 1.1,
+      "gate_summary": "below VWAP and ORB high; rel_vol 1.12 fails 1.5x; past 90-min ORB window"
+    },
+    "NVDA": {
+      "last": 217.4, "vwap": 217.46, "above_vwap": false,
+      "orb_high": 218.025, "orb_breakout": false,
+      "rel_volume": 0.82, "spread_bp": 1.4,
+      "gate_summary": "marginally below VWAP; rel_vol 0.82 fails 1.5x; no ORB breakout"
+    },
+    "BAC": {
+      "last": 50.445, "vwap": 50.88, "above_vwap": false,
+      "orb_high": 51.52, "orb_breakout": false,
+      "rel_volume": 0.8, "spread_bp": 2.0,
+      "gate_summary": "below VWAP; rel_vol 0.80 fails 1.5x; no ORB breakout"
+    }
+  },
+  "positions_managed": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "reason": "PRECONDITION #1 unconfirmed (flatten scheduler not armed, 30th consecutive session). Broad-tape unlock also fails (NVDA below VWAP). All rel_volumes sub-1.5x. Past ORB window. No actionable setup."
+}

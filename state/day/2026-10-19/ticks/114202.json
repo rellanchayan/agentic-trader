@@ -1,0 +1,52 @@
+{
+  "tick_time_et": "11:42",
+  "tick_ts": "114202",
+  "verdict": "NO_TRADE",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION #1 not cleared — CronList shows no scheduled jobs; flatten scheduler unconfirmed for 27th consecutive session. No entries permitted per day plan HALT condition.",
+  "precondition_1_status": "UNCONFIRMED",
+  "market_context": {
+    "INTC": {
+      "last": 95.06,
+      "spread_bp": 2.1,
+      "vwap": 94.4,
+      "above_vwap": true,
+      "orb_high": 95.345,
+      "orb_breakout": false,
+      "rel_volume": 1.8,
+      "spread_gate": "PASS",
+      "relvol_gate": "PASS",
+      "orb_gate": "FAIL (price 95.06 < orb_high 95.345)"
+    },
+    "NVDA": {
+      "last": 219.21,
+      "spread_bp": 1.4,
+      "vwap": 216.86,
+      "above_vwap": true,
+      "orb_high": 218.025,
+      "orb_breakout": true,
+      "rel_volume": 1.21,
+      "spread_gate": "PASS",
+      "relvol_gate": "FAIL (1.21 < 1.5)"
+    },
+    "BAC": {
+      "last": 51.03,
+      "spread_bp": 2.0,
+      "vwap": 51.2,
+      "above_vwap": false,
+      "orb_high": 51.52,
+      "orb_breakout": false,
+      "rel_volume": 1.0,
+      "spread_gate": "PASS",
+      "relvol_gate": "FAIL (1.0 < 1.5)",
+      "vwap_gate": "FAIL (below VWAP)"
+    }
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "setup_notes": "Even absent PRECONDITION #1 blocker: INTC below ORB high; NVDA above ORB but rel_vol 1.21 fails gate; BAC below VWAP and rel_vol 1.0 fails gate. No setup would trigger at this tick."
+}

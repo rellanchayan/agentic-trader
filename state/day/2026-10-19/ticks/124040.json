@@ -1,0 +1,44 @@
+{
+  "timestamp_et": "2026-10-19T12:40:40-04:00",
+  "tick_id": "124040",
+  "action": "NO_TRADE",
+  "precondition_1_cleared": false,
+  "precondition_1_status": "CronList shows no scheduled jobs — flatten scheduler unconfirmed, 28th consecutive session",
+  "broad_tape_unlock": {
+    "nvda_above_vwap": true,
+    "spx_check": "not evaluated — PRECONDITION #1 blocked first"
+  },
+  "candidates": {
+    "INTC": {
+      "last": 93.655,
+      "vwap": 94.40,
+      "above_vwap": false,
+      "orb_high": 95.345,
+      "orb_breakout": false,
+      "spread_bp": 1.1,
+      "rel_volume": 1.45,
+      "gate_outcome": "FAIL — below VWAP, no ORB breakout, rel_vol 1.45 < 1.5x gate, past 90-min ORB window"
+    },
+    "NVDA": {
+      "last": 217.99,
+      "vwap": 217.41,
+      "above_vwap": true,
+      "orb_high": 218.025,
+      "orb_breakout": false,
+      "spread_bp": 1.8,
+      "rel_volume": 1.11,
+      "gate_outcome": "FAIL — rel_vol 1.11 < 1.5x gate, no ORB breakout, past 90-min ORB window; spread now clean (re-armed)"
+    },
+    "BAC": {
+      "last": 50.57,
+      "vwap": 51.05,
+      "above_vwap": false,
+      "spread_bp": 2.0,
+      "rel_volume": 0.95,
+      "gate_outcome": "FAIL — below VWAP, rel_vol 0.95 < 1.5x gate"
+    }
+  },
+  "day_pnl": 0.0,
+  "positions": [],
+  "note": "PRECONDITION #1 not cleared — CronList shows no scheduled jobs; flatten scheduler unconfirmed for 28th consecutive session. No entries permitted per day plan HALT condition. Additionally, all individual candidate gates fail: INTC and BAC below VWAP with sub-gate rel-vol; NVDA has clean spread but rel_vol 1.11 and no ORB breakout. Session is 190 min old — past the 90-min ORB entry window."
+}

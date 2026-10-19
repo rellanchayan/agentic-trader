@@ -305,6 +305,24 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-19: No tuning. Tuner unfrozen ("ok to tune", 84 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: zero-trade re-calibration session. This is the first re-enabled session after 24
+  consecutive blocked sessions (Sep 17 through Oct 16). Zero orders submitted, $0 realized P&L,
+  account flat at $999,641.65. Premarket ran cleanly. Per the standing re-calibration rule (added
+  2026-10-13): the first session back after a long halt requires textbook gate confirmation across
+  all criteria without exception and minimum position size — today confirmed that discipline is
+  active even when the gates could theoretically clear.
+  PRECONDITION #1 (flatten scheduler unconfirmed) remains the single unresolved infrastructure
+  blocker. No trade can safely complete a roundtrip until the flatten mechanism is confirmed live.
+  The re-calibration day produced no roundtrips and therefore no new signal for any parameter.
+  Setup expectancy from all historical data (84 days, 31 trades): ORB -0.199R (5 trades, 3 wins),
+  momentum -0.975R (1 trade, 0 wins), vwap_reclaim -0.368R (2 trades, 0 wins). All setups negative
+  expectancy; sample is too thin (31 trades total) to distinguish miscalibration from noise. No
+  parameter adjustment is warranted. Core blocker remains infrastructure, not strategy.
+  Sharpe -88.15 is a statistical artifact of near-zero variance in an account that is essentially
+  flat; it is not a meaningful performance signal.
 - 2026-10-16: No tuning. Tuner unfrozen ("ok to tune", 83 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

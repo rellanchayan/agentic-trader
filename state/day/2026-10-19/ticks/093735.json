@@ -1,0 +1,20 @@
+{
+  "tick_time_et": "09:37",
+  "tick_time_utc": "2026-10-19T13:37:35Z",
+  "minutes_since_open": 7,
+  "action": "HALT",
+  "reason": "PRECONDITION #1 not cleared: flatten scheduler unconfirmed. CronList returned no scheduled jobs — no flatten passes are set for 3:50/3:53/3:56 PM ET. Per day plan, treat as HALT. No new entries permitted.",
+  "positions_evaluated": 0,
+  "entries_evaluated": 0,
+  "order_submitted": false,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "market_snapshot": {
+    "BAC": {"last": 51.28, "spread_bp": 2.0, "rel_volume": 2.3, "above_vwap": true, "orb_breakout": false},
+    "INTC": {"last": 94.33, "spread_bp": 6.4, "rel_volume": 5.66, "above_vwap": false, "orb_breakout": false},
+    "NVDA": {"last": 215.91, "spread_bp": 31.6, "rel_volume": 2.99, "above_vwap": false, "orb_breakout": false}
+  },
+  "precondition_1_status": "FAIL — CronList shows no scheduled jobs; flatten scheduler not live",
+  "re_calibration_day": true,
+  "note": "25th consecutive session with PRECONDITION #1 active. Escalation required: human must confirm or re-configure flatten scheduler before any entries resume."
+}

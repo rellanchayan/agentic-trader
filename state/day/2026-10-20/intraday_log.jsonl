@@ -1,0 +1,1 @@
+{"t":"09:41","action":"NO_TRADE","note":"PRECONDITION_1 HALT: flatten scheduler unconfirmed. BAC above VWAP (50.74>50.34) spread 2.0bp rv 3.89x — would be Tick1 but blocked. NVDA below VWAP (213.68<214.74) spread 1.9bp rv 4.33x — broad-tape unlock fails. Also in 15min no-entry window. day_pnl":0,"slots":0}

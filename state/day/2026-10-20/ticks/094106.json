@@ -1,0 +1,46 @@
+{
+  "tick_time_et": "09:41:06",
+  "date": "2026-10-20",
+  "minutes_since_open": 11,
+  "action": "NO_TRADE",
+  "positions_held": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_used": 0,
+  "slots_used": 0,
+  "candidates_evaluated": [
+    {
+      "ticker": "BAC",
+      "last": 50.74,
+      "vwap": 50.34,
+      "above_vwap": true,
+      "spread_bp": 2.0,
+      "rel_volume": 3.89,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "PRECONDITION_1: flatten scheduler unconfirmed — HALT condition per day plan. Secondary: still within 15-minute no-entry window (before 09:45 ET)."
+    },
+    {
+      "ticker": "NVDA",
+      "last": 213.68,
+      "vwap": 214.74,
+      "above_vwap": false,
+      "spread_bp": 1.9,
+      "rel_volume": 4.33,
+      "gate_outcome": "BLOCKED",
+      "gate_reason": "PRECONDITION_1: flatten scheduler unconfirmed — HALT condition per day plan. Secondary: NVDA below VWAP ($213.68 < $214.74). Secondary: broad-tape unlock fails (SPY below VWAP). Also within 15-minute no-entry window."
+    },
+    {
+      "ticker": "INTC",
+      "gate_outcome": "DISARMED",
+      "gate_reason": "Disarmed for session: negative catalyst (robotics ban), sector-wide semiconductor selling, wide premarket spread."
+    }
+  ],
+  "market_notes": {
+    "SPY": {"last": 765.285, "vwap": 765.58, "above_vwap": false, "rel_volume": 1.81},
+    "QQQ": {"last": 711.87, "vwap": 713.81, "above_vwap": false, "rel_volume": 2.64},
+    "NVDA_spread_note": "NVDA spread tightened to 1.9 bp — re-armed on spread; deadline 11:00 AM ET still holds",
+    "BAC_tick_count": "This tick is Tick 1 for BAC two-tick rule — BLOCKED by PRECONDITION_1 regardless"
+  },
+  "decision_summary": "NO TRADE. PRECONDITION #1 (flatten scheduler unconfirmed) is an explicit HALT condition per the day plan. No entries permitted until flatten scheduler is confirmed live. Independent secondary blockers: 15-minute no-entry window active (first 15 min post-open), SPY and NVDA both below VWAP (broad-tape unlock fails for any ORB/momentum). BAC above VWAP with clean spread/volume — would be Tick 1 candidate under two-tick rule if PRECONDITION #1 cleared."
+}

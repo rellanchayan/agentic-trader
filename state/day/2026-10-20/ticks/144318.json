@@ -1,0 +1,21 @@
+{
+  "ts": "2026-10-20T14:43:18.000000-04:00",
+  "tick_et": "14:43",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_HALT",
+  "detail": "CronList empty at tick time; flatten scheduler unconfirmed. 29th consecutive session blocked. Day plan PRECONDITION #1 requires flatten scheduler confirmed live before any entry. No positions open, no orders outstanding.",
+  "verdict_summary": {
+    "precondition_1": "FAIL — CronList empty, no flatten cron scheduled",
+    "nvda": "Would fail — ORB window expired 11:00 AM ET; rel_vol 1.0 < 1.5x gate; above VWAP but VWAP reclaim blocked by PRECONDITION_1",
+    "bac": "Would fail — below VWAP (50.57 vs 50.84); two-tick rule not satisfied; blocked by PRECONDITION_1",
+    "spy": "Below VWAP — broad-tape unlock not satisfied for any ORB/momentum entry",
+    "qqq": "Above VWAP but rel_vol 0.85 < 1.5x gate"
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 216.605, "vwap": 216.25, "above_vwap": true, "spread_bp": 1.4, "rel_volume": 1.0, "orb_breakout": true},
+    "BAC":  {"last": 50.57,  "vwap": 50.84,  "above_vwap": false,"spread_bp": 2.0, "rel_volume": 0.84,"orb_breakout": false},
+    "SPY":  {"last": 768.68, "vwap": 769.02, "above_vwap": false,"spread_bp": 0.4, "rel_volume": 1.06,"orb_breakout": true},
+    "QQQ":  {"last": 718.12, "vwap": 718.03, "above_vwap": true, "spread_bp": 0.7, "rel_volume": 0.85,"orb_breakout": true}
+  },
+  "account": {"equity": 999641.65, "day_pnl": 0.0, "trades_today": 0, "positions_open": 0, "loss_budget_remaining": 3000.0}
+}

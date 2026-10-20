@@ -1,0 +1,38 @@
+{
+  "tick_id": "104040",
+  "ts": "2026-10-20T14:42:17.489667",
+  "tick_et": "10:40",
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_HALT",
+  "cron_jobs_found": 0,
+  "flatten_scheduler_confirmed": false,
+  "precondition_1_session_count": 26,
+  "market_snapshot": {
+    "NVDA": {
+      "last": 217.7,
+      "spread_bp": 1.4,
+      "above_vwap": true,
+      "rel_vol": 2.05,
+      "orb_breakout": true,
+      "status": "armed_but_blocked"
+    },
+    "BAC": {
+      "last": 51.04,
+      "spread_bp": 2.0,
+      "above_vwap": true,
+      "rel_vol": 1.63,
+      "orb_breakout": true,
+      "status": "tick1_candidate_but_blocked"
+    },
+    "INTC": {
+      "status": "disarmed_for_session"
+    },
+    "SPY": {
+      "above_vwap": true,
+      "broad_tape_unlock": true
+    }
+  },
+  "day_pnl": 0.0,
+  "positions": [],
+  "escalation": "Human must configure flatten scheduler (CronList empty) before trading can resume."
+}

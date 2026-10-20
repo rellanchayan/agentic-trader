@@ -1,0 +1,20 @@
+{
+  "ts": "2026-10-20T13:41:22.564997-04:00",
+  "tick_et": "13:41",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_HALT",
+  "detail": "CronList empty; flatten scheduler unconfirmed (28th consecutive session). ORB window expired 11:00 AM ET. VWAP reclaim setups blocked by PRECONDITION #1.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "nvda_spread_bp": 0.9,
+  "nvda_last": 217.085,
+  "nvda_above_vwap": true,
+  "nvda_rel_vol": 1.15,
+  "bac_last": 50.88,
+  "bac_above_vwap": true,
+  "bac_rel_vol": 0.92,
+  "spy_above_vwap": true,
+  "spy_last": 769.645,
+  "spy_rel_vol": 1.21
+}

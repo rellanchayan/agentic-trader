@@ -1,0 +1,60 @@
+{
+  "tick_time_et": "13:40",
+  "tick_file": "134003.json",
+  "action": "no_trade",
+  "decision_summary": "NO TRADE — PRECONDITION_1_HALT (30th+ consecutive evaluation) + no valid setups.",
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "slot_slots_remaining": 8,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "precondition_1": {
+    "status": "HALT",
+    "note": "Flatten scheduler unconfirmed — crontab empty at plan-write time. 30th+ consecutive evaluation without clearance. Plan mandates no entries until resolved."
+  },
+  "setup_evaluations": {
+    "NVDA_ORB": {
+      "result": "BLOCKED",
+      "reasons": ["window_closed: >11:00 AM ET (current 13:40)", "rel_vol=1.01x < 2.0x MIXED/RANGE threshold"],
+      "spread_bp": 0.9,
+      "rel_volume": 1.01,
+      "above_vwap": true,
+      "orb_breakout": false
+    },
+    "BAC_VWAP_RECLAIM": {
+      "result": "BLOCKED",
+      "reasons": ["rel_vol=0.43x < 1.5x minimum", "no_Tick1_established"],
+      "spread_bp": 2.0,
+      "rel_volume": 0.43,
+      "above_vwap": true
+    },
+    "NFLX": {
+      "result": "DISARMED",
+      "reason": "post-earnings gap day — disarmed per plan"
+    },
+    "INTC": {
+      "result": "DISARMED",
+      "reason": "pre-earnings 8 calendar days out — playbook rule overrides screener"
+    }
+  },
+  "broad_tape": {
+    "SPY_above_vwap": true,
+    "QQQ_above_vwap": true,
+    "broad_tape_unlock": "PASS"
+  },
+  "market_snapshot": {
+    "SPY": {"last": 773.65, "vwap": 771.46, "spread_bp": 0.4, "rel_volume": 0.69, "orb_breakout": true},
+    "QQQ": {"last": 726.77, "vwap": 724.38, "spread_bp": 0.6, "rel_volume": 0.94, "orb_breakout": true},
+    "NVDA": {"last": 221.61, "vwap": 220.09, "spread_bp": 0.9, "rel_volume": 1.01, "orb_high": 222.16},
+    "BAC": {"last": 51.06, "vwap": 50.88, "spread_bp": 2.0, "rel_volume": 0.43, "orb_high": 51.035},
+    "NFLX": {"last": 65.66, "vwap": 65.61, "spread_bp": 1.5, "rel_volume": 2.17},
+    "INTC": {"last": 92.635, "vwap": 92.24, "spread_bp": 1.1, "rel_volume": 1.14}
+  },
+  "what_would_need_to_change": "PRECONDITION #1: human must add flatten cron entries or write signed acknowledgment in day plan. Even if cleared: BAC needs rel_vol >1.5x for Tick 1 (currently 0.43x). NVDA ORB window already closed.",
+  "next_watch": "BAC rel_vol tracking — if it picks up toward 1.5x and BAC holds above VWAP, VWAP reclaim Tick 1 could still fire this afternoon (if PRECONDITION #1 clears). Flatten window opens 3:50 PM ET."
+}

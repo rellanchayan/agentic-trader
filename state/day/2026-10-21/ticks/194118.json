@@ -1,0 +1,18 @@
+{
+  "time_et": "15:40",
+  "timestamp_utc": "2026-10-21T19:40:47Z",
+  "action": "no_trade",
+  "reason": "PAST_NO_NEW_ENTRIES: 15:40 ET is past the 15:30 cutoff for new entries. No open positions. PRECONDITION_1_HALT also active: flatten scheduler unconfirmed (crontab empty, 32nd+ consecutive evaluation). NVDA: ORB window CLOSED (>11:00 AM), spread=29.4bp FAIL (>25bp), rel_vol=0.79x FAIL. BAC: rel_vol=0.43x FAIL (<1.5x gate), above_vwap=false, no Tick 1 established. NFLX DISARMED (post-earnings). INTC DISARMED (pre-earnings 8d). SPY above_vwap=true (broad-tape PASS) but no entries permitted. 0 positions. Day P&L: $0.",
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "market_snapshot": {
+    "SPY": {"last": 772.92, "above_vwap": true, "rel_volume": 0.77},
+    "NVDA": {"last": 221.2, "spread_bp": 29.4, "rel_volume": 0.79, "above_vwap": true, "orb_window_closed": true},
+    "BAC": {"last": 50.85, "spread_bp": 2.0, "rel_volume": 0.43, "above_vwap": false},
+    "NFLX": {"last": 65.09, "status": "DISARMED_post_earnings"},
+    "INTC": {"last": 92.775, "status": "DISARMED_pre_earnings"}
+  }
+}

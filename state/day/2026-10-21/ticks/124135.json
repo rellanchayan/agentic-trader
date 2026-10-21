@@ -1,0 +1,28 @@
+{
+  "time_et": "12:41:35",
+  "timestamp_utc": "2026-10-21T16:41:35Z",
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT: flatten scheduler unconfirmed (crontab not available, 29th+ consecutive evaluation). No entries permitted until flatten mechanism is confirmed operational. Secondary gate review: NVDA ORB window CLOSED (>11:00 AM ET), rel_vol=1.17x (needs 2.0x in MIXED/RANGE); BAC rel_vol=0.5x (needs 1.5x gate for Tick 1), no Tick 1 established; NFLX DISARMED post-earnings; INTC DISARMED pre-earnings (8d). SPY above VWAP (broad-tape PASS) but no setup survives all gates regardless.",
+  "market_snapshot": {
+    "SPY": {"last": 773.65, "above_vwap": true, "spread_bp": 0.4, "rel_volume": 0.7},
+    "NVDA": {"last": 221.13, "above_vwap": true, "spread_bp": 0.9, "rel_volume": 1.17, "orb_window_open": false},
+    "BAC": {"last": 51.18, "above_vwap": true, "spread_bp": 2.0, "rel_volume": 0.5, "tick1_established": false},
+    "NFLX": {"last": 65.28, "above_vwap": false, "status": "DISARMED_POST_EARNINGS"},
+    "INTC": {"last": 93.02, "above_vwap": true, "status": "DISARMED_PRE_EARNINGS_8D"}
+  },
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "gate_checks": {
+    "PRECONDITION_1_flatten_scheduler": "FAIL — crontab unavailable in cloud environment",
+    "NVDA_orb_window": "FAIL — closed at 11:00 AM ET",
+    "NVDA_rel_volume": "FAIL — 1.17x (needs 2.0x in MIXED/RANGE)",
+    "BAC_rel_volume": "FAIL — 0.5x (needs 1.5x for Tick 1)",
+    "BAC_tick1": "FAIL — not established",
+    "NFLX": "DISARMED — post-earnings",
+    "INTC": "DISARMED — pre-earnings 8d",
+    "SPY_above_vwap": "PASS"
+  }
+}

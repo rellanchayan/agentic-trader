@@ -1,0 +1,55 @@
+{
+  "time_et": "14:40",
+  "timestamp_et": "2026-10-21T14:40:20-04:00",
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT: flatten scheduler unconfirmed (crontab empty, 31st+ consecutive evaluation). No valid setup clears all gates.",
+  "precondition_1": "FAIL — crontab empty, flatten scheduler not confirmed live",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "status": "DISARMED — ORB window closed (>11:00 AM ET)",
+      "spread_bp": 2.7,
+      "spread_gate": "PASS",
+      "rel_volume": 0.86,
+      "rel_vol_gate": "FAIL (<2.0x MIXED/RANGE threshold)",
+      "above_vwap": true,
+      "orb_breakout": false,
+      "outcome": "BLOCKED (ORB window expired + rel_vol FAIL + PRECONDITION #1)"
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "status": "No Tick 1 established",
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_volume": 0.43,
+      "rel_vol_gate": "FAIL (<1.5x gate)",
+      "above_vwap": true,
+      "tick1_confirmed": false,
+      "outcome": "BLOCKED (rel_vol FAIL + no Tick 1 + PRECONDITION #1)"
+    },
+    {
+      "ticker": "NFLX",
+      "status": "DISARMED — post-earnings gap down",
+      "outcome": "DISARMED"
+    },
+    {
+      "ticker": "INTC",
+      "status": "DISARMED — pre-earnings (8 days to Oct 29 earnings)",
+      "outcome": "DISARMED"
+    }
+  ],
+  "broad_tape": {
+    "SPY_above_vwap": true,
+    "broad_tape_unlock": "PASS"
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0
+  },
+  "order_submitted": false
+}

@@ -1,0 +1,34 @@
+{
+  "tick_time_et": "09:39:46",
+  "verdict": "NO_TRADE",
+  "primary_block": "PRECONDITION_1_HALT",
+  "precondition_1_status": "uncleared — crontab not available in cloud environment; flatten scheduler unconfirmed",
+  "secondary_block": "first_15_min_window (no entries before 09:45 ET)",
+  "positions_open": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "market_readings": {
+    "SPY": {"above_vwap": true, "rel_volume": 1.75, "spread_bp": 1.2, "note": "broad-tape SPY passes"},
+    "NVDA": {
+      "status": "candidate_blocked",
+      "spread_bp": 62.9,
+      "spread_gate_pass": false,
+      "rel_volume": 3.69,
+      "rel_vol_gate_pass": true,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "spread 62.9 bp far exceeds 15 bp gate; not above VWAP; inside first-15-min window"
+    },
+    "BAC": {
+      "status": "candidate_blocked",
+      "spread_bp": 2.0,
+      "spread_gate_pass": true,
+      "rel_volume": 0.74,
+      "rel_vol_gate_pass": false,
+      "above_vwap": false,
+      "note": "rel_vol 0.74x below 1.5x gate; not above VWAP"
+    },
+    "NFLX": {"status": "DISARMED", "reason": "post-earnings gap-down >3%", "spread_bp": 12.2},
+    "INTC": {"status": "DISARMED", "reason": "pre-earnings window (INTC earnings Oct 29, 8 days away)"}
+  }
+}

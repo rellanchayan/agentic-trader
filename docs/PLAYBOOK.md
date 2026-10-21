@@ -305,6 +305,27 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-21: No tuning. Tuner unfrozen ("ok to tune", 86 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: twenty-seventh consecutive zero-trade session (Sep 17 through Oct 21). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65. PRECONDITION #1 (flatten scheduler unconfirmed,
+  CronList empty) remains the sole blocker preventing any entry.
+  Durable lesson from 27 sessions of no trading: the CronList being empty is a human-configuration
+  gap, not a code bug, and it cannot resolve itself at tick time. Every tuner run, every journal,
+  every tick-level evaluation over these 27 sessions has reached the same conclusion — the flatten
+  scheduler requires a one-time human action (add the cron entry or write an explicit signed
+  acknowledgment in the day plan). No strategy adjustment, no parameter change, and no gate relaxation
+  will unblock this. The bot's gates, setup logic, and tick discipline are all functioning correctly
+  (confirmed 2026-10-20: two setups — NVDA ORB and BAC VWAP reclaim — passed all criteria except
+  PRECONDITION #1). The single broken piece is the flatten scheduler confirmation. Until a human
+  resolves it, the bot will correctly HALT on every session.
+  No parameter adjustment is warranted. With 31 total trades across 86 days (0.36 trades/day), all
+  setup expectancies remain negative (ORB -0.199R, momentum -0.975R, vwap_reclaim -0.368R), and the
+  sample is far too thin to distinguish miscalibration from noise. The tuner correctly declines.
+  Priority for 2026-10-22: PRECONDITION #1 requires human action before the open — confirm the
+  flatten scheduler is live (add CronList entry) or provide a signed acknowledgment. This cannot wait
+  another session.
 - 2026-10-20: No tuning. Tuner unfrozen ("ok to tune", 85 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

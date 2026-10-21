@@ -1,0 +1,58 @@
+{
+  "tick_time_et": "10:40:30",
+  "date": "2026-10-21",
+  "action": "no_trade",
+  "positions_managed": [],
+  "new_entry_evaluated": true,
+  "precondition_1_cleared": false,
+  "precondition_1_note": "crontab not available in cloud environment; flatten scheduler unconfirmed (28th consecutive evaluation without clearance)",
+  "gate_outcomes": {
+    "NVDA": {
+      "setup": "orb",
+      "spread_bp": 1.8,
+      "spread_gate": "PASS",
+      "rel_volume": 1.99,
+      "rel_volume_gate": "FAIL (needs 2.0x in MIXED/RANGE)",
+      "above_vwap": false,
+      "vwap_gate": "FAIL",
+      "orb_breakout": false,
+      "orb_window_open": true,
+      "spy_above_vwap": false,
+      "broad_tape_unlock": "FAIL",
+      "verdict": "BLOCKED - rel_vol below MIXED/RANGE threshold, below VWAP, broad-tape unlock fails"
+    },
+    "BAC": {
+      "setup": "vwap_reclaim",
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_volume": 0.77,
+      "rel_volume_gate": "FAIL (needs 1.5x)",
+      "above_vwap": true,
+      "vwap_gate": "PASS",
+      "tick1_established": false,
+      "spy_above_vwap": false,
+      "broad_tape_unlock": "FAIL",
+      "verdict": "BLOCKED - rel_vol below 1.5x gate, no Tick 1 established, broad-tape unlock fails"
+    },
+    "NFLX": {
+      "verdict": "DISARMED - post-earnings, below VWAP"
+    },
+    "INTC": {
+      "verdict": "DISARMED - pre-earnings (8 days to INTC Q3)"
+    }
+  },
+  "spy": {
+    "last": 769.565,
+    "vwap": 770.01,
+    "above_vwap": false,
+    "rel_volume": 1.13
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "positions_open": 0,
+    "trades_today": 0
+  },
+  "final_decision": "no_trade",
+  "final_reason": "PRECONDITION_1_HALT is primary blocker. All secondary gates also fail: NVDA rel_vol 1.99 < 2.0x threshold; BAC rel_vol 0.77 < 1.5x; SPY below VWAP (broad-tape unlock fails for all candidates)."
+}

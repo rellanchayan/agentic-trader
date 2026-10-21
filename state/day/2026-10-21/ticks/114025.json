@@ -1,0 +1,62 @@
+{
+  "tick_time_et": "11:40",
+  "tick_hhmmss": "114025",
+  "date": "2026-10-21",
+  "action": "no_trade",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "NVDA",
+      "setup": "orb",
+      "gate_outcomes": {
+        "precondition_1": "FAIL — flatten scheduler unconfirmed (crontab empty, 28th+ consecutive evaluation)",
+        "orb_window": "FAIL — ORB window closed at 11:00 AM ET; current time is 11:40 AM",
+        "spread_bp": "FAIL — 25.9 bp (gate: <15 bp)",
+        "rel_vol": "FAIL — 1.53x (gate: >=2.0x in MIXED/RANGE regime)",
+        "above_vwap": "PASS — true",
+        "broad_tape_unlock_spy": "PASS — SPY above VWAP"
+      },
+      "result": "blocked"
+    },
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "gate_outcomes": {
+        "precondition_1": "FAIL — flatten scheduler unconfirmed",
+        "spread_bp": "PASS — 2.0 bp",
+        "rel_vol": "FAIL — 0.55x (gate: >=1.5x for Tick 1)",
+        "above_vwap": "PASS — true",
+        "tick_1_established": "FAIL — no prior Tick 1 on record",
+        "broad_tape_unlock_spy": "PASS — SPY above VWAP"
+      },
+      "result": "blocked"
+    },
+    {
+      "ticker": "NFLX",
+      "setup": "disarmed",
+      "gate_outcomes": {
+        "reason": "post-earnings gap down; spread deadline 11:00 AM ET passed without tightening to <15 bp (last: 3.1 bp now, but price below VWAP and setup disarmed for session)"
+      },
+      "result": "disarmed"
+    },
+    {
+      "ticker": "INTC",
+      "setup": "disarmed",
+      "gate_outcomes": {
+        "reason": "pre-earnings (INTC earnings Oct 29 = 8 days away; within 9-day disarm window)"
+      },
+      "result": "disarmed"
+    }
+  ],
+  "market_readings": {
+    "SPY": {"last": 772.655, "vwap": 770.35, "above_vwap": true, "rel_vol": 0.83, "spread_bp": 0.4},
+    "NVDA": {"last": 220.46, "vwap": 219.82, "above_vwap": true, "spread_bp": 25.9, "rel_vol": 1.53, "orb_high": 222.16, "orb_low": 219.55},
+    "BAC": {"last": 50.96, "vwap": 50.81, "above_vwap": true, "spread_bp": 2.0, "rel_vol": 0.55},
+    "NFLX": {"last": 65.425, "vwap": 65.77, "above_vwap": false, "spread_bp": 3.1, "rel_vol": 2.7},
+    "INTC": {"last": 92.46, "vwap": 92.04, "above_vwap": true, "spread_bp": 2.2, "rel_vol": 1.59}
+  },
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "reason": "PRECONDITION_1_HALT (flatten scheduler unconfirmed, crontab empty, 28th+ consecutive evaluation). Secondary gate outcomes: NVDA ORB window CLOSED (11:40 ET > 11:00 AM deadline), NVDA spread=25.9bp FAIL, NVDA rel_vol=1.53x FAIL (<2.0x MIXED/RANGE); BAC rel_vol=0.55x FAIL (<1.5x gate), no Tick 1 established; NFLX DISARMED (post-earnings); INTC DISARMED (pre-earnings 8d). SPY above VWAP (broad-tape unlock PASS) but no candidates clear other gates."
+}

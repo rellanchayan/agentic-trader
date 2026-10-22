@@ -1,0 +1,19 @@
+{
+  "time_et": "2026-10-22T13:40:47-04:00",
+  "tick_utc": "2026-10-22T17:40:47Z",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "detail": "Flatten scheduler unconfirmed for 29 consecutive sessions (since 2026-09-17). Human acknowledgment required in docs/plan/2026-10-22.md before any entry is permitted. No human signature found this session.",
+  "equity": 999641.65,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions": 0,
+  "market_observations": {
+    "INTC": {"status": "DISARMED", "reason": "earnings date conflict + -5.8% gap", "last": 86.36, "spread_bp": 2.3, "above_vwap": false},
+    "NVDA": {"status": "DISARMED_SPREAD", "reason": "spread 34.3 bp above 15 bp gate; also below VWAP", "last": 212.97, "spread_bp": 34.3, "above_vwap": false},
+    "BAC": {"status": "BLOCKED_VOL", "reason": "spread 2.0 bp OK, above VWAP, but rel_vol 0.62x below 1.5x gate", "last": 50.985, "spread_bp": 2.0, "above_vwap": true, "rel_vol": 0.62},
+    "NFLX": {"status": "BLOCKED_VOL", "reason": "spread 1.5 bp OK, above VWAP, ORB breakout, but rel_vol 1.2x below 1.5x gate; ORB also expired (>90 min)", "last": 67.275, "spread_bp": 1.5, "above_vwap": true, "rel_vol": 1.2}
+  },
+  "would_trade_if_pc1_cleared": false,
+  "would_trade_reason": "No name clears all gates: INTC/NVDA disarmed, BAC/NFLX fail rel_vol gate (0.62x and 1.2x respectively, minimum 1.5x)"
+}

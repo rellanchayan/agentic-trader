@@ -1,0 +1,21 @@
+{
+  "tick_time_et": "2026-10-22T09:41:26-04:00",
+  "minutes_since_open": 11,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION #1 ACTIVE — flatten scheduler unconfirmed (28 consecutive sessions blocked). No entries permitted until human resolves.",
+  "positions_managed": 0,
+  "orders_cancelled": 0,
+  "new_entries_considered": 2,
+  "name_evals": {
+    "INTC": {"status": "DISARMED", "reason": "earnings date conflict"},
+    "NVDA": {"status": "DISARMED_SPREAD", "reason": "spread 18.4 bp > 15 bp gate, re-arm protocol active"},
+    "NFLX": {"status": "BLOCKED_PRECONDITION", "reason": "spread 4.5 bp ok, above_vwap true, rel_vol 3.92 ok — would qualify but PRECONDITION #1 blocks"},
+    "BAC": {"status": "BLOCKED_PRECONDITION_AND_RELVOL", "reason": "above_vwap true, spread 2.0 bp ok, but rel_vol 0.83 < 1.5 min; also blocked by PRECONDITION #1"}
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0
+  }
+}

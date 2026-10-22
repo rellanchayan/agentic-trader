@@ -1,0 +1,53 @@
+{
+  "tick_time_et": "2026-10-22T12:40:39-04:00",
+  "minutes_since_open": 190,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "precondition_detail": "Flatten scheduler unconfirmed. Session 29 consecutive halt. Day plan requires human action (confirm flatten cron OR sign acknowledgment) before entries are allowed.",
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "market_assessment": {
+    "NFLX": {
+      "last": 67.28,
+      "vwap": 66.59,
+      "above_vwap": true,
+      "spread_bp": 1.5,
+      "rel_volume": 1.37,
+      "orb_breakout": true,
+      "gate_result": "FAIL — rel_vol 1.37x < 1.5x minimum",
+      "note": "Past 90-min ORB entry window (12:40 PM ET). VWAP reclaim setup visible but rel_vol below gate."
+    },
+    "BAC": {
+      "last": 51.04,
+      "vwap": 50.89,
+      "above_vwap": true,
+      "spread_bp": 2.0,
+      "rel_volume": 0.72,
+      "orb_breakout": true,
+      "gate_result": "FAIL — rel_vol 0.72x << 1.5x minimum",
+      "note": "Spread and VWAP criteria pass, but severely low volume. No meaningful buying interest."
+    },
+    "NVDA": {
+      "last": 213.19,
+      "vwap": 214.98,
+      "above_vwap": false,
+      "spread_bp": 0.9,
+      "rel_volume": 1.97,
+      "orb_breakout": false,
+      "gate_result": "FAIL — below VWAP (bearish)",
+      "note": "Re-armed on spread. Good volume. But trending below VWAP — no buy setup."
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "note": "Earnings date conflict + large gap down. Do not enter."
+    }
+  },
+  "secondary_would_qualify_if_pc1_cleared": false,
+  "conclusion": "PRECONDITION #1 blocks all entries. Even if cleared, no candidate passes all gates at this tick — NFLX and BAC both below the 1.5x rel_volume threshold, NVDA below VWAP, INTC disarmed. Correct action is NO_TRADE.",
+  "human_action_needed": "Add flatten cron entries (run_phase.sh flatten N at 3:50, 3:53, 3:56 PM ET) OR sign acknowledgment in docs/plan/2026-10-22.md confirming flatten mechanism is live."
+}

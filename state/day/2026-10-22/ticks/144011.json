@@ -1,0 +1,44 @@
+{
+  "tick_time_et": "2026-10-22T14:40:11-04:00",
+  "minutes_since_open": 310,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions": 0,
+    "position_slots_remaining": 8
+  },
+  "positions_managed": "none (flat)",
+  "entry_analysis": {
+    "PRECONDITION_1": "ACTIVE — flatten scheduler unconfirmed for 30 consecutive sessions. No human acknowledgment in day plan. Entry blocked.",
+    "ORB_window": "EXPIRED — ORB entries disallowed after 11:00 AM ET; now 14:40 ET.",
+    "NFLX": {
+      "spread_bp": 1.5,
+      "above_vwap": true,
+      "rel_volume": 1.09,
+      "verdict": "SKIP — rel_vol 1.09x below 1.5x gate"
+    },
+    "BAC": {
+      "spread_bp": 2.0,
+      "above_vwap": true,
+      "rel_volume": 0.57,
+      "verdict": "SKIP — rel_vol 0.57x far below 1.5x gate"
+    },
+    "NVDA": {
+      "spread_bp": 34.4,
+      "above_vwap": false,
+      "rel_volume": 1.48,
+      "verdict": "SKIP — spread 34.4bp above 25bp max; below VWAP"
+    },
+    "INTC": {
+      "verdict": "DISARMED — earnings date uncertainty, -5.8% gap"
+    }
+  },
+  "action_taken": "none",
+  "next_action": "Continue watching. Next flatten window at 15:50 ET. No entries possible today without PRECONDITION_1 resolution."
+}

@@ -1,0 +1,55 @@
+{
+  "time_et": "2026-10-22T10:40:03-04:00",
+  "minutes_since_open": 70,
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "precondition_detail": "Flatten scheduler unconfirmed. CronList empty. Human acknowledgment space in day plan is unsigned. Blocked for 29 consecutive sessions since Sep 17.",
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions": 0
+  },
+  "candidates": {
+    "INTC": {
+      "status": "DISARMED",
+      "reason": "Earnings date conflict + -5.8% premarket gap. Do not enter.",
+      "last": 87.42,
+      "spread_bp": 2.3,
+      "above_vwap": false,
+      "rel_volume": 1.8
+    },
+    "NVDA": {
+      "status": "RE_ARMED_BUT_BELOW_VWAP",
+      "reason": "Spread tightened to 2.8 bp (< 15 bp gate, re-arm deadline 11:00 AM passed). Price $214.23 below VWAP $216.53. No entry without VWAP reclaim or ORB breakout.",
+      "last": 214.23,
+      "vwap": 216.53,
+      "spread_bp": 2.8,
+      "above_vwap": false,
+      "rel_volume": 2.69,
+      "gate_outcome": "BELOW_VWAP"
+    },
+    "NFLX": {
+      "status": "CONDITIONAL_BLOCKED",
+      "reason": "Spread 1.5 bp (passes gate). Rel-vol 1.79x (below 2.0x ORB threshold for MIXED/RANGE). Price $65.98 below VWAP $66.34. No entry — VWAP reclaim requires price above VWAP; 2-tick rule not met.",
+      "last": 65.98,
+      "vwap": 66.34,
+      "spread_bp": 1.5,
+      "above_vwap": false,
+      "rel_volume": 1.79,
+      "gate_outcome": "BELOW_VWAP"
+    },
+    "BAC": {
+      "status": "CONDITIONAL_BLOCKED",
+      "reason": "Spread 2.0 bp (passes gate). Rel-vol 1.0x (below 1.5x minimum gate). Price $50.565 below VWAP $50.93. Two independent blockers: below VWAP, insufficient rel-vol.",
+      "last": 50.565,
+      "vwap": 50.93,
+      "spread_bp": 2.0,
+      "above_vwap": false,
+      "rel_volume": 1.0,
+      "gate_outcome": "BELOW_VWAP_AND_LOW_REL_VOL"
+    }
+  },
+  "secondary_note": "Even if PRECONDITION #1 were cleared by a human this tick, no entry would qualify: all candidates are below VWAP, no ORB breakout is active, and the two-tick VWAP confirmation rule has not been satisfied for any name."
+}

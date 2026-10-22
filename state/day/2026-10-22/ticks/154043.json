@@ -1,0 +1,61 @@
+{
+  "tick_time_et": "2026-10-22T15:40:43-04:00",
+  "action": "NO_TRADE",
+  "reason": "PAST_NO_NEW_ENTRIES_AND_PRECONDITION_1_ACTIVE",
+  "decision_summary": "3:40 PM ET — two separate blocks prevent any entry: (1) past the 3:30 PM no-new-entries cutoff, (2) PRECONDITION #1 still active (flatten scheduler unconfirmed for 31 consecutive sessions). No open positions exist to manage (stop/target/thesis checks skipped — nothing held). Not yet in the flatten window (starts 3:50 PM ET). Nothing to do this tick.",
+  "precondition_1": {
+    "active": true,
+    "sessions_blocked": 31,
+    "description": "Flatten scheduler unconfirmed. CronList empty. Blocking all entries since September 17."
+  },
+  "clock_flags": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "time_et": "15:40"
+  },
+  "positions_managed": [],
+  "new_entries_considered": "none — blocked by no_new_entries clock flag and PRECONDITION_1",
+  "market_snapshot": {
+    "BAC": {
+      "last": 50.98,
+      "vwap": 50.91,
+      "above_vwap": true,
+      "spread_bp": 2.0,
+      "rel_volume": 0.58,
+      "note": "Above VWAP, spread OK, but past entry cutoff and PC1 active. Even if unblocked: no new entries after 3:30 PM."
+    },
+    "NFLX": {
+      "last": 66.63,
+      "vwap": 66.79,
+      "above_vwap": false,
+      "spread_bp": 1.5,
+      "rel_volume": 1.09,
+      "note": "Below VWAP. No setup. Past entry cutoff."
+    },
+    "NVDA": {
+      "last": 211.70,
+      "vwap": 214.09,
+      "above_vwap": false,
+      "spread_bp": 2.8,
+      "rel_volume": 1.46,
+      "note": "Below VWAP. No setup. Past entry cutoff."
+    },
+    "INTC": {
+      "last": 85.11,
+      "above_vwap": false,
+      "spread_bp": 2.4,
+      "status": "DISARMED",
+      "note": "Earnings date conflict — do not enter. Disarmed for full session."
+    }
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8,
+    "loss_budget_remaining": 3000.0
+  },
+  "next_action": "Flatten window opens at 3:50 PM ET. Already flat — nothing to sell. Tick at 3:50 PM will run /flatten-close."
+}

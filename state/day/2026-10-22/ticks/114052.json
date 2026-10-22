@@ -1,0 +1,55 @@
+{
+  "tick_time_et": "2026-10-22T11:40:52-04:00",
+  "minutes_since_open": 130,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_ACTIVE",
+  "detail": "The day plan requires human resolution of the flatten-scheduler precondition before any entries. This is session 29 of the block. No positions held; no orders outstanding.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_trades": [],
+  "market_snapshot": {
+    "NFLX": {
+      "last": 66.56,
+      "vwap": 66.42,
+      "spread_bp": 1.5,
+      "rel_volume": 1.56,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "assessment": "BEST_CANDIDATE — spread clear (1.5 bp), above VWAP, rel_vol marginally above 1.5x minimum. Would qualify for VWAP-reclaim entry if PRECONDITION #1 were cleared. Blocked."
+    },
+    "NVDA": {
+      "last": 213.03,
+      "vwap": 215.35,
+      "spread_bp": 23.9,
+      "rel_volume": 2.33,
+      "above_vwap": false,
+      "rearm_status": "RE-ARMED (spread was 2.8 bp at 10:40 AM, before 11 AM deadline)",
+      "assessment": "Re-armed, but currently below VWAP and spread has widened to 23.9 bp. No entry signal."
+    },
+    "BAC": {
+      "last": 50.80,
+      "vwap": 50.84,
+      "spread_bp": 2.0,
+      "rel_volume": 0.74,
+      "above_vwap": false,
+      "assessment": "Below VWAP, rel_vol 0.74 (below 1.5x gate). Two gates fail — no entry."
+    },
+    "INTC": {
+      "last": 86.89,
+      "vwap": 87.65,
+      "spread_bp": 3.5,
+      "rel_volume": 1.55,
+      "above_vwap": false,
+      "assessment": "DISARMED — earnings date conflict, -5.8% gap. Do not enter."
+    }
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions": 0,
+    "position_slots_remaining": 8,
+    "loss_budget_remaining": 3000.0
+  }
+}

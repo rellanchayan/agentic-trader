@@ -305,6 +305,23 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-22: No tuning. Tuner unfrozen ("ok to tune", 87 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: twenty-eighth consecutive zero-trade session (Sep 17 through Oct 22). Zero orders
+  submitted, $0 realized P&L. Account flat at $999,641.65. PRECONDITION #1 (flatten scheduler
+  unconfirmed, CronList empty) remains the sole blocker preventing any entry.
+  Durable lesson reinforced by 28 sessions of no trading: cron jobs must be wired before strategy
+  tuning matters. Every evening the tuner correctly declines because no new trade data exists.
+  Every morning the tick loop correctly halts because PRECONDITION #1 is not cleared. These are
+  both the right behaviors — the bot's gates, setup logic, and parameter evaluation are all sound.
+  But sound logic running on top of a missing scheduler produces zero trades indefinitely. Strategy
+  parameter tuning is irrelevant until the infrastructure works. The single actionable item is a
+  one-time human action: add the flatten cron entry or provide a signed acknowledgment in the day
+  plan. No code change, no parameter change, and no gate relaxation will unblock this.
+  No parameter adjustment is warranted. With 31 total trades across 87 days (0.36 trades/day), all
+  setup expectancies remain negative (ORB -0.20R, momentum -0.975R, vwap_reclaim -0.368R), and the
+  sample is far too thin to distinguish miscalibration from noise. The tuner correctly declines.
 - 2026-10-21: No tuning. Tuner unfrozen ("ok to tune", 86 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

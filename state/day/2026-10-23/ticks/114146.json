@@ -1,0 +1,62 @@
+{
+  "tick_time_et": "2026-10-23T11:41:46-04:00",
+  "tick_time_utc": "2026-10-23T15:41:46Z",
+  "verdict": "NO_TRADE",
+  "primary_block": "PRECONDITION_1_flatten_scheduler_empty",
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "loss_budget_remaining": 3000.0,
+  "positions": 0,
+  "trades_today": 0,
+  "broad_tape_unlock": true,
+  "spy_above_vwap": true,
+  "nvda_above_vwap": true,
+  "gate_outcomes": {
+    "BAC": {
+      "last": 50.815,
+      "spread_bp": 2.0,
+      "rel_volume": 0.76,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_threshold": "rel_vol >= 1.5x",
+      "blocked_by": "rel_vol 0.76x < 1.5x minimum"
+    },
+    "INTC": {
+      "last": 87.115,
+      "spread_bp": 2.3,
+      "rel_volume": 1.11,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_threshold": "rel_vol >= 2.0x (MIXED/RANGE ORB)",
+      "blocked_by": "rel_vol 1.11x < 2.0x MIXED/RANGE threshold; pre-earnings Oct 29"
+    },
+    "NVDA": {
+      "last": 212.415,
+      "spread_bp": 1.4,
+      "rel_volume": 1.28,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "gate_threshold": "rel_vol >= 2.0x (MIXED/RANGE ORB)",
+      "blocked_by": "rel_vol 1.28x < 2.0x MIXED/RANGE threshold"
+    },
+    "QQQ": {
+      "last": 707.63,
+      "spread_bp": 0.7,
+      "rel_volume": 1.28,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_threshold": "rel_vol >= 2.0x (MIXED/RANGE ORB)",
+      "blocked_by": "rel_vol 1.28x < 2.0x MIXED/RANGE threshold"
+    },
+    "SPY": {
+      "last": 762.66,
+      "spread_bp": 0.4,
+      "rel_volume": 1.36,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "gate_threshold": "rel_vol >= 2.0x (MIXED/RANGE ORB)",
+      "blocked_by": "rel_vol 1.36x < 2.0x MIXED/RANGE threshold"
+    }
+  },
+  "notes": "Rel-vol declining across all names vs prior tick (BAC 0.97→0.76, INTC 1.51→1.11, NVDA 1.63→1.28, QQQ 1.68→1.28, SPY 1.74→1.36). Friday afternoon decay consistent with typical end-of-week vol compression. Broad tape healthy but insufficient activity to clear gates. No positions to manage. PRECONDITION #1 remains the hard block."
+}

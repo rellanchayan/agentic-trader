@@ -1,0 +1,67 @@
+{
+  "timestamp_et": "2026-10-23T09:43:52.153914-04:00",
+  "verdict": "PROCEED",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION #1 uncleared: flatten scheduler (CronList) is empty. No new positions per playbook rule. 30th consecutive session halted by same blocker.",
+  "broad_tape_unlock": true,
+  "setup_candidates": [
+    {
+      "ticker": "BAC",
+      "setup": "vwap_reclaim",
+      "gate_pass": true,
+      "blocked_by": "PRECONDITION_1"
+    },
+    {
+      "ticker": "NVDA",
+      "setup": "vwap_reclaim",
+      "gate_pass": true,
+      "blocked_by": "PRECONDITION_1"
+    },
+    {
+      "ticker": "INTC",
+      "setup": "vwap_reclaim",
+      "gate_pass": true,
+      "blocked_by": "PRECONDITION_1_AND_PRE_EARNINGS"
+    }
+  ],
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "market_snapshot": {
+    "BAC": {
+      "last": 50.65,
+      "spread_bp": 4.0,
+      "above_vwap": true,
+      "rel_volume": 1.88,
+      "vwap": 50.57
+    },
+    "INTC": {
+      "last": 85.755,
+      "spread_bp": 5.8,
+      "above_vwap": true,
+      "rel_volume": 2.14,
+      "vwap": 85.58
+    },
+    "NVDA": {
+      "last": 211.51,
+      "spread_bp": 1.9,
+      "above_vwap": true,
+      "rel_volume": 3.58,
+      "vwap": 211.13
+    },
+    "SPY": {
+      "last": 760.28,
+      "spread_bp": 1.6,
+      "above_vwap": true,
+      "rel_volume": 2.19,
+      "vwap": 759.98
+    },
+    "QQQ": {
+      "last": 703.43,
+      "spread_bp": 10.1,
+      "above_vwap": true,
+      "rel_volume": 3.06,
+      "vwap": 702.43
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "tick_time_et": "2026-10-23T15:41:12-04:00",
+  "tick_time_utc": "2026-10-23T19:41:12Z",
+  "minutes_since_open": 371,
+  "verdict": "NO_TRADE",
+  "decision_summary": "Past no-new-entries cutoff (15:30 ET). Account is flat with 0 positions and 0 open orders — no manage step required. Flatten window opens at 15:50 ET; already flat, no close-out needed.",
+  "blockers": [
+    "past_no_new_entries: true (15:41 ET > 15:30 cutoff)",
+    "PRECONDITION_1_flatten_scheduler_empty (29th consecutive session)",
+    "broad_tape_unlock FAILED: SPY 760.19 < VWAP 760.95; NVDA 211.495 < VWAP 212.12"
+  ],
+  "positions_managed": [],
+  "new_entries_evaluated": [],
+  "market_snapshot": {
+    "BAC":  {"last": 50.775, "vwap": 50.68, "above_vwap": true, "rel_vol": 0.45, "spread_bp": 2.0},
+    "INTC": {"last": 86.54,  "vwap": 86.64, "above_vwap": false, "rel_vol": 0.61, "spread_bp": 1.2},
+    "NVDA": {"last": 211.495,"vwap": 212.12,"above_vwap": false, "rel_vol": 0.87, "spread_bp": 0.9},
+    "QQQ":  {"last": 704.555,"vwap": 705.57,"above_vwap": false, "rel_vol": 0.87, "spread_bp": 1.0},
+    "SPY":  {"last": 760.19, "vwap": 760.95,"above_vwap": false, "rel_vol": 0.77, "spread_bp": 0.3}
+  },
+  "broad_tape_unlock": false,
+  "spy_above_vwap": false,
+  "nvda_above_vwap": false,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "positions_open": 0,
+  "open_orders": 0,
+  "account_equity": 999641.65,
+  "loss_budget_remaining": 3000.0
+}

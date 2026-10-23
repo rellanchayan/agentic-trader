@@ -1,0 +1,75 @@
+{
+  "tick_time_et": "14:40",
+  "tick_time_utc": "2026-10-23T18:40:41Z",
+  "action": "NO_TRADE",
+  "positions_managed": 0,
+  "new_entries_considered": 5,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8,
+  "blocking_conditions": [
+    "PRECONDITION_1: flatten scheduler (CronList) empty — 29th consecutive session",
+    "Broad-tape unlock FAILED: SPY 760.23 < VWAP 761.02 AND NVDA 211.60 < VWAP 212.21",
+    "ORB window closed: 310 min since open (window closes at ~90 min)"
+  ],
+  "gate_outcomes": {
+    "BAC": {
+      "last": 50.685,
+      "vwap": 50.68,
+      "above_vwap": true,
+      "spread_bp": 2.0,
+      "rel_volume": 0.49,
+      "orb_breakout": false,
+      "blocked_by": "rel_vol 0.49x < 1.5x minimum",
+      "verdict": "BLOCKED"
+    },
+    "INTC": {
+      "last": 86.78,
+      "vwap": 86.64,
+      "above_vwap": true,
+      "spread_bp": 2.3,
+      "rel_volume": 0.66,
+      "orb_breakout": true,
+      "blocked_by": "rel_vol 0.66x < 2.0x MIXED/RANGE threshold; ORB window closed; pre-earnings Oct 29",
+      "verdict": "BLOCKED"
+    },
+    "NVDA": {
+      "last": 211.6,
+      "vwap": 212.21,
+      "above_vwap": false,
+      "spread_bp": 0.5,
+      "rel_volume": 0.86,
+      "orb_breakout": false,
+      "blocked_by": "below VWAP (broad-tape bellwether); rel_vol 0.86x < 1.5x minimum",
+      "verdict": "BLOCKED"
+    },
+    "QQQ": {
+      "last": 705.12,
+      "vwap": 705.7,
+      "above_vwap": false,
+      "spread_bp": 0.7,
+      "rel_volume": 0.89,
+      "orb_breakout": true,
+      "blocked_by": "below VWAP; ORB window closed (orb_breakout signal stale); rel_vol 0.89x < 2.0x",
+      "verdict": "BLOCKED"
+    },
+    "SPY": {
+      "last": 760.23,
+      "vwap": 761.02,
+      "above_vwap": false,
+      "spread_bp": 0.3,
+      "rel_volume": 0.8,
+      "orb_breakout": false,
+      "blocked_by": "below VWAP (broad-tape unlock failure); rel_vol 0.80x < 1.5x minimum",
+      "verdict": "BLOCKED"
+    }
+  },
+  "broad_tape_unlock": false,
+  "spy_above_vwap": false,
+  "nvda_above_vwap": false,
+  "regime": "MIXED/RANGE",
+  "session_note": "Friday afternoon, 310 min since open. All 5 names blocked. Broad-tape unlock failed (SPY and NVDA both below VWAP). Vol across watchlist at noise-floor levels (peak 0.89x vs 1.5x minimum). ORB window closed. PRECONDITION_1 standing HALT (flatten scheduler unconfirmed since Sep 17). No trades placed today. Zero-trade outcome is correct and expected under all three blocking conditions simultaneously."
+}

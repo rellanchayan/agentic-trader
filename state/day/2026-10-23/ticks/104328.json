@@ -1,0 +1,68 @@
+{
+  "ts": "2026-10-23T10:43:28.736365-04:00",
+  "minutes_since_open": 73,
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_flatten_scheduler_empty",
+  "primary_blocker": "Flatten scheduler (CronList) confirmed empty for 29 consecutive sessions. Per PLAYBOOK: no new positions until flatten scheduler confirmed live.",
+  "gate_outcomes": {
+    "BAC": {
+      "last": 50.56,
+      "vwap": 50.63,
+      "above_vwap": false,
+      "rel_vol": 0.97,
+      "spread_bp": 2.0,
+      "orb_breakout": false,
+      "setup": "VWAP_reclaim",
+      "blocked_by": "rel_vol 0.97 < min 1.5x"
+    },
+    "INTC": {
+      "last": 87.54,
+      "vwap": 86.22,
+      "above_vwap": true,
+      "rel_vol": 1.51,
+      "spread_bp": 2.3,
+      "orb_breakout": true,
+      "setup": "ORB (MIXED/RANGE)",
+      "blocked_by": "rel_vol 1.51 < MIXED/RANGE threshold 2.0x; also pre-earnings window (Oct 29)"
+    },
+    "NVDA": {
+      "last": 213.415,
+      "vwap": 212.14,
+      "above_vwap": true,
+      "rel_vol": 1.63,
+      "spread_bp": 1.4,
+      "orb_breakout": true,
+      "setup": "ORB (MIXED/RANGE)",
+      "blocked_by": "rel_vol 1.63 < MIXED/RANGE threshold 2.0x"
+    },
+    "QQQ": {
+      "last": 707.5,
+      "vwap": 704.14,
+      "above_vwap": true,
+      "rel_vol": 1.68,
+      "spread_bp": 0.6,
+      "orb_breakout": true,
+      "setup": "ORB (MIXED/RANGE)",
+      "blocked_by": "rel_vol 1.68 < MIXED/RANGE threshold 2.0x"
+    },
+    "SPY": {
+      "last": 761.13,
+      "vwap": 760.2,
+      "above_vwap": true,
+      "rel_vol": 1.74,
+      "spread_bp": 4.2,
+      "orb_breakout": false,
+      "setup": "ORB (MIXED/RANGE)",
+      "blocked_by": "rel_vol 1.74 < MIXED/RANGE threshold 2.0x; no orb_breakout"
+    }
+  },
+  "broad_tape_unlock": true,
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0,
+    "positions_open": 0,
+    "loss_budget_remaining": 3000.0
+  },
+  "note": "Day 29 of PRECONDITION_1 halt. Setup quality is improving (NVDA and INTC both above VWAP with ORB breakouts); gate filters are correctly working as designed. No entry permitted until flatten scheduler confirmed live. Human action required."
+}

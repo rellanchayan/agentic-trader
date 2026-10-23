@@ -1,0 +1,90 @@
+{
+  "tick_time_et": "2026-10-23T13:42:18-04:00",
+  "tick_time_utc": "2026-10-23T17:42:18Z",
+  "minutes_since_open": 252,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "new_entries_considered": 0,
+  "decision_summary": "No trade. PRECONDITION #1 (flatten scheduler unconfirmed) is the primary HALT. Additionally: broad-tape unlock FAILED (both SPY and NVDA below VWAP), ORB window closed (252 min since open), and all rel_vol below minimum gate across all 5 names evaluated.",
+  "blocking_conditions": [
+    "PRECONDITION_1: flatten scheduler (CronList) empty — 30th consecutive session",
+    "broad_tape_unlock_FAILED: SPY 760.70 < VWAP 761.04 AND NVDA 211.87 < VWAP 212.26",
+    "ORB_window_closed: 252 min since open (window closes at 90 min / ~11:00 AM ET)",
+    "rel_vol_below_gate: all 5 names below 1.5x minimum (BAC 0.53x, INTC 0.75x, NVDA 0.91x, QQQ 0.97x, SPY 0.89x)"
+  ],
+  "gate_details": {
+    "BAC": {
+      "last": 50.66,
+      "vwap": 50.68,
+      "above_vwap": false,
+      "rel_vol": 0.53,
+      "spread_bp": 2.0,
+      "orb_high": 50.79,
+      "orb_low": 50.3,
+      "gate_outcome": "BLOCKED",
+      "blocked_by": ["below_vwap", "rel_vol 0.53x < 1.5x min"]
+    },
+    "INTC": {
+      "last": 86.81,
+      "vwap": 86.61,
+      "above_vwap": true,
+      "rel_vol": 0.75,
+      "spread_bp": 2.3,
+      "orb_high": 86.46,
+      "orb_low": 84.755,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED",
+      "blocked_by": ["ORB_window_closed_252min", "rel_vol 0.75x << 2.0x MIXED/RANGE", "pre_earnings_Oct29_6days"]
+    },
+    "NVDA": {
+      "last": 211.87,
+      "vwap": 212.26,
+      "above_vwap": false,
+      "rel_vol": 0.91,
+      "spread_bp": 1.4,
+      "orb_high": 212.575,
+      "orb_low": 210.22,
+      "gate_outcome": "BLOCKED",
+      "blocked_by": ["below_vwap", "rel_vol 0.91x < 1.5x min", "broad_tape_bellwether_below_vwap"]
+    },
+    "QQQ": {
+      "last": 705.65,
+      "vwap": 705.68,
+      "above_vwap": false,
+      "rel_vol": 0.97,
+      "spread_bp": 0.7,
+      "orb_high": 704.46,
+      "orb_low": 701.18,
+      "orb_breakout": true,
+      "gate_outcome": "BLOCKED",
+      "blocked_by": ["below_vwap", "rel_vol 0.97x << 2.0x MIXED/RANGE", "ORB_window_closed_252min", "broad_tape_unlock_failed"]
+    },
+    "SPY": {
+      "last": 760.70,
+      "vwap": 761.04,
+      "above_vwap": false,
+      "rel_vol": 0.89,
+      "spread_bp": 0.4,
+      "orb_high": 760.76,
+      "orb_low": 759.18,
+      "gate_outcome": "BLOCKED",
+      "blocked_by": ["below_vwap", "rel_vol 0.89x < 1.5x min", "broad_tape_unlock_failed"]
+    }
+  },
+  "broad_tape_unlock": false,
+  "spy_above_vwap": false,
+  "nvda_above_vwap": false,
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "slots_used": 0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  },
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "loss_budget_remaining": 3000.0
+  }
+}

@@ -305,6 +305,31 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-23: No tuning. Tuner unfrozen ("ok to tune", 88 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: twenty-ninth consecutive no-trade session (Sep 17 through Oct 23). Zero orders submitted,
+  $0 realized P&L. Account flat at $999,641.65. PRECONDITION_1 (CronList / flatten scheduler empty)
+  remains the sole blocker preventing any entry.
+  Observations from today's session:
+  (1) Infrastructure phases work correctly when invoked — the blocker is exclusively the CronList
+  scheduler being empty, not any code defect in the premarket, tick, or flatten logic itself. The
+  phases execute correctly on demand; only the automated scheduling of the flatten passes is missing.
+  (2) The 2.0x relative-volume gate for MIXED/RANGE conditions correctly filtered today's noise.
+  Peak relative volume was NVDA at 1.63x (10:43 AM ET) — never reached the 2.0x threshold required
+  on a MIXED/RANGE tape. This is the expected and correct behavior on a low-conviction Friday session.
+  (3) Observation for tracking (not yet a standing rule): SPY and NVDA both drifted below VWAP from
+  12:42 PM ET onward, causing the broad-tape unlock to fail for the entire afternoon. This is a
+  possible recurring Friday afternoon pattern — institutional participants reducing exposure into the
+  weekend compresses intraday directionality and produces below-VWAP drift in the afternoon. If this
+  pattern recurs across 3 or more Fridays, add a standing rule: on Fridays, do not enter new positions
+  after 12:30 PM ET if the broad-tape unlock (SPY + NVDA above VWAP) has not been satisfied since
+  11:00 AM. For now, tag as a candidate pattern and track in future Friday sessions.
+  No parameter adjustment is warranted. With 31 total trades across 88 days (0.35 trades/day), all
+  setup expectancies remain negative (ORB -0.20R, momentum -0.975R, vwap_reclaim -0.368R), and the
+  sample is far too thin to distinguish miscalibration from noise. The tuner correctly declines.
+  PRECONDITION_1 requires a one-time human action (add CronList flatten entry or provide signed
+  acknowledgment in the day plan) before trading can resume.
 - 2026-10-22: No tuning. Tuner unfrozen ("ok to tune", 87 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

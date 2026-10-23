@@ -1,0 +1,67 @@
+{
+  "tick_time_et": "12:42",
+  "tick_file": "124251",
+  "action": "NO_TRADE",
+  "reason": "PRECONDITION_1_flatten_scheduler_empty",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "slots_remaining": 8,
+  "equity": 999641.65,
+  "broad_tape_unlock": false,
+  "spy_above_vwap": true,
+  "nvda_above_vwap": false,
+  "nvda_last": 211.975,
+  "nvda_vwap": 212.35,
+  "gate_details": {
+    "BAC": {
+      "last": 50.84,
+      "spread_bp": 2.0,
+      "rel_vol": 0.6,
+      "above_vwap": true,
+      "vwap": 50.68,
+      "blocked_by": "PRECONDITION_1 + rel_vol 0.6x < 1.5x min"
+    },
+    "INTC": {
+      "last": 87.06,
+      "spread_bp": 2.3,
+      "rel_vol": 0.91,
+      "above_vwap": true,
+      "vwap": 86.59,
+      "blocked_by": "PRECONDITION_1 + rel_vol 0.91x < 2.0x MIXED/RANGE + pre_earnings_Oct29 + ORB_window_closed"
+    },
+    "NVDA": {
+      "last": 211.975,
+      "spread_bp": 0.9,
+      "rel_vol": 1.03,
+      "above_vwap": false,
+      "vwap": 212.35,
+      "blocked_by": "PRECONDITION_1 + below_VWAP + rel_vol 1.03x < 2.0x + ORB_window_closed"
+    },
+    "QQQ": {
+      "last": 706.96,
+      "spread_bp": 0.6,
+      "rel_vol": 1.07,
+      "above_vwap": true,
+      "vwap": 705.6,
+      "blocked_by": "PRECONDITION_1 + rel_vol 1.07x < 2.0x MIXED/RANGE + ORB_window_closed"
+    },
+    "SPY": {
+      "last": 762.165,
+      "spread_bp": 0.4,
+      "rel_vol": 1.06,
+      "above_vwap": true,
+      "vwap": 761.06,
+      "blocked_by": "PRECONDITION_1 + rel_vol 1.06x < 2.0x MIXED/RANGE + ORB_window_closed"
+    }
+  },
+  "blockers": [
+    "PRECONDITION_1: CronList empty, flatten scheduler unconfirmed (30th consecutive session)",
+    "broad_tape_unlock_failed: NVDA below VWAP (211.975 < 212.35)",
+    "all_rel_vol_below_gate: max 1.07x vs 2.0x required for MIXED/RANGE",
+    "orb_window_closed: 191 minutes since open, 90-minute cutoff passed",
+    "INTC: pre-earnings window active (earnings Oct 29)"
+  ],
+  "notes": "This tick evaluated all 5 names. No setup qualifies. Even absent PRECONDITION_1, broad-tape unlock fails (NVDA below VWAP) and all rel-vol is well below the 2.0x MIXED/RANGE threshold. ORB entry window closed at ~11:00 AM ET. Human action required on flatten scheduler before any trade can occur."
+}

@@ -1,0 +1,22 @@
+{
+  "tick_time_et": "14:40",
+  "timestamp_utc": "2026-10-26T18:40:52Z",
+  "action": "HALT",
+  "reason": "day_plan_found=false — premarket runner did not write a plan for 2026-10-26. Per playbook rule: do not trade without a plan. Also PRECONDITION_1 unresolved (flatten scheduler unconfirmed via CronList, now 30 consecutive sessions).",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_used_today": 0,
+  "slots_used": 0,
+  "recent_ticks_summary": "6 consecutive HALT ticks today (09:48, 10:41, 11:42, 12:42, 13:42, 14:40), all blocked by missing plan",
+  "market_observations": {
+    "NVDA": {"last": 216.19, "above_vwap": true, "orb_breakout": true, "rel_volume": 1.08, "spread_bp": 0.9, "note": "ORB breakout but halted — no plan, no PRECONDITION_1 clearance"},
+    "TSLA": {"last": 393.965, "above_vwap": true, "orb_breakout": true, "rel_volume": 1.41, "spread_bp": 2.0, "note": "ORB breakout but halted — no plan, no PRECONDITION_1 clearance"},
+    "MSFT": {"last": 532.14, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.88, "spread_bp": 17.7, "note": "ORB breakout but rel_vol 0.88x < 1.5x gate and spread 17.7bp approaching limit — would not qualify regardless"},
+    "AVGO": {"last": 331.19, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.68, "spread_bp": 2.1, "note": "ORB breakout but rel_vol 0.68x < 1.5x gate — would not qualify regardless"},
+    "AMD": {"last": 532.56, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.72, "spread_bp": 345.2, "note": "DISQUALIFIED — spread 345.2bp far exceeds 25bp gate, bid/ask blown out"}
+  },
+  "note": "Tick 6 of 6 today. All halted. No plan written by premarket runner. PRECONDITION_1 (flatten scheduler) still unresolved — playbook designates this a systemic infrastructure failure requiring human action. This is the 30th consecutive no-trade session (Sep 17 through Oct 26)."
+}

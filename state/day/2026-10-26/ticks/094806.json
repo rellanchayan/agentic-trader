@@ -1,0 +1,14 @@
+{
+  "tick_time_et": "2026-10-26T09:48:06-04:00",
+  "action": "HALT",
+  "reason": "day_plan_found=false — premarket plan not found. Rules require a day plan before trading.",
+  "positions_managed": [],
+  "new_entries_considered": [],
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "account_equity": 999641.65,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_remaining": 20,
+  "position_slots_remaining": 8
+}

@@ -5,7 +5,8 @@
     "source": "watchlist_build",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this.",
+    "screener_note": "Day-screener pass 2026-10-26: all 4 names retained. No name dropped — all pass spread and volume gates. Regime MIXED/RANGE; FOMC rate decision Wed Oct 28 creates vol compression all week. Priority: BAC (primary) > NFLX (secondary) > NVDA (conditional) > INTC (low, pre-earnings). HALT condition in effect (flatten scheduler unconfirmed, session 30); levels written for monitoring only."
   },
   "BAC": {
     "sector": "financials",
@@ -15,9 +16,13 @@
     "premarket_price": 51.34,
     "gap_pct": -0.0007,
     "spread_bp": 1.9,
+    "support": 50.75,
+    "resistance": 52.05,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,224,468 sh/day); -0.1% gap"
+    "setup": "vwap_reclaim",
+    "priority": "primary",
+    "note": "Tightest spread on list (1.9 bp); 3.2M avg vol. Post-earnings settled (Oct 14 earnings, 8 sessions ago). VWAP reclaim primary setup — two-tick confirmation required in MIXED/RANGE; ORB valid only at 2.0x+ rel vol. Support $50.75 / resistance $52.05 per ATR range from prior close. Verify live BAC data at each tick (data-gap flag from 2026-09-18)."
   },
   "NVDA": {
     "sector": "technology",
@@ -27,9 +32,13 @@
     "premarket_price": 215.89,
     "gap_pct": 0.0009,
     "spread_bp": 2.8,
+    "support": 210.0,
+    "resistance": 220.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,932,907 sh/day); +0.1% gap"
+    "setup": "bellwether_vwap_reclaim",
+    "priority": "conditional",
+    "note": "Broad-tape bellwether — SPY AND NVDA must both be above VWAP to unlock any entry on any name. Spread blowout expected at open; re-arm deadline 11:00 AM ET (disarm if spread above 15 bp at 11 AM). Flat gap (+0.09%), no catalyst. Support $210.00 / resistance $220.00 (round numbers, ~1x ATR from prev_close $215.70). No pre-earnings constraint (next earnings projected mid-Nov)."
   },
   "INTC": {
     "sector": "technology",
@@ -39,9 +48,13 @@
     "premarket_price": 87.84,
     "gap_pct": 0.0015,
     "spread_bp": 3.4,
+    "support": 85.0,
+    "resistance": 90.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,672,027 sh/day); +0.1% gap"
+    "setup": "vwap_reclaim_only",
+    "priority": "low",
+    "note": "PRE-EARNINGS CAUTION: INTC reports Q3 2026 earnings Oct 29 after close — 3 calendar days away, within 9-day vol-compression window. Skip ORB entirely. VWAP reclaim only with two-tick confirmation. Support $85.00 / resistance $90.00 (round numbers). BAC and NFLX are cleaner alternatives today; only trade INTC if the others offer no setup."
   },
   "NFLX": {
     "sector": "communication",
@@ -51,8 +64,12 @@
     "premarket_price": 65.27,
     "gap_pct": 0.0005,
     "spread_bp": 3.1,
+    "support": 63.75,
+    "resistance": 67.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,469,398 sh/day); +0.1% gap"
+    "setup": "vwap_reclaim",
+    "priority": "secondary",
+    "note": "Post-earnings settle (Oct 20 earnings; strong results: rev $12.9B +12% YoY, op margin 34.6%). Six sessions post-earnings — reaction fully absorbed. No near-term binary events. VWAP reclaim with two-tick confirmation. ATR $2.04; ~153 shares at $10K max trade. Support $63.75 / resistance $67.00 (approx 0.7x and 0.9x ATR from prev_close)."
   }
 }

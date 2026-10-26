@@ -1,0 +1,14 @@
+{
+  "tick_time_et": "10:41:39",
+  "action": "HALT",
+  "reason": "day_plan_found=false; no premarket plan; no trading without a plan",
+  "gate_verdict": "PROCEED",
+  "trading_verdict": "HALT",
+  "positions_managed": 0,
+  "new_orders_submitted": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "positions_open": 0,
+  "note": "Safety gate cleared (PROCEED). Trading halted due to missing premarket plan. This is the second consecutive tick halted for missing day plan. Per playbook rule: two consecutive sessions with no morning plan is treated as scheduler/runner failure. No trades placed."
+}

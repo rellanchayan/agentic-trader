@@ -305,6 +305,21 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-26: No tuning. Tuner unfrozen ("ok to tune", 89 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: thirty-first consecutive no-trade session (Sep 17 through Oct 26). Zero orders submitted,
+  $0 realized P&L. No morning plan was generated today. PRECONDITION #1 (CronList / flatten
+  scheduler empty) remains the sole blocker preventing any entry. A missing day plan independently
+  would have triggered a HALT condition per the standing infrastructure rule (docs/day_plan.md
+  absent at 9:30 AM ET = HALT); both blockers independently prescribed zero trades.
+  No new durable rule warranted tonight. A zero-trade day with no plan and no tick log provides
+  no new signal about entry quality, stop placement, or fill behavior. The tuner correctly declines.
+  No parameter adjustment is warranted. With 31 total trades across 89 days (0.35 trades/day), all
+  setup expectancies remain negative (ORB -0.20R, momentum -0.975R, vwap_reclaim -0.368R), and the
+  sample is far too thin to distinguish miscalibration from noise.
+  PRECONDITION #1 requires a one-time human action (add CronList flatten entry or provide signed
+  acknowledgment in the day plan) before trading can resume.
 - 2026-10-23: No tuning. Tuner unfrozen ("ok to tune", 88 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

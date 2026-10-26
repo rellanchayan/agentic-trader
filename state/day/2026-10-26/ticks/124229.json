@@ -1,0 +1,23 @@
+{
+  "tick_time_et": "12:42",
+  "tick_time_utc": "2026-10-26T16:42:29Z",
+  "action": "HALT",
+  "reason": "day_plan_found=false",
+  "detail": "No premarket plan exists for 2026-10-26. This is the fourth consecutive tick halted for missing plan today (09:48, 10:41, 11:42, 12:42). Per intraday-trader rules: if day_plan_found is false, HALT and do not trade. Per playbook: two or more consecutive sessions with no morning plan is a scheduler/runner failure, not a content failure — debug the premarket runner before placing any new trade.",
+  "positions_reviewed": 0,
+  "orders_cancelled": 0,
+  "trade_submitted": false,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_remaining": 20,
+  "slots_remaining": 8,
+  "market_snapshot_summary": {
+    "orb_breakouts": ["AMD", "AVGO", "META", "MSFT", "TSLA"],
+    "above_vwap": ["AMD", "AVGO", "META", "MSFT", "TSLA"],
+    "note": "Several names show ORB breakout (AMD +spread 44.7bp exceeds 25bp gate; AVGO +spread 27.3bp exceeds gate; TSLA +spread 390.6bp exceeds gate; META spread 14.8bp OK; MSFT spread 15.1bp OK). However, no trade evaluated in detail due to HALT on missing plan."
+  },
+  "blocking_conditions": [
+    "PRECONDITION: day_plan_found=false — no trading without a premarket plan",
+    "Playbook escalation: 4+ ticks today missing plan, consistent with scheduler/runner failure"
+  ]
+}

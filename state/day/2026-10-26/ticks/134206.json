@@ -1,0 +1,12 @@
+{
+  "timestamp_et": "2026-10-26T13:42:06.218232-04:00",
+  "tick_time": "13:42",
+  "action": "HALT",
+  "reason": "day_plan_found=false",
+  "detail": "Premarket plan missing for 2026-10-26. This is the fifth consecutive HALT on this issue today. No positions managed, no trades placed. Per intraday-trader rules: do not trade without a plan.",
+  "positions_held": 0,
+  "orders_placed": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "consecutive_halt_today": 5
+}

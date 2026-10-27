@@ -1,0 +1,64 @@
+{
+  "tick_time_et": "12:40:41",
+  "date": "2026-10-27",
+  "action": "NO_TRADE",
+  "verdict": "PROCEED",
+  "positions_open": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "equity": 999641.65,
+  "precondition_1_halt": true,
+  "precondition_1_reason": "CronList empty — flatten scheduler not confirmed running",
+  "broad_tape_unlock": true,
+  "broad_tape_details": {
+    "SPY_last": 769.78,
+    "SPY_vwap": 768.23,
+    "SPY_above_vwap": true,
+    "NVDA_last": 218.08,
+    "NVDA_vwap": 217.51,
+    "NVDA_above_vwap": true
+  },
+  "candidates": {
+    "NVDA": {
+      "last": 218.08,
+      "vwap": 217.51,
+      "above_vwap": true,
+      "orb_high": 218.49,
+      "orb_breakout": false,
+      "rel_vol": 0.98,
+      "rel_vol_gate": 2.0,
+      "spread_bp": 4.6,
+      "gate_pass": false,
+      "gate_fail_reason": "orb_breakout FALSE (218.08 < 218.49); rel_vol 0.98x < 2.0x elevated FOMC gate"
+    },
+    "NFLX": {
+      "last": 62.705,
+      "vwap": 63.01,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 0.94,
+      "rel_vol_gate": 2.0,
+      "spread_bp": 1.6,
+      "gate_pass": false,
+      "gate_fail_reason": "above_vwap FALSE (62.705 < 63.01); rel_vol 0.94x < 2.0x elevated FOMC gate"
+    },
+    "BAC": {
+      "last": 50.665,
+      "vwap": 50.7,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_vol": 0.56,
+      "rel_vol_gate": 2.0,
+      "spread_bp": 2.0,
+      "gate_pass": false,
+      "gate_fail_reason": "above_vwap FALSE (50.665 < 50.7); rel_vol 0.56x < 2.0x elevated FOMC gate"
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "reason": "pre-earnings 2 days (earnings Oct 29 after close)"
+    }
+  },
+  "decision_summary": "NO_TRADE. Primary blocker: PRECONDITION #1 HALT (CronList empty, flatten scheduler not confirmed). Secondary: no candidate passes elevated 2.0x FOMC rel-vol gate or ORB breakout requirement. Broad-tape unlock passes for the fourth tick today. FOMC Day 1 in session; no new entries permitted after 1:30 PM ET per day plan. Re-calibration day (first session after 31-session halt)."
+}

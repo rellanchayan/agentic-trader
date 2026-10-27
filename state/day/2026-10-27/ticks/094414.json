@@ -1,0 +1,50 @@
+{
+  "tick_time_et": "09:44:14",
+  "tick_time_utc": "2026-10-27T13:44:14Z",
+  "minutes_since_open": 14,
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_submitted": null,
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "gate_evaluation": {
+    "broad_tape_unlock": {
+      "spy_above_vwap": true,
+      "nvda_above_vwap": false,
+      "result": "FAIL — NVDA below VWAP (217.72 < 217.93 VWAP)"
+    },
+    "nvda": {
+      "above_vwap": false,
+      "spread_bp": 36.4,
+      "spread_gate_bp": 15,
+      "rel_volume": 2.02,
+      "orb_breakout": false,
+      "result": "BLOCKED — below VWAP; spread 36.4 bp exceeds 15 bp re-arm gate"
+    },
+    "nflx": {
+      "above_vwap": true,
+      "spread_bp": 1.6,
+      "rel_volume": 1.64,
+      "elevated_vol_gate": 2.0,
+      "orb_breakout": false,
+      "result": "BLOCKED — rel_vol 1.64x < 2.0x elevated FOMC gate"
+    },
+    "bac": {
+      "above_vwap": false,
+      "spread_bp": 3.9,
+      "rel_volume": 1.71,
+      "elevated_vol_gate": 2.0,
+      "result": "BLOCKED — below VWAP; rel_vol 1.71x < 2.0x"
+    },
+    "intc": {
+      "result": "DISARMED — pre-earnings (2 days to report Oct 29)"
+    },
+    "orb_window": {
+      "result": "WAIT — still within 15-min ORB formation window (need 9:45 ET)"
+    }
+  },
+  "decision_summary": "No name cleared all entry gates this tick. Broad-tape unlock fails (NVDA below VWAP). No ORB breakout on any name. Elevated volume gate (2.0x) not reached by NFLX or BAC. Correct outcome on FOMC Day 1 re-calibration session: zero-trade if gates don't cooperate."
+}

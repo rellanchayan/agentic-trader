@@ -1,0 +1,85 @@
+{
+  "tick_time_et": "2026-10-27T13:40:46-04:00",
+  "tick_id": "134046",
+  "action": "NO_TRADE",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "new_orders_submitted": [],
+  "gate_outcomes": {
+    "precondition_1": {
+      "status": "FAIL",
+      "reason": "CronList empty — flatten scheduler unconfirmed"
+    },
+    "time_cutoff": {
+      "status": "FAIL",
+      "reason": "1:40 PM ET past plan's 1:30 PM ET FOMC-day no-new-entries cutoff",
+      "current_time_et": "13:40",
+      "cutoff_et": "13:30"
+    },
+    "broad_tape_unlock": {
+      "status": "PASS",
+      "SPY_last": 769.59,
+      "SPY_vwap": 768.39,
+      "SPY_above_vwap": true,
+      "NVDA_last": 217.775,
+      "NVDA_vwap": 217.55,
+      "NVDA_above_vwap": true
+    },
+    "candidates": {
+      "NVDA": {
+        "armed": true,
+        "setup": "ORB",
+        "spread_bp": 0.9,
+        "spread_gate": "PASS",
+        "rel_volume": 0.83,
+        "rel_vol_gate": "FAIL (0.83x < 2.0x elevated FOMC gate)",
+        "orb_breakout": false,
+        "orb_high": 218.49,
+        "last": 217.775,
+        "above_vwap": true,
+        "final": "NO GO — fails rel_vol and orb_breakout"
+      },
+      "NFLX": {
+        "armed": true,
+        "setup": "ORB",
+        "spread_bp": 1.6,
+        "spread_gate": "PASS",
+        "rel_volume": 0.91,
+        "rel_vol_gate": "FAIL (0.91x < 2.0x elevated FOMC gate)",
+        "orb_breakout": false,
+        "orb_high": 63.865,
+        "last": 62.57,
+        "above_vwap": false,
+        "vwap": 62.92,
+        "final": "NO GO — below VWAP, fails rel_vol and orb_breakout"
+      },
+      "BAC": {
+        "armed": "MARGINAL",
+        "setup": "ORB",
+        "spread_bp": 2.0,
+        "spread_gate": "PASS",
+        "rel_volume": 0.49,
+        "rel_vol_gate": "FAIL (0.49x < 2.0x elevated FOMC gate)",
+        "orb_breakout": false,
+        "orb_high": 51.07,
+        "last": 50.73,
+        "above_vwap": true,
+        "final": "NO GO — fails rel_vol and orb_breakout"
+      },
+      "INTC": {
+        "armed": false,
+        "reason": "DISARMED — pre-earnings, Q3 2026 on October 29 (2 days away)"
+      }
+    }
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "positions_open": 0,
+    "trades_today": 0,
+    "trades_remaining": 20
+  },
+  "summary": "NO_TRADE. Two independent blockers: (1) PRECONDITION #1 HALT — CronList empty, flatten scheduler not confirmed. (2) 1:40 PM ET past plan's 1:30 PM ET FOMC-day no-new-entries cutoff. Additionally, no candidate clears the 2.0x elevated rel-vol gate required on FOMC Day 1; best reading is NVDA 0.83x. No ORB breakouts on armed names. A zero-trade outcome is the expected and correct result for this session."
+}

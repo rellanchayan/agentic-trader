@@ -1,0 +1,79 @@
+{
+  "tick_time_et": "10:39",
+  "timestamp_et": "2026-10-27T10:39:56-04:00",
+  "action": "NO_TRADE",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "gate_outcomes": {
+    "PRECONDITION_1": {
+      "result": "HALT",
+      "detail": "CronList empty — flatten scheduler not confirmed live. Plan acknowledgment present but flatten scheduler must be independently confirmed per plan rules."
+    },
+    "broad_tape_unlock": {
+      "result": "FAIL",
+      "detail": "SPY above VWAP (767.04 > 766.65) ✓ but NVDA below VWAP (216.88 < 216.89) ✗. Unlock requires BOTH above VWAP."
+    },
+    "NVDA": {
+      "armed": true,
+      "last": 216.88,
+      "vwap": 216.89,
+      "above_vwap": false,
+      "rel_volume": 1.3,
+      "spread_bp": 0.9,
+      "orb_breakout": false,
+      "rel_vol_gate": "FAIL (1.3x < 2.0x elevated FOMC gate)",
+      "vwap_gate": "FAIL (below VWAP)",
+      "result": "NO_ENTRY"
+    },
+    "NFLX": {
+      "armed": true,
+      "last": 63.025,
+      "vwap": 63.23,
+      "above_vwap": false,
+      "rel_volume": 1.18,
+      "spread_bp": 1.6,
+      "orb_breakout": false,
+      "rel_vol_gate": "FAIL (1.18x < 2.0x elevated FOMC gate)",
+      "vwap_gate": "FAIL (below VWAP)",
+      "result": "NO_ENTRY"
+    },
+    "BAC": {
+      "armed": "MARGINAL",
+      "last": 50.645,
+      "vwap": 50.72,
+      "above_vwap": false,
+      "rel_volume": 0.85,
+      "spread_bp": 2.0,
+      "orb_breakout": false,
+      "rel_vol_gate": "FAIL (0.85x < 2.0x elevated FOMC gate)",
+      "vwap_gate": "FAIL (below VWAP)",
+      "result": "NO_ENTRY"
+    },
+    "INTC": {
+      "armed": false,
+      "disarm_reason": "Pre-earnings (2 days to Q3 2026 report Oct 29 after close)",
+      "result": "DISARMED"
+    },
+    "VWAP_RECLAIM": {
+      "result": "DISARMED",
+      "detail": "Off-table in MIXED/RANGE + imminent macro event (pre-FOMC rate decision)"
+    },
+    "MOMENTUM": {
+      "result": "DISARMED",
+      "detail": "Off-table in MIXED/RANGE regime"
+    }
+  },
+  "no_trade_reasons": [
+    "PRECONDITION #1 HALT: CronList empty, flatten scheduler not confirmed",
+    "Broad-tape unlock fails: NVDA below VWAP (216.88 < 216.89)",
+    "NVDA rel_vol 1.3x below 2.0x elevated FOMC gate",
+    "NFLX rel_vol 1.18x below 2.0x elevated FOMC gate",
+    "BAC rel_vol 0.85x below 2.0x elevated FOMC gate",
+    "INTC disarmed (pre-earnings)",
+    "VWAP reclaim disarmed (MIXED/RANGE + pre-FOMC)",
+    "No positions open to manage",
+    "No open orders to cancel"
+  ],
+  "session_notes": "Re-calibration day (first session after 31 consecutive no-trade sessions). All gates evaluated rigorously as required. SPY above VWAP (767.04 > 766.65) is a positive sign but insufficient alone for broad-tape unlock. No new entries after 1:30 PM ET per plan."
+}

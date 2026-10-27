@@ -1,0 +1,87 @@
+{
+  "tick_time_et": "11:40",
+  "tick_utc": "2026-10-27T15:40:56Z",
+  "action": "NO_TRADE",
+  "precondition_1": {
+    "status": "HALT",
+    "reason": "CronList empty — flatten scheduler not confirmed running",
+    "detail": "Day plan contains human-signed acknowledgment (Chayan) but plan states: 'If the flatten scheduler cannot be confirmed running at the first tick, PRECONDITION #1 HALT remains in effect for today despite this acknowledgment.' CronList confirmed empty at this tick."
+  },
+  "broad_tape_unlock": {
+    "status": "PASSES",
+    "spy_last": 769.68,
+    "spy_vwap": 767.52,
+    "spy_above_vwap": true,
+    "nvda_last": 217.75,
+    "nvda_vwap": 217.15,
+    "nvda_above_vwap": true,
+    "note": "First tick today where broad-tape unlock passes. Previous ticks blocked by NVDA below VWAP."
+  },
+  "candidate_gate_outcomes": {
+    "NVDA": {
+      "status": "BLOCKED",
+      "last": 217.75,
+      "vwap": 217.15,
+      "above_vwap": true,
+      "orb_high": 218.49,
+      "orb_breakout": false,
+      "rel_volume": 1.11,
+      "spread_bp": 1.4,
+      "quote_age_sec": 0.9,
+      "gates_passed": ["above_vwap", "spread_lt_15bp", "quote_fresh"],
+      "gates_failed": ["orb_breakout_false", "rel_vol_1.11x_lt_2.0x_elevated_fomc_gate"],
+      "verdict": "BLOCKED — no ORB trigger and rel_vol below elevated 2.0x gate"
+    },
+    "NFLX": {
+      "status": "BLOCKED",
+      "last": 62.89,
+      "vwap": 63.14,
+      "above_vwap": false,
+      "orb_high": 63.865,
+      "orb_breakout": false,
+      "rel_volume": 0.93,
+      "spread_bp": 1.6,
+      "quote_age_sec": 0.6,
+      "gates_passed": ["spread_lt_15bp", "quote_fresh"],
+      "gates_failed": ["above_vwap_false", "orb_breakout_false", "rel_vol_0.93x_lt_2.0x"],
+      "verdict": "BLOCKED — below VWAP, no ORB trigger, well below 2.0x rel_vol"
+    },
+    "BAC": {
+      "status": "BLOCKED",
+      "last": 50.725,
+      "vwap": 50.7,
+      "above_vwap": true,
+      "orb_high": 51.07,
+      "orb_breakout": false,
+      "rel_volume": 0.67,
+      "spread_bp": 2.0,
+      "quote_age_sec": 1.6,
+      "gates_passed": ["above_vwap", "spread_lt_15bp", "quote_fresh"],
+      "gates_failed": ["orb_breakout_false", "rel_vol_0.67x_lt_2.0x"],
+      "verdict": "BLOCKED — no ORB trigger, rel_vol well below 2.0x gate"
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "reason": "Pre-earnings: Q3 2026 earnings October 29 after close (2 days away); within 9-day pre-earnings disarm window"
+    }
+  },
+  "positions_managed": "none — account flat, no open positions",
+  "open_orders_managed": "none",
+  "entry_window_status": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "time_remaining_before_1_30_cutoff": "~1h50m",
+    "minutes_since_open": 130
+  },
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  },
+  "summary": "NO_TRADE. PRECONDITION #1 HALT blocks all entries (CronList empty, flatten scheduler unconfirmed). Separately, no candidate clears the 2.0x elevated FOMC rel-vol gate. Positive note: broad-tape unlock passes for first time today. Relative volume remains compressed consistent with pre-FOMC institutional participation reduction."
+}

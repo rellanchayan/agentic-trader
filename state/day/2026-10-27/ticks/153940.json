@@ -1,0 +1,29 @@
+{
+  "tick_time_et": "15:40",
+  "timestamp_utc": "2026-10-27T19:40:14Z",
+  "verdict": "NO_TRADE",
+  "action": "NO_TRADE",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "halts": [
+    "PRECONDITION_1_HALT: CronList empty, flatten scheduler not confirmed",
+    "TIME_CUTOFF: 15:40 ET past 1:30 PM ET FOMC no-new-entries cutoff and past 3:30 PM standard cutoff"
+  ],
+  "gate_summary": {
+    "broad_tape_unlock": "PASS (SPY 770.77 > VWAP 768.82, NVDA 218.00 > VWAP 217.58)",
+    "NVDA": "FAIL — orb_breakout FALSE (218.00 < 218.49 ORB high), rel_vol 0.69x < 2.0x elevated FOMC gate",
+    "NFLX": "FAIL — above_vwap FALSE (62.56 < 62.83 VWAP), rel_vol 0.90x < 2.0x",
+    "BAC": "FAIL — above_vwap FALSE (50.685 < 50.70 VWAP), rel_vol 0.41x < 2.0x",
+    "INTC": "DISARMED — pre-earnings (2 days to report Oct 29)"
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 218.0, "vwap": 217.58, "above_vwap": true, "rel_volume": 0.69, "orb_breakout": false, "spread_bp": 0.9},
+    "NFLX": {"last": 62.56, "vwap": 62.83, "above_vwap": false, "rel_volume": 0.9, "orb_breakout": false, "spread_bp": 1.6},
+    "BAC": {"last": 50.685, "vwap": 50.7, "above_vwap": false, "rel_volume": 0.41, "orb_breakout": false, "spread_bp": 2.0},
+    "INTC": {"last": 93.96, "vwap": 93.23, "above_vwap": true, "rel_volume": 0.83, "orb_breakout": false, "spread_bp": 2.1},
+    "SPY": {"last": 770.77, "vwap": 768.82, "above_vwap": true, "rel_volume": 0.47, "orb_breakout": true, "spread_bp": 0.4},
+    "QQQ": {"last": 722.235, "vwap": 719.4, "above_vwap": true, "rel_volume": 0.58, "orb_breakout": true, "spread_bp": 0.3}
+  },
+  "note": "All candidates fail entry gates or are time-blocked. Flat. Flatten window (3:50 PM ET) approaching with nothing to flatten."
+}

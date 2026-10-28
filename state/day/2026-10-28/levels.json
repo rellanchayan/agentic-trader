@@ -2,10 +2,12 @@
   "_meta": {
     "date": "2026-10-28",
     "generated_utc": "2026-10-28T13:51:54.608408+00:00",
-    "source": "watchlist_build",
+    "screened_utc": "2026-10-28T13:58:00.000000+00:00",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 4,
-    "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "live_names": 5,
+    "disarmed_names": 1,
+    "note": "Day-screener added SPY and QQQ as non-semiconductor substitutes (playbook rule: semiconductor disarm active 2+ consecutive sessions — INTC disarmed Oct 27 and Oct 28). JPM (43 bp spread) and TSLA (113 bp spread) checked and rejected as too wide. FOMC Rate Decision at 2:00 PM ET — no new entries at or after 2:00 PM. Zero-trade outcome is the expected correct result for this session. ORB levels fill in live after the open."
   },
   "NVDA": {
     "sector": "technology",
@@ -17,42 +19,78 @@
     "spread_bp": 1.4,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,909,883 sh/day); +0.0% gap"
+    "support": 215.50,
+    "resistance": 219.20,
+    "note": "PRIMARY. Flat open (+0.03% gap). No specific news. Highest-volume name on list (2.9M sh/day). Broad-tape unlock bellwether: SPY AND NVDA must both be above VWAP before any ORB entry on any name. ORB armed: 2.0x rel-vol gate (FOMC day), spread <15 bp live, 2:1 R/R. No entries before 9:45 AM ET, no new entries after 2:00 PM (FOMC). Support: 215.50 (Oct 27 low), resistance: 219.20 (Oct 27 high / today's open area). Status: ARMED (conditional gates)."
   },
   "INTC": {
     "sector": "technology",
     "prev_close": 93.48,
     "atr_day": 4.94,
     "avg_vol_10d": 2765547,
-    "premarket_price": 93.6,
+    "premarket_price": 93.60,
     "gap_pct": 0.0013,
     "spread_bp": 2.1,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,765,547 sh/day); +0.1% gap"
+    "support": null,
+    "resistance": null,
+    "note": "DISARMED — Q3 2026 earnings tomorrow Oct 29 after close (1 day away). Pre-earnings premium absorption in effect; live spread expected to blow out well above premarket 2.1 bp. No setup on any configuration (ORB, VWAP reclaim, momentum). Disarm is unconditional and permanent for today's full session — not conditional on spread or volume. Do not enter INTC. Status: DISARMED."
   },
   "NFLX": {
     "sector": "communication",
     "prev_close": 61.98,
-    "atr_day": 2.1,
+    "atr_day": 2.10,
     "avg_vol_10d": 2568744,
     "premarket_price": 61.95,
     "gap_pct": -0.0005,
     "spread_bp": 1.6,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,568,744 sh/day); -0.1% gap"
+    "support": 61.85,
+    "resistance": 62.87,
+    "note": "SECONDARY. Post-earnings downtrend (Q3 reported Oct 20 — ad guidance cut caused sell-off; 8 days since earnings, no binary risk today). Tight ATR $2.10 — verify 2:1 R/R math explicitly before any entry; the range from ORB to target may not clear before the 2:00 PM FOMC cutoff. Support: 61.85 (today's low area), resistance: 62.87 (Oct 26 low, now overhead). ORB armed as secondary: same gates as NVDA (2.0x rel-vol, <15 bp spread, broad-tape unlock, 2:1 R/R). Status: ARMED (conditional, secondary priority only)."
   },
   "BAC": {
     "sector": "financials",
     "prev_close": 50.82,
-    "atr_day": 1.2,
+    "atr_day": 1.20,
     "avg_vol_10d": 2362434,
-    "premarket_price": 50.8,
+    "premarket_price": 50.80,
     "gap_pct": -0.0004,
     "spread_bp": 2.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,362,434 sh/day); -0.0% gap"
+    "support": 50.46,
+    "resistance": 51.09,
+    "note": "MARGINAL. FOMC-sensitive rate stock — do not hold into or past 2:00 PM ET. Very narrow ATR $1.20 (~2.4% daily range) likely produces a 2:1 R/R structure too tight to reach target before flatten window. Recent share volume declining (Oct 26: 1.79M, Oct 27: 1.51M — below 2M gate on those two days; watch live spread). Support: 50.46 (Oct 26 low), resistance: 51.09 (Oct 27 high). Do not allocate capital to BAC if NVDA or NFLX produce a clean setup first. Status: MARGINAL — evaluate 2:1 R/R explicitly before arming."
+  },
+  "SPY": {
+    "sector": "etf_broad",
+    "prev_close": 769.70,
+    "atr_day": 6.30,
+    "avg_vol_10d": 1229673,
+    "premarket_price": 770.21,
+    "gap_pct": 0.0007,
+    "spread_bp": 0.52,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 765.21,
+    "resistance": 771.66,
+    "note": "SUBSTITUTE (non-semiconductor). Added per playbook rule: semiconductor disarm active 2+ consecutive sessions (INTC disarmed both Oct 27 and Oct 28). Also serves as broad-tape unlock monitor — SPY must be above VWAP before any ORB entry on any name. Share volume 1.23M/day below 2M gate but dollar volume ~$947M/day — extremely liquid in practice. Spread 0.52 bp, tightest on list. ATR $6.30 gives workable R/R. Support: 765.21 (Oct 27 low), resistance: 771.66 (today's intraday high as of screen time). FOMC reaction at 2:00 PM — no new entries at or after 2:00 PM. Status: ARMED (conditional: 2.0x rel-vol, broad-tape unlock, 2:1 R/R)."
+  },
+  "QQQ": {
+    "sector": "etf_nasdaq",
+    "prev_close": 721.22,
+    "atr_day": 10.21,
+    "avg_vol_10d": 631874,
+    "premarket_price": 721.47,
+    "gap_pct": 0.0003,
+    "spread_bp": 0.69,
+    "orb_high": null,
+    "orb_low": null,
+    "support": 713.66,
+    "resistance": 724.61,
+    "note": "SUBSTITUTE (non-semiconductor). Added per playbook rule: semiconductor disarm active 2+ consecutive sessions. Tech-heavy ETF with higher beta than SPY — ATR $10.21 provides better R/R potential than BAC on this narrow-tape FOMC day. Share volume 632K/day below 2M gate but dollar volume ~$456M/day — liquid enough for our $5K-$10K position sizes. Spread 0.69 bp, excellent. Support: 713.66 (Oct 27 low), resistance: 724.61 (today's intraday high as of screen time). No new entries after 2:00 PM (FOMC). Status: ARMED (conditional: 2.0x rel-vol, broad-tape unlock, 2:1 R/R; evaluate after NVDA and NFLX)."
   }
 }

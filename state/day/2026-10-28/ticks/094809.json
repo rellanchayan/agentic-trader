@@ -1,0 +1,24 @@
+{
+  "tick_time_et": "2026-10-28T09:48:09-04:00",
+  "minutes_since_open": 18,
+  "verdict": "NO_TRADE",
+  "positions_managed": [],
+  "entries_considered": [
+    {
+      "ticker": "NFLX",
+      "setup": "orb",
+      "orb_breakout": true,
+      "above_vwap": true,
+      "rel_volume": 1.34,
+      "spread_bp": 3.2,
+      "gate_fails": ["rel_volume 1.34 < 1.5 minimum", "broad_tape_unlock: NVDA below VWAP"]
+    }
+  ],
+  "broad_tape_unlock": false,
+  "broad_tape_unlock_reason": "NVDA below VWAP (219.15), last 218.44",
+  "action": "none",
+  "reason": "No qualifying setup: NFLX ORB breakout blocked by rel_volume gate (1.34x < 1.5x) and broad-tape unlock failure (NVDA below VWAP). All other names not above VWAP or spread too wide.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0
+}

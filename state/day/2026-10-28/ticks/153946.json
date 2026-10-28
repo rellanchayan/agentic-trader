@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "2026-10-28T15:39:46-04:00",
+  "minutes_since_open": 369,
+  "action": "none",
+  "reason": "Past FOMC hard no-entry cutoff (2:00 PM ET). Not yet in flatten window (3:50 PM ET). No open positions. Broad-tape unlock fails: SPY 770.94 < VWAP 771.06, NVDA 214.73 < VWAP 217.26. All names below 2.0x elevated FOMC rel-vol gate (NVDA 0.78x, NFLX 0.69x, BAC 0.60x). ORB window closed (11:00 AM ET). VWAP reclaim + momentum DISARMED (FOMC Decision Day). INTC DISARMED pre-earnings Oct 29. Awaiting flatten window at 3:50 PM ET; already flat.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "market_snapshot": {
+    "SPY": {"last": 770.94, "vwap": 771.06, "above_vwap": false, "rel_volume": 0.76},
+    "NVDA": {"last": 214.73, "vwap": 217.26, "above_vwap": false, "rel_volume": 0.78, "spread_bp": 0.9},
+    "NFLX": {"last": 61.895, "vwap": 61.81, "above_vwap": true, "rel_volume": 0.69, "spread_bp": 1.6},
+    "BAC": {"last": 50.92, "vwap": 50.85, "above_vwap": true, "rel_volume": 0.6, "spread_bp": 2.0},
+    "INTC": {"last": 94.75, "vwap": 94.24, "above_vwap": true, "rel_volume": 0.8, "spread_bp": 1.1}
+  },
+  "gates_checked": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "broad_tape_unlock": false,
+    "spy_above_vwap": false,
+    "nvda_above_vwap": false,
+    "any_name_meets_fomc_2x_relvol": false,
+    "any_orb_breakout": false
+  }
+}

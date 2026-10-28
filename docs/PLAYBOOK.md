@@ -305,6 +305,34 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-28: No tuning. Tuner unfrozen ("ok to tune", 91 days of history) but no rule fired —
+  parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
+  by the tuner.
+  Today: FOMC Rate Decision Day (Fed announcement at 2:00 PM ET). Thirty-third consecutive
+  no-trade session overall. Zero orders submitted, $0 realized P&L. This is the second consecutive
+  session with a written morning plan (Oct 27 and Oct 28) — a positive infrastructure signal after
+  the earlier "no plan" streak.
+  FOMC elevated-gate session confirmed: the plan correctly applied 2.0x relative-volume threshold
+  for any ORB entry on FOMC Decision Day, per the standing rule (added 2026-09-16). The broad-tape
+  unlock (SPY + NVDA both above VWAP) was never satisfied — the tape was choppy pre-announcement
+  and NVDA declined from approximately $218 VWAP to $214.73 post-announcement, confirming the
+  elevated gates protected capital on a binary-event day.
+  Timing note: the morning plan was written at approximately 9:51 AM ET — about 21 minutes after
+  the market open. The standing premarket rule requires docs/day_plan.md to exist before 9:28 AM ET;
+  on FOMC Decision Day with no ORB entries permitted before 2:00 PM ET the late plan did not cost
+  any opportunity, but the underlying premarket timing issue (plan finishing after ticks begin)
+  remains unresolved. The tick loop correctly HALTed on the missing plan at the first tick, and
+  FOMC Day rules independently prescribed zero entries regardless. Late plan on a macro no-entry
+  day is operationally harmless but structurally the same problem documented from prior sessions.
+  No new durable rule warranted tonight. The FOMC Decision Day rule (Time of day section) already
+  prescribes this outcome exactly. NVDA's post-announcement decline is consistent evidence that the
+  2.0x elevated gate is correctly calibrated for binary-event days; no adjustment warranted. With
+  31 total trades across 91 days (0.34 trades/day), all setup expectancies remain negative (ORB
+  -0.20R, momentum -0.975R, vwap_reclaim -0.368R), and the sample is far too thin to distinguish
+  miscalibration from noise.
+  PRECONDITION #1 (CronList / flatten scheduler) remains unresolved. The two consecutive sessions
+  with plans (Oct 27-28) are progress, but no roundtrip trade can complete safely until the flatten
+  scheduler is confirmed live. PRECONDITION #1 requires a one-time human action before trading resumes.
 - 2026-10-26: No tuning. Tuner unfrozen ("ok to tune", 89 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

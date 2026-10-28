@@ -1,0 +1,39 @@
+{
+  "tick_time_et": "2026-10-28T14:40:08-04:00",
+  "minutes_since_open": 310,
+  "action": "none",
+  "decision": "NO TRADE — FOMC hard cutoff passed, no open positions, no qualifying setups",
+  "gate_outcomes": {
+    "fomc_cutoff": "BLOCKED — FOMC rate decision was at 2:00 PM ET (40 min ago). Hard no-entry rule: no new entries after 2:00 PM ET on FOMC Decision Day. No exceptions. Press conference ongoing (2:30 PM ET).",
+    "open_positions": "NONE — no stops, targets, or thesis checks required",
+    "orb_window": "CLOSED — ORB entry window closed at 11:00 AM ET (310 min since open)",
+    "vwap_reclaim": "DISARMED — playbook rule: VWAP reclaim off-table in MIXED/RANGE + active macro event (FOMC Decision Day)",
+    "momentum": "DISARMED — playbook rule: momentum off-table in MIXED/RANGE (FOMC Decision Day)",
+    "broad_tape_unlock": "FAILS — NVDA 217.51 < VWAP 217.68 (below VWAP). SPY above VWAP (772.26 > 770.97) but NVDA blocks.",
+    "NVDA": "BLOCKED — spread 55.4 bp >> 15 bp gate; below VWAP; rel_vol 0.74x < 2.0x FOMC elevated gate; FOMC hard cutoff passed",
+    "NFLX": "BLOCKED — below VWAP (61.74 < 61.84); rel_vol 0.67x < 2.0x FOMC elevated gate; FOMC hard cutoff passed",
+    "BAC": "BLOCKED — rel_vol 0.60x < 2.0x FOMC elevated gate; FOMC hard cutoff passed; BAC rate-sensitive (FOMC binary risk)",
+    "INTC": "DISARMED — pre-earnings: Q3 2026 earnings tomorrow Oct 29 after close. Permanent disarm for today.",
+    "SPY": "BLOCKED — orb_breakout true but ORB window closed and FOMC cutoff passed; no valid entry setup"
+  },
+  "market_snapshot": {
+    "NVDA": {"last": 217.51, "vwap": 217.68, "above_vwap": false, "spread_bp": 55.4, "rel_volume": 0.74, "orb_breakout": false},
+    "NFLX": {"last": 61.74, "vwap": 61.84, "above_vwap": false, "spread_bp": 1.6, "rel_volume": 0.67, "orb_breakout": false},
+    "BAC":  {"last": 50.905, "vwap": 50.85, "above_vwap": true, "spread_bp": 2.0, "rel_volume": 0.60, "orb_breakout": false},
+    "INTC": {"last": 95.33, "vwap": 93.97, "above_vwap": true, "spread_bp": 3.2, "rel_volume": 0.72, "orb_breakout": false},
+    "SPY":  {"last": 772.26, "vwap": 770.97, "above_vwap": true, "spread_bp": 0.4, "rel_volume": 0.67, "orb_breakout": true},
+    "QQQ":  {"last": 724.72, "vwap": 722.28, "above_vwap": true, "spread_bp": 5.4, "rel_volume": 0.55, "orb_breakout": false}
+  },
+  "account": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "open_positions": 0,
+    "position_slots_remaining": 8
+  },
+  "orders_submitted": [],
+  "orders_cancelled": [],
+  "session_notes": "FOMC Rate Decision Day. Rate decision 2:00 PM ET (40 min ago). Press conference 2:30 PM ET (ongoing). All entries blocked. Expected zero-trade outcome — consistent with playbook FOMC Decision Day rule (confirmed 2026-09-16). Re-calibration day 2 of 2; gates functioning correctly. No new positions entered today. Session remains flat. Next action: flatten scheduler will handle 3:50/3:53/3:56 PM passes (nothing to flatten today). Postmarket at ~4:30 PM."
+}

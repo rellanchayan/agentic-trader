@@ -1,0 +1,63 @@
+{
+  "tick_time_et": "2026-10-28T10:41:14-04:00",
+  "minutes_since_open": 71,
+  "action": "none",
+  "reason": "Broad-tape unlock fails (SPY 770.36 < VWAP 770.61; NVDA 217.81 < VWAP 218.41). All candidates blocked: NVDA spread 76.4 bp >> 15 bp gate (re-arm deadline 11:00 AM ET); NFLX rel_vol 1.0x < 2.0x FOMC gate, above_vwap false; BAC rel_vol 1.17x < 2.0x FOMC gate, above_vwap false; INTC permanently disarmed (pre-earnings). VWAP reclaim and momentum disarmed (FOMC Decision Day / MIXED-RANGE). Zero qualifying setups.",
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "gate_outcomes": {
+    "broad_tape_unlock": {
+      "pass": false,
+      "spy_last": 770.36,
+      "spy_vwap": 770.61,
+      "spy_above_vwap": false,
+      "nvda_last": 217.805,
+      "nvda_vwap": 218.41,
+      "nvda_above_vwap": false
+    },
+    "NVDA": {
+      "armed": false,
+      "spread_bp": 76.4,
+      "spread_gate_bp": 15,
+      "spread_pass": false,
+      "rel_volume": 1.3,
+      "rel_volume_gate": 2.0,
+      "rel_volume_pass": false,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "Re-arm spread deadline 11:00 AM ET; 19 min remaining"
+    },
+    "NFLX": {
+      "armed": false,
+      "spread_bp": 3.2,
+      "spread_pass": true,
+      "rel_volume": 1.0,
+      "rel_volume_gate": 2.0,
+      "rel_volume_pass": false,
+      "above_vwap": false,
+      "orb_breakout": false
+    },
+    "BAC": {
+      "armed": false,
+      "spread_bp": 2.0,
+      "spread_pass": true,
+      "rel_volume": 1.17,
+      "rel_volume_gate": 2.0,
+      "rel_volume_pass": false,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "note": "FOMC-sensitive; would need flatten before 2:00 PM ET"
+    },
+    "INTC": {
+      "armed": false,
+      "note": "Permanently disarmed — pre-earnings (earnings Oct 29 after close)"
+    }
+  },
+  "session_notes": [
+    "FOMC Rate Decision Day — decision 2:00 PM ET, press conference 2:30 PM ET",
+    "No new entries permitted after 2:00 PM ET",
+    "Re-calibration day (session 2) — elevated gate standards in effect",
+    "Zero-trade outcome is expected and correct per playbook FOMC Decision Day rule"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "2026-10-28T13:40:35-04:00",
+  "minutes_since_open": 250,
+  "action": "none",
+  "reason": "FOMC rate decision in ~20 min (2:00 PM ET hard cutoff — no new entries). ORB window closed at 11:00 AM ET. VWAP reclaim + momentum DISARMED (FOMC Decision Day). Broad-tape unlock fails: NVDA 217.065 < VWAP 217.87. No name meets 2.0x elevated FOMC rel-vol gate (BAC 0.61x, NVDA 0.74x, NFLX 0.67x, QQQ 0.51x). INTC DISARMED pre-earnings Oct 29. No qualifying setups. Zero-trade outcome is structurally correct for today.",
+  "market_snapshot": {
+    "SPY": {"last": 770.95, "vwap": 770.9, "above_vwap": true, "rel_volume": 0.63},
+    "NVDA": {"last": 217.065, "vwap": 217.87, "above_vwap": false, "rel_volume": 0.74, "spread_bp": 9.7},
+    "NFLX": {"last": 61.765, "vwap": 61.88, "above_vwap": false, "rel_volume": 0.67},
+    "BAC": {"last": 51.05, "vwap": 50.83, "above_vwap": true, "orb_breakout": true, "rel_volume": 0.61},
+    "INTC": {"status": "disarmed_pre_earnings"},
+    "QQQ": {"last": 721.99, "vwap": 722.18, "above_vwap": false, "rel_volume": 0.51}
+  },
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "gate_checks": {
+    "fomc_cutoff_imminent": true,
+    "orb_window_open": false,
+    "vwap_reclaim_armed": false,
+    "momentum_armed": false,
+    "broad_tape_unlock": false,
+    "any_name_meets_fomc_rel_vol_2x": false
+  }
+}

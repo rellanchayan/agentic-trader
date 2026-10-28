@@ -1,0 +1,90 @@
+{
+  "tick_time_et": "2026-10-28T11:40:31-04:00",
+  "tick_time_utc": "2026-10-28T15:40:31Z",
+  "minutes_since_open": 130,
+  "action": "none",
+  "positions_managed": [],
+  "new_entries_considered": [],
+  "decision_summary": "NO TRADE — broad-tape unlock fails and no name meets the elevated 2.0x FOMC rel_vol gate",
+  "gate_checks": {
+    "broad_tape_unlock": {
+      "passed": false,
+      "spy_above_vwap": true,
+      "nvda_above_vwap": false,
+      "spy_last": 771.47,
+      "spy_vwap": 770.66,
+      "nvda_last": 217.645,
+      "nvda_vwap": 218.24,
+      "note": "NVDA is $0.595 below VWAP — broad-tape unlock blocked until NVDA reclaims 218.24"
+    },
+    "fomc_no_entry_cutoff_reached": false,
+    "in_flatten_window": false,
+    "loss_budget_ok": true,
+    "slots_available": 8,
+    "trades_remaining": 20
+  },
+  "name_evaluations": {
+    "NVDA": {
+      "armed": true,
+      "setup": "ORB",
+      "orb_breakout": false,
+      "rel_volume": 0.95,
+      "rel_vol_gate": 2.0,
+      "rel_vol_pass": false,
+      "above_vwap": false,
+      "spread_bp": 1.4,
+      "spread_pass": true,
+      "broad_tape_unlock_pass": false,
+      "verdict": "BLOCKED — broad-tape unlock fails (NVDA itself below VWAP), rel_vol 0.95x < 2.0x gate, no ORB breakout"
+    },
+    "NFLX": {
+      "armed": true,
+      "setup": "ORB",
+      "orb_breakout": false,
+      "rel_volume": 0.78,
+      "rel_vol_gate": 2.0,
+      "rel_vol_pass": false,
+      "above_vwap": false,
+      "spread_bp": 1.6,
+      "spread_pass": true,
+      "broad_tape_unlock_pass": false,
+      "verdict": "BLOCKED — broad-tape unlock fails, rel_vol 0.78x < 2.0x gate, no ORB breakout, below VWAP"
+    },
+    "BAC": {
+      "armed": "marginal",
+      "setup": "ORB",
+      "orb_breakout": false,
+      "rel_volume": 0.92,
+      "rel_vol_gate": 2.0,
+      "rel_vol_pass": false,
+      "above_vwap": true,
+      "spread_bp": 2.0,
+      "spread_pass": true,
+      "broad_tape_unlock_pass": false,
+      "verdict": "BLOCKED — broad-tape unlock fails, rel_vol 0.92x < 2.0x gate, no ORB breakout"
+    },
+    "INTC": {
+      "armed": false,
+      "reason": "DISARMED — pre-earnings (Q3 report Oct 29 after close), permanent disarm for today regardless of any gate"
+    }
+  },
+  "setups_status": {
+    "orb": "blocked (broad-tape unlock + rel_vol)",
+    "vwap_reclaim": "DISARMED (FOMC Decision Day / MIXED-RANGE regime)",
+    "momentum": "DISARMED (FOMC Decision Day / MIXED-RANGE regime)",
+    "mean_reversion": "not evaluated (not a range-dominant day with macro binary overhead)"
+  },
+  "market_snapshot": {
+    "SPY": {"last": 771.47, "vwap": 770.66, "above_vwap": true, "rel_volume": 0.84},
+    "NVDA": {"last": 217.645, "vwap": 218.24, "above_vwap": false, "rel_volume": 0.95, "orb_high": 219.915},
+    "NFLX": {"last": 61.74, "vwap": 61.93, "above_vwap": false, "rel_volume": 0.78, "orb_high": 62.52},
+    "BAC": {"last": 50.865, "vwap": 50.77, "above_vwap": true, "rel_volume": 0.92, "orb_high": 50.98},
+    "INTC": {"last": 93.98, "vwap": 93.84, "above_vwap": true, "rel_volume": 0.89}
+  },
+  "day_pnl": 0.0,
+  "loss_budget_remaining": 3000.0,
+  "trades_today": 0,
+  "open_positions": 0,
+  "fomc_notes": "FOMC rate decision at 2:00 PM ET — no new entries permitted after 2:00 PM ET. All positions must be flat before 2:30 PM ET press conference. A zero-trade session is the structurally correct outcome for FOMC Decision Day.",
+  "recalibration_notes": "Re-calibration Day 2 in effect: max $5,000 per trade, textbook gate confirmation required, no exceptions."
+}

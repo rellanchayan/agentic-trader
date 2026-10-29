@@ -1,0 +1,19 @@
+{
+  "tick_time_et": "2026-10-29T12:41:34-04:00",
+  "tick_min": 191,
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT+gate_failures",
+  "precondition_1": "HALT — CronList empty, flatten scheduler unconfirmed",
+  "gate_outcomes": {
+    "INTC": "DISARMED (earnings tonight)",
+    "NVDA": "ORB_window_expired(191min>90min) + rel_vol_1.16x<2.0x_MIXED_RANGE_ORB_min + below_VWAP($213.515<$213.61)",
+    "BAC": "rel_vol_0.9x<1.5x_gate + below_VWAP($51.615<$51.79)",
+    "SPY": "at_VWAP($769.03) + rel_vol_0.95x",
+    "broad_tape_unlock": "FAIL — NVDA below VWAP"
+  },
+  "positions": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "note": "All names fail independently. Even if PRECONDITION_1 cleared: ORB window expired for NVDA, all rel_vol below gate, broad-tape unlock fails."
+}

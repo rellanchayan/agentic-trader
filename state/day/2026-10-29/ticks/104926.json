@@ -1,0 +1,40 @@
+{
+  "tick_time_et": "2026-10-29T10:49:26-04:00",
+  "minutes_since_open": 79,
+  "action": "no_trade",
+  "positions_managed": [],
+  "candidates_evaluated": [
+    {
+      "ticker": "INTC",
+      "status": "DISARMED",
+      "reason": "Pre-earnings disarm — INTC Q3 2026 earnings after close tonight. Non-negotiable full-session disarm."
+    },
+    {
+      "ticker": "NVDA",
+      "status": "BLOCKED",
+      "gate_failed": "broad_tape_unlock",
+      "detail": "NVDA $213.26 < VWAP $213.45 (below VWAP). SPY $768.205 < VWAP $768.79 (below VWAP). Both required above VWAP for ORB. rel_vol 1.71x (passes 1.5x gate but broad-tape unlock fails first)."
+    },
+    {
+      "ticker": "BAC",
+      "status": "BLOCKED",
+      "gate_failed": "rel_volume",
+      "detail": "BAC above VWAP ($51.945 > $51.77, orb_breakout true). However rel_vol 1.48x < 1.5x minimum gate. VWAP reclaim two-tick rule: this would be Tick 1, but rel_vol gate fails before two-tick evaluation.",
+      "spread_bp": 1.9,
+      "rel_vol": 1.48,
+      "above_vwap": true
+    },
+    {
+      "ticker": "SPY",
+      "status": "BLOCKED",
+      "gate_failed": "broad_tape_unlock",
+      "detail": "SPY $768.205 < VWAP $768.79. Fallback only — not evaluable while broad-tape unlock fails."
+    }
+  ],
+  "precondition_1_status": "HALT",
+  "precondition_1_detail": "CronList empty — flatten scheduler (3:50/3:53/3:56 PM ET) not confirmed running. Day plan Session 3 acknowledgment present but plan explicitly requires independent flatten scheduler confirmation. PRECONDITION #1 HALT in effect.",
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_today": 0,
+  "equity": 999641.65
+}

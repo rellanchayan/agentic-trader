@@ -1,0 +1,22 @@
+{
+  "tick_time_et": "2026-10-29T13:40:32-04:00",
+  "tick_min": 250,
+  "verdict": "no_trade",
+  "precondition_1": "HALT — flatten scheduler not running (CronList empty)",
+  "positions_checked": [],
+  "new_entry_evaluation": {
+    "intc": "DISARMED(earnings tonight — mandatory full-session disarm)",
+    "nvda": "ORB_window_expired(250min>90min)+rel_vol_0.96x<2.0x_MIXED_RANGE+below_VWAP($213.49_vs_$213.59)",
+    "bac": "below_VWAP($51.555_vs_$51.77,$0.215_below)+rel_vol_0.79x<1.5x_gate",
+    "spy": "below_VWAP($768.17_vs_$769.00)",
+    "broad_tape_unlock": "FAIL(NVDA_below_VWAP+SPY_below_VWAP)"
+  },
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT+all_gate_failures: no qualifying setup on any name at 250min",
+  "account_state": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "positions": 0,
+    "trades_today": 0
+  }
+}

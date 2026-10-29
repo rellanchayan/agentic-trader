@@ -1,0 +1,30 @@
+{
+  "tick_time_et": "2026-10-29T14:39:51-04:00",
+  "tick_min": 309,
+  "action": "no_trade",
+  "reason": "PRECONDITION_1_HALT+gate_failures",
+  "precondition_1": "HALT — flatten scheduler (CronList) not confirmed live; all previous ticks today blocked for same reason",
+  "gate_evaluation": {
+    "INTC": "DISARMED — Q3 2026 earnings after close tonight; no entry regardless of any gate",
+    "NVDA": "FAIL — ORB window expired (309 min > 90 min max); rel_vol 0.89x < 2.0x MIXED/RANGE ORB minimum; below VWAP ($212.50 < $213.49); NVDA VWAP reclaim OFF per plan (INTC earnings sector uncertainty)",
+    "BAC": "FAIL — rel_vol 0.79x < 1.5x minimum gate; below VWAP ($51.34 < $51.70)",
+    "SPY": "FAIL — below VWAP ($766.99 < $768.79)",
+    "broad_tape_unlock": "FAIL — NVDA and SPY both below VWAP; no ORB or momentum entries permitted"
+  },
+  "market_snapshot": {
+    "BAC": {"last": 51.34, "vwap": 51.7, "rel_volume": 0.79, "above_vwap": false, "spread_bp": 1.9},
+    "INTC": {"last": 90.96, "vwap": 92.33, "rel_volume": 0.83, "above_vwap": false, "spread_bp": 2.2},
+    "NVDA": {"last": 212.495, "vwap": 213.49, "rel_volume": 0.89, "above_vwap": false, "spread_bp": 0.9},
+    "SPY": {"last": 766.99, "vwap": 768.79, "rel_volume": 0.74, "above_vwap": false, "spread_bp": 0.9}
+  },
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "loss_budget_remaining": 3000.0,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

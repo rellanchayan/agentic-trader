@@ -1,0 +1,30 @@
+{
+  "tick_time_et": "2026-10-29T15:39:46-04:00",
+  "tick_min": 369,
+  "action": "no_trade",
+  "reason": "past_no_new_entries_cutoff_15:30+PRECONDITION_1_HALT+all_gates_fail",
+  "gate_results": {
+    "past_no_new_entries": true,
+    "in_flatten_window": false,
+    "precondition_1_halt": true,
+    "positions_open": 0,
+    "open_orders": 0
+  },
+  "name_status": {
+    "INTC": "DISARMED(pre-earnings_Q3_tonight)",
+    "NVDA": "past_entry_cutoff; rel_vol=0.83x < 2.0x MIXED/RANGE ORB min; below_VWAP($213.02 < $213.42); ORB_window_expired(369min)",
+    "BAC": "past_entry_cutoff; rel_vol=0.80x < 1.5x standard gate; below_VWAP($51.34 < $51.63)",
+    "SPY": "below_VWAP($768.28 < $768.64); rel_vol=0.73x",
+    "broad_tape_unlock": "FAIL(all names below VWAP)"
+  },
+  "decision": "NO TRADE — past 3:30 PM no-new-entries cutoff, flat account, all names below VWAP with substandard relative volume. PRECONDITION #1 HALT (flatten scheduler not confirmed) persisted all day. Zero trades executed today.",
+  "account_snapshot": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "positions_open": 0
+  },
+  "session_summary": "Full no-trade day. PRECONDITION_1_HALT (flatten scheduler not confirmed live) blocked entries at every tick. Individual gate failures also present throughout: names consistently below VWAP with low relative volume on a MIXED/RANGE GDP+PCE day with INTC earnings overhang. Flatten window opens at 15:50 but no positions to flatten. Day ends flat at $0.00 P&L."
+}

@@ -1,0 +1,50 @@
+{
+  "time_et": "2026-10-29T11:45:01-04:00",
+  "tick_min": 135,
+  "action": "no_trade",
+  "precondition_1": "HALT — CronList empty, flatten scheduler not confirmed live",
+  "gate_results": {
+    "INTC": {
+      "status": "DISARMED",
+      "reason": "Q3 earnings after close tonight — mandatory full-session disarm"
+    },
+    "NVDA": {
+      "status": "BLOCKED",
+      "above_vwap": true,
+      "last": 214.11,
+      "vwap": 213.58,
+      "rel_volume": 1.35,
+      "rel_vol_gate": "FAIL — 1.35x < 2.0x MIXED/RANGE ORB minimum",
+      "orb_window": "EXPIRED — 135 min since open exceeds 90-min entry window rule",
+      "spread_bp": 1.4,
+      "orb_high": 215.32,
+      "orb_breakout": false
+    },
+    "BAC": {
+      "status": "BLOCKED",
+      "above_vwap": true,
+      "last": 51.87,
+      "vwap": 51.80,
+      "rel_volume": 1.07,
+      "rel_vol_gate": "FAIL — 1.07x < 1.5x minimum gate",
+      "two_tick_clock": "NOT STARTED — rel_vol gate fails first",
+      "spread_bp": 1.9,
+      "orb_high": 51.895
+    },
+    "SPY": {
+      "status": "REFERENCE_ONLY",
+      "above_vwap": true,
+      "last": 769.88,
+      "vwap": 768.94,
+      "orb_breakout": true,
+      "rel_volume": 1.08,
+      "note": "rel_vol 1.08x < 1.5x, SPY is fallback-tier only"
+    }
+  },
+  "broad_tape_unlock": "PASS — both NVDA and SPY above VWAP (improvement from prior tick)",
+  "positions": 0,
+  "open_orders": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "summary": "No trade. PRECONDITION #1 HALT (CronList empty) is the primary stop. All name-level gates also fail independently: INTC disarmed, NVDA ORB window expired + rel_vol too low, BAC rel_vol too low. Broad-tape unlock satisfied for the first time today but irrelevant with no passing candidate."
+}

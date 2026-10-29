@@ -1,0 +1,58 @@
+{
+  "_meta": {
+    "date": "2026-10-29",
+    "generated_utc": "2026-10-29T13:50:36.008503+00:00",
+    "source": "watchlist_build",
+    "candidates_considered": 4,
+    "top": 4,
+    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+  },
+  "INTC": {
+    "sector": "technology",
+    "prev_close": 91.92,
+    "atr_day": 4.96,
+    "avg_vol_10d": 2635048,
+    "premarket_price": 91.78,
+    "gap_pct": -0.0015,
+    "spread_bp": 4.4,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,635,048 sh/day); -0.1% gap"
+  },
+  "NVDA": {
+    "sector": "technology",
+    "prev_close": 213.15,
+    "atr_day": 5.88,
+    "avg_vol_10d": 2756476,
+    "premarket_price": 213.03,
+    "gap_pct": -0.0005,
+    "spread_bp": 21.1,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,756,476 sh/day); -0.1% gap"
+  },
+  "NFLX": {
+    "sector": "communication",
+    "prev_close": 61.85,
+    "atr_day": 2.08,
+    "avg_vol_10d": 2461555,
+    "premarket_price": 61.87,
+    "gap_pct": 0.0002,
+    "spread_bp": 3.2,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,461,555 sh/day); +0.0% gap"
+  },
+  "BAC": {
+    "sector": "financials",
+    "prev_close": 51.7,
+    "atr_day": 1.22,
+    "avg_vol_10d": 2258673,
+    "premarket_price": 51.72,
+    "gap_pct": 0.0004,
+    "spread_bp": 1.9,
+    "orb_high": null,
+    "orb_low": null,
+    "note": "liquid (2,258,673 sh/day); +0.0% gap"
+  }
+}

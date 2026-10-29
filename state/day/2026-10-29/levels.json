@@ -2,57 +2,100 @@
   "_meta": {
     "date": "2026-10-29",
     "generated_utc": "2026-10-29T13:50:36.008503+00:00",
-    "source": "watchlist_build",
-    "candidates_considered": 4,
-    "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "screened_utc": "2026-10-29T13:53:00.000000+00:00",
+    "source": "day_screener",
+    "candidates_considered": 5,
+    "names_kept": 4,
+    "note": "ORB levels live (21 min into session). NFLX dropped: rel_volume 1.39x below min 1.5x. SPY added as market context."
   },
-  "INTC": {
-    "sector": "technology",
-    "prev_close": 91.92,
-    "atr_day": 4.96,
-    "avg_vol_10d": 2635048,
-    "premarket_price": 91.78,
-    "gap_pct": -0.0015,
-    "spread_bp": 4.4,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,635,048 sh/day); -0.1% gap"
-  },
-  "NVDA": {
-    "sector": "technology",
-    "prev_close": 213.15,
-    "atr_day": 5.88,
-    "avg_vol_10d": 2756476,
-    "premarket_price": 213.03,
-    "gap_pct": -0.0005,
-    "spread_bp": 21.1,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,756,476 sh/day); -0.1% gap"
-  },
-  "NFLX": {
-    "sector": "communication",
-    "prev_close": 61.85,
-    "atr_day": 2.08,
-    "avg_vol_10d": 2461555,
-    "premarket_price": 61.87,
-    "gap_pct": 0.0002,
-    "spread_bp": 3.2,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,461,555 sh/day); +0.0% gap"
-  },
-  "BAC": {
-    "sector": "financials",
-    "prev_close": 51.7,
-    "atr_day": 1.22,
-    "avg_vol_10d": 2258673,
-    "premarket_price": 51.72,
-    "gap_pct": 0.0004,
-    "spread_bp": 1.9,
-    "orb_high": null,
-    "orb_low": null,
-    "note": "liquid (2,258,673 sh/day); +0.0% gap"
+  "names": [
+    {
+      "ticker": "NVDA",
+      "sector": "technology",
+      "prev_close": 213.15,
+      "atr_day": 5.88,
+      "avg_vol_10d": 2756476,
+      "spread_bp": 1.9,
+      "rel_volume": 2.97,
+      "direction_bias": "neutral",
+      "key_levels": {
+        "support": 212.71,
+        "resistance": 215.32,
+        "orb_high": 215.32,
+        "orb_low": 212.71,
+        "vwap": 213.66,
+        "secondary_support": 210.22,
+        "secondary_resistance": 217.74
+      },
+      "note": "Most liquid name today (rel_vol 2.97x, 441k shares in 21 min). Spread 1.9bp tight. ORB 212.71-215.32. Below VWAP 213.66. Multi-day support at 212.65-212.71 (Oct 26 low / today ORB low). Resistance: ORB high 215.32, then Oct 26 high 217.74. Watch for ORB breakout above 215.32 (long) or break below 212.71 (short). Broad market down today adds mild bearish tilt."
+    },
+    {
+      "ticker": "INTC",
+      "sector": "technology",
+      "prev_close": 91.92,
+      "atr_day": 4.96,
+      "avg_vol_10d": 2635048,
+      "spread_bp": 2.2,
+      "rel_volume": 2.07,
+      "direction_bias": "bearish",
+      "key_levels": {
+        "support": 91.67,
+        "resistance": 93.47,
+        "orb_high": 93.47,
+        "orb_low": 91.81,
+        "vwap": 92.55,
+        "secondary_support": 90.53,
+        "secondary_resistance": 95.00
+      },
+      "note": "Gap-down day. Bars show Oct 28 closed ~95.53 but today opened at 93.00 and fell to today's low 91.67. Currently 91.83 = pinned at ORB low. Well below VWAP 92.55. ATR $4.96 = wide mover. Rel_vol 2.07x. Bearish bias: break below ORB low 91.81 / today low 91.67 targets 90.53 area. Recovery above VWAP 92.55 required to flip neutral. Do not fade the gap blindly."
+    },
+    {
+      "ticker": "BAC",
+      "sector": "financials",
+      "prev_close": 51.70,
+      "atr_day": 1.22,
+      "avg_vol_10d": 2258673,
+      "spread_bp": 1.9,
+      "rel_volume": 2.8,
+      "direction_bias": "neutral_bullish",
+      "key_levels": {
+        "support": 51.505,
+        "resistance": 51.895,
+        "orb_high": 51.895,
+        "orb_low": 51.505,
+        "vwap": 51.74,
+        "secondary_support": 51.21,
+        "secondary_resistance": 52.00
+      },
+      "note": "Gapped UP ~1.6% from Oct 28 bar close (50.88) to today open 51.70, while SPY gapped down. High rel_vol 2.8x. Spread 1.9bp. Small ATR $1.22 means targets are tight (~$0.50-1.00/share). ORB 51.505-51.895. Holding near VWAP 51.74. Bullish bias (held gap). Resistance: ORB high 51.895 then 52.00. Support: ORB low 51.505; gap-fill target 51.21 (Oct 28 high) if it fails."
+    },
+    {
+      "ticker": "SPY",
+      "sector": "broad_market_etf",
+      "prev_close": 772.28,
+      "atr_day": null,
+      "avg_vol_10d": null,
+      "spread_bp": 1.2,
+      "rel_volume": null,
+      "direction_bias": "bearish",
+      "key_levels": {
+        "support": 767.31,
+        "resistance": 769.39,
+        "orb_high": 769.39,
+        "orb_low": 767.31,
+        "vwap": null,
+        "secondary_support": 765.21,
+        "secondary_resistance": 772.28
+      },
+      "note": "MARKET CONTEXT ONLY - not a primary trading target. Gapped down -0.55% from prev close 772.28; opened 768.79. ORB 767.31-769.39. Bearish day overall. Support: ORB low 767.31, then Oct 27 low 765.21. Resistance: ORB high 769.39, then prev close 772.28. Downside pressure on all names while SPY stays below 769.39."
+    }
+  ],
+  "dropped": {
+    "NFLX": {
+      "reason": "rel_volume 1.39x below configured minimum of 1.5x; no gap; not moving enough today",
+      "prev_close": 61.85,
+      "spread_bp": 3.2,
+      "rel_volume_at_screen": 1.39
+    }
   }
 }

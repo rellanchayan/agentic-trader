@@ -1,0 +1,57 @@
+{
+  "tick_time_et": "14:39",
+  "tick_timestamp_utc": "2026-10-30T18:39:42Z",
+  "action": "HOLD",
+  "decision_summary": "No tradeable setup. Broad-tape unlock NOT active (NVDA below VWAP). All entry conditions fail.",
+  "positions_managed": [],
+  "orders_cancelled": [],
+  "trade_considered": null,
+  "gates_checked": {
+    "no_positions_to_manage": true,
+    "broad_tape_unlock": {
+      "passed": false,
+      "reason": "NVDA at $201.48 below VWAP $205.28 (gap: -$3.80, deepening from -$2.76 at prior tick)"
+    },
+    "orb_window_open": {
+      "passed": false,
+      "reason": "ORB window closed past 11:00 AM ET"
+    },
+    "nflx_setup": {
+      "above_vwap": false,
+      "last": 61.985,
+      "vwap": 62.35,
+      "rel_vol": 0.72,
+      "spread_bp": 1.6,
+      "result": "NO SETUP — below VWAP, rel_vol 0.72x far below 2.0x gate"
+    },
+    "bac_setup": {
+      "above_vwap": false,
+      "last": 49.91,
+      "vwap": 50.19,
+      "rel_vol": 1.69,
+      "spread_bp": 2.0,
+      "result": "NO SETUP — below VWAP, rel_vol 1.69x below 2.0x gate"
+    },
+    "intc_status": "PERMANENTLY DISARMED (earnings gap -26.2%)",
+    "nvda_status": "DISARMED (semiconductor sector disarm)",
+    "clock_flags": {
+      "past_no_new_entries": false,
+      "in_flatten_window": false
+    }
+  },
+  "market_snapshot": {
+    "NFLX": {"last": 61.985, "vwap": 62.35, "spread_bp": 1.6, "rel_volume": 0.72, "above_vwap": false},
+    "BAC": {"last": 49.91, "vwap": 50.19, "spread_bp": 2.0, "rel_volume": 1.69, "above_vwap": false},
+    "NVDA": {"last": 201.48, "vwap": 205.28, "spread_bp": 2.0, "rel_volume": 1.4, "above_vwap": false},
+    "INTC": {"last": 63.43, "vwap": 65.33, "spread_bp": 3.2, "rel_volume": 4.11, "above_vwap": false}
+  },
+  "account_state": {
+    "equity": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0,
+    "trades_today": 0,
+    "trades_remaining": 20,
+    "positions_open": 0,
+    "position_slots_remaining": 8
+  }
+}

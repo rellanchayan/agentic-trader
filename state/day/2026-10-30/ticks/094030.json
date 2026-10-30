@@ -1,0 +1,28 @@
+{
+  "tick_time_et": "09:40:30",
+  "tick_time_utc": "2026-10-30T13:40:30Z",
+  "minutes_since_open": 10,
+  "action": "HOLD",
+  "trades_submitted": 0,
+  "positions_managed": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_used_today": 0,
+  "position_slots_used": 0,
+  "reasoning": {
+    "time_gate": "Pre-9:45 AM ET gate active — no entries until 9:45 AM. Currently 9:40 AM (10 min after open). ORB window needs to form first.",
+    "broad_tape_unlock": "FAILED — NVDA below VWAP (last 206.78 vs VWAP 206.93). This blocks all ORB and momentum entries on all names per day plan requirement.",
+    "positions_managed": "No open positions. Nothing to exit or protect.",
+    "INTC": "PERMANENTLY DISARMED. Post-earnings -26.2% gap. Spread 31.8 bp. Not evaluated.",
+    "NVDA": "DISARMED (semiconductor sector disarm). Also below VWAP, which triggers broad-tape unlock failure for all names.",
+    "NFLX": "PRIMARY candidate. Spread 3.2 bp (clean). But: rel_volume 1.31x (today's elevated gate requires 2.0x — FAILS). Also below VWAP (61.81 vs 62.34). No breakout above ORB high (62.965). Pre-9:45 gate also blocks entry. No setup.",
+    "BAC": "SECONDARY candidate. Spread tightened to 2.0 bp (gate condition met for re-arm). rel_volume 4.23x (exceeds 2.0x gate). But: below VWAP (50.46 vs 50.55), no ORB breakout (50.46 vs ORB high 51.08). Pre-9:45 gate blocks entry. Priority is NFLX first per day plan. No setup.",
+    "conclusion": "Zero setups available at this tick. All blockers are valid per day plan rules. Zero-trade outcome at 9:40 is correct. Re-evaluate at 9:42 whether broad-tape unlock fires and if NFLX rel_volume approaches 2.0x."
+  },
+  "market_snapshot": {
+    "NFLX": {"last": 61.81, "vwap": 62.34, "rel_volume": 1.31, "spread_bp": 3.2, "above_vwap": false, "orb_high": 62.965, "orb_breakout": false},
+    "BAC": {"last": 50.46, "vwap": 50.55, "rel_volume": 4.23, "spread_bp": 2.0, "above_vwap": false, "orb_high": 51.08, "orb_breakout": false},
+    "NVDA": {"last": 206.78, "vwap": 206.93, "rel_volume": 3.6, "spread_bp": 2.4, "above_vwap": false},
+    "INTC": {"last": 66.01, "vwap": 66.36, "rel_volume": 26.41, "spread_bp": 31.8, "disarmed": true}
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "tick_time": "13:39",
+  "timestamp_et": "2026-10-30T13:39:57-04:00",
+  "action": "HOLD",
+  "reason": "Broad-tape unlock NOT active: NVDA at $203.15 is below VWAP $205.91 (gap of -$2.76, widening from prior ticks). All ORB and momentum entries blocked. ORB window closed (past 11:00 AM ET). No positions to manage.",
+  "gate_checks": {
+    "halt_file": "absent",
+    "day_stop": "not tripped",
+    "market_open": true,
+    "broad_tape_unlock": false,
+    "broad_tape_detail": "NVDA $203.15 below VWAP $205.91 — unlock requires NVDA above VWAP",
+    "orb_window_open": false,
+    "past_no_new_entries": false
+  },
+  "name_analysis": {
+    "INTC": {
+      "status": "PERMANENTLY_DISARMED",
+      "note": "Post-earnings gap -26.2%; disarmed for full session unconditionally"
+    },
+    "NVDA": {
+      "status": "SECTOR_DISARMED",
+      "price": 203.15,
+      "vwap": 205.91,
+      "above_vwap": false,
+      "rel_volume": 1.47,
+      "spread_bp": 1.0,
+      "note": "Below VWAP by $2.76; semiconductor sector disarm in effect; also blocks broad-tape unlock"
+    },
+    "NFLX": {
+      "status": "NO_SETUP",
+      "price": 62.095,
+      "vwap": 62.43,
+      "above_vwap": false,
+      "rel_volume": 0.74,
+      "spread_bp": 1.6,
+      "orb_high": 62.965,
+      "orb_low": 61.69,
+      "note": "Below VWAP ($62.095 vs $62.43); rel_volume 0.74x far below 2.0x gate; no VWAP reclaim in progress; broad-tape unlock blocked"
+    },
+    "BAC": {
+      "status": "NO_SETUP",
+      "price": 50.125,
+      "vwap": 50.22,
+      "above_vwap": false,
+      "rel_volume": 1.86,
+      "spread_bp": 2.0,
+      "orb_high": 51.08,
+      "orb_low": 50.31,
+      "note": "Below VWAP ($50.125 vs $50.22); rel_volume 1.86x below 2.0x gate; spread 2.0 bp clean; no setup active"
+    }
+  },
+  "positions_managed": [],
+  "new_entry_considered": null,
+  "trade_file_written": null,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "positions_open": 0,
+  "trades_used": 0,
+  "trades_remaining": 20
+}

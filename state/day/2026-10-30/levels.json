@@ -2,57 +2,70 @@
   "_meta": {
     "date": "2026-10-30",
     "generated_utc": "2026-10-30T13:29:42.372863+00:00",
-    "source": "watchlist_build",
+    "screened_by": "day-screener",
+    "source": "watchlist_build + day-screener",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Pre-market screen finalized by day-screener. ORB levels fill in live after the open. Support/resistance levels are derived from ATR and round numbers — no historical chart data was available to confirm prior pivot levels; treat as approximate. No additional names (SPY, QQQ, IWM, DIA) were added because the screen returned no quote data for them; honesty rule prohibits padding the list."
   },
   "INTC": {
     "sector": "technology",
+    "status": "PERMANENTLY_DISARMED",
     "prev_close": 92.08,
     "atr_day": 5.02,
     "avg_vol_10d": 2888906,
     "premarket_price": 67.94,
     "gap_pct": -0.2622,
     "spread_bp": 1011.1,
+    "support": [65.00, 63.00],
+    "resistance": [70.00, 75.00],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,888,906 sh/day); -26.2% gap"
+    "note": "PERMANENTLY DISARMED — post-earnings binary event. Q3 non-GAAP EPS $0.52 beat, but Q4 guidance $0.25 EPS vs $0.38 consensus drove -26.2% gap from $92.08 prev close to $67.94 premarket. Premarket spread 1,011 bp confirms untradeable. The post-earnings ATR will be far wider than the pre-earnings $5.02/day figure — all historical levels are unreliable after a gap of this magnitude. Support $65/$63 and resistance $70/$75 are round-number estimates only. No entry of any kind (ORB, VWAP reclaim, gap fade) — disarm is unconditional for the full session."
   },
   "NVDA": {
     "sector": "technology",
+    "status": "DISARMED_SECTOR",
     "prev_close": 213.7,
     "atr_day": 5.92,
     "avg_vol_10d": 2975018,
     "premarket_price": 208.33,
     "gap_pct": -0.0251,
     "spread_bp": 1004.2,
+    "support": [205.00, 202.00],
+    "resistance": [210.00, 213.70],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,975,018 sh/day); -2.5% gap"
+    "note": "DISARMED — semiconductor sector disarm (sympathy gap from INTC -26.2% earnings collapse). Premarket spread 1,004 bp. NVDA is also the broad-tape unlock bellwether: if NVDA stays below VWAP, ORB and momentum entries on ALL names are blocked for the session. Conditional re-arm requires both spread <15 bp AND confirmed sector stabilization (multiple semiconductor names above VWAP simultaneously) by 11:00 AM ET — probability is very low given INTC magnitude. Support $205 (round) and $202 (1-ATR below premarket: $208.33 - $5.92 = $202.41). Resistance $210 (round) and $213.70 (prev close). ATR $5.92 is pre-disarm and may understate intraday range today."
   },
   "NFLX": {
     "sector": "communication",
+    "status": "ARMED_PRIMARY",
     "prev_close": 62.08,
     "atr_day": 2.08,
     "avg_vol_10d": 2668772,
     "premarket_price": 62.47,
     "gap_pct": 0.0063,
     "spread_bp": 9.6,
+    "support": [62.00, 60.00],
+    "resistance": [63.00, 64.16],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,668,772 sh/day); +0.6% gap"
+    "note": "ARMED PRIMARY — communication sector, isolated from semiconductor selling. Premarket spread 9.6 bp (well within gate). Gap +0.6% from $62.08 with no identified catalyst; Q3 2026 earnings fully behind it (reported ~Oct 20). ORB setup: valid only if rel-vol >= 2.0x, spread < 15 bp at first tick, broad-tape unlock passes (SPY + NVDA both above VWAP), 2:1 R/R verified at entry, and no entry before 9:45 AM ET. ORB range on MIXED/RANGE day estimated $0.30-0.60 wide — verify 2:1 R/R clears before entering; do not force the trade if the range is too tight. VWAP reclaim: two-tick confirmation required (two ticks 2+ min apart above VWAP) plus R/R check at Tick 2. Support $62.00 (near prev close, round) and $60.00 (1-ATR below prev close: $62.08 - $2.08 = $60.00). Resistance $63.00 (round) and $64.16 (1-ATR above prev close: $62.08 + $2.08 = $64.16). Re-calibration session: max $5,000 per trade."
   },
   "BAC": {
     "sector": "financials",
+    "status": "DISARMED_SPREAD_CONDITIONAL",
     "prev_close": 51.14,
     "atr_day": 1.23,
     "avg_vol_10d": 2475835,
     "premarket_price": 51.2,
     "gap_pct": 0.0012,
     "spread_bp": 1007.8,
+    "support": [51.00, 50.00],
+    "resistance": [52.00, 52.37],
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,475,835 sh/day); +0.1% gap"
+    "note": "SECONDARY — disarmed premarket due to wide spread (1,007.8 bp). Re-arm protocol: if live spread tightens to <15 bp by 11:00 AM ET, evaluate 2:1 R/R before arming; if spread has not tightened by 11:00 AM ET, disarm for the full session. ATR $1.23 on $51.20 = ~2.4% daily range; ORB range on MIXED/RANGE day estimated $0.10-0.20 wide — 2:1 R/R math may not clear even after re-arm, verify at entry. Priority: evaluate NFLX first; BAC only after NFLX has been assessed and passed or skipped. Verify price, VWAP, spread, and rel_vol are all populated at each tick before evaluating (data-gap incident documented 2026-09-18). Support $51.00 (round, near prev close) and $50.00 (round, ~1-ATR below: $51.14 - $1.23 = $49.91). Resistance $52.00 (round) and $52.37 (1-ATR above prev close: $51.14 + $1.23 = $52.37). Re-calibration session: max $5,000 per trade."
   }
 }

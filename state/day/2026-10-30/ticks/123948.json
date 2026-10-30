@@ -1,0 +1,41 @@
+{
+  "tick_time_et": "12:39",
+  "timestamp_et": "2026-10-30T12:39:48-04:00",
+  "action": "HOLD",
+  "reason": "Broad-tape unlock NOT active: NVDA below VWAP ($204.46 vs $206.31). All entries blocked.",
+  "detail": {
+    "broad_tape_unlock": false,
+    "nvda_price": 204.46,
+    "nvda_vwap": 206.31,
+    "nvda_vs_vwap": -1.85,
+    "orb_window_open": false,
+    "orb_window_closed_reason": "past 11:00 AM ET deadline",
+    "nflx": {
+      "last": 62.295,
+      "vwap": 62.50,
+      "above_vwap": false,
+      "rel_volume": 0.77,
+      "spread_bp": 1.6,
+      "vwap_reclaim_tick1_set": false,
+      "notes": "Below VWAP, rel_vol 0.77x far below 2.0x gate. No reclaim in progress."
+    },
+    "bac": {
+      "last": 50.19,
+      "vwap": 50.28,
+      "above_vwap": false,
+      "rel_volume": 1.85,
+      "spread_bp": 2.0,
+      "vwap_reclaim_tick1_set": false,
+      "notes": "Below VWAP, rel_vol 1.85x below 2.0x gate. Spread passed. Secondary candidate only."
+    },
+    "intc_status": "PERMANENTLY_DISARMED",
+    "nvda_status": "SECTOR_DISARMED",
+    "recalibration_rules_in_effect": true
+  },
+  "positions_managed": [],
+  "orders_submitted": [],
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_used": 0,
+  "equity": 999641.65
+}

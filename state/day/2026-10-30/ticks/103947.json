@@ -1,0 +1,29 @@
+{
+  "tick_time_et": "10:39:47",
+  "tick_time_utc": "2026-10-30T14:39:47Z",
+  "minutes_since_open": 69,
+  "action": "HOLD",
+  "trades_submitted": 0,
+  "positions_managed": 0,
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_used_today": 0,
+  "position_slots_used": 0,
+  "reasoning": {
+    "broad_tape_unlock": "ACTIVE — NVDA above VWAP (207.015 vs 206.85), SPY above VWAP (759.67 vs intraday VWAP 759.62). Broad-tape unlock condition satisfied for first time today.",
+    "positions_managed": "No open positions. Nothing to exit or protect.",
+    "INTC": "PERMANENTLY DISARMED. Post-earnings -26.2% gap. Spread 3.0 bp (tightened), but binary dynamic disarms for full session. Not evaluated.",
+    "NVDA": "DISARMED (semiconductor sector disarm). NVDA is now above VWAP (207.015 vs 206.85) and serves as broad-tape unlock bellwether. Re-arm requires sector stabilization — not yet confirmed. Not evaluated for trading.",
+    "NFLX": "PRIMARY candidate. Above VWAP: 62.985 vs VWAP 62.48. Spread 3.2 bp (clean). VWAP reclaim TWO-TICK CONFIRMATION: this is Tick 1 — was below VWAP at 09:40 (61.81 vs 62.34), now above. Need one more tick above VWAP >=2 min apart to confirm. ORB: rel_volume 0.97x < 2.0x elevated gate (FAILS). orb_breakout=false. No entry this tick — two-tick confirmation incomplete.",
+    "BAC": "SECONDARY candidate. Above VWAP: 50.35 vs 50.31 (marginally). Spread 4.0 bp. rel_volume 2.92x (meets gate). Tick 1 of VWAP reclaim (was below at 09:40: 50.46 vs 50.55). ORB high 51.08, current 50.35 — no breakout. Evaluated after NFLX; NFLX has active two-tick watch. BAC also needs two-tick confirmation.",
+    "re_calibration": "Re-calibration session 4: all gates must pass textbook, max $5,000/trade, no exceptions.",
+    "conclusion": "Broad-tape unlock has fired for the first time today. NFLX is in Tick 1 of a VWAP reclaim setup. No entry this tick — two-tick confirmation rule requires a second consecutive tick above VWAP, evaluated >=2 minutes from now. Next tick (~10:41) should evaluate NFLX for Tick 2: if still above VWAP AND R/R clears at new price, an entry is valid. At Tick 2 must also verify price hasn't moved >0.5×ATR from Tick 1 position (playbook rule for separated confirmation ticks)."
+  },
+  "market_snapshot": {
+    "NFLX": {"last": 62.985, "vwap": 62.48, "rel_volume": 0.97, "spread_bp": 3.2, "above_vwap": true, "orb_high": 62.965, "orb_breakout": false, "atr_day": 2.08, "atr_1m": 0.072},
+    "BAC": {"last": 50.35, "vwap": 50.31, "rel_volume": 2.92, "spread_bp": 4.0, "above_vwap": true, "orb_high": 51.08, "orb_breakout": false, "atr_day": 1.26},
+    "NVDA": {"last": 207.015, "vwap": 206.85, "rel_volume": 2.38, "spread_bp": 1.4, "above_vwap": true, "disarmed": "sector"},
+    "INTC": {"last": 67.29, "vwap": 65.65, "rel_volume": 11.41, "spread_bp": 3.0, "disarmed": "permanent_earnings"},
+    "SPY": {"last": 759.67, "vwap_intraday": 759.62, "above_vwap": true, "note": "computed from 78 today minute bars"}
+  }
+}

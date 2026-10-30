@@ -1,0 +1,54 @@
+{
+  "tick_time_et": "2026-10-30T11:40:30-04:00",
+  "tick_time_utc": "2026-10-30T15:40:30Z",
+  "action": "HOLD",
+  "positions_managed": [],
+  "new_entries_considered": [
+    {
+      "ticker": "NFLX",
+      "setup_evaluated": "vwap_reclaim",
+      "verdict": "BLOCKED",
+      "reason": "Tick 1 VWAP reclaim from 10:39 did NOT confirm at Tick 2 — NFLX is now BELOW VWAP ($62.285 vs VWAP $62.55). Thesis broken. Additionally rel_volume 0.80x (well below 2.0x gate), and broad-tape unlock not active (NVDA below VWAP). ORB window closed (past 11:00 AM ET)."
+    },
+    {
+      "ticker": "BAC",
+      "setup_evaluated": "vwap_reclaim",
+      "verdict": "BLOCKED",
+      "reason": "Tick 1 VWAP reclaim from 10:39 did NOT confirm at Tick 2 — BAC is now BELOW VWAP ($50.235 vs VWAP $50.30). Thesis broken. Broad-tape unlock not active (NVDA below VWAP). ORB window closed."
+    },
+    {
+      "ticker": "NVDA",
+      "setup_evaluated": "none",
+      "verdict": "DISARMED",
+      "reason": "Semiconductor sector disarm (INTC -26.2% gap). Also below VWAP ($205.80 vs $206.77)."
+    },
+    {
+      "ticker": "INTC",
+      "setup_evaluated": "none",
+      "verdict": "DISARMED",
+      "reason": "Permanently disarmed — post-earnings binary event (-26.2% gap on weak Q4 guidance)."
+    }
+  ],
+  "broad_tape_unlock": {
+    "status": "NOT_ACTIVE",
+    "nvda_price": 205.80,
+    "nvda_vwap": 206.77,
+    "nvda_above_vwap": false,
+    "note": "NVDA below VWAP blocks ORB and momentum entries on all names. Compared to 10:39 tick where NVDA was above VWAP, the broad market has softened."
+  },
+  "orb_window": {
+    "status": "CLOSED",
+    "note": "ORB window closed at 11:00 AM ET. Current time 11:40 AM ET — 40 minutes past ORB cutoff."
+  },
+  "market_snapshot": {
+    "NFLX": {"last": 62.285, "vwap": 62.55, "above_vwap": false, "rel_volume": 0.80, "spread_bp": 3.2},
+    "BAC":  {"last": 50.235, "vwap": 50.30,  "above_vwap": false, "rel_volume": 2.28, "spread_bp": 2.0},
+    "NVDA": {"last": 205.80, "vwap": 206.77, "above_vwap": false, "rel_volume": 1.83, "spread_bp": 1.5},
+    "INTC": {"last": 65.695, "vwap": 65.81,  "above_vwap": false, "rel_volume": 7.25, "spread_bp": 3.0, "status": "DISARMED"}
+  },
+  "day_pnl": 0.0,
+  "positions_open": 0,
+  "trades_used": 0,
+  "trades_remaining": 20,
+  "decision_summary": "HOLD. No actionable setups: NVDA below VWAP so broad-tape unlock not active; ORB window closed at 11:00 AM; NFLX and BAC both failed to confirm their Tick 1 VWAP reclaim signals (both now below VWAP). INTC and NVDA disarmed. Zero-trade outcome remains correct behavior under current conditions."
+}

@@ -305,6 +305,25 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-10-30: No tuning. Tuner unfrozen ("ok to tune", 93 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: no-trade day. Zero orders submitted, $0 realized P&L. Account equity $999,641.65,
+  continuing the no-trade streak that began Sep 17. PRECONDITION #1 (flatten scheduler
+  unconfirmed, CronList empty) remains the sole infrastructure blocker preventing any entry.
+  What a no-trade day means at this point in the program: it is not a signal about setup
+  quality, gate calibration, or market conditions. The gates and logic are sound — confirmed
+  repeatedly by tick-level evaluation across dozens of sessions. The sole barrier is the flatten
+  scheduler confirmation, which requires a one-time human action and cannot be resolved by any
+  parameter or code change the tuner can make. Every no-trade day that passes without clearing
+  PRECONDITION #1 is an infrastructure outcome, not a trading outcome.
+  No new durable rule warranted tonight. A zero-trade day blocked entirely by PRECONDITION #1
+  provides no new signal about entry quality, stop placement, or fill behavior. With 31 total
+  trades across 93 days (0.33 trades/day), all setup expectancies remain negative (ORB -0.20R,
+  momentum -0.975R, vwap_reclaim -0.368R), and the sample is far too thin to distinguish
+  miscalibration from noise. The tuner correctly declines.
+  PRECONDITION #1 requires a one-time human action (add CronList flatten entry or provide a
+  signed acknowledgment in the day plan) before trading can resume.
 - 2026-10-28: No tuning. Tuner unfrozen ("ok to tune", 91 days of history) but no rule fired —
   parameters left unchanged. The tuning ledger remains empty; no parameter has ever been changed
   by the tuner.

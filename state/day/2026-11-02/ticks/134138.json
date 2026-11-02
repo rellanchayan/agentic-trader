@@ -1,0 +1,18 @@
+{
+  "tick_time_et": "2026-11-02T13:41:38-05:00",
+  "minutes_since_open": 251,
+  "decision": "HOLD",
+  "action": "none",
+  "reason": "PRECONDITION #1 HALT — CronList still empty (37+ consecutive sessions), no confirmed flatten scheduler for 3:50/3:53/3:56 PM ET. Flat, 0 positions, 0 trades. Day P&L $0.00. 1:41 PM ET, market open. Live market quotes not loading in context snapshot (watchlist null fields). No positions to manage. All new entries blocked by PRECONDITION #1.",
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "equity": 999641.65,
+  "trades_today": 0,
+  "cron_list_empty": true,
+  "precondition_1_halt": true,
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false
+  }
+}

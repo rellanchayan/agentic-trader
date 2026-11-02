@@ -1768,3 +1768,9 @@ made of **rules to follow**, not stories.
 - 2026-06-16: No tuning. Tuner frozen (only 1 day of history; need 5). Today was a no-trade day —
   Alpaca paper API returned 401 Unauthorized all session. Zero trades, zero P&L, no evidence to
   act on. Operational lesson added to Infrastructure section above.
+- 2026-11-02: No tuning (tuner reported "no rule fired — parameters left unchanged"). 94 days of
+  history, win rate 19.35%, 0 trades today, no day plan written. The same structural problem
+  continues: no day plan = no trades = no data to tune on. At 94 days with only 31 total trades
+  (0.33/day avg) and a 19.35% win rate, the system is not generating enough activity to learn from.
+  The missing day plan is the root cause — the premarket phase must reliably produce a plan or the
+  tick loop should halt entirely.

@@ -1,0 +1,45 @@
+{
+  "tick_time_et": "2026-11-02T11:55:16.773695-05:00",
+  "decision": "HOLD",
+  "action": "none",
+  "reason": "PRECONDITION #1 HALT \u2014 CronList empty, no confirmed flatten scheduler for 3:50/3:53/3:56 PM ET. Broad-tape unlock also fails: SPY 760.12 < VWAP 761.11, NVDA 206.82 < VWAP 207.93. NFLX above VWAP (62.24 vs 62.19, spread 1.6bp, clean) but entry blocked by both constraints. Flat, 0 trades, equity $999,641.65.",
+  "day_pnl": 0.0,
+  "positions": [],
+  "market_snapshot": {
+    "NFLX": {
+      "last": 62.24,
+      "vwap": 62.19,
+      "above_vwap": true,
+      "spread_bp": 1.6
+    },
+    "NVDA": {
+      "last": 206.82,
+      "vwap": 207.93,
+      "above_vwap": false,
+      "spread_bp": 1.5
+    },
+    "BAC": {
+      "last": 50.09,
+      "vwap": 50.13,
+      "above_vwap": false,
+      "spread_bp": 2.0
+    },
+    "INTC": {
+      "last": 62.63,
+      "vwap": 63.88,
+      "above_vwap": false,
+      "spread_bp": 1.6
+    },
+    "SPY": {
+      "last": 760.12,
+      "vwap": 761.11,
+      "above_vwap": false,
+      "spread_bp": 0.4
+    }
+  },
+  "gates_checked": {
+    "precondition_1_halt": true,
+    "broad_tape_unlock_spy": false,
+    "broad_tape_unlock_nvda": false
+  }
+}

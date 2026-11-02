@@ -1,0 +1,13 @@
+{
+  "tick_time_et": "2026-11-02T14:41:55-05:00",
+  "tick_time_utc": "2026-11-02T19:41:55Z",
+  "decision": "HOLD",
+  "action": "none",
+  "reason": "PRECONDITION #1 HALT — CronList still empty (37+ consecutive sessions), no confirmed flatten scheduler for 3:50/3:53/3:56 PM ET. Day plan's signed human acknowledgment is conditioned on independently confirming the scheduler live before any position is opened; CronList shows no scheduled jobs, so condition is not met. Flat, 0 positions, 0 trades. Day P&L $0.00. 2:41 PM ET, market open, entry window still active (closes 3:30 PM), but all new entries blocked by PRECONDITION #1.",
+  "day_pnl": 0.0,
+  "positions": 0,
+  "trades_today": 0,
+  "equity": 999641.65,
+  "watchlist_data_available": false,
+  "cron_list_empty": true
+}

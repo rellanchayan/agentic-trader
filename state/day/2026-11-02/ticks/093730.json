@@ -1,0 +1,25 @@
+{
+  "tick_time_et": "2026-11-02T09:37:30-05:00",
+  "minutes_since_open": 7,
+  "decision": "HOLD",
+  "action": "none",
+  "reasons": [
+    "Pre-ISM window: day plan prohibits new entries before 10:00 AM ET; ISM Manufacturing PMI at 10:00 AM extends effective entry delay to 10:15 AM ET for ORB and momentum setups.",
+    "PRECONDITION #1 HALT active: CronList is empty — flatten scheduler (3:50/3:53/3:56 PM ET passes) not confirmed running. No new positions may be opened until scheduler is confirmed.",
+    "No positions to manage (flat)."
+  ],
+  "positions_managed": [],
+  "orders_submitted": [],
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "trades_today": 0
+  },
+  "market": {
+    "is_open": true,
+    "timestamp_et": "2026-11-02T09:37:30-05:00"
+  },
+  "precondition_1_halt": true,
+  "pre_ism_window": true
+}

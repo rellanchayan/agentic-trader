@@ -1,0 +1,63 @@
+{
+  "tick_time_et": "2026-11-03T11:39:40-05:00",
+  "minutes_since_open": 129,
+  "verdict": "NO_TRADE",
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "gate_outcomes": {
+    "PRECONDITION_1": {
+      "result": "FAIL",
+      "detail": "CronList empty (37+ consecutive sessions). Flatten scheduler not confirmed live. Day plan acknowledgment requires independent confirmation at first tick — first tick (09:40) found HALT, HALT remains in effect per day plan conditional."
+    },
+    "NFLX": {
+      "above_vwap": true,
+      "spread_bp": 1.6,
+      "spread_gate": "PASS",
+      "rel_volume": 0.68,
+      "rel_vol_gate": "FAIL (requires 1.5x)",
+      "setup": "VWAP reclaim candidate but rel_vol gate fails — NO ENTRY"
+    },
+    "NVDA": {
+      "above_vwap": false,
+      "spread_bp": 1.4,
+      "spread_gate": "PASS",
+      "rel_volume": 1.39,
+      "rel_vol_gate": "FAIL (requires 2.0x for MIXED/RANGE gap-up ORB)",
+      "orb_breakout": false,
+      "broad_tape_unlock": "FAIL (NVDA below VWAP disqualifies itself as bellwether)",
+      "setup": "ORB candidate blocked — below VWAP, rel_vol insufficient, no breakout"
+    },
+    "BAC": {
+      "above_vwap": false,
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "rel_volume": 2.43,
+      "rel_vol_gate": "PASS",
+      "broad_tape_unlock": "FAIL (NVDA below VWAP)",
+      "setup": "Below VWAP — no VWAP reclaim setup available; broad-tape unlock fails"
+    },
+    "INTC": {
+      "result": "DISARMED",
+      "detail": "Post-earnings chaos, ATR $6.74 on $60 stock (11.2% daily range). Disarmed per day plan."
+    },
+    "ORB_window": {
+      "result": "EXPIRED",
+      "detail": "90-minute ORB entry window closed at ~11:00 AM ET. Current time 11:39 AM — no new ORB entries."
+    }
+  },
+  "account_snapshot": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "buying_power": 3998566.6,
+    "daytrade_count": 0,
+    "positions": 0
+  },
+  "market_snapshot": {
+    "NFLX": {"last": 62.45, "vwap": 62.38, "spread_bp": 1.6, "rel_volume": 0.68, "above_vwap": true},
+    "NVDA": {"last": 207.895, "vwap": 208.09, "spread_bp": 1.4, "rel_volume": 1.39, "above_vwap": false},
+    "BAC": {"last": 49.47, "vwap": 49.72, "spread_bp": 2.0, "rel_volume": 2.43, "above_vwap": false},
+    "INTC": {"last": 60.71, "vwap": 61.7, "spread_bp": 1.6, "rel_volume": 0.97, "above_vwap": false}
+  }
+}

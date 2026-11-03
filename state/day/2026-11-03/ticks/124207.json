@@ -1,0 +1,66 @@
+{
+  "tick_time_et": "2026-11-03T12:42:07-05:00",
+  "minutes_since_open": 192,
+  "verdict": "NO_TRADE",
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "buying_power": 3998566.6,
+    "daytrade_count": 0,
+    "pattern_day_trader": false
+  },
+  "precondition_1": {
+    "status": "HALT",
+    "reason": "CronList empty — flatten scheduler not confirmed live (38+ consecutive sessions). Day plan contains human-signed acknowledgment but plan text explicitly requires live scheduler confirmation before any entry; acknowledgment alone does not lift the halt."
+  },
+  "gate_outcomes": {
+    "NFLX": {
+      "last": 62.72,
+      "vwap": 62.40,
+      "above_vwap": true,
+      "spread_bp": 1.6,
+      "rel_volume": 0.59,
+      "orb_high": 63.0,
+      "orb_breakout": false,
+      "setup_considered": "vwap_reclaim",
+      "gate_result": "BLOCK",
+      "block_reason": "rel_volume 0.59x below 1.5x minimum gate"
+    },
+    "NVDA": {
+      "last": 208.18,
+      "vwap": 208.14,
+      "above_vwap": true,
+      "spread_bp": 1.0,
+      "rel_volume": 1.21,
+      "orb_high": 209.09,
+      "orb_breakout": false,
+      "setup_considered": "orb_breakout / vwap_reclaim",
+      "gate_result": "BLOCK",
+      "block_reason": "rel_volume 1.21x below 2.0x gate for MIXED/RANGE gap-up day; ORB window expired (>90 min); VWAP margin only +$0.04 — not a clean reclaim signal"
+    },
+    "BAC": {
+      "last": 49.535,
+      "vwap": 49.68,
+      "above_vwap": false,
+      "spread_bp": 2.0,
+      "rel_volume": 1.95,
+      "setup_considered": "vwap_reclaim",
+      "gate_result": "BLOCK",
+      "block_reason": "below VWAP — not a reclaim setup; plan designates low priority, skip if NFLX is alive"
+    },
+    "INTC": {
+      "gate_result": "DISARMED",
+      "block_reason": "Post-earnings volatility (ATR $6.93/$60 = 11.6%), plan disarm in effect"
+    }
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "orb_window_expired": true
+  },
+  "summary": "No positions open. No orders submitted. All candidates blocked: PRECONDITION #1 (CronList empty, 38+ sessions), NFLX rel_vol 0.59x, NVDA rel_vol 1.21x on MIXED/RANGE gap-up day, BAC below VWAP, INTC disarmed, ORB window expired. A zero-trade outcome on this session is infrastructure-driven and correct."
+}

@@ -1,0 +1,26 @@
+{
+  "tick_time_et": "2026-11-03T14:41:22-05:00",
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_HALT(CronList_empty_38+_sessions)+NFLX_rel_vol_0.55x(gate:1.5x)+NVDA_below_vwap(rel_vol_0.93x,gate:2.0x_MIXED_RANGE)+BAC_broad_tape_unlock_fails(NVDA_below_VWAP)+INTC_disarmed+ORB_window_expired",
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "market_snapshot": {
+    "NFLX": {"last": 62.995, "vwap": 62.59, "above_vwap": true, "rel_volume": 0.55, "spread_bp": 1.6},
+    "NVDA": {"last": 206.89, "vwap": 208.07, "above_vwap": false, "rel_volume": 0.93, "spread_bp": 1.9},
+    "BAC":  {"last": 49.64,  "vwap": 49.70,  "above_vwap": false, "rel_volume": 1.51, "spread_bp": 2.0},
+    "INTC": {"last": 60.195, "vwap": 61.12,  "above_vwap": false, "rel_volume": 0.78, "spread_bp": 1.7, "status": "DISARMED"}
+  },
+  "gate_checks": {
+    "precondition_1_flatten_scheduler": "FAIL — CronList empty (38+ sessions)",
+    "NFLX_rel_vol": "FAIL — 0.55x < 1.5x gate",
+    "NVDA_above_vwap": "FAIL — below VWAP ($206.89 vs $208.07)",
+    "NVDA_rel_vol": "FAIL — 0.93x < 2.0x MIXED/RANGE gap-up gate",
+    "BAC_broad_tape_unlock": "FAIL — NVDA below VWAP",
+    "ORB_window": "EXPIRED — >90 min since open",
+    "time_check": "PASS — 14:41 ET, before 15:30 no-new-entries cutoff",
+    "loss_stop": "PASS — day P&L $0.00"
+  },
+  "notes": "NFLX is above VWAP with tight spread (1.6 bp) but rel vol at 0.55x is well below the 1.5x gate — not tradeable. NVDA has drifted below VWAP since the gap-up open. All candidates fail on independent gates before PRECONDITION_1_HALT is even reached. Zero-trade outcome is correct."
+}

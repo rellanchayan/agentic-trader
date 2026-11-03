@@ -305,6 +305,26 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-11-03: No tuning. Tuner unfrozen ("ok to tune", 95 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: no-trade day. Zero orders submitted, $0 realized P&L. This is the 37th or more
+  consecutive session without a trade, blocked entirely by PRECONDITION #1 (CronList empty /
+  flatten scheduler not confirmed running). The infrastructure blocker remains the sole reason
+  for inactivity — setup logic, gate calibration, and tick discipline are all functioning correctly
+  when tested in isolation.
+  No new durable rule warranted tonight. A zero-trade day blocked entirely by PRECONDITION #1
+  provides no new signal about entry quality, stop placement, or fill behavior. With 31 total
+  trades across 95 days (0.33 trades/day), all setup expectancies remain negative (ORB -0.20R,
+  momentum -0.975R, vwap_reclaim -0.37R), and the sample is far too thin to distinguish
+  miscalibration from noise. The tuner correctly declines.
+  Observation on the extended no-trade pattern: at 37+ consecutive blocked sessions, the
+  persistent PRECONDITION #1 halt is no longer a scheduling edge case — it is the defining
+  characteristic of the program's current state. No strategy refinement, parameter adjustment,
+  or gate calibration review is meaningful until the flatten scheduler is confirmed live. Every
+  evening's tuner run will reach the same conclusion: nothing to tune, because nothing traded.
+  PRECONDITION #1 requires a one-time human action (add CronList flatten entry or provide a
+  signed acknowledgment in the day plan) before trading can resume.
 - 2026-10-30: No tuning. Tuner unfrozen ("ok to tune", 93 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.

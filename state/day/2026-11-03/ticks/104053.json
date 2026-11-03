@@ -1,0 +1,64 @@
+{
+  "tick_time_et": "2026-11-03T10:40:53-05:00",
+  "minutes_since_open": 70,
+  "verdict": "NO_TRADE",
+  "reason": "PRECONDITION_1_HALT(CronList empty, 37+ sessions)+NFLX_rel_vol_0.71x(gate:1.5x)+NVDA_below_vwap+BAC_broad_tape_unlock_fails(NVDA below VWAP)+INTC_disarmed",
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "gate_details": {
+    "precondition_1": {
+      "status": "HALT",
+      "reason": "CronList empty — flatten scheduler not confirmed running; 37+ consecutive sessions"
+    },
+    "NFLX": {
+      "spread_bp": 3.2,
+      "spread_gate_15bp": "PASS",
+      "above_vwap": true,
+      "rel_volume": 0.71,
+      "rel_vol_gate_1.5x": "FAIL",
+      "verdict": "BLOCKED_rel_vol"
+    },
+    "NVDA": {
+      "spread_bp": 1.0,
+      "spread_gate_15bp": "PASS",
+      "above_vwap": false,
+      "orb_breakout": false,
+      "rel_volume": 1.34,
+      "rel_vol_gate_1.5x": "FAIL",
+      "broad_tape_unlock": "FAIL (NVDA below VWAP)",
+      "pre_earnings_proximity_days": 14,
+      "spread_deadline_11am": "pending",
+      "verdict": "BLOCKED_below_vwap+no_orb+rel_vol"
+    },
+    "BAC": {
+      "spread_bp": 2.0,
+      "spread_gate_15bp": "PASS",
+      "above_vwap": true,
+      "orb_breakout": true,
+      "rel_volume": 3.34,
+      "rel_vol_gate_1.5x": "PASS",
+      "broad_tape_unlock": "FAIL (NVDA below VWAP for ORB unlock)",
+      "priority": "LOW — secondary only if NFLX fails and broad-tape unlocks",
+      "verdict": "BLOCKED_broad_tape_unlock+PRECONDITION_1"
+    },
+    "INTC": {
+      "status": "DISARMED",
+      "reason": "Post-earnings chaos; ATR $6.74 on $61 stock; plan disarmed for session",
+      "verdict": "DISARMED"
+    }
+  },
+  "market_snapshot": {
+    "BAC": {"last": 49.935, "spread_bp": 2.0, "above_vwap": true, "rel_volume": 3.34, "orb_breakout": true},
+    "NFLX": {"last": 62.45, "spread_bp": 3.2, "above_vwap": true, "rel_volume": 0.71, "orb_breakout": false},
+    "NVDA": {"last": 207.2, "spread_bp": 1.0, "above_vwap": false, "rel_volume": 1.34, "orb_breakout": false},
+    "INTC": {"last": 61.21, "spread_bp": 1.6, "above_vwap": false, "rel_volume": 1.18, "orb_breakout": false}
+  },
+  "account": {
+    "equity": 999641.65,
+    "cash": 999641.65,
+    "day_pnl": 0.0,
+    "loss_budget_remaining": 3000.0
+  }
+}

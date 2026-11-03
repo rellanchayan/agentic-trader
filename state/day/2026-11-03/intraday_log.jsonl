@@ -1,1 +1,2 @@
 {"tick_time_et":"2026-11-03T09:40:00-05:00","verdict":"NO_TRADE","reason":"PRECONDITION_1_HALT(CronList empty)+JOLTS_WINDOW+NFLX_rel_vol_1.03x+NVDA_ORB_not_triggered","positions_managed":0,"orders_submitted":0,"day_pnl":0.0,"trades_today":0}
+{"tick_time_et":"2026-11-03T10:40:53-05:00","verdict":"NO_TRADE","reason":"PRECONDITION_1_HALT(CronList empty, 37+ sessions)+NFLX_rel_vol_0.71x(gate:1.5x)+NVDA_below_vwap+BAC_broad_tape_unlock_fails(NVDA below VWAP)+INTC_disarmed","positions_managed":0,"orders_submitted":0,"day_pnl":0.0,"trades_today":0}

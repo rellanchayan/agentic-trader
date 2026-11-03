@@ -1,0 +1,73 @@
+{
+  "tick_time_et": "2026-11-03T13:40:04-05:00",
+  "tick_time_utc": "2026-11-03T18:40:04Z",
+  "verdict": "NO_TRADE",
+  "positions_managed": 0,
+  "orders_submitted": 0,
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "account_equity": 999641.65,
+  "loss_budget_remaining": 3000.0,
+  "gate_outcomes": {
+    "precondition_1": {
+      "status": "HALT",
+      "reason": "CronList empty — flatten scheduler not confirmed running (38+ consecutive sessions). Day plan contains signed acknowledgment but also requires scheduler confirmation. Halt remains in effect."
+    },
+    "NFLX": {
+      "last": 63.06,
+      "spread_bp": 1.6,
+      "spread_gate": "PASS",
+      "above_vwap": true,
+      "vwap": 62.48,
+      "rel_volume": 0.56,
+      "rel_volume_gate": "FAIL (0.56x < 1.5x required)",
+      "orb_window": "EXPIRED (250 min since open > 90 min cutoff)",
+      "entry_eligible": false,
+      "block_reason": "rel_vol gate fails + PRECONDITION_1_HALT"
+    },
+    "NVDA": {
+      "last": 208.04,
+      "spread_bp": 1.0,
+      "spread_gate": "PASS",
+      "above_vwap": false,
+      "vwap": 208.16,
+      "rel_volume": 1.04,
+      "rel_volume_gate": "FAIL (1.04x < 2.0x required for MIXED/RANGE gap-up day)",
+      "broad_tape_unlock": "FAIL (NVDA below VWAP)",
+      "orb_window": "EXPIRED",
+      "entry_eligible": false,
+      "block_reason": "below VWAP + rel_vol gate fails + broad-tape unlock fails + PRECONDITION_1_HALT"
+    },
+    "BAC": {
+      "last": 49.77,
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "above_vwap": true,
+      "vwap": 49.69,
+      "rel_volume": 1.65,
+      "rel_volume_gate": "PASS (1.65x >= 1.5x)",
+      "vwap_reclaim_signal": true,
+      "vwap_reclaim_note": "BAC was below VWAP at 12:42 tick ($49.535 < $49.68), now above at 13:40 ($49.77 > $49.69) — genuine VWAP reclaim setup formed",
+      "potential_entry": 49.83,
+      "potential_stop": 49.65,
+      "potential_target": 50.19,
+      "potential_rr": "2:1 (risk $0.18, reward $0.36)",
+      "potential_qty": 100,
+      "potential_notional": 4983.0,
+      "orb_window": "EXPIRED",
+      "entry_eligible": false,
+      "block_reason": "PRECONDITION_1_HALT overrides all setups — cannot enter without confirmed flatten scheduler"
+    },
+    "INTC": {
+      "entry_eligible": false,
+      "block_reason": "DISARMED per day plan (post-earnings ATR chaos)"
+    }
+  },
+  "clock_flags": {
+    "past_no_new_entries": false,
+    "in_flatten_window": false,
+    "minutes_since_open": 250,
+    "orb_window_expired": true
+  },
+  "summary": "PRECONDITION #1 HALT (CronList empty, 38+ sessions). BAC formed a VWAP reclaim signal between the 12:42 and 13:40 ticks but was blocked by the infrastructure halt. No trade submitted. Infrastructure fix required before any entry can be made."
+}

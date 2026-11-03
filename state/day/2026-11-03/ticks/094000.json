@@ -1,0 +1,24 @@
+{
+  "tick_time_et": "2026-11-03T09:40:00-05:00",
+  "minutes_since_open": 10,
+  "verdict": "NO_TRADE",
+  "reasons": [
+    "PRECONDITION_1_HALT: CronList empty — flatten scheduler (3:50/3:53/3:56 PM passes) not confirmed; HALT remains in effect per day plan rule",
+    "JOLTS_WINDOW: ORB entries blocked until 10:15 AM ET (JOLTS at 10:00 AM)",
+    "NFLX: below VWAP ($62.13 < $62.46), rel_volume 1.03x (gate requires 1.5x) — VWAP reclaim setup not yet active",
+    "NVDA: ORB not triggered (price $208.68 < ORB high $209.08), blocked by JOLTS window",
+    "BAC: low priority per plan; skip if NFLX alive",
+    "INTC: disarmed (post-earnings chaos)"
+  ],
+  "positions_managed": [],
+  "orders_submitted": [],
+  "market_snapshot": {
+    "NFLX": {"last": 62.13, "vwap": 62.46, "above_vwap": false, "spread_bp": 14.5, "rel_volume": 1.03, "orb_high": 63.0, "orb_low": 62.04, "orb_breakout": false},
+    "NVDA": {"last": 208.68, "vwap": 207.95, "above_vwap": true, "spread_bp": 1.4, "rel_volume": 3.49, "orb_high": 209.08, "orb_low": 205.95, "orb_breakout": false},
+    "BAC":  {"last": 49.43,  "vwap": 49.38,  "above_vwap": true,  "spread_bp": 2.0,  "rel_volume": 4.77, "orb_high": 49.55, "orb_low": 49.17, "orb_breakout": false},
+    "INTC": {"last": 61.935, "vwap": 61.83,  "above_vwap": true,  "spread_bp": 8.1,  "rel_volume": 2.28, "orb_high": 62.425,"orb_low": 60.97, "orb_breakout": false}
+  },
+  "account": {"equity": 999641.65, "day_pnl": 0.0, "trades_today": 0, "positions_open": 0},
+  "precondition_1_status": "HALT — CronList empty",
+  "jolts_window_active": true
+}

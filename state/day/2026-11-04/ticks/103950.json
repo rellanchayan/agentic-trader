@@ -1,0 +1,79 @@
+{
+  "tick_time": "10:39:50",
+  "tick_time_et": "2026-11-04T10:39:50-05:00",
+  "minutes_since_open": 69,
+  "action": "HOLD",
+  "reason": "PRECONDITION_1_HALT",
+  "detail": "Flatten scheduler (CronList) empty — 39+ consecutive sessions. No entry permitted despite human acknowledgment in day plan; plan requires independent scheduler confirmation before any new position.",
+  "precondition_1": {
+    "cron_list_empty": true,
+    "human_acknowledgment_in_plan": true,
+    "conclusion": "HALT — acknowledgment alone is not sufficient; scheduler must be confirmed live"
+  },
+  "gate_scan": {
+    "NFLX": {
+      "last": 66.115,
+      "spread_bp": 1.5,
+      "spread_gate": "PASS",
+      "above_vwap": true,
+      "vwap": 65.54,
+      "orb_high": 65.24,
+      "orb_breakout": true,
+      "rel_vol": 1.59,
+      "rel_vol_gate": "PASS_1.5x_FAIL_2.0x_preferred",
+      "setup_candidate": "ORB_or_VWAP_reclaim",
+      "blocked_by": "PRECONDITION_1"
+    },
+    "BAC": {
+      "last": 51.11,
+      "spread_bp": 2.0,
+      "spread_gate": "PASS",
+      "above_vwap": true,
+      "vwap": 51.04,
+      "orb_high": 51.36,
+      "orb_breakout": false,
+      "rel_vol": 2.79,
+      "rel_vol_gate": "PASS",
+      "setup_candidate": "VWAP_reclaim_two_tick",
+      "blocked_by": "PRECONDITION_1"
+    },
+    "INTC": {
+      "last": 58.665,
+      "spread_bp": 3.4,
+      "spread_gate": "PASS",
+      "above_vwap": false,
+      "vwap": 59.08,
+      "orb_high": 60.005,
+      "orb_breakout": false,
+      "rel_vol": 2.21,
+      "setup_candidate": "NONE",
+      "note": "Gap reversed, below VWAP, far from ORB high"
+    },
+    "NVDA": {
+      "last": 204.855,
+      "spread_bp": 1.5,
+      "spread_gate": "PASS",
+      "above_vwap": true,
+      "vwap": 204.28,
+      "orb_high": 206.55,
+      "orb_breakout": false,
+      "rel_vol": 3.2,
+      "re_arm_status": "RE_ARMED (spread <15 bp arrived before 11:00 AM ET)",
+      "broad_tape_unlock": "SATISFIED (NVDA above VWAP)",
+      "setup_candidate": "MONITOR_broad_tape_unlock",
+      "blocked_by": "PRECONDITION_1"
+    }
+  },
+  "broad_tape_unlock": {
+    "nvda_above_vwap": true,
+    "spy_data_in_context": false,
+    "conclusion": "NVDA above VWAP — partial unlock satisfied; SPY data not in context snapshot"
+  },
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "trades_remaining": 20,
+  "orb_window_closes_at": "11:00 ET",
+  "orb_window_minutes_remaining": 21
+}

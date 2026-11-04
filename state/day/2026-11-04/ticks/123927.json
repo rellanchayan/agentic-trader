@@ -1,0 +1,63 @@
+{
+  "time_et": "12:39",
+  "timestamp": "2026-11-04T12:39:27-05:00",
+  "action": "HOLD",
+  "minutes_since_open": 189,
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0,
+  "trades_today": 0,
+  "gate_scan": {
+    "orb_window": "CLOSED (>90 min since open; deadline was 11:00 AM ET)",
+    "precondition_1": "HALT — CronList empty, flatten scheduler not confirmed running (41+ consecutive sessions)",
+    "INTC": {
+      "last": 58.915,
+      "vwap": 58.56,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "orb_high": 60.005,
+      "spread_bp": 3.4,
+      "rel_vol": 1.62,
+      "verdict": "NO SETUP — ORB window closed; gap from $62.22 premarket fully reversed, now below prev close $60.50"
+    },
+    "NFLX": {
+      "last": 65.995,
+      "vwap": 65.86,
+      "above_vwap": true,
+      "orb_breakout": true,
+      "orb_high": 65.24,
+      "spread_bp": 1.5,
+      "rel_vol": 1.15,
+      "verdict": "FAIL rel_vol gate — 1.15x < 1.5x minimum; ORB window also closed"
+    },
+    "BAC": {
+      "last": 51.35,
+      "vwap": 51.19,
+      "above_vwap": true,
+      "orb_breakout": false,
+      "spread_bp": 1.9,
+      "rel_vol": 1.74,
+      "vwap_reclaim_2tick": "satisfied at 11:39; still above VWAP at 12:39",
+      "rr_check": {
+        "entry_limit": 51.39,
+        "stop": 51.19,
+        "risk_per_share": 0.20,
+        "target_2to1": 51.79,
+        "valid": true
+      },
+      "broad_tape_unlock": "FAIL — NVDA below VWAP ($203.03 vs VWAP $203.55); SPY not in snapshot",
+      "verdict": "BLOCKED — PRECONDITION 1 HALT active; also broad-tape unlock unconfirmed (NVDA below VWAP)"
+    },
+    "NVDA": {
+      "last": 203.03,
+      "vwap": 203.55,
+      "above_vwap": false,
+      "orb_breakout": false,
+      "spread_bp": 1.5,
+      "rel_vol": 2.21,
+      "verdict": "NO SETUP — below VWAP; broad-tape unlock NOT satisfied"
+    }
+  },
+  "decision": "HOLD",
+  "reason": "PRECONDITION 1 HALT active — CronList empty, flatten scheduler not confirmed running (41+ consecutive sessions). No entry permitted regardless of setup quality. Additionally: ORB window closed at 11:00 AM ET; NVDA below VWAP so broad-tape unlock fails; BAC VWAP reclaim setup technically valid but blocked."
+}

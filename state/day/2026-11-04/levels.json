@@ -3,9 +3,10 @@
     "date": "2026-11-04",
     "generated_utc": "2026-11-04T13:29:38.941972+00:00",
     "source": "watchlist_build",
+    "screener_edited_utc": "2026-11-04T14:00:00+00:00",
     "candidates_considered": 4,
     "top": 4,
-    "note": "Pre-market screen. ORB levels fill in live after the open. The day-screener agent may edit this."
+    "note": "Pre-market screen finalized by day-screener. 4 candidates: INTC armed conditional; NFLX/BAC disarmed premarket spread, monitor for re-arm by 11:00 AM ET; NVDA no data, bellwether watch only. ORB levels fill in live after the open."
   },
   "INTC": {
     "sector": "technology",
@@ -15,9 +16,12 @@
     "premarket_price": 62.22,
     "gap_pct": 0.0284,
     "spread_bp": 11.3,
+    "support": 60.5,
+    "resistance": 63.0,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (4,985,585 sh/day); +2.8% gap"
+    "screener_status": "ARMED_CONDITIONAL",
+    "note": "PRIMARY. gapped +2.84% on no confirmed news catalyst; support at $60.50 (prev close / gap-fill level); resistance at $63.00 (round number ~0.5 ATR above gap); spread 11.3bp is within gate. ORB breakout above 9:30-9:45 range high requires: spread <15bp, rel-vol >1.5x (prefer 2.0x), SPY above VWAP, entry before 11:00 AM ET, min 2:1 R/R. If spread blows out at open and does not recover to <15bp by 11:00 AM ET, disarm for session."
   },
   "NFLX": {
     "sector": "communication",
@@ -27,9 +31,12 @@
     "premarket_price": 62.64,
     "gap_pct": -0.0117,
     "spread_bp": 1023.4,
+    "support": 62.0,
+    "resistance": 63.38,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,660,761 sh/day); -1.2% gap"
+    "screener_status": "DISARMED_PREMARKET_SPREAD",
+    "note": "DISARMED. Spread 1023bp is thin premarket quoting, not session liquidity. Re-arm only if live spread <15bp by 11:00 AM ET. If re-armed: VWAP reclaim candidate with two-tick confirmation; support $62.00 (round number), resistance $63.38 (prev close). ATR $2.07/day is modest; verify 2:1 R/R can be constructed before entry. Minor gap -1.17% with no news catalyst found."
   },
   "BAC": {
     "sector": "financials",
@@ -39,9 +46,12 @@
     "premarket_price": 49.23,
     "gap_pct": -0.0086,
     "spread_bp": 1031.9,
+    "support": 49.0,
+    "resistance": 49.66,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (2,486,788 sh/day); -0.9% gap"
+    "screener_status": "DISARMED_PREMARKET_SPREAD",
+    "note": "DISARMED. Spread 1032bp is thin premarket quoting. Re-arm only if live spread <15bp by 11:00 AM ET. If re-armed: VWAP reclaim candidate; support $49.00 (round number below premarket), resistance $49.66 (prev close). ATR $0.99/day is the smallest on the list -- stop placement is very tight; confirm 2:1 R/R is achievable before any entry. Minor gap -0.86%, no news catalyst found."
   },
   "NVDA": {
     "sector": "technology",
@@ -51,8 +61,11 @@
     "premarket_price": null,
     "gap_pct": null,
     "spread_bp": null,
+    "support": null,
+    "resistance": null,
     "orb_high": null,
     "orb_low": null,
-    "note": "liquid (3,290,462 sh/day); no premarket quote"
+    "screener_status": "DISARMED_NO_DATA",
+    "note": "DISARMED. No premarket price, spread, or gap data. No trade setup evaluable. Bellwether watch only: tick agent uses SPY alone as broad-tape unlock proxy if NVDA data remains absent, and logs the NVDA data-missing condition at each tick. Activate as trade candidate only when price, VWAP, spread, and rel_vol all populate at the tick AND spread is <15bp by 11:00 AM ET."
   }
 }

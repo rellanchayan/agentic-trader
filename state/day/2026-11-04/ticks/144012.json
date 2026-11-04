@@ -1,0 +1,56 @@
+{
+  "t": "14:40",
+  "timestamp_et": "2026-11-04T14:40:12-05:00",
+  "action": "HOLD",
+  "day_pnl": 0,
+  "positions_open": 0,
+  "open_orders": 0,
+  "precondition_1": "HALT — CronList empty, 43+ consecutive sessions without confirmed flatten scheduler",
+  "orb_window": "CLOSED (>90 min since open)",
+  "time_gate": "PASS (before 15:30 ET)",
+  "gate_scan": {
+    "INTC": {
+      "last": 58.11,
+      "vwap": 58.54,
+      "above_vwap": false,
+      "spread_bp": 1.7,
+      "rel_vol": 1.23,
+      "orb_breakout": false,
+      "verdict": "NO SETUP — below VWAP, rel_vol 1.23x (<1.5x gate); gap fully reversed (premarket $62.22 → $58.11, below prev close $60.50)"
+    },
+    "NFLX": {
+      "last": 66.18,
+      "vwap": 65.93,
+      "above_vwap": true,
+      "spread_bp": 1.5,
+      "rel_vol": 0.99,
+      "orb_breakout": true,
+      "two_tick_status": "Tick 1 (resumed above VWAP at this tick after going below VWAP at 13:40)",
+      "verdict": "FAIL — rel_vol 0.99x (<1.5x gate); Tick 1 only of new 2-tick sequence"
+    },
+    "BAC": {
+      "last": 51.24,
+      "vwap": 51.20,
+      "above_vwap": true,
+      "spread_bp": 2.0,
+      "rel_vol": 1.21,
+      "orb_breakout": false,
+      "two_tick_status": "Tick 1 (resumed above VWAP at this tick after going below VWAP at 13:40)",
+      "verdict": "FAIL — rel_vol 1.21x (<1.5x gate); Tick 1 only of new 2-tick sequence"
+    },
+    "NVDA": {
+      "last": 203.705,
+      "vwap": 203.57,
+      "above_vwap": true,
+      "spread_bp": 1.5,
+      "rel_vol": 1.64,
+      "orb_breakout": false,
+      "two_tick_status": "Tick 2 met — Tick1 13:40 ($203.75 > VWAP $203.56); Tick2 14:40 ($203.705 > VWAP $203.57); price delta $0.045 vs 0.5xATR $3.19 (within limit)",
+      "spread_gate": "PASS (1.5 bp < 15 bp)",
+      "rel_vol_gate": "PASS (1.64x >= 1.5x)",
+      "broad_tape_unlock": "CANNOT CONFIRM — SPY data absent from context snapshot; rule requires SPY above VWAP at Tick 2",
+      "verdict": "BLOCKED — (1) PRECONDITION 1 HALT; (2) SPY broad-tape gate unconfirmable due to missing data"
+    }
+  },
+  "notes": "Best setup would be NVDA VWAP reclaim if PRECONDITION 1 cleared and SPY data available. BAC and NFLX are Tick 1 only with low rel_vol. INTC gap fully reversed and disarmed. No action taken. No fills to claim."
+}

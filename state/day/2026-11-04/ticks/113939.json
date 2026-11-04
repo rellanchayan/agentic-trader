@@ -1,0 +1,93 @@
+{
+  "tick_time_et": "11:39",
+  "tick_file": "113939.json",
+  "action": "HOLD",
+  "minutes_since_open": 129,
+  "precondition_1": "HALT — CronList empty, 40+ consecutive sessions. Plan acknowledgment present but scheduler not independently confirmed live.",
+  "orb_window": "CLOSED — past 11:00 AM ET deadline",
+  "positions": [],
+  "open_orders": [],
+  "day_pnl": 0.0,
+  "trades_today": 0,
+  "gate_scan": {
+    "INTC": {
+      "last": 57.545,
+      "vwap": 58.51,
+      "above_vwap": false,
+      "orb_high": 60.005,
+      "orb_breakout": false,
+      "spread_bp": 3.5,
+      "spread_pass": true,
+      "rel_volume": 1.83,
+      "rel_vol_pass_1_5x": true,
+      "rel_vol_pass_2_0x": false,
+      "note": "Gap fully reversed — $62.22 premarket to $57.545 now, below prev close $60.50. No setup. ORB window closed."
+    },
+    "NFLX": {
+      "last": 66.165,
+      "vwap": 65.81,
+      "above_vwap": true,
+      "orb_high": 65.24,
+      "orb_breakout": true,
+      "spread_bp": 1.5,
+      "spread_pass": true,
+      "rel_volume": 1.36,
+      "rel_vol_pass_1_5x": false,
+      "rel_vol_pass_2_0x": false,
+      "blocking_gate": "rel_vol 1.36x < 1.5x minimum",
+      "note": "Re-armed during session (spread <15 bp). Above VWAP, orb_breakout=true — but fails rel_vol gate."
+    },
+    "BAC": {
+      "last": 51.27,
+      "vwap": 51.18,
+      "above_vwap": true,
+      "orb_high": 51.36,
+      "orb_breakout": false,
+      "spread_bp": 1.9,
+      "spread_pass": true,
+      "rel_volume": 2.31,
+      "rel_vol_pass_1_5x": true,
+      "rel_vol_pass_2_0x": true,
+      "vwap_reclaim_two_tick": {
+        "tick1_time": "10:39",
+        "tick1_price": 51.11,
+        "tick1_vwap": 51.04,
+        "tick1_above_vwap": true,
+        "tick2_time": "11:39",
+        "tick2_price": 51.27,
+        "tick2_vwap": 51.18,
+        "tick2_above_vwap": true,
+        "price_move": 0.16,
+        "atr_half": 0.535,
+        "price_move_within_limit": true,
+        "two_tick_confirmed": true
+      },
+      "hypothetical_entry": {
+        "entry_limit": 51.34,
+        "stop": 51.18,
+        "risk_per_share": 0.16,
+        "target_2to1": 51.66,
+        "qty_at_250usd_risk": 1562,
+        "notional": 80169.08,
+        "capped_to_10k_notional": true,
+        "qty_capped": 195,
+        "capped_notional": 10011.3,
+        "risk_at_capped_qty": 31.2
+      },
+      "blocking_gate": "PRECONDITION 1 — CronList empty",
+      "note": "VWAP reclaim 2-tick confirmed. All other gates pass. Sole blocker is PRECONDITION 1."
+    },
+    "NVDA": {
+      "last": 202.18,
+      "vwap": 203.64,
+      "above_vwap": false,
+      "spread_bp": 1.0,
+      "spread_pass": true,
+      "rel_volume": 2.74,
+      "rel_vol_pass_1_5x": true,
+      "broad_tape_unlock": false,
+      "note": "NVDA below VWAP — broad-tape unlock NOT satisfied. NVDA deadline 11:00 AM has passed — NVDA disarmed for ORB entries (window closed anyway)."
+    }
+  },
+  "decision": "HOLD — PRECONDITION 1 HALT. CronList empty. Flatten scheduler not confirmed live. Despite plan acknowledgment from Chayan, the independent scheduler confirmation required by the plan cannot be provided. BAC VWAP reclaim is the strongest candidate (2-tick confirmed, all gates pass except PRECONDITION 1); NFLX fails rel_vol gate; INTC gap reversed; ORB window closed."
+}

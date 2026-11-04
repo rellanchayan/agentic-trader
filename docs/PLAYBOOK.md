@@ -305,6 +305,31 @@ made of **rules to follow**, not stories.
   and all ticks on Sep 25. Human intervention required before Monday open.)
 
 ## Changelog (the learning-coach appends here — newest on top)
+- 2026-11-04: No tuning. Tuner unfrozen ("ok to tune", 96 days of history, drawdown 0.01%) but no
+  rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
+  been changed by the tuner.
+  Today: no-trade day. Zero orders submitted, $0 realized P&L. Account flat at $999,641.65. This
+  is the 38th or more consecutive session blocked entirely by PRECONDITION #1 (CronList empty /
+  flatten scheduler not confirmed running). Election-week day three (Wednesday); market context
+  irrelevant without entries.
+  Two consecutive no-plan days: November 3 and November 4 both had no morning plan written. November
+  2 briefly broke the streak. The standing playbook rule (Discipline section) already treats two
+  consecutive missing plans as a systemic scheduler failure — this is now confirmed for the second
+  time in the program's history (first occurrence documented 2026-08-20 and 2026-08-21). The same
+  root cause applies: without a plan, the PRECONDITION #1 acknowledgment mechanism is never engaged,
+  and the HALT operates as an unconditional block for the entire session.
+  Sharpe ratio deteriorated from -93.91 (2026-11-03) to -94.42 today. SPY benchmark rose from 0.34
+  to 0.77 over the same horizon, widening the gap. Each no-trade session that follows an earlier loss
+  extends the negative Sharpe without any chance of recovery. The only path to improving the Sharpe
+  is executing profitable trades; the only path to executing trades is fixing the scheduler.
+  No new durable rule warranted tonight. A zero-trade day blocked entirely by PRECONDITION #1 and
+  a missing plan provides no new signal about entry quality, stop placement, or fill behavior. With
+  31 total trades across 96 days (0.32 trades/day), all setup expectancies remain negative (ORB
+  -0.20R, momentum -0.975R, vwap_reclaim -0.37R), and the sample is far too thin to distinguish
+  miscalibration from noise. The tuner correctly declines.
+  PRECONDITION #1 requires a one-time human action (add CronList flatten entry or provide a signed
+  acknowledgment in the day plan) before trading can resume. Writing the morning plan is the minimum
+  viable daily action that at least keeps the acknowledgment pathway open.
 - 2026-11-03: No tuning. Tuner unfrozen ("ok to tune", 95 days of history, drawdown 0.01%) but no
   rule fired — parameters left unchanged. The tuning ledger remains empty; no parameter has ever
   been changed by the tuner.
